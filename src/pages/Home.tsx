@@ -1,0 +1,142 @@
+import {Link} from 'react-router-dom';
+import {Button} from '@astryxdesign/core/Button';
+import {Band, CtaBand} from '../components/Site';
+
+const products = [
+  {
+    kicker: 'Helm Mail',
+    title: 'Email fraud, stopped cold.',
+    body: 'Managed email security plus phishing and deepfake-scam training for your whole team. The #1 way small businesses lose money is a fake invoice or a spoofed CEO — this closes the door.',
+    price: 'From $12 per user / month',
+  },
+  {
+    kicker: 'Helm Aware',
+    title: 'AI scams can’t fool a trained team.',
+    body: 'Shadow-AI audit, acceptable-use policy, and live deepfake drills — could your controller tell if that call from the CEO was AI? Quarterly refreshes keep pace as the scams evolve.',
+    price: 'Workshop from $1,500 + subscription',
+  },
+  {
+    kicker: 'Helm Ready',
+    title: 'Pass the questionnaire. Win the contract.',
+    body: 'Cyber-insurance readiness, HIPAA, and CMMC gap assessments — fixed fee, plain English, done in weeks. When your insurer or a prime contractor asks the 12 hard questions, you have the answers.',
+    price: 'Fixed-fee projects from $2,500',
+  },
+];
+
+export default function Home() {
+  return (
+    <>
+      <header className="hero">
+        <div className="wrap">
+          <div className="eyebrow reveal">Security · Compliance · Peace of mind</div>
+          <h1 className="reveal d1">Take the helm of your security.</h1>
+          <p className="sub reveal d2">
+            Enterprise-grade protection, sized and priced for real businesses —
+            law firms, manufacturers, medical offices, and the trades. No
+            jargon, no bloat, no 40-page reports you'll never read.
+          </p>
+          <div className="hero-ctas reveal d3">
+            <a href="#contact">
+              <Button label="Get a free email security assessment" variant="primary" size="lg" />
+            </a>
+            <a href="#products">
+              <Button label="See the platform" variant="secondary" size="lg" />
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <Band id="products" variant="raised">
+        <div className="band-head">
+          <h2>Three products. One steady hand.</h2>
+          <p>
+            Everything is managed for you, billed monthly, and explained in
+            plain English. Backed 24/7 by industry-leading security operations.
+          </p>
+        </div>
+        <div className="product-grid">
+          {products.map((p) => (
+            <div key={p.kicker} className="product-tile">
+              <div className="kicker">{p.kicker}</div>
+              <h3>{p.title}</h3>
+              <p>{p.body}</p>
+              <div className="price">{p.price}</div>
+            </div>
+          ))}
+        </div>
+      </Band>
+
+      <Band>
+        <div className="split">
+          <div>
+            <h3>Built for the questions you're actually being asked.</h3>
+            <p>
+              Your cyber insurer, your biggest customer, and your bank are all
+              asking the same thing: prove you're protected. We make the
+              answer yes.
+            </p>
+            <ul className="check-list">
+              <li>Cyber-insurance questionnaires answered and remediated</li>
+              <li>Wire-fraud and payment-verification protocols that hold up</li>
+              <li>CMMC / NIST 800-171 gap assessments before the Nov 2026 deadline</li>
+              <li>HIPAA-ready controls for medical and dental practices</li>
+            </ul>
+          </div>
+          <div className="panel-visual" role="presentation" />
+        </div>
+      </Band>
+
+      <Band variant="raised">
+        <div className="band-head">
+          <h2>The numbers behind the urgency.</h2>
+        </div>
+        <div className="stats">
+          <div className="stat">
+            <div className="num">$2.9B+</div>
+            <div className="lbl">lost to business email compromise in a single year — most victims are small businesses</div>
+          </div>
+          <div className="stat">
+            <div className="num">&lt;2%</div>
+            <div className="lbl">of ~80,000 defense contractors are CMMC-certified ahead of the Nov 10, 2026 mandate</div>
+          </div>
+          <div className="stat">
+            <div className="num">24/7</div>
+            <div className="lbl">monitoring behind every Helm product — you never staff a night shift</div>
+          </div>
+        </div>
+      </Band>
+
+      <Band>
+        <div className="band-head">
+          <h2>Your industry, your language.</h2>
+          <p>Same protection underneath. A pitch that speaks to your world.</p>
+        </div>
+        <div className="product-grid">
+          <Link to="/manufacturing" className="product-tile" style={{textDecoration: 'none', color: 'inherit'}}>
+            <div className="kicker">Manufacturing &amp; Defense</div>
+            <h3>CMMC without the panic.</h3>
+            <p>Gap assessment to certification-ready in weeks. The deadline is real — the scramble doesn't have to be.</p>
+            <div className="price">Explore →</div>
+          </Link>
+          <Link to="/professional-services" className="product-tile" style={{textDecoration: 'none', color: 'inherit'}}>
+            <div className="kicker">Law · CPA · Medical</div>
+            <h3>Client trust is the product.</h3>
+            <p>Wire-fraud defense, HIPAA readiness, and the cyber-insurance answers your carrier demands.</p>
+            <div className="price">Explore →</div>
+          </Link>
+          <Link to="/contractors" className="product-tile" style={{textDecoration: 'none', color: 'inherit'}}>
+            <div className="kicker">Contractors &amp; Trades</div>
+            <h3>Don't let a fake invoice eat a job's profit.</h3>
+            <p>Payment fraud protection built for how GCs, subs, and service businesses actually work.</p>
+            <div className="price">Explore →</div>
+          </Link>
+        </div>
+      </Band>
+
+      <CtaBand
+        title="Find out where you stand. Free."
+        sub="We run an automated scan of your email domain and send a plain-English report of exactly what a scammer sees — within 24 hours, no meeting required."
+      />
+    </>
+  );
+}
