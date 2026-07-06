@@ -72,7 +72,7 @@ export function CtaBand({
       <div className="wrap">
         <h2>{title}</h2>
         <p>{sub}</p>
-        <a href="mailto:hello@helmsecure.com">
+        <a href="mailto:hello@helmsecured.com">
           <Button label={cta} variant="primary" size="lg" />
         </a>
       </div>
@@ -111,7 +111,7 @@ export function SiteFooter() {
               {l.label}
             </Link>
           ))}
-          <a href="mailto:hello@helmsecure.com">hello@helmsecure.com</a>
+          <a href="mailto:hello@helmsecured.com">hello@helmsecured.com</a>
         </div>
       </div>
     </footer>
