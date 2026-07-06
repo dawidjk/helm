@@ -1,7 +1,10 @@
-import {Button} from '@astryxdesign/core/Button';
 import {Band, CtaBand} from '../components/Site';
+import HeroBackdrop, {type BackdropKind} from '../components/HeroBackdrop';
+import LeadForm from '../components/LeadForm';
 
 export type Lane = {
+  slug: string;
+  backdrop: BackdropKind;
   eyebrow: string;
   headline: string;
   sub: string;
@@ -17,7 +20,8 @@ export type Lane = {
 export default function LanePage({lane}: {lane: Lane}) {
   return (
     <>
-      <header className="hero" style={{padding: '104px 0 96px'}}>
+      <header className="hero lane">
+        <HeroBackdrop kind={lane.backdrop} />
         <div className="wrap">
           <div className="eyebrow reveal">{lane.eyebrow}</div>
           <h1 className="reveal d1" style={{maxWidth: '20ch'}}>
@@ -25,20 +29,18 @@ export default function LanePage({lane}: {lane: Lane}) {
           </h1>
           <p className="sub reveal d2">{lane.sub}</p>
           <div className="hero-ctas reveal d3">
-            <a href="#contact">
-              <Button label={lane.primaryCta} variant="primary" size="lg" />
-            </a>
+            <LeadForm source={`${lane.slug} hero`} cta={lane.primaryCta} compact />
           </div>
         </div>
       </header>
 
       <Band variant="raised">
-        <div className="band-head">
+        <div className="band-head observe">
           <h2>What's actually at risk</h2>
         </div>
         <div className="product-grid">
-          {lane.pains.map((p) => (
-            <div key={p.title} className="product-tile">
+          {lane.pains.map((p, i) => (
+            <div key={p.title} className={`product-tile observe d${i + 1}`}>
               <h3 style={{fontSize: 22}}>{p.title}</h3>
               <p>{p.body}</p>
             </div>
@@ -47,13 +49,13 @@ export default function LanePage({lane}: {lane: Lane}) {
       </Band>
 
       <Band>
-        <div className="band-head">
+        <div className="band-head observe">
           <h2>{lane.planTitle}</h2>
           <p>{lane.planSub}</p>
         </div>
         <div className="product-grid">
-          {lane.steps.map((s) => (
-            <div key={s.num} className="product-tile">
+          {lane.steps.map((s, i) => (
+            <div key={s.num} className={`product-tile observe d${i + 1}`}>
               <div className="kicker">Step {s.num}</div>
               <h3 style={{fontSize: 22}}>{s.title}</h3>
               <p>{s.body}</p>
@@ -64,7 +66,7 @@ export default function LanePage({lane}: {lane: Lane}) {
 
       <Band variant="raised">
         <div className="split">
-          <div>
+          <div className="observe">
             <h3>{lane.proof.title}</h3>
             <ul className="check-list">
               {lane.proof.points.map((pt) => (
@@ -72,11 +74,11 @@ export default function LanePage({lane}: {lane: Lane}) {
               ))}
             </ul>
           </div>
-          <div className="panel-visual" role="presentation" />
+          <div className="panel-visual observe d1" role="presentation" />
         </div>
       </Band>
 
-      <CtaBand title={lane.cta.title} sub={lane.cta.sub} cta={lane.cta.label} />
+      <CtaBand title={lane.cta.title} sub={lane.cta.sub} cta={lane.cta.label} source={`${lane.slug} cta band`} />
     </>
   );
 }

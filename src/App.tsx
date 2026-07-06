@@ -1,5 +1,5 @@
 import {Routes, Route} from 'react-router-dom';
-import {SiteNav, SiteFooter} from './components/Site';
+import {SiteNav, SiteFooter, RevealManager} from './components/Site';
 import Home from './pages/Home';
 import LanePage from './pages/LanePage';
 import {manufacturing, professionalServices, contractors} from './pages/lanes';
@@ -8,6 +8,7 @@ export default function App() {
   return (
     <>
       <SiteNav />
+      <RevealManager />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

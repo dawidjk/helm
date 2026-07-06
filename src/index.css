@@ -51,7 +51,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 56px;
+  height: 72px;
 }
 
 .nav-brand {
@@ -59,7 +59,7 @@ body {
   align-items: center;
   gap: 10px;
   font-weight: 700;
-  font-size: 17px;
+  font-size: 19px;
   letter-spacing: -0.02em;
   color: #fff;
   text-decoration: none;
@@ -217,18 +217,99 @@ body {
 .product-tile {
   position: relative;
   border-radius: 24px;
-  padding: 36px 32px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+  padding: 32px;
+  background:
+    radial-gradient(120% 90% at 50% -20%, rgba(76, 141, 255, 0.10), transparent 55%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
   border: 1px solid rgba(255, 255, 255, 0.09);
-  transition: transform 240ms ease, border-color 240ms ease;
+  transition: transform 320ms cubic-bezier(0.2, 0.65, 0.25, 1), border-color 320ms ease, box-shadow 320ms ease;
   display: flex;
   flex-direction: column;
   gap: 14px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
 }
 
 .product-tile:hover {
-  transform: translateY(-4px);
-  border-color: rgba(76, 141, 255, 0.45);
+  transform: translateY(-6px);
+  border-color: rgba(76, 141, 255, 0.5);
+  box-shadow: 0 24px 60px -24px rgba(46, 111, 242, 0.45);
+}
+
+.tile-motif {
+  height: 110px;
+  margin: -8px -8px 4px;
+  border-radius: 16px;
+  background:
+    radial-gradient(80% 120% at 50% 0%, rgba(76, 141, 255, 0.12), transparent 70%),
+    rgba(255, 255, 255, 0.02);
+  display: grid;
+  place-items: center;
+}
+
+.tile-motif svg {
+  width: 100%;
+  height: 96px;
+}
+
+/* motif animations */
+.scan-line {
+  transform-origin: center;
+  animation: scan 4s ease-in-out infinite;
+}
+
+@keyframes scan {
+  0%, 100% { transform: translateY(0); opacity: 0.2; }
+  50% { transform: translateY(42px); opacity: 0.9; }
+}
+
+.sonar {
+  transform-origin: 100px 48px;
+  animation: sonar 3.6s ease-out infinite;
+  opacity: 0;
+}
+
+.sonar.s2 { animation-delay: 0.6s; }
+.sonar.s3 { animation-delay: 1.2s; }
+
+@keyframes sonar {
+  0% { transform: scale(0.55); opacity: 0; }
+  30% { opacity: 0.8; }
+  100% { transform: scale(1.25); opacity: 0; }
+}
+
+.product-tile .gauge {
+  transition: stroke-dashoffset 1.2s cubic-bezier(0.2, 0.65, 0.25, 1);
+}
+
+.product-tile:hover .gauge,
+.product-tile.in .gauge {
+  stroke-dashoffset: 32;
+}
+
+.pulse-slow {
+  animation: pulseSlow 3s ease-in-out infinite;
+  transform-origin: 148px 70px;
+}
+
+@keyframes pulseSlow {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.wave {
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: waveDraw 3.2s ease-in-out infinite;
+}
+
+.wave.w2 { animation-delay: 1.6s; }
+
+@keyframes waveDraw {
+  0% { stroke-dashoffset: 120; opacity: 0; }
+  35% { opacity: 0.9; }
+  70%, 100% { stroke-dashoffset: 0; opacity: 0; }
 }
 
 .product-tile .kicker {
@@ -457,6 +538,215 @@ body {
 .urgency a {
   color: #fff;
   text-decoration: underline;
+}
+
+/* --------------------------- Hero backdrops ------------------------------ */
+
+.hero-backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  mask-image: radial-gradient(85% 90% at 50% 45%, #000 40%, transparent 100%);
+}
+
+.backdrop-canvas,
+.backdrop-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.backdrop-svg.aero {
+  opacity: 0.5;
+}
+
+.hero-backdrop.aero {
+  background-image:
+    linear-gradient(rgba(76, 141, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(76, 141, 255, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bp-draw path {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: bpDraw 14s ease-in-out infinite;
+}
+
+@keyframes bpDraw {
+  0% { stroke-dashoffset: 1200; opacity: 0; }
+  8% { opacity: 0.85; }
+  45% { stroke-dashoffset: 0; }
+  82% { stroke-dashoffset: 0; opacity: 0.85; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+.bp-labels {
+  animation: fadeHold 14s ease-in-out infinite;
+}
+
+@keyframes fadeHold {
+  0%, 25% { opacity: 0; }
+  45%, 82% { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+
+.backdrop-svg.skyline {
+  opacity: 0.6;
+  animation: slowZoom 36s ease-in-out infinite alternate;
+  transform-origin: 50% 80%;
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.07); }
+}
+
+.layer-far {
+  animation: driftX 48s ease-in-out infinite alternate;
+}
+
+.layer-near {
+  animation: driftX 32s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes driftX {
+  from { transform: translateX(-24px); }
+  to { transform: translateX(24px); }
+}
+
+.twinkle {
+  animation: twinkle 6s ease-in-out infinite;
+  opacity: 0.15;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.12; }
+  50% { opacity: 0.85; }
+}
+
+.backdrop-svg.construction {
+  opacity: 0.55;
+}
+
+.iso-block {
+  animation: blockRise 12s cubic-bezier(0.2, 0.65, 0.25, 1) infinite;
+  opacity: 0;
+}
+
+@keyframes blockRise {
+  0% { opacity: 0; transform: translate(var(--tx, 0), 26px); }
+  8%, 78% { opacity: 1; transform: translate(0, 0); }
+  92%, 100% { opacity: 0; }
+}
+
+.crane-cable {
+  animation: cableSwing 7s ease-in-out infinite alternate;
+  transform-origin: 760px 143px;
+}
+
+@keyframes cableSwing {
+  from { transform: rotate(-1.6deg); }
+  to { transform: rotate(1.6deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bp-draw path { animation: none; stroke-dashoffset: 0; }
+  .bp-labels, .iso-block { animation: none; opacity: 1; }
+  .backdrop-svg.skyline, .layer-far, .layer-near, .twinkle,
+  .crane-cable, .scan-line, .sonar, .wave, .pulse-slow { animation: none; }
+}
+
+/* ------------------------------ Lead form -------------------------------- */
+
+.lead-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.lead-form input[type='email'] {
+  width: min(340px, 78vw);
+  padding: 0 22px;
+  height: 52px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.lead-form.compact input[type='email'] {
+  height: 46px;
+}
+
+.lead-form input[type='email']::placeholder {
+  color: rgba(235, 240, 250, 0.45);
+}
+
+.lead-form input[type='email']:focus {
+  border-color: rgba(76, 141, 255, 0.7);
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 0 0 4px rgba(76, 141, 255, 0.18);
+}
+
+.lead-form-done {
+  font-size: 17px;
+  font-weight: 600;
+  color: #7ee0a3;
+  padding: 12px 0;
+}
+
+.hero-note {
+  margin-top: 16px;
+  font-size: 13.5px;
+  color: rgba(235, 240, 250, 0.5);
+}
+
+.cta-form {
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+}
+
+.cta-alt {
+  font-size: 14px;
+  color: var(--helm-text-dim);
+}
+
+.cta-alt a {
+  color: #8db4ff;
+}
+
+/* --------------------------- Scroll reveals ------------------------------ */
+
+.observe {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 700ms cubic-bezier(0.2, 0.65, 0.25, 1), transform 700ms cubic-bezier(0.2, 0.65, 0.25, 1);
+}
+
+.observe.d1 { transition-delay: 100ms; }
+.observe.d2 { transition-delay: 200ms; }
+.observe.d3 { transition-delay: 300ms; }
+
+.observe.in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .observe {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* ------------------------------ Reveal motion ---------------------------- */
