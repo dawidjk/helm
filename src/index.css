@@ -2,7 +2,7 @@
 @import '@astryxdesign/core/astryx.css';
 
 /* ---------------------------------------------------------------------------
-   Helm marketing styles — Apple/Ubiquiti-grade product-site layer.
+   Helm marketing styles: Apple/Ubiquiti-grade product-site layer.
    Astryx handles components + tokens; this file handles the big-canvas
    marketing sections (hero, bands, product grid).
 --------------------------------------------------------------------------- */
@@ -88,9 +88,74 @@ body {
   color: #fff;
 }
 
+/* burger + mobile drawer */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-burger span {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background: #fff;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.nav-burger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-burger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-burger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-drawer {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 49;
+  background: rgba(5, 7, 13, 0.98);
+  padding: 32px 24px;
+  display: grid;
+  gap: 32px;
+  align-content: start;
+  overflow-y: auto;
+}
+
+.drawer-group {
+  display: grid;
+  gap: 14px;
+}
+
+.drawer-group a {
+  color: #eef2fa;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 600;
+}
+
 @media (max-width: 760px) {
-  .nav-links a:not(.nav-cta) {
+  .nav-links {
     display: none;
+  }
+
+  .nav-burger {
+    display: flex;
   }
 }
 
@@ -780,6 +845,25 @@ body {
   font-weight: 600;
   color: #7ee0a3;
   padding: 12px 0;
+}
+
+.lead-form-error {
+  flex-basis: 100%;
+  font-size: 14px;
+  color: #ff9e9e;
+  padding-top: 8px;
+}
+
+.lead-form-error a {
+  color: #8db4ff;
+}
+
+/* full-viewport hero (pricing) */
+.hero-tall {
+  min-height: calc(100svh - 72px);
+  display: grid;
+  align-content: center;
+  padding: 0 0 48px;
 }
 
 .hero-note {

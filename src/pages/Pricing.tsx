@@ -8,11 +8,11 @@ export default function Pricing() {
   return (
     <>
       <Meta
-        title="Pricing — Fixed, Published, No Surprises | Helm"
+        title="Pricing: Fixed, Published, No Surprises | Helm"
         desc="Helm pricing: managed email security from $12/user/month, AI scam defense workshops from $1,500, compliance projects from $2,500 fixed fee. Published prices, no custom quotes."
         path="/pricing"
       />
-      <header className="hero lane" style={{padding: '96px 0 72px'}}>
+      <header className="hero lane hero-tall">
         <div className="wrap">
           <div className="eyebrow reveal">Pricing</div>
           <h1 className="reveal d1" style={{maxWidth: '18ch'}}>
@@ -52,14 +52,14 @@ export default function Pricing() {
           <p>
             A typical 20-person business runs $240–300/month on Helm Mail. Add
             Helm Aware and you're under what one hour of incident-response
-            lawyering costs — per year. Compliance projects are scoped and
+            lawyering costs, per year. Compliance projects are scoped and
             priced in writing before any work starts.
           </p>
         </div>
         <div className="stats">
           <div className="stat observe">
             <div className="num">$0</div>
-            <div className="lbl">onboarding fees, setup fees, or cancellation fees — ever</div>
+            <div className="lbl">onboarding fees, setup fees, or cancellation fees, ever</div>
           </div>
           <div className="stat observe d1">
             <div className="num">1 page</div>
@@ -67,14 +67,14 @@ export default function Pricing() {
           </div>
           <div className="stat observe d2">
             <div className="num">100%</div>
-            <div className="lbl">of pricing published on this page — verticals change the pitch, never the price</div>
+            <div className="lbl">of pricing published on this page: verticals change the pitch, never the price</div>
           </div>
         </div>
       </Band>
 
       <CtaBand
         title="Not sure which one you need?"
-        sub="Start with the free scan — the report tells you exactly which gaps exist, and which product (if any) closes them."
+        sub="Start with the free scan: the report tells you exactly which gaps exist, and which product (if any) closes them."
         source="pricing cta"
       />
     </>

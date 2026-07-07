@@ -2,21 +2,40 @@ import {useState} from 'react';
 import {Button} from '@astryxdesign/core/Button';
 import {Band} from '../components/Site';
 import Meta from '../components/Meta';
+import {FORM_ENDPOINT} from '../components/LeadForm';
 
 const interests = [
   'Email security (Helm Mail)',
   'AI scam defense (Helm Aware)',
-  'Compliance — CMMC / HIPAA / cyber insurance (Helm Ready)',
-  'Not sure yet — tell me what I need',
+  'Compliance: CMMC / HIPAA / cyber insurance (Helm Ready)',
+  'Not sure yet, tell me what I need',
 ];
 
 export default function Contact() {
-  const [sent, setSent] = useState(false);
+  const [state, setState] = useState<'idle' | 'busy' | 'sent' | 'error'>('idle');
+  const sent = state === 'sent';
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (state === 'busy') return;
+    setState('busy');
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: {Accept: 'application/json'},
+        body: new FormData(e.currentTarget),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      setState('sent');
+    } catch {
+      setState('error');
+    }
+  };
 
   return (
     <>
       <Meta
-        title="Contact Helm — A Human Replies in One Business Day"
+        title="Contact Helm: A Human Replies in One Business Day"
         desc="Contact Helm about email security, AI scam defense, or compliance readiness. Tell us about your business and get a straight answer within one business day."
         path="/contact"
       />
@@ -27,7 +46,7 @@ export default function Contact() {
           </h1>
           <p className="sub reveal d1">
             Tell us a little about your business and we'll come back within one
-            business day with a straight answer — not a sales sequence.
+            business day with a straight answer, not a sales sequence.
           </p>
         </div>
       </header>
@@ -39,15 +58,8 @@ export default function Contact() {
             <p>We'll reply within one business day from hello@helmsecured.com.</p>
           </div>
         ) : (
-          <form
-            className="contact-form observe in"
-            action="https://formsubmit.co/hello@helmsecured.com"
-            method="POST"
-            target="_blank"
-            onSubmit={() => setSent(true)}
-          >
-            <input type="hidden" name="_subject" value="Lead — full contact form" />
-            <input type="hidden" name="_captcha" value="false" />
+          <form className="contact-form observe in" onSubmit={onSubmit}>
+            <input type="hidden" name="_subject" value="Lead: full contact form" />
             <input type="hidden" name="_template" value="table" />
 
             <div className="cf-row">
@@ -96,9 +108,20 @@ export default function Contact() {
             </label>
 
             <div className="cf-actions">
-              <Button label="Send message" variant="primary" size="lg" type="submit" />
+              <Button
+                label={state === 'busy' ? 'Sending…' : 'Send message'}
+                variant="primary"
+                size="lg"
+                type="submit"
+              />
               <span className="cf-note">No newsletter. No drip campaign. Just a reply.</span>
             </div>
+            {state === 'error' && (
+              <div className="lead-form-error" role="alert">
+                Something went wrong. Email us directly:{' '}
+                <a href="mailto:hello@helmsecured.com">hello@helmsecured.com</a>
+              </div>
+            )}
           </form>
         )}
       </Band>

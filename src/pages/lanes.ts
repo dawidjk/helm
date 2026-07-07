@@ -6,10 +6,10 @@ export const manufacturing: Lane = {
   reportDomain: 'precision-mfg.com',
   metaTitle: 'CMMC Compliance for NJ Manufacturers & Defense Suppliers | Helm',
   metaDesc:
-    'CMMC Level 1 & 2 gap assessments for New Jersey manufacturers and defense subcontractors. Fixed fee, assessment-ready in weeks — ahead of the Nov 10, 2026 enforcement deadline.',
+    'CMMC Level 1 & 2 gap assessments for New Jersey manufacturers and defense subcontractors. Fixed fee, assessment-ready in weeks, ahead of the Nov 10, 2026 enforcement deadline.',
   eyebrow: 'NJ Manufacturers · Defense Suppliers',
   headline: 'CMMC certified, before your competitors are.',
-  sub: 'CMMC Phase 2 enforcement starts November 10, 2026 — and fewer than 2% of the ~80,000 companies in the defense supply chain are certified. Assessors are booked 3–6 months out. If you supply a prime, the clock is already running.',
+  sub: 'CMMC Phase 2 enforcement starts November 10, 2026, and fewer than 2% of the ~80,000 companies in the defense supply chain are certified. Assessors are booked 3–6 months out. If you supply a prime, the clock is already running.',
   primaryCta: 'Book a CMMC gap assessment',
   pains: [
     {
@@ -22,7 +22,7 @@ export const manufacturing: Lane = {
     },
     {
       title: 'DIY compliance burns the year',
-      body: 'NIST 800-171 has 110 controls. Interpreting them internally costs engineering time you need on the floor — and gets rejected when done wrong.',
+      body: 'NIST 800-171 has 110 controls. Interpreting them internally costs engineering time you need on the floor, and gets rejected when done wrong.',
     },
   ],
   planTitle: 'Weeks to ready. Not quarters.',
@@ -36,7 +36,7 @@ export const manufacturing: Lane = {
     {
       num: '2',
       title: 'Remediation sprint',
-      body: 'We fix the gaps — policies, technical controls, evidence collection — with your team in the loop, not on the hook.',
+      body: 'We fix the gaps (policies, technical controls, evidence collection) with your team in the loop, not on the hook.',
     },
     {
       num: '3',
@@ -51,12 +51,12 @@ export const manufacturing: Lane = {
       'SPRS score calculation and submission support',
       'Partnered with certified C3PAOs for the formal assessment',
       'Monthly managed compliance so the score never decays',
-      'Fixed-fee pricing — no open-ended consulting meters',
+      'Fixed-fee pricing, no open-ended consulting meters',
     ],
   },
   cta: {
     title: 'Where do you stand on all 110 controls?',
-    sub: 'Get a free 30-minute readiness call and leave with your three biggest gaps identified — before an assessor or a prime finds them for you.',
+    sub: 'Get a free 30-minute readiness call and leave with your three biggest gaps identified, before an assessor or a prime finds them for you.',
     label: 'Book the readiness call',
   },
 };
@@ -70,7 +70,7 @@ export const professionalServices: Lane = {
     'Wire fraud defense, HIPAA readiness, and cyber-insurance questionnaire remediation for law firms, accounting firms, and dental/medical practices. Per-seat pricing, plain English.',
   eyebrow: 'Law · CPA · Dental & Medical',
   headline: 'Your clients trust you with everything. Keep it that way.',
-  sub: 'Wire fraud, HIPAA exposure, and cyber-insurance questionnaires now decide which firms clients and carriers trust. One spoofed email can move client money — and no malpractice policy covers the reputation.',
+  sub: 'Wire fraud, HIPAA exposure, and cyber-insurance questionnaires now decide which firms clients and carriers trust. One spoofed email can move client money, and no malpractice policy covers the reputation.',
   primaryCta: 'Get a free email security assessment',
   pains: [
     {
@@ -79,7 +79,7 @@ export const professionalServices: Lane = {
     },
     {
       title: 'Your carrier is asking harder questions',
-      body: 'Cyber-insurance renewals now demand MFA, email security, and training — answer wrong and premiums spike or coverage vanishes when you need it.',
+      body: 'Cyber-insurance renewals now demand MFA, email security, and training: answer wrong and premiums spike or coverage vanishes when you need it.',
     },
     {
       title: 'HIPAA fines don’t care about size',
@@ -97,12 +97,12 @@ export const professionalServices: Lane = {
     {
       num: '2',
       title: 'Helm Aware',
-      body: 'Deepfake and AI-scam drills for the people who move money — could your bookkeeper tell if that call from a partner was cloned audio?',
+      body: 'Deepfake and AI-scam drills for the people who move money: could your bookkeeper tell if that call from a partner was cloned audio?',
     },
     {
       num: '3',
       title: 'Helm Ready',
-      body: 'We answer your cyber-insurance questionnaire, remediate the gaps, and build HIPAA-ready controls — fixed fee, audit-ready evidence.',
+      body: 'We answer your cyber-insurance questionnaire, remediate the gaps, and build HIPAA-ready controls: fixed fee, audit-ready evidence.',
     },
   ],
   proof: {
@@ -112,12 +112,12 @@ export const professionalServices: Lane = {
       'Cyber-insurance questionnaire answered and defensible',
       'HIPAA security-rule controls with documented evidence',
       'Quarterly report you can show clients and partners',
-      'Per-seat pricing — a 12-person firm pays like a 12-person firm',
+      'Per-seat pricing, a 12-person firm pays like a 12-person firm',
     ],
   },
   cta: {
     title: 'Would your firm catch the fake wire request?',
-    sub: 'Free automated scan of your email domain shows exactly how easily you can be impersonated — plain-English report in 24 hours.',
+    sub: 'Free automated scan of your email domain shows exactly how easily you can be impersonated: plain-English report in 24 hours.',
     label: 'Run the free scan',
   },
 };
@@ -140,11 +140,11 @@ export const contractors: Lane = {
     },
     {
       title: 'GCs now require security',
-      body: 'Bigger general contractors are pushing cyber requirements down to subs — no proof, no bid. It’s becoming as standard as insurance certs.',
+      body: 'Bigger general contractors are pushing cyber requirements down to subs: no proof, no bid. It’s becoming as standard as insurance certs.',
     },
     {
       title: 'Field teams, office risk',
-      body: 'Estimators and office managers approve payments from phones and job sites — exactly where phishing works best.',
+      body: 'Estimators and office managers approve payments from phones and job sites, exactly where phishing works best.',
     },
   ],
   planTitle: 'Simple controls that stop real losses.',
@@ -158,7 +158,7 @@ export const contractors: Lane = {
     {
       num: '2',
       title: 'Verify every payment change',
-      body: 'A dead-simple callback protocol for changed bank details — the single control that defeats invoice fraud, AI or not.',
+      body: 'A dead-simple callback protocol for changed bank details: the single control that defeats invoice fraud, AI or not.',
     },
     {
       num: '3',
@@ -169,7 +169,7 @@ export const contractors: Lane = {
   proof: {
     title: 'Built for how the trades actually run.',
     points: [
-      'Works with the email you already have — Microsoft 365 or Google',
+      'Works with the email you already have: Microsoft 365 or Google',
       'Nothing for field crews to install or learn',
       'Payment-verification protocol in one laminated page',
       'Monthly flat pricing that scales with office headcount, not trucks',
@@ -178,7 +178,7 @@ export const contractors: Lane = {
   },
   cta: {
     title: 'How exposed is your payment chain?',
-    sub: 'Free scan shows whether scammers can impersonate your company to your GCs and suppliers — report in 24 hours.',
+    sub: 'Free scan shows whether scammers can impersonate your company to your GCs and suppliers: report in 24 hours.',
     label: 'Run the free check',
   },
 };

@@ -7,8 +7,8 @@ export default function Resources() {
   return (
     <>
       <Meta
-        title="Resources — Plain-English Security Guides | Helm"
-        desc="Plain-English guides on CMMC deadlines, cyber insurance questionnaires, wire fraud prevention, DMARC, and deepfake scams — written for business owners, not IT departments."
+        title="Resources: Plain-English Security Guides | Helm"
+        desc="Plain-English guides on CMMC deadlines, cyber insurance questionnaires, wire fraud prevention, DMARC, and deepfake scams, written for business owners, not IT departments."
         path="/resources"
       />
       <header className="hero lane" style={{padding: '96px 0 56px'}}>
@@ -18,7 +18,7 @@ export default function Resources() {
             Security, translated.
           </h1>
           <p className="sub reveal d2">
-            Guides written for the person who signs the checks — no jargon, no
+            Guides written for the person who signs the checks: no jargon, no
             fear-mongering, every article ends in something you can do.
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function Resources() {
 
       <CtaBand
         title="Reading is free. So is the scan."
-        sub="The free email security scan turns theory into your actual numbers — report in 24 hours."
+        sub="The free email security scan turns theory into your actual numbers: report in 24 hours."
         source="resources cta"
       />
     </>

@@ -11,21 +11,21 @@ const products: {motif: MotifKind; kicker: string; title: string; body: string; 
     motif: 'mail',
     kicker: 'Helm Mail',
     title: 'Email fraud, stopped cold.',
-    body: 'Managed email security plus phishing and deepfake-scam training for your whole team. The #1 way small businesses lose money is a fake invoice or a spoofed CEO — this closes the door.',
+    body: 'Managed email security plus phishing and deepfake-scam training for your whole team. The #1 way small businesses lose money is a fake invoice or a spoofed CEO: this closes the door.',
     price: 'From $12 per user / month',
   },
   {
     motif: 'aware',
     kicker: 'Helm Aware',
     title: 'AI scams can’t fool a trained team.',
-    body: 'Shadow-AI audit, acceptable-use policy, and live deepfake drills — could your controller tell if that call from the CEO was AI? Quarterly refreshes keep pace as the scams evolve.',
+    body: 'Shadow-AI audit, acceptable-use policy, and live deepfake drills: could your controller tell if that call from the CEO was AI? Quarterly refreshes keep pace as the scams evolve.',
     price: 'Workshop from $1,500 + subscription',
   },
   {
     motif: 'ready',
     kicker: 'Helm Ready',
     title: 'Pass the questionnaire. Win the contract.',
-    body: 'Cyber-insurance readiness, HIPAA, and CMMC gap assessments — fixed fee, plain English, done in weeks. When your insurer or a prime contractor asks the 12 hard questions, you have the answers.',
+    body: 'Cyber-insurance readiness, HIPAA, and CMMC gap assessments: fixed fee, plain English, done in weeks. When your insurer or a prime contractor asks the 12 hard questions, you have the answers.',
     price: 'Fixed-fee projects from $2,500',
   },
 ];
@@ -55,8 +55,8 @@ export default function Home() {
   return (
     <>
       <Meta
-        title="Helm — Email Security, AI Scam Defense & Compliance for Small Business"
-        desc="Enterprise-grade email security, AI scam defense, and compliance readiness for small businesses — plain English, published pricing, backed by 24/7 security operations. Free email security scan in 24 hours."
+        title="Helm: Email Security, AI Scam Defense & Compliance for Small Business"
+        desc="Enterprise-grade email security, AI scam defense, and compliance readiness for small businesses, plain English, published pricing, backed by 24/7 security operations. Free email security scan in 24 hours."
         path="/"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -75,7 +75,7 @@ export default function Home() {
           <div className="eyebrow reveal">Security · Compliance · Peace of mind</div>
           <h1 className="reveal d1">Take the helm of your security.</h1>
           <p className="sub reveal d2">
-            Enterprise-grade protection, sized and priced for real businesses —
+            Enterprise-grade protection, sized and priced for real businesses:
             law firms, manufacturers, medical offices, and the trades. No
             jargon, no bloat, no 40-page reports you'll never read.
           </p>
@@ -136,7 +136,7 @@ export default function Home() {
         <div className="stats">
           <div className="stat observe">
             <div className="num">$2.9B+</div>
-            <div className="lbl">lost to business email compromise in a single year — most victims are small businesses</div>
+            <div className="lbl">lost to business email compromise in a single year; most victims are small businesses</div>
           </div>
           <div className="stat observe d1">
             <div className="num">&lt;2%</div>
@@ -144,7 +144,7 @@ export default function Home() {
           </div>
           <div className="stat observe d2">
             <div className="num">24/7</div>
-            <div className="lbl">monitoring behind every Helm product — you never staff a night shift</div>
+            <div className="lbl">monitoring behind every Helm product, you never staff a night shift</div>
           </div>
         </div>
       </Band>
@@ -172,7 +172,7 @@ export default function Home() {
 
       <CtaBand
         title="Find out where you stand. Free."
-        sub="We run an automated scan of your email domain and send a plain-English report of exactly what a scammer sees — within 24 hours, no meeting required."
+        sub="We run an automated scan of your email domain and send a plain-English report of exactly what a scammer sees, within 24 hours, no meeting required."
         source="home cta band"
       />
     </>

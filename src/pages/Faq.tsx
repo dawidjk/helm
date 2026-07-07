@@ -4,7 +4,7 @@ import Meta from '../components/Meta';
 const faqs = [
   {
     q: 'We have an IT person. Why do we need Helm?',
-    a: 'IT keeps things running; security keeps things from being stolen. They are different disciplines with different tooling. We work alongside your IT person or MSP constantly — they usually become our biggest advocate, because we take the 2 a.m. security worry off their plate.',
+    a: 'IT keeps things running; security keeps things from being stolen. They are different disciplines with different tooling. We work alongside your IT person or MSP constantly: they usually become our biggest advocate, because we take the 2 a.m. security worry off their plate.',
   },
   {
     q: 'Are we really a target? We only have 15 employees.',
@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     q: 'Do you do 24/7 monitoring yourselves?',
-    a: 'Monitoring behind Helm products runs 24/7 through established security operations partners whose entire business is round-the-clock detection and response. We are transparent about this — it is how a small business gets enterprise-grade coverage without paying for an in-house night shift.',
+    a: 'Monitoring behind Helm products runs 24/7 through established security operations partners whose entire business is round-the-clock detection and response. We are transparent about this: it is how a small business gets enterprise-grade coverage without paying for an in-house night shift.',
   },
   {
     q: 'How is pricing structured?',
@@ -24,11 +24,11 @@ const faqs = [
   },
   {
     q: 'Can you get us CMMC certified?',
-    a: 'Formal CMMC certification is performed only by independent C3PAOs. We get you assessment-ready — gap assessment, remediation, documentation — and hand you to a certified assessment partner. Anyone who claims to sell certification directly is misrepresenting the process.',
+    a: 'Formal CMMC certification is performed only by independent C3PAOs. We get you assessment-ready (gap assessment, remediation, documentation) and hand you to a certified assessment partner. Anyone who claims to sell certification directly is misrepresenting the process.',
   },
   {
     q: 'What happens if we get hit while working with you?',
-    a: 'You call us and we handle response alongside our 24/7 partners — containment, recovery, and the insurer conversation. The documentation we maintain for you is exactly what makes a cyber-insurance claim succeed.',
+    a: 'You call us and we handle response alongside our 24/7 partners: containment, recovery, and the insurer conversation. The documentation we maintain for you is exactly what makes a cyber-insurance claim succeed.',
   },
   {
     q: 'How fast can we start?',
@@ -40,7 +40,7 @@ export default function Faq() {
   return (
     <>
       <Meta
-        title="FAQ — Straight Answers | Helm"
+        title="FAQ: Straight Answers | Helm"
         desc="Straight answers about Helm: what the free email security scan checks, how pricing works, CMMC certification facts, 24/7 monitoring, and how fast deployment is."
         path="/faq"
         jsonLd={{
@@ -58,7 +58,7 @@ export default function Faq() {
           <div className="eyebrow reveal">FAQ</div>
           <h1 className="reveal d1">Straight answers.</h1>
           <p className="sub reveal d2">
-            The questions business owners actually ask us — answered the way
+            The questions business owners actually ask us, answered the way
             we'd answer them across a table.
           </p>
         </div>
@@ -77,7 +77,7 @@ export default function Faq() {
 
       <CtaBand
         title="Question not here?"
-        sub="Email us or use the contact form — a human replies within one business day."
+        sub="Email us or use the contact form: a human replies within one business day."
         source="faq cta"
       />
     </>

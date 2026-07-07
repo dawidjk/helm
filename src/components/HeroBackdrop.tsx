@@ -3,7 +3,7 @@ import {useEffect, useMemo, useRef} from 'react';
 export type BackdropKind = 'cyber' | 'aero' | 'skyline' | 'construction';
 
 /* ------------------------------------------------------------------ */
-/* cyber — flowing energy field: layered waves + expanding ripples     */
+/* cyber: flowing energy field: layered waves + expanding ripples      */
 /* ------------------------------------------------------------------ */
 
 function EnergyCanvas() {
@@ -125,7 +125,7 @@ function EnergyCanvas() {
 }
 
 /* ------------------------------------------------------------------ */
-/* aero — blueprint line-draw of an aircraft over a drafting grid      */
+/* aero: blueprint line-draw of an aircraft over a drafting grid       */
 /* ------------------------------------------------------------------ */
 
 function AeroSvg() {
@@ -156,7 +156,7 @@ function AeroSvg() {
 }
 
 /* ------------------------------------------------------------------ */
-/* skyline — parallax city silhouettes with twinkling windows          */
+/* skyline: parallax city silhouettes with twinkling windows           */
 /* ------------------------------------------------------------------ */
 
 function mulberry(seed: number) {
@@ -231,7 +231,7 @@ function SkylineSvg() {
 }
 
 /* ------------------------------------------------------------------ */
-/* construction — jobsite: steel frame, crane, forklift, welding robot */
+/* construction: jobsite: steel frame, crane, forklift, welding robot  */
 /* ------------------------------------------------------------------ */
 
 function ConstructionSvg() {

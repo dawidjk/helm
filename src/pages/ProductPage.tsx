@@ -13,7 +13,7 @@ export default function ProductPage() {
   return (
     <>
       <Meta
-        title={`${p.name} — ${p.tagline} | Helm`}
+        title={`${p.name}: ${p.tagline} | Helm`}
         desc={p.metaDesc}
         path={`/${p.slug}`}
         jsonLd={{
@@ -92,7 +92,7 @@ export default function ProductPage() {
 
       <CtaBand
         title="See what a scammer sees. Free."
-        sub="The free scan checks your email domain's real exposure — the report shows exactly what we'd fix."
+        sub="The free scan checks your email domain's real exposure: the report shows exactly what we'd fix."
         source={`product ${p.slug} cta`}
       />
     </>

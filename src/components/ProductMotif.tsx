@@ -1,6 +1,6 @@
 export type MotifKind = 'mail' | 'aware' | 'ready' | 'lane-mfg' | 'lane-pro' | 'lane-con';
 
-/** Animated line-art motifs for product tiles — premium, quiet, on-brand. */
+/** Animated line-art motifs for product tiles: premium, quiet, on-brand. */
 export default function ProductMotif({kind}: {kind: MotifKind}) {
   return (
     <div className="tile-motif" aria-hidden>

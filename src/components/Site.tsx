@@ -1,4 +1,4 @@
-import {useEffect, type ReactNode} from 'react';
+import {useEffect, useState, type ReactNode} from 'react';
 import {NavLink as RouterNavLink, Link, useLocation} from 'react-router-dom';
 import {Button} from '@astryxdesign/core/Button';
 import LeadForm from './LeadForm';
@@ -59,11 +59,20 @@ const footerCols = [
 
 export function SiteNav() {
   const {pathname} = useLocation();
+  const [open, setOpen] = useState(false);
+  useEffect(() => setOpen(false), [pathname]);
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
+
   return (
     <>
       {pathname === '/manufacturing' && (
         <div className="urgency">
-          CMMC Phase 2 enforcement begins Nov 10, 2026 — fewer than 2% of
+          CMMC Phase 2 enforcement begins Nov 10, 2026: fewer than 2% of
           defense contractors are certified. <a href="#contact">Check your readiness →</a>
         </div>
       )}
@@ -85,7 +94,31 @@ export function SiteNav() {
               <Button label="Free scan" variant="primary" size="sm" />
             </Link>
           </div>
+          <button
+            className={`nav-burger${open ? ' open' : ''}`}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            onClick={() => setOpen(!open)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
         </div>
+        {open && (
+          <div className="nav-drawer">
+            {footerCols.map((col) => (
+              <div key={col.title} className="drawer-group">
+                <div className="footer-col-title">{col.title}</div>
+                {col.links.map((l) => (
+                  <Link key={l.to} to={l.to}>
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            ))}
+          </div>
+        )}
       </nav>
     </>
   );

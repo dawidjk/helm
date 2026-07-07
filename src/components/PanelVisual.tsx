@@ -1,6 +1,6 @@
 import {HelmMark} from './Site';
 
-/** Product visual: mock Helm scan report — the thing a lead actually receives. */
+/** Product visual: mock Helm scan report, the thing a lead actually receives. */
 export default function PanelVisual({domain = 'acme-mfg.com'}: {domain?: string}) {
   return (
     <div className="panel-visual report observe d1">
@@ -48,7 +48,7 @@ export default function PanelVisual({domain = 'acme-mfg.com'}: {domain?: string}
           <span className="rv-badge ok">✓</span> MX records healthy
         </li>
         <li>
-          <span className="rv-badge warn">!</span> DMARC not enforced — spoofing possible
+          <span className="rv-badge warn">!</span> DMARC not enforced, spoofing possible
         </li>
         <li>
           <span className="rv-badge warn">!</span> Lookalike domain registered last month

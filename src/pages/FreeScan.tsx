@@ -8,7 +8,7 @@ export default function FreeScan() {
   return (
     <>
       <Meta
-        title="Free Email Security Scan — Report in 24 Hours | Helm"
+        title="Free Email Security Scan: Report in 24 Hours | Helm"
         desc="Free automated scan of your email domain: SPF, DKIM, DMARC, lookalike domains, and breach exposure. Plain-English report in 24 hours. No meeting, no sales call."
         path="/free-scan"
       />
@@ -20,8 +20,8 @@ export default function FreeScan() {
             See your business the way a scammer does.
           </h1>
           <p className="sub reveal d2">
-            Enter your work email. We scan your company's domain — SPF, DKIM,
-            DMARC, lookalike domains, breach exposure — and send a
+            Enter your work email. We scan your company's domain (SPF, DKIM,
+            DMARC, lookalike domains, breach exposure) and send a
             plain-English report within 24 hours. That's the whole process.
           </p>
           <div className="hero-ctas reveal d3">
@@ -55,7 +55,7 @@ export default function FreeScan() {
           <li className="observe d1">
             <div className="step-dot">1</div>
             <h3>You get the report</h3>
-            <p>Within 24 hours, written for a business owner — not an IT department.</p>
+            <p>Within 24 hours, written for a business owner, not an IT department.</p>
           </li>
           <li className="observe d2">
             <div className="step-dot">2</div>
