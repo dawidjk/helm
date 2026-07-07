@@ -31,9 +31,9 @@ function EnergyCanvas() {
     const ripples: Ripple[] = [];
     let nextRipple = 0;
 
-    const WAVES = 7;
+    const WAVES = 14;
     const waveY = (i: number, x: number, time: number) => {
-      const base = h * (0.30 + (i / WAVES) * 0.46);
+      const base = h * (0.22 + (i / WAVES) * 0.62);
       return (
         base +
         Math.sin(x * 0.0038 + time * 0.00042 + i * 1.7) * 26 +
