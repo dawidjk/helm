@@ -4,6 +4,9 @@ export const manufacturing: Lane = {
   slug: 'manufacturing',
   backdrop: 'aero',
   reportDomain: 'precision-mfg.com',
+  metaTitle: 'CMMC Compliance for NJ Manufacturers & Defense Suppliers | Helm',
+  metaDesc:
+    'CMMC Level 1 & 2 gap assessments for New Jersey manufacturers and defense subcontractors. Fixed fee, assessment-ready in weeks — ahead of the Nov 10, 2026 enforcement deadline.',
   eyebrow: 'NJ Manufacturers · Defense Suppliers',
   headline: 'CMMC certified, before your competitors are.',
   sub: 'CMMC Phase 2 enforcement starts November 10, 2026 — and fewer than 2% of the ~80,000 companies in the defense supply chain are certified. Assessors are booked 3–6 months out. If you supply a prime, the clock is already running.',
@@ -62,6 +65,9 @@ export const professionalServices: Lane = {
   slug: 'professional-services',
   backdrop: 'skyline',
   reportDomain: 'riveralaw.com',
+  metaTitle: 'Cybersecurity for Law Firms, CPAs & Medical Practices | Helm',
+  metaDesc:
+    'Wire fraud defense, HIPAA readiness, and cyber-insurance questionnaire remediation for law firms, accounting firms, and dental/medical practices. Per-seat pricing, plain English.',
   eyebrow: 'Law · CPA · Dental & Medical',
   headline: 'Your clients trust you with everything. Keep it that way.',
   sub: 'Wire fraud, HIPAA exposure, and cyber-insurance questionnaires now decide which firms clients and carriers trust. One spoofed email can move client money — and no malpractice policy covers the reputation.',
@@ -120,6 +126,9 @@ export const contractors: Lane = {
   slug: 'contractors',
   backdrop: 'construction',
   reportDomain: 'summitbuilders.com',
+  metaTitle: 'Payment Fraud Protection for Contractors & Trades | Helm',
+  metaDesc:
+    'Stop fake invoices and hijacked payment instructions. Email fraud protection and GC-ready security attestations built for contractors, subs, and field-service businesses.',
   eyebrow: 'Contractors · Trades · Field Services',
   headline: 'One fake invoice can wipe out a job’s profit.',
   sub: 'Payment fraud is the #1 cyber threat to contractors: spoofed supplier invoices, hijacked payment instructions, and fake GC emails. Meanwhile GCs and insurers increasingly require proof of security before you can bid or bind coverage.',

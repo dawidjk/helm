@@ -1,4 +1,5 @@
 import {Band, CtaBand} from '../components/Site';
+import Meta from '../components/Meta';
 import HeroBackdrop, {type BackdropKind} from '../components/HeroBackdrop';
 import LeadForm from '../components/LeadForm';
 import PanelVisual from '../components/PanelVisual';
@@ -7,6 +8,8 @@ export type Lane = {
   slug: string;
   backdrop: BackdropKind;
   reportDomain: string;
+  metaTitle: string;
+  metaDesc: string;
   eyebrow: string;
   headline: string;
   sub: string;
@@ -22,6 +25,7 @@ export type Lane = {
 export default function LanePage({lane}: {lane: Lane}) {
   return (
     <>
+      <Meta title={lane.metaTitle} desc={lane.metaDesc} path={`/${lane.slug}`} />
       <header className="hero lane">
         <HeroBackdrop kind={lane.backdrop} />
         <div className="wrap">

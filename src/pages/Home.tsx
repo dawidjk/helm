@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom';
 import {Band, CtaBand} from '../components/Site';
+import Meta from '../components/Meta';
 import HeroBackdrop from '../components/HeroBackdrop';
 import LeadForm from '../components/LeadForm';
 import PanelVisual from '../components/PanelVisual';
@@ -53,6 +54,21 @@ const laneLinks = [
 export default function Home() {
   return (
     <>
+      <Meta
+        title="Helm — Email Security, AI Scam Defense & Compliance for Small Business"
+        desc="Enterprise-grade email security, AI scam defense, and compliance readiness for small businesses — plain English, published pricing, backed by 24/7 security operations. Free email security scan in 24 hours."
+        path="/"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          name: 'HelmSecure LLC',
+          alternateName: 'Helm',
+          url: 'https://helmsecured.com',
+          email: 'hello@helmsecured.com',
+          address: {'@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US'},
+          description: 'Email security, AI scam defense, and compliance readiness for small businesses.',
+        }}
+      />
       <header className="hero">
         <HeroBackdrop kind="cyber" />
         <div className="wrap">

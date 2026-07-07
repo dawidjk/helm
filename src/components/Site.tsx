@@ -31,6 +31,32 @@ const lanes = [
   {to: '/contractors', label: 'Contractors & Trades'},
 ];
 
+const footerCols = [
+  {
+    title: 'Products',
+    links: [
+      {to: '/helm-mail', label: 'Helm Mail'},
+      {to: '/helm-aware', label: 'Helm Aware'},
+      {to: '/helm-ready', label: 'Helm Ready'},
+      {to: '/pricing', label: 'Pricing'},
+    ],
+  },
+  {
+    title: 'Industries',
+    links: lanes.map((l) => ({to: l.to, label: l.label})),
+  },
+  {
+    title: 'Company',
+    links: [
+      {to: '/about', label: 'About'},
+      {to: '/resources', label: 'Resources'},
+      {to: '/faq', label: 'FAQ'},
+      {to: '/contact', label: 'Contact'},
+      {to: '/free-scan', label: 'Free scan'},
+    ],
+  },
+];
+
 export function SiteNav() {
   const {pathname} = useLocation();
   return (
@@ -52,9 +78,12 @@ export function SiteNav() {
                 {l.label}
               </RouterNavLink>
             ))}
-            <a href="#contact" className="nav-cta">
-              <Button label="Free assessment" variant="primary" size="sm" />
-            </a>
+            <RouterNavLink to="/pricing" className={({isActive}) => (isActive ? 'active' : '')}>
+              Pricing
+            </RouterNavLink>
+            <Link to="/free-scan" className="nav-cta">
+              <Button label="Free scan" variant="primary" size="sm" />
+            </Link>
           </div>
         </div>
       </nav>
@@ -148,15 +177,20 @@ export function SiteFooter() {
           © {new Date().getFullYear()} HelmSecure LLC · New Jersey
           <br />
           Security that answers to your business.
-        </div>
-        <div className="footer-links">
-          {lanes.map((l) => (
-            <Link key={l.to} to={l.to}>
-              {l.label}
-            </Link>
-          ))}
-          <Link to="/contact">Contact</Link>
+          <br />
           <a href="mailto:hello@helmsecured.com">hello@helmsecured.com</a>
+        </div>
+        <div className="footer-cols">
+          {footerCols.map((col) => (
+            <div key={col.title} className="footer-col">
+              <div className="footer-col-title">{col.title}</div>
+              {col.links.map((l) => (
+                <Link key={l.to} to={l.to}>
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </footer>

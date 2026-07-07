@@ -31,9 +31,11 @@ function EnergyCanvas() {
     const ripples: Ripple[] = [];
     let nextRipple = 0;
 
-    const WAVES = 14;
+    const WAVES = 28;
+    // pre-seed the clock so waves + particles start mid-flow, not at t=0
+    const T0 = 90_000 + Math.random() * 60_000;
     const waveY = (i: number, x: number, time: number) => {
-      const base = h * (0.22 + (i / WAVES) * 0.62);
+      const base = h * (0.16 + (i / WAVES) * 0.72);
       return (
         base +
         Math.sin(x * 0.0038 + time * 0.00042 + i * 1.7) * 26 +
@@ -42,12 +44,13 @@ function EnergyCanvas() {
       );
     };
 
-    const draw = (now: number) => {
+    const draw = (rawNow: number) => {
+      const now = rawNow + T0;
       ctx.clearRect(0, 0, w, h);
 
       // flowing wave ribbons
       for (let i = 0; i < WAVES; i++) {
-        const alpha = 0.05 + 0.09 * Math.abs(Math.sin(i * 1.3 + now * 0.0002));
+        const alpha = 0.035 + 0.075 * Math.abs(Math.sin(i * 1.3 + now * 0.0002));
         const grad = ctx.createLinearGradient(0, 0, w, 0);
         grad.addColorStop(0, `rgba(46, 111, 242, 0)`);
         grad.addColorStop(0.5, `rgba(96, 154, 255, ${alpha})`);
@@ -64,7 +67,8 @@ function EnergyCanvas() {
 
       // energy particles riding the waves
       for (let i = 0; i < WAVES; i++) {
-        const px = ((now * (0.02 + i * 0.006)) % (w + 240)) - 120;
+        // stagger particle starting positions across the full width per wave
+        const px = ((now * (0.02 + i * 0.003) + i * 431.7) % (w + 240)) - 120;
         const py = waveY(i, px, now);
         const g = ctx.createRadialGradient(px, py, 0, px, py, 26);
         g.addColorStop(0, 'rgba(140, 182, 255, 0.5)');
