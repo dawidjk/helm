@@ -2,6 +2,7 @@ import {Link} from 'react-router-dom';
 import {Band, CtaBand} from '../components/Site';
 import HeroBackdrop from '../components/HeroBackdrop';
 import LeadForm from '../components/LeadForm';
+import PanelVisual from '../components/PanelVisual';
 import ProductMotif, {type MotifKind} from '../components/ProductMotif';
 
 const products: {motif: MotifKind; kicker: string; title: string; body: string; price: string}[] = [
@@ -28,27 +29,24 @@ const products: {motif: MotifKind; kicker: string; title: string; body: string; 
   },
 ];
 
-const laneCards: {motif: MotifKind; to: string; kicker: string; title: string; body: string}[] = [
+const laneLinks = [
   {
-    motif: 'lane-mfg',
     to: '/manufacturing',
     kicker: 'Manufacturing & Defense',
-    title: 'CMMC without the panic.',
-    body: 'Gap assessment to certification-ready in weeks. The deadline is real — the scramble doesn’t have to be.',
+    title: 'CMMC without the panic',
+    note: 'Nov 10, 2026 deadline',
   },
   {
-    motif: 'lane-pro',
     to: '/professional-services',
     kicker: 'Law · CPA · Medical',
-    title: 'Client trust is the product.',
-    body: 'Wire-fraud defense, HIPAA readiness, and the cyber-insurance answers your carrier demands.',
+    title: 'Client trust is the product',
+    note: 'Wire fraud · HIPAA · insurance',
   },
   {
-    motif: 'lane-con',
     to: '/contractors',
     kicker: 'Contractors & Trades',
-    title: 'Don’t let a fake invoice eat a job’s profit.',
-    body: 'Payment fraud protection built for how GCs, subs, and service businesses actually work.',
+    title: 'Stop the fake-invoice loss',
+    note: 'BEC · GC requirements',
   },
 ];
 
@@ -111,7 +109,7 @@ export default function Home() {
               <li>HIPAA-ready controls for medical and dental practices</li>
             </ul>
           </div>
-          <div className="panel-visual observe d1" role="presentation" />
+          <PanelVisual />
         </div>
       </Band>
 
@@ -140,14 +138,17 @@ export default function Home() {
           <h2>Your industry, your language.</h2>
           <p>Same protection underneath. A pitch that speaks to your world.</p>
         </div>
-        <div className="product-grid">
-          {laneCards.map((c, i) => (
-            <Link key={c.to} to={c.to} className={`product-tile linky observe d${i + 1}`}>
-              <ProductMotif kind={c.motif} />
-              <div className="kicker">{c.kicker}</div>
-              <h3>{c.title}</h3>
-              <p>{c.body}</p>
-              <div className="price">Explore →</div>
+        <div className="lane-strip observe d1">
+          {laneLinks.map((l) => (
+            <Link key={l.to} to={l.to} className="lane-row">
+              <div>
+                <div className="kicker">{l.kicker}</div>
+                <div className="lane-title">{l.title}</div>
+              </div>
+              <div className="lane-side">
+                <span className="lane-note">{l.note}</span>
+                <span className="lane-arrow">→</span>
+              </div>
             </Link>
           ))}
         </div>

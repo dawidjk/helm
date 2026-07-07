@@ -81,6 +81,8 @@ export function CtaBand({
         <div className="cta-form observe">
           <LeadForm source={source} cta={cta} />
           <div className="cta-alt">
+            Have more to tell us? <Link to="/contact">Use the full contact form →</Link>
+            <br />
             Prefer email?{' '}
             <a
               href={`mailto:hello@helmsecured.com?subject=${encodeURIComponent('Free security scan request')}&body=${encodeURIComponent(
@@ -153,6 +155,7 @@ export function SiteFooter() {
               {l.label}
             </Link>
           ))}
+          <Link to="/contact">Contact</Link>
           <a href="mailto:hello@helmsecured.com">hello@helmsecured.com</a>
         </div>
       </div>

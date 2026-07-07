@@ -3,10 +3,10 @@ import {useEffect, useMemo, useRef} from 'react';
 export type BackdropKind = 'cyber' | 'aero' | 'skyline' | 'construction';
 
 /* ------------------------------------------------------------------ */
-/* cyber — drifting network of nodes + linking lines (canvas)          */
+/* cyber — flowing energy field: layered waves + expanding ripples     */
 /* ------------------------------------------------------------------ */
 
-function CyberCanvas() {
+function EnergyCanvas() {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -27,52 +27,87 @@ function CyberCanvas() {
     };
     resize();
 
-    const N = Math.min(90, Math.floor((w * h) / 16000));
-    const nodes = Array.from({length: N}, () => ({
-      x: Math.random() * w,
-      y: Math.random() * h,
-      vx: (Math.random() - 0.5) * 0.22,
-      vy: (Math.random() - 0.5) * 0.22,
-      r: 1 + Math.random() * 1.6,
-    }));
+    type Ripple = {x: number; y: number; r: number; max: number; speed: number};
+    const ripples: Ripple[] = [];
+    let nextRipple = 0;
 
-    const LINK = 150;
-    const draw = () => {
+    const WAVES = 7;
+    const waveY = (i: number, x: number, time: number) => {
+      const base = h * (0.30 + (i / WAVES) * 0.46);
+      return (
+        base +
+        Math.sin(x * 0.0038 + time * 0.00042 + i * 1.7) * 26 +
+        Math.sin(x * 0.0016 - time * 0.00028 + i * 0.9) * 42 +
+        Math.sin(x * 0.008 + time * 0.0007 + i * 2.3) * 9
+      );
+    };
+
+    const draw = (now: number) => {
       ctx.clearRect(0, 0, w, h);
-      for (const n of nodes) {
-        if (!reduced) {
-          n.x += n.vx;
-          n.y += n.vy;
-          if (n.x < -20) n.x = w + 20;
-          if (n.x > w + 20) n.x = -20;
-          if (n.y < -20) n.y = h + 20;
-          if (n.y > h + 20) n.y = -20;
-        }
-      }
-      for (let i = 0; i < nodes.length; i++) {
-        for (let j = i + 1; j < nodes.length; j++) {
-          const dx = nodes[i].x - nodes[j].x;
-          const dy = nodes[i].y - nodes[j].y;
-          const d = Math.hypot(dx, dy);
-          if (d < LINK) {
-            ctx.strokeStyle = `rgba(76, 141, 255, ${0.16 * (1 - d / LINK)})`;
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(nodes[i].x, nodes[i].y);
-            ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.stroke();
-          }
-        }
-      }
-      for (const n of nodes) {
-        ctx.fillStyle = 'rgba(120, 168, 255, 0.55)';
+
+      // flowing wave ribbons
+      for (let i = 0; i < WAVES; i++) {
+        const alpha = 0.05 + 0.09 * Math.abs(Math.sin(i * 1.3 + now * 0.0002));
+        const grad = ctx.createLinearGradient(0, 0, w, 0);
+        grad.addColorStop(0, `rgba(46, 111, 242, 0)`);
+        grad.addColorStop(0.5, `rgba(96, 154, 255, ${alpha})`);
+        grad.addColorStop(1, `rgba(122, 76, 255, 0)`);
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = i % 3 === 0 ? 2 : 1.2;
         ctx.beginPath();
-        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        for (let x = -20; x <= w + 20; x += 7) {
+          const y = waveY(i, x, now);
+          x === -20 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+      }
+
+      // energy particles riding the waves
+      for (let i = 0; i < WAVES; i++) {
+        const px = ((now * (0.02 + i * 0.006)) % (w + 240)) - 120;
+        const py = waveY(i, px, now);
+        const g = ctx.createRadialGradient(px, py, 0, px, py, 26);
+        g.addColorStop(0, 'rgba(140, 182, 255, 0.5)');
+        g.addColorStop(1, 'rgba(140, 182, 255, 0)');
+        ctx.fillStyle = g;
+        ctx.beginPath();
+        ctx.arc(px, py, 26, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = 'rgba(200, 220, 255, 0.9)';
+        ctx.beginPath();
+        ctx.arc(px, py, 1.8, 0, Math.PI * 2);
         ctx.fill();
       }
+
+      // expanding ripples
+      if (now > nextRipple) {
+        nextRipple = now + 2200 + Math.random() * 1800;
+        const i = Math.floor(Math.random() * WAVES);
+        const x = w * (0.2 + Math.random() * 0.6);
+        ripples.push({x, y: waveY(i, x, now), r: 0, max: 120 + Math.random() * 120, speed: 0.045});
+      }
+      for (let i = ripples.length - 1; i >= 0; i--) {
+        const rp = ripples[i];
+        rp.r += rp.speed * 16;
+        const fade = 1 - rp.r / rp.max;
+        if (fade <= 0) {
+          ripples.splice(i, 1);
+          continue;
+        }
+        for (let k = 0; k < 3; k++) {
+          const rr = rp.r - k * 14;
+          if (rr <= 0) continue;
+          ctx.strokeStyle = `rgba(96, 154, 255, ${0.28 * fade * (1 - k * 0.3)})`;
+          ctx.lineWidth = 1.4 - k * 0.35;
+          ctx.beginPath();
+          ctx.ellipse(rp.x, rp.y, rr, rr * 0.42, 0, 0, Math.PI * 2);
+          ctx.stroke();
+        }
+      }
+
       if (!reduced) raf = requestAnimationFrame(draw);
     };
-    draw();
+    draw(performance.now());
 
     const obs = new ResizeObserver(resize);
     obs.observe(canvas);
@@ -192,46 +227,81 @@ function SkylineSvg() {
 }
 
 /* ------------------------------------------------------------------ */
-/* construction — datacenter hall assembling in isometric modules      */
+/* construction — jobsite: steel frame, crane, forklift, welding robot */
 /* ------------------------------------------------------------------ */
 
-function IsoBlock({x, y, i}: {x: number; y: number; i: number}) {
-  // simple isometric cube: top, left, right faces
-  return (
-    <g className="iso-block" style={{animationDelay: `${(i % 12) * 0.55}s`}} transform={`translate(${x} ${y})`}>
-      <path d="M0 20 L40 0 L80 20 L40 40 Z" fill="rgba(76,141,255,0.16)" stroke="rgba(76,141,255,0.45)" strokeWidth="1" />
-      <path d="M0 20 L40 40 L40 86 L0 66 Z" fill="rgba(14,24,44,0.9)" stroke="rgba(76,141,255,0.3)" strokeWidth="1" />
-      <path d="M80 20 L40 40 L40 86 L80 66 Z" fill="rgba(24,40,72,0.9)" stroke="rgba(76,141,255,0.3)" strokeWidth="1" />
-      <path d="M46 48 l26 -13 M46 58 l26 -13 M46 68 l26 -13" stroke="rgba(120,168,255,0.5)" strokeWidth="1.4" fill="none" />
-    </g>
-  );
-}
-
 function ConstructionSvg() {
-  const blocks: {x: number; y: number}[] = [];
-  const originX = 380;
-  const originY = 210;
-  for (let row = 0; row < 4; row++) {
-    for (let col = 0; col < 6; col++) {
-      blocks.push({
-        x: originX + col * 44 - row * 44,
-        y: originY + col * 22 + row * 22,
-      });
-    }
-  }
   return (
     <svg className="backdrop-svg construction" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden>
-      {/* crane */}
+      {/* ground line */}
+      <line x1="0" y1="520" x2="1200" y2="520" stroke="rgba(76,141,255,0.35)" strokeWidth="1.5" />
+
+      {/* steel building frame (rising floors) */}
       <g stroke="rgba(76,141,255,0.4)" strokeWidth="2" fill="none">
-        <path d="M950 560 L950 120 M950 120 L690 150 M950 120 L1100 140 M905 560 L995 560" />
-        <path d="M950 120 L905 180 M950 120 L995 180" strokeWidth="1.2" />
-        <path className="crane-cable" d="M760 143 L760 300" strokeWidth="1.2" />
-        <path d="M748 300 l24 0 l0 14 l-24 0 Z" fill="rgba(76,141,255,0.2)" />
+        <path d="M300 520 L300 200 M420 520 L420 200 M540 520 L540 200" />
+        <g className="frame-floor f1"><path d="M290 440 L550 440" /></g>
+        <g className="frame-floor f2"><path d="M290 360 L550 360" /></g>
+        <g className="frame-floor f3"><path d="M290 280 L550 280" /></g>
+        <g className="frame-floor f4"><path d="M290 200 L550 200" /></g>
+        {/* cross bracing */}
+        <path d="M300 520 L420 440 M420 520 L300 440" strokeWidth="1" opacity="0.6" />
+        <path d="M420 440 L540 360 M540 440 L420 360" strokeWidth="1" opacity="0.6" />
       </g>
-      <g>
-        {blocks.map((b, i) => (
-          <IsoBlock key={i} x={b.x} y={b.y} i={i} />
-        ))}
+
+      {/* tower crane, lifting a beam toward the frame */}
+      <g stroke="rgba(76,141,255,0.45)" strokeWidth="2" fill="none">
+        <path d="M700 520 L700 100 M660 520 L740 520" />
+        <path d="M700 100 L440 130 M700 100 L860 118" />
+        <path d="M700 100 L664 150 M700 100 L736 150" strokeWidth="1.2" />
+        <path d="M690 92 l20 0 l0 -14 l-20 0 Z" fill="rgba(76,141,255,0.15)" />
+        <g className="crane-lift">
+          <path className="crane-cable" d="M520 124 L520 320" strokeWidth="1.2" />
+          <path d="M492 320 l56 0 l0 10 l-56 0 Z" fill="rgba(76,141,255,0.25)" stroke="rgba(76,141,255,0.5)" strokeWidth="1.2" />
+        </g>
+      </g>
+
+      {/* forklift driving across with a pallet */}
+      <g className="forklift" stroke="rgba(120,168,255,0.65)" strokeWidth="2" fill="none">
+        {/* body */}
+        <path d="M60 470 l64 0 l10 -26 l-40 0 l-8 -22 l-26 0 Z" fill="rgba(14,24,44,0.9)" />
+        {/* overhead guard */}
+        <path d="M70 422 l0 -20 l38 0 l6 20" strokeWidth="1.5" />
+        {/* mast */}
+        <path d="M132 470 L132 400 M140 470 L140 400" strokeWidth="1.5" />
+        {/* forks + pallet */}
+        <g className="fork-lift-arm">
+          <path d="M140 452 l34 0" strokeWidth="2.5" />
+          <path d="M146 452 l0 -10 l40 0 l0 10 Z M150 442 l6 -8 l28 0 l6 8" strokeWidth="1.3" fill="rgba(76,141,255,0.15)" />
+        </g>
+        {/* wheels */}
+        <g className="wheel w1"><circle cx="82" cy="482" r="12" /><path d="M82 474 l0 16 M74 482 l16 0" strokeWidth="1" /></g>
+        <g className="wheel w2"><circle cx="126" cy="482" r="9" /><path d="M126 476 l0 12 M120 482 l12 0" strokeWidth="1" /></g>
+      </g>
+
+      {/* welding robot arm on a pedestal, sparking */}
+      <g stroke="rgba(120,168,255,0.6)" strokeWidth="2" fill="none">
+        <path d="M950 520 l60 0 l-8 -18 l-44 0 Z" fill="rgba(14,24,44,0.9)" />
+        <g className="robot-shoulder">
+          <path d="M980 502 L950 430" />
+          <g className="robot-elbow">
+            <path d="M950 430 L1000 380" />
+            <path d="M1000 380 l14 -6 l6 10" strokeWidth="1.5" />
+            <g className="sparks" stroke="#9dc0ff" strokeWidth="1.4" strokeLinecap="round">
+              <path className="spark s1" d="M1022 382 l10 -8" />
+              <path className="spark s2" d="M1024 386 l12 2" />
+              <path className="spark s3" d="M1022 390 l8 10" />
+              <circle className="spark s2" cx="1021" cy="385" r="2.5" fill="#c8dcff" stroke="none" />
+            </g>
+          </g>
+        </g>
+        <circle cx="980" cy="502" r="5" fill="rgba(76,141,255,0.4)" stroke="none" />
+        <circle cx="950" cy="430" r="4" fill="rgba(76,141,255,0.4)" stroke="none" />
+      </g>
+
+      {/* hard-hat safety cones for depth */}
+      <g stroke="rgba(76,141,255,0.35)" strokeWidth="1.4" fill="none">
+        <path d="M840 520 l8 -22 l8 22 Z M834 520 l28 0" />
+        <path d="M890 520 l7 -18 l7 18 Z M885 520 l24 0" />
       </g>
     </svg>
   );
@@ -242,7 +312,7 @@ function ConstructionSvg() {
 export default function HeroBackdrop({kind}: {kind: BackdropKind}) {
   return (
     <div className={`hero-backdrop ${kind}`} aria-hidden>
-      {kind === 'cyber' && <CyberCanvas />}
+      {kind === 'cyber' && <EnergyCanvas />}
       {kind === 'aero' && <AeroSvg />}
       {kind === 'skyline' && <SkylineSvg />}
       {kind === 'construction' && <ConstructionSvg />}

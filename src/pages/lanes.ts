@@ -3,6 +3,7 @@ import type {Lane} from './LanePage';
 export const manufacturing: Lane = {
   slug: 'manufacturing',
   backdrop: 'aero',
+  reportDomain: 'precision-mfg.com',
   eyebrow: 'NJ Manufacturers · Defense Suppliers',
   headline: 'CMMC certified, before your competitors are.',
   sub: 'CMMC Phase 2 enforcement starts November 10, 2026 — and fewer than 2% of the ~80,000 companies in the defense supply chain are certified. Assessors are booked 3–6 months out. If you supply a prime, the clock is already running.',
@@ -60,6 +61,7 @@ export const manufacturing: Lane = {
 export const professionalServices: Lane = {
   slug: 'professional-services',
   backdrop: 'skyline',
+  reportDomain: 'riveralaw.com',
   eyebrow: 'Law · CPA · Dental & Medical',
   headline: 'Your clients trust you with everything. Keep it that way.',
   sub: 'Wire fraud, HIPAA exposure, and cyber-insurance questionnaires now decide which firms clients and carriers trust. One spoofed email can move client money — and no malpractice policy covers the reputation.',
@@ -117,6 +119,7 @@ export const professionalServices: Lane = {
 export const contractors: Lane = {
   slug: 'contractors',
   backdrop: 'construction',
+  reportDomain: 'summitbuilders.com',
   eyebrow: 'Contractors · Trades · Field Services',
   headline: 'One fake invoice can wipe out a job’s profit.',
   sub: 'Payment fraud is the #1 cyber threat to contractors: spoofed supplier invoices, hijacked payment instructions, and fake GC emails. Meanwhile GCs and insurers increasingly require proof of security before you can bid or bind coverage.',

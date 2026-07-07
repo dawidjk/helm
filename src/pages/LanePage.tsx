@@ -1,10 +1,12 @@
 import {Band, CtaBand} from '../components/Site';
 import HeroBackdrop, {type BackdropKind} from '../components/HeroBackdrop';
 import LeadForm from '../components/LeadForm';
+import PanelVisual from '../components/PanelVisual';
 
 export type Lane = {
   slug: string;
   backdrop: BackdropKind;
+  reportDomain: string;
   eyebrow: string;
   headline: string;
   sub: string;
@@ -38,11 +40,14 @@ export default function LanePage({lane}: {lane: Lane}) {
         <div className="band-head observe">
           <h2>What's actually at risk</h2>
         </div>
-        <div className="product-grid">
+        <div className="risk-list">
           {lane.pains.map((p, i) => (
-            <div key={p.title} className={`product-tile observe d${i + 1}`}>
-              <h3 style={{fontSize: 22}}>{p.title}</h3>
-              <p>{p.body}</p>
+            <div key={p.title} className={`risk-item observe d${i + 1}`}>
+              <div className="risk-index">{String(i + 1).padStart(2, '0')}</div>
+              <div>
+                <h3>{p.title}</h3>
+                <p>{p.body}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -53,15 +58,15 @@ export default function LanePage({lane}: {lane: Lane}) {
           <h2>{lane.planTitle}</h2>
           <p>{lane.planSub}</p>
         </div>
-        <div className="product-grid">
+        <ol className="steps-flow">
           {lane.steps.map((s, i) => (
-            <div key={s.num} className={`product-tile observe d${i + 1}`}>
-              <div className="kicker">Step {s.num}</div>
-              <h3 style={{fontSize: 22}}>{s.title}</h3>
+            <li key={s.num} className={`observe d${i + 1}`}>
+              <div className="step-dot">{s.num}</div>
+              <h3>{s.title}</h3>
               <p>{s.body}</p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </Band>
 
       <Band variant="raised">
@@ -74,7 +79,7 @@ export default function LanePage({lane}: {lane: Lane}) {
               ))}
             </ul>
           </div>
-          <div className="panel-visual observe d1" role="presentation" />
+          <PanelVisual domain={lane.reportDomain} />
         </div>
       </Band>
 
