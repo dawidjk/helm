@@ -53,7 +53,7 @@ export default function Faq() {
           })),
         }}
       />
-      <header className="hero lane" style={{padding: '96px 0 56px'}}>
+      <header className="hero lane">
         <div className="wrap">
           <div className="eyebrow reveal">FAQ</div>
           <h1 className="reveal d1">Straight answers.</h1>

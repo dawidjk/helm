@@ -1,5 +1,11 @@
 @import '@astryxdesign/core/reset.css';
 @import '@astryxdesign/core/astryx.css';
+/* Self-hosted Inter (removes render-blocking Google Fonts request) */
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/inter/800.css';
 
 /* ---------------------------------------------------------------------------
    Helm marketing styles: Apple/Ubiquiti-grade product-site layer.
@@ -162,7 +168,10 @@ body {
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 128px 0 112px;
+  min-height: calc(100svh - 72px);
+  display: grid;
+  align-content: center;
+  padding: 48px 0;
   text-align: center;
 }
 
@@ -856,12 +865,9 @@ body {
   color: #8db4ff;
 }
 
-/* full-viewport hero (pricing) */
+/* .hero-tall kept for compatibility; all heroes are now full-viewport */
 .hero-tall {
   min-height: calc(100svh - 72px);
-  display: grid;
-  align-content: center;
-  padding: 0 0 48px;
 }
 
 .hero-note {
@@ -1406,7 +1412,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: rgba(238, 242, 250, 0.45);
+  color: rgba(238, 242, 250, 0.62); /* >=4.5:1 contrast on ink background */
   margin-bottom: 4px;
 }
 

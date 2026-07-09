@@ -11,7 +11,7 @@ export default function Resources() {
         desc="Plain-English guides on CMMC deadlines, cyber insurance questionnaires, wire fraud prevention, DMARC, and deepfake scams, written for business owners, not IT departments."
         path="/resources"
       />
-      <header className="hero lane" style={{padding: '96px 0 56px'}}>
+      <header className="hero lane">
         <div className="wrap">
           <div className="eyebrow reveal">Resources</div>
           <h1 className="reveal d1" style={{maxWidth: '18ch'}}>

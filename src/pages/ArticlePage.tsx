@@ -35,7 +35,7 @@ export default function ArticlePage() {
           ],
         }}
       />
-      <header className="hero lane" style={{padding: '88px 0 40px'}}>
+      <header className="hero lane">
         <div className="wrap article-head">
           <div className="eyebrow reveal">
             <Link to="/resources" style={{color: 'inherit', textDecoration: 'none'}}>

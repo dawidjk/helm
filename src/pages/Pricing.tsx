@@ -12,7 +12,7 @@ export default function Pricing() {
         desc="Helm pricing: managed email security from $12/user/month, AI scam defense workshops from $1,500, compliance projects from $2,500 fixed fee. Published prices, no custom quotes."
         path="/pricing"
       />
-      <header className="hero lane hero-tall">
+      <header className="hero lane">
         <div className="wrap">
           <div className="eyebrow reveal">Pricing</div>
           <h1 className="reveal d1" style={{maxWidth: '18ch'}}>

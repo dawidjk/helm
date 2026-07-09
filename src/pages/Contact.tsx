@@ -39,7 +39,7 @@ export default function Contact() {
         desc="Contact Helm about email security, AI scam defense, or compliance readiness. Tell us about your business and get a straight answer within one business day."
         path="/contact"
       />
-      <header className="hero lane" style={{padding: '88px 0 56px'}}>
+      <header className="hero lane">
         <div className="wrap">
           <h1 className="reveal" style={{fontSize: 'clamp(36px, 5vw, 56px)'}}>
             Talk to a human.

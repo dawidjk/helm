@@ -19,7 +19,7 @@ export default function About() {
             'Email security, AI scam defense, and compliance readiness for small businesses.',
         }}
       />
-      <header className="hero lane" style={{padding: '96px 0 72px'}}>
+      <header className="hero lane">
         <div className="wrap">
           <div className="eyebrow reveal">About Helm</div>
           <h1 className="reveal d1" style={{maxWidth: '20ch'}}>
