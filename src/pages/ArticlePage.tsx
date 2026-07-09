@@ -1,3 +1,4 @@
+import HeroBackdrop from '../components/HeroBackdrop';
 import {useParams, Navigate, Link} from 'react-router-dom';
 import {Band, CtaBand} from '../components/Site';
 import Meta from '../components/Meta';
@@ -36,6 +37,7 @@ export default function ArticlePage() {
         }}
       />
       <header className="hero lane">
+        <HeroBackdrop kind="rain" />
         <div className="wrap article-head">
           <div className="eyebrow reveal">
             <Link to="/resources" style={{color: 'inherit', textDecoration: 'none'}}>

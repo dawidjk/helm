@@ -1,3 +1,4 @@
+import HeroBackdrop from '../components/HeroBackdrop';
 import {Link} from 'react-router-dom';
 import {Band, CtaBand} from '../components/Site';
 import Meta from '../components/Meta';
@@ -13,6 +14,7 @@ export default function Pricing() {
         path="/pricing"
       />
       <header className="hero lane">
+        <HeroBackdrop kind="rain" />
         <div className="wrap">
           <div className="eyebrow reveal">Pricing</div>
           <h1 className="reveal d1" style={{maxWidth: '18ch'}}>

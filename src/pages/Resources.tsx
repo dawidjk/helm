@@ -1,3 +1,4 @@
+import HeroBackdrop from '../components/HeroBackdrop';
 import {Link} from 'react-router-dom';
 import {Band, CtaBand} from '../components/Site';
 import Meta from '../components/Meta';
@@ -12,6 +13,7 @@ export default function Resources() {
         path="/resources"
       />
       <header className="hero lane">
+        <HeroBackdrop kind="rain" />
         <div className="wrap">
           <div className="eyebrow reveal">Resources</div>
           <h1 className="reveal d1" style={{maxWidth: '18ch'}}>

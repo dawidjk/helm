@@ -1,3 +1,4 @@
+import HeroBackdrop from '../components/HeroBackdrop';
 import {Band, CtaBand} from '../components/Site';
 import Meta from '../components/Meta';
 
@@ -54,6 +55,7 @@ export default function Faq() {
         }}
       />
       <header className="hero lane">
+        <HeroBackdrop kind="rain" />
         <div className="wrap">
           <div className="eyebrow reveal">FAQ</div>
           <h1 className="reveal d1">Straight answers.</h1>

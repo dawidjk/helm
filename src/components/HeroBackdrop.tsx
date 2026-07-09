@@ -1,6 +1,121 @@
 import {useEffect, useMemo, useRef} from 'react';
 
-export type BackdropKind = 'cyber' | 'aero' | 'skyline' | 'construction';
+export type BackdropKind = 'cyber' | 'aero' | 'skyline' | 'construction' | 'rain';
+
+/* ------------------------------------------------------------------ */
+/* rain — raindrop ripples spreading across a perfectly still surface  */
+/* ------------------------------------------------------------------ */
+
+function RainCanvas() {
+  const ref = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = ref.current!;
+    const ctx = canvas.getContext('2d')!;
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let raf = 0;
+    let w = 0;
+    let h = 0;
+
+    const resize = () => {
+      const dpr = Math.min(devicePixelRatio || 1, 2);
+      w = canvas.offsetWidth;
+      h = canvas.offsetHeight;
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    resize();
+
+    // the "water" occupies the band below the horizon
+    const HORIZON = 0.3;
+
+    type Drop = {x: number; y: number; r: number; max: number; speed: number; born: number};
+    const drops: Drop[] = [];
+    let nextDrop = 0;
+
+    const spawn = (now: number) => {
+      const depth = Math.random(); // 0 = far (horizon), 1 = near (bottom)
+      const y = h * (HORIZON + 0.06 + depth * (1 - HORIZON - 0.12));
+      drops.push({
+        x: w * (0.05 + Math.random() * 0.9),
+        y,
+        r: 0,
+        // nearer drops read larger and spread further (perspective)
+        max: 30 + depth * 160,
+        speed: 0.55 + depth * 1.15,
+        born: now,
+      });
+      if (drops.length > 26) drops.shift();
+    };
+
+    const drawRipple = (d: Drop) => {
+      const depth = (d.y - h * HORIZON) / (h * (1 - HORIZON));
+      const squash = 0.18 + depth * 0.2; // flatter far away, rounder up close
+      const fade = 1 - d.r / d.max;
+      if (fade <= 0) return;
+      for (let k = 0; k < 3; k++) {
+        const rr = d.r - k * (6 + depth * 10);
+        if (rr <= 0) continue;
+        ctx.strokeStyle = `rgba(96, 154, 255, ${(0.34 - k * 0.09) * fade})`;
+        ctx.lineWidth = 1.5 - k * 0.4;
+        ctx.beginPath();
+        ctx.ellipse(d.x, d.y, rr, rr * squash, 0, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+      // glint at the point of impact while the ripple is young
+      if (d.r < d.max * 0.25) {
+        ctx.fillStyle = `rgba(200, 220, 255, ${0.7 * (1 - d.r / (d.max * 0.25))})`;
+        ctx.beginPath();
+        ctx.arc(d.x, d.y, 1.4, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    };
+
+    if (reduced) {
+      // static scene: a handful of frozen ripples
+      const now = 0;
+      for (let i = 0; i < 6; i++) {
+        spawn(now);
+        drops[drops.length - 1].r = drops[drops.length - 1].max * (0.2 + 0.1 * i);
+      }
+      drops.forEach(drawRipple);
+    } else {
+      const draw = (now: number) => {
+        ctx.clearRect(0, 0, w, h);
+        if (now > nextDrop) {
+          nextDrop = now + 420 + Math.random() * 680;
+          spawn(now);
+        }
+        for (let i = drops.length - 1; i >= 0; i--) {
+          const d = drops[i];
+          d.r += d.speed;
+          if (d.r >= d.max) {
+            drops.splice(i, 1);
+            continue;
+          }
+          drawRipple(d);
+        }
+        raf = requestAnimationFrame(draw);
+      };
+      // pre-seed so the surface is already alive on load
+      for (let i = 0; i < 8; i++) {
+        spawn(0);
+        drops[drops.length - 1].r = Math.random() * drops[drops.length - 1].max * 0.8;
+      }
+      draw(performance.now());
+    }
+
+    const obs = new ResizeObserver(resize);
+    obs.observe(canvas);
+    return () => {
+      cancelAnimationFrame(raf);
+      obs.disconnect();
+    };
+  }, []);
+
+  return <canvas ref={ref} className="backdrop-canvas" aria-hidden />;
+}
 
 /* ------------------------------------------------------------------ */
 /* cyber: flowing energy field: layered waves + expanding ripples      */
@@ -320,6 +435,7 @@ export default function HeroBackdrop({kind}: {kind: BackdropKind}) {
       {kind === 'aero' && <AeroSvg />}
       {kind === 'skyline' && <SkylineSvg />}
       {kind === 'construction' && <ConstructionSvg />}
+      {kind === 'rain' && <RainCanvas />}
     </div>
   );
 }

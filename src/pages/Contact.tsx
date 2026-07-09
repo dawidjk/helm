@@ -1,3 +1,4 @@
+import HeroBackdrop from '../components/HeroBackdrop';
 import {useState} from 'react';
 import {Button} from '@astryxdesign/core/Button';
 import {Band} from '../components/Site';
@@ -40,6 +41,7 @@ export default function Contact() {
         path="/contact"
       />
       <header className="hero lane">
+        <HeroBackdrop kind="rain" />
         <div className="wrap">
           <h1 className="reveal" style={{fontSize: 'clamp(36px, 5vw, 56px)'}}>
             Talk to a human.

@@ -1,3 +1,4 @@
+import HeroBackdrop from '../components/HeroBackdrop';
 import {Band, CtaBand} from '../components/Site';
 import Meta from '../components/Meta';
 
@@ -20,6 +21,7 @@ export default function About() {
         }}
       />
       <header className="hero lane">
+        <HeroBackdrop kind="rain" />
         <div className="wrap">
           <div className="eyebrow reveal">About Helm</div>
           <h1 className="reveal d1" style={{maxWidth: '20ch'}}>

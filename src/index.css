@@ -634,6 +634,11 @@ body {
   opacity: 0.5;
 }
 
+.hero-backdrop.rain {
+  /* faint still-water sheen below the horizon */
+  background: linear-gradient(180deg, transparent 30%, rgba(76, 141, 255, 0.045) 70%, rgba(76, 141, 255, 0.08));
+}
+
 .hero-backdrop.aero {
   background-image:
     linear-gradient(rgba(76, 141, 255, 0.06) 1px, transparent 1px),
