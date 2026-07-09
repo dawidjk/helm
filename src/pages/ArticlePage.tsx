@@ -16,12 +16,23 @@ export default function ArticlePage() {
         path={`/resources/${a.slug}`}
         jsonLd={{
           '@context': 'https://schema.org',
-          '@type': 'Article',
-          headline: a.title,
-          description: a.metaDesc,
-          datePublished: a.date,
-          author: {'@type': 'Organization', name: 'Helm'},
-          publisher: {'@type': 'Organization', name: 'HelmSecure LLC', url: 'https://helmsecured.com'},
+          '@graph': [
+            {
+              '@type': 'Article',
+              headline: a.title,
+              description: a.metaDesc,
+              datePublished: a.date,
+              author: {'@type': 'Organization', name: 'Helm'},
+              publisher: {'@type': 'Organization', name: 'HelmSecure LLC', url: 'https://helmsecured.com'},
+            },
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {'@type': 'ListItem', position: 1, name: 'Resources', item: 'https://helmsecured.com/resources'},
+                {'@type': 'ListItem', position: 2, name: a.title, item: `https://helmsecured.com/resources/${a.slug}`},
+              ],
+            },
+          ],
         }}
       />
       <header className="hero lane" style={{padding: '88px 0 40px'}}>
@@ -51,6 +62,12 @@ export default function ArticlePage() {
             <h2>The takeaway</h2>
             <p>{a.takeaway}</p>
           </div>
+          <nav className="article-related" aria-label="Related pages">
+            <span>Related:</span>
+            <Link to={a.laneTo}>{a.lane === 'All industries' ? 'How Helm works' : `Helm for ${a.lane}`}</Link>
+            <Link to="/free-scan">Free email security scan</Link>
+            <Link to="/pricing">Pricing</Link>
+          </nav>
         </article>
       </Band>
 

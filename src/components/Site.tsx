@@ -105,21 +105,21 @@ export function SiteNav() {
             <span />
           </button>
         </div>
-        {open && (
-          <div className="nav-drawer">
-            {footerCols.map((col) => (
-              <div key={col.title} className="drawer-group">
-                <div className="footer-col-title">{col.title}</div>
-                {col.links.map((l) => (
-                  <Link key={l.to} to={l.to}>
-                    {l.label}
-                  </Link>
-                ))}
-              </div>
-            ))}
-          </div>
-        )}
       </nav>
+      {open && (
+        <div className="nav-drawer">
+          {footerCols.map((col) => (
+            <div key={col.title} className="drawer-group">
+              <div className="footer-col-title">{col.title}</div>
+              {col.links.map((l) => (
+                <Link key={l.to} to={l.to}>
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+          ))}
+        </div>
+      )}
     </>
   );
 }
