@@ -1,3 +1,4 @@
+import {useEffect, useState} from 'react';
 import {Band, CtaBand} from '../components/Site';
 import Meta from '../components/Meta';
 import HeroBackdrop, {type BackdropKind} from '../components/HeroBackdrop';
@@ -14,6 +15,7 @@ export type Lane = {
   headline: string;
   sub: string;
   primaryCta: string;
+  deadline?: {iso: string; label: string};
   pains: {title: string; body: string}[];
   planTitle: string;
   planSub: string;
@@ -22,6 +24,31 @@ export type Lane = {
   cta: {title: string; sub: string; label: string};
 };
 
+function formatDeadlineDate(iso: string): string {
+  const [year, month, day] = iso.split('-').map(Number);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return date.toLocaleDateString('en-US', {month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC'});
+}
+
+function DeadlineChip({deadline}: {deadline: {iso: string; label: string}}) {
+  const [daysLeft, setDaysLeft] = useState<number | null>(null);
+
+  useEffect(() => {
+    const target = new Date(`${deadline.iso}T00:00:00Z`).getTime();
+    const diffDays = Math.ceil((target - Date.now()) / (1000 * 60 * 60 * 24));
+    setDaysLeft(diffDays);
+  }, [deadline.iso]);
+
+  const fallbackText = `${deadline.label}: ${formatDeadlineDate(deadline.iso)}`;
+  const text = daysLeft !== null && daysLeft > 0 ? `${deadline.label} in ${daysLeft} days` : fallbackText;
+
+  return (
+    <div className="deadline-chip-row reveal">
+      <span className="deadline-chip">{text}</span>
+    </div>
+  );
+}
+
 export default function LanePage({lane}: {lane: Lane}) {
   return (
     <>
@@ -29,6 +56,7 @@ export default function LanePage({lane}: {lane: Lane}) {
       <header className="hero lane">
         <HeroBackdrop kind={lane.backdrop} />
         <div className="wrap">
+          {lane.deadline && <DeadlineChip deadline={lane.deadline} />}
           <div className="eyebrow reveal">{lane.eyebrow}</div>
           <h1 className="reveal d1" style={{maxWidth: '20ch'}}>
             {lane.headline}

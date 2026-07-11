@@ -9,8 +9,9 @@ export const manufacturing: Lane = {
     'CMMC Level 1 & 2 gap assessments for New Jersey manufacturers and defense subcontractors. Fixed fee, assessment-ready in weeks, ahead of the Nov 10, 2026 enforcement deadline.',
   eyebrow: 'NJ Manufacturers · Defense Suppliers',
   headline: 'CMMC certified, before your competitors are.',
-  sub: 'CMMC Phase 2 enforcement starts November 10, 2026, and fewer than 2% of the ~80,000 companies in the defense supply chain are certified. Assessors are booked 3–6 months out. If you supply a prime, the clock is already running.',
+  sub: 'CMMC Phase 2 enforcement starts November 10, 2026. Fewer than 2% of the roughly 80,000 companies in the defense supply chain are certified, and assessors are booked 3 to 6 months out. If you supply a prime, the window to start is this quarter, not next.',
   primaryCta: 'Book a CMMC gap assessment',
+  deadline: {iso: '2026-11-10', label: 'CMMC Phase 2 enforcement'},
   pains: [
     {
       title: 'Lose the contract, lose the shop',
@@ -18,7 +19,7 @@ export const manufacturing: Lane = {
     },
     {
       title: 'The assessor backlog is real',
-      body: 'Certified assessors are scheduling months out. Companies that start after the deadline hits will wait at the back of the line while orders go elsewhere.',
+      body: 'Certified assessors are scheduling 3 to 6 months out. Do the math against the deadline: companies that have not started by late summer will wait at the back of the line while orders go elsewhere.',
     },
     {
       title: 'DIY compliance burns the year',
@@ -79,7 +80,7 @@ export const professionalServices: Lane = {
     },
     {
       title: 'Your carrier is asking harder questions',
-      body: 'Cyber-insurance renewals now demand MFA, email security, and training: answer wrong and premiums spike or coverage vanishes when you need it.',
+      body: 'Cyber-insurance renewals now ask a dozen pointed questions: MFA, email authentication, staff training, incident response. Answer wrong and premiums spike, or coverage vanishes when you need it.',
     },
     {
       title: 'HIPAA fines don’t care about size',
@@ -136,7 +137,7 @@ export const contractors: Lane = {
   pains: [
     {
       title: 'Supplier invoice fraud',
-      body: 'Attackers watch a real email thread, then send a "updated bank details" note from a lookalike domain. The money leaves and doesn’t come back.',
+      body: 'Attackers watch a real email thread, then send an "updated bank details" note from a lookalike domain. The money leaves and doesn’t come back.',
     },
     {
       title: 'GCs now require security',
