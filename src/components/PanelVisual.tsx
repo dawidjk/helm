@@ -13,13 +13,13 @@ export default function PanelVisual({domain = 'acme-mfg.com'}: {domain?: string}
 
       <div className="rv-score">
         <svg viewBox="0 0 96 96" aria-hidden>
-          <circle cx="48" cy="48" r="40" stroke="rgba(76,141,255,0.18)" strokeWidth="8" fill="none" />
+          <circle cx="48" cy="48" r="40" stroke="rgba(56, 161, 105, 0.18)" strokeWidth="8" fill="none" />
           <circle
             className="rv-ring"
             cx="48"
             cy="48"
             r="40"
-            stroke="#4C8DFF"
+            stroke="#38A169"
             strokeWidth="8"
             fill="none"
             strokeLinecap="round"

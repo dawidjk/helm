@@ -2,12 +2,13 @@ import {useEffect, useState, type ReactNode} from 'react';
 import {NavLink as RouterNavLink, Link, useLocation} from 'react-router-dom';
 import {Button} from '@astryxdesign/core/Button';
 import LeadForm from './LeadForm';
+import ThemePicker from './ThemePicker';
 
 export function HelmMark({size = 28}: {size?: number}) {
   return (
     <svg width={size} height={size} viewBox="0 0 32 32" fill="none" aria-hidden>
-      <circle cx="16" cy="16" r="13" stroke="#4C8DFF" strokeWidth="2.5" />
-      <circle cx="16" cy="16" r="5" fill="#4C8DFF" />
+      <circle cx="16" cy="16" r="13" stroke="#38A169" strokeWidth="2.5" />
+      <circle cx="16" cy="16" r="5" fill="#38A169" />
       {[0, 45, 90, 135, 180, 225, 270, 315].map((a) => (
         <line
           key={a}
@@ -15,7 +16,7 @@ export function HelmMark({size = 28}: {size?: number}) {
           y1="1"
           x2="16"
           y2="7"
-          stroke="#4C8DFF"
+          stroke="#38A169"
           strokeWidth="2.5"
           strokeLinecap="round"
           transform={`rotate(${a} 16 16)`}
@@ -81,29 +82,32 @@ export function SiteNav() {
           <Link to="/" className="nav-brand">
             <HelmMark /> Helm
           </Link>
-          <div className="nav-links">
-            {lanes.map((l) => (
-              <RouterNavLink key={l.to} to={l.to} className={({isActive}) => (isActive ? 'active' : '')}>
-                {l.label}
+          <div className="nav-right">
+            <div className="nav-links">
+              {lanes.map((l) => (
+                <RouterNavLink key={l.to} to={l.to} className={({isActive}) => (isActive ? 'active' : '')}>
+                  {l.label}
+                </RouterNavLink>
+              ))}
+              <RouterNavLink to="/pricing" className={({isActive}) => (isActive ? 'active' : '')}>
+                Pricing
               </RouterNavLink>
-            ))}
-            <RouterNavLink to="/pricing" className={({isActive}) => (isActive ? 'active' : '')}>
-              Pricing
-            </RouterNavLink>
-            <Link to="/free-scan" className="nav-cta">
-              <Button label="Free scan" variant="primary" size="sm" />
-            </Link>
+              <Link to="/free-scan" className="nav-cta">
+                <Button label="Free scan" variant="primary" size="sm" />
+              </Link>
+            </div>
+            <ThemePicker />
+            <button
+              className={`nav-burger${open ? ' open' : ''}`}
+              aria-label={open ? 'Close menu' : 'Open menu'}
+              aria-expanded={open}
+              onClick={() => setOpen(!open)}
+            >
+              <span />
+              <span />
+              <span />
+            </button>
           </div>
-          <button
-            className={`nav-burger${open ? ' open' : ''}`}
-            aria-label={open ? 'Close menu' : 'Open menu'}
-            aria-expanded={open}
-            onClick={() => setOpen(!open)}
-          >
-            <span />
-            <span />
-            <span />
-          </button>
         </div>
       </nav>
       {open && (

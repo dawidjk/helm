@@ -40,7 +40,7 @@ export default function Pricing() {
                   <li key={f.title}>{f.title}</li>
                 ))}
               </ul>
-              <Link to={`/${p.slug}`} className="price" style={{textDecoration: 'none', color: '#8db4ff'}}>
+              <Link to={`/${p.slug}`} className="price" style={{textDecoration: 'none', color: 'light-dark(#0c7a44, #AAE2C4)'}}>
                 Learn more about {p.name} →
               </Link>
             </div>

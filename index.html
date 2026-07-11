@@ -6,6 +6,17 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#05070d" />
+    <!-- Theme pre-paint: apply saved light/dark choice before first paint (no flash). -->
+    <script>
+      (function () {
+        try {
+          var m = localStorage.getItem('helm-theme');
+          if (m === 'light' || m === 'dark') {
+            document.documentElement.setAttribute('data-theme', m);
+          }
+        } catch (e) {}
+      })();
+    </script>
     <!-- Inter is self-hosted via @fontsource (imported in src/index.css) -->
     <!-- title + description are set per-page via Head (see src/components/Meta.tsx) -->
   </head>

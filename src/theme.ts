@@ -10,7 +10,7 @@ export const helmTheme = defineTheme({
   name: 'helm',
   extends: neutralTheme,
   color: {
-    accent: '#2E6FF2', // signal blue: [light, dark]
+    accent: '#084C2E', // helm green (a hex off British Racing Green #004225): [light, dark]
     neutralStyle: 'cool',
   },
   typography: {
@@ -23,7 +23,7 @@ export const helmTheme = defineTheme({
   },
   radius: {base: 6, multiplier: 1.4},
   tokens: {
-    '--color-accent': ['#2E6FF2', '#4C8DFF'],
+    '--color-accent': ['#084C2E', '#38A169'],
   },
   components: {
     button: {

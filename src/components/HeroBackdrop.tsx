@@ -57,7 +57,7 @@ function RainCanvas() {
       for (let k = 0; k < 3; k++) {
         const rr = d.r - k * (6 + depth * 10);
         if (rr <= 0) continue;
-        ctx.strokeStyle = `rgba(96, 154, 255, ${(0.34 - k * 0.09) * fade})`;
+        ctx.strokeStyle = `rgba(137, 214, 173, ${(0.34 - k * 0.09) * fade})`;
         ctx.lineWidth = 1.5 - k * 0.4;
         ctx.beginPath();
         ctx.ellipse(d.x, d.y, rr, rr * squash, 0, 0, Math.PI * 2);
@@ -65,7 +65,7 @@ function RainCanvas() {
       }
       // glint at the point of impact while the ripple is young
       if (d.r < d.max * 0.25) {
-        ctx.fillStyle = `rgba(200, 220, 255, ${0.7 * (1 - d.r / (d.max * 0.25))})`;
+        ctx.fillStyle = `rgba(214, 241, 227, ${0.7 * (1 - d.r / (d.max * 0.25))})`;
         ctx.beginPath();
         ctx.arc(d.x, d.y, 1.4, 0, Math.PI * 2);
         ctx.fill();
@@ -167,9 +167,9 @@ function EnergyCanvas() {
       for (let i = 0; i < WAVES; i++) {
         const alpha = 0.035 + 0.075 * Math.abs(Math.sin(i * 1.3 + now * 0.0002));
         const grad = ctx.createLinearGradient(0, 0, w, 0);
-        grad.addColorStop(0, `rgba(46, 111, 242, 0)`);
-        grad.addColorStop(0.5, `rgba(96, 154, 255, ${alpha})`);
-        grad.addColorStop(1, `rgba(122, 76, 255, 0)`);
+        grad.addColorStop(0, `rgba(8, 76, 46, 0)`);
+        grad.addColorStop(0.5, `rgba(137, 214, 173, ${alpha})`);
+        grad.addColorStop(1, `rgba(90, 241, 227, 0)`);
         ctx.strokeStyle = grad;
         ctx.lineWidth = i % 3 === 0 ? 2 : 1.2;
         ctx.beginPath();
@@ -186,13 +186,13 @@ function EnergyCanvas() {
         const px = ((now * (0.02 + i * 0.003) + i * 431.7) % (w + 240)) - 120;
         const py = waveY(i, px, now);
         const g = ctx.createRadialGradient(px, py, 0, px, py, 26);
-        g.addColorStop(0, 'rgba(140, 182, 255, 0.5)');
-        g.addColorStop(1, 'rgba(140, 182, 255, 0)');
+        g.addColorStop(0, 'rgba(170, 225, 196, 0.5)');
+        g.addColorStop(1, 'rgba(170, 225, 196, 0)');
         ctx.fillStyle = g;
         ctx.beginPath();
         ctx.arc(px, py, 26, 0, Math.PI * 2);
         ctx.fill();
-        ctx.fillStyle = 'rgba(200, 220, 255, 0.9)';
+        ctx.fillStyle = 'rgba(214, 241, 227, 0.9)';
         ctx.beginPath();
         ctx.arc(px, py, 1.8, 0, Math.PI * 2);
         ctx.fill();
@@ -216,7 +216,7 @@ function EnergyCanvas() {
         for (let k = 0; k < 3; k++) {
           const rr = rp.r - k * 14;
           if (rr <= 0) continue;
-          ctx.strokeStyle = `rgba(96, 154, 255, ${0.28 * fade * (1 - k * 0.3)})`;
+          ctx.strokeStyle = `rgba(137, 214, 173, ${0.28 * fade * (1 - k * 0.3)})`;
           ctx.lineWidth = 1.4 - k * 0.35;
           ctx.beginPath();
           ctx.ellipse(rp.x, rp.y, rr, rr * 0.42, 0, 0, Math.PI * 2);
@@ -246,7 +246,7 @@ function EnergyCanvas() {
 function AeroSvg() {
   return (
     <svg className="backdrop-svg aero" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden>
-      <g className="bp-draw" stroke="#4C8DFF" fill="none" strokeWidth="1.6">
+      <g className="bp-draw" stroke="#38A169" fill="none" strokeWidth="1.6">
         {/* fuselage (top view) */}
         <path d="M600 90 C 588 130 584 190 584 260 L 584 430 C 584 470 590 505 600 525 C 610 505 616 470 616 430 L 616 260 C 616 190 612 130 600 90 Z" />
         {/* main wings */}
@@ -262,7 +262,7 @@ function AeroSvg() {
         <path strokeDasharray="6 8" strokeWidth="1" d="M600 40 L 600 570" />
         <path strokeWidth="1" d="M200 470 L 1000 470 M200 462 l 0 16 M1000 462 l 0 16" />
       </g>
-      <g className="bp-labels" fill="#4C8DFF" fontSize="11" fontFamily="ui-monospace, monospace" opacity="0.5">
+      <g className="bp-labels" fill="#38A169" fontSize="11" fontFamily="ui-monospace, monospace" opacity="0.5">
         <text x="590" y="586">42.6m</text>
         <text x="964" y="416">HLM-01</text>
       </g>
@@ -318,12 +318,12 @@ function SkylineSvg() {
 
   return (
     <svg className="backdrop-svg skyline" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden>
-      <g className="layer-far" fill="rgba(76,141,255,0.10)">
+      <g className="layer-far" fill="rgba(56, 161, 105, 0.10)">
         {far.map((b, i) => (
           <rect key={i} x={b.x} y={600 - b.h - 60} width={b.w} height={b.h + 60} />
         ))}
       </g>
-      <g className="layer-near" fill="rgba(18,30,54,0.9)" stroke="rgba(76,141,255,0.18)" strokeWidth="1">
+      <g className="layer-near" fill="rgba(18,30,54,0.9)" stroke="rgba(56, 161, 105, 0.18)" strokeWidth="1">
         {near.map((b, i) => (
           <rect key={i} x={b.x} y={600 - b.h} width={b.w} height={b.h} />
         ))}
@@ -336,7 +336,7 @@ function SkylineSvg() {
             y={wd.y}
             width="5"
             height="7"
-            fill="#8db4ff"
+            fill="#AAE2C4"
             stroke="none"
           />
         ))}
@@ -353,10 +353,10 @@ function ConstructionSvg() {
   return (
     <svg className="backdrop-svg construction" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden>
       {/* ground line */}
-      <line x1="0" y1="520" x2="1200" y2="520" stroke="rgba(76,141,255,0.35)" strokeWidth="1.5" />
+      <line x1="0" y1="520" x2="1200" y2="520" stroke="rgba(56, 161, 105, 0.35)" strokeWidth="1.5" />
 
       {/* steel building frame (rising floors) */}
-      <g stroke="rgba(76,141,255,0.4)" strokeWidth="2" fill="none">
+      <g stroke="rgba(56, 161, 105, 0.4)" strokeWidth="2" fill="none">
         <path d="M300 520 L300 200 M420 520 L420 200 M540 520 L540 200" />
         <g className="frame-floor f1"><path d="M290 440 L550 440" /></g>
         <g className="frame-floor f2"><path d="M290 360 L550 360" /></g>
@@ -368,19 +368,19 @@ function ConstructionSvg() {
       </g>
 
       {/* tower crane, lifting a beam toward the frame */}
-      <g stroke="rgba(76,141,255,0.45)" strokeWidth="2" fill="none">
+      <g stroke="rgba(56, 161, 105, 0.45)" strokeWidth="2" fill="none">
         <path d="M700 520 L700 100 M660 520 L740 520" />
         <path d="M700 100 L440 130 M700 100 L860 118" />
         <path d="M700 100 L664 150 M700 100 L736 150" strokeWidth="1.2" />
-        <path d="M690 92 l20 0 l0 -14 l-20 0 Z" fill="rgba(76,141,255,0.15)" />
+        <path d="M690 92 l20 0 l0 -14 l-20 0 Z" fill="rgba(56, 161, 105, 0.15)" />
         <g className="crane-lift">
           <path className="crane-cable" d="M520 124 L520 320" strokeWidth="1.2" />
-          <path d="M492 320 l56 0 l0 10 l-56 0 Z" fill="rgba(76,141,255,0.25)" stroke="rgba(76,141,255,0.5)" strokeWidth="1.2" />
+          <path d="M492 320 l56 0 l0 10 l-56 0 Z" fill="rgba(56, 161, 105, 0.25)" stroke="rgba(56, 161, 105, 0.5)" strokeWidth="1.2" />
         </g>
       </g>
 
       {/* forklift driving across with a pallet */}
-      <g className="forklift" stroke="rgba(120,168,255,0.65)" strokeWidth="2" fill="none">
+      <g className="forklift" stroke="rgba(155, 220, 185, 0.65)" strokeWidth="2" fill="none">
         {/* body */}
         <path d="M60 470 l64 0 l10 -26 l-40 0 l-8 -22 l-26 0 Z" fill="rgba(14,24,44,0.9)" />
         {/* overhead guard */}
@@ -390,7 +390,7 @@ function ConstructionSvg() {
         {/* forks + pallet */}
         <g className="fork-lift-arm">
           <path d="M140 452 l34 0" strokeWidth="2.5" />
-          <path d="M146 452 l0 -10 l40 0 l0 10 Z M150 442 l6 -8 l28 0 l6 8" strokeWidth="1.3" fill="rgba(76,141,255,0.15)" />
+          <path d="M146 452 l0 -10 l40 0 l0 10 Z M150 442 l6 -8 l28 0 l6 8" strokeWidth="1.3" fill="rgba(56, 161, 105, 0.15)" />
         </g>
         {/* wheels */}
         <g className="wheel w1"><circle cx="82" cy="482" r="12" /><path d="M82 474 l0 16 M74 482 l16 0" strokeWidth="1" /></g>
@@ -398,27 +398,27 @@ function ConstructionSvg() {
       </g>
 
       {/* welding robot arm on a pedestal, sparking */}
-      <g stroke="rgba(120,168,255,0.6)" strokeWidth="2" fill="none">
+      <g stroke="rgba(155, 220, 185, 0.6)" strokeWidth="2" fill="none">
         <path d="M950 520 l60 0 l-8 -18 l-44 0 Z" fill="rgba(14,24,44,0.9)" />
         <g className="robot-shoulder">
           <path d="M980 502 L950 430" />
           <g className="robot-elbow">
             <path d="M950 430 L1000 380" />
             <path d="M1000 380 l14 -6 l6 10" strokeWidth="1.5" />
-            <g className="sparks" stroke="#9dc0ff" strokeWidth="1.4" strokeLinecap="round">
+            <g className="sparks" stroke="#B6E6CC" strokeWidth="1.4" strokeLinecap="round">
               <path className="spark s1" d="M1022 382 l10 -8" />
               <path className="spark s2" d="M1024 386 l12 2" />
               <path className="spark s3" d="M1022 390 l8 10" />
-              <circle className="spark s2" cx="1021" cy="385" r="2.5" fill="#c8dcff" stroke="none" />
+              <circle className="spark s2" cx="1021" cy="385" r="2.5" fill="#D6F1E3" stroke="none" />
             </g>
           </g>
         </g>
-        <circle cx="980" cy="502" r="5" fill="rgba(76,141,255,0.4)" stroke="none" />
-        <circle cx="950" cy="430" r="4" fill="rgba(76,141,255,0.4)" stroke="none" />
+        <circle cx="980" cy="502" r="5" fill="rgba(56, 161, 105, 0.4)" stroke="none" />
+        <circle cx="950" cy="430" r="4" fill="rgba(56, 161, 105, 0.4)" stroke="none" />
       </g>
 
       {/* hard-hat safety cones for depth */}
-      <g stroke="rgba(76,141,255,0.35)" strokeWidth="1.4" fill="none">
+      <g stroke="rgba(56, 161, 105, 0.35)" strokeWidth="1.4" fill="none">
         <path d="M840 520 l8 -22 l8 22 Z M834 520 l28 0" />
         <path d="M890 520 l7 -18 l7 18 Z M885 520 l24 0" />
       </g>

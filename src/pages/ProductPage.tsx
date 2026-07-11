@@ -38,7 +38,7 @@ export default function ProductPage() {
             <LeadForm source={`product ${p.slug}`} cta="Get my free scan" compact />
           </div>
           <div className="hero-note reveal d3">
-            {p.price} · <Link to="/pricing" style={{color: '#8db4ff'}}>full pricing</Link>
+            {p.price} · <Link to="/pricing" style={{color: 'light-dark(#0c7a44, #AAE2C4)'}}>full pricing</Link>
           </div>
         </div>
       </header>
