@@ -50,7 +50,7 @@ function Icon({mode}: {mode: ThemeMode}) {
 export default function ThemePicker() {
   const {mode, setMode} = useThemeMode();
   const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
+  useEffect(() => { setMounted(true); }, []);
 
   // Before mount, show the Auto default so SSR/hydration markup matches.
   const current = mounted ? mode : 'auto';

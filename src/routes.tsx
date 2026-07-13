@@ -14,24 +14,27 @@ import {manufacturing, professionalServices, contractors} from './pages/lanes';
 import {productList} from './pages/products';
 import {articles} from './pages/articles';
 
+import GlobalErrorBoundary from './components/GlobalErrorBoundary';
+
 export const routes: RouteRecord[] = [
   {
     path: '/',
     element: <Layout />,
+    errorElement: <GlobalErrorBoundary />,
     entry: 'src/App.tsx',
     children: [
       {index: true, element: <Home />},
-      {path: 'manufacturing', element: <LanePage lane={manufacturing} />},
-      {path: 'professional-services', element: <LanePage lane={professionalServices} />},
-      {path: 'contractors', element: <LanePage lane={contractors} />},
-      {path: 'pricing', element: <Pricing />},
+      {path: 'manufacturing/', element: <LanePage lane={manufacturing} />},
+      {path: 'professional-services/', element: <LanePage lane={professionalServices} />},
+      {path: 'contractors/', element: <LanePage lane={contractors} />},
+      {path: 'pricing/', element: <Pricing />},
       {
         path: ':slug',
         element: <ProductPage />,
         getStaticPaths: () => productList.map((p) => p.slug),
       },
-      {path: 'free-scan', element: <FreeScan />},
-      {path: 'about', element: <About />},
+      {path: 'free-scan/', element: <FreeScan />},
+      {path: 'about/', element: <About />},
       {path: 'faq', element: <Faq />},
       {path: 'contact', element: <Contact />},
       {path: 'resources', element: <Resources />},
