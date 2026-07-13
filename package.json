@@ -8,7 +8,8 @@
     "build": "tsc -b && vite-react-ssg build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "theme:build": "astryx theme build src/theme.ts -o src/theme.css"
+    "theme:build": "astryx theme build src/theme.ts -o src/theme.css",
+    "prepare": "husky"
   },
   "dependencies": {
     "@astryxdesign/core": "^0.1.3",
@@ -24,6 +25,7 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.2.0",
+    "husky": "^9.1.7",
     "oxlint": "^1.71.0",
     "typescript": "~6.0.2",
     "vite": "^7.3.6",
