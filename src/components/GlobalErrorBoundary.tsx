@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useMemo } from 'react';
-import { useRouteError, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { productList } from '../pages/products';
 import { articles } from '../pages/articles';
 
@@ -21,7 +21,6 @@ const VALID_PAGES = [
 ];
 
 export default function GlobalErrorBoundary() {
-  const error = useRouteError();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const navigate = useNavigate();
   const [query, setQuery] = useState('');
@@ -29,8 +28,8 @@ export default function GlobalErrorBoundary() {
   const suggestions = useMemo(() => {
     if (!query.trim()) return [];
     const q = query.toLowerCase();
-    return VALID_PAGES.filter(p => 
-      p.path.toLowerCase().includes(q) || 
+    return VALID_PAGES.filter(p =>
+      p.path.toLowerCase().includes(q) ||
       p.label.toLowerCase().includes(q)
     ).slice(0, 4); // Limit to top 4 suggestions
   }, [query]);
@@ -54,10 +53,10 @@ export default function GlobalErrorBoundary() {
       // @ts-expect-error valid TS for canvas Context
       ctx.fillStyle = '#0001';
       ctx!.fillRect(0, 0, w, h);
-      
+
       ctx!.fillStyle = THEME_GREEN;
       ctx!.font = '15pt monospace';
-      
+
       ypos.forEach((y, ind) => {
         const text = String.fromCharCode(Math.random() * 128);
         const x = ind * 20;
@@ -66,9 +65,9 @@ export default function GlobalErrorBoundary() {
         else ypos[ind] = y + 20;
       });
     }
-    
+
     const interval = setInterval(matrix, 50);
-    
+
     const handleResize = () => {
       w = canvas.width = window.innerWidth;
       h = canvas.height = window.innerHeight;
@@ -76,7 +75,7 @@ export default function GlobalErrorBoundary() {
       ctx.fillRect(0, 0, w, h);
     };
     window.addEventListener('resize', handleResize);
-    
+
     return () => {
       clearInterval(interval);
       window.removeEventListener('resize', handleResize);
@@ -89,7 +88,7 @@ export default function GlobalErrorBoundary() {
       <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 1, textAlign: 'center', backgroundColor: 'rgba(0,0,0,0.8)', padding: '2.5rem', borderRadius: '12px', border: `1px solid ${THEME_GREEN}`, boxShadow: `0 0 20px ${THEME_GREEN}33`, width: '90%', maxWidth: '500px' }}>
         <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', textShadow: `0 0 10px ${THEME_GREEN}`, fontWeight: 'bold' }}>Something went wrong</h1>
         <p style={{ marginBottom: '2rem', fontSize: '1.2rem', opacity: 0.8 }}>The system experienced an unexpected error.</p>
-        
+
         <form onSubmit={(e) => {
           e.preventDefault();
           if (suggestions.length > 0) {
@@ -99,20 +98,20 @@ export default function GlobalErrorBoundary() {
           }
         }} style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', alignItems: 'stretch' }}>
           <div style={{ display: 'flex', gap: '0.5rem' }}>
-            <input 
-              name="q" 
+            <input
+              name="q"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search for a page..." 
-              style={{ padding: '0.75rem', border: `1px solid ${THEME_GREEN}`, backgroundColor: 'rgba(0,0,0,0.5)', color: THEME_GREEN, outline: 'none', flex: 1, borderRadius: '4px', fontSize: '1rem' }} 
+              placeholder="Search for a page..."
+              style={{ padding: '0.75rem', border: `1px solid ${THEME_GREEN}`, backgroundColor: 'rgba(0,0,0,0.5)', color: THEME_GREEN, outline: 'none', flex: 1, borderRadius: '4px', fontSize: '1rem' }}
               autoComplete="off"
             />
             <button type="submit" style={{ padding: '0.75rem 1.5rem', border: `1px solid ${THEME_GREEN}`, backgroundColor: THEME_GREEN, color: 'black', cursor: 'pointer', fontWeight: 'bold', borderRadius: '4px', fontSize: '1rem', transition: 'all 0.2s' }}>Search</button>
           </div>
-          
+
           {suggestions.length > 0 && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', marginTop: '0.5rem', textAlign: 'left' }}>
-              {suggestions.map((s, idx) => (
+              {suggestions.map((s) => (
                 <button
                   key={s.path}
                   type="button"
