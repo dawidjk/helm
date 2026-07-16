@@ -12,7 +12,7 @@ const products: {motif: MotifKind; kicker: string; title: string; body: string; 
     kicker: 'Helm Mail',
     title: 'Email fraud, stopped cold.',
     body: 'Managed email security plus phishing and deepfake-scam training for your whole team. The #1 way small businesses lose money is a fake invoice or a spoofed CEO: this closes the door.',
-    price: 'From $12 per user / month',
+    price: 'From $15 per user / month',
   },
   {
     motif: 'aware',

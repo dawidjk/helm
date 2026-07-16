@@ -22,8 +22,8 @@ export const productList: Product[] = [
     tagline: 'Email fraud, stopped cold.',
     desc: 'Managed email security and phishing defense for small businesses. We filter what reaches your team, train them on what gets through, and report it all in plain English.',
     metaDesc:
-      'Managed email security for small business: phishing, spoofing, and invoice fraud protection from $12/user/month. Deployed in a day on Microsoft 365 or Google Workspace.',
-    price: '$12–15 / user / month',
+      'Managed email security for small business: phishing, spoofing, and invoice fraud protection from $15/user/month. Deployed in a day on Microsoft 365 or Google Workspace.',
+    price: '$15 / user / month',
     priceDetail: 'Deployed on your existing Microsoft 365 or Google Workspace. No hardware, no migration.',
     features: [
       {
@@ -58,7 +58,7 @@ export const productList: Product[] = [
     desc: 'The AI-scam defense program: shadow-AI audit, acceptable-use policy, deepfake drills, and a payment-verification protocol that stops wire fraud whether the scammer is human or synthetic.',
     metaDesc:
       'AI scam defense for business: deepfake fraud training, shadow-AI audit, and acceptable-use policy. Workshop from $1,500 plus quarterly threat refreshes.',
-    price: '$1,500–3,000 workshop + $200–500 / month',
+    price: '$1,500–3,000 workshop + $350 / month',
     priceDetail: 'Fixed-fee workshop to start; monthly subscription keeps training and policies current as threats evolve.',
     features: [
       {
