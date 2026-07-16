@@ -1,3 +1,10 @@
+export type LinkedParagraph = {
+  text: string;
+  links: {phrase: string; to: string}[];
+};
+
+export type Paragraph = string | LinkedParagraph;
+
 export type Article = {
   slug: string;
   title: string;
@@ -7,7 +14,7 @@ export type Article = {
   lane: string;
   laneTo: string;
   intro: string;
-  sections: {h: string; ps: string[]}[];
+  sections: {h: string; ps: Paragraph[]}[];
   takeaway: string;
 };
 
@@ -30,7 +37,7 @@ export const articles: Article[] = [
           'First, confirm your level. Most subs handling Federal Contract Information need Level 1 (17 practices, self-assessed annually). If you touch Controlled Unclassified Information (drawings, specs, technical data marked CUI), you need Level 2: 110 controls from NIST 800-171 and, for most contracts, a third-party assessment.',
           'Second, locate your CUI. You cannot protect what you have not mapped. Walk every place technical data lives: file servers, email, CAD stations, the quoting inbox, that USB drive in the shop office.',
           'Third, calculate your SPRS score honestly. Primes can see it, and a fabricated score is False Claims Act exposure: the DOJ has already settled cases.',
-          'Fourth, get a gap assessment against all 110 controls. Two weeks of work turns "we think we\'re fine" into a scored, prioritized list.',
+          {text: 'Fourth, get a gap assessment against all 110 controls. Two weeks of work turns "we think we\'re fine" into a scored, prioritized list.', links: [{phrase: 'gap assessment', to: '/helm-ready'}]},
         ],
       },
       {
@@ -67,7 +74,7 @@ export const articles: Article[] = [
         h: 'The questions that actually move your premium',
         ps: [
           'Carriers cluster around the same twelve topics: multi-factor authentication (on email, remote access, and admin accounts; they ask all three separately), endpoint detection, backups that are tested and offline, email filtering, security awareness training, and whether you have a payment-verification procedure for wire transfers.',
-          'MFA is the big one. Many carriers now decline to quote at all without it. If the answer today is "partially," deploying it fully is usually a week of work and the single highest-ROI change on the form.',
+          {text: 'MFA is the big one. Many carriers now decline to quote at all without it. If the answer today is "partially," deploying it fully is usually a week of work and the single highest-ROI change on the form.', links: [{phrase: 'MFA', to: '/helm-mail'}]},
         ],
       },
       {
@@ -80,7 +87,7 @@ export const articles: Article[] = [
       {
         h: 'Turn the questionnaire into a roadmap',
         ps: [
-          'Every "no" on the form is a to-do with a dollar value attached: lower premium, higher coverage limits, and a claim that actually pays. A remediation pass typically takes weeks, not quarters, at small-business scale. Then keep the evidence (screenshots, training logs, backup-test records) in one folder. At claim time, documentation is the difference between a payout and a lawsuit.',
+          {text: 'Every "no" on the form is a to-do with a dollar value attached: lower premium, higher coverage limits, and a claim that actually pays. A remediation pass typically takes weeks, not quarters, at small-business scale. Then keep the evidence (screenshots, training logs, backup-test records) in one folder. At claim time, documentation is the difference between a payout and a lawsuit.', links: [{phrase: 'remediation pass', to: '/helm-ready'}]},
         ],
       },
     ],
@@ -103,13 +110,13 @@ export const articles: Article[] = [
         h: 'Why smart people wire money to criminals',
         ps: [
           'Business email compromise is not a technology exploit; it is a process exploit. The attacker does not hack your bank: they compromise (or convincingly spoof) one mailbox in the chain, wait for a transaction, and inject new payment instructions at the moment of maximum time pressure.',
-          'AI has made the last weak signals disappear. The broken English is gone. Voice clones now back up the email with a phone call that sounds exactly like the partner. Training people to "spot the fake" is necessary but no longer sufficient: you need a control that works even when the fake is perfect.',
+          {text: 'AI has made the last weak signals disappear. The broken English is gone. Voice clones now back up the email with a phone call that sounds exactly like the partner. Training people to "spot the fake" is necessary but no longer sufficient: you need email security that works even when the fake is perfect.', links: [{phrase: 'email security', to: '/helm-mail'}]},
         ],
       },
       {
         h: 'The callback protocol',
         ps: [
-          'The rule fits on one page: any new or changed payment instruction is verified by calling a known-good number (from the file, from the engagement letter, from a prior invoice), never from the email that delivered the change. No exceptions for urgency, seniority, or relationship. The scam depends on bypassing exactly this step, which is why "no exceptions" is the entire control.',
+          {text: 'The rule fits on one page: any new or changed payment instruction is verified by calling a known-good number (from the file, from the engagement letter, from a prior invoice), never from the email that delivered the change. No exceptions for urgency, seniority, or relationship. The scam depends on bypassing exactly this step, which is why "no exceptions" is the entire control.', links: [{phrase: 'payment instruction is verified', to: '/helm-aware'}]},
           'Add dual approval above a threshold ($25K is common), and log every verification: two minutes of friction against a six-figure loss. Then drill it once: send your own fake "updated instructions" email and see what happens. Firms that test it once fix the gaps immediately.',
         ],
       },
@@ -139,7 +146,7 @@ export const articles: Article[] = [
       {
         h: 'Why it matters to your business specifically',
         ps: [
-          'Spoofed email is the delivery mechanism for invoice fraud against your customers, sent "from you." When a customer wires money to a criminal because the invoice appeared to come from your domain, the technical failure was yours, and increasingly, so is the reputational and legal fallout. Enforced DMARC also improves deliverability of your legitimate mail, and insurers and enterprise customers now check for it.',
+          {text: 'Spoofed email is the delivery mechanism for invoice fraud against your customers, sent "from you." When a customer wires money to a criminal because the invoice appeared to come from your domain, the technical failure was yours, and increasingly, so is the reputational and legal fallout. Enforced DMARC also improves deliverability of your legitimate mail, and insurers and enterprise customers now check for it.', links: [{phrase: 'Enforced DMARC', to: '/helm-mail'}]},
           'Getting to enforcement takes care: flip to p=reject carelessly and you can block your own invoices sent through QuickBooks or your marketing platform. The path is: inventory every service that sends as your domain, authorize each one in SPF/DKIM, watch the reports, then enforce.',
         ],
       },
@@ -170,7 +177,7 @@ export const articles: Article[] = [
         h: 'Why detection is a losing strategy',
         ps: [
           '"Listen for robotic artifacts" was 2023 advice. Current voice synthesis passes casual inspection, and video is close behind. Any defense that depends on a stressed employee out-detecting a synthetic voice in real time will eventually fail.',
-          'The controls that work are procedural, because procedure does not care how good the fake is. One: a payment-verification protocol, meaning every new or changed payment instruction gets a callback to a known-good number, no exceptions, including "the CEO" personally. Two: a drill, simulating a voice-clone request against your own finance team before a criminal does. The first drill almost always finds someone who would have wired the money.',
+          {text: 'The controls that work are procedural, because procedure does not care how good the fake is. One: a payment-verification protocol, meaning every new or changed payment instruction gets a callback to a known-good number, no exceptions, including "the CEO" personally. Two: a deepfake drill, simulating a voice-clone request against your own finance team before a criminal does. The first drill almost always finds someone who would have wired the money.', links: [{phrase: 'payment-verification protocol', to: '/helm-aware'}, {phrase: 'deepfake drill', to: '/helm-aware'}]},
         ],
       },
     ],

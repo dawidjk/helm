@@ -50,7 +50,9 @@ export default function LeadForm({
       <input type="hidden" name="_subject" value={`Lead: free scan request (${source})`} />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="page" value={source} />
+      <label htmlFor="lead-email" className="sr-only">Work email</label>
       <input
+        id="lead-email"
         type="email"
         name="email"
         required

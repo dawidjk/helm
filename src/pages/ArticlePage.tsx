@@ -55,9 +55,21 @@ export default function ArticlePage() {
           {a.sections.map((s) => (
             <section key={s.h}>
               <h2>{s.h}</h2>
-              {s.ps.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
+              {s.ps.map((p, i) => {
+                if (typeof p === 'string') return <p key={i}>{p}</p>;
+                const parts: React.ReactNode[] = [];
+                let remaining = p.text;
+                let keyIdx = 0;
+                for (const link of p.links) {
+                  const idx = remaining.indexOf(link.phrase);
+                  if (idx === -1) continue;
+                  if (idx > 0) parts.push(remaining.slice(0, idx));
+                  parts.push(<Link key={keyIdx++} to={link.to}>{link.phrase}</Link>);
+                  remaining = remaining.slice(idx + link.phrase.length);
+                }
+                if (remaining) parts.push(remaining);
+                return <p key={i}>{parts}</p>;
+              })}
             </section>
           ))}
           <div className="article-takeaway">

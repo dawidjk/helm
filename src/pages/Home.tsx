@@ -55,7 +55,7 @@ export default function Home() {
   return (
     <>
       <Meta
-        title="Helm: Email Security, AI Scam Defense & Compliance for Small Business"
+        title="Helm: Email Security & AI Scam Defense for Small Business"
         desc="Enterprise-grade email security, AI scam defense, and compliance readiness for small businesses, plain English, published pricing, backed by 24/7 security operations. Free email security scan in 24 hours."
         path="/"
         jsonLd={{

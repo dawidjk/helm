@@ -19,11 +19,30 @@ export default function ProductPage() {
         path={`/${p.slug}`}
         jsonLd={{
           '@context': 'https://schema.org',
-          '@type': 'Service',
-          name: p.name,
-          description: p.metaDesc,
-          provider: {'@type': 'Organization', name: 'HelmSecure LLC', url: 'https://helmsecured.com'},
-          areaServed: 'US',
+          '@graph': [
+            {
+              '@type': 'Service',
+              name: p.name,
+              description: p.metaDesc,
+              provider: {'@type': 'Organization', name: 'HelmSecure LLC', url: 'https://helmsecured.com'},
+              areaServed: 'US',
+            },
+            {
+              '@type': 'FAQPage',
+              mainEntity: p.faqs.map((f) => ({
+                '@type': 'Question',
+                name: f.q,
+                acceptedAnswer: {'@type': 'Answer', text: f.a},
+              })),
+            },
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {'@type': 'ListItem', position: 1, name: 'Products', item: 'https://helmsecured.com'},
+                {'@type': 'ListItem', position: 2, name: p.name, item: `https://helmsecured.com/${p.slug}`},
+              ],
+            },
+          ],
         }}
       />
       <header className="hero lane">

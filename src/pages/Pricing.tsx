@@ -9,9 +9,17 @@ export default function Pricing() {
   return (
     <>
       <Meta
-        title="Pricing: Fixed, Published, No Surprises | Helm"
+        title="Pricing: Published, No Surprises | Helm"
         desc="Helm pricing: managed email security from $12/user/month, AI scam defense workshops from $1,500, compliance projects from $2,500 fixed fee. Published prices, no custom quotes."
         path="/pricing"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            {'@type': 'ListItem', position: 1, name: 'Helm', item: 'https://helmsecured.com'},
+            {'@type': 'ListItem', position: 2, name: 'Pricing', item: 'https://helmsecured.com/pricing'},
+          ],
+        }}
       />
       <header className="hero lane">
         <HeroBackdrop kind="rain" />

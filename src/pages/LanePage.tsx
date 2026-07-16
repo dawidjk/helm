@@ -52,7 +52,19 @@ function DeadlineChip({deadline}: {deadline: {iso: string; label: string}}) {
 export default function LanePage({lane}: {lane: Lane}) {
   return (
     <>
-      <Meta title={lane.metaTitle} desc={lane.metaDesc} path={`/${lane.slug}`} />
+      <Meta
+        title={lane.metaTitle}
+        desc={lane.metaDesc}
+        path={`/${lane.slug}`}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            {'@type': 'ListItem', position: 1, name: 'Industries', item: 'https://helmsecured.com'},
+            {'@type': 'ListItem', position: 2, name: lane.eyebrow, item: `https://helmsecured.com/${lane.slug}`},
+          ],
+        }}
+      />
       <header className="hero lane">
         <HeroBackdrop kind={lane.backdrop} />
         <div className="wrap">

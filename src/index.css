@@ -7,6 +7,19 @@
 @import '@fontsource/inter/700.css';
 @import '@fontsource/inter/800.css';
 
+/* Screen-reader-only utility (a11y) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 /* ---------------------------------------------------------------------------
    Helm marketing styles: Apple/Ubiquiti-grade product-site layer.
    Astryx handles components + tokens; this file handles the big-canvas
