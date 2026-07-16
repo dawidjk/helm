@@ -1,4 +1,4 @@
-import {useEffect, useState, type ReactNode} from 'react';
+import {useEffect, useRef, useState, type ReactNode} from 'react';
 import {NavLink as RouterNavLink, Link, useLocation} from 'react-router-dom';
 import {Button} from '@astryxdesign/core/Button';
 import LeadForm from './LeadForm';
@@ -61,7 +61,30 @@ const footerCols = [
 export function SiteNav() {
   const {pathname} = useLocation();
   const [open, setOpen] = useState(false);
+  const urgencyRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => { setOpen(false); }, [pathname]);
+
+  // The urgency banner sits in normal flow above the nav, so pages that show
+  // it need the hero to be shorter or its bottom (and the scroll cue) lands
+  // below the fold. Publish the banner's measured height as --urgency-offset;
+  // .hero subtracts it from its min-height. ResizeObserver keeps it right
+  // when the banner text wraps at narrow widths.
+  useEffect(() => {
+    const root = document.documentElement;
+    const el = urgencyRef.current;
+    if (!el) {
+      root.style.setProperty('--urgency-offset', '0px');
+      return;
+    }
+    const update = () => root.style.setProperty('--urgency-offset', `${el.offsetHeight}px`);
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => {
+      ro.disconnect();
+      root.style.setProperty('--urgency-offset', '0px');
+    };
+  }, [pathname]);
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
     return () => {
@@ -72,7 +95,7 @@ export function SiteNav() {
   return (
     <>
       {pathname === '/manufacturing' && (
-        <div className="urgency">
+        <div className="urgency" ref={urgencyRef}>
           CMMC Phase 2 enforcement begins Nov 10, 2026: fewer than 2% of
           defense contractors are certified. <a href="#contact">Check your readiness →</a>
         </div>
@@ -128,32 +151,77 @@ export function SiteNav() {
   );
 }
 
+export function ScrollCue() {
+  return (
+    <button
+      type="button"
+      className="scroll-cue reveal d3"
+      aria-label="Scroll to the next section"
+      onClick={(e) => {
+        const next = (e.currentTarget.closest('.hero') as HTMLElement | null)?.nextElementSibling;
+        if (next) {
+          next.scrollIntoView({
+            behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+            block: 'start',
+          });
+        }
+      }}
+    >
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden
+      >
+        <path d="M6 9l6 6 6-6" />
+      </svg>
+    </button>
+  );
+}
+
 export function CtaBand({
   title,
   sub,
   cta = 'Get my free scan',
   source,
+  mode = 'scan',
 }: {
   title: string;
   sub: string;
   cta?: string;
   source: string;
+  /** 'scan' (default) shows the instant-scan LeadForm; 'book' links to /contact. */
+  mode?: 'scan' | 'book';
 }) {
+  const mailSubject = mode === 'book' ? `${cta} (${source})` : 'Free security scan request';
+  const mailBody =
+    mode === 'book'
+      ? "Hi Helm team,\n\nI'd like to book a call.\n\nCompany:\nBest phone (optional):\nAnything you want us to know up front:\n\nThanks!"
+      : "Hi Helm team,\n\nI'd like the free security scan for my company.\n\nCompany:\nWebsite domain:\nBest phone (optional):\n\nThanks!";
   return (
     <section className="cta-band" id="contact">
       <div className="wrap">
         <h2 className="observe">{title}</h2>
-        <p className="observe">{sub}</p>
-        <div className="cta-form observe">
-          <LeadForm source={source} cta={cta} />
+        <p className="observe d1">{sub}</p>
+        <div className="cta-form observe d2">
+          {mode === 'book' ? (
+            <Link to="/contact">
+              <Button label={cta} variant="primary" size="lg" />
+            </Link>
+          ) : (
+            <LeadForm source={source} cta={cta} />
+          )}
           <div className="cta-alt">
             Have more to tell us? <Link to="/contact">Use the full contact form →</Link>
             <br />
             Prefer email?{' '}
             <a
-              href={`mailto:hello@helmsecured.com?subject=${encodeURIComponent('Free security scan request')}&body=${encodeURIComponent(
-                "Hi Helm team,\n\nI'd like the free security scan for my company.\n\nCompany:\nWebsite domain:\nBest phone (optional):\n\nThanks!",
-              )}`}
+              href={`mailto:hello@helmsecured.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`}
             >
               hello@helmsecured.com
             </a>

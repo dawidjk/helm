@@ -1,5 +1,7 @@
 import {useEffect, useState} from 'react';
-import {Band, CtaBand} from '../components/Site';
+import {Link} from 'react-router-dom';
+import {Button} from '@astryxdesign/core/Button';
+import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import HeroBackdrop, {type BackdropKind} from '../components/HeroBackdrop';
 import LeadForm from '../components/LeadForm';
@@ -15,6 +17,13 @@ export type Lane = {
   headline: string;
   sub: string;
   primaryCta: string;
+  /**
+   * How the hero and bottom-band CTAs behave. 'scan' (default) renders the
+   * email-in LeadForm that runs the instant domain scan; 'book' renders a
+   * button to /contact for engagement-style offers (e.g. a CMMC gap
+   * assessment) where an automatic domain scan is the wrong response.
+   */
+  ctaMode?: 'scan' | 'book';
   deadline?: {iso: string; label: string};
   pains: {title: string; body: string}[];
   planTitle: string;
@@ -75,9 +84,16 @@ export default function LanePage({lane}: {lane: Lane}) {
           </h1>
           <p className="sub reveal d2">{lane.sub}</p>
           <div className="hero-ctas reveal d3">
-            <LeadForm source={`${lane.slug} hero`} cta={lane.primaryCta} compact />
+            {lane.ctaMode === 'book' ? (
+              <Link to="/contact">
+                <Button label={lane.primaryCta} variant="primary" size="lg" />
+              </Link>
+            ) : (
+              <LeadForm source={`${lane.slug} hero`} cta={lane.primaryCta} compact />
+            )}
           </div>
         </div>
+        <ScrollCue />
       </header>
 
       <Band variant="raised">
@@ -98,9 +114,9 @@ export default function LanePage({lane}: {lane: Lane}) {
       </Band>
 
       <Band>
-        <div className="band-head observe">
-          <h2>{lane.planTitle}</h2>
-          <p>{lane.planSub}</p>
+        <div className="band-head">
+          <h2 className="observe">{lane.planTitle}</h2>
+          <p className="observe d1">{lane.planSub}</p>
         </div>
         <ol className="steps-flow">
           {lane.steps.map((s, i) => (
@@ -115,11 +131,11 @@ export default function LanePage({lane}: {lane: Lane}) {
 
       <Band variant="raised">
         <div className="split">
-          <div className="observe">
-            <h3>{lane.proof.title}</h3>
+          <div>
+            <h3 className="observe">{lane.proof.title}</h3>
             <ul className="check-list">
-              {lane.proof.points.map((pt) => (
-                <li key={pt}>{pt}</li>
+              {lane.proof.points.map((pt, i) => (
+                <li key={pt} className={`observe d${(i % 3) + 1}`}>{pt}</li>
               ))}
             </ul>
           </div>
@@ -127,7 +143,13 @@ export default function LanePage({lane}: {lane: Lane}) {
         </div>
       </Band>
 
-      <CtaBand title={lane.cta.title} sub={lane.cta.sub} cta={lane.cta.label} source={`${lane.slug} cta band`} />
+      <CtaBand
+        title={lane.cta.title}
+        sub={lane.cta.sub}
+        cta={lane.cta.label}
+        source={`${lane.slug} cta band`}
+        mode={lane.ctaMode}
+      />
     </>
   );
 }

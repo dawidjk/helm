@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import {Band, CtaBand} from '../components/Site';
+import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import HeroBackdrop from '../components/HeroBackdrop';
 import LeadForm from '../components/LeadForm';
@@ -56,7 +56,7 @@ export default function Home() {
     <>
       <Meta
         title="Helm: Email Security & AI Scam Defense for Small Business"
-        desc="Enterprise-grade email security, AI scam defense, and compliance readiness for small businesses, plain English, published pricing, backed by 24/7 security operations. Free email security scan in 24 hours."
+        desc="Enterprise-grade email security, AI scam defense, and compliance readiness for small businesses, plain English, published pricing, backed by 24/7 security operations. Free email security scan with instant results."
         path="/"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -83,15 +83,16 @@ export default function Home() {
             <LeadForm source="home hero" cta="Get my free scan" compact />
           </div>
           <div className="hero-note reveal d3">
-            Free automated email-security scan · plain-English report in 24h · no meeting
+            Free automated email-security scan · instant plain-English report · no meeting
           </div>
         </div>
+        <ScrollCue />
       </header>
 
       <Band id="products" variant="raised">
-        <div className="band-head observe">
-          <h2>Three products. One steady hand.</h2>
-          <p>
+        <div className="band-head">
+          <h2 className="observe">Three products. One steady hand.</h2>
+          <p className="observe d1">
             Everything is managed for you, billed monthly, and explained in
             plain English. Backed 24/7 by industry-leading security operations.
           </p>
@@ -111,18 +112,18 @@ export default function Home() {
 
       <Band>
         <div className="split">
-          <div className="observe">
-            <h3>Built for the questions you're actually being asked.</h3>
-            <p>
+          <div>
+            <h3 className="observe">Built for the questions you're actually being asked.</h3>
+            <p className="observe d1">
               Your cyber insurer, your biggest customer, and your bank are all
               asking the same thing: prove you're protected. We make the
               answer yes.
             </p>
             <ul className="check-list">
-              <li>Cyber-insurance questionnaires answered and remediated</li>
-              <li>Wire-fraud and payment-verification protocols that hold up</li>
-              <li>CMMC / NIST 800-171 gap assessments before the Nov 2026 deadline</li>
-              <li>HIPAA-ready controls for medical and dental practices</li>
+              <li className="observe d2">Cyber-insurance questionnaires answered and remediated</li>
+              <li className="observe d3">Wire-fraud and payment-verification protocols that hold up</li>
+              <li className="observe d1">CMMC / NIST 800-171 gap assessments before the Nov 2026 deadline</li>
+              <li className="observe d2">HIPAA-ready controls for medical and dental practices</li>
             </ul>
           </div>
           <PanelVisual />
@@ -150,13 +151,13 @@ export default function Home() {
       </Band>
 
       <Band>
-        <div className="band-head observe">
-          <h2>Your industry, your language.</h2>
-          <p>Same protection underneath. A pitch that speaks to your world.</p>
+        <div className="band-head">
+          <h2 className="observe">Your industry, your language.</h2>
+          <p className="observe d1">Same protection underneath. A pitch that speaks to your world.</p>
         </div>
-        <div className="lane-strip observe d1">
-          {laneLinks.map((l) => (
-            <Link key={l.to} to={l.to} className="lane-row">
+        <div className="lane-strip">
+          {laneLinks.map((l, i) => (
+            <Link key={l.to} to={l.to} className={`lane-row observe d${(i % 3) + 1}`}>
               <div>
                 <div className="kicker">{l.kicker}</div>
                 <div className="lane-title">{l.title}</div>
@@ -172,7 +173,7 @@ export default function Home() {
 
       <CtaBand
         title="Find out where you stand. Free."
-        sub="We run an automated scan of your email domain and send a plain-English report of exactly what a scammer sees, within 24 hours, no meeting required."
+        sub="We run an automated scan of your email domain and show you a plain-English report of exactly what a scammer sees, in about a minute, no meeting required."
         source="home cta band"
       />
     </>

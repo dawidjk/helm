@@ -1,6 +1,6 @@
 import HeroBackdrop from '../components/HeroBackdrop';
 import {Link} from 'react-router-dom';
-import {Band, CtaBand} from '../components/Site';
+import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import ProductMotif from '../components/ProductMotif';
 import {productList} from './products';
@@ -33,6 +33,7 @@ export default function Pricing() {
             anytime. If a vendor won't show you a price, they're pricing you.
           </p>
         </div>
+        <ScrollCue />
       </header>
 
       <Band variant="raised">
@@ -57,10 +58,10 @@ export default function Pricing() {
       </Band>
 
       <Band>
-        <div className="band-head observe">
-          <h2>How the numbers work</h2>
-          <p>
-            A typical 20-person business runs $240–300/month on Helm Mail. Add
+        <div className="band-head">
+          <h2 className="observe">How the numbers work</h2>
+          <p className="observe d1">
+            A typical 20-person business runs $300/month on Helm Mail. Add
             Helm Aware and you're under what one hour of incident-response
             lawyering costs, per year. Compliance projects are scoped and
             priced in writing before any work starts.

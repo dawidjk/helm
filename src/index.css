@@ -256,7 +256,9 @@ body {
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: calc(100svh - 72px);
+  /* --urgency-offset is 0 except when the urgency banner is shown (set by
+     SiteNav), keeping the hero bottom and scroll cue above the fold. */
+  min-height: calc(100svh - 72px - var(--urgency-offset, 0px));
   display: grid;
   align-content: center;
   padding: 48px 0;
@@ -1591,5 +1593,63 @@ body {
       opacity: 1;
       transform: none;
     }
+  }
+}
+
+/* ------------------------------ Scroll cue -------------------------------- */
+
+.scroll-cue {
+  /* Centered with auto margins, not translateX: the .reveal entrance
+     animation fills forwards with transform: none and would cancel any
+     transform-based centering. */
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 20px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid light-dark(rgba(11, 18, 32, 0.25), rgba(238, 242, 250, 0.3));
+  background: light-dark(rgba(255, 255, 255, 0.35), rgba(10, 15, 26, 0.35));
+  backdrop-filter: saturate(180%) blur(20px);
+  color: var(--helm-text);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: border-color 200ms ease, color 200ms ease;
+}
+
+.scroll-cue svg {
+  display: block;
+}
+
+.scroll-cue:hover {
+  border-color: var(--helm-green);
+  color: var(--helm-green);
+}
+
+.scroll-cue:focus-visible {
+  outline: 2px solid var(--helm-green);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-cue svg {
+    animation: scrollCueBob 2.4s ease-in-out infinite;
+  }
+
+  @keyframes scrollCueBob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+}
+
+@media (max-width: 640px) {
+  .scroll-cue {
+    bottom: 14px;
+    width: 36px;
+    height: 36px;
   }
 }

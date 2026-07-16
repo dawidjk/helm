@@ -1,6 +1,6 @@
 import HeroBackdrop from '../components/HeroBackdrop';
 import {useParams, Navigate, Link} from 'react-router-dom';
-import {Band, CtaBand} from '../components/Site';
+import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import LeadForm from '../components/LeadForm';
 import ProductMotif from '../components/ProductMotif';
@@ -60,14 +60,15 @@ export default function ProductPage() {
             {p.price} · <Link to="/pricing" style={{color: 'light-dark(#0c7a44, #AAE2C4)'}}>full pricing</Link>
           </div>
         </div>
+        <ScrollCue />
       </header>
 
       <Band variant="raised">
         <div className="split">
-          <div className="observe">
-            <h3>What you get</h3>
-            {p.features.map((f) => (
-              <div key={f.title} style={{marginBottom: 24}}>
+          <div>
+            <h3 className="observe">What you get</h3>
+            {p.features.map((f, i) => (
+              <div key={f.title} className={`observe d${(i % 3) + 1}`} style={{marginBottom: 24}}>
                 <h3 style={{fontSize: 20, marginBottom: 8}}>{f.title}</h3>
                 <p style={{marginBottom: 0}}>{f.body}</p>
               </div>
@@ -102,8 +103,8 @@ export default function ProductPage() {
           <h2>Common questions</h2>
         </div>
         <div className="faq-list">
-          {p.faqs.map((f) => (
-            <div key={f.q} className="faq-item observe">
+          {p.faqs.map((f, i) => (
+            <div key={f.q} className={`faq-item observe d${(i % 3) + 1}`}>
               <h3>{f.q}</h3>
               <p>{f.a}</p>
             </div>

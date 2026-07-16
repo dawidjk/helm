@@ -11,6 +11,7 @@ export const manufacturing: Lane = {
   headline: 'CMMC certified, before your competitors are.',
   sub: 'CMMC Phase 2 enforcement starts November 10, 2026. Fewer than 2% of the roughly 80,000 companies in the defense supply chain are certified, and assessors are booked 3 to 6 months out. If you supply a prime, the window to start is this quarter, not next.',
   primaryCta: 'Book a CMMC gap assessment',
+  ctaMode: 'book',
   deadline: {iso: '2026-11-10', label: 'CMMC Phase 2 enforcement'},
   pains: [
     {
@@ -118,7 +119,7 @@ export const professionalServices: Lane = {
   },
   cta: {
     title: 'Would your firm catch the fake wire request?',
-    sub: 'Free automated scan of your email domain shows exactly how easily you can be impersonated: plain-English report in 24 hours.',
+    sub: 'Free automated scan of your email domain shows exactly how easily you can be impersonated: plain-English report in about a minute.',
     label: 'Run the free scan',
   },
 };
@@ -179,7 +180,7 @@ export const contractors: Lane = {
   },
   cta: {
     title: 'How exposed is your payment chain?',
-    sub: 'Free scan shows whether scammers can impersonate your company to your GCs and suppliers: report in 24 hours.',
+    sub: 'Free scan shows whether scammers can impersonate your company to your GCs and suppliers: report in about a minute.',
     label: 'Run the free check',
   },
 };

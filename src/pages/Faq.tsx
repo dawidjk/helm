@@ -1,5 +1,5 @@
 import HeroBackdrop from '../components/HeroBackdrop';
-import {Band, CtaBand} from '../components/Site';
+import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 
 const faqs = [
@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: 'How fast can we start?',
-    a: 'The free scan takes 24 hours. Helm Mail deploys in under two hours on Microsoft 365 or Google Workspace. Compliance projects start within two weeks of scoping.',
+    a: 'The free scan runs instantly, your report appears in about a minute. Helm Mail deploys in under two hours on Microsoft 365 or Google Workspace. Compliance projects start within two weeks of scoping.',
   },
 ];
 
@@ -64,12 +64,13 @@ export default function Faq() {
             we'd answer them across a table.
           </p>
         </div>
+        <ScrollCue />
       </header>
 
       <Band>
         <div className="faq-list">
-          {faqs.map((f) => (
-            <div key={f.q} className="faq-item observe">
+          {faqs.map((f, i) => (
+            <div key={f.q} className={`faq-item observe d${(i % 3) + 1}`}>
               <h3>{f.q}</h3>
               <p>{f.a}</p>
             </div>

@@ -1,9 +1,13 @@
 import HeroBackdrop from '../components/HeroBackdrop';
 import {useState} from 'react';
 import {Button} from '@astryxdesign/core/Button';
-import {Band} from '../components/Site';
+import {Band, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
-import {FORM_ENDPOINT} from '../components/LeadForm';
+
+// FormSubmit endpoint for this general contact form. LeadForm (the one-field
+// scan capture form) no longer uses FormSubmit: it navigates straight to the
+// portal's auto-scan route instead.
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/hello@helmsecured.com';
 
 const interests = [
   'Email security (Helm Mail)',
@@ -51,11 +55,12 @@ export default function Contact() {
             business day with a straight answer, not a sales sequence.
           </p>
         </div>
+        <ScrollCue />
       </header>
 
       <Band>
         {sent ? (
-          <div className="contact-done" role="status">
+          <div className="contact-done reveal" role="status">
             <h3>✓ Message received.</h3>
             <p>We'll reply within one business day from hello@helmsecured.com.</p>
           </div>

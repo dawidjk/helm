@@ -58,7 +58,7 @@ export default function PanelVisual({domain = 'acme-mfg.com'}: {domain?: string}
         </li>
       </ul>
 
-      <div className="rv-foot">Delivered in plain English, within 24 hours.</div>
+      <div className="rv-foot">Delivered in plain English, in about a minute.</div>
     </div>
   );
 }

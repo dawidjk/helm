@@ -58,7 +58,7 @@ export const productList: Product[] = [
     desc: 'The AI-scam defense program: shadow-AI audit, acceptable-use policy, deepfake drills, and a payment-verification protocol that stops wire fraud whether the scammer is human or synthetic.',
     metaDesc:
       'AI scam defense for business: deepfake fraud training, shadow-AI audit, and acceptable-use policy. Workshop from $1,500 plus quarterly threat refreshes.',
-    price: '$1,500–3,000 workshop + $350 / month',
+    price: '$1,500 to $3,000 workshop + $350 / month',
     priceDetail: 'Fixed-fee workshop to start; monthly subscription keeps training and policies current as threats evolve.',
     features: [
       {
@@ -82,7 +82,7 @@ export const productList: Product[] = [
     faqs: [
       {q: 'Is this just a lunch-and-learn?', a: 'No. It ends with deployed controls: a signed acceptable-use policy, a payment-verification protocol in force, and a tested team. Awareness is a byproduct.'},
       {q: 'Do you sell AI tools?', a: 'No. We sell defense against AI-powered scams. Every recommendation is a concrete, deliverable control, no hype.'},
-      {q: 'Who should attend the workshop?', a: 'Executives, finance/bookkeeping, and anyone who can approve a payment or change banking details. Typically 5–15 people.'},
+      {q: 'Who should attend the workshop?', a: 'Executives, finance/bookkeeping, and anyone who can approve a payment or change banking details. Typically 5 to 15 people.'},
     ],
   },
   {
@@ -93,7 +93,7 @@ export const productList: Product[] = [
     desc: 'Fixed-fee compliance readiness: cyber-insurance questionnaires, CMMC/NIST 800-171 gap assessments, and HIPAA controls, remediated, documented, and defended in plain English.',
     metaDesc:
       'Cyber insurance questionnaire help, CMMC gap assessment, and HIPAA readiness for small business. Fixed-fee projects from $2,500: answers your carrier and primes will accept.',
-    price: '$2,500–7,500 fixed fee + optional $500–1,500 / month managed',
+    price: '$2,500 to $7,500 fixed fee + optional $500 to $1,500 / month managed',
     priceDetail: 'Scoped and priced before we start. Monthly managed compliance keeps your posture from decaying after the project.',
     features: [
       {

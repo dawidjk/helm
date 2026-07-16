@@ -1,6 +1,6 @@
 import HeroBackdrop from '../components/HeroBackdrop';
 import {Link} from 'react-router-dom';
-import {Band, CtaBand} from '../components/Site';
+import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {articles} from './articles';
 
@@ -24,12 +24,13 @@ export default function Resources() {
             fear-mongering, every article ends in something you can do.
           </p>
         </div>
+        <ScrollCue />
       </header>
 
       <Band>
-        <div className="lane-strip observe">
-          {articles.map((a) => (
-            <Link key={a.slug} to={`/resources/${a.slug}`} className="lane-row">
+        <div className="lane-strip">
+          {articles.map((a, i) => (
+            <Link key={a.slug} to={`/resources/${a.slug}`} className={`lane-row observe d${(i % 3) + 1}`}>
               <div>
                 <div className="kicker">{a.lane}</div>
                 <div className="lane-title">{a.title}</div>
@@ -45,7 +46,7 @@ export default function Resources() {
 
       <CtaBand
         title="Reading is free. So is the scan."
-        sub="The free email security scan turns theory into your actual numbers: report in 24 hours."
+        sub="The free email security scan turns theory into your actual numbers: instant report."
         source="resources cta"
       />
     </>

@@ -32,7 +32,7 @@ export const articles: Article[] = [
       'CMMC Phase 2 enforcement begins November 10, 2026. Fewer than 2% of the roughly 80,000 companies in the defense supply chain hold certification, and assessor calendars are booked months out. If you supply a prime, even two tiers down, here is the punch list.',
     sections: [
       {
-        h: 'Steps 1–4: Know where you stand',
+        h: 'Steps 1 to 4: Know where you stand',
         ps: [
           'First, confirm your level. Most subs handling Federal Contract Information need Level 1 (17 practices, self-assessed annually). If you touch Controlled Unclassified Information (drawings, specs, technical data marked CUI), you need Level 2: 110 controls from NIST 800-171 and, for most contracts, a third-party assessment.',
           'Second, locate your CUI. You cannot protect what you have not mapped. Walk every place technical data lives: file servers, email, CAD stations, the quoting inbox, that USB drive in the shop office.',
@@ -41,14 +41,14 @@ export const articles: Article[] = [
         ],
       },
       {
-        h: 'Steps 5–9: Close the gaps that matter',
+        h: 'Steps 5 to 9: Close the gaps that matter',
         ps: [
           'Five: multi-factor authentication everywhere, the single control assessors check first. Six: FIPS-validated encryption for CUI at rest and in transit; your consumer-grade NAS probably does not qualify. Seven: access control, meaning machinists do not need the quoting drive, and the front office does not need CAD.',
           'Eight: an incident response plan you have actually rehearsed once. Nine: System Security Plan (SSP) and POA&M documents, which assessors read before they read anything else. Thin, generic templates are the most common failure.',
         ],
       },
       {
-        h: 'Steps 10–12: Get certified without losing the year',
+        h: 'Steps 10 to 12: Get certified without losing the year',
         ps: [
           'Ten: book your C3PAO now, not after remediation. Backlogs run three to six months, and a reservation focuses the timeline. Eleven: run a mock assessment; failing in private costs nothing, failing the real one costs a re-assessment fee and a lost season.',
           'Twelve: put monthly maintenance in place. Scores decay: a patched server drifts, an employee leaves with access intact. Primes increasingly ask for continuous compliance, not a one-time certificate.',
@@ -152,7 +152,7 @@ export const articles: Article[] = [
       },
     ],
     takeaway:
-      'Check your domain today: our free scan reads your SPF, DKIM, and DMARC records and tells you in plain English whether a criminal can currently impersonate your company. It takes 24 hours and costs nothing.',
+      'Check your domain today: our free scan reads your SPF, DKIM, and DMARC records and tells you in plain English whether a criminal can currently impersonate your company. It runs instantly and costs nothing.',
   },
   {
     slug: 'deepfake-ceo-fraud',
