@@ -62,7 +62,11 @@ export default function About() {
               <li className="observe d3">Honest architecture: our monitoring is backed by 24/7 security operations partners, and we say so</li>
               <li className="observe d1">No fear selling. Every warning we give ends in a concrete, priced fix</li>
               <li className="observe d2">Automation-first: machines watch the logs, humans make the calls</li>
+              {/* Restore when earned: Security+ is scheduled but not passed, and E&O/cyber
+                  liability insurance is ON HOLD (see human_work.md). Do not publish either
+                  claim before both are true.
               <li className="observe d3">CompTIA Security+ certified engineering, E&amp;O and cyber liability insured</li>
+              */}
             </ul>
           </div>
         </div>
