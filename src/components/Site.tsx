@@ -1,7 +1,7 @@
 import {useEffect, useRef, useState, type ReactNode} from 'react';
 import {NavLink as RouterNavLink, Link, useLocation} from 'react-router-dom';
 import {Button} from '@astryxdesign/core/Button';
-import LeadForm from './LeadForm';
+import LeadForm, {PORTAL_URL} from './LeadForm';
 import ThemePicker from './ThemePicker';
 
 export function HelmMark({size = 28}: {size?: number}) {
@@ -115,6 +115,7 @@ export function SiteNav() {
               <RouterNavLink to="/pricing" className={({isActive}) => (isActive ? 'active' : '')}>
                 Pricing
               </RouterNavLink>
+              <a href={`${PORTAL_URL}/login`}>Sign in</a>
               <Link to="/free-scan" className="nav-cta">
                 <Button label="Free scan" variant="primary" size="sm" />
               </Link>
@@ -145,6 +146,10 @@ export function SiteNav() {
               ))}
             </div>
           ))}
+          <div className="drawer-group">
+            <div className="footer-col-title">Account</div>
+            <a href={`${PORTAL_URL}/login`}>Sign in</a>
+          </div>
         </div>
       )}
     </>
