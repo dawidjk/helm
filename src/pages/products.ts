@@ -120,4 +120,39 @@ export const productList: Product[] = [
       {q: 'Our insurer denied a claim before. Can you help?', a: 'That is exactly the failure mode we prevent: answers on the questionnaire that don’t match reality. We make your answers true, then document the proof.'},
     ],
   },
+  {
+    slug: 'helm-watch',
+    motif: 'watch',
+    name: 'Helm Watch',
+    tagline: '24/7 detection and response, without the 24/7 payroll.',
+    desc: 'Managed detection and response for small business endpoints: a round-the-clock security operations center watches every machine, investigates alerts, and isolates compromised endpoints before an incident spreads.',
+    metaDesc:
+      'Managed detection and response (MDR) for small business: 24/7 SOC monitoring, human-triaged alerts, and endpoint isolation from $15/endpoint/month. No hardware, no new staff.',
+    price: '$15 / endpoint / month',
+    priceDetail: 'Lightweight agent on your Windows and Mac endpoints. No hardware, no new staff, deployed in under a day.',
+    features: [
+      {
+        title: 'A SOC on duty when you are not',
+        body: 'Most of the damage in a breach happens at night, on weekends, and over holidays, when nobody is at a desk to notice. A 24/7 security operations center watches your endpoints so an attack at 3 a.m. gets a response at 3 a.m.',
+      },
+      {
+        title: 'Response, not just another alert',
+        body: 'Antivirus tells you something happened. MDR does something about it: suspicious activity is investigated by human analysts, and a compromised endpoint gets isolated before the problem spreads to the rest of your network.',
+      },
+      {
+        title: 'You only hear about what matters',
+        body: 'Alerts are triaged by analysts, not forwarded to your inbox. When something is real, you get a plain-English account of what happened and what was done, plus a quarterly report your insurer will accept.',
+      },
+    ],
+    how: [
+      {num: '1', title: 'Deploy', body: 'Lightweight EDR agent pushed to your Windows and Mac endpoints. No user disruption, done in under a day.'},
+      {num: '2', title: 'Watch', body: 'The SOC monitors around the clock; human analysts investigate anything suspicious and discard the noise.'},
+      {num: '3', title: 'Respond', body: 'Real threats get contained, compromised machines isolated, and you get a plain-English account of what happened.'},
+    ],
+    faqs: [
+      {q: 'Do we need to replace our antivirus?', a: 'Usually yes, and that is a good thing: the EDR agent covers what antivirus does and adds detection and response on top. We sort out the specifics during deployment so nothing overlaps or conflicts.'},
+      {q: 'What happens when you find something?', a: 'Human analysts investigate first, so false alarms die quietly. Real incidents get contained, the affected endpoint isolated if needed, and you get a plain-English explanation of what happened and what was done.'},
+      {q: 'Is this overkill for a ten-person company?', a: 'Cyber insurers increasingly ask whether you have EDR and 24/7 monitoring before they will write or renew a policy. Helm Watch is how a ten-person company answers yes without hiring a security team.'},
+    ],
+  },
 ];

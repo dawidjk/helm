@@ -39,6 +39,7 @@ const footerCols = [
       {to: '/helm-mail', label: 'Helm Mail'},
       {to: '/helm-aware', label: 'Helm Aware'},
       {to: '/helm-ready', label: 'Helm Ready'},
+      {to: '/helm-watch', label: 'Helm Watch'},
       {to: '/pricing', label: 'Pricing'},
     ],
   },

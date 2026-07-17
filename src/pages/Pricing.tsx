@@ -10,7 +10,7 @@ export default function Pricing() {
     <>
       <Meta
         title="Pricing: Published, No Surprises | Helm"
-        desc="Helm pricing: managed email security from $15/user/month, AI scam defense workshops from $1,500, compliance projects from $2,500 fixed fee. Published prices, no custom quotes."
+        desc="Helm pricing: email security from $15/user/month, AI scam defense from $1,500, compliance from $2,500, 24/7 endpoint monitoring $15/endpoint/month. Published prices."
         path="/pricing"
         jsonLd={{
           '@context': 'https://schema.org',

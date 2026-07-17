@@ -20,6 +20,58 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: 'mfa-methods-compared',
+    title: 'MFA Methods Compared: Apps, SMS, and Security Keys for Small Business',
+    metaDesc:
+      'Authenticator apps, SMS codes, and hardware security keys all stop different attacks. A plain-English comparison for small businesses deciding where to start.',
+    date: '2026-07-17',
+    readMin: 5,
+    lane: 'All industries',
+    laneTo: '/',
+    intro:
+      'The advice to "turn on MFA" is right, but it treats every method as interchangeable, and they are not. An app, a text message, and a physical key each stop a different attack, and each has a different weak spot. Here is what actually separates them, and where to start if you are rolling this out for the first time.',
+    sections: [
+      {
+        h: 'The one rule that matters more than which method you pick',
+        ps: [
+          'Any multi-factor authentication beats none. A password alone is one stolen or guessed credential away from a full account takeover, and every method below closes that gap. If the choice is between debating which option is best and turning nothing on at all, turn something on today.',
+          'That said, the methods are not equally strong, and knowing where each one bends helps you decide who gets which method first.',
+        ],
+      },
+      {
+        h: 'SMS codes: better than nothing, but the weakest link',
+        ps: [
+          'A text-message code is easy to set up and better than a password on its own, but it has two real weaknesses. SIM swapping lets an attacker convince a phone carrier to move your number onto a device they control, which sends your codes straight to them. Real-time phishing relays capture the code the moment you type it into a fake login page and use it within seconds on the real one.',
+          'Neither attack is common against every small business, but both are well documented, and neither requires much skill once someone is specifically targeted. SMS still beats password-only, it just should not be the method protecting your most sensitive accounts.',
+        ],
+      },
+      {
+        h: 'Authenticator apps: free, stronger, and one thing to turn on',
+        ps: [
+          'An authenticator app generates a code on the device itself rather than sending one over the phone network, which removes the SIM-swapping risk entirely. The apps are free, widely supported, and a meaningful step up from SMS for most day-to-day accounts.',
+          'Their weak spot is push-approval fatigue: an attacker who already has your password sends a flood of approval prompts hoping you tap approve once just to make them stop. Number matching, where the app makes you type a specific number shown on the login screen rather than tapping a single button, closes that gap and is worth turning on wherever it is offered.',
+        ],
+      },
+      {
+        h: 'Hardware security keys: the phishing-resistant option',
+        ps: [
+          'A FIDO2 hardware security key is a small physical device, often on a keychain, that plugs in or taps to approve a sign-in. What makes it different is that the key itself checks whether it is talking to the real site before it will authenticate, so it simply will not work on a convincing fake login page. That is what phishing-resistant actually means in practice, not just a marketing phrase.',
+          'Keys typically run under $60 each, and most people only need one plus a backup.',
+        ],
+      },
+      {
+        h: 'A sensible rollout order',
+        ps: [
+          'Start with the accounts that matter most: admins, and anyone who can move money or approve payments, get the strongest option, hardware security keys. Everyone else gets an authenticator app with number matching turned on. SMS is a reasonable fallback for low-risk accounts, not the default for the accounts you would miss most if they were taken over.',
+          {text: 'Rolling this out well is as much about explaining why as it is about the settings themselves, which is exactly what security awareness training is built to cover.', links: [{phrase: 'security awareness training', to: '/helm-aware'}]},
+          {text: 'Not sure where your own accounts currently stand? A free scan of your domain is a quick way to see what is exposed before you decide where to start.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'Any MFA beats none, but SMS, apps, and hardware keys are not interchangeable. Give admins and anyone who moves money the strongest option you have, put apps with number matching on everyone else, and treat SMS as a fallback rather than a plan.',
+  },
+  {
     slug: 'm365-security-baseline',
     title: 'The Microsoft 365 Security Baseline You Can Set This Week',
     metaDesc:
@@ -174,6 +226,50 @@ export const articles: Article[] = [
       'The level you need is written into your contracts, not your org chart. Read the clauses, confirm with your prime in writing, and size your program to what you actually handle.',
   },
   {
+    slug: 'invoice-fraud-red-flags',
+    title: 'Invoice Fraud Red Flags: What to Check Before You Pay a Vendor',
+    metaDesc:
+      'The red flags that separate a legitimate vendor payment change from an invoice fraud attempt, and the callback habit that catches it every time.',
+    date: '2026-07-12',
+    readMin: 5,
+    lane: 'All industries',
+    laneTo: '/',
+    intro:
+      'If you are the one who pays invoices, whether that is your job title or just a task that landed on your desk, you are the last line of defense against one of the most common frauds a small business faces. It rarely looks suspicious. That is exactly the problem.',
+    sections: [
+      {
+        h: 'Why this is worth ten minutes of your attention',
+        ps: [
+          'Vendor impersonation and business email compromise are consistently among the costliest categories of internet crime reported to the FBI each year. The exact numbers move year to year, but the pattern does not: this is one of the most common ways businesses lose money to fraud, not a rare or exotic scam.',
+          'The classic version targets a relationship you already have. An email arrives that looks like it is from a vendor you already pay, asking you to update their banking details before the next invoice goes out.',
+        ],
+      },
+      {
+        h: 'The red flags, in order of how often they show up',
+        ps: [
+          'New banking details on an existing vendor relationship is the single biggest flag by itself. Pair it with urgency or late-fee pressure, a new contact person you have not dealt with before, a sender domain that is one character off from the real one, or a reply-to address that quietly differs from the display name, and the picture gets clearer fast.',
+          'One more flag matters as much as the others: any request to keep the change quiet, skip your normal approval process, or move fast because something is time-sensitive. Legitimate vendors do not ask you to bypass your own controls.',
+        ],
+      },
+      {
+        h: 'The control that actually stops it',
+        ps: [
+          'Call back a known number from your own records, never a number in the email itself, before changing any payment details. This single habit defeats nearly every version of this scam, because the fraudster cannot answer a call placed to the vendor\'s real office.',
+          'Add dual approval above a set dollar threshold so no single person can push a payment change through alone, even under pressure. Between the callback and the second set of eyes, both the easy version of this scam and the more convincing one get caught.',
+        ],
+      },
+      {
+        h: 'Protect your own name too',
+        ps: [
+          {text: 'The same scam runs in the other direction: someone spoofs your domain and sends a fake invoice or a fake banking change to your own customers. DMARC and proper email authentication make your domain much harder to fake, which protects your customers and your reputation at the same time.', links: [{phrase: 'DMARC and proper email authentication', to: '/helm-mail'}]},
+          {text: 'A free scan of your domain checks whether that protection is already in place or still missing.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'A new bank account number on a familiar vendor relationship is the flag that matters most. Call back a known number before you change anything, add dual approval above a threshold, and lock down your own domain so your name cannot be used the same way against your customers.',
+  },
+  {
     slug: 'what-a-soc-actually-does',
     title: 'What a SOC Actually Does (and Why an Alert Is Not the Same as a Response)',
     metaDesc:
@@ -203,7 +299,7 @@ export const articles: Article[] = [
         h: 'What a managed SOC actually buys you',
         ps: [
           'A managed SOC, or managed detection and response subscription, shares one SOC team across many businesses at once, which is how it delivers around-the-clock coverage at a fraction of what staffing your own would cost.',
-          {text: 'If continuous coverage sounds like something your business needs but could never staff on its own, that is exactly the kind of thing worth a direct conversation about what 24/7 monitoring would actually look like for you.', links: [{phrase: '24/7 monitoring', to: '/contact'}]},
+          {text: 'If continuous coverage sounds like something your business needs but could never staff on its own, that is exactly what Helm Watch provides: 24/7 managed detection and response on your endpoints, with human analysts behind every alert.', links: [{phrase: 'Helm Watch', to: '/helm-watch'}]},
           {text: 'Before signing with any provider, ask three questions: who actually investigates an alert, a real analyst or an algorithm; will they take containment action themselves, like isolating an infected machine, or only notify you and leave the response to you; and what is the escalation path when something real is found, including how fast you actually hear about it. A free scan of your own domain is a reasonable first look at where you stand before that conversation even starts.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
@@ -323,6 +419,52 @@ export const articles: Article[] = [
     ],
     takeaway:
       'Shadow AI is not going away, and banning it just pushes it further from view. Write the policy, name the approved tools, and audit periodically to keep it that way.',
+  },
+  {
+    slug: 'cyber-insurance-application-walkthrough',
+    title: 'Walking Through a Cyber Insurance Application Without Tripping Over Your Own Answers',
+    metaDesc:
+      'What a cyber insurance application actually asks, why the answers are treated as sworn statements rather than a survey, and the order to work through it in.',
+    date: '2026-07-06',
+    readMin: 5,
+    lane: 'Professional Services',
+    laneTo: '/professional-services',
+    intro:
+      'A cyber insurance application reads like a routine form until you understand what happens to your answers later. Every yes and no on that page can be checked against reality at claim time, and the gap between what you wrote and what was actually true is exactly where carriers look first. Here is how to work through the form without setting that trap for yourself.',
+    sections: [
+      {
+        h: 'What the application actually asks',
+        ps: [
+          'The questions cluster around a familiar set of topics: multi-factor authentication, asked separately for email, remote access, and admin accounts; endpoint detection and response on your devices; whether backups are kept offline or immutable and whether restores are actually tested, not just assumed to work; how often you patch; whether staff get security awareness training; and whether a written incident response plan exists.',
+          'None of these questions are unreasonable. Each one maps to a control that measurably reduces how bad a claim turns out to be, which is exactly why carriers ask.',
+        ],
+      },
+      {
+        h: 'Why the answers matter more than a form usually does',
+        ps: [
+          'Your answers are treated as attestations the insurer is entitled to rely on, not a rough self-assessment. Answer inaccurately, even without meaning to mislead anyone, and you risk denial of a future claim or rescission of the policy entirely. Carriers have litigated cases specifically over MFA misstatements on applications, which is a sign of how closely this particular answer gets checked.',
+          'The trap is answering with what you intend to have in place rather than what is actually running today. A policy that says MFA is enabled everywhere, when it is actually enabled on most accounts, is the exact gap a carrier can use to deny a claim later.',
+        ],
+      },
+      {
+        h: 'The right order: fix or document first, answer second',
+        ps: [
+          'Work through the questions in this order: fix the gap if you can before you answer, or if you cannot fix it in time, document honestly what you actually have in place and why. Answering first and hoping to close the gap later is backwards, and it is the version of this that gets found out at the worst possible time.',
+          'Gather your evidence as you go: screenshots of MFA settings, backup and restore logs, your written policies. Keep it all in one place. If a claim is ever filed, that folder is what turns your answers from a claim into proof.',
+        ],
+      },
+      {
+        h: 'Start weeks before renewal, not the night before',
+        ps: [
+          'Better, more accurate answers generally translate into better premiums and more carrier options, because you are giving underwriters a clearer, more complete picture to price against rather than a vague one they have to price cautiously.',
+          {text: 'None of this works on the night before renewal. Start weeks ahead so there is actually time to close a gap instead of just noting it, and treat the review as part of your ongoing professional services security program rather than a once-a-year scramble.', links: [{phrase: 'professional services security program', to: '/professional-services'}]},
+          {text: 'A readiness review is built exactly for this: closing the gaps the application asks about before you have to answer for them.', links: [{phrase: 'readiness review', to: '/helm-ready'}]},
+          {text: 'A free scan of your domain is a fast way to see where a few of those answers already stand.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'The application is a sworn statement about your security, not a formality. Fix or honestly document each gap before you answer, keep the evidence, and start weeks ahead so accurate answers are actually possible by the time renewal arrives.',
   },
   {
     slug: 'hipaa-email-rules-small-practices',
@@ -478,6 +620,56 @@ export const articles: Article[] = [
       'Public Wi-Fi is not the threat it used to be; fake hotspots and an unlocked device are. Turn on basic mobile management, give a shared tablet its own limited account, and never approve a payment change without a callback to a known number.',
   },
   {
+    slug: 'employee-offboarding-checklist',
+    title: 'The Employee Offboarding Checklist Most Companies Run From Memory (and Miss)',
+    metaDesc:
+      'A written employee offboarding checklist covering account access, sessions, shared credentials, devices, and the SaaS accounts most companies forget to close.',
+    date: '2026-06-29',
+    readMin: 5,
+    lane: 'All industries',
+    laneTo: '/',
+    intro:
+      'Offboarding usually happens the way most improvised processes happen: from memory, spread out over the following week, done by whoever remembers to do it. That gap between someone\'s last day and their last piece of access closed is exactly where risk sits. A written checklist run the same day closes it.',
+    sections: [
+      {
+        h: 'Same day, not sometime this week',
+        ps: [
+          'Disable the account the same day, and suspend it rather than deleting it outright. Suspending preserves the mail and files that the account holder, and often the rest of the team, still needs access to, while immediately cutting off the ability to sign in.',
+        ],
+      },
+      {
+        h: 'A password reset alone does not end access',
+        ps: [
+          'Resetting the password feels like it should be enough, but it does not end sessions that are already active on a phone, a laptop, or a browser tab still logged in somewhere. Revoke active sessions directly and remove any registered MFA devices, or the old password reset accomplishes very little.',
+          'Check for auto-forwarding rules the person may have set up, intentionally or not. A forwarding rule quietly sending copies of future mail to a personal account is one of the easiest things to miss and one of the most useful things for an attacker, or a disgruntled former employee, to have left behind.',
+        ],
+      },
+      {
+        h: 'The credentials nobody remembers to rotate',
+        ps: [
+          'Rotate any shared credential the person knew: the office Wi-Fi password, company social media logins, banking portal access, and any other shared login used across the team. If it was shared, assume it needs to change the moment someone with access leaves.',
+        ],
+      },
+      {
+        h: 'Devices, personal phones, and the account nobody thinks about',
+        ps: [
+          'Collect company-owned devices and remove company data or work profiles from any personal phone that had them installed. This step is easy to remember for a laptop and easy to forget for a phone that only ever had the company email app on it.',
+          'The most commonly missed item on the entire list is third-party SaaS accounts created outside your main login system: a tool someone signed up for directly with a company card, never connected to single sign-on, that nobody else on the team knew existed.',
+          'If the team needs continuity on the mailbox itself, convert it to a shared mailbox rather than leaving it as an active individual login. That keeps the history accessible without keeping an account open that does not need to be.',
+        ],
+      },
+      {
+        h: 'Run it from a checklist, not from memory',
+        ps: [
+          {text: 'Every step above should live on a written checklist that gets run the same day someone leaves, not pieced together from memory over the following week. The gap between those two approaches is exactly where most offboarding failures happen, and it is a gap security awareness training can help close by making the process a habit rather than a favor someone remembers to do.', links: [{phrase: 'security awareness training', to: '/helm-aware'}]},
+          {text: 'A free scan of your domain is a good companion check while you are reviewing access controls, since it shows some of the same exposure an attacker, or a departing employee, would be looking for.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'Same-day suspension, revoked sessions and MFA devices, rotated shared credentials, collected devices, and closed third-party SaaS accounts: run all of it from a written checklist the same day someone leaves, not from memory over the following week.',
+  },
+  {
     slug: 'backup-testing-insurers',
     title: 'Backup Testing: What Cyber Insurers Actually Want to See',
     metaDesc:
@@ -618,6 +810,50 @@ export const articles: Article[] = [
     ],
     takeaway:
       'Email filtering keeps most attacks from arriving; the callback protocol makes the ones that arrive harmless. Put both in place and wire fraud stops being an existential risk. We deploy both: filtering via Helm Mail, protocol and drills via Helm Aware.',
+  },
+  {
+    slug: 'cui-handling-shop-floor',
+    title: 'Explaining CUI to Your Shop Floor: The Rules That Actually Matter',
+    metaDesc:
+      'A plain-English explanation of FCI and CUI for shop floor staff, the handling rules that keep drawings and specs safe, and why fast internal reporting matters under DFARS.',
+    date: '2026-06-16',
+    readMin: 5,
+    lane: 'Manufacturing & Defense',
+    laneTo: '/manufacturing',
+    intro:
+      'Your compliance program can be well designed on paper and still fail on the floor, because the person actually handling a marked drawing every day was never told what makes it different from any other piece of paper. Here is how to explain FCI and CUI to shop floor staff in terms that hold up under a real workday, not just an audit.',
+    sections: [
+      {
+        h: 'FCI and CUI, in terms that make sense on the floor',
+        ps: [
+          'Federal Contract Information, FCI, is information provided by or generated for the government under a contract and not meant for public release. It covers a lot of the everyday paperwork of doing government work.',
+          'Controlled Unclassified Information, CUI, is a stricter category that requires safeguarding under law, regulation, or policy. For a machine shop, this usually means controlled technical information: drawings, specs, and models tied to a specific part or program. If a document has a distribution statement or a marking on it, treat it as CUI until someone tells you otherwise.',
+        ],
+      },
+      {
+        h: 'The floor rules that keep it safe',
+        ps: [
+          'No photos of drawings or parts on personal phones, ever, even for a quick reference or to text a coworker. Never email specs to a personal email account to work on at home. Access is need-to-know: if a print is not for your job, it is not for you to look at.',
+          'Keep marked documents in controlled storage, not sitting loose on a workbench or pinned to a board where anyone walking by can see them. And know who to tell when something looks mishandled, a print left out, a file emailed somewhere it should not have gone, because catching it internally and fast is the whole point of the rule.',
+        ],
+      },
+      {
+        h: 'Why fast reporting is not optional',
+        ps: [
+          'DFARS 252.204-7012 requires reporting cyber incidents affecting covered defense information to the Department of Defense within 72 hours. That clock does not wait for someone to notice weeks later. An employee who tells a supervisor the same day something looks wrong is the only way that deadline gets met.',
+        ],
+      },
+      {
+        h: 'This training is part of the program, not an extra',
+        ps: [
+          {text: 'Training the floor on these rules is part of NIST 800-171 compliance itself, not a nice-to-have layered on top of it. A shop that has every technical control in place but never explained the rules to the people handling the actual drawings still has a real gap.', links: [{phrase: 'NIST 800-171 compliance', to: '/helm-ready'}]},
+          {text: 'For manufacturing and defense shops working through what a program like this should look like end to end, a readiness assessment covers both the technical controls and the floor-level training in one pass.', links: [{phrase: 'manufacturing and defense shops', to: '/manufacturing'}, {phrase: 'readiness assessment', to: '/helm-ready'}]},
+          {text: 'Building the specific training your floor needs, rather than a generic slide deck, is exactly what security awareness training is for.', links: [{phrase: 'security awareness training', to: '/helm-aware'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'FCI is everyday government paperwork; CUI, usually drawings, specs, and models on a shop floor, requires real safeguarding. No photos, no personal email, need-to-know access, controlled storage, and fast internal reporting, all of it taught as part of compliance, not bolted on after.',
   },
   {
     slug: 'pen-test-vs-vulnerability-scan',

@@ -1,4 +1,4 @@
-export type MotifKind = 'mail' | 'aware' | 'ready' | 'lane-mfg' | 'lane-pro' | 'lane-con';
+export type MotifKind = 'mail' | 'aware' | 'ready' | 'watch' | 'lane-mfg' | 'lane-pro' | 'lane-con';
 
 /** Animated line-art motifs for product tiles: premium, quiet, on-brand. */
 export default function ProductMotif({kind}: {kind: MotifKind}) {
@@ -43,6 +43,26 @@ export default function ProductMotif({kind}: {kind: MotifKind}) {
           <path d="M88 48 l8 8 L116 36" stroke="#AAE2C4" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
           <g stroke="rgba(170, 226, 196, 0.6)" strokeWidth="1.4" strokeLinecap="round">
             <path d="M150 32 h28 M150 48 h28 M150 64 h20" />
+          </g>
+        </svg>
+      )}
+      {kind === 'watch' && (
+        <svg viewBox="0 0 200 96" fill="none">
+          <path
+            d="M38 48 C64 18, 136 18, 162 48 C136 78, 64 78, 38 48 Z"
+            stroke="#38A169"
+            strokeWidth="1.6"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <circle cx="100" cy="48" r="13" stroke="#38A169" strokeWidth="1.6" />
+          <circle cx="100" cy="48" r="4" fill="#AAE2C4" />
+          <circle className="sonar s1" cx="100" cy="48" r="13" stroke="#38A169" strokeWidth="1.2" />
+          <circle className="sonar s2" cx="100" cy="48" r="13" stroke="#38A169" strokeWidth="0.9" />
+          <g className="pulse-slow">
+            <circle cx="148" cy="70" r="15" fill="#0b1220" stroke="#38A169" strokeWidth="1.6" />
+            <line x1="148" y1="70" x2="148" y2="61" stroke="#AAE2C4" strokeWidth="1.6" strokeLinecap="round" />
+            <line x1="148" y1="70" x2="154" y2="70" stroke="#AAE2C4" strokeWidth="1.6" strokeLinecap="round" />
           </g>
         </svg>
       )}
