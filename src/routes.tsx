@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import Pricing from './pages/Pricing';
 import ProductPage from './pages/ProductPage';
 import FreeScan from './pages/FreeScan';
+import Quiz from './pages/Quiz';
 import About from './pages/About';
 import Faq from './pages/Faq';
 import Resources from './pages/Resources';
@@ -34,6 +35,7 @@ export const routes: RouteRecord[] = [
         getStaticPaths: () => productList.map((p) => p.slug),
       },
       {path: 'free-scan/', element: <FreeScan />},
+      {path: 'quiz/', element: <Quiz />},
       {path: 'about/', element: <About />},
       {path: 'faq', element: <Faq />},
       {path: 'contact', element: <Contact />},
