@@ -20,6 +20,196 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: 'sprs-score-explained',
+    title: 'SPRS Score Explained: The Number Your Primes Can Already See',
+    metaDesc:
+      'What your SPRS score means under the NIST 800-171 DoD Assessment Methodology, why it can run from -203 to 110, and how to raise it deliberately instead of guessing.',
+    date: '2026-07-15',
+    readMin: 5,
+    lane: 'Manufacturing & Defense',
+    laneTo: '/manufacturing',
+    intro:
+      'If you handle Controlled Unclassified Information for a defense contract, a number already exists that describes your security posture, and your prime can look it up. It is called your SPRS score, and most subcontractors have never seen it explained in plain English.',
+    sections: [
+      {
+        h: 'What the score actually measures',
+        ps: [
+          'The SPRS score comes from the NIST 800-171 DoD Assessment Methodology: a standardized way of scoring how well a company implements the 110 security controls required for handling CUI. Each control is worth points, and some are worth more than others because they matter more.',
+          'The range runs from negative 203 up to a maximum of 110. It can go negative because missing certain high-value controls, like multi-factor authentication or encrypted CUI storage, subtracts more points than a single control is worth on its own. A company that has done almost nothing can post a deeply negative number.',
+          'That score gets posted to SPRS, the Supplier Performance Risk System, where primes and the DoD can see it before they award or continue a subcontract. It is not a private self-assessment sitting in a drawer.',
+        ],
+      },
+      {
+        h: 'Why an honest number matters more than a high one',
+        ps: [
+          'Primes increasingly screen subcontractors on SPRS score before flowing down work. A low, honest score is a problem you can fix on a timeline. A fabricated or inflated score is a different kind of problem entirely.',
+          'Submitting a score you know is not accurate is a False Claims Act exposure, and it is not theoretical: the DOJ Civil Cyber-Fraud Initiative has already settled cases against companies that misrepresented their security compliance to the government. The number posted to SPRS is treated as a representation the government can rely on.',
+        ],
+      },
+      {
+        h: 'How to raise it without guessing',
+        ps: [
+          {text: 'Start with a gap assessment scored against all 110 controls. It tells you exactly where you stand today and which gaps carry the most point value, instead of guessing which fixes matter most.', links: [{phrase: 'gap assessment', to: '/helm-ready'}]},
+          'Fix the highest-weighted controls first: the ones like MFA and encryption that swing the score the most per dollar and hour spent. Then rescore against the methodology and repost to SPRS so the number primes see reflects the work you actually did.',
+        ],
+      },
+    ],
+    takeaway:
+      'Your SPRS score is not a form you fill out once. Score it honestly today, raise it deliberately with the controls that matter most, and repost so the number your primes see is one you can stand behind.',
+  },
+  {
+    slug: 'cmmc-level-1-vs-level-2',
+    title: 'CMMC Level 1 vs Level 2: Which One Does Your Shop Actually Need?',
+    metaDesc:
+      'CMMC Level 1 and Level 2 require very different things. How to tell which one applies to your shop based on your contracts, not your headcount.',
+    date: '2026-07-13',
+    readMin: 5,
+    lane: 'Manufacturing & Defense',
+    laneTo: '/manufacturing',
+    intro:
+      'Ask five shop owners which CMMC level applies to them and you will get five different guesses, most based on company size. Size has nothing to do with it. The answer is written into the contract clauses you already have on file.',
+    sections: [
+      {
+        h: 'The question that decides everything: FCI or CUI?',
+        ps: [
+          'Federal Contract Information (FCI) is the everyday paperwork of doing business with the government: purchase orders, quotes, basic correspondence about a contract that is not intended for public release. If that is the extent of what crosses your desk, you are in FCI territory.',
+          'Controlled Unclassified Information (CUI) is a different tier: drawings marked with a distribution statement, engineering specs, technical data packages, anything the government has identified as needing safeguarding beyond FCI. If a prime emails you a marked drawing or a technical data package, you are now handling CUI, whether or not anyone said so out loud.',
+        ],
+      },
+      {
+        h: 'What each level actually requires',
+        ps: [
+          'Level 1 covers the 15 basic safeguarding requirements of FAR 52.204-21. It is self-assessed annually, with an executive affirmation that the requirements are in place. There is no third-party assessor at Level 1.',
+          'Level 2 covers all 110 controls in NIST 800-171, and for most contracts it requires a third-party assessment by a C3PAO every three years, not a self-assessment. The jump from Level 1 to Level 2 is not incremental: it is a different scale of program.',
+        ],
+      },
+      {
+        h: 'How to tell which one applies to you',
+        ps: [
+          'The clauses in your contract tell you directly: look for DFARS 252.204-7012, 7019, 7020, and 7021. Their presence, and how they are flowed down, points to whether you are being asked to handle CUI or only FCI.',
+          'When the contract language is ambiguous, ask your prime in writing which category your work falls into and keep the answer on file. Do not guess, and do not assume.',
+          {text: 'Do not assume Level 1 just because you are a small shop. Company size has no bearing on the requirement: a ten-person shop machining a part from a marked drawing is handling CUI just like a thousand-person prime. A gap assessment against the full control set tells you where you actually stand before an assessor does.', links: [{phrase: 'small shop', to: '/manufacturing'}, {phrase: 'gap assessment', to: '/helm-ready'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'The level you need is written into your contracts, not your org chart. Read the clauses, confirm with your prime in writing, and size your program to what you actually handle.',
+  },
+  {
+    slug: 'cyber-insurance-claim-denied',
+    title: 'Why Cyber Insurance Claims Get Denied (and How to Keep Yours Payable)',
+    metaDesc:
+      'Cyber insurance claims get denied for reasons that trace back to the application, not the incident. The four common denial paths and how to keep your policy payable.',
+    date: '2026-07-09',
+    readMin: 5,
+    lane: 'Professional Services',
+    laneTo: '/professional-services',
+    intro:
+      'A denied cyber claim rarely comes as a surprise to the carrier. In most cases, the seeds were planted months earlier, on the application, in an answer that was optimistic rather than accurate. Here is where claims actually fall apart.',
+    sections: [
+      {
+        h: 'The four common denial paths',
+        ps: [
+          'Application misrepresentation: an answer on the questionnaire did not match reality at the time it was signed. Failure to maintain controls you attested to: MFA was on the application but quietly lapsed by the time of the breach. Late notice: the policy has a reporting window, and missing it can void coverage regardless of the merits of the claim. Excluded acts: some losses, like certain acts of war or specific fraud scenarios, are carved out of the policy entirely.',
+          'Application misrepresentation is not hypothetical. In Travelers v. International Control Services (2022), the carrier sought rescission of the policy over a misrepresentation about multi-factor authentication on the application, and the policy was rescinded by agreement. The lesson generalizes well beyond that one case: what you wrote on the form has to be true.',
+        ],
+      },
+      {
+        h: 'The attestation trap',
+        ps: [
+          'It is easy to treat the application as a snapshot: true on the day you signed it, close enough after that. Carriers do not see it that way. The answers are warranties that are expected to remain true for the entire policy year, not a one-time disclosure.',
+          'That means a control you had in place at renewal but let lapse by spring is not a minor drift. It is the exact gap between what you attested to and what was actually true when the incident happened, which is precisely where carriers look first.',
+        ],
+      },
+      {
+        h: 'Keep it payable',
+        ps: [
+          'Keep an evidence folder, not just a memory of good intentions: training logs, backup-test records, MFA screenshots, dated and organized. When a claim is filed, this folder is what turns "we believe we were compliant" into proof.',
+          {text: 'Carriers increasingly check the technical basics themselves, including whether your domain has real email authentication in place. A free scan of your own domain tells you what a carrier or an attacker would see before either one looks.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+          {text: 'Re-verify your answers at every renewal instead of rolling over last year\'s form, and remediate gaps at a fixed fee rather than letting them sit until the next application asks again.', links: [{phrase: 'remediate gaps at a fixed fee', to: '/helm-ready'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'A cyber claim is paid on documentation, not good intentions. Keep your attestations true all year, keep the evidence to prove it, and close the gaps before the next form asks about them again.',
+  },
+  {
+    slug: 'shadow-ai-at-work',
+    title: 'Shadow AI: What Employees Paste into Chatbots When Nobody Is Looking',
+    metaDesc:
+      'Employees are already pasting client data and contract terms into AI chatbots the company never approved. What shadow AI actually is, where the risk sits, and how to govern it.',
+    date: '2026-07-07',
+    readMin: 4,
+    lane: 'All industries',
+    laneTo: '/',
+    intro:
+      'Somewhere in your company right now, someone is pasting a contract, a client email, or a spreadsheet of numbers into a chatbot that IT never approved. This is not a rogue employee problem. It is happening at almost every company, because the tools genuinely help.',
+    sections: [
+      {
+        h: 'What shadow AI actually is',
+        ps: [
+          'Shadow AI is any chatbot or AI tool employees use on work data without the company having approved, reviewed, or even being aware of it. It happens because these tools are genuinely useful: drafting an email faster, summarizing a long document, cleaning up code, and employees reach for whatever gets the job done.',
+          'Blanket bans do not work here. Block the tool on the office network and employees route around it on their phones or personal laptops, often with company data still attached, just further from any oversight than before.',
+        ],
+      },
+      {
+        h: 'Where the real risk sits',
+        ps: [
+          'The obvious risk is client data and contract terms typed straight into a prompt: names, numbers, terms that were never meant to leave the building, now sitting inside a third party\'s system.',
+          'Less obvious is what happens to that data afterward. Some tools retain inputs or use them to improve their models, depending on the account type and settings, often without the employee ever checking which applies to them. Add a personal account with weak or no additional protections holding company information, and the exposure compounds.',
+          'There is a second-order risk too: AI output pasted back into a client deliverable or a decision without anyone reviewing it first. Fluent and confident is not the same as correct.',
+        ],
+      },
+      {
+        h: 'The fix: govern it, do not ban it',
+        ps: [
+          'A short acceptable-use policy that says plainly what can and cannot go into a prompt closes most of the gap on its own, because most employees want to do the right thing once they know what it is.',
+          {text: 'Pair it with an approved-tools list, so employees have a legitimate option instead of a banned one, and a periodic audit to see what is actually being used across the company, not just what was approved on paper.', links: [{phrase: 'periodic audit', to: '/helm-aware'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'Shadow AI is not going away, and banning it just pushes it further from view. Write the policy, name the approved tools, and audit periodically to keep it that way.',
+  },
+  {
+    slug: 'ai-phishing-red-flags',
+    title: 'AI Phishing: Why "Look for the Typos" Is Dead Advice',
+    metaDesc:
+      'AI-written phishing emails are fluent, personalized, and sent at scale. Why the old typo-spotting advice no longer works, and the controls that still stop the attack.',
+    date: '2026-07-03',
+    readMin: 4,
+    lane: 'All industries',
+    laneTo: '/',
+    intro:
+      'For years, security training boiled down to one line: look for the typos and the broken grammar. That advice assumed the attacker was working from a second language and a text editor. That assumption no longer holds.',
+    sections: [
+      {
+        h: 'What changed',
+        ps: [
+          'A large language model writes fluent, grammatically correct email in seconds, in whatever tone the attacker asks for. It can pull public details, a job title, a recent announcement, a vendor name, and weave them into a message that reads like it was written by someone who actually knows your business.',
+          'None of this requires the attacker to be skilled. It requires a prompt. The old tells, the awkward phrasing, the formatting that looked slightly off, are simply gone, and they were never a reliable defense to begin with, only a convenient one.',
+        ],
+      },
+      {
+        h: 'What still works',
+        ps: [
+          {text: 'Technical controls do not care how fluent the email is. Domain authentication and DMARC, paired with filtering that inspects the message itself rather than trying to judge the writer\'s intent, catch what a careful reading no longer can.', links: [{phrase: 'Domain authentication and DMARC', to: '/helm-mail'}]},
+          {text: 'Check your own domain first: a free scan shows whether your own email can currently be spoofed, which is the same weakness an attacker would look for before writing a single word.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+          {text: 'Process controls hold up just as well. A callback protocol for any new or changed payment instruction, verified by phone to a known-good number, stops the fraud regardless of how convincing the email or the voice on the other end sounds.', links: [{phrase: 'callback protocol', to: '/helm-aware'}]},
+        ],
+      },
+      {
+        h: 'Retrain the goal, not the eye',
+        ps: [
+          'Stop training people to detect perfectly. Train them to report fast instead: the moment something feels slightly off, forwarding it to security costs nothing and catches attacks no amount of careful reading would have caught.',
+          'Celebrate the reports, including the false alarms, and never punish someone for clicking. An employee who is afraid to admit a mistake sits on it, and that silence is far more costly than the click itself.',
+        ],
+      },
+    ],
+    takeaway:
+      'Fluency broke the old way of spotting phishing. It did not break email authentication or a callback protocol, which is exactly why those are the controls worth putting in place now.',
+  },
+  {
     slug: 'cmmc-deadline-checklist',
     title: 'CMMC 2.0 Deadline: A 12-Step Checklist for Manufacturers',
     metaDesc:
@@ -34,7 +224,7 @@ export const articles: Article[] = [
       {
         h: 'Steps 1 to 4: Know where you stand',
         ps: [
-          'First, confirm your level. Most subs handling Federal Contract Information need Level 1 (17 practices, self-assessed annually). If you touch Controlled Unclassified Information (drawings, specs, technical data marked CUI), you need Level 2: 110 controls from NIST 800-171 and, for most contracts, a third-party assessment.',
+          'First, confirm your level. Most subs handling Federal Contract Information need Level 1 (15 basic safeguarding requirements, self-assessed annually). If you touch Controlled Unclassified Information (drawings, specs, technical data marked CUI), you need Level 2: 110 controls from NIST 800-171 and, for most contracts, a third-party assessment.',
           'Second, locate your CUI. You cannot protect what you have not mapped. Walk every place technical data lives: file servers, email, CAD stations, the quoting inbox, that USB drive in the shop office.',
           'Third, calculate your SPRS score honestly. Primes can see it, and a fabricated score is False Claims Act exposure: the DOJ has already settled cases.',
           {text: 'Fourth, get a gap assessment against all 110 controls. Two weeks of work turns "we think we\'re fine" into a scored, prioritized list.', links: [{phrase: 'gap assessment', to: '/helm-ready'}]},
