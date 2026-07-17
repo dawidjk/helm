@@ -37,7 +37,7 @@ export default function Pricing() {
       </header>
 
       <Band variant="raised">
-        <div className="product-grid">
+        <div className="product-grid four">
           {productList.map((p, i) => (
             <div key={p.slug} className={`product-tile observe d${i + 1}`}>
               <ProductMotif kind={p.motif} />
