@@ -20,6 +20,44 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    slug: 'm365-security-baseline',
+    title: 'The Microsoft 365 Security Baseline You Can Set This Week',
+    metaDesc:
+      'A practical Microsoft 365 security checklist for small businesses: MFA everywhere, no legacy authentication, separate admin accounts, and the forwarding rules attackers rely on after a breach.',
+    date: '2026-07-16',
+    readMin: 5,
+    lane: 'All industries',
+    laneTo: '/',
+    intro:
+      'You do not need a security budget to fix the biggest gaps in Microsoft 365. Most of what matters is already included in the license you are paying for, sitting in a settings menu nobody has opened. Here is what to turn on this week, in order.',
+    sections: [
+      {
+        h: 'Lock the front door first',
+        ps: [
+          'Multi-factor authentication is the single highest-value setting in your tenant, and it is often still off for at least a few accounts: the owner\'s own mailbox, a shared inbox, an old vendor login nobody remembers creating. If you have not rolled out a full MFA policy, turning on security defaults gets every account covered in one step rather than none.',
+          {text: 'Legacy authentication protocols let an attacker sign in with just a stolen password, bypassing MFA entirely, because those older protocols were never built to ask for a second factor. Disabling legacy auth closes a door most tenants leave open by default, and it pairs directly with the email protections behind Helm Mail.', links: [{phrase: 'Helm Mail', to: '/helm-mail'}]},
+          'Separate your admin accounts from the mailbox someone checks every day. An account with global admin rights should not also be the account that opens attachments and clicks links, because compromising one compromises both.',
+        ],
+      },
+      {
+        h: 'Close what attackers do after they get in',
+        ps: [
+          'Turn on external-sender tagging so every message from outside the company carries a visible warning. It is a small banner, and it is one of the few controls that helps on the exact kind of email that slips past filtering: a message from a real but unfamiliar outside address.',
+          'Review mail-forwarding rules on a schedule, not just after something goes wrong. A common move after a mailbox compromise is a silent auto-forward rule that sends every future message to an outside address, quietly, with no further sign-in needed. Most business owners have never checked whether one exists in their own tenant.',
+        ],
+      },
+      {
+        h: 'Make your own domain hard to fake',
+        ps: [
+          'SPF, DKIM, and DMARC are DNS records, not Microsoft settings, but they belong on the same checklist because they determine whether someone can send email that looks like it came from you. Without them in place, your own domain can be used against your customers and vendors, not just against you.',
+          {text: 'A free scan of your domain checks all three in under a minute and tells you, in plain English, what is missing.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'None of this requires new software or a big budget: MFA everywhere, legacy auth disabled, separated admin accounts, external tagging, a forwarding-rule review, and DNS records that are already yours to set. Do it this week instead of after the incident that makes you wish you had.',
+  },
+  {
     slug: 'sprs-score-explained',
     title: 'SPRS Score Explained: The Number Your Primes Can Already See',
     metaDesc:
@@ -56,6 +94,46 @@ export const articles: Article[] = [
     ],
     takeaway:
       'Your SPRS score is not a form you fill out once. Score it honestly today, raise it deliberately with the controls that matter most, and repost so the number your primes see is one you can stand behind.',
+  },
+  {
+    slug: 'password-managers-small-teams',
+    title: 'Password Managers for Small Teams: What a Vault Adds Over Browser-Saved Passwords',
+    metaDesc:
+      'Why password reuse is the most common small-team security failure, what a shared password vault adds beyond browser-saved logins, and the order to roll one out across your team.',
+    date: '2026-07-14',
+    readMin: 4,
+    lane: 'All industries',
+    laneTo: '/',
+    intro:
+      'Ask most small business owners where the shared logins live and the honest answer is a spreadsheet, a sticky note on a monitor, or a browser quietly remembering everything. That works fine until someone leaves the company or a password from an unrelated website leaks. Here is what an actual password vault fixes, and the order to introduce one in.',
+    sections: [
+      {
+        h: 'The failure mode behind most small-team compromises',
+        ps: [
+          'Password reuse across services is the single most common way a small team\'s accounts get compromised. Not a sophisticated attack, just the same password used on the company email, a vendor portal, and a personal account somewhere else.',
+          'The mechanism is called credential stuffing. Attackers take lists of usernames and passwords leaked from breaches that have nothing to do with your business, then automatically try those same combinations against email, banking, and admin logins everywhere else. A breach at a site you have never heard of can unlock an account you actually care about.',
+        ],
+      },
+      {
+        h: 'What a vault adds that browser-saved passwords do not',
+        ps: [
+          'Saving passwords in the browser beats reusing the same one everywhere, but it stops at the individual. It does not solve the problem every small team has: shared logins for the utility portal, the company social accounts, and an admin console that more than one person needs into.',
+          'Without a shared vault, those logins tend to live in a spreadsheet or a sticky note, and whoever set them up is often the only one who remembers where. A team vault adds access control over who can see which credential, instant revocation the day someone leaves instead of a slow password-reset scramble, generated unique passwords instead of reused ones, and flagging of passwords that are weak or already reused elsewhere.',
+          'That revocation piece matters more than it sounds. Without a vault, a departed employee routinely keeps working access to shared accounts long after their last day, simply because nobody remembered every login they knew.',
+        ],
+      },
+      {
+        h: 'Master password, MFA, and the order to roll it out',
+        ps: [
+          'The vault is only as strong as its master password, so make it a long passphrase, several unrelated words strung together, rather than a short password with a symbol swapped in. Pair that master password with MFA on the vault itself.',
+          'A vault does not replace MFA on the underlying accounts. Turn MFA on for email, banking, and admin logins the same as you would without a vault; the vault manages the password, not the second factor.',
+          {text: 'Roll it out in order rather than all at once: admin and financial accounts first, since those carry the most risk, then the shared credentials living in spreadsheets and sticky notes, then everyone else\'s individual logins. Pairing the rollout with a short explanation of how credential stuffing actually works, the kind of thing covered in security awareness training, cuts down on people quietly going back to old habits.', links: [{phrase: 'security awareness training', to: '/helm-aware'}]},
+          {text: 'Credential hygiene is one half of the picture. The other half is whether your own domain can be spoofed in the first place, and a free scan checks that in under a minute.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'Reuse is the failure mode, credential stuffing is how it gets exploited, and a shared vault fixes both the individual and the team problem at once. Roll it out to admin and financial accounts first, then the shared logins, then everyone else.',
   },
   {
     slug: 'cmmc-level-1-vs-level-2',
@@ -96,6 +174,44 @@ export const articles: Article[] = [
       'The level you need is written into your contracts, not your org chart. Read the clauses, confirm with your prime in writing, and size your program to what you actually handle.',
   },
   {
+    slug: 'what-a-soc-actually-does',
+    title: 'What a SOC Actually Does (and Why an Alert Is Not the Same as a Response)',
+    metaDesc:
+      'What a security operations center actually does around the clock, why EDR software alone still needs a human behind it, and the questions to ask before buying a managed SOC subscription.',
+    date: '2026-07-11',
+    readMin: 5,
+    lane: 'All industries',
+    laneTo: '/',
+    intro:
+      'Every vendor pitch mentions a SOC, and few explain what one actually does all day. A security operations center is a team that watches security alerts around the clock, decides which ones matter, and steps in when something real is happening. Here is what that looks like in practice, and why most small businesses cannot build one themselves.',
+    sections: [
+      {
+        h: 'An alert is not the same as a response',
+        ps: [
+          'EDR software on a laptop or server is genuinely good at its job: it detects suspicious activity and raises an alert. What it does not do on its own is decide whether that alert is a false positive or an active attacker, and take action either way. That step still needs a person, and it needs to happen whether the alert fires in the middle of the afternoon or in the middle of the night.',
+          'A SOC is the team that does that watching, triaging, and containing. Left alone, an EDR alert just sits in a dashboard until someone with the right access opens it, reads it, and acts.',
+        ],
+      },
+      {
+        h: 'Why continuous coverage is hard to build yourself',
+        ps: [
+          'Watching alerts around the clock is not a part-time job for one person. It takes multiple analysts covering different shifts so someone is always awake and paying attention, which is a staffing commitment that is simply out of reach for most small businesses on their own.',
+          'Attackers know this, and they plan around it. Nights, weekends, and holidays are not random timing, they are deliberately chosen because fewer people are watching. Attackers also commonly sit quietly inside a network for a while before doing anything visible, which is exactly the kind of activity that only shows up if someone is actually looking.',
+        ],
+      },
+      {
+        h: 'What a managed SOC actually buys you',
+        ps: [
+          'A managed SOC, or managed detection and response subscription, shares one SOC team across many businesses at once, which is how it delivers around-the-clock coverage at a fraction of what staffing your own would cost.',
+          {text: 'If continuous coverage sounds like something your business needs but could never staff on its own, that is exactly the kind of thing worth a direct conversation about what 24/7 monitoring would actually look like for you.', links: [{phrase: '24/7 monitoring', to: '/contact'}]},
+          {text: 'Before signing with any provider, ask three questions: who actually investigates an alert, a real analyst or an algorithm; will they take containment action themselves, like isolating an infected machine, or only notify you and leave the response to you; and what is the escalation path when something real is found, including how fast you actually hear about it. A free scan of your own domain is a reasonable first look at where you stand before that conversation even starts.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'A SOC is the difference between an alert sitting unread and someone actually acting on it, day or night. Staffing that yourself is rarely realistic, which is what a shared managed SOC is built to solve, as long as you ask who is actually behind it.',
+  },
+  {
     slug: 'cyber-insurance-claim-denied',
     title: 'Why Cyber Insurance Claims Get Denied (and How to Keep Yours Payable)',
     metaDesc:
@@ -134,6 +250,43 @@ export const articles: Article[] = [
       'A cyber claim is paid on documentation, not good intentions. Keep your attestations true all year, keep the evidence to prove it, and close the gaps before the next form asks about them again.',
   },
   {
+    slug: 'vendor-email-compromise-contractors',
+    title: 'Vendor Email Compromise: When Your Supplier\'s Invoice Is Actually a Scam',
+    metaDesc:
+      'How fraudsters compromise or spoof a supplier or general contractor to redirect payment on a real invoice, and the callback and DMARC controls that stop it before the money moves.',
+    date: '2026-07-08',
+    readMin: 5,
+    lane: 'Contractors & Trades',
+    laneTo: '/contractors',
+    intro:
+      'The invoice looks completely normal, because in every way that matters, it is normal: the right job number, the right amount, the right letterhead. The only thing wrong with it is the bank account, and by the time anyone notices, the job is finished and the money is gone.',
+    sections: [
+      {
+        h: 'How the scam actually runs',
+        ps: [
+          {text: 'A fraudster compromises or convincingly spoofs the email of a supplier or a general contractor somewhere in your job, then waits for the moment an invoice or a payment is naturally due. Mid-job is the ideal window: enough trust has built up between the parties that an "updated banking details" email does not raise an eyebrow.', links: [{phrase: 'general contractor', to: '/contractors'}]},
+          'The email itself usually is not sloppy. It references the actual job, the actual amount owed, sometimes an actual person\'s name pulled from a real thread the attacker has been reading. The only change is a routing number and an account number, and that change is the entire scam.',
+        ],
+      },
+      {
+        h: 'The control that stops it: callback, no exceptions',
+        ps: [
+          'Any new or changed banking instruction, on any invoice, from any supplier or GC, gets verified with a phone call to a number you already had on file, never a number provided in the email making the change. That single rule stops nearly every version of this scam, because the fraudster cannot answer a call to a real supplier\'s real office.',
+          'The rule has to survive urgency to be worth having. A scam that arrives with a tight deadline, a threat to hold up the job, or pressure from someone posing as a decision-maker is testing whether the rule bends. Write it down as a rule with no exceptions, not a habit, so nobody on your crew has to make that judgment call alone under pressure.',
+        ],
+      },
+      {
+        h: 'Protect your own name too',
+        ps: [
+          {text: 'The same scam runs in the other direction: someone spoofs your company\'s domain and sends a fake invoice to one of your own customers. DMARC on your domain, set up correctly, is what stops your business name from being used to defraud the people who trust you.', links: [{phrase: 'DMARC on your domain', to: '/helm-mail'}]},
+          {text: 'Lookalike domains are the other half of this: a supplier name spelled with a swapped letter or a different ending, close enough to pass a fast read on a phone screen. Checking your own domain is the first step; a free scan shows whether your setup currently makes spoofing easy.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'A real job number and a real amount do not make an invoice real. Verify any banking change by phone to a known number, keep the rule exception-free, and lock down your own domain so your name cannot be used against your own customers.',
+  },
+  {
     slug: 'shadow-ai-at-work',
     title: 'Shadow AI: What Employees Paste into Chatbots When Nobody Is Looking',
     metaDesc:
@@ -170,6 +323,44 @@ export const articles: Article[] = [
     ],
     takeaway:
       'Shadow AI is not going away, and banning it just pushes it further from view. Write the policy, name the approved tools, and audit periodically to keep it that way.',
+  },
+  {
+    slug: 'hipaa-email-rules-small-practices',
+    title: 'HIPAA Email Rules for Small Practices: What "Addressable" Actually Means',
+    metaDesc:
+      'What the HIPAA Security Rule actually requires for email containing PHI, why an addressable specification is not the same as optional, and the baseline that keeps a small practice covered.',
+    date: '2026-07-05',
+    readMin: 5,
+    lane: 'Professional Services',
+    laneTo: '/professional-services',
+    intro:
+      'Most small practices know HIPAA applies to email somehow and stop there. The actual rule is more specific than that, and more workable than the horror stories suggest. Here is what the Security Rule requires for electronic PHI in transit, and the baseline that gets a small practice covered without turning every message into a project.',
+    sections: [
+      {
+        h: 'What the Security Rule requires, and what "addressable" means',
+        ps: [
+          'The HIPAA Security Rule requires safeguards for electronic PHI while it is in transit, meaning while it is moving between you and someone else, not just while it sits on a server.',
+          'Encryption in transit is listed as an "addressable" specification, and that word gets misread constantly. Addressable does not mean optional. It means you either implement it, or you document a specific, reasonable alternative and the reasoning behind choosing it. Skipping it with no documentation is not a valid third option.',
+        ],
+      },
+      {
+        h: 'The business associate agreement you cannot skip',
+        ps: [
+          'Any email provider that stores or transmits ePHI on your behalf needs a business associate agreement, a BAA, in place before that PHI ever touches their system.',
+          {text: 'Free consumer email accounts do not come with a BAA available at all. Google Workspace and Microsoft 365 business plans do, which is one more reason a practice should be running real business email under Helm Mail rather than a free personal account for anything touching patient information.', links: [{phrase: 'business email under Helm Mail', to: '/helm-mail'}]},
+        ],
+      },
+      {
+        h: 'The patient exception, and the baseline that covers you',
+        ps: [
+          'A patient can ask to receive their own information by unencrypted email, and the practice may honor that request after warning them plainly of the risk. That exception applies to the patient\'s own records going to the patient, not to PHI moving between staff, referring providers, or billing.',
+          'An email with PHI sent to the wrong recipient can be a reportable breach on its own, regardless of intent, which is exactly why the safeguards matter before the moment someone fat-fingers an address.',
+          {text: 'The practical baseline is not complicated: business email under a signed BAA, MFA on every mailbox, encryption for any message that actually contains PHI, staff training on what can and cannot go in an email, and no PHI ever sent through a personal account. If you are not sure where your practice actually stands against that list, a HIPAA gap assessment for your professional services practice is the fastest way to find out.', links: [{phrase: 'HIPAA gap assessment', to: '/helm-ready'}, {phrase: 'professional services practice', to: '/professional-services'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'Addressable means implement it or document why you did not, not skip it. Get business email under a signed BAA, MFA on every mailbox, encryption on PHI messages, trained staff, and nothing patient-related through a personal account.',
   },
   {
     slug: 'ai-phishing-red-flags',
@@ -249,6 +440,82 @@ export const articles: Article[] = [
       'The deadline is fixed; the assessor backlog is not in your control. What is in your control is starting the gap assessment now: it is two weeks of work that determines whether the next twelve months are orderly or a scramble.',
   },
   {
+    slug: 'job-site-devices-public-wifi',
+    title: 'Job Site Devices and Public Wi-Fi: What Actually Puts a Contractor at Risk',
+    metaDesc:
+      'Why public Wi-Fi is not the real risk for contractors working out of a truck or a job site, what is, and the basic mobile device settings that stop a lost phone from becoming a full account takeover.',
+    date: '2026-06-30',
+    readMin: 5,
+    lane: 'Contractors & Trades',
+    laneTo: '/contractors',
+    intro:
+      'Every contractor has heard the warning about coffee shop Wi-Fi and logged into email there anyway. The good news is that warning is mostly outdated. The bad news is what actually puts a job site crew at risk is a different problem entirely, and it is sitting in everyone\'s pocket.',
+    sections: [
+      {
+        h: 'The Wi-Fi myth, and what replaced it',
+        ps: [
+          'With HTTPS now standard on nearly every site you actually use, someone snooping on coffee shop or job site Wi-Fi is a much smaller risk than the old folklore suggests. That specific fear is mostly out of date.',
+          'The real Wi-Fi risks are fake hotspots set up to look like the real network, and captive-portal lookalike pages designed to harvest a login the moment someone types it in. A phone\'s own hotspot is safer than connecting to any public network at all, and it is usually just as easy.',
+        ],
+      },
+      {
+        h: 'The device itself is the real exposure',
+        ps: [
+          'A lost or stolen phone or tablet that is logged into an email account with no screen lock is not a minor inconvenience, it is a full account takeover the moment it leaves someone\'s hands.',
+          {text: 'Microsoft 365 and Google Workspace both include basic mobile device management as part of the plans your business already uses through Helm Mail: requiring a screen lock, encrypting the device, and remote-wiping a lost or stolen one before anyone gets into it.', links: [{phrase: 'plans your business already uses through Helm Mail', to: '/helm-mail'}]},
+          {text: 'A shared job-site tablet signed straight into the owner\'s mailbox is a standing risk for any contractor, because everyone who touches that tablet effectively has the owner\'s access. Give it its own limited account instead of the owner\'s login.', links: [{phrase: 'any contractor', to: '/contractors'}]},
+        ],
+      },
+      {
+        h: 'One rule that has to survive the field',
+        ps: [
+          'Never approve a banking or payment-detail change from the field, no matter how the request arrives or how urgent it sounds. Call back a known number from the office first, every time, before anything changes.',
+          {text: 'None of this replaces basic email security either. A free scan shows whether your domain\'s own authentication is already exposed, which is worth knowing before a crew member is troubleshooting it from a truck.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'Public Wi-Fi is not the threat it used to be; fake hotspots and an unlocked device are. Turn on basic mobile management, give a shared tablet its own limited account, and never approve a payment change without a callback to a known number.',
+  },
+  {
+    slug: 'backup-testing-insurers',
+    title: 'Backup Testing: What Cyber Insurers Actually Want to See',
+    metaDesc:
+      'Cyber insurance questionnaires now ask about offline and immutable backups, encryption, and tested restores, not just whether you back up. The 3-2-1 rule and how to document restore tests.',
+    date: '2026-06-27',
+    readMin: 5,
+    lane: 'Professional Services',
+    laneTo: '/professional-services',
+    intro:
+      'Every cyber insurance questionnaire asks about your backups, and almost every business answers yes without reading the follow-up questions closely. The follow-up questions are where the real answer lives, and they are not asking whether you back up. They are asking whether the backup would actually work.',
+    sections: [
+      {
+        h: 'What the questionnaire is really asking',
+        ps: [
+          {text: 'Modern cyber insurance applications ask three separate questions where an older one asked one: do you keep an offline or immutable copy that ransomware cannot reach and encrypt along with everything else, is that copy encrypted, and have you tested restoring from it recently. "We back up nightly" answers none of those three on its own.', links: [{phrase: 'cyber insurance', to: '/professional-services'}]},
+          'The 3-2-1 rule is the shorthand carriers are checking for even when they do not spell it out: three copies of your data, on two different types of media, with one copy offline or otherwise out of reach of whatever compromised the network. A single backup sitting on the same network as everything else fails this on the first question.',
+        ],
+      },
+      {
+        h: 'A backup you have never restored is a hope, not a control',
+        ps: [
+          'Backups fail quietly. A job that has been "completing successfully" for a year can still be backing up a corrupted database, missing a folder that got excluded by accident, or writing to a drive that filled up months ago and has been silently failing since. You do not find out until the day you need it.',
+          'A restore test answers the only question that matters: if your network went down right now, could you actually get the data back, in a usable form, in a reasonable amount of time. Everything else on the questionnaire is a proxy for that one fact.',
+        ],
+      },
+      {
+        h: 'Document it, because attestations are warranties',
+        ps: [
+          'Insurers treat your questionnaire answers as warranties that stay true for the whole policy year, not a one-time snapshot. A backup process that was solid at renewal and quietly degraded by the time of a claim is exactly the gap carriers look for when deciding whether to pay.',
+          {text: 'Document quarterly restore tests: date, what was restored, how long it took, who verified it. That log is what turns "we believe our backups work" into proof at claim time. It is worth checking your email authentication with the same discipline; a free scan shows what a carrier would find if it looked today.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+          {text: 'If quarterly restore tests are not happening yet, building the schedule and the documentation around them is a fixed, contained piece of work, not an open-ended project.', links: [{phrase: 'fixed, contained piece of work', to: '/helm-ready'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'Insurers do not want to hear that you back up. They want to see the 3-2-1 pattern, offline or immutable copies, and a dated log of restores that actually worked. Build that log before the questionnaire asks for it, not after a claim depends on it.',
+  },
+  {
     slug: 'cyber-insurance-questionnaire',
     title: 'How to Answer a Cyber Insurance Questionnaire (Without Voiding Your Coverage)',
     metaDesc:
@@ -285,6 +552,44 @@ export const articles: Article[] = [
       'Treat the questionnaire as a legal document and a to-do list at once: answer truthfully, remediate the noes, and document everything. If you want the noes fixed for you at a fixed fee, that is precisely what Helm Ready does.',
   },
   {
+    slug: 'ssp-poam-explained',
+    title: 'SSP and POA&M Explained: The Two Documents Your CMMC Assessor Reads First',
+    metaDesc:
+      'What a System Security Plan and a Plan of Action and Milestones actually are under NIST 800-171, and when a POA&M can still get you conditionally certified under CMMC.',
+    date: '2026-06-20',
+    readMin: 5,
+    lane: 'Manufacturing & Defense',
+    laneTo: '/manufacturing',
+    intro:
+      'Two documents decide how your CMMC assessment goes before the assessor ever walks your floor: the System Security Plan and the Plan of Action and Milestones. Most shop owners have heard the acronyms, and few have seen either one explained without the jargon.',
+    sections: [
+      {
+        h: 'What each document actually is',
+        ps: [
+          'The System Security Plan, required under NIST 800-171 control 3.12.4, describes how each of the 110 controls is actually met in your environment: which policy, which setting, which tool, which process. It is not a statement that you comply; it is the specific explanation of how you comply, control by control.',
+          'The Plan of Action and Milestones, control 3.12.2, is the honest companion document: it tracks the controls you have not fully met yet, who owns closing each gap, and the date it is due. A POA&M with no owner and no date is not really a plan.',
+          {text: 'Together they are the paper trail behind your gap assessment: the SSP shows where you stand today, and the POA&M shows the work still ahead, scored against the same 110 controls.', links: [{phrase: 'gap assessment', to: '/helm-ready'}]},
+        ],
+      },
+      {
+        h: 'Why assessors read the SSP first',
+        ps: [
+          'An assessor forms a first impression of your shop from the SSP, before they interview anyone or look at a single screen. A thin, generic template copied from somewhere else reads as exactly that, and it sets the tone for the rest of the assessment.',
+          'A specific SSP, one that names your actual tools, your actual access controls, your actual backup process, tells the assessor you know your own environment. That is worth more going in than any single control being perfect.',
+        ],
+      },
+      {
+        h: 'When a POA&M can still get you certified',
+        ps: [
+          'Under the CMMC final rule, Level 2 allows conditional certification with an open POA&M, but only within specific limits. Your assessment score has to reach at least 80 percent of the maximum, a score of 88 out of 110, and the open items have to fall within a defined set of lower-weight controls, not the ones that carry the most points.',
+          {text: 'Even then, the clock is running: open POA&M items have to be closed out within 180 days. It is a bridge to full certification for your manufacturing operation, not a permanent way to avoid finishing the work.', links: [{phrase: 'manufacturing operation', to: '/manufacturing'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'The SSP tells the assessor how you meet each control, and the POA&M tells them what you are still fixing and when. Get both specific and current before the assessment, not written the week of it.',
+  },
+  {
     slug: 'wire-fraud-prevention-law-firms',
     title: 'Wire Fraud Prevention for Law Firms: The Callback Protocol',
     metaDesc:
@@ -315,6 +620,43 @@ export const articles: Article[] = [
       'Email filtering keeps most attacks from arriving; the callback protocol makes the ones that arrive harmless. Put both in place and wire fraud stops being an existential risk. We deploy both: filtering via Helm Mail, protocol and drills via Helm Aware.',
   },
   {
+    slug: 'pen-test-vs-vulnerability-scan',
+    title: 'Penetration Test vs Vulnerability Scan: What You Are Actually Paying For',
+    metaDesc:
+      'A vulnerability scan and a penetration test are not the same service. What each one actually delivers, how to spot a rebranded scan sold at pen test prices, and which one most small businesses need first.',
+    date: '2026-06-13',
+    readMin: 5,
+    lane: 'All industries',
+    laneTo: '/',
+    intro:
+      'Two very different services get sold under overlapping language, and the price tag alone will not tell you which one you are buying. Here is the actual difference between a vulnerability scan and a penetration test, and which one is worth paying for first.',
+    sections: [
+      {
+        h: 'Two different services, often sold under one name',
+        ps: [
+          'A vulnerability scan is automated. Software enumerates known weaknesses across your systems, it is inexpensive to run, and it belongs on a schedule rather than as a one-time event.',
+          'A penetration test is people, not software, attempting to actually exploit and chain those weaknesses together the way a real attacker would. It is scoped to specific systems, it takes days rather than minutes, and it is priced accordingly.',
+        ],
+      },
+      {
+        h: 'How to spot a scan wearing a pen test\'s price tag',
+        ps: [
+          'A "penetration test" quoted at scan prices is usually a rebranded automated scan with a different cover page. Before buying, ask for the methodology being used, who actually performs the testing, and a sample report from prior work.',
+          'The deliverables tell the real story even when the sales pitch does not: a scan produces a raw list exported straight from the software, while a real pen test produces a narrative showing what an attacker could actually reach and a prioritized list of fixes.',
+        ],
+      },
+      {
+        h: 'Which one to buy first',
+        ps: [
+          'Most small businesses get more value out of fixing what a scan already shows, MFA gaps, missing patches, weak email authentication, before paying for a scoped penetration test on top of it. Insurers and compliance frameworks frequently only require a scan in the first place.',
+          {text: 'A free scan is exactly this kind of automated check, run against your own domain, at no cost. If you want help closing what it finds before spending money on anything scoped as a pen test, that prioritized cleanup work is what a readiness engagement is built for.', links: [{phrase: 'free scan', to: '/free-scan'}, {phrase: 'readiness engagement', to: '/helm-ready'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'A scan is automated and cheap; a pen test is human, scoped, and priced for the days it takes. Fix what the scan already shows you before paying for anything scoped as a pen test, and ask for methodology, tester identity, and a sample report before you buy one.',
+  },
+  {
     slug: 'what-is-dmarc',
     title: 'What Is DMARC? A Plain-English Guide for Business Owners',
     metaDesc:
@@ -343,6 +685,46 @@ export const articles: Article[] = [
     ],
     takeaway:
       'Check your domain today: our free scan reads your SPF, DKIM, and DMARC records and tells you in plain English whether a criminal can currently impersonate your company. It runs instantly and costs nothing.',
+  },
+  {
+    slug: 'incident-response-plan-small-business',
+    title: 'The First Hour After Ransomware or a Wire Fraud Email: A Small Business Incident Response Plan',
+    metaDesc:
+      'What to do, who to call, and what not to touch in the first hour after ransomware or a business email compromise, plus why a one-page incident response plan beats a binder nobody reads.',
+    date: '2026-06-06',
+    readMin: 5,
+    lane: 'All industries',
+    laneTo: '/',
+    intro:
+      'Most small businesses find out they do not have an incident response plan the same way they would find out they do have one: in the first hour of an actual incident. Ransomware and business email compromise both move fast, and the decisions made in that first hour, sometimes made by whoever happens to be at their desk, shape everything that follows.',
+    sections: [
+      {
+        h: 'What not to touch',
+        ps: [
+          'Do not power off an encrypted machine or wipe and reimage it before anyone has looked at it. It feels like the responsible move, and it can destroy the evidence a forensic investigator needs to figure out how the attacker got in and whether they are still inside.',
+          'Do not pay a ransom demand, negotiate with an attacker, or promise anything on your own. That decision, if it is even on the table, belongs with counsel and your carrier, not with whoever answered the first call.',
+          'Do not send a company-wide email about the incident from the same system that might be compromised. If a mailbox is involved, assume the attacker may still be reading it.',
+        ],
+      },
+      {
+        h: 'Who to call, and in what order',
+        ps: [
+          'Call your cyber insurance carrier before you call your own IT vendor. This is the step that trips up businesses that otherwise did everything right. Carriers maintain a panel of approved forensic and breach-response vendors and breach counsel, and going outside that panel, even with good intentions, can jeopardize coverage for the exact costs you were counting on the policy to pay.',
+          'Your carrier can typically be reached by phone at any hour, and the number should already be on your one-page plan, not searched for during the incident. Once they are looped in, they will direct you to the panel vendor for forensics and, if needed, breach counsel to manage notification obligations.',
+          'Only after that call should you loop in your everyday IT vendor, and even then, in a supporting role directed by the carrier\'s panel, not leading the response. A good IT vendor knows this and will not be offended by it.',
+        ],
+      },
+      {
+        h: 'Why a one-page plan beats a binder',
+        ps: [
+          'A fifty-page incident response binder is a document nobody reads twice, usually written once for an insurance application and never opened again. In an actual incident, nobody has time to find the right page.',
+          {text: 'A one-page plan works because it fits what an incident actually needs in the first hour: the carrier phone number, the claim reporting deadline, who has authority to make decisions, and the one instruction that matters most, do not touch anything until the first call is made. Building that page, and the fuller plan behind it, is exactly the kind of gap a readiness workshop closes before you need it.', links: [{phrase: 'readiness workshop', to: '/helm-ready'}]},
+          {text: 'The same first hour goes faster if you already know your domain\'s exposure instead of learning it live: a free scan run ahead of time tells you whether email spoofing is even possible in the first place, which shapes how fast you can rule causes in or out.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'The first hour is not the time to improvise. Call your carrier before your IT vendor, touch nothing until you have, and keep the whole plan to one page so someone can actually follow it under pressure.',
   },
   {
     slug: 'deepfake-ceo-fraud',
