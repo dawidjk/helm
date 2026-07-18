@@ -15,6 +15,9 @@ export default function ArticlePage() {
         title={`${a.title} | Helm`}
         desc={a.metaDesc}
         path={`/resources/${a.slug}`}
+        ogType="article"
+        publishedTime={a.date}
+        modifiedTime={a.date}
         jsonLd={{
           '@context': 'https://schema.org',
           '@graph': [
@@ -23,8 +26,17 @@ export default function ArticlePage() {
               headline: a.title,
               description: a.metaDesc,
               datePublished: a.date,
-              author: {'@type': 'Organization', name: 'Helm'},
-              publisher: {'@type': 'Organization', name: 'HelmSecure LLC', url: 'https://helmsecured.com'},
+              dateModified: a.date,
+              inLanguage: 'en-US',
+              mainEntityOfPage: {'@type': 'WebPage', '@id': `https://helmsecured.com/resources/${a.slug}`},
+              image: 'https://helmsecured.com/og.png',
+              author: {'@type': 'Organization', name: 'Helm', url: 'https://helmsecured.com'},
+              publisher: {
+                '@type': 'Organization',
+                name: 'HelmSecure LLC',
+                url: 'https://helmsecured.com',
+                logo: {'@type': 'ImageObject', url: 'https://helmsecured.com/og.png'},
+              },
             },
             {
               '@type': 'BreadcrumbList',

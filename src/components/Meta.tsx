@@ -8,12 +8,18 @@ export default function Meta({
   path,
   jsonLd,
   ogImage = '/og.png',
+  ogType = 'website',
+  publishedTime,
+  modifiedTime,
 }: {
   title: string;
   desc: string;
   path: string;
   jsonLd?: object;
   ogImage?: string;
+  ogType?: 'website' | 'article';
+  publishedTime?: string;
+  modifiedTime?: string;
 }) {
   const url = `${SITE}${path === '/' ? '' : path}`;
   const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${SITE}${ogImage}`;
@@ -26,8 +32,10 @@ export default function Meta({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={desc} />
       <meta property="og:url" content={url} />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content="Helm" />
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       <meta property="og:image" content={absoluteOgImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />

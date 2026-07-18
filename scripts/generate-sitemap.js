@@ -29,32 +29,41 @@ function getPriority(route) {
   return '0.5';
 }
 
+const currentDate = new Date().toISOString().split('T')[0];
+
 walkDir(DIST_DIR, (filePath) => {
   if (filePath.endsWith('.html')) {
     let relativePath = path.relative(DIST_DIR, filePath);
     relativePath = relativePath.replace(/\\/g, '/');
-    
+
     // Convert e.g., 'pricing/index.html' to 'pricing'
     // Convert 'index.html' to ''
     let route = relativePath.replace(/(^|\/)index\.html$/, '');
     if (route.endsWith('/')) {
         route = route.slice(0, -1);
     }
-    
+
     if (relativePath === '404.html') return;
-    
+
+    // Article pages carry a real publication date in their JSON-LD; use it as
+    // lastmod instead of the build date so the signal stays trustworthy.
+    let lastmod = currentDate;
+    if (route.startsWith('resources/')) {
+      const html = fs.readFileSync(filePath, 'utf8');
+      const m = html.match(/"datePublished":"(\d{4}-\d{2}-\d{2})"/);
+      if (m) lastmod = m[1];
+    }
+
     const url = `${SITE_URL}${route === '' ? '/' : '/' + route}`;
-    urls.push({ url, route });
+    urls.push({ url, route, lastmod });
   }
 });
-
-const currentDate = new Date().toISOString().split('T')[0];
 
 urls.sort((a, b) => parseFloat(getPriority(b.route)) - parseFloat(getPriority(a.route)));
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map(({url, route}) => `  <url>\n    <loc>${url}</loc>\n    <lastmod>${currentDate}</lastmod>\n    <priority>${getPriority(route)}</priority>\n  </url>`).join('\n')}
+${urls.map(({url, route, lastmod}) => `  <url>\n    <loc>${url}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <priority>${getPriority(route)}</priority>\n  </url>`).join('\n')}
 </urlset>`;
 
 fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), sitemap);
