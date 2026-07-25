@@ -9,7 +9,7 @@ export default function Resources() {
     <>
       <Meta
         title="Resources: Plain-English Security Guides | Helm"
-        desc="Plain-English guides on CMMC deadlines, cyber insurance questionnaires, wire fraud prevention, DMARC, and deepfake scams, written for business owners, not IT departments."
+        desc="Plain-English guides on CMMC requirements, cyber insurance questionnaires, wire fraud prevention, DMARC, and deepfake scams, written for business owners, not IT departments."
         path="/resources"
       />
       <header className="hero lane">

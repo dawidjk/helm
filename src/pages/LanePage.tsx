@@ -1,4 +1,3 @@
-import {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {Button} from '@astryxdesign/core/Button';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
@@ -24,7 +23,7 @@ export type Lane = {
    * assessment) where an automatic domain scan is the wrong response.
    */
   ctaMode?: 'scan' | 'book';
-  deadline?: {iso: string; label: string};
+  statusChip?: string;
   pains: {title: string; body: string}[];
   planTitle: string;
   planSub: string;
@@ -33,24 +32,7 @@ export type Lane = {
   cta: {title: string; sub: string; label: string};
 };
 
-function formatDeadlineDate(iso: string): string {
-  const [year, month, day] = iso.split('-').map(Number);
-  const date = new Date(Date.UTC(year, month - 1, day));
-  return date.toLocaleDateString('en-US', {month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC'});
-}
-
-function DeadlineChip({deadline}: {deadline: {iso: string; label: string}}) {
-  const [daysLeft, setDaysLeft] = useState<number | null>(null);
-
-  useEffect(() => {
-    const target = new Date(`${deadline.iso}T00:00:00Z`).getTime();
-    const diffDays = Math.ceil((target - Date.now()) / (1000 * 60 * 60 * 24));
-    setDaysLeft(diffDays);
-  }, [deadline.iso]);
-
-  const fallbackText = `${deadline.label}: ${formatDeadlineDate(deadline.iso)}`;
-  const text = daysLeft !== null && daysLeft > 0 ? `${deadline.label} in ${daysLeft} days` : fallbackText;
-
+function StatusChip({text}: {text: string}) {
   return (
     <div className="deadline-chip-row reveal">
       <span className="deadline-chip">{text}</span>
@@ -77,7 +59,7 @@ export default function LanePage({lane}: {lane: Lane}) {
       <header className="hero lane">
         <HeroBackdrop kind={lane.backdrop} />
         <div className="wrap">
-          {lane.deadline && <DeadlineChip deadline={lane.deadline} />}
+          {lane.statusChip && <StatusChip text={lane.statusChip} />}
           <div className="eyebrow reveal">{lane.eyebrow}</div>
           <h1 className="reveal d1" style={{maxWidth: '20ch'}}>
             {lane.headline}

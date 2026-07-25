@@ -6,21 +6,21 @@ export const manufacturing: Lane = {
   reportDomain: 'precision-mfg.com',
   metaTitle: 'CMMC Compliance for NJ Manufacturers & Defense Suppliers | Helm',
   metaDesc:
-    'CMMC Level 1 & 2 gap assessments for New Jersey manufacturers and defense subcontractors. Fixed fee, assessment-ready in weeks, ahead of the Nov 10, 2026 enforcement deadline.',
+    'CMMC Level 1 and Level 2 gap assessments for New Jersey manufacturers and defense subcontractors. Fixed fee, assessment-ready in weeks, scored against the same 110 NIST 800-171 requirements your SPRS score already depends on.',
   eyebrow: 'NJ Manufacturers · Defense Suppliers',
-  headline: 'CMMC certified, before your competitors are.',
-  sub: 'CMMC Phase 2 enforcement starts November 10, 2026. Fewer than 2% of the roughly 80,000 companies in the defense supply chain are certified, and assessors are booked 3 to 6 months out. If you supply a prime, the window to start is this quarter, not next.',
+  headline: 'The deadline moved. The requirement did not.',
+  sub: 'Third-party CMMC certification was suspended on July 13, 2026. Level 1 and Level 2 self-assessment were not, and neither were your SPRS score, your Affirming Official\'s annual affirmation, or DFARS 72-hour incident reporting. Same 110 NIST 800-171 requirements, now enforced through self-assessments and selected government-led assessments.',
   primaryCta: 'Book a CMMC gap assessment',
   ctaMode: 'book',
-  deadline: {iso: '2026-11-10', label: 'CMMC Phase 2 enforcement'},
+  statusChip: 'Phase 2 certification suspended July 2026 · self-assessment still in force',
   pains: [
     {
       title: 'Lose the contract, lose the shop',
       body: 'Primes are already flowing CMMC requirements down to subs. No certification means you can be dropped from bids you have won for years.',
     },
     {
-      title: 'The assessor backlog is real',
-      body: 'Certified assessors are scheduling 3 to 6 months out. Do the math against the deadline: companies that have not started by late summer will wait at the back of the line while orders go elsewhere.',
+      title: 'A wrong score is False Claims Act exposure',
+      body: 'Primes can see your SPRS score, and your Affirming Official signs the annual affirmation personally. During the suspension the Department says it will enforce NIST 800-171 through self-assessments and selected government-led assessments, which is not a softer review than a C3PAO would have run.',
     },
     {
       title: 'DIY compliance burns the year',
@@ -43,7 +43,7 @@ export const manufacturing: Lane = {
     {
       num: '3',
       title: 'Certification & upkeep',
-      body: 'We hand you to a certified assessor (C3PAO) ready to pass, then keep your score maintained monthly so recertification is a non-event.',
+      body: 'We hand you to a certified assessor (C3PAO) when a contract actually calls for one, then keep your score maintained monthly so the annual affirmation is a non-event.',
     },
   ],
   proof: {

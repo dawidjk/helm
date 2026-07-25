@@ -544,20 +544,20 @@ export const articles: Article[] = [
   },
   {
     slug: 'cmmc-deadline-checklist',
-    title: 'CMMC 2.0 Deadline: A 12-Step Checklist for Manufacturers',
+    title: 'CMMC After the Phase 2 Suspension: A 12-Step Checklist for Manufacturers',
     metaDesc:
-      'CMMC Phase 2 enforcement starts November 10, 2026. A practical 12-step checklist for small manufacturers and defense subcontractors to get assessment-ready.',
-    date: '2026-07-01',
+      'Third-party CMMC certification was suspended in July 2026. Self-assessment was not. A practical 12-step checklist for small manufacturers and defense subcontractors to stay assessment-ready.',
+    date: '2026-07-25',
     readMin: 6,
     lane: 'Manufacturing & Defense',
     laneTo: '/manufacturing',
     intro:
-      'CMMC Phase 2 enforcement begins November 10, 2026. Fewer than 2% of the roughly 80,000 companies in the defense supply chain hold certification, and assessor calendars are booked months out. If you supply a prime, even two tiers down, here is the punch list.',
+      'On July 13, 2026 the Department of War suspended CMMC Phase 2, the change that would have made third-party certification mandatory on applicable Level 2 contracts. Suspended is not repealed. Level 1 and Level 2 self-assessment, your SPRS score, and your annual affirmation are all still required today, scored against the same requirements. If you supply a prime, even two tiers down, here is the punch list that did not change.',
     sections: [
       {
         h: 'Steps 1 to 4: Know where you stand',
         ps: [
-          'First, confirm your level. Most subs handling Federal Contract Information need Level 1 (15 basic safeguarding requirements, self-assessed annually). If you touch Controlled Unclassified Information (drawings, specs, technical data marked CUI), you need Level 2: 110 controls from NIST 800-171 and, for most contracts, a third-party assessment.',
+          'First, confirm your level. Most subs handling Federal Contract Information need Level 1 (15 basic safeguarding requirements, self-assessed annually). If you touch Controlled Unclassified Information (drawings, specs, technical data marked CUI), you need Level 2: 110 controls from NIST 800-171 and, depending on the contract, a third-party assessment. That third-party route is suspended as of July 2026, so in practice Level 2 is self-assessed today.',
           'Second, locate your CUI. You cannot protect what you have not mapped. Walk every place technical data lives: file servers, email, CAD stations, the quoting inbox, that USB drive in the shop office.',
           'Third, calculate your SPRS score honestly. Primes can see it, and a fabricated score is False Claims Act exposure: the DOJ has already settled cases.',
           {text: 'Fourth, get a gap assessment against all 110 controls. Two weeks of work turns "we think we\'re fine" into a scored, prioritized list.', links: [{phrase: 'gap assessment', to: '/helm-ready'}]},
@@ -571,15 +571,15 @@ export const articles: Article[] = [
         ],
       },
       {
-        h: 'Steps 10 to 12: Get certified without losing the year',
+        h: 'Steps 10 to 12: Stay ready without wasting the year',
         ps: [
-          'Ten: book your C3PAO now, not after remediation. Backlogs run three to six months, and a reservation focuses the timeline. Eleven: run a mock assessment; failing in private costs nothing, failing the real one costs a re-assessment fee and a lost season.',
+          'Ten: do not buy a C3PAO slot against a deadline that no longer exists. No contract can require a Level 2 third-party assessment during the suspension, and no credible post-suspension scheduling lead time has been published by anyone, us included. Book an assessor when a specific contract calls for one. Eleven: run a mock assessment anyway, because failing in private costs nothing and it is the same 110 requirements either way.',
           'Twelve: put monthly maintenance in place. Scores decay: a patched server drifts, an employee leaves with access intact. Primes increasingly ask for continuous compliance, not a one-time certificate.',
         ],
       },
     ],
     takeaway:
-      'The deadline is fixed; the assessor backlog is not in your control. What is in your control is starting the gap assessment now: it is two weeks of work that determines whether the next twelve months are orderly or a scramble.',
+      'The deadline moved and the requirement did not. What is in your control is the same thing it was before: a scored gap assessment against all 110 controls, two weeks of work, and the basis of the SPRS score you already owe.',
   },
   {
     slug: 'job-site-devices-public-wifi',

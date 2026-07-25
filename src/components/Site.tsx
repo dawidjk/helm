@@ -97,8 +97,8 @@ export function SiteNav() {
     <>
       {pathname === '/manufacturing' && (
         <div className="urgency" ref={urgencyRef}>
-          CMMC Phase 2 enforcement begins Nov 10, 2026: fewer than 2% of
-          defense contractors are certified. <a href="#contact">Check your readiness →</a>
+          CMMC Phase 2 certification was suspended in July 2026. Self-assessment,
+          your SPRS score, and the annual affirmation were not. <a href="#contact">Check your readiness →</a>
         </div>
       )}
       <nav className="site-nav">

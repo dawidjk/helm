@@ -35,7 +35,7 @@ const laneLinks = [
     to: '/manufacturing',
     kicker: 'Manufacturing & Defense',
     title: 'CMMC without the panic',
-    note: 'Nov 10, 2026 deadline',
+    note: 'Self-assessment still required',
   },
   {
     to: '/professional-services',
@@ -122,7 +122,7 @@ export default function Home() {
             <ul className="check-list">
               <li className="observe d2">Cyber-insurance questionnaires answered and remediated</li>
               <li className="observe d3">Wire-fraud and payment-verification protocols that hold up</li>
-              <li className="observe d1">CMMC / NIST 800-171 gap assessments before the Nov 2026 deadline</li>
+              <li className="observe d1">CMMC / NIST 800-171 gap assessments against all 110 controls</li>
               <li className="observe d2">HIPAA-ready controls for medical and dental practices</li>
             </ul>
           </div>
@@ -140,8 +140,8 @@ export default function Home() {
             <div className="lbl">lost to business email compromise in a single year; most victims are small businesses</div>
           </div>
           <div className="stat observe d1">
-            <div className="num">&lt;2%</div>
-            <div className="lbl">of ~80,000 defense contractors are CMMC-certified ahead of the Nov 10, 2026 mandate</div>
+            <div className="num">72 hrs</div>
+            <div className="lbl">to report a cyber incident under DFARS 252.204-7012, a requirement the CMMC suspension did not touch</div>
           </div>
           <div className="stat observe d2">
             <div className="num">24/7</div>
