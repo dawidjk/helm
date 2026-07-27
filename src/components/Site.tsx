@@ -53,8 +53,16 @@ const footerCols = [
       {to: '/about', label: 'About'},
       {to: '/resources', label: 'Resources'},
       {to: '/faq', label: 'FAQ'},
+      {to: '/trust', label: 'Trust & Security'},
       {to: '/contact', label: 'Contact'},
       {to: '/free-scan', label: 'Free scan'},
+    ],
+  },
+  {
+    title: 'Legal',
+    links: [
+      {to: '/terms', label: 'Terms of Service'},
+      {to: '/privacy', label: 'Privacy Policy'},
     ],
   },
 ];

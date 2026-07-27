@@ -1,9 +1,5 @@
-export type LinkedParagraph = {
-  text: string;
-  links: {phrase: string; to: string}[];
-};
-
-export type Paragraph = string | LinkedParagraph;
+import type {Paragraph, LinkedParagraph} from '../lib/richText';
+export type {Paragraph, LinkedParagraph};
 
 export type Article = {
   slug: string;
@@ -16,6 +12,16 @@ export type Article = {
   intro: string;
   sections: {h: string; ps: Paragraph[]}[];
   takeaway: string;
+  /**
+   * 'scan' (default) sends the reader to the free domain scan CTA.
+   * 'book' sends compliance-research readers (cyber-insurance, HIPAA topics)
+   * straight to booking a call instead, since they have already self-selected
+   * into a consultative buying intent a scan doesn't serve.
+   * 'book-cmmc' is the same book CTA carrying the manufacturing lane's own
+   * wording, which names the 110 controls and a prime contractor. Use it only
+   * on articles whose reader is a defense contractor; see ctaCopy.ts.
+   */
+  ctaMode?: 'scan' | 'book' | 'book-cmmc';
 };
 
 export const articles: Article[] = [
@@ -111,6 +117,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'sprs-score-explained',
+    ctaMode: 'book-cmmc',
     title: 'SPRS Score Explained: The Number Your Primes Can Already See',
     metaDesc:
       'What your SPRS score means under the NIST 800-171 DoD Assessment Methodology, why it can run from -203 to 110, and how to raise it deliberately instead of guessing.',
@@ -189,6 +196,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'cmmc-level-1-vs-level-2',
+    ctaMode: 'book-cmmc',
     title: 'CMMC Level 1 vs Level 2: Which One Does Your Shop Actually Need?',
     metaDesc:
       'CMMC Level 1 and Level 2 require very different things. How to tell which one applies to your shop based on your contracts, not your headcount.',
@@ -210,7 +218,7 @@ export const articles: Article[] = [
         h: 'What each level actually requires',
         ps: [
           'Level 1 covers the 15 basic safeguarding requirements of FAR 52.204-21. It is self-assessed annually, with an executive affirmation that the requirements are in place. There is no third-party assessor at Level 1.',
-          'Level 2 covers all 110 controls in NIST 800-171, and for most contracts it requires a third-party assessment by a C3PAO every three years, not a self-assessment. The jump from Level 1 to Level 2 is not incremental: it is a different scale of program.',
+          'Level 2 covers all 110 controls in NIST 800-171. Before the Phase 2 suspension on July 13, 2026, most contracts required a third-party assessment by a C3PAO every three years. During the suspension, contracting officers may not require the C3PAO route, so in practice Level 2 today is self-assessed against the same 110 controls, and solicitations and contracts that already carry a C3PAO requirement are directed to be amended. Suspended is not repealed, so plan for the third-party route to return. The jump from Level 1 to Level 2 in scope is not incremental: it is a different scale of program either way.',
         ],
       },
       {
@@ -309,6 +317,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'cyber-insurance-claim-denied',
+    ctaMode: 'book',
     title: 'Why Cyber Insurance Claims Get Denied (and How to Keep Yours Payable)',
     metaDesc:
       'Cyber insurance claims get denied for reasons that trace back to the application, not the incident. The four common denial paths and how to keep your policy payable.',
@@ -422,6 +431,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'cyber-insurance-application-walkthrough',
+    ctaMode: 'book',
     title: 'Walking Through a Cyber Insurance Application Without Tripping Over Your Own Answers',
     metaDesc:
       'What a cyber insurance application actually asks, why the answers are treated as sworn statements rather than a survey, and the order to work through it in.',
@@ -468,6 +478,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'hipaa-email-rules-small-practices',
+    ctaMode: 'book',
     title: 'HIPAA Email Rules for Small Practices: What "Addressable" Actually Means',
     metaDesc:
       'What the HIPAA Security Rule actually requires for email containing PHI, why an addressable specification is not the same as optional, and the baseline that keeps a small practice covered.',
@@ -544,6 +555,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'cmmc-deadline-checklist',
+    ctaMode: 'book-cmmc',
     title: 'CMMC After the Phase 2 Suspension: A 12-Step Checklist for Manufacturers',
     metaDesc:
       'Third-party CMMC certification was suspended in July 2026. Self-assessment was not. A practical 12-step checklist for small manufacturers and defense subcontractors to stay assessment-ready.',
@@ -671,6 +683,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'backup-testing-insurers',
+    ctaMode: 'book',
     title: 'Backup Testing: What Cyber Insurers Actually Want to See',
     metaDesc:
       'Cyber insurance questionnaires now ask about offline and immutable backups, encryption, and tested restores, not just whether you back up. The 3-2-1 rule and how to document restore tests.',
@@ -709,6 +722,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'cyber-insurance-questionnaire',
+    ctaMode: 'book',
     title: 'How to Answer a Cyber Insurance Questionnaire (Without Voiding Your Coverage)',
     metaDesc:
       'Cyber insurance questionnaires decide your premium, and whether your claim gets paid. What the 12 common questions mean and how to answer them truthfully.',
@@ -745,6 +759,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'ssp-poam-explained',
+    ctaMode: 'book-cmmc',
     title: 'SSP and POA&M Explained: The Two Documents Your CMMC Assessor Reads First',
     metaDesc:
       'What a System Security Plan and a Plan of Action and Milestones actually are under NIST 800-171, and when a POA&M can still get you conditionally certified under CMMC.',
@@ -813,6 +828,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'cui-handling-shop-floor',
+    ctaMode: 'book-cmmc',
     title: 'Explaining CUI to Your Shop Floor: The Rules That Actually Matter',
     metaDesc:
       'A plain-English explanation of FCI and CUI for shop floor staff, the handling rules that keep drawings and specs safe, and why fast internal reporting matters under DFARS.',

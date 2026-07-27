@@ -1,8 +1,9 @@
 import HeroBackdrop from '../components/HeroBackdrop';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
+import {renderParagraph, paragraphText, type Paragraph} from '../lib/richText';
 
-const faqs = [
+const faqs: {q: string; a: Paragraph}[] = [
   {
     q: 'We have an IT person. Why do we need Helm?',
     a: 'IT keeps things running; security keeps things from being stolen. They are different disciplines with different tooling. We work alongside your IT person or MSP constantly: they usually become our biggest advocate, because we take the 2 a.m. security worry off their plate.',
@@ -21,11 +22,17 @@ const faqs = [
   },
   {
     q: 'How is pricing structured?',
-    a: 'Published on our pricing page, identical for every customer. Monthly subscriptions on auto-pay with no setup or cancellation fees; compliance projects are fixed-fee, scoped in writing before work begins. We do not do custom quotes.',
+    a: {
+      text: 'Published on our pricing page, identical for every customer. Monthly subscriptions on auto-pay with no setup or cancellation fees; compliance projects are fixed-fee, scoped in writing before work begins. We do not do custom quotes.',
+      links: [{phrase: 'pricing page', to: '/pricing'}],
+    },
   },
   {
     q: 'Can you get us CMMC certified?',
-    a: 'Formal CMMC certification is performed only by independent C3PAOs. We get you assessment-ready (gap assessment, remediation, documentation) and hand you to a certified assessment partner. Anyone who claims to sell certification directly is misrepresenting the process.',
+    a: {
+      text: 'Formal CMMC certification is performed only by independent C3PAOs. We get you assessment-ready (gap assessment, remediation, documentation) and hand you to a certified assessment partner. Anyone who claims to sell certification directly is misrepresenting the process.',
+      links: [{phrase: 'gap assessment', to: '/helm-ready'}],
+    },
   },
   {
     q: 'What happens if we get hit while working with you?',
@@ -33,7 +40,13 @@ const faqs = [
   },
   {
     q: 'How fast can we start?',
-    a: 'The free scan runs instantly, your report appears in about a minute. Helm Mail deploys in under two hours on Microsoft 365 or Google Workspace. Compliance projects start within two weeks of scoping.',
+    a: {
+      text: 'The free scan runs instantly, your report appears in about a minute. Helm Mail deploys in under two hours on Microsoft 365 or Google Workspace. Compliance projects start within two weeks of scoping.',
+      links: [
+        {phrase: 'free scan', to: '/free-scan'},
+        {phrase: 'Helm Mail', to: '/helm-mail'},
+      ],
+    },
   },
 ];
 
@@ -50,7 +63,7 @@ export default function Faq() {
           mainEntity: faqs.map((f) => ({
             '@type': 'Question',
             name: f.q,
-            acceptedAnswer: {'@type': 'Answer', text: f.a},
+            acceptedAnswer: {'@type': 'Answer', text: paragraphText(f.a)},
           })),
         }}
       />
@@ -72,7 +85,7 @@ export default function Faq() {
           {faqs.map((f, i) => (
             <div key={f.q} className={`faq-item observe d${(i % 3) + 1}`}>
               <h3>{f.q}</h3>
-              <p>{f.a}</p>
+              <p>{renderParagraph(f.a)}</p>
             </div>
           ))}
         </div>

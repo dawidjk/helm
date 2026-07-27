@@ -12,6 +12,13 @@ export type Product = {
   features: {title: string; body: string}[];
   how: {num: string; title: string; body: string}[];
   faqs: {q: string; a: string}[];
+  /**
+   * 'scan' (default) sends the reader to the free domain scan CTA.
+   * 'book' sends the reader straight to booking a call instead, for
+   * consultative offers (a workshop or a fixed-fee project) where an
+   * automated scan is the wrong next step.
+   */
+  ctaMode?: 'scan' | 'book';
 };
 
 export const productList: Product[] = [
@@ -52,6 +59,7 @@ export const productList: Product[] = [
   },
   {
     slug: 'helm-aware',
+    ctaMode: 'book',
     motif: 'aware',
     name: 'Helm Aware',
     tagline: 'AI scams can’t fool a trained team.',
@@ -87,6 +95,7 @@ export const productList: Product[] = [
   },
   {
     slug: 'helm-ready',
+    ctaMode: 'book',
     motif: 'ready',
     name: 'Helm Ready',
     tagline: 'Pass the questionnaire. Win the contract.',

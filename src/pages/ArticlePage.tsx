@@ -3,6 +3,8 @@ import {useParams, Navigate, Link} from 'react-router-dom';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {articles} from './articles';
+import {renderParagraph} from '../lib/richText';
+import {bookCta} from './ctaCopy';
 
 export default function ArticlePage() {
   const {slug} = useParams();
@@ -69,21 +71,9 @@ export default function ArticlePage() {
             {a.sections.map((s) => (
               <section key={s.h}>
                 <h2>{s.h}</h2>
-                {s.ps.map((p, i) => {
-                  if (typeof p === 'string') return <p key={i}>{p}</p>;
-                  const parts: React.ReactNode[] = [];
-                  let remaining = p.text;
-                  let keyIdx = 0;
-                  for (const link of p.links) {
-                    const idx = remaining.indexOf(link.phrase);
-                    if (idx === -1) continue;
-                    if (idx > 0) parts.push(remaining.slice(0, idx));
-                    parts.push(<Link key={keyIdx++} to={link.to}>{link.phrase}</Link>);
-                    remaining = remaining.slice(idx + link.phrase.length);
-                  }
-                  if (remaining) parts.push(remaining);
-                  return <p key={i}>{parts}</p>;
-                })}
+                {s.ps.map((p, i) => (
+                  <p key={i}>{renderParagraph(p)}</p>
+                ))}
               </section>
             ))}
           </div>
@@ -100,11 +90,21 @@ export default function ArticlePage() {
         </article>
       </Band>
 
-      <CtaBand
-        title="Get your actual numbers."
-        sub="The free scan reads your domain's real security posture and reports back in plain English, in about a minute."
-        source={`article ${a.slug}`}
-      />
+      {a.ctaMode === 'book' || a.ctaMode === 'book-cmmc' ? (
+        <CtaBand
+          title={bookCta(a.ctaMode).title}
+          sub={bookCta(a.ctaMode).sub}
+          cta={bookCta(a.ctaMode).label}
+          source={`article ${a.slug}`}
+          mode="book"
+        />
+      ) : (
+        <CtaBand
+          title="Get your actual numbers."
+          sub="The free scan reads your domain's real security posture and reports back in plain English, in about a minute."
+          source={`article ${a.slug}`}
+        />
+      )}
     </>
   );
 }

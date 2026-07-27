@@ -1945,3 +1945,49 @@ body {
     font-size: 32px;
   }
 }
+
+/* --------------------------------- Legal --------------------------------- */
+
+.legal-doc {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.legal-effective {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--helm-text-dim);
+  margin: 0 0 24px;
+}
+
+.legal-intro {
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0 0 16px;
+}
+
+.legal-section {
+  padding: 28px 0;
+}
+
+.legal-section + .legal-section {
+  border-top: 1px solid light-dark(rgba(11, 18, 32, 0.1), rgba(255, 255, 255, 0.08));
+}
+
+.legal-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin: 0 0 10px;
+}
+
+.legal-section p {
+  color: var(--helm-text-dim);
+  line-height: 1.65;
+  margin: 0 0 12px;
+}
+
+.legal-section p:last-child {
+  margin-bottom: 0;
+}

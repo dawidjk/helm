@@ -74,6 +74,9 @@ export default function LanePage({lane}: {lane: Lane}) {
               <LeadForm source={`${lane.slug} hero`} cta={lane.primaryCta} compact />
             )}
           </div>
+          <div className="hero-note reveal d3">
+            See <Link to="/pricing" style={{color: 'light-dark(#0c7a44, #AAE2C4)'}}>published pricing</Link> for Helm Mail, Aware, Ready, and Watch
+          </div>
         </div>
         <ScrollCue />
       </header>

@@ -5,6 +5,7 @@ import Meta from '../components/Meta';
 import LeadForm from '../components/LeadForm';
 import ProductMotif from '../components/ProductMotif';
 import {productList} from './products';
+import {BOOK_CTA} from './ctaCopy';
 
 export default function ProductPage() {
   const {slug} = useParams();
@@ -112,11 +113,21 @@ export default function ProductPage() {
         </div>
       </Band>
 
-      <CtaBand
-        title="See what a scammer sees. Free."
-        sub="The free scan checks your email domain's real exposure: the report shows exactly what we'd fix."
-        source={`product ${p.slug} cta`}
-      />
+      {p.ctaMode === 'book' ? (
+        <CtaBand
+          title={BOOK_CTA.title}
+          sub={BOOK_CTA.sub}
+          cta={BOOK_CTA.label}
+          source={`product ${p.slug} cta`}
+          mode="book"
+        />
+      ) : (
+        <CtaBand
+          title="See what a scammer sees. Free."
+          sub="The free scan checks your email domain's real exposure: the report shows exactly what we'd fix."
+          source={`product ${p.slug} cta`}
+        />
+      )}
     </>
   );
 }
