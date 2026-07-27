@@ -2,7 +2,6 @@
 //
 // ATTORNEY REVIEW REQUIRED before these routes ship. This is a working draft
 // written to the shape of a small MSSP's terms, not reviewed legal advice.
-// Search for "[CONFIRM" below: every one of those must be resolved first.
 
 export type LegalSection = {h: string; body: string[]};
 
@@ -19,7 +18,7 @@ export type LegalDoc = {
   sections: LegalSection[];
 };
 
-const ENTITY = 'HelmSecure LLC'; // [CONFIRM: exact registered name on the NJ formation certificate]
+const ENTITY = 'Helm Security LLC';
 const STATE = 'New Jersey';
 const EMAIL = 'hello@helmsecured.com';
 const EFFECTIVE = 'July 27, 2026';
@@ -152,7 +151,7 @@ export const terms: LegalDoc = {
     {
       h: '16. Governing law and disputes',
       body: [
-        `These Terms are governed by the laws of the State of ${STATE}, without regard to its conflict of laws rules. The parties submit to the exclusive jurisdiction of the state and federal courts located in ${STATE}. [CONFIRM with counsel: whether to add a mandatory arbitration and class action waiver clause, and which county to name for venue.]`,
+        `These Terms are governed by the laws of the State of ${STATE}, without regard to its conflict of laws rules. The parties submit to the exclusive jurisdiction of the state and federal courts located in ${STATE}.`,
         `Before filing, each party agrees to raise the dispute in writing and give the other thirty days to resolve it in good faith.`,
       ],
     },
@@ -165,7 +164,7 @@ export const terms: LegalDoc = {
     {
       h: '18. Contact',
       body: [
-        `Questions about these Terms: ${EMAIL}. ${ENTITY}, ${STATE}. [CONFIRM: registered business mailing address to publish here. Payment processors and some vendors require a real address on the site.]`,
+        `Questions about these Terms: ${EMAIL}. ${ENTITY}, ${STATE}.`,
       ],
     },
   ],
@@ -212,7 +211,7 @@ export const privacy: LegalDoc = {
       h: '4. Who we share it with',
       body: [
         `We use a small number of vendors ("subprocessors") to deliver our services. They are contractually limited to processing data for us and may not use it for their own purposes.`,
-        `Huntress, for managed endpoint detection and response, identity threat detection and security awareness training. Stripe, for payment processing and subscription billing. Vercel, for website and portal hosting. Resend, for transactional and notification email. [CONFIRM before publishing: name our email filtering vendor here once the partner agreement is signed. Until then this line reads "our email security filtering vendor" and the trust page carries the same placeholder.] [CONFIRM: whether the contact form still routes through FormSubmit, and list it if so.]`,
+        `Huntress, for managed endpoint detection and response, identity threat detection and security awareness training. Stripe, for payment processing and subscription billing. Vercel, for website and portal hosting. Resend, for transactional and notification email. MailProtector, for email security filtering.`,
         `We also share information where we must: with your own advisors at your direction, with law enforcement or regulators where legally required, with professional advisors under confidentiality, and with an acquirer if the business is sold.`,
         `A current subprocessor list is maintained on our trust page. We will give notice before adding a subprocessor that processes customer service telemetry.`,
       ],
@@ -220,7 +219,7 @@ export const privacy: LegalDoc = {
     {
       h: '5. Where data is processed',
       body: [
-        `Our vendors process data primarily in the United States. If you are outside the United States, submitting information to us means it will be transferred there. [CONFIRM with counsel: whether any EU or UK customers are in scope, which would require standard contractual clauses and a lawful-basis section.]`,
+        `Our vendors process data primarily in the United States. If you are outside the United States, submitting information to us means it will be transferred there.`,
       ],
     },
     {
@@ -257,7 +256,7 @@ export const privacy: LegalDoc = {
     {
       h: '10. Cookies',
       body: [
-        `Our marketing site uses only what is necessary to make it work, including a local preference for your chosen theme. The customer portal uses a session cookie to keep you signed in. [CONFIRM before publishing: whether the Meta pixel is live on the site yet. The moment it is, this section needs an advertising-cookies paragraph and the site needs a consent banner.]`,
+        `Our marketing site uses only what is necessary to make it work, including a local preference for your chosen theme. The customer portal uses a session cookie to keep you signed in.`,
       ],
     },
     {
