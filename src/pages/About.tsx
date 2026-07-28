@@ -18,6 +18,20 @@ export default function About() {
           address: {'@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US'},
           description:
             'Email security, AI scam defense, and compliance readiness for small businesses.',
+          founder: [
+            {
+              '@type': 'Person',
+              name: 'Kelly Kluszczynski',
+              image: 'https://helmsecured.com/team/kelly-kluszczynski.png',
+              jobTitle: 'Co-Founder, Growth & Partnerships',
+            },
+            {
+              '@type': 'Person',
+              name: 'Dawid Kluszczynski',
+              image: 'https://helmsecured.com/team/dawid-kluszczynski.png',
+              jobTitle: 'Co-Founder, Product & Delivery',
+            },
+          ],
         }}
       />
       <header className="hero lane">
@@ -58,7 +72,7 @@ export default function About() {
             <h3 className="observe">How we operate</h3>
             <ul className="check-list">
               <li className="observe d1">Plain English, always. If you need a glossary, we've failed</li>
-              <li className="observe d2">Published fixed pricing. Every customer pays the same rate</li>
+              <li className="observe d2">Published starting prices and scope bands, confirmed in writing before work starts</li>
               <li className="observe d3">Honest architecture: our monitoring is backed by 24/7 security operations partners, and we say so</li>
               <li className="observe d1">No fear selling. Every warning we give ends in a concrete, priced fix</li>
               <li className="observe d2">Automation-first: machines watch the logs, humans make the calls</li>
@@ -73,6 +87,59 @@ export default function About() {
       </Band>
 
       <Band>
+        <div className="band-head">
+          <div className="eyebrow observe">The founders</div>
+          <h2 className="observe d1">A husband-and-wife company. No hidden bench.</h2>
+          <p className="observe d2">
+            When you hire Helm, you work directly with the two people who own
+            the company and are accountable for the result.
+          </p>
+        </div>
+        <div className="founder-grid">
+          <article className="founder-card observe">
+            <img
+              className="founder-portrait"
+              src="/team/kelly-kluszczynski.png"
+              alt="Kelly Kluszczynski, Co-Founder of Helm Security"
+              loading="lazy"
+            />
+            <div>
+              <div className="kicker">Co-Founder · Growth &amp; Partnerships</div>
+              <h3>Kelly Kluszczynski</h3>
+              <p>
+                Kelly leads discovery, customer communication, marketing, and
+                partner relationships. She keeps every engagement tied to a
+                business outcome and understandable to the people responsible
+                for acting on it.
+              </p>
+            </div>
+          </article>
+          <article className="founder-card observe d1">
+            <img
+              className="founder-portrait"
+              src="/team/dawid-kluszczynski.png"
+              alt="Dawid Kluszczynski, Co-Founder of Helm Security"
+              loading="lazy"
+            />
+            <div>
+              <div className="kicker">Co-Founder · Product &amp; Delivery</div>
+              <h3>Dawid Kluszczynski</h3>
+              <p>
+                Dawid designs Helm&apos;s services, automation, and technical
+                delivery. He is the point of accountability from the first
+                scan through deployment, documentation, and ongoing review.
+              </p>
+            </div>
+          </article>
+        </div>
+        <p className="founder-note observe d2">
+          Helm is intentionally founder-led today. We use established security
+          platforms for continuous monitoring, and we never imply that a large
+          internal team is sitting behind the logo.
+        </p>
+      </Band>
+
+      <Band variant="raised">
         <div className="band-head">
           <h2 className="observe">Why "Helm"</h2>
           <p className="observe d1">

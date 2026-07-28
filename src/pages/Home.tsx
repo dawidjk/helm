@@ -11,15 +11,15 @@ const products: {motif: MotifKind; kicker: string; title: string; body: string; 
     motif: 'mail',
     kicker: 'Helm Mail',
     title: 'Email fraud, stopped cold.',
-    body: 'Managed email security plus phishing and deepfake-scam training for your whole team. The #1 way small businesses lose money is a fake invoice or a spoofed CEO: this closes the door.',
+    body: 'Managed Microsoft 365 email filtering, review, and a real escalation path for suspicious messages. Helm configures the platform and explains what matters.',
     price: 'From $15 per user / month',
   },
   {
     motif: 'aware',
     kicker: 'Helm Aware',
-    title: 'AI scams can’t fool a trained team.',
-    body: 'Shadow-AI audit, acceptable-use policy, and live deepfake drills: could your controller tell if that call from the CEO was AI? Quarterly refreshes keep pace as the scams evolve.',
-    price: 'Workshop from $1,500 + subscription',
+    title: 'Make the scam fail at the process.',
+    body: 'Shadow-AI review, acceptable-use policy, live training, and a payment-verification protocol built for voice cloning and synthetic video.',
+    price: 'Fixed-fee workshop from $2,500',
   },
   {
     motif: 'ready',
@@ -27,6 +27,13 @@ const products: {motif: MotifKind; kicker: string; title: string; body: string; 
     title: 'Pass the questionnaire. Win the contract.',
     body: 'Cyber-insurance readiness, HIPAA, and CMMC gap assessments: fixed fee, plain English, done in weeks. When your insurer or a prime contractor asks the 12 hard questions, you have the answers.',
     price: 'Fixed-fee projects from $2,500',
+  },
+  {
+    motif: 'watch',
+    kicker: 'Helm Watch',
+    title: '24/7 endpoint monitoring.',
+    body: 'Huntress-backed managed EDR for Windows and Mac endpoints, with human-triaged alerts, active containment, and plain-English follow-up from Helm.',
+    price: 'From $15 per endpoint / month',
   },
 ];
 
@@ -91,13 +98,13 @@ export default function Home() {
 
       <Band id="products" variant="raised">
         <div className="band-head">
-          <h2 className="observe">Three products. One steady hand.</h2>
+          <h2 className="observe">Four services. One steady hand.</h2>
           <p className="observe d1">
-            Everything is managed for you, billed monthly, and explained in
-            plain English. Backed 24/7 by industry-leading security operations.
+            Recurring protection where it belongs, fixed-fee projects where
+            the work has a finish line, and plain English throughout.
           </p>
         </div>
-        <div className="product-grid">
+        <div className="product-grid four">
           {products.map((p, i) => (
             <div key={p.kicker} className={`product-tile observe d${i + 1}`}>
               <ProductMotif kind={p.motif} />
@@ -145,7 +152,7 @@ export default function Home() {
           </div>
           <div className="stat observe d2">
             <div className="num">24/7</div>
-            <div className="lbl">monitoring behind every Helm product, you never staff a night shift</div>
+            <div className="lbl">Huntress SOC monitoring behind Helm Watch, without staffing your own night shift</div>
           </div>
         </div>
       </Band>

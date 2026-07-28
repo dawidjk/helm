@@ -500,7 +500,7 @@ export const articles: Article[] = [
         h: 'The business associate agreement you cannot skip',
         ps: [
           'Any email provider that stores or transmits ePHI on your behalf needs a business associate agreement, a BAA, in place before that PHI ever touches their system.',
-          {text: 'Free consumer email accounts do not come with a BAA available at all. Google Workspace and Microsoft 365 business plans do, which is one more reason a practice should be running real business email under Helm Mail rather than a free personal account for anything touching patient information.', links: [{phrase: 'business email under Helm Mail', to: '/helm-mail'}]},
+          {text: 'Free consumer email accounts do not come with a BAA available at all. Google Workspace and Microsoft 365 business plans can support a BAA, which is one more reason a practice should use a properly configured business tenant rather than a free personal account for anything touching patient information. Helm Mail currently supports compatible Microsoft 365 tenants.', links: [{phrase: 'Helm Mail', to: '/helm-mail'}]},
         ],
       },
       {
@@ -616,7 +616,7 @@ export const articles: Article[] = [
         h: 'The device itself is the real exposure',
         ps: [
           'A lost or stolen phone or tablet that is logged into an email account with no screen lock is not a minor inconvenience, it is a full account takeover the moment it leaves someone\'s hands.',
-          {text: 'Microsoft 365 and Google Workspace both include basic mobile device management as part of the plans your business already uses through Helm Mail: requiring a screen lock, encrypting the device, and remote-wiping a lost or stolen one before anyone gets into it.', links: [{phrase: 'plans your business already uses through Helm Mail', to: '/helm-mail'}]},
+          'Microsoft 365 and Google Workspace business plans can include basic mobile device management features such as requiring a screen lock, encrypting the device, and remotely wiping a lost device. Those controls are part of your productivity tenant, not Helm Mail itself, and the available features depend on your license.',
           {text: 'A shared job-site tablet signed straight into the owner\'s mailbox is a standing risk for any contractor, because everyone who touches that tablet effectively has the owner\'s access. Give it its own limited account instead of the owner\'s login.', links: [{phrase: 'any contractor', to: '/contractors'}]},
         ],
       },
@@ -1001,11 +1001,11 @@ export const articles: Article[] = [
         h: 'Why detection is a losing strategy',
         ps: [
           '"Listen for robotic artifacts" was 2023 advice. Current voice synthesis passes casual inspection, and video is close behind. Any defense that depends on a stressed employee out-detecting a synthetic voice in real time will eventually fail.',
-          {text: 'The controls that work are procedural, because procedure does not care how good the fake is. One: a payment-verification protocol, meaning every new or changed payment instruction gets a callback to a known-good number, no exceptions, including "the CEO" personally. Two: a deepfake drill, simulating a voice-clone request against your own finance team before a criminal does. The first drill almost always finds someone who would have wired the money.', links: [{phrase: 'payment-verification protocol', to: '/helm-aware'}, {phrase: 'deepfake drill', to: '/helm-aware'}]},
+          {text: 'The controls that work are procedural, because procedure does not care how good the fake is. One: a payment-verification protocol, meaning every new or changed payment instruction gets a callback to a known-good number, no exceptions, including "the CEO" personally. Two: an authorized simulation, testing the process against a realistic impersonation request and coaching on any gap. Helm Aware installs the protocol and trains the team; targeted drills are separately scoped.', links: [{phrase: 'payment-verification protocol', to: '/helm-aware'}, {phrase: 'Helm Aware', to: '/helm-aware'}]},
         ],
       },
     ],
     takeaway:
-      'You cannot train ears to beat synthetic voices, but a callback protocol beats them every time. Helm Aware runs the deepfake drill and installs the protocol; it is a half-day that removes your single largest fraud exposure.',
+      'You cannot rely on ears to beat synthetic voices, but a known-number callback and dual approval create a process the voice cannot bypass. Helm Aware installs that protocol and trains the people expected to use it.',
   },
 ];

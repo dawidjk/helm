@@ -18,12 +18,12 @@ const subprocessors: {service: string; does: string; sees: string}[] = [
   },
   {
     service: 'Huntress',
-    does: 'Endpoint and identity security, Helm Watch',
+    does: '24/7 SOC-backed endpoint detection and response for Helm Watch',
     sees: 'Endpoint telemetry from protected devices',
   },
   {
-    service: 'Email filtering vendor',
-    does: 'Email filtering, Helm Mail. Vendor selected, contract not yet signed, so we do not name it here',
+    service: 'MailProtector',
+    does: 'Managed email filtering for Helm Mail',
     sees: 'Message content and metadata for filtered mailboxes, once live',
   },
 ];
@@ -77,10 +77,12 @@ export default function Trust() {
               <p>
                 HelmSecure is a New Jersey LLC, formed, with an EIN and a
                 business bank account in place. We are two operators, not a
-                large firm dressed up to look like one: Dawid handles product,
-                automation, and delivery; Kelly handles sales, marketing, and
-                partnerships. That is the whole team today, and we say so
-                plainly rather than implying otherwise.
+                large firm dressed up to look like one: Dawid Kluszczynski
+                handles product, automation, and delivery; Kelly Kluszczynski
+                handles sales, marketing, and partnerships. We are
+                husband-and-wife co-founders and co-owners. That is the whole
+                team today, and we say so plainly rather than implying
+                otherwise.
               </p>
             </section>
 
@@ -91,13 +93,31 @@ export default function Trust() {
                 the detection technology in front of your business. Detection
                 and response capability lives with the platform vendors we
                 resell and configure, not with an overnight desk we staff
-                ourselves. For endpoint and identity security, that platform
-                is Huntress. For email filtering, we have not yet selected
-                and contracted a vendor.
+                ourselves. For endpoint detection and response, that platform
+                is Huntress. For email filtering, it is MailProtector. Helm
+                Watch is EDR-only at launch. We do not describe identity
+                monitoring, SIEM, or awareness training as included until
+                those services are separately ready.
               </p>
               <p>
                 We review and act on alerts during business hours. We do not
                 sell a response-time guarantee we cannot hold.
+              </p>
+            </section>
+
+            <section>
+              <h2>What you can verify before buying</h2>
+              <p>
+                We will show you a sample scan report, the relevant statement
+                of work, and a redacted example of the deliverable before you
+                sign. We publish our starting prices and our known control
+                gaps. We do not publish invented testimonials, customer
+                counts, or certifications we have not earned.
+              </p>
+              <p>
+                Vendor platform names describe who supplies the underlying
+                technology. They are not presented as Helm certifications or
+                as proof that those vendors endorse every Helm service.
               </p>
             </section>
 

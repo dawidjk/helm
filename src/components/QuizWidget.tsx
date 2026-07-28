@@ -169,7 +169,7 @@ function Recommendation({tier}: {tier: TierKey}) {
       <p className="quiz-recommendation-text">
         <Link to="/helm-mail">Helm Mail</Link> closes your email-side gaps: spoofing, phishing
         simulation, and ongoing awareness training. Pair it with{' '}
-        <Link to="/helm-aware">Helm Aware</Link> for the human side: deepfake drills and payment
+        <Link to="/helm-aware">Helm Aware</Link> for the human side: modern scam training and payment
         verification.
       </p>
     );

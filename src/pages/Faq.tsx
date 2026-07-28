@@ -41,7 +41,7 @@ const faqs: {q: string; a: Paragraph}[] = [
   {
     q: 'How fast can we start?',
     a: {
-      text: 'The free scan runs instantly, your report appears in about a minute. Helm Mail deploys in under two hours on Microsoft 365 or Google Workspace. Compliance projects start within two weeks of scoping.',
+      text: 'The free scan usually returns in about a minute. Helm Mail is scheduled after we confirm Microsoft 365 tenant compatibility and agree on a rollback window. Project start dates are confirmed in the statement of work.',
       links: [
         {phrase: 'free scan', to: '/free-scan'},
         {phrase: 'Helm Mail', to: '/helm-mail'},

@@ -18,7 +18,7 @@ export type LegalDoc = {
   sections: LegalSection[];
 };
 
-const ENTITY = 'Helm Security LLC';
+const ENTITY = 'HelmSecure LLC';
 const STATE = 'New Jersey';
 const EMAIL = 'hello@helmsecured.com';
 const EFFECTIVE = 'July 27, 2026';
@@ -28,10 +28,10 @@ export const terms: LegalDoc = {
   navLabel: 'Terms of Service',
   metaTitle: 'Terms of Service | Helm',
   metaDesc:
-    'The terms that govern use of the Helm website, the free email security scan, and Helm Mail, Helm Aware, Helm Ready and Helm Watch subscriptions.',
+    'The terms that govern use of the Helm website, the free email security scan, and Helm Mail, Helm Aware, Helm Ready and Helm Watch services.',
   eyebrow: 'Legal',
   heading: 'Terms of Service',
-  sub: 'The rules that govern our website, the free scan, and every Helm subscription. Written to be read, not to hide things.',
+  sub: 'The rules that govern our website, the free scan, and every Helm service. Written to be read, not to hide things.',
   effective: EFFECTIVE,
   intro: [
     `These Terms of Service ("Terms") are a binding agreement between you ("you", "Customer") and ${ENTITY}, a ${STATE} limited liability company ("Helm", "we", "us"). They govern your use of our website, the free email security scan, and any Helm product or service you subscribe to.`,
@@ -41,7 +41,7 @@ export const terms: LegalDoc = {
     {
       h: '1. What we provide',
       body: [
-        `Helm sells managed security services to small and mid-sized businesses. Our current products are Helm Mail (managed email security), Helm Aware (security awareness training and workshops), Helm Ready (compliance readiness projects) and Helm Watch (managed endpoint detection and response).`,
+        `Helm sells managed security services to small and mid-sized businesses. Our current products are Helm Mail (managed email security), Helm Aware (fixed-fee AI scam readiness workshops), Helm Ready (compliance readiness projects) and Helm Watch (managed endpoint detection and response).`,
         `The specific scope of what we deliver to you is defined in your order form or statement of work ("Order"). These Terms apply to every Order. If an Order and these Terms conflict, the Order controls for that engagement only.`,
       ],
     },
@@ -66,14 +66,14 @@ export const terms: LegalDoc = {
     {
       h: '4. The free scan',
       body: [
-        `The free email security scan inspects publicly available information about a domain you control: published DMARC, SPF and DKIM records, lookalike domain registrations, and whether addresses at your domain appear in known third-party breach data. It touches nothing inside your systems and requires no credentials.`,
+        `The free email security scan inspects publicly reachable information about a domain you control: published DMARC, SPF, DKIM, MX, DNSSEC, MTA-STS and TLS reporting records, HTTPS certificate status, and a limited unauthenticated mail-server check. It does not search breach datasets or lookalike-domain registrations. It touches nothing inside your systems and requires no credentials.`,
         `The scan is provided as is, for informational purposes, with no warranty. A clean result is not an assurance that you are secure. By requesting a scan you confirm you are authorized to request it for that domain.`,
       ],
     },
     {
       h: '5. Fees, billing and renewal',
       body: [
-        `Subscription pricing is published on our pricing page and is the same for every customer at the same published rate. Subscriptions are billed monthly in advance by card or ACH through our payment processor and renew automatically until cancelled.`,
+        `Subscription unit pricing and account minimums are published on our pricing page. Subscriptions are billed monthly in advance by card or ACH through our payment processor and renew automatically until cancelled.`,
         `Project work under Helm Ready and workshop engagements under Helm Aware are fixed fee, scoped in writing in advance, and billed as set out in the Order.`,
         `Fees exclude applicable taxes. We may change subscription pricing on at least thirty days written notice, effective at your next renewal. If you do not accept a price change you may cancel before it takes effect.`,
         `Payments more than fifteen days late may result in suspension under section 11.`,
@@ -188,9 +188,9 @@ export const privacy: LegalDoc = {
       h: '1. Information we collect',
       body: [
         `Information you give us. Name, business email, company name, phone number and whatever you write in a form or email when you request a scan, ask for a quote, or contact us.`,
-        `Free scan inputs. The domain you submit. The scan itself queries public DNS records and third-party breach datasets. It does not access your mail, your files or your systems.`,
+        `Free scan inputs. The domain you submit. The scan queries public DNS records, HTTPS certificate data, and limited unauthenticated mail-server information. It does not query breach datasets, access your mail, read your files, or log into your systems.`,
         `Customer and billing information. Business contact details, billing address and payment records. Card numbers are handled by our payment processor and never touch our servers.`,
-        `Service telemetry. For customers, our security platforms process security-relevant data from the environments we protect: email metadata and quarantined message details, endpoint process and alert data, sign-in and identity events, and training completion records. This can include personal information about your employees.`,
+        `Service telemetry. Depending on the service purchased, our security platforms process security-relevant data from the environments we protect, including email metadata and quarantined message details or endpoint process and alert data. This can include personal information about your employees.`,
         `Site analytics. Basic request data such as pages viewed, referrer and approximate region.`,
       ],
     },
@@ -211,7 +211,7 @@ export const privacy: LegalDoc = {
       h: '4. Who we share it with',
       body: [
         `We use a small number of vendors ("subprocessors") to deliver our services. They are contractually limited to processing data for us and may not use it for their own purposes.`,
-        `Huntress, for managed endpoint detection and response, identity threat detection and security awareness training. Stripe, for payment processing and subscription billing. Vercel, for website and portal hosting. Resend, for transactional and notification email. MailProtector, for email security filtering.`,
+        `Huntress, for managed endpoint detection and response. Stripe, for payment processing and subscription billing. Vercel, for website and portal hosting. Resend, for transactional and notification email. MailProtector, for email security filtering.`,
         `We also share information where we must: with your own advisors at your direction, with law enforcement or regulators where legally required, with professional advisors under confidentiality, and with an acquirer if the business is sold.`,
         `A current subprocessor list is maintained on our trust page. We will give notice before adding a subprocessor that processes customer service telemetry.`,
       ],
@@ -227,7 +227,8 @@ export const privacy: LegalDoc = {
       body: [
         `Free scan records and the resulting report: twelve months, then deleted.`,
         `Enquiries that do not become customers: twenty-four months.`,
-        `Customer records, reports and security documentation: for the life of the engagement plus seven years, because compliance documentation and incident records are exactly what a customer needs years later for an insurance claim or an audit.`,
+        `Customer organization data, including scans, reports and alerts: for the life of the engagement and deleted from the live application within thirty days after offboarding. Deleted records may remain recoverable in provider backups until that provider's normal backup window expires.`,
+        `Administrative impersonation audit records: twenty-four months, including after the related customer organization is deleted, because these records document privileged administrative access.`,
         `Billing and accounting records: seven years, as required for tax purposes.`,
         `Security telemetry inside our vendor platforms: per that platform's retention setting, which is documented in your onboarding materials.`,
       ],
@@ -235,7 +236,7 @@ export const privacy: LegalDoc = {
     {
       h: '7. How we protect it',
       body: [
-        `Multi-factor authentication on every system that holds customer data. Least-privilege access, reviewed when roles change. Encryption in transit and at rest. Vendor selection weighted heavily toward security posture and breach notification commitments. We hold ourselves to the practices we sell.`,
+        `Multi-factor authentication on supported administrative systems, least-privilege access reviewed when roles change, and encryption in transit and at rest. Customer portal accounts currently use one-time magic links sent to the registered mailbox and do not yet have an additional MFA factor. Vendor selection is weighted heavily toward security posture and breach notification commitments.`,
         `If we suffer a breach affecting your personal information we will notify you without undue delay, with what we know, what we are doing, and what you should do.`,
       ],
     },

@@ -10,7 +10,7 @@ export default function Pricing() {
     <>
       <Meta
         title="Pricing: Published, No Surprises | Helm"
-        desc="Helm pricing: email security from $15/user/month, AI scam defense from $1,500, compliance from $2,500, 24/7 endpoint monitoring $15/endpoint/month. Published prices."
+        desc="Helm pricing: managed email security $15/user/month, AI scam readiness workshops from $2,500, compliance from $2,500, and endpoint monitoring $15/endpoint/month."
         path="/pricing"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -26,11 +26,12 @@ export default function Pricing() {
         <div className="wrap">
           <div className="eyebrow reveal">Pricing</div>
           <h1 className="reveal d1" style={{maxWidth: '18ch'}}>
-            Published prices. No "call us."
+            Published starting prices. Scope in writing.
           </h1>
           <p className="sub reveal d2">
-            Every customer pays the same published rates, on auto-pay, cancel
-            anytime. If a vendor won't show you a price, they're pricing you.
+            Mail and Watch use clear monthly unit pricing. Aware and Ready are
+            fixed-fee projects, with the final price set by the work you
+            approve before we start.
           </p>
         </div>
         <ScrollCue />
@@ -61,24 +62,24 @@ export default function Pricing() {
         <div className="band-head">
           <h2 className="observe">How the numbers work</h2>
           <p className="observe d1">
-            A typical 20-person business runs $300/month on Helm Mail. Add
-            Helm Aware and you're under what one hour of incident-response
-            lawyering costs, per year. Compliance projects are scoped and
-            priced in writing before any work starts.
+            A 20-person business runs $300/month on Helm Mail, which is also
+            the monthly account minimum. Ten covered endpoints run $150/month
+            on Helm Watch. Aware and Ready have defined scope bands so a
+            smaller engagement does not subsidize a larger one.
           </p>
         </div>
         <div className="stats">
           <div className="stat observe">
-            <div className="num">$0</div>
-            <div className="lbl">onboarding fees, setup fees, or cancellation fees, ever</div>
+            <div className="num">Month to month</div>
+            <div className="lbl">for Mail and Watch, with setup included and no cancellation fee</div>
           </div>
           <div className="stat observe d1">
-            <div className="num">1 page</div>
-            <div className="lbl">our agreements fit on. Auto-pay monthly, cancel anytime</div>
+            <div className="num">Fixed fee</div>
+            <div className="lbl">for Aware and Ready, with deliverables and exclusions written before work starts</div>
           </div>
           <div className="stat observe d2">
-            <div className="num">100%</div>
-            <div className="lbl">of pricing published on this page: verticals change the pitch, never the price</div>
+            <div className="num">No unlimited scope</div>
+            <div className="lbl">remediation, drills, and follow-on support are priced separately when they add real work</div>
           </div>
         </div>
       </Band>
