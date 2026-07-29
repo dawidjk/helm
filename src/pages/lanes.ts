@@ -6,7 +6,7 @@ export const manufacturing: Lane = {
   reportDomain: 'precision-mfg.com',
   metaTitle: 'CMMC Compliance for NJ Manufacturers & Defense Suppliers | Helm',
   metaDesc:
-    'CMMC Level 1 and Level 2 gap assessments for New Jersey manufacturers and defense subcontractors. Fixed fee, assessment-ready in weeks, scored against the same 110 NIST 800-171 requirements your SPRS score already depends on.',
+    'Fixed-fee CMMC Level 1 and Level 2 gap assessments for New Jersey manufacturers and defense subcontractors, scored against applicable NIST 800-171 requirements.',
   eyebrow: 'NJ Manufacturers · Defense Suppliers',
   headline: 'The deadline moved. The requirement did not.',
   sub: 'Third-party CMMC certification was suspended on July 13, 2026. Level 1 and Level 2 self-assessment were not, and neither were your SPRS score, your Affirming Official\'s annual affirmation, or DFARS 72-hour incident reporting. Same 110 NIST 800-171 requirements, now enforced through self-assessments and selected government-led assessments.',
@@ -27,23 +27,23 @@ export const manufacturing: Lane = {
       body: 'NIST 800-171 has 110 controls. Interpreting them internally costs engineering time you need on the floor, and gets rejected when done wrong.',
     },
   ],
-  planTitle: 'Weeks to ready. Not quarters.',
-  planSub: 'A fixed-fee path from "no idea where we stand" to assessment-ready.',
+  planTitle: 'Know the gap before you fund the fix.',
+  planSub: 'A fixed-fee assessment with scored findings, evidence needs, and a prioritized roadmap.',
   steps: [
     {
       num: '1',
       title: 'Gap assessment',
-      body: 'We map your environment against all 110 NIST 800-171 controls and hand you a scored, prioritized gap report in plain English. Fixed fee, ~2 weeks.',
+      body: 'We map the agreed scope against the applicable requirements and deliver a scored, prioritized gap report in plain English.',
     },
     {
       num: '2',
-      title: 'Remediation sprint',
-      body: 'We fix the gaps (policies, technical controls, evidence collection) with your team in the loop, not on the hook.',
+      title: 'Separate remediation scope',
+      body: 'After the gaps are known, you decide what to handle internally and what to scope separately with Helm or another provider.',
     },
     {
       num: '3',
-      title: 'Certification & upkeep',
-      body: 'We hand you to a certified assessor (C3PAO) when a contract actually calls for one, then keep your score maintained monthly so the annual affirmation is a non-event.',
+      title: 'Independent assessment when required',
+      body: 'If a contract calls for formal certification, the assessment remains separate from Helm\'s preparation and remediation work.',
     },
   ],
   proof: {
@@ -51,14 +51,14 @@ export const manufacturing: Lane = {
     points: [
       'CMMC Level 1 & 2 gap assessments against NIST 800-171',
       'SPRS score calculation and submission support',
-      'Partnered with certified C3PAOs for the formal assessment',
-      'Monthly managed compliance so the score never decays',
-      'Fixed-fee pricing, no open-ended consulting meters',
+      'Scored findings and a prioritized remediation roadmap',
+      'Preparation kept separate from any formal assessor',
+      'Fixed-fee assessment, with remediation scoped only after the gaps are known',
     ],
   },
   cta: {
     title: 'Where do you stand on all 110 controls?',
-    sub: 'Get a free 30-minute readiness call and leave with your three biggest gaps identified, before an assessor or a prime finds them for you.',
+    sub: 'Use a free 30-minute readiness call to clarify which requirement applies, what evidence to gather, and whether a fixed-fee assessment is the right next step.',
     label: 'Book the readiness call',
   },
 };
@@ -77,11 +77,11 @@ export const professionalServices: Lane = {
   pains: [
     {
       title: 'Wire fraud targets your inbox',
-      body: 'Attackers impersonate partners and title companies to redirect closings, settlements, and tax payments. Firms have lost six figures on a single email.',
+      body: 'Attackers impersonate partners and title companies to redirect closings, settlements, and tax payments. One convincing message can turn a routine payment into a recovery and liability problem.',
     },
     {
       title: 'Your carrier is asking harder questions',
-      body: 'Cyber-insurance renewals now ask a dozen pointed questions: MFA, email authentication, staff training, incident response. Answer wrong and premiums spike, or coverage vanishes when you need it.',
+      body: 'Cyber-insurance forms commonly ask about controls such as MFA, email authentication, staff readiness, and incident response. An answer should be accurate and supported, not guessed.',
     },
     {
       title: 'HIPAA fines don’t care about size',
@@ -94,27 +94,27 @@ export const professionalServices: Lane = {
     {
       num: '1',
       title: 'Helm Mail',
-      body: 'Managed email security stops the spoofed-partner wire request before anyone sees it, plus training that keeps staff sharp against AI-written scams.',
+      body: 'Managed MailProtector filtering for compatible Microsoft 365 tenants, configured and reviewed by Helm.',
     },
     {
       num: '2',
       title: 'Helm Aware',
-      body: 'Deepfake and AI-scam drills for the people who move money: could your bookkeeper tell if that call from a partner was cloned audio?',
+      body: 'A fixed-fee workshop for the people who move money: live scam training, an AI-use policy, and a payment-verification protocol. Any executive drill is scoped separately.',
     },
     {
       num: '3',
       title: 'Helm Ready',
-      body: 'We answer your cyber-insurance questionnaire, remediate the gaps, and build HIPAA-ready controls: fixed fee, audit-ready evidence.',
+      body: 'A fixed-fee assessment for cyber-insurance, client questionnaires, or HIPAA readiness. Any remediation follows under a separate written scope.',
     },
   ],
   proof: {
     title: 'What your carrier and your clients see.',
     points: [
-      'Verified payment-instruction protocol that stops wire redirects',
-      'Cyber-insurance questionnaire answered and defensible',
-      'HIPAA security-rule controls with documented evidence',
-      'Quarterly report you can show clients and partners',
-      'Per-seat pricing, a 12-person firm pays like a 12-person firm',
+      'Payment-instruction protocol designed to prevent unverified changes',
+      'Questionnaire answers tied to actual evidence',
+      'HIPAA Security Rule gaps documented and prioritized',
+      'Published scope and pricing before work begins',
+      'Founder-led delivery with clear vendor attribution',
     ],
   },
   cta: {
@@ -133,7 +133,7 @@ export const contractors: Lane = {
     'Stop fake invoices and hijacked payment instructions. Email fraud protection and GC-ready security attestations built for contractors, subs, and field-service businesses.',
   eyebrow: 'Contractors · Trades · Field Services',
   headline: 'One fake invoice can wipe out a job’s profit.',
-  sub: 'Payment fraud is the #1 cyber threat to contractors: spoofed supplier invoices, hijacked payment instructions, and fake GC emails. Meanwhile GCs and insurers increasingly require proof of security before you can bid or bind coverage.',
+  sub: 'Spoofed supplier invoices, hijacked payment instructions, and fake GC emails can turn routine payment changes into expensive mistakes. Some GCs and insurers also ask subcontractors to document basic security controls.',
   primaryCta: 'Get a free fraud-exposure check',
   pains: [
     {
@@ -142,7 +142,7 @@ export const contractors: Lane = {
     },
     {
       title: 'GCs now require security',
-      body: 'Bigger general contractors are pushing cyber requirements down to subs: no proof, no bid. It’s becoming as standard as insurance certs.',
+      body: 'Some general contractors and insurers ask subcontractors to document email, payment, access, or incident controls. It is better to know what you can support before the form arrives.',
     },
     {
       title: 'Field teams, office risk',
@@ -165,17 +165,17 @@ export const contractors: Lane = {
     {
       num: '3',
       title: 'Prove it to GCs & insurers',
-      body: 'A one-page security attestation you can hand to any GC or carrier, backed by real controls we maintain monthly.',
+      body: 'Helm Ready documents the controls you actually have and identifies unsupported answers before they reach a GC or carrier.',
     },
   ],
   proof: {
     title: 'Built for how the trades actually run.',
     points: [
-      'Works with the email you already have: Microsoft 365 or Google',
-      'Nothing for field crews to install or learn',
-      'Payment-verification protocol in one laminated page',
-      'Monthly flat pricing that scales with office headcount, not trucks',
-      'Proof-of-security docs for GC prequalification packets',
+      'Helm Mail for compatible Microsoft 365 tenants',
+      'Payment-verification protocol customized to your approval process',
+      'Endpoint protection scoped to the actual covered fleet',
+      'Published pricing and account minimums',
+      'Readiness evidence sized to the questionnaire in front of you',
     ],
   },
   cta: {

@@ -68,19 +68,22 @@ export default function Pricing() {
             smaller engagement does not subsidize a larger one.
           </p>
         </div>
-        <div className="stats">
-          <div className="stat observe">
-            <div className="num">Month to month</div>
-            <div className="lbl">for Mail and Watch, with setup included and no cancellation fee</div>
-          </div>
-          <div className="stat observe d1">
-            <div className="num">Fixed fee</div>
-            <div className="lbl">for Aware and Ready, with deliverables and exclusions written before work starts</div>
-          </div>
-          <div className="stat observe d2">
-            <div className="num">No unlimited scope</div>
-            <div className="lbl">remediation, drills, and follow-on support are priced separately when they add real work</div>
-          </div>
+        <div className="pricing-terms">
+          <article className="pricing-term observe">
+            <div className="pricing-term-kicker">Recurring services</div>
+            <h3>Month to month</h3>
+            <p>For Mail and Watch, with setup included and no cancellation fee.</p>
+          </article>
+          <article className="pricing-term observe d1">
+            <div className="pricing-term-kicker">Defined projects</div>
+            <h3>Fixed fee</h3>
+            <p>For Aware and Ready, with deliverables and exclusions written before work starts.</p>
+          </article>
+          <article className="pricing-term observe d2">
+            <div className="pricing-term-kicker">Additional work</div>
+            <h3>No unlimited scope</h3>
+            <p>Remediation, drills, and follow-on support are priced separately when they add real work.</p>
+          </article>
         </div>
       </Band>
 

@@ -125,7 +125,7 @@ export const productList: Product[] = [
       {num: '3', title: 'Remediate', body: 'If you want implementation help, we scope that work separately after the assessment exposes the real gaps.'},
     ],
     faqs: [
-      {q: 'Can you certify us for CMMC?', a: 'Certification is performed by independent C3PAOs; anyone who says otherwise is misleading you. We get you assessment-ready and hand you to a certified partner.'},
+      {q: 'Can you certify us for CMMC?', a: 'No. A formal certification assessment, when required, is performed by an independent accredited C3PAO. Helm Ready documents your current state and prioritized gaps; HelmSecure does not certify or promise an assessor relationship.'},
       {q: 'What does fixed-fee mean?', a: 'One price, agreed before work starts, based on your size and target framework. No hourly meters, no surprise invoices.'},
       {q: 'Can you help with an insurance questionnaire?', a: 'Yes. We verify each answer against the controls actually in place, identify gaps, and organize supporting evidence. Coverage decisions remain with your insurer and the policy language.'},
     ],
@@ -163,6 +163,7 @@ export const productList: Product[] = [
       {q: 'Do we need to replace our antivirus?', a: 'Usually yes, and that is a good thing: the EDR agent covers what antivirus does and adds detection and response on top. We sort out the specifics during deployment so nothing overlaps or conflicts.'},
       {q: 'What happens when you find something?', a: 'Human analysts investigate first, so false alarms die quietly. Real incidents get contained, the affected endpoint isolated if needed, and you get a plain-English explanation of what happened and what was done.'},
       {q: 'Does Helm staff the overnight SOC?', a: 'No. Huntress provides the 24/7 SOC monitoring and containment behind Helm Watch. Helm handles deployment, account management, customer communication, and business-hours follow-up.'},
+      {q: 'Can you deploy to Macs?', a: 'Yes. One to five Macs use our validated manual installation path. A larger Mac fleet requires a successful one-device pilot through your exact mobile device management platform before we schedule the wider rollout.'},
       {q: 'Does Helm Watch include identity monitoring, SIEM, or awareness training?', a: 'Not at launch. Helm Watch is EDR-only until those additional Huntress products are commercially and operationally ready for Helm customers.'},
     ],
   },

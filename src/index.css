@@ -645,6 +645,75 @@ body {
   color: rgba(11, 18, 32, 0.62);
 }
 
+/* -------------------------- Pricing terms row --------------------------- */
+
+.pricing-terms {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.pricing-term {
+  position: relative;
+  overflow: hidden;
+  min-height: 190px;
+  padding: 30px;
+  border: 1px solid var(--helm-hairline);
+  border-radius: 22px;
+  background:
+    radial-gradient(120% 100% at 50% -35%, rgba(56, 161, 105, 0.12), transparent 62%),
+    var(--helm-surface);
+  box-shadow: light-dark(0 8px 28px rgba(11, 18, 32, 0.06), none);
+}
+
+.pricing-term::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, var(--helm-accent-text), rgba(56, 161, 105, 0.18));
+}
+
+.pricing-term-kicker {
+  margin-bottom: 18px;
+  color: var(--helm-accent-text);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pricing-term h3 {
+  margin: 0 0 12px;
+  color: var(--helm-text-strong);
+  font-size: clamp(24px, 2.5vw, 30px);
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+}
+
+.pricing-term p {
+  margin: 0;
+  color: var(--helm-text-dim);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 820px) {
+  .pricing-terms {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-term {
+    min-height: 0;
+    padding: 26px;
+  }
+
+  .pricing-term-kicker {
+    margin-bottom: 12px;
+  }
+}
+
 /* ----------------------------- Split feature ----------------------------- */
 
 .split {
