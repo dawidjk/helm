@@ -99,7 +99,7 @@ export const professionalServices: Lane = {
     {
       num: '2',
       title: 'Helm Aware',
-      body: 'A fixed-fee workshop for the people who move money: live scam training, an AI-use policy, and a payment-verification protocol. Any executive drill is scoped separately.',
+      body: 'Managed monthly learning and phishing for the whole team, with a separate fixed-fee workshop when payment approvers also need an AI-use policy and payment-verification protocol.',
     },
     {
       num: '3',

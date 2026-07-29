@@ -100,9 +100,9 @@ export default function Trust() {
                 resell and configure, not with an overnight desk we staff
                 ourselves. For endpoint detection and response, that platform
                 is Huntress. For email filtering, it is MailProtector. Helm
-                Watch is EDR-only at launch. We do not describe identity
-                monitoring, SIEM, or awareness training as included until
-                those services are separately ready.
+                Watch is EDR-only at launch. Helm Aware Managed uses Huntress
+                for managed security awareness learning and phishing. We do
+                not describe identity monitoring or SIEM as included.
               </p>
               <p>
                 We review and act on alerts during business hours. We do not

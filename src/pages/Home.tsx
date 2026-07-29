@@ -18,9 +18,9 @@ const products: {motif: MotifKind; kicker: string; title: string; body: string; 
   {
     motif: 'aware',
     kicker: 'Helm Aware',
-    title: 'Make the scam fail at the process.',
-    body: 'Shadow-AI review, acceptable-use policy, live training, and a payment-verification protocol built for voice cloning and synthetic video.',
-    price: 'Fixed-fee workshop from $2,500',
+    title: 'Make the next scam less convincing.',
+    body: 'Managed monthly learning and phishing informed by active threats, with Helm reporting and review. Fixed-fee AI scam readiness workshops remain available separately.',
+    price: '$10 per active learner / month',
   },
   {
     motif: 'ready',

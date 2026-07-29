@@ -41,7 +41,7 @@ export const terms: LegalDoc = {
     {
       h: '1. What we provide',
       body: [
-        `Helm sells managed security services to small and mid-sized businesses. Our current products are Helm Mail (managed email security), Helm Aware (fixed-fee AI scam readiness workshops), Helm Ready (compliance readiness projects) and Helm Watch (managed endpoint detection and response).`,
+        `Helm sells managed security services to small and mid-sized businesses. Our current products are Helm Mail (managed email security), Helm Aware Managed (managed security awareness learning and phishing), Helm Aware Workshop (fixed-fee AI scam readiness), Helm Ready (compliance readiness projects) and Helm Watch (managed endpoint detection and response).`,
         `The specific scope of what we deliver to you is defined in your order form or statement of work ("Order"). These Terms apply to every Order. If an Order and these Terms conflict, the Order controls for that engagement only.`,
       ],
     },
@@ -74,15 +74,15 @@ export const terms: LegalDoc = {
       h: '5. Fees, billing and renewal',
       body: [
         `Subscription unit pricing and account minimums are published on our pricing page. Subscriptions are billed monthly in advance by card or ACH through our payment processor and renew automatically until cancelled.`,
-        `Project work under Helm Ready and workshop engagements under Helm Aware are fixed fee, scoped in writing in advance, and billed as set out in the Order.`,
-        `Fees exclude applicable taxes. We may change subscription pricing on at least thirty days written notice, effective at your next renewal. If you do not accept a price change you may cancel before it takes effect.`,
+        `Project work under Helm Ready and Helm Aware Workshop is fixed fee, scoped in writing in advance, and billed as set out in the Order. Helm Aware Managed is billed monthly by active learner.`,
+        `Fees exclude applicable taxes. We may change subscription pricing on at least thirty days written notice, effective at your next renewal. A Helm Aware Managed price change will not take effect during its initial service term. If you do not accept a price change you may cancel before it takes effect, subject to any initial term in your Order.`,
         `Payments more than fifteen days late may result in suspension under section 11.`,
       ],
     },
     {
       h: '6. Term, cancellation and refunds',
       body: [
-        `Unless your Order says otherwise, subscriptions run month to month with no minimum commitment. You may cancel at any time, effective at the end of the current billing period. We do not charge setup or cancellation fees.`,
+        `Unless your Order says otherwise, Helm Mail and Helm Watch run month to month with no minimum commitment. Helm Aware Managed has a twelve-month initial service term, billed monthly, followed by month-to-month renewal unless the Order says otherwise. After its initial term, it may be cancelled on thirty days written notice, effective at the end of the current billing period. We do not charge setup or cancellation fees.`,
         `We do not pro-rate or refund the current month once a billing period has begun, because our own upstream vendor costs for that period are already committed. Fixed-fee project work is refundable only for work not yet performed at the point of cancellation.`,
         `On termination we will deprovision your protections, and on written request within thirty days we will provide a reasonable export of the reports and documentation we hold for you.`,
       ],

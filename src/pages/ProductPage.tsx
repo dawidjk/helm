@@ -78,8 +78,22 @@ export default function ProductPage() {
           <div className="product-tile observe d1" style={{alignSelf: 'start'}}>
             <ProductMotif kind={p.motif} />
             <div className="kicker">{p.name}</div>
-            <h3 style={{fontSize: 22}}>{p.price}</h3>
-            <p>{p.priceDetail}</p>
+            {p.pricingOptions ? (
+              <div className="price-options">
+                {p.pricingOptions.map((option) => (
+                  <div className="price-option" key={option.name}>
+                    <div className="price-option-name">{option.name}</div>
+                    <h3>{option.price}</h3>
+                    <p>{option.detail}</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <>
+                <h3 style={{fontSize: 22}}>{p.price}</h3>
+                <p>{p.priceDetail}</p>
+              </>
+            )}
           </div>
         </div>
       </Band>

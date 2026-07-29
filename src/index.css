@@ -435,6 +435,40 @@ body {
   box-shadow: 0 24px 60px -24px rgba(8, 76, 46, 0.45);
 }
 
+.price-options {
+  display: grid;
+  gap: 14px;
+}
+
+.price-option {
+  padding-top: 14px;
+  border-top: 1px solid var(--helm-hairline);
+}
+
+.price-option:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.price-option-name {
+  margin-bottom: 6px;
+  color: var(--helm-accent-text);
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.price-option h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  line-height: 1.15;
+}
+
+.price-option p {
+  margin: 0;
+}
+
 .tile-motif {
   height: 110px;
   margin: -8px -8px 4px;

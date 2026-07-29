@@ -11,7 +11,7 @@ export default function Pricing() {
     <>
       <Meta
         title="Pricing: Published, No Surprises | Helm"
-        desc="Helm pricing: managed email security $15/user/month, AI scam readiness workshops from $2,500, compliance from $2,500, and endpoint monitoring $15/endpoint/month."
+        desc="Helm pricing: managed email security $15/user/month, managed awareness $10/active learner/month, AI scam workshops from $2,500, compliance from $2,500, and endpoint monitoring $15/endpoint/month."
         path="/pricing"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -30,9 +30,9 @@ export default function Pricing() {
             Published starting prices. Scope in writing.
           </h1>
           <p className="sub reveal d2">
-            Mail and Watch use clear monthly unit pricing. Aware and Ready are
-            fixed-fee projects, with the final price set by the work you
-            approve before we start.
+            Mail, Aware Managed, and Watch use clear monthly unit pricing.
+            Aware workshops and Ready projects use a fixed fee, with the final
+            scope written down before work starts.
           </p>
         </div>
         <ScrollCue />
@@ -44,8 +44,22 @@ export default function Pricing() {
             <div key={p.slug} className={`product-tile observe d${i + 1}`}>
               <ProductMotif kind={p.motif} />
               <div className="kicker">{p.name}</div>
-              <h3 style={{fontSize: 24}}>{p.price}</h3>
-              <p>{p.priceDetail}</p>
+              {p.pricingOptions ? (
+                <div className="price-options">
+                  {p.pricingOptions.map((option) => (
+                    <div className="price-option" key={option.name}>
+                      <div className="price-option-name">{option.name}</div>
+                      <h3>{option.price}</h3>
+                      <p>{option.detail}</p>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <>
+                  <h3 style={{fontSize: 24}}>{p.price}</h3>
+                  <p>{p.priceDetail}</p>
+                </>
+              )}
               <ul className="check-list" style={{marginBottom: 8}}>
                 {p.features.map((f) => (
                   <li key={f.title}>{f.title}</li>
@@ -65,25 +79,26 @@ export default function Pricing() {
           <p className="observe d1">
             A 20-person business runs $300/month on Helm Mail, which is also
             the monthly account minimum. Ten covered endpoints run $150/month
-            on Helm Watch. Aware and Ready have defined scope bands so a
-            smaller engagement does not subsidize a larger one.
+            on Helm Watch. Helm Aware Managed is $10 per active learner with no
+            customer minimum. Aware workshops and Ready projects have defined
+            scope bands so a smaller engagement does not subsidize a larger one.
           </p>
         </div>
         <div className="pricing-terms">
           <article className="pricing-term observe">
-            <div className="pricing-term-kicker">Recurring services</div>
+            <div className="pricing-term-kicker">Mail and Watch</div>
             <h3>Month to month</h3>
             <p>For Mail and Watch, with setup included and no cancellation fee.</p>
           </article>
           <article className="pricing-term observe d1">
-            <div className="pricing-term-kicker">Defined projects</div>
-            <h3>Fixed fee</h3>
-            <p>For Aware and Ready, with deliverables and exclusions written before work starts.</p>
+            <div className="pricing-term-kicker">Aware Managed</div>
+            <h3>12-month initial term</h3>
+            <p>Monthly billing at $10 per active learner, with setup included and no customer account minimum.</p>
           </article>
           <article className="pricing-term observe d2">
-            <div className="pricing-term-kicker">Additional work</div>
-            <h3>No unlimited scope</h3>
-            <p>Remediation, drills, and follow-on support are priced separately when they add real work.</p>
+            <div className="pricing-term-kicker">Aware workshops and Ready</div>
+            <h3>Fixed fee</h3>
+            <p>Deliverables, exclusions, and separately priced follow-on work are written down before the project starts.</p>
           </article>
         </div>
       </Band>
