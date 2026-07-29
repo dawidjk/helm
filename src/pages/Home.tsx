@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+import {canonicalPath, siteUrl} from '../lib/urls';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import HeroBackdrop from '../components/HeroBackdrop';
@@ -70,7 +71,7 @@ export default function Home() {
           '@type': 'Organization',
           name: 'HelmSecure LLC',
           alternateName: 'Helm',
-          url: 'https://helmsecured.com',
+          url: siteUrl('/'),
           email: 'hello@helmsecured.com',
           address: {'@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US'},
           description: 'Email security, AI scam defense, and compliance readiness for small businesses.',
@@ -164,7 +165,7 @@ export default function Home() {
         </div>
         <div className="lane-strip">
           {laneLinks.map((l, i) => (
-            <Link key={l.to} to={l.to} className={`lane-row observe d${(i % 3) + 1}`}>
+            <Link key={l.to} to={canonicalPath(l.to)} className={`lane-row observe d${(i % 3) + 1}`}>
               <div>
                 <div className="kicker">{l.kicker}</div>
                 <div className="lane-title">{l.title}</div>

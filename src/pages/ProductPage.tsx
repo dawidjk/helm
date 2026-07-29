@@ -6,6 +6,7 @@ import LeadForm from '../components/LeadForm';
 import ProductMotif from '../components/ProductMotif';
 import {productList} from './products';
 import {BOOK_CTA} from './ctaCopy';
+import {siteUrl} from '../lib/urls';
 
 export default function ProductPage() {
   const {slug} = useParams();
@@ -25,7 +26,7 @@ export default function ProductPage() {
               '@type': 'Service',
               name: p.name,
               description: p.metaDesc,
-              provider: {'@type': 'Organization', name: 'HelmSecure LLC', url: 'https://helmsecured.com'},
+              provider: {'@type': 'Organization', name: 'HelmSecure LLC', url: siteUrl('/')},
             },
             {
               '@type': 'FAQPage',
@@ -38,8 +39,8 @@ export default function ProductPage() {
             {
               '@type': 'BreadcrumbList',
               itemListElement: [
-                {'@type': 'ListItem', position: 1, name: 'Products', item: 'https://helmsecured.com'},
-                {'@type': 'ListItem', position: 2, name: p.name, item: `https://helmsecured.com/${p.slug}`},
+                {'@type': 'ListItem', position: 1, name: 'Products', item: siteUrl('/')},
+                {'@type': 'ListItem', position: 2, name: p.name, item: siteUrl(`/${p.slug}`)},
               ],
             },
           ],
@@ -57,7 +58,7 @@ export default function ProductPage() {
             <LeadForm source={`product ${p.slug}`} cta="Get my free scan" compact />
           </div>
           <div className="hero-note reveal d3">
-            {p.price} · <Link to="/pricing" style={{color: 'light-dark(#0c7a44, #AAE2C4)'}}>full pricing</Link>
+            {p.price} · <Link to="/pricing/" style={{color: 'light-dark(#0c7a44, #AAE2C4)'}}>full pricing</Link>
           </div>
         </div>
         <ScrollCue />

@@ -1,5 +1,6 @@
 import type {ReactNode} from 'react';
 import {Link} from 'react-router-dom';
+import {canonicalPath} from './urls';
 
 /**
  * A paragraph that is either plain text, or text with one or more phrases
@@ -28,7 +29,7 @@ export function renderParagraph(p: Paragraph): ReactNode {
     if (idx === -1) continue;
     if (idx > 0) parts.push(remaining.slice(0, idx));
     parts.push(
-      <Link key={keyIdx++} to={link.to}>
+      <Link key={keyIdx++} to={canonicalPath(link.to)}>
         {link.phrase}
       </Link>
     );

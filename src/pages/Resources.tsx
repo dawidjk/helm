@@ -1,5 +1,6 @@
 import HeroBackdrop from '../components/HeroBackdrop';
 import {Link} from 'react-router-dom';
+import {canonicalPath} from '../lib/urls';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {articles} from './articles';
@@ -30,7 +31,7 @@ export default function Resources() {
       <Band>
         <div className="lane-strip">
           {articles.map((a, i) => (
-            <Link key={a.slug} to={`/resources/${a.slug}`} className={`lane-row observe d${(i % 3) + 1}`}>
+            <Link key={a.slug} to={canonicalPath(`/resources/${a.slug}`)} className={`lane-row observe d${(i % 3) + 1}`}>
               <div>
                 <div className="kicker">{a.lane}</div>
                 <div className="lane-title">{a.title}</div>

@@ -2,6 +2,7 @@ import HeroBackdrop from '../components/HeroBackdrop';
 import {Link} from 'react-router-dom';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
+import {siteUrl} from '../lib/urls';
 import ProductMotif from '../components/ProductMotif';
 import {productList} from './products';
 
@@ -16,8 +17,8 @@ export default function Pricing() {
           '@context': 'https://schema.org',
           '@type': 'BreadcrumbList',
           itemListElement: [
-            {'@type': 'ListItem', position: 1, name: 'Helm', item: 'https://helmsecured.com'},
-            {'@type': 'ListItem', position: 2, name: 'Pricing', item: 'https://helmsecured.com/pricing'},
+            {'@type': 'ListItem', position: 1, name: 'Helm', item: siteUrl('/')},
+            {'@type': 'ListItem', position: 2, name: 'Pricing', item: siteUrl('/pricing')},
           ],
         }}
       />
@@ -50,7 +51,7 @@ export default function Pricing() {
                   <li key={f.title}>{f.title}</li>
                 ))}
               </ul>
-              <Link to={`/${p.slug}`} className="price" style={{textDecoration: 'none', color: 'light-dark(#0c7a44, #AAE2C4)'}}>
+              <Link to={`/${p.slug}/`} className="price" style={{textDecoration: 'none', color: 'light-dark(#0c7a44, #AAE2C4)'}}>
                 Learn more about {p.name} →
               </Link>
             </div>

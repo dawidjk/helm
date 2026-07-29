@@ -3,6 +3,7 @@ import {NavLink as RouterNavLink, Link, useLocation} from 'react-router-dom';
 import {Button} from '@astryxdesign/core/Button';
 import LeadForm, {PORTAL_URL} from './LeadForm';
 import ThemePicker from './ThemePicker';
+import {canonicalPath} from '../lib/urls';
 
 export function HelmMark({size = 28}: {size?: number}) {
   return (
@@ -103,7 +104,7 @@ export function SiteNav() {
 
   return (
     <>
-      {pathname === '/manufacturing' && (
+      {(pathname === '/manufacturing' || pathname === '/manufacturing/') && (
         <div className="urgency" ref={urgencyRef}>
           CMMC Phase 2 certification was suspended in July 2026. Self-assessment,
           your SPRS score, and the annual affirmation were not. <a href="#contact">Check your readiness →</a>
@@ -117,15 +118,15 @@ export function SiteNav() {
           <div className="nav-right">
             <div className="nav-links">
               {lanes.map((l) => (
-                <RouterNavLink key={l.to} to={l.to} className={({isActive}) => (isActive ? 'active' : '')}>
+                <RouterNavLink key={l.to} to={canonicalPath(l.to)} className={({isActive}) => (isActive ? 'active' : '')}>
                   {l.label}
                 </RouterNavLink>
               ))}
-              <RouterNavLink to="/pricing" className={({isActive}) => (isActive ? 'active' : '')}>
+              <RouterNavLink to="/pricing/" className={({isActive}) => (isActive ? 'active' : '')}>
                 Pricing
               </RouterNavLink>
               <a href={`${PORTAL_URL}/login`}>Sign in</a>
-              <Link to="/free-scan" className="nav-cta">
+              <Link to="/free-scan/" className="nav-cta">
                 <Button label="Free scan" variant="primary" size="sm" />
               </Link>
             </div>
@@ -149,7 +150,7 @@ export function SiteNav() {
             <div key={col.title} className="drawer-group">
               <div className="footer-col-title">{col.title}</div>
               {col.links.map((l) => (
-                <Link key={l.to} to={l.to}>
+                <Link key={l.to} to={canonicalPath(l.to)}>
                   {l.label}
                 </Link>
               ))}
@@ -228,14 +229,14 @@ export function CtaBand({
         <p className="observe d1">{sub}</p>
         <div className="cta-form observe d2">
           {mode === 'book' ? (
-            <Link to={contactPath}>
+            <Link to={canonicalPath(contactPath)}>
               <Button label={cta} variant="primary" size="lg" />
             </Link>
           ) : (
             <LeadForm source={source} cta={cta} />
           )}
           <div className="cta-alt">
-            Have more to tell us? <Link to="/contact">Use the full contact form →</Link>
+            Have more to tell us? <Link to="/contact/">Use the full contact form →</Link>
             <br />
             Prefer email?{' '}
             <a
@@ -308,7 +309,7 @@ export function SiteFooter() {
             <div key={col.title} className="footer-col">
               <div className="footer-col-title">{col.title}</div>
               {col.links.map((l) => (
-                <Link key={l.to} to={l.to}>
+                <Link key={l.to} to={canonicalPath(l.to)}>
                   {l.label}
                 </Link>
               ))}

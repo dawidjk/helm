@@ -5,6 +5,7 @@ import {LinkProvider} from '@astryxdesign/core/Link';
 import {helmTheme} from './helm';
 import {SiteNav, SiteFooter, RevealManager} from './components/Site';
 import {ThemeModeProvider, useThemeMode} from './components/ThemeMode';
+import {canonicalPath} from './lib/urls';
 import './theme.css';
 import './index.css';
 
@@ -19,7 +20,7 @@ const NavLink = forwardRef<HTMLAnchorElement, React.ComponentProps<'a'>>(
       );
     }
     return (
-      <RouterLink ref={ref} to={href} {...rest}>
+      <RouterLink ref={ref} to={canonicalPath(href)} {...rest}>
         {children}
       </RouterLink>
     );

@@ -5,6 +5,7 @@ import Meta from '../components/Meta';
 import HeroBackdrop, {type BackdropKind} from '../components/HeroBackdrop';
 import LeadForm from '../components/LeadForm';
 import PanelVisual from '../components/PanelVisual';
+import {siteUrl} from '../lib/urls';
 
 export type Lane = {
   slug: string;
@@ -51,8 +52,8 @@ export default function LanePage({lane}: {lane: Lane}) {
           '@context': 'https://schema.org',
           '@type': 'BreadcrumbList',
           itemListElement: [
-            {'@type': 'ListItem', position: 1, name: 'Industries', item: 'https://helmsecured.com'},
-            {'@type': 'ListItem', position: 2, name: lane.eyebrow, item: `https://helmsecured.com/${lane.slug}`},
+            {'@type': 'ListItem', position: 1, name: 'Industries', item: siteUrl('/')},
+            {'@type': 'ListItem', position: 2, name: lane.eyebrow, item: siteUrl(`/${lane.slug}`)},
           ],
         }}
       />
@@ -67,7 +68,7 @@ export default function LanePage({lane}: {lane: Lane}) {
           <p className="sub reveal d2">{lane.sub}</p>
           <div className="hero-ctas reveal d3">
             {lane.ctaMode === 'book' ? (
-              <Link to="/contact">
+              <Link to="/contact/">
                 <Button label={lane.primaryCta} variant="primary" size="lg" />
               </Link>
             ) : (
@@ -75,7 +76,7 @@ export default function LanePage({lane}: {lane: Lane}) {
             )}
           </div>
           <div className="hero-note reveal d3">
-            See <Link to="/pricing" style={{color: 'light-dark(#0c7a44, #AAE2C4)'}}>published pricing</Link> for Helm Mail, Aware, Ready, and Watch
+            See <Link to="/pricing/" style={{color: 'light-dark(#0c7a44, #AAE2C4)'}}>published pricing</Link> for Helm Mail, Aware, Ready, and Watch
           </div>
         </div>
         <ScrollCue />

@@ -1,6 +1,7 @@
 import HeroBackdrop from '../components/HeroBackdrop';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
+import {siteUrl} from '../lib/urls';
 
 export default function About() {
   return (
@@ -13,7 +14,7 @@ export default function About() {
           '@context': 'https://schema.org',
           '@type': 'Organization',
           name: 'HelmSecure LLC',
-          url: 'https://helmsecured.com',
+          url: siteUrl('/'),
           email: 'hello@helmsecured.com',
           address: {'@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US'},
           description:

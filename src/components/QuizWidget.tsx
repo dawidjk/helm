@@ -158,7 +158,7 @@ function Recommendation({tier}: {tier: TierKey}) {
   if (tier === 'risk') {
     return (
       <p className="quiz-recommendation-text">
-        Start with the <Link to="/helm-aware">Helm Aware workshop</Link>: deepfake awareness, a
+        Start with the <Link to="/helm-aware/">Helm Aware workshop</Link>: deepfake awareness, a
         payment-verification protocol your team can use immediately, and a written AI
         acceptable-use policy, all in one engagement.
       </p>
@@ -167,16 +167,16 @@ function Recommendation({tier}: {tier: TierKey}) {
   if (tier === 'exposed') {
     return (
       <p className="quiz-recommendation-text">
-        <Link to="/helm-mail">Helm Mail</Link> adds managed MailProtector filtering to a compatible
+        <Link to="/helm-mail/">Helm Mail</Link> adds managed MailProtector filtering to a compatible
         Microsoft 365 environment. Pair it with{' '}
-        <Link to="/helm-aware">Helm Aware</Link> for a focused workshop on modern scams, safe AI use,
+        <Link to="/helm-aware/">Helm Aware</Link> for a focused workshop on modern scams, safe AI use,
         and payment verification.
       </p>
     );
   }
   return (
     <p className="quiz-recommendation-text">
-      <Link to="/helm-ready">Helm Ready</Link> documents your existing controls, gaps, and prioritized
+      <Link to="/helm-ready/">Helm Ready</Link> documents your existing controls, gaps, and prioritized
       action plan for insurers, auditors, or CMMC purposes. Any remediation is quoted separately
       after the assessment.
     </p>
@@ -273,7 +273,7 @@ export default function QuizWidget() {
             </p>
             <LeadForm source="quiz" cta="Run my free email scan" compact />
             <p className="quiz-cta-alt">
-              Prefer to talk it through? <Link to="/contact">Contact us.</Link>
+              Prefer to talk it through? <Link to="/contact/">Contact us.</Link>
             </p>
           </div>
 

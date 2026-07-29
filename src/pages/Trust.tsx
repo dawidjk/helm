@@ -2,6 +2,7 @@ import HeroBackdrop from '../components/HeroBackdrop';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {BOOK_CTA} from './ctaCopy';
+import {siteUrl} from '../lib/urls';
 
 const subprocessors: {service: string; does: string; sees: string}[] = [
   {service: 'Vercel', does: 'Hosting and application logs', sees: 'Application traffic and logs'},
@@ -45,8 +46,8 @@ export default function Trust() {
           '@context': 'https://schema.org',
           '@type': 'BreadcrumbList',
           itemListElement: [
-            {'@type': 'ListItem', position: 1, name: 'Helm', item: 'https://helmsecured.com'},
-            {'@type': 'ListItem', position: 2, name: 'Trust & Security', item: 'https://helmsecured.com/trust'},
+            {'@type': 'ListItem', position: 1, name: 'Helm', item: siteUrl('/')},
+            {'@type': 'ListItem', position: 2, name: 'Trust & Security', item: siteUrl('/trust')},
           ],
         }}
       />

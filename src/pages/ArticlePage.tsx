@@ -5,11 +5,12 @@ import Meta from '../components/Meta';
 import {articles} from './articles';
 import {renderParagraph} from '../lib/richText';
 import {bookCta} from './ctaCopy';
+import {canonicalPath, siteUrl} from '../lib/urls';
 
 export default function ArticlePage() {
   const {slug} = useParams();
   const a = articles.find((x) => x.slug === slug);
-  if (!a) return <Navigate to="/resources" replace />;
+  if (!a) return <Navigate to="/resources/" replace />;
 
   return (
     <>
@@ -30,21 +31,21 @@ export default function ArticlePage() {
               datePublished: a.date,
               dateModified: a.date,
               inLanguage: 'en-US',
-              mainEntityOfPage: {'@type': 'WebPage', '@id': `https://helmsecured.com/resources/${a.slug}`},
+              mainEntityOfPage: {'@type': 'WebPage', '@id': siteUrl(`/resources/${a.slug}`)},
               image: 'https://helmsecured.com/og.png',
-              author: {'@type': 'Organization', name: 'Helm', url: 'https://helmsecured.com'},
+              author: {'@type': 'Organization', name: 'Helm', url: siteUrl('/')},
               publisher: {
                 '@type': 'Organization',
                 name: 'HelmSecure LLC',
-                url: 'https://helmsecured.com',
+                url: siteUrl('/'),
                 logo: {'@type': 'ImageObject', url: 'https://helmsecured.com/og.png'},
               },
             },
             {
               '@type': 'BreadcrumbList',
               itemListElement: [
-                {'@type': 'ListItem', position: 1, name: 'Resources', item: 'https://helmsecured.com/resources'},
-                {'@type': 'ListItem', position: 2, name: a.title, item: `https://helmsecured.com/resources/${a.slug}`},
+                {'@type': 'ListItem', position: 1, name: 'Resources', item: siteUrl('/resources')},
+                {'@type': 'ListItem', position: 2, name: a.title, item: siteUrl(`/resources/${a.slug}`)},
               ],
             },
           ],
@@ -54,7 +55,7 @@ export default function ArticlePage() {
         <HeroBackdrop kind="rain" />
         <div className="wrap article-head">
           <div className="eyebrow reveal">
-            <Link to="/resources" style={{color: 'inherit', textDecoration: 'none'}}>
+            <Link to="/resources/" style={{color: 'inherit', textDecoration: 'none'}}>
               Resources
             </Link>{' '}
             · {a.lane} · {a.readMin} min
@@ -83,9 +84,9 @@ export default function ArticlePage() {
           </div>
           <nav className="article-related observe d2" aria-label="Related pages">
             <span>Related:</span>
-            <Link to={a.laneTo}>{a.lane === 'All industries' ? 'How Helm works' : `Helm for ${a.lane}`}</Link>
-            <Link to="/free-scan">Free email security scan</Link>
-            <Link to="/pricing">Pricing</Link>
+            <Link to={canonicalPath(a.laneTo)}>{a.lane === 'All industries' ? 'How Helm works' : `Helm for ${a.lane}`}</Link>
+            <Link to="/free-scan/">Free email security scan</Link>
+            <Link to="/pricing/">Pricing</Link>
           </nav>
         </article>
       </Band>

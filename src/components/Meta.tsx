@@ -1,6 +1,5 @@
 import {Head} from 'vite-react-ssg';
-
-const SITE = 'https://helmsecured.com';
+import {SITE_ORIGIN, siteUrl} from '../lib/urls';
 
 export default function Meta({
   title,
@@ -21,9 +20,8 @@ export default function Meta({
   publishedTime?: string;
   modifiedTime?: string;
 }) {
-  const url = `${SITE}${path === '/' ? '' : path}`;
-  const canonicalUrl = url === SITE ? `${SITE}/` : url;
-  const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${SITE}${ogImage}`;
+  const canonicalUrl = siteUrl(path);
+  const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${SITE_ORIGIN}${ogImage}`;
   return (
     <Head>
       <title>{title}</title>

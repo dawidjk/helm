@@ -13,7 +13,11 @@ function walkDir(dir, callback) {
   fs.readdirSync(dir).forEach(f => {
     const dirPath = path.join(dir, f);
     const isDirectory = fs.statSync(dirPath).isDirectory();
-    isDirectory ? walkDir(dirPath, callback) : callback(path.join(dir, f));
+    if (isDirectory) {
+      walkDir(dirPath, callback);
+    } else {
+      callback(path.join(dir, f));
+    }
   });
 }
 
@@ -54,7 +58,9 @@ walkDir(DIST_DIR, (filePath) => {
       if (m) lastmod = m[1];
     }
 
-    const url = `${SITE_URL}${route === '' ? '/' : '/' + route}`;
+    // vite-react-ssg emits nested directory pages and GitHub Pages serves
+    // those pages at trailing-slash URLs. Submit only the final URLs.
+    const url = `${SITE_URL}${route === '' ? '/' : '/' + route + '/'}`;
     urls.push({ url, route, lastmod });
   }
 });
