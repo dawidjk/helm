@@ -1,8 +1,9 @@
 import HeroBackdrop from '../components/HeroBackdrop';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {Button} from '@astryxdesign/core/Button';
 import {Band, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
+import {getAttribution, trackConversion} from '../lib/measurement';
 
 // FormSubmit endpoint for this general contact form. LeadForm (the one-field
 // scan capture form) no longer uses FormSubmit: it navigates straight to the
@@ -18,19 +19,38 @@ const interests = [
 
 export default function Contact() {
   const [state, setState] = useState<'idle' | 'busy' | 'sent' | 'error'>('idle');
+  const [intent, setIntent] = useState<string | null>(null);
   const sent = state === 'sent';
+
+  useEffect(() => {
+    const requestedIntent = new URLSearchParams(window.location.search).get('intent');
+    setIntent(requestedIntent);
+    if (requestedIntent === 'findings-call') {
+      trackConversion('findings_call_selected');
+    }
+  }, []);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (state === 'busy') return;
     setState('busy');
     try {
+      const body = new FormData(e.currentTarget);
+      const attribution = getAttribution(intent ? undefined : 'contact page');
+      body.set('journey_id', attribution.journeyId);
+      body.set('source', attribution.source ?? '');
+      body.set('utm_source', attribution.utmSource ?? '');
+      body.set('utm_medium', attribution.utmMedium ?? '');
+      body.set('utm_campaign', attribution.utmCampaign ?? '');
+      body.set('utm_content', attribution.utmContent ?? '');
+      body.set('utm_term', attribution.utmTerm ?? '');
       const res = await fetch(FORM_ENDPOINT, {
         method: 'POST',
         headers: {Accept: 'application/json'},
-        body: new FormData(e.currentTarget),
+        body,
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      trackConversion('contact_submitted', intent ? undefined : 'contact page');
       setState('sent');
     } catch {
       setState('error');
@@ -40,8 +60,8 @@ export default function Contact() {
   return (
     <>
       <Meta
-        title="Contact Helm: A Human Replies in One Business Day"
-        desc="Contact Helm about email security, AI scam defense, or compliance readiness. Tell us about your business and get a straight answer within one business day."
+        title="Contact Helm: Talk to a Founder"
+        desc="Contact Helm about email security, AI scam defense, or compliance readiness. Tell us about your business and get a direct response from a founder."
         path="/contact"
       />
       <header className="hero lane">
@@ -51,8 +71,8 @@ export default function Contact() {
             Talk to a human.
           </h1>
           <p className="sub reveal d1">
-            Tell us a little about your business and we'll come back within one
-            business day with a straight answer, not a sales sequence.
+            Tell us a little about your business. A founder will respond during
+            business hours with a straight answer.
           </p>
         </div>
         <ScrollCue />
@@ -62,7 +82,7 @@ export default function Contact() {
         {sent ? (
           <div className="contact-done reveal" role="status">
             <h3>✓ Message received.</h3>
-            <p>We'll reply within one business day from hello@helmsecured.com.</p>
+            <p>A founder will reply during business hours from hello@helmsecured.com.</p>
           </div>
         ) : (
           <form className="contact-form observe in" onSubmit={onSubmit}>
@@ -121,7 +141,7 @@ export default function Contact() {
                 size="lg"
                 type="submit"
               />
-              <span className="cf-note">No newsletter. No drip campaign. Just a reply.</span>
+              <span className="cf-note">A founder reviews every message.</span>
             </div>
             {state === 'error' && (
               <div className="lead-form-error" role="alert">

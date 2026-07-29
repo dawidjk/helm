@@ -217,6 +217,10 @@ export function CtaBand({
     mode === 'book'
       ? "Hi Helm team,\n\nI'd like to book a call.\n\nCompany:\nBest phone (optional):\nAnything you want us to know up front:\n\nThanks!"
       : "Hi Helm team,\n\nI'd like the free security scan for my company.\n\nCompany:\nWebsite domain:\nBest phone (optional):\n\nThanks!";
+  const contactPath =
+    mode === 'book'
+      ? `/contact?intent=findings-call&src=${encodeURIComponent(source)}`
+      : '/contact';
   return (
     <section className="cta-band" id="contact">
       <div className="wrap">
@@ -224,7 +228,7 @@ export function CtaBand({
         <p className="observe d1">{sub}</p>
         <div className="cta-form observe d2">
           {mode === 'book' ? (
-            <Link to="/contact">
+            <Link to={contactPath}>
               <Button label={cta} variant="primary" size="lg" />
             </Link>
           ) : (

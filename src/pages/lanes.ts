@@ -15,16 +15,16 @@ export const manufacturing: Lane = {
   statusChip: 'Phase 2 certification suspended July 2026 · self-assessment still in force',
   pains: [
     {
-      title: 'Lose the contract, lose the shop',
-      body: 'Primes are already flowing CMMC requirements down to subs. No certification means you can be dropped from bids you have won for years.',
+      title: 'Know what the contract requires',
+      body: 'Cybersecurity requirements can appear in solicitations and contract clauses. Before you bid or affirm, know which requirement applies and whether your current evidence supports it.',
     },
     {
-      title: 'A wrong score is False Claims Act exposure',
-      body: 'Primes can see your SPRS score, and your Affirming Official signs the annual affirmation personally. During the suspension the Department says it will enforce NIST 800-171 through self-assessments and selected government-led assessments, which is not a softer review than a C3PAO would have run.',
+      title: 'Your score and affirmation need support',
+      body: 'An SPRS score and annual affirmation should be tied to current evidence. A gap assessment separates what is implemented, what still needs proof, and what belongs in a remediation plan.',
     },
     {
-      title: 'DIY compliance burns the year',
-      body: 'NIST 800-171 has 110 controls. Interpreting them internally costs engineering time you need on the floor, and gets rejected when done wrong.',
+      title: 'Internal review still takes real time',
+      body: 'NIST 800-171 has 110 controls. Interpreting them across systems, policies, and evidence takes focused technical and business time. A gap assessment shows where that work is before you fund it.',
     },
   ],
   planTitle: 'Know the gap before you fund the fix.',
@@ -67,12 +67,12 @@ export const professionalServices: Lane = {
   slug: 'professional-services',
   backdrop: 'skyline',
   reportDomain: 'riveralaw.com',
-  metaTitle: 'Cybersecurity for Law Firms, CPAs & Medical Practices | Helm',
+  metaTitle: 'Cybersecurity for New Jersey Law Firms & CPAs | Helm',
   metaDesc:
-    'Wire fraud defense, HIPAA readiness, and cyber-insurance questionnaire remediation for law firms, accounting firms, and dental/medical practices. Per-seat pricing, plain English.',
-  eyebrow: 'Law · CPA · Dental & Medical',
+    'Email impersonation checks, wire-fraud controls, and questionnaire readiness for New Jersey law and CPA firms. Start with a free domain scan.',
+  eyebrow: 'New Jersey Law Firms · CPA Firms',
   headline: 'Your clients trust you with everything. Keep it that way.',
-  sub: 'Wire fraud, HIPAA exposure, and cyber-insurance questionnaires now decide which firms clients and carriers trust. One spoofed email can move client money, and no malpractice policy covers the reputation.',
+  sub: 'Wire fraud, sensitive client records, and security questionnaires shape which firms clients and carriers trust. One spoofed email can redirect client money or expose a confidential matter.',
   primaryCta: 'Get a free email security assessment',
   pains: [
     {
@@ -84,8 +84,8 @@ export const professionalServices: Lane = {
       body: 'Cyber-insurance forms commonly ask about controls such as MFA, email authentication, staff readiness, and incident response. An answer should be accurate and supported, not guessed.',
     },
     {
-      title: 'HIPAA fines don’t care about size',
-      body: 'Dental and medical practices carry the same breach-notification duties as hospital systems, with none of the security staff.',
+      title: 'Client questionnaires need evidence',
+      body: 'A client may ask how you protect email, payments, access, or incidents. A defensible answer is tied to a control and a record, not a guess made before a deadline.',
     },
   ],
   planTitle: 'Protection that fits a practice.',
@@ -104,22 +104,21 @@ export const professionalServices: Lane = {
     {
       num: '3',
       title: 'Helm Ready',
-      body: 'A fixed-fee assessment for cyber-insurance, client questionnaires, or HIPAA readiness. Any remediation follows under a separate written scope.',
+      body: 'A fixed-fee assessment for cyber-insurance or client-questionnaire readiness. Any remediation follows under a separate written scope.',
     },
   ],
   proof: {
     title: 'What your carrier and your clients see.',
     points: [
       'Payment-instruction protocol designed to prevent unverified changes',
-      'Questionnaire answers tied to actual evidence',
-      'HIPAA Security Rule gaps documented and prioritized',
+      'Questionnaire answers tied to documented controls and evidence',
       'Published scope and pricing before work begins',
       'Founder-led delivery with clear vendor attribution',
     ],
   },
   cta: {
     title: 'Would your firm catch the fake wire request?',
-    sub: 'Free automated scan of your email domain shows exactly how easily you can be impersonated: plain-English report in about a minute.',
+    sub: 'A free automated scan shows whether your public email controls make impersonation easier: plain-English report, usually in about a minute.',
     label: 'Run the free scan',
   },
 };
@@ -130,7 +129,7 @@ export const contractors: Lane = {
   reportDomain: 'summitbuilders.com',
   metaTitle: 'Payment Fraud Protection for Contractors & Trades | Helm',
   metaDesc:
-    'Stop fake invoices and hijacked payment instructions. Email fraud protection and GC-ready security attestations built for contractors, subs, and field-service businesses.',
+    'Reduce exposure to fake invoices and hijacked payment instructions. Practical email, payment-verification, and readiness support for contractors and trades.',
   eyebrow: 'Contractors · Trades · Field Services',
   headline: 'One fake invoice can wipe out a job’s profit.',
   sub: 'Spoofed supplier invoices, hijacked payment instructions, and fake GC emails can turn routine payment changes into expensive mistakes. Some GCs and insurers also ask subcontractors to document basic security controls.',
@@ -138,7 +137,7 @@ export const contractors: Lane = {
   pains: [
     {
       title: 'Supplier invoice fraud',
-      body: 'Attackers watch a real email thread, then send an "updated bank details" note from a lookalike domain. The money leaves and doesn’t come back.',
+      body: 'Attackers can imitate a supplier or compromise a real thread, then send changed bank details. Once a transfer is sent, recovery can be difficult and time-sensitive.',
     },
     {
       title: 'GCs now require security',
@@ -146,21 +145,21 @@ export const contractors: Lane = {
     },
     {
       title: 'Field teams, office risk',
-      body: 'Estimators and office managers approve payments from phones and job sites, exactly where phishing works best.',
+      body: 'Estimators and office managers may review payment requests from phones and job sites, where context switching can make a changed instruction harder to verify.',
     },
   ],
-  planTitle: 'Simple controls that stop real losses.',
-  planSub: 'No IT department needed. We run it; you build.',
+  planTitle: 'Simple controls that reduce payment risk.',
+  planSub: 'Clear responsibilities for the inbox, payment changes, and the evidence a customer or insurer requests.',
   steps: [
     {
       num: '1',
       title: 'Lock the inbox',
-      body: 'Helm Mail blocks lookalike-domain and spoofed-invoice email before your office manager ever sees it.',
+      body: 'Helm Mail adds managed filtering for compatible Microsoft 365 tenants, with configuration and review handled by Helm.',
     },
     {
       num: '2',
       title: 'Verify every payment change',
-      body: 'A dead-simple callback protocol for changed bank details: the single control that defeats invoice fraud, AI or not.',
+      body: 'A written callback protocol adds an out-of-band check before changed bank details are approved, even when the request looks convincing.',
     },
     {
       num: '3',
@@ -180,7 +179,7 @@ export const contractors: Lane = {
   },
   cta: {
     title: 'How exposed is your payment chain?',
-    sub: 'Free scan shows whether scammers can impersonate your company to your GCs and suppliers: report in about a minute.',
+    sub: 'A free scan checks the public email controls involved in impersonation: plain-English report, usually in about a minute.',
     label: 'Run the free check',
   },
 };

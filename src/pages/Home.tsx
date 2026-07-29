@@ -62,8 +62,8 @@ export default function Home() {
   return (
     <>
       <Meta
-        title="Helm: Email Security & AI Scam Defense for Small Business"
-        desc="Enterprise-grade email security, AI scam defense, and compliance readiness for small businesses, plain English, published pricing, backed by 24/7 security operations. Free email security scan with instant results."
+        title="Helm: Email Security for New Jersey Small Business"
+        desc="Founder-led New Jersey security for law firms, CPA firms, and small businesses: email impersonation defense, AI scam readiness, compliance projects, and a free domain scan."
         path="/"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -82,15 +82,15 @@ export default function Home() {
           <div className="eyebrow reveal">Security · Compliance · Peace of mind</div>
           <h1 className="reveal d1">Take the helm of your security.</h1>
           <p className="sub reveal d2">
-            Enterprise-grade protection, sized and priced for real businesses:
-            law firms, manufacturers, medical offices, and the trades. No
-            jargon, no bloat, no 40-page reports you'll never read.
+            Practical protection, sized and priced for real businesses: law
+            firms, manufacturers, medical offices, and the trades. No jargon,
+            no bloat, no 40-page reports you'll never read.
           </p>
           <div className="hero-ctas reveal d3">
             <LeadForm source="home hero" cta="Get my free scan" compact />
           </div>
           <div className="hero-note reveal d3">
-            Free automated email-security scan · instant plain-English report · no meeting
+            Free automated email-security scan · plain-English report in about a minute · no meeting
           </div>
         </div>
         <ScrollCue />
@@ -139,12 +139,12 @@ export default function Home() {
 
       <Band variant="raised">
         <div className="band-head observe">
-          <h2>The numbers behind the urgency.</h2>
+          <h2>The operating facts.</h2>
         </div>
         <div className="stats">
           <div className="stat observe">
-            <div className="num">$2.9B+</div>
-            <div className="lbl">lost to business email compromise in a single year; most victims are small businesses</div>
+            <div className="num">Public</div>
+            <div className="lbl">SPF, common DKIM selectors, DMARC, and related domain signals can be checked without access to your systems</div>
           </div>
           <div className="stat observe d1">
             <div className="num">72 hrs</div>
@@ -180,7 +180,7 @@ export default function Home() {
 
       <CtaBand
         title="Find out where you stand. Free."
-        sub="We run an automated scan of your email domain and show you a plain-English report of exactly what a scammer sees, in about a minute, no meeting required."
+        sub="We run an automated scan of your email domain and show you a plain-English report of the public signals a scammer can check, usually in about a minute, no meeting required."
         source="home cta band"
       />
     </>

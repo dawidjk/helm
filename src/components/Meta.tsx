@@ -22,16 +22,17 @@ export default function Meta({
   modifiedTime?: string;
 }) {
   const url = `${SITE}${path === '/' ? '' : path}`;
+  const canonicalUrl = url === SITE ? `${SITE}/` : url;
   const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${SITE}${ogImage}`;
   return (
     <Head>
       <title>{title}</title>
       <meta name="description" content={desc} />
       <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={url === SITE ? `${SITE}/` : url} />
+      <link rel="canonical" href={canonicalUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={desc} />
-      <meta property="og:url" content={url} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content="Helm" />
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}

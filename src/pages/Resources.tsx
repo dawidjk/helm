@@ -46,7 +46,7 @@ export default function Resources() {
 
       <CtaBand
         title="Reading is free. So is the scan."
-        sub="The free email security scan turns theory into your actual numbers: instant report."
+        sub="The free email security scan turns theory into findings from your own public domain configuration: report usually in about a minute."
         source="resources cta"
       />
     </>

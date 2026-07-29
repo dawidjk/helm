@@ -89,7 +89,7 @@ export default function Pricing() {
 
       <CtaBand
         title="Not sure which one you need?"
-        sub="Start with the free scan: the report tells you exactly which gaps exist, and which product (if any) closes them."
+        sub="Start with the free scan: the report flags gaps in your public domain configuration and explains the next steps."
         source="pricing cta"
       />
     </>

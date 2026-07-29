@@ -17,7 +17,7 @@ import {manufacturing} from './lanes';
  */
 export const BOOK_CTA = {
   title: 'Have more questions?',
-  sub: 'Send us your vendor-security questionnaire or ask directly: a human replies within one business day.',
+  sub: 'Send us your vendor-security questionnaire or ask directly. A founder responds during business hours.',
   label: 'Talk to us',
 };
 

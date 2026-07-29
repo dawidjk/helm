@@ -101,7 +101,7 @@ export default function ArticlePage() {
       ) : (
         <CtaBand
           title="Get your actual numbers."
-          sub="The free scan reads your domain's real security posture and reports back in plain English, in about a minute."
+          sub="The free scan reads your domain's public email and web configuration and reports back in plain English, usually in about a minute."
           source={`article ${a.slug}`}
         />
       )}

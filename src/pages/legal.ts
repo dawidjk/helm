@@ -66,7 +66,7 @@ export const terms: LegalDoc = {
     {
       h: '4. The free scan',
       body: [
-        `The free email security scan inspects publicly reachable information about a domain you control: published DMARC, SPF, DKIM, MX, DNSSEC, MTA-STS and TLS reporting records, HTTPS certificate status, and a limited unauthenticated mail-server check. It does not search breach datasets or lookalike-domain registrations. It touches nothing inside your systems and requires no credentials.`,
+        `The free email security scan inspects publicly reachable information about a domain you control: published DMARC, SPF, DKIM records under a defined set of common selectors, MX, DNSSEC, MTA-STS and TLS reporting records, HTTPS certificate status, and a limited unauthenticated mail-server check. It does not search breach datasets or lookalike-domain registrations. It touches nothing inside your systems and requires no credentials.`,
         `The scan is provided as is, for informational purposes, with no warranty. A clean result is not an assurance that you are secure. By requesting a scan you confirm you are authorized to request it for that domain.`,
       ],
     },
@@ -188,10 +188,10 @@ export const privacy: LegalDoc = {
       h: '1. Information we collect',
       body: [
         `Information you give us. Name, business email, company name, phone number and whatever you write in a form or email when you request a scan, ask for a quote, or contact us.`,
-        `Free scan inputs. The domain you submit. The scan queries public DNS records, HTTPS certificate data, and limited unauthenticated mail-server information. It does not query breach datasets, access your mail, read your files, or log into your systems.`,
+        `Free scan inputs. The domain you submit. The scan queries public SPF, DMARC, MX, DNSSEC, MTA-STS and TLS reporting records; DKIM records under a defined set of common selectors; HTTPS certificate data; and limited unauthenticated mail-server information. It does not query breach datasets or lookalike-domain registrations, access your mail, read your files, or log into your systems.`,
         `Customer and billing information. Business contact details, billing address and payment records. Card numbers are handled by our payment processor and never touch our servers.`,
         `Service telemetry. Depending on the service purchased, our security platforms process security-relevant data from the environments we protect, including email metadata and quarantined message details or endpoint process and alert data. This can include personal information about your employees.`,
-        `Site analytics. Basic request data such as pages viewed, referrer and approximate region.`,
+        `Site analytics. Basic request data such as pages viewed, referrer and approximate region. For our acquisition funnel, we also record a random browser-tab journey identifier, the page path, campaign source and UTM tags, and whether a scan was started or completed, a findings call was selected, or a contact form was submitted. These records do not contain the form's name, email, company, message, or scanned domain.`,
       ],
     },
     {
@@ -226,6 +226,7 @@ export const privacy: LegalDoc = {
       h: '6. How long we keep it',
       body: [
         `Free scan records and the resulting report: twelve months, then deleted.`,
+        `First-party conversion records: twelve months, then deleted.`,
         `Enquiries that do not become customers: twenty-four months.`,
         `Customer organization data, including scans, reports and alerts: for the life of the engagement and deleted from the live application within thirty days after offboarding. Deleted records may remain recoverable in provider backups until that provider's normal backup window expires.`,
         `Administrative impersonation audit records: twenty-four months, including after the related customer organization is deleted, because these records document privileged administrative access.`,
@@ -257,7 +258,7 @@ export const privacy: LegalDoc = {
     {
       h: '10. Cookies',
       body: [
-        `Our marketing site uses only what is necessary to make it work, including a local preference for your chosen theme. The customer portal uses a session cookie to keep you signed in.`,
+        `Our marketing site uses no advertising cookies. It stores your theme preference locally and uses browser session storage to keep a random journey identifier and campaign tags together while that browser tab remains open. The identifier is not shared with advertisers or used to follow you across other websites. The customer portal uses a session cookie to keep signed-in customers signed in.`,
       ],
     },
     {

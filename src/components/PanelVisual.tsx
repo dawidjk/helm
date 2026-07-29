@@ -51,10 +51,10 @@ export default function PanelVisual({domain = 'acme-mfg.com'}: {domain?: string}
           <span className="rv-badge warn">!</span> DMARC not enforced, spoofing possible
         </li>
         <li>
-          <span className="rv-badge warn">!</span> Lookalike domain registered last month
+          <span className="rv-badge warn">!</span> MTA-STS policy not published
         </li>
         <li>
-          <span className="rv-badge warn">!</span> 4 employee emails in breach data
+          <span className="rv-badge warn">!</span> DNSSEC does not appear to be enabled
         </li>
       </ul>
 

@@ -3,7 +3,7 @@ import {useEffect, useMemo, useRef} from 'react';
 export type BackdropKind = 'cyber' | 'aero' | 'skyline' | 'construction' | 'rain';
 
 /* ------------------------------------------------------------------ */
-/* rain — raindrop ripples spreading across a perfectly still surface  */
+/* rain: raindrop ripples spreading across a perfectly still surface */
 /* ------------------------------------------------------------------ */
 
 function RainCanvas() {

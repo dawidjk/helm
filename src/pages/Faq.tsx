@@ -6,37 +6,37 @@ import {renderParagraph, paragraphText, type Paragraph} from '../lib/richText';
 const faqs: {q: string; a: Paragraph}[] = [
   {
     q: 'We have an IT person. Why do we need Helm?',
-    a: 'IT keeps things running; security keeps things from being stolen. They are different disciplines with different tooling. We work alongside your IT person or MSP constantly: they usually become our biggest advocate, because we take the 2 a.m. security worry off their plate.',
+    a: 'Your IT person or MSP keeps systems running. Helm focuses on the defined security work in your agreement, such as email filtering, endpoint monitoring, or readiness documentation. We can work alongside an existing provider, with responsibilities written down before work begins.',
   },
   {
     q: 'Are we really a target? We only have 15 employees.',
-    a: 'Small businesses are the primary target, not the exception. Criminals automate their targeting, and a 15-person firm with weaker defenses and a real bank account is better economics than a hardened enterprise. Most business email compromise losses come from companies under 100 employees.',
+    a: 'Attackers can automate domain scanning and impersonation, so they do not need to choose a large company first. Team size alone is not a security control. The free scan is a practical first check because it reads the same public domain configuration that anyone on the internet can query.',
   },
   {
     q: 'What does the free scan actually check?',
-    a: 'Your email domain\'s public security posture: whether DMARC prevents criminals from sending as your domain, SPF/DKIM health, lookalike domains registered to impersonate you, and whether employee credentials appear in known breach data. It is automated, external, and touches nothing inside your systems.',
+    a: 'Your domain\'s public security posture: SPF, DKIM, DMARC, mail routing, DNSSEC, mail-transport policies, website certificate status, and a limited unauthenticated mail-server check. It does not search breach datasets or lookalike-domain registrations. It is automated, external, and touches nothing inside your systems.',
   },
   {
     q: 'Do you do 24/7 monitoring yourselves?',
-    a: 'Monitoring behind Helm products runs 24/7 through established security operations partners whose entire business is round-the-clock detection and response. We are transparent about this: it is how a small business gets enterprise-grade coverage without paying for an in-house night shift.',
+    a: 'Monitoring behind Helm products runs 24/7 through established security operations partners whose entire business is round-the-clock detection and response. We are transparent about this: it gives a small business continuous coverage without asking its own staff to run an overnight security operation.',
   },
   {
     q: 'How is pricing structured?',
     a: {
-      text: 'Published on our pricing page, identical for every customer. Monthly subscriptions on auto-pay with no setup or cancellation fees; compliance projects are fixed-fee, scoped in writing before work begins. We do not do custom quotes.',
+      text: 'Helm Mail is $15 per user per month with a $300 account minimum, and Helm Watch is $15 per endpoint per month with a $150 account minimum. Helm Aware and Helm Ready are fixed-fee projects within published starting ranges. Your final scope and fee are written down before work begins; work outside that scope is priced separately.',
       links: [{phrase: 'pricing page', to: '/pricing'}],
     },
   },
   {
     q: 'Can you get us CMMC certified?',
     a: {
-      text: 'Formal CMMC certification is performed only by independent C3PAOs. We get you assessment-ready (gap assessment, remediation, documentation) and hand you to a certified assessment partner. Anyone who claims to sell certification directly is misrepresenting the process.',
+      text: 'Formal CMMC certification is performed only by an authorized independent C3PAO when one is required. Helm Ready can document your current state, identify gaps, and help organize remediation. Helm does not certify your business or promise a particular assessment outcome.',
       links: [{phrase: 'gap assessment', to: '/helm-ready'}],
     },
   },
   {
     q: 'What happens if we get hit while working with you?',
-    a: 'You call us and we handle response alongside our 24/7 partners: containment, recovery, and the insurer conversation. The documentation we maintain for you is exactly what makes a cyber-insurance claim succeed.',
+    a: 'We follow the escalation and response responsibilities in your signed agreement. Huntress provides continuous monitoring and active containment for endpoints covered by Helm Watch; Helm follow-up is during business hours and best effort outside them unless your agreement says otherwise. Broader recovery, legal, insurance, and forensic work is not automatically included.',
   },
   {
     q: 'How fast can we start?',
@@ -93,7 +93,7 @@ export default function Faq() {
 
       <CtaBand
         title="Question not here?"
-        sub="Email us or use the contact form: a human replies within one business day."
+        sub="Email us or use the contact form. A founder responds during business hours."
         source="faq cta"
       />
     </>

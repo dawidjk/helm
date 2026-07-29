@@ -242,12 +242,13 @@ export default function Trust() {
             <section>
               <h2>What our free scan actually does</h2>
               <p>
-                The scan checks public DNS records and certificate data, plus
-                an unauthenticated mail-server banner. It never logs into
-                your systems, never attempts exploitation, and never touches
-                anything beyond information that is already publicly
-                reachable. It is a useful starting signal, and it is not a
-                penetration test.
+                The scan checks public SPF, DMARC, MX, DNSSEC, MTA-STS, and
+                TLS-RPT records; DKIM records under a defined set of common
+                selectors; HTTPS reachability and certificate status; and a
+                limited unauthenticated SMTP probe. It never logs into your
+                systems, attempts exploitation, searches breach datasets, or
+                looks for similar domain registrations. It is a useful
+                starting signal, and it is not a penetration test.
               </p>
               <p>
                 One thing worth knowing: a scan report has a shareable link

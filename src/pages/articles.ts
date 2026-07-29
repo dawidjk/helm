@@ -108,7 +108,7 @@ export const articles: Article[] = [
         h: 'Make your own domain hard to fake',
         ps: [
           'SPF, DKIM, and DMARC are DNS records, not Microsoft settings, but they belong on the same checklist because they determine whether someone can send email that looks like it came from you. Without them in place, your own domain can be used against your customers and vendors, not just against you.',
-          {text: 'A free scan of your domain checks all three in under a minute and tells you, in plain English, what is missing.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+          {text: 'A free scan of your domain usually checks all three in about a minute and tells you, in plain English, what is missing.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
     ],
@@ -187,7 +187,7 @@ export const articles: Article[] = [
           'The vault is only as strong as its master password, so make it a long passphrase, several unrelated words strung together, rather than a short password with a symbol swapped in. Pair that master password with MFA on the vault itself.',
           'A vault does not replace MFA on the underlying accounts. Turn MFA on for email, banking, and admin logins the same as you would without a vault; the vault manages the password, not the second factor.',
           {text: 'Roll it out in order rather than all at once: admin and financial accounts first, since those carry the most risk, then the shared credentials living in spreadsheets and sticky notes, then everyone else\'s individual logins. Pairing the rollout with a short explanation of how credential stuffing actually works, the kind of thing covered in security awareness training, cuts down on people quietly going back to old habits.', links: [{phrase: 'security awareness training', to: '/helm-aware'}]},
-          {text: 'Credential hygiene is one half of the picture. The other half is whether your own domain can be spoofed in the first place, and a free scan checks that in under a minute.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+          {text: 'Credential hygiene is one half of the picture. The other half is your domain\'s public email configuration, and a free scan usually checks that in about a minute.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
     ],
@@ -270,7 +270,7 @@ export const articles: Article[] = [
         h: 'Protect your own name too',
         ps: [
           {text: 'The same scam runs in the other direction: someone spoofs your domain and sends a fake invoice or a fake banking change to your own customers. DMARC and proper email authentication make your domain much harder to fake, which protects your customers and your reputation at the same time.', links: [{phrase: 'DMARC and proper email authentication', to: '/helm-mail'}]},
-          {text: 'A free scan of your domain checks whether that protection is already in place or still missing.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+          {text: 'A free scan of your domain checks whether the related public authentication records are published and how they are configured.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
     ],
@@ -346,7 +346,7 @@ export const articles: Article[] = [
         h: 'Keep it payable',
         ps: [
           'Keep an evidence folder, not just a memory of good intentions: training logs, backup-test records, MFA screenshots, dated and organized. When a claim is filed, this folder is what turns "we believe we were compliant" into proof.',
-          {text: 'Carriers increasingly check the technical basics themselves, including whether your domain has real email authentication in place. A free scan of your own domain tells you what a carrier or an attacker would see before either one looks.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+          {text: 'Carriers may check technical basics such as public email authentication. A free scan of your own domain reports how those public records are configured before a questionnaire or review.', links: [{phrase: 'free scan', to: '/free-scan'}]},
           {text: 'Re-verify your answers at every renewal instead of rolling over last year\'s form, and remediate gaps at a fixed fee rather than letting them sit until the next application asks again.', links: [{phrase: 'remediate gaps at a fixed fee', to: '/helm-ready'}]},
         ],
       },
@@ -384,7 +384,7 @@ export const articles: Article[] = [
         h: 'Protect your own name too',
         ps: [
           {text: 'The same scam runs in the other direction: someone spoofs your company\'s domain and sends a fake invoice to one of your own customers. DMARC on your domain, set up correctly, is what stops your business name from being used to defraud the people who trust you.', links: [{phrase: 'DMARC on your domain', to: '/helm-mail'}]},
-          {text: 'Lookalike domains are the other half of this: a supplier name spelled with a swapped letter or a different ending, close enough to pass a fast read on a phone screen. Checking your own domain is the first step; a free scan shows whether your setup currently makes spoofing easy.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+          {text: 'Lookalike domains are the other half of this: a supplier name spelled with a swapped letter or a different ending, close enough to pass a fast read on a phone screen. The free scan does not search for lookalike registrations, but it does report how your own public email authentication is configured.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
     ],
@@ -538,7 +538,7 @@ export const articles: Article[] = [
         h: 'What still works',
         ps: [
           {text: 'Technical controls do not care how fluent the email is. Domain authentication and DMARC, paired with filtering that inspects the message itself rather than trying to judge the writer\'s intent, catch what a careful reading no longer can.', links: [{phrase: 'Domain authentication and DMARC', to: '/helm-mail'}]},
-          {text: 'Check your own domain first: a free scan shows whether your own email can currently be spoofed, which is the same weakness an attacker would look for before writing a single word.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+          {text: 'Check your own domain first: a free scan reports how your public email authentication is configured, which helps identify gaps worth fixing before an impersonation attempt.', links: [{phrase: 'free scan', to: '/free-scan'}]},
           {text: 'Process controls hold up just as well. A callback protocol for any new or changed payment instruction, verified by phone to a known-good number, stops the fraud regardless of how convincing the email or the voice on the other end sounds.', links: [{phrase: 'callback protocol', to: '/helm-aware'}]},
         ],
       },
@@ -624,7 +624,7 @@ export const articles: Article[] = [
         h: 'One rule that has to survive the field',
         ps: [
           'Never approve a banking or payment-detail change from the field, no matter how the request arrives or how urgent it sounds. Call back a known number from the office first, every time, before anything changes.',
-          {text: 'None of this replaces basic email security either. A free scan shows whether your domain\'s own authentication is already exposed, which is worth knowing before a crew member is troubleshooting it from a truck.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+          {text: 'None of this replaces basic email security either. A free scan reports how your domain\'s public authentication records are configured, which is worth knowing before a crew member is troubleshooting it from a truck.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
     ],
@@ -712,7 +712,7 @@ export const articles: Article[] = [
         h: 'Document it, because attestations are warranties',
         ps: [
           'Insurers treat your questionnaire answers as warranties that stay true for the whole policy year, not a one-time snapshot. A backup process that was solid at renewal and quietly degraded by the time of a claim is exactly the gap carriers look for when deciding whether to pay.',
-          {text: 'Document quarterly restore tests: date, what was restored, how long it took, who verified it. That log is what turns "we believe our backups work" into proof at claim time. It is worth checking your email authentication with the same discipline; a free scan shows what a carrier would find if it looked today.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+          {text: 'Document quarterly restore tests: date, what was restored, how long it took, who verified it. That log is what turns "we believe our backups work" into proof at claim time. It is worth checking your email authentication with the same discipline; a free scan reports the public records a reviewer can query today.', links: [{phrase: 'free scan', to: '/free-scan'}]},
           {text: 'If quarterly restore tests are not happening yet, building the schedule and the documentation around them is a fixed, contained piece of work, not an open-ended project.', links: [{phrase: 'fixed, contained piece of work', to: '/helm-ready'}]},
         ],
       },
@@ -936,7 +936,7 @@ export const articles: Article[] = [
       },
     ],
     takeaway:
-      'Check your domain today: our free scan reads your SPF, DKIM, and DMARC records and tells you in plain English whether a criminal can currently impersonate your company. It runs instantly and costs nothing.',
+      'Check your domain today: our free scan reports what your SPF, common DKIM selectors, and DMARC records publish. It usually returns in about a minute and costs nothing.',
   },
   {
     slug: 'incident-response-plan-small-business',
@@ -971,7 +971,7 @@ export const articles: Article[] = [
         ps: [
           'A fifty-page incident response binder is a document nobody reads twice, usually written once for an insurance application and never opened again. In an actual incident, nobody has time to find the right page.',
           {text: 'A one-page plan works because it fits what an incident actually needs in the first hour: the carrier phone number, the claim reporting deadline, who has authority to make decisions, and the one instruction that matters most, do not touch anything until the first call is made. Building that page, and the fuller plan behind it, is exactly the kind of gap a readiness workshop closes before you need it.', links: [{phrase: 'readiness workshop', to: '/helm-ready'}]},
-          {text: 'The same first hour goes faster if you already know your domain\'s exposure instead of learning it live: a free scan run ahead of time tells you whether email spoofing is even possible in the first place, which shapes how fast you can rule causes in or out.', links: [{phrase: 'free scan', to: '/free-scan'}]},
+          {text: 'The same first hour goes faster if you already know your domain\'s public email configuration instead of learning it live. A free scan run ahead of time records those authentication signals so the response team has better starting context.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
     ],

@@ -8,26 +8,26 @@ export default function FreeScan() {
   return (
     <>
       <Meta
-        title="Free Email Security Scan: Instant Report | Helm"
-        desc="Free automated scan of your email domain: SPF, DKIM, DMARC, and HTTPS posture. Plain-English, scored report in about a minute. No meeting, no sales call."
+        title="Free Email Security Scan: Plain-English Report | Helm"
+        desc="Free automated scan of public SPF, common DKIM selectors, DMARC, MX, DNSSEC, HTTPS certificate, MTA-STS, TLS-RPT, and limited SMTP signals. No login required."
         path="/free-scan"
       />
       <header className="hero">
         <HeroBackdrop kind="cyber" />
         <div className="wrap">
-          <div className="eyebrow reveal">Free · No meeting · Instant results</div>
+          <div className="eyebrow reveal">Free · No meeting · Usually about a minute</div>
           <h1 className="reveal d1" style={{maxWidth: '18ch'}}>
-            See your business the way a scammer does.
+            Check the public signals behind email impersonation.
           </h1>
           <p className="sub reveal d2">
-            Enter your work email. The scan runs immediately against your
-            company's domain, and you see your scored report right away: SPF,
-            DKIM, DMARC, and HTTPS posture, in plain English.
+            Enter your work email. The scan checks your company's public domain
+            configuration and returns a scored, plain-English report, usually
+            in about a minute.
           </p>
           <div className="hero-ctas reveal d3">
             <LeadForm source="free-scan page" cta="Run my free scan" compact />
           </div>
-          <div className="hero-note reveal d3">No credit card. No sales sequence. Your report appears immediately.</div>
+          <div className="hero-note reveal d3">No credit card. No required meeting. Your report usually appears in about a minute.</div>
         </div>
         <ScrollCue />
       </header>
@@ -37,11 +37,11 @@ export default function FreeScan() {
           <div>
             <h3 className="observe">What the report covers</h3>
             <ul className="check-list">
-              <li className="observe d1">Can criminals send email as your exact domain? (DMARC enforcement)</li>
-              <li className="observe d2">Are your legitimate senders authorized? (SPF / DKIM health)</li>
-              <li className="observe d3">Is your site's HTTPS certificate and web security posture solid?</li>
-              <li className="observe d1">Plain-English read on MTA-STS and TLS-RPT mail transport protections</li>
-              <li className="observe d2">The three fixes that matter most, in priority order</li>
+              <li className="observe d1">Does your DMARC policy tell receivers to reject authentication failures?</li>
+              <li className="observe d2">What does your SPF record authorize, and is DKIM visible under common selectors?</li>
+              <li className="observe d3">Can the scanner reach your website over HTTPS with a current certificate?</li>
+              <li className="observe d1">Are MTA-STS and TLS-RPT mail-transport records published?</li>
+              <li className="observe d2">Findings grouped by category, with plain-English impact and next steps</li>
             </ul>
           </div>
           <PanelVisual domain="yourcompany.com" />
@@ -56,7 +56,7 @@ export default function FreeScan() {
           <li className="observe d1">
             <div className="step-dot">1</div>
             <h3>Your report appears</h3>
-            <p>In about a minute, written for a business owner, not an IT department.</p>
+            <p>Usually in about a minute, written for a business owner, not an IT department.</p>
           </li>
           <li className="observe d2">
             <div className="step-dot">2</div>
@@ -66,7 +66,7 @@ export default function FreeScan() {
           <li className="observe d3">
             <div className="step-dot">3</div>
             <h3>That's it</h3>
-            <p>No drip campaign, no weekly follow-up calls. One report, one optional conversation.</p>
+            <p>One report, practical next steps, and an optional findings conversation.</p>
           </li>
         </ol>
       </Band>

@@ -7,7 +7,7 @@ export default function About() {
     <>
       <Meta
         title="About Helm: Security That Answers to Your Business"
-        desc="Helm (HelmSecure LLC) is a New Jersey security company bringing enterprise-grade email security, AI scam defense, and compliance readiness to small businesses, in plain English, at published prices."
+        desc="Helm (HelmSecure LLC) is a founder-led New Jersey security company providing practical email security, AI scam readiness, and compliance support at published starting prices."
         path="/about"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -42,9 +42,9 @@ export default function About() {
             Enterprise security had a size requirement. We removed it.
           </h1>
           <p className="sub reveal d2">
-            Helm exists because a 20-person machine shop faces the same
-            criminals as a Fortune 500, with none of the same defenses, and
-            none of the budget for a security department.
+            Small businesses face email impersonation, payment fraud, and
+            compliance demands without a dedicated security department. Helm
+            gives them a clear, founder-led path from finding to action.
           </p>
         </div>
         <ScrollCue />
@@ -55,11 +55,10 @@ export default function About() {
           <div>
             <h3 className="observe">Who we are</h3>
             <p className="observe d1">
-              Helm is a New Jersey company built by two people who watched the
-              same story repeat: an engineer who spent years automating
-              security operations at scale, and a sales leader who spent years
-              hearing business owners say "we're too small to be a target,"
-              right up until the wire cleared.
+              Helm is a New Jersey company built by two founders with
+              complementary responsibilities: security operations and
+              automation on one side, and growth, partnerships, and customer
+              communication on the other.
             </p>
             <p className="observe d2">
               We designed Helm around one observation: small businesses don't

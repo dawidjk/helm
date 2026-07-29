@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import {Button} from '@astryxdesign/core/Button';
+import {trackConversion, withAttribution} from '../lib/measurement';
 
 /** Portal origin the auto-scan flow navigates to. Override in .env for local dev. */
 export const PORTAL_URL = import.meta.env.VITE_PORTAL_URL ?? 'https://app.helmsecured.com';
@@ -38,10 +39,13 @@ export default function LeadForm({
     }
 
     setState('busy');
-    const url = `${PORTAL_URL}/scan/auto?email=${encodeURIComponent(trimmed)}&src=${encodeURIComponent(source)}`;
+    trackConversion('scan_started', source);
+    const url = new URL('/scan/auto', PORTAL_URL);
+    url.searchParams.set('email', trimmed);
+    const attributedUrl = withAttribution(url.toString(), source);
     // Full top-level navigation (not a fetch): the visitor leaves this page
     // and lands on their live scan report in the portal.
-    window.location.href = url;
+    window.location.href = attributedUrl;
   };
 
   return (

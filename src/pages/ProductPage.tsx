@@ -26,7 +26,6 @@ export default function ProductPage() {
               name: p.name,
               description: p.metaDesc,
               provider: {'@type': 'Organization', name: 'HelmSecure LLC', url: 'https://helmsecured.com'},
-              areaServed: 'US',
             },
             {
               '@type': 'FAQPage',
@@ -123,8 +122,8 @@ export default function ProductPage() {
         />
       ) : (
         <CtaBand
-          title="See what a scammer sees. Free."
-          sub="The free scan checks your email domain's real exposure: the report shows exactly what we'd fix."
+          title="Check your public email controls. Free."
+          sub="The free scan reports on your domain's public email and web configuration, with plain-English findings and next steps."
           source={`product ${p.slug} cta`}
         />
       )}

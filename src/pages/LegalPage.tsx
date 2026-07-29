@@ -44,7 +44,7 @@ export default function LegalPage({doc}: {doc: LegalDoc}) {
 
       <CtaBand
         title="Something here unclear?"
-        sub="Ask us before you sign. A human replies within one business day."
+        sub="Ask us before you sign. A founder responds during business hours."
         source={`${doc.slug} cta`}
       />
     </>
