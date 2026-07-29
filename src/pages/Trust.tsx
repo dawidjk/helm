@@ -5,7 +5,11 @@ import {BOOK_CTA} from './ctaCopy';
 import {siteUrl} from '../lib/urls';
 
 const subprocessors: {service: string; does: string; sees: string}[] = [
-  {service: 'Vercel', does: 'Hosting and application logs', sees: 'Application traffic and logs'},
+  {
+    service: 'Vercel',
+    does: 'Hosting, private customer-report storage, and application logs',
+    sees: 'Application traffic, logs, and customer report PDFs stored for portal delivery',
+  },
   {service: 'Turso', does: 'Portal database', sees: 'All stored customer records'},
   {
     service: 'Stripe',
