@@ -42,6 +42,7 @@ export default function LeadForm({
     trackConversion('scan_started', source);
     const url = new URL('/scan/auto', PORTAL_URL);
     url.searchParams.set('email', trimmed);
+    url.searchParams.set('followup', '1');
     const attributedUrl = withAttribution(url.toString(), source);
     // Full top-level navigation (not a fetch): the visitor leaves this page
     // and lands on their live scan report in the portal.
@@ -75,6 +76,10 @@ export default function LeadForm({
           Enter a valid work email address to run your scan.
         </div>
       )}
+      <p className="lead-form-consent">
+        By requesting the scan, you agree to receive your report and a short
+        email follow-up about the findings. Unsubscribe at any time.
+      </p>
     </form>
   );
 }

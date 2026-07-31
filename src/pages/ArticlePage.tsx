@@ -36,7 +36,7 @@ export default function ArticlePage() {
               author: {'@type': 'Organization', name: 'Helm', url: siteUrl('/')},
               publisher: {
                 '@type': 'Organization',
-                name: 'HelmSecure LLC',
+                name: 'Helm Security LLC',
                 url: siteUrl('/'),
                 logo: {'@type': 'ImageObject', url: 'https://helmsecured.com/og.png'},
               },

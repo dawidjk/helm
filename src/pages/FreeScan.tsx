@@ -60,13 +60,13 @@ export default function FreeScan() {
           </li>
           <li className="observe d2">
             <div className="step-dot">2</div>
-            <h3>You decide</h3>
-            <p>Fix the findings yourself with the report's guidance, or ask us to. No obligation either way.</p>
+            <h3>We explain the gaps</h3>
+            <p>If the scan finds at least two visible gaps, we send a short follow-up sequence tied to your report.</p>
           </li>
           <li className="observe d3">
             <div className="step-dot">3</div>
-            <h3>That's it</h3>
-            <p>One report, practical next steps, and an optional findings conversation.</p>
+            <h3>You decide what happens next</h3>
+            <p>Fix the findings yourself, ask us for help, or unsubscribe from the follow-up at any time.</p>
           </li>
         </ol>
       </Band>

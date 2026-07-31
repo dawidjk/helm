@@ -8,12 +8,12 @@ export default function About() {
     <>
       <Meta
         title="About Helm: Security That Answers to Your Business"
-        desc="Helm (HelmSecure LLC) is a founder-led New Jersey security company providing practical email security, AI scam readiness, and compliance support at published starting prices."
+        desc="Helm (Helm Security LLC) is a founder-led New Jersey security company providing practical email security, AI scam readiness, and compliance support at published starting prices."
         path="/about"
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'Organization',
-          name: 'HelmSecure LLC',
+          name: 'Helm Security LLC',
           url: siteUrl('/'),
           email: 'hello@helmsecured.com',
           address: {'@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US'},

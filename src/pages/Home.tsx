@@ -69,7 +69,7 @@ export default function Home() {
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'Organization',
-          name: 'HelmSecure LLC',
+          name: 'Helm Security LLC',
           alternateName: 'Helm',
           url: siteUrl('/'),
           email: 'hello@helmsecured.com',

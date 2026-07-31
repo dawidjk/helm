@@ -44,7 +44,7 @@ export default function Trust() {
     <>
       <Meta
         title="Trust & Security: How We Protect Your Data | Helm"
-        desc="How HelmSecure protects its own systems and yours: our stack, subprocessors, data handling, access control, and where we plainly do not yet have a control. Built for prospects and brokers doing vendor diligence."
+        desc="How Helm Security protects its own systems and yours: our stack, subprocessors, data handling, access control, and where we plainly do not yet have a control. Built for prospects and brokers doing vendor diligence."
         path="/trust"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -80,7 +80,7 @@ export default function Trust() {
             <section>
               <h2>Who we are</h2>
               <p>
-                HelmSecure is a New Jersey LLC, formed, with an EIN and a
+                Helm Security is a New Jersey LLC, formed, with an EIN and a
                 business bank account in place. We are two operators, not a
                 large firm dressed up to look like one: Dawid Kluszczynski
                 handles product, automation, and delivery; Kelly Kluszczynski
@@ -94,7 +94,7 @@ export default function Trust() {
             <section>
               <h2>How we deliver, and who actually does the monitoring</h2>
               <p>
-                HelmSecure is a reseller and integrator, not the builder of
+                Helm Security is a reseller and integrator, not the builder of
                 the detection technology in front of your business. Detection
                 and response capability lives with the platform vendors we
                 resell and configure, not with an overnight desk we staff

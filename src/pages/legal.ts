@@ -18,7 +18,7 @@ export type LegalDoc = {
   sections: LegalSection[];
 };
 
-const ENTITY = 'HelmSecure LLC';
+const ENTITY = 'Helm Security LLC';
 const STATE = 'New Jersey';
 const EMAIL = 'hello@helmsecured.com';
 const EFFECTIVE = 'July 27, 2026';
@@ -197,14 +197,14 @@ export const privacy: LegalDoc = {
     {
       h: '2. How we use it',
       body: [
-        `To run the scan and send you the report. To respond to enquiries and provide quotes. To deliver, monitor and support the services you buy. To detect, investigate and respond to security incidents in your environment. To bill you and keep accounting records. To send service and security notices. To improve our services and our site.`,
+        `To run the scan, show you the report, and send a short follow-up sequence about the findings when the scan identifies actionable gaps. To respond to enquiries and provide quotes. To deliver, monitor and support the services you buy. To detect, investigate and respond to security incidents in your environment. To bill you and keep accounting records. To send service and security notices. To improve our services and our site.`,
         `We do not sell personal information. We do not share it with advertisers. We do not use your service telemetry to market to your employees.`,
       ],
     },
     {
       h: '3. Marketing email',
       body: [
-        `If you give us your address we may send occasional email about Helm products and security guidance relevant to your business. Every message has an unsubscribe link, and unsubscribing never affects service notices or incident alerts, which are operational and cannot be opted out of while you are a customer.`,
+        `The scan form tells you that requesting a scan starts a short report-related follow-up sequence when the report identifies actionable gaps. We may also send occasional email about Helm products and security guidance relevant to your business. Every marketing message has an unsubscribe option, and unsubscribing never affects service notices or incident alerts, which are operational and cannot be opted out of while you are a customer.`,
       ],
     },
     {

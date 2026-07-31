@@ -26,7 +26,7 @@ export default function ProductPage() {
               '@type': 'Service',
               name: p.name,
               description: p.metaDesc,
-              provider: {'@type': 'Organization', name: 'HelmSecure LLC', url: siteUrl('/')},
+              provider: {'@type': 'Organization', name: 'Helm Security LLC', url: siteUrl('/')},
             },
             {
               '@type': 'FAQPage',

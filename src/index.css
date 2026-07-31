@@ -1177,6 +1177,16 @@ body {
   color: light-dark(#0c7a44, #AAE2C4);
 }
 
+.lead-form-consent {
+  flex-basis: 100%;
+  max-width: 560px;
+  margin: 0;
+  padding-top: 2px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: light-dark(rgba(11, 18, 32, 0.54), rgba(235, 240, 250, 0.56));
+}
+
 /* .hero-tall kept for compatibility; all heroes are now full-viewport */
 .hero-tall {
   min-height: calc(100svh - 72px);

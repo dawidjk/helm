@@ -298,7 +298,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="wrap">
         <div>
-          © {new Date().getFullYear()} HelmSecure LLC · New Jersey
+          © {new Date().getFullYear()} Helm Security LLC · New Jersey
           <br />
           Security that answers to your business.
           <br />
