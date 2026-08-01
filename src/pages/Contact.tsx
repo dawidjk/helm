@@ -5,24 +5,18 @@ import {Band, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {getAttribution, trackConversion} from '../lib/measurement';
 import Turnstile from '../components/Turnstile';
+import {contactInterests} from './products';
 
 const CONTACT_ENDPOINT =
   import.meta.env.VITE_CONTACT_URL ??
   'https://app.helmsecured.com/api/contact';
 
-const interests = [
-  'Email security (Helm Mail)',
-  'AI scam defense (Helm Aware)',
-  'Compliance: CMMC / HIPAA / cyber insurance (Helm Ready)',
-  'Not sure yet, tell me what I need',
-];
-
 export default function Contact() {
   const [state, setState] = useState<'idle' | 'busy' | 'sent' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
   const [intent, setIntent] = useState<string | null>(null);
   const [turnstileToken, setTurnstileToken] = useState('');
   const [turnstileResetKey, setTurnstileResetKey] = useState(0);
-  const [startedAt] = useState(() => Date.now());
   const sent = state === 'sent';
 
   useEffect(() => {
@@ -36,6 +30,7 @@ export default function Contact() {
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (state === 'busy') return;
+    setErrorMessage('');
     setState('busy');
     try {
       const body = new FormData(e.currentTarget);
@@ -47,8 +42,7 @@ export default function Contact() {
         phone: body.get('phone'),
         interest: body.get('interest'),
         message: body.get('message'),
-        website: body.get('website'),
-        startedAt,
+        fax: body.get('fax'),
         turnstileToken,
         journeyId: attribution.journeyId,
         source: attribution.source,
@@ -63,14 +57,28 @@ export default function Contact() {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(payload),
       });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if (!res.ok) {
+        const response = (await res.json().catch(() => null)) as
+          | {error?: unknown}
+          | null;
+        throw new Error(
+          typeof response?.error === 'string'
+            ? response.error
+            : 'Something went wrong. Please try again.',
+        );
+      }
       trackConversion('contact_submitted', intent ? undefined : 'contact page');
       setState('sent');
-    } catch {
+    } catch (error) {
       // The single-use token may already be spent; require a fresh challenge
       // before the visitor can retry, whether the failure was HTTP or network.
       setTurnstileToken('');
       setTurnstileResetKey((value) => value + 1);
+      setErrorMessage(
+        error instanceof Error
+          ? error.message
+          : 'Something went wrong. Please try again.',
+      );
       setState('error');
     }
   };
@@ -106,7 +114,7 @@ export default function Contact() {
           <form className="contact-form observe in" onSubmit={onSubmit}>
             <input
               type="text"
-              name="website"
+              name="fax"
               tabIndex={-1}
               autoComplete="off"
               aria-hidden="true"
@@ -141,7 +149,7 @@ export default function Contact() {
                 <option value="" disabled>
                   Choose one…
                 </option>
-                {interests.map((o) => (
+                {contactInterests.map((o) => (
                   <option key={o} value={o}>
                     {o}
                   </option>
@@ -176,7 +184,7 @@ export default function Contact() {
             </div>
             {state === 'error' && (
               <div className="lead-form-error" role="alert">
-                Something went wrong. Email us directly:{' '}
+                {errorMessage} Email us directly:{' '}
                 <a href="mailto:hello@helmsecured.com">hello@helmsecured.com</a>
               </div>
             )}

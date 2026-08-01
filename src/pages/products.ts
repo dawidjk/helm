@@ -185,3 +185,15 @@ export const productList: Product[] = [
     ],
   },
 ];
+
+/**
+ * Contact-form choices are derived from the published product catalog so a
+ * product rename or addition cannot leave the enquiry form behind. Products
+ * with separately purchasable pricing options expose each option directly.
+ */
+export const contactInterests = [
+  ...productList.flatMap((product) =>
+    product.pricingOptions?.map((option) => option.name) ?? [product.name],
+  ),
+  'Not sure — help me choose',
+];
