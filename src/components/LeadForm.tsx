@@ -2,19 +2,19 @@ import {useState} from 'react';
 import {Button} from '@astryxdesign/core/Button';
 import {trackConversion, withAttribution} from '../lib/measurement';
 
-/** Portal origin the auto-scan flow navigates to. Override in .env for local dev. */
+/** Portal origin the protected scan flow navigates to. Override in .env for local dev. */
 export const PORTAL_URL = import.meta.env.VITE_PORTAL_URL ?? 'https://app.helmsecured.com';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /**
- * One-field lead capture: work email in, live scan report out.
+ * One-field lead capture: work email in, protected scan form next.
  * On submit, validates the email client-side, then navigates the top-level
- * window straight to the portal's auto-scan route, which derives the domain
- * from the email and lands the visitor on their scored report, no
- * intermediate scan form. The visitor leaves this page, so there is no
- * success state to manage here, only busy (while navigating) and an inline
- * error for an invalid email.
+ * window to the portal's scan entry route. The portal derives and pre-fills
+ * the business domain, then requires its Turnstile-protected POST before any
+ * scan work begins. The visitor leaves this page, so there is no success state
+ * to manage here, only busy (while navigating) and an inline error for an
+ * invalid email.
  */
 export default function LeadForm({
   source,
@@ -45,7 +45,7 @@ export default function LeadForm({
     url.searchParams.set('followup', '1');
     const attributedUrl = withAttribution(url.toString(), source);
     // Full top-level navigation (not a fetch): the visitor leaves this page
-    // and lands on their live scan report in the portal.
+    // and lands on the protected scan form in the portal.
     window.location.href = attributedUrl;
   };
 
@@ -65,7 +65,7 @@ export default function LeadForm({
         disabled={state === 'busy'}
       />
       <Button
-        label={state === 'busy' ? 'Opening your scan...' : cta}
+        label={state === 'busy' ? 'Opening secure scan...' : cta}
         variant="primary"
         size={compact ? 'md' : 'lg'}
         type="submit"

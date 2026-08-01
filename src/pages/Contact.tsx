@@ -4,11 +4,11 @@ import {Button} from '@astryxdesign/core/Button';
 import {Band, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {getAttribution, trackConversion} from '../lib/measurement';
+import Turnstile from '../components/Turnstile';
 
-// FormSubmit endpoint for this general contact form. LeadForm (the one-field
-// scan capture form) no longer uses FormSubmit: it navigates straight to the
-// portal's auto-scan route instead.
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/hello@helmsecured.com';
+const CONTACT_ENDPOINT =
+  import.meta.env.VITE_CONTACT_URL ??
+  'https://app.helmsecured.com/api/contact';
 
 const interests = [
   'Email security (Helm Mail)',
@@ -20,6 +20,9 @@ const interests = [
 export default function Contact() {
   const [state, setState] = useState<'idle' | 'busy' | 'sent' | 'error'>('idle');
   const [intent, setIntent] = useState<string | null>(null);
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const [turnstileResetKey, setTurnstileResetKey] = useState(0);
+  const [startedAt] = useState(() => Date.now());
   const sent = state === 'sent';
 
   useEffect(() => {
@@ -37,22 +40,37 @@ export default function Contact() {
     try {
       const body = new FormData(e.currentTarget);
       const attribution = getAttribution(intent ? undefined : 'contact page');
-      body.set('journey_id', attribution.journeyId);
-      body.set('source', attribution.source ?? '');
-      body.set('utm_source', attribution.utmSource ?? '');
-      body.set('utm_medium', attribution.utmMedium ?? '');
-      body.set('utm_campaign', attribution.utmCampaign ?? '');
-      body.set('utm_content', attribution.utmContent ?? '');
-      body.set('utm_term', attribution.utmTerm ?? '');
-      const res = await fetch(FORM_ENDPOINT, {
+      const payload = {
+        name: body.get('name'),
+        company: body.get('company'),
+        email: body.get('email'),
+        phone: body.get('phone'),
+        interest: body.get('interest'),
+        message: body.get('message'),
+        website: body.get('website'),
+        startedAt,
+        turnstileToken,
+        journeyId: attribution.journeyId,
+        source: attribution.source,
+        utmSource: attribution.utmSource,
+        utmMedium: attribution.utmMedium,
+        utmCampaign: attribution.utmCampaign,
+        utmContent: attribution.utmContent,
+        utmTerm: attribution.utmTerm,
+      };
+      const res = await fetch(CONTACT_ENDPOINT, {
         method: 'POST',
-        headers: {Accept: 'application/json'},
-        body,
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       trackConversion('contact_submitted', intent ? undefined : 'contact page');
       setState('sent');
     } catch {
+      // The single-use token may already be spent; require a fresh challenge
+      // before the visitor can retry, whether the failure was HTTP or network.
+      setTurnstileToken('');
+      setTurnstileResetKey((value) => value + 1);
       setState('error');
     }
   };
@@ -86,28 +104,34 @@ export default function Contact() {
           </div>
         ) : (
           <form className="contact-form observe in" onSubmit={onSubmit}>
-            <input type="hidden" name="_subject" value="Lead: full contact form" />
-            <input type="hidden" name="_template" value="table" />
+            <input
+              type="text"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              style={{position: 'absolute', left: '-10000px'}}
+            />
 
             <div className="cf-row">
               <label>
                 Name
-                <input type="text" name="name" required autoComplete="name" placeholder="Jane Rivera" />
+                <input type="text" name="name" required maxLength={100} autoComplete="name" placeholder="Jane Rivera" />
               </label>
               <label>
                 Company
-                <input type="text" name="company" required autoComplete="organization" placeholder="Rivera Machining Co." />
+                <input type="text" name="company" required maxLength={150} autoComplete="organization" placeholder="Rivera Machining Co." />
               </label>
             </div>
 
             <div className="cf-row">
               <label>
                 Work email
-                <input type="email" name="email" required autoComplete="email" placeholder="jane@company.com" />
+                <input type="email" name="email" required maxLength={254} autoComplete="email" placeholder="jane@company.com" />
               </label>
               <label>
                 Phone <span className="cf-opt">(optional)</span>
-                <input type="tel" name="phone" autoComplete="tel" placeholder="(555) 555-5555" />
+                <input type="tel" name="phone" maxLength={50} autoComplete="tel" placeholder="(555) 555-5555" />
               </label>
             </div>
 
@@ -130,16 +154,23 @@ export default function Contact() {
               <textarea
                 name="message"
                 rows={5}
+                maxLength={2000}
                 placeholder="Team size, deadlines, what your insurer or customer is asking for…"
               />
             </label>
 
             <div className="cf-actions">
+              <Turnstile
+                action="marketing_contact"
+                onToken={setTurnstileToken}
+                resetKey={turnstileResetKey}
+              />
               <Button
                 label={state === 'busy' ? 'Sending…' : 'Send message'}
                 variant="primary"
                 size="lg"
                 type="submit"
+                isDisabled={state === 'busy' || !turnstileToken}
               />
               <span className="cf-note">A founder reviews every message.</span>
             </div>
