@@ -6,6 +6,7 @@ import {helmTheme} from './helm';
 import {SiteNav, SiteFooter, RevealManager} from './components/Site';
 import {ThemeModeProvider, useThemeMode} from './components/ThemeMode';
 import {canonicalPath} from './lib/urls';
+import AdConsent from './components/AdConsent';
 import './theme.css';
 import './index.css';
 
@@ -48,6 +49,7 @@ function ThemedShell() {
           <Outlet />
         </main>
         <SiteFooter />
+        <AdConsent />
       </LinkProvider>
     </Theme>
   );

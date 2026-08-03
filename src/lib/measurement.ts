@@ -1,3 +1,5 @@
+import {trackMetaConversion} from './adTracking';
+
 export const CONVERSION_EVENTS = [
   'scan_started',
   'findings_call_selected',
@@ -135,6 +137,7 @@ export function trackConversion(
   event: ConversionEvent,
   source?: string,
 ): void {
+  trackMetaConversion(event);
   const body = JSON.stringify({event, ...getAttribution(source)});
   try {
     if (

@@ -37,6 +37,19 @@ Internal totals are visible at `/admin/marketing` in the client portal.
 Conversion records are deleted after 12 months by the portal retention sweep
 or its manual admin fallback.
 
+## Consent-gated Meta remarketing
+
+Set `VITE_META_PIXEL_ID` only after the production privacy-policy review and
+Meta account setup are complete. With no ID, the Meta script, consent panel,
+and Privacy choices footer control do not render.
+
+When an ID is present, Meta's script still does not load until the visitor
+selects **Allow remarketing**. A declined visitor receives only Helm's existing
+first-party, tab-scoped measurement. Accepted visitors generate PageView,
+ScanStarted, Schedule, and Contact events without form values, email addresses,
+company names, messages, or scanned domains. A visitor can reopen Privacy
+choices from the footer and stop future Meta events at any time.
+
 ## Public-form security
 
 Set `VITE_TURNSTILE_SITE_KEY` to the public site key for a Cloudflare

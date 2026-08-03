@@ -21,7 +21,8 @@ export type LegalDoc = {
 const ENTITY = 'Helm Security LLC';
 const STATE = 'New Jersey';
 const EMAIL = 'hello@helmsecured.com';
-const EFFECTIVE = 'July 27, 2026';
+const TERMS_EFFECTIVE = 'July 27, 2026';
+const PRIVACY_EFFECTIVE = 'July 31, 2026';
 
 export const terms: LegalDoc = {
   slug: 'terms',
@@ -32,7 +33,7 @@ export const terms: LegalDoc = {
   eyebrow: 'Legal',
   heading: 'Terms of Service',
   sub: 'The rules that govern our website, the free scan, and every Helm service. Written to be read, not to hide things.',
-  effective: EFFECTIVE,
+  effective: TERMS_EFFECTIVE,
   intro: [
     `These Terms of Service ("Terms") are a binding agreement between you ("you", "Customer") and ${ENTITY}, a ${STATE} limited liability company ("Helm", "we", "us"). They govern your use of our website, the free email security scan, and any Helm product or service you subscribe to.`,
     `By using this site, requesting a scan, or signing an order, you agree to these Terms. If you are agreeing on behalf of a company, you confirm you have authority to bind it.`,
@@ -179,7 +180,7 @@ export const privacy: LegalDoc = {
   eyebrow: 'Legal',
   heading: 'Privacy Policy',
   sub: 'What we collect, why, who else sees it, and how long we keep it. In plain language, because a security company hiding its data practices would be absurd.',
-  effective: EFFECTIVE,
+  effective: PRIVACY_EFFECTIVE,
   intro: [
     `This policy explains how ${ENTITY} ("Helm", "we") handles personal information collected through helmsecured.com, the free email security scan, our customer portal, and the services we deliver to customers.`,
   ],
@@ -192,13 +193,14 @@ export const privacy: LegalDoc = {
         `Customer and billing information. Business contact details, billing address and payment records. Card numbers are handled by our payment processor and never touch our servers.`,
         `Service telemetry. Depending on the service purchased, our security platforms process security-relevant data from the environments we protect, including email metadata and quarantined message details or endpoint process and alert data. This can include personal information about your employees.`,
         `Site analytics. Basic request data such as pages viewed, referrer and approximate region. For our acquisition funnel, we also record a random browser-tab journey identifier, the page path, campaign source and UTM tags, and whether a scan was started or completed, a findings call was selected, or a contact form was submitted. These records do not contain the form's name, email, company, message, or scanned domain.`,
+        `Optional remarketing data. If you select "Allow remarketing," Meta's advertising tool records page views and whether a scan was started, a findings call was selected, or a contact form was submitted. We do not send Meta the form's name, email, company, message, or scanned domain. Meta may connect these events with your account or browser under its own privacy policy so Helm can measure advertising and show follow-up ads.`,
       ],
     },
     {
       h: '2. How we use it',
       body: [
         `To run the scan, show you the report, and send a short follow-up sequence about the findings when the scan identifies actionable gaps. To respond to enquiries and provide quotes. To deliver, monitor and support the services you buy. To detect, investigate and respond to security incidents in your environment. To bill you and keep accounting records. To send service and security notices. To improve our services and our site.`,
-        `We do not sell personal information. We do not share it with advertisers. We do not use your service telemetry to market to your employees.`,
+        `We do not sell personal information. We do not use customer service telemetry to market to employees. We share the limited advertising events described above with Meta only after a website visitor chooses to allow remarketing.`,
       ],
     },
     {
@@ -212,6 +214,7 @@ export const privacy: LegalDoc = {
       body: [
         `We use a small number of vendors ("subprocessors") to deliver our services. They are contractually limited to processing data for us and may not use it for their own purposes.`,
         `Huntress, for managed endpoint detection and response. Stripe, for payment processing and subscription billing. Vercel, for website and portal hosting. Resend, for transactional and notification email. MailProtector, for email security filtering.`,
+        `Meta, only when a website visitor allows remarketing, for advertising measurement and follow-up advertising. Meta receives page and conversion event data, but Helm does not place form entries or scanned domains in those events.`,
         `We also share information where we must: with your own advisors at your direction, with law enforcement or regulators where legally required, with professional advisors under confidentiality, and with an acquirer if the business is sold.`,
         `A current subprocessor list is maintained on our trust page. We will give notice before adding a subprocessor that processes customer service telemetry.`,
       ],
@@ -246,7 +249,7 @@ export const privacy: LegalDoc = {
       body: [
         `You can ask us for a copy of the personal information we hold about you, ask us to correct it, ask us to delete it, or object to a particular use. Email ${EMAIL} and we will respond within thirty days.`,
         `Deletion requests are limited where we must retain records for legal, tax or contractual reasons, and where the data is security evidence tied to an incident.`,
-        `New Jersey and several other states give residents specific privacy rights, including the right to know, delete and opt out of sale or targeted advertising. We do not sell personal information or use it for targeted advertising, and we honor the other rights above for everyone regardless of where they live.`,
+        `New Jersey and several other states give residents specific privacy rights, including the right to know, delete and opt out of sale or targeted advertising. We do not sell personal information. Optional remarketing stays off unless you allow it, and you can withdraw that choice at any time through the Privacy choices link in the site footer. We honor the other rights above for everyone regardless of where they live.`,
       ],
     },
     {
@@ -258,7 +261,8 @@ export const privacy: LegalDoc = {
     {
       h: '10. Cookies',
       body: [
-        `Our marketing site uses no advertising cookies. It stores your theme preference locally and uses browser session storage to keep a random journey identifier and campaign tags together while that browser tab remains open. The identifier is not shared with advertisers or used to follow you across other websites. The customer portal uses a session cookie to keep signed-in customers signed in.`,
+        `Without your permission, our marketing site uses no advertising cookies. It stores your theme preference locally and uses browser session storage to keep a random journey identifier and campaign tags together while that browser tab remains open. This first-party identifier is not shared with advertisers or used to follow you across other websites.`,
+        `If you select "Allow remarketing," the site loads Meta's advertising tool. Meta may set or read advertising cookies and receive the limited page and conversion events described above. Your choice is stored in your browser. Use Privacy choices in the footer to change it. Withdrawing permission stops future Meta events from Helm and clears the Meta cookies our site can access. The customer portal uses a separate session cookie to keep signed-in customers signed in.`,
       ],
     },
     {

@@ -897,10 +897,116 @@ body {
   color: var(--helm-text-strong);
 }
 
+.footer-privacy-button {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--helm-text-dim);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.footer-privacy-button:hover {
+  color: var(--helm-text-strong);
+}
+
 .footer-links {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
+}
+
+/* ------------------------ Remarketing consent --------------------------- */
+
+.ad-consent {
+  position: fixed;
+  z-index: 100;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 20px 22px;
+  border: 1px solid light-dark(rgba(11, 18, 32, 0.16), rgba(255, 255, 255, 0.14));
+  border-radius: 18px;
+  background: light-dark(rgba(255, 255, 255, 0.97), rgba(10, 15, 26, 0.97));
+  box-shadow: 0 18px 70px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(20px);
+}
+
+.ad-consent-title {
+  margin-bottom: 5px;
+  color: var(--helm-text-strong);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.ad-consent p {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--helm-text-dim);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.ad-consent a {
+  color: var(--helm-accent-text);
+}
+
+.ad-consent-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.ad-consent button {
+  min-height: 42px;
+  padding: 0 17px;
+  border-radius: 9999px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ad-consent-decline {
+  border: 1px solid var(--helm-hairline);
+  background: transparent;
+  color: var(--helm-text);
+}
+
+.ad-consent-accept {
+  border: 1px solid #38a169;
+  background: #38a169;
+  color: #06130c;
+}
+
+.ad-consent button:focus-visible,
+.footer-privacy-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(56, 161, 105, 0.35);
+}
+
+@media (max-width: 700px) {
+  .ad-consent {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    display: block;
+    padding: 18px;
+  }
+
+  .ad-consent-actions {
+    justify-content: flex-end;
+    margin-top: 16px;
+  }
 }
 
 /* ------------------------------ Urgency bar ------------------------------ */

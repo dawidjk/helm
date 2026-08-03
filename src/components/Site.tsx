@@ -4,6 +4,7 @@ import {Button} from '@astryxdesign/core/Button';
 import LeadForm, {PORTAL_URL} from './LeadForm';
 import ThemePicker from './ThemePicker';
 import {canonicalPath} from '../lib/urls';
+import {isRemarketingConfigured, openPrivacyChoices} from '../lib/adTracking';
 
 export function HelmMark({size = 28}: {size?: number}) {
   return (
@@ -294,6 +295,7 @@ export function RevealManager() {
 }
 
 export function SiteFooter() {
+  const remarketingConfigured = isRemarketingConfigured();
   return (
     <footer className="site-footer">
       <div className="wrap">
@@ -313,6 +315,11 @@ export function SiteFooter() {
                   {l.label}
                 </Link>
               ))}
+              {col.title === 'Legal' && remarketingConfigured && (
+                <button type="button" className="footer-privacy-button" onClick={openPrivacyChoices}>
+                  Privacy choices
+                </button>
+              )}
             </div>
           ))}
         </div>
