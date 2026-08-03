@@ -45,7 +45,11 @@ export default function ArticlePage() {
               inLanguage: 'en-US',
               mainEntityOfPage: {'@type': 'WebPage', '@id': siteUrl(`/resources/${a.slug}`)},
               image: 'https://helmsecured.com/og.png',
-              author: {'@type': 'Organization', name: 'Helm', url: siteUrl('/')},
+              author: {
+                '@type': 'Person',
+                name: 'Dawid Kluszczynski',
+                url: siteUrl('/about#dawid-kluszczynski'),
+              },
               publisher: {
                 '@type': 'Organization',
                 name: 'Helm Security LLC',
@@ -75,7 +79,7 @@ export default function ArticlePage() {
           <h1 className="reveal d1">{a.title}</h1>
           <div className="article-meta reveal d2">
             <span>
-              By <Link to="/about/">Helm Security</Link>
+              By <Link to="/about/#dawid-kluszczynski">Dawid Kluszczynski</Link>
             </span>
             <span aria-hidden="true">·</span>
             <time dateTime={a.date}>{displayedDate}</time>

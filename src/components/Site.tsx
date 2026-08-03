@@ -5,6 +5,7 @@ import LeadForm, {PORTAL_URL} from './LeadForm';
 import ThemePicker from './ThemePicker';
 import {canonicalPath} from '../lib/urls';
 import {isRemarketingConfigured, openPrivacyChoices} from '../lib/adTracking';
+import {businessPhone, serviceAreaText} from '../lib/business';
 
 export function HelmMark({size = 28}: {size?: number}) {
   return (
@@ -306,6 +307,10 @@ export function SiteFooter() {
           Security that answers to your business.
           <br />
           <a href="mailto:hello@helmsecured.com">hello@helmsecured.com</a>
+          <br />
+          <a href={`tel:${businessPhone.e164}`}>{businessPhone.display}</a>
+          <br />
+          Serving {serviceAreaText}
         </div>
         <div className="footer-cols">
           {footerCols.map((col) => (

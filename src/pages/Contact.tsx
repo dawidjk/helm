@@ -6,6 +6,7 @@ import Meta from '../components/Meta';
 import {getAttribution, trackConversion} from '../lib/measurement';
 import Turnstile from '../components/Turnstile';
 import {contactInterests} from './products';
+import {businessPhone, serviceAreaText} from '../lib/business';
 
 const CONTACT_ENDPOINT =
   import.meta.env.VITE_CONTACT_URL ??
@@ -86,7 +87,7 @@ export default function Contact() {
     <>
       <Meta
         title="Contact Helm: Talk to a Founder"
-        desc="Contact Helm about email security, AI scam defense, or compliance readiness. Tell us about your business and get a direct response from a founder."
+        desc="Contact Helm about email security, AI scam defense, or compliance readiness in Monmouth, Ocean, and Middlesex counties, New Jersey."
         path="/contact"
       />
       <header className="hero lane">
@@ -104,6 +105,20 @@ export default function Contact() {
       </header>
 
       <Band>
+        <div className="contact-public-details observe in" aria-label="Helm contact details">
+          <div>
+            <span>Call</span>
+            <a href={`tel:${businessPhone.e164}`}>{businessPhone.display}</a>
+          </div>
+          <div>
+            <span>Email</span>
+            <a href="mailto:hello@helmsecured.com">hello@helmsecured.com</a>
+          </div>
+          <div>
+            <span>Service area</span>
+            <strong>{serviceAreaText}</strong>
+          </div>
+        </div>
         {sent ? (
           <div className="contact-done reveal" role="status">
             <h3>✓ Message received.</h3>

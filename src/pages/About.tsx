@@ -2,6 +2,7 @@ import HeroBackdrop from '../components/HeroBackdrop';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {siteUrl} from '../lib/urls';
+import {businessPhone, serviceAreaJsonLd} from '../lib/business';
 
 export default function About() {
   return (
@@ -16,6 +17,8 @@ export default function About() {
           name: 'Helm Security LLC',
           url: siteUrl('/'),
           email: 'hello@helmsecured.com',
+          telephone: businessPhone.e164,
+          areaServed: serviceAreaJsonLd,
           address: {'@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US'},
           description:
             'Email security, AI scam defense, and compliance readiness for small businesses.',
@@ -114,7 +117,7 @@ export default function About() {
               </p>
             </div>
           </article>
-          <article className="founder-card observe d1">
+          <article id="dawid-kluszczynski" className="founder-card observe d1">
             <img
               className="founder-portrait"
               src="/team/dawid-kluszczynski.png"
