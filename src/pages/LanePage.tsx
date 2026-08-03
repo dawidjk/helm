@@ -5,7 +5,7 @@ import Meta from '../components/Meta';
 import HeroBackdrop, {type BackdropKind} from '../components/HeroBackdrop';
 import LeadForm from '../components/LeadForm';
 import PanelVisual from '../components/PanelVisual';
-import {siteUrl} from '../lib/urls';
+import {canonicalPath, siteUrl} from '../lib/urls';
 
 export type Lane = {
   slug: string;
@@ -30,6 +30,7 @@ export type Lane = {
   planSub: string;
   steps: {num: string; title: string; body: string}[];
   proof: {title: string; points: string[]};
+  resources: {slug: string; title: string; note: string}[];
   cta: {title: string; sub: string; label: string};
 };
 
@@ -126,6 +127,31 @@ export default function LanePage({lane}: {lane: Lane}) {
             </ul>
           </div>
           <PanelVisual domain={lane.reportDomain} />
+        </div>
+      </Band>
+
+      <Band>
+        <div className="band-head">
+          <h2 className="observe">Practical guides for your next decision.</h2>
+          <p className="observe d1">Start with the question already in front of you, then follow the related guidance.</p>
+        </div>
+        <div className="lane-strip">
+          {lane.resources.map((resource, i) => (
+            <Link
+              key={resource.slug}
+              to={canonicalPath(`/resources/${resource.slug}`)}
+              className={`lane-row observe d${(i % 3) + 1}`}
+            >
+              <div>
+                <div className="kicker">Resource</div>
+                <div className="lane-title">{resource.title}</div>
+              </div>
+              <div className="lane-side">
+                <span className="lane-note">{resource.note}</span>
+                <span className="lane-arrow">→</span>
+              </div>
+            </Link>
+          ))}
         </div>
       </Band>
 

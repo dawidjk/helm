@@ -6,6 +6,7 @@ export type Article = {
   title: string;
   metaDesc: string;
   date: string;
+  updated?: string;
   readMin: number;
   lane: string;
   laneTo: string;

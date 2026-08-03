@@ -7,8 +7,9 @@ import LeadForm from '../components/LeadForm';
 import PanelVisual from '../components/PanelVisual';
 import ProductMotif, {type MotifKind} from '../components/ProductMotif';
 
-const products: {motif: MotifKind; kicker: string; title: string; body: string; price: string}[] = [
+const products: {slug: string; motif: MotifKind; kicker: string; title: string; body: string; price: string}[] = [
   {
+    slug: 'helm-mail',
     motif: 'mail',
     kicker: 'Helm Mail',
     title: 'Email fraud, stopped cold.',
@@ -16,6 +17,7 @@ const products: {motif: MotifKind; kicker: string; title: string; body: string; 
     price: 'From $15 per user / month',
   },
   {
+    slug: 'helm-aware',
     motif: 'aware',
     kicker: 'Helm Aware',
     title: 'Make the next scam less convincing.',
@@ -23,6 +25,7 @@ const products: {motif: MotifKind; kicker: string; title: string; body: string; 
     price: '$10 per active learner / month',
   },
   {
+    slug: 'helm-ready',
     motif: 'ready',
     kicker: 'Helm Ready',
     title: 'Pass the questionnaire. Win the contract.',
@@ -30,6 +33,7 @@ const products: {motif: MotifKind; kicker: string; title: string; body: string; 
     price: 'Fixed-fee projects from $2,500',
   },
   {
+    slug: 'helm-watch',
     motif: 'watch',
     kicker: 'Helm Watch',
     title: '24/7 endpoint monitoring.',
@@ -64,7 +68,7 @@ export default function Home() {
     <>
       <Meta
         title="Helm: Email Security for New Jersey Small Business"
-        desc="Founder-led New Jersey security for law firms, CPA firms, and small businesses: email impersonation defense, AI scam readiness, compliance projects, and a free domain scan."
+        desc="Founder-led New Jersey security for small businesses: email fraud protection, AI scam readiness, compliance projects, and a free domain scan."
         path="/"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -107,13 +111,19 @@ export default function Home() {
         </div>
         <div className="product-grid four">
           {products.map((p, i) => (
-            <div key={p.kicker} className={`product-tile observe d${i + 1}`}>
+            <Link
+              key={p.kicker}
+              to={canonicalPath(`/${p.slug}`)}
+              className={`product-tile observe d${i + 1}`}
+              aria-label={`Explore ${p.kicker}: ${p.title}`}
+            >
               <ProductMotif kind={p.motif} />
               <div className="kicker">{p.kicker}</div>
               <h3>{p.title}</h3>
               <p>{p.body}</p>
               <div className="price">{p.price}</div>
-            </div>
+              <div className="product-link">Explore {p.kicker} →</div>
+            </Link>
           ))}
         </div>
       </Band>

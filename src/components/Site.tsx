@@ -54,6 +54,7 @@ const footerCols = [
     links: [
       {to: '/about', label: 'About'},
       {to: '/resources', label: 'Resources'},
+      {to: '/quiz', label: 'AI scam quiz'},
       {to: '/faq', label: 'FAQ'},
       {to: '/trust', label: 'Trust & Security'},
       {to: '/contact', label: 'Contact'},

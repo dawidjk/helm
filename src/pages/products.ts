@@ -4,6 +4,7 @@ export type Product = {
   slug: string;
   motif: MotifKind;
   name: string;
+  metaTitle: string;
   tagline: string;
   desc: string;
   metaDesc: string;
@@ -31,6 +32,7 @@ export const productList: Product[] = [
     slug: 'helm-mail',
     motif: 'mail',
     name: 'Helm Mail',
+    metaTitle: 'Helm Mail: Managed Microsoft 365 Email Security',
     tagline: 'Email fraud, stopped cold.',
     desc: 'Managed email security for small businesses on Microsoft 365. We configure and monitor the filtering layer, help your team handle suspicious messages, and report the result in plain English.',
     metaDesc:
@@ -67,6 +69,7 @@ export const productList: Product[] = [
     ctaMode: 'book',
     motif: 'aware',
     name: 'Helm Aware',
+    metaTitle: 'Helm Aware: Managed Security Awareness Training',
     tagline: 'Make the next scam less convincing.',
     desc: 'Managed monthly learning and phishing shaped by active threat profiles Huntress researchers see every day, with clear Helm reporting and review. Add the fixed-fee workshop when your team also needs AI-use and payment-verification controls.',
     metaDesc:
@@ -116,10 +119,11 @@ export const productList: Product[] = [
     ctaMode: 'book',
     motif: 'ready',
     name: 'Helm Ready',
+    metaTitle: 'Helm Ready: Cyber Insurance and CMMC Readiness',
     tagline: 'Pass the questionnaire. Win the contract.',
     desc: 'Fixed-fee compliance readiness: cyber-insurance questionnaires, CMMC/NIST 800-171 gap assessments, and HIPAA controls, remediated, documented, and defended in plain English.',
     metaDesc:
-      'Cyber insurance questionnaire help, CMMC gap assessment, and HIPAA readiness for small business. Fixed-fee projects from $2,500: answers your carrier and primes will accept.',
+      'Fixed-fee cyber insurance, CMMC, and HIPAA readiness for small businesses, with documented findings and a prioritized roadmap.',
     price: '$2,500 to $7,500 fixed fee',
     priceDetail: 'Insurance readiness and CMMC Level 1 from $2,500. HIPAA or full CMMC Level 2 gap assessments typically $5,000 to $7,500.',
     features: [
@@ -151,10 +155,11 @@ export const productList: Product[] = [
     slug: 'helm-watch',
     motif: 'watch',
     name: 'Helm Watch',
+    metaTitle: 'Helm Watch: 24/7 Managed Endpoint Detection',
     tagline: '24/7 detection and response, without the 24/7 payroll.',
     desc: 'Managed detection and response for small business endpoints: a round-the-clock security operations center watches every machine, investigates alerts, and isolates compromised endpoints before an incident spreads.',
     metaDesc:
-      'Managed detection and response (MDR) for small business: 24/7 SOC monitoring, human-triaged alerts, and endpoint isolation from $15/endpoint/month. No hardware, no new staff.',
+      'Managed endpoint detection and response with Huntress 24/7 SOC monitoring, human-triaged alerts, and containment from $15 per endpoint monthly.',
     price: '$15 / endpoint / month',
     priceDetail: '$150 monthly account minimum. EDR-only at launch, with a Huntress SOC monitoring covered Windows and Mac endpoints.',
     features: [

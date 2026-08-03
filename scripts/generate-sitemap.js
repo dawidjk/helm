@@ -33,8 +33,6 @@ function getPriority(route) {
   return '0.5';
 }
 
-const currentDate = new Date().toISOString().split('T')[0];
-
 walkDir(DIST_DIR, (filePath) => {
   if (filePath.endsWith('.html')) {
     let relativePath = path.relative(DIST_DIR, filePath);
@@ -49,13 +47,14 @@ walkDir(DIST_DIR, (filePath) => {
 
     if (relativePath === '404.html') return;
 
-    // Article pages carry a real publication date in their JSON-LD; use it as
-    // lastmod instead of the build date so the signal stays trustworthy.
-    let lastmod = currentDate;
+    // Only publish lastmod when the page carries a real editorial date. A
+    // deploy date is not evidence that the page content changed.
+    let lastmod;
     if (route.startsWith('resources/')) {
       const html = fs.readFileSync(filePath, 'utf8');
-      const m = html.match(/"datePublished":"(\d{4}-\d{2}-\d{2})"/);
-      if (m) lastmod = m[1];
+      const modified = html.match(/"dateModified":"(\d{4}-\d{2}-\d{2})"/);
+      const published = html.match(/"datePublished":"(\d{4}-\d{2}-\d{2})"/);
+      lastmod = modified?.[1] ?? published?.[1];
     }
 
     // vite-react-ssg emits nested directory pages and GitHub Pages serves
@@ -69,7 +68,7 @@ urls.sort((a, b) => parseFloat(getPriority(b.route)) - parseFloat(getPriority(a.
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map(({url, route, lastmod}) => `  <url>\n    <loc>${url}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <priority>${getPriority(route)}</priority>\n  </url>`).join('\n')}
+${urls.map(({url, route, lastmod}) => `  <url>\n    <loc>${url}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}\n    <priority>${getPriority(route)}</priority>\n  </url>`).join('\n')}
 </urlset>`;
 
 fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), sitemap);

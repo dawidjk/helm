@@ -56,6 +56,11 @@ export const manufacturing: Lane = {
       'Fixed-fee assessment, with remediation scoped only after the gaps are known',
     ],
   },
+  resources: [
+    {slug: 'cmmc-deadline-checklist', title: 'CMMC Deadline Checklist for Small Defense Contractors', note: 'Current requirements'},
+    {slug: 'sprs-score-explained', title: 'SPRS Scores Explained', note: 'Scoring and evidence'},
+    {slug: 'cmmc-level-1-vs-level-2', title: 'CMMC Level 1 vs. Level 2', note: 'Choose the right scope'},
+  ],
   cta: {
     title: 'Where do you stand on all 110 controls?',
     sub: 'Use a free 30-minute readiness call to clarify which requirement applies, what evidence to gather, and whether a fixed-fee assessment is the right next step.',
@@ -116,6 +121,11 @@ export const professionalServices: Lane = {
       'Founder-led delivery with clear vendor attribution',
     ],
   },
+  resources: [
+    {slug: 'wire-fraud-prevention-law-firms', title: 'Wire-Fraud Prevention for Law Firms', note: 'Payment controls'},
+    {slug: 'cyber-insurance-questionnaire', title: 'Cyber-Insurance Questionnaire Checklist', note: 'Prepare your evidence'},
+    {slug: 'ai-phishing-red-flags', title: 'AI Phishing Red Flags', note: 'Train the team'},
+  ],
   cta: {
     title: 'Would your firm catch the fake wire request?',
     sub: 'A free automated scan shows whether your public email controls make impersonation easier: plain-English report, usually in about a minute.',
@@ -177,6 +187,11 @@ export const contractors: Lane = {
       'Readiness evidence sized to the questionnaire in front of you',
     ],
   },
+  resources: [
+    {slug: 'vendor-email-compromise-contractors', title: 'Vendor Email Compromise for Contractors', note: 'Protect the payment chain'},
+    {slug: 'invoice-fraud-red-flags', title: 'Invoice-Fraud Red Flags', note: 'Verify changes'},
+    {slug: 'job-site-devices-public-wifi', title: 'Job-Site Devices and Public Wi-Fi', note: 'Reduce field risk'},
+  ],
   cta: {
     title: 'How exposed is your payment chain?',
     sub: 'A free scan checks the public email controls involved in impersonation: plain-English report, usually in about a minute.',

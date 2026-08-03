@@ -44,7 +44,7 @@ export default function Trust() {
     <>
       <Meta
         title="Trust & Security: How We Protect Your Data | Helm"
-        desc="How Helm Security protects its own systems and yours: our stack, subprocessors, data handling, access control, and where we plainly do not yet have a control. Built for prospects and brokers doing vendor diligence."
+        desc="How Helm protects data, manages access and subprocessors, and documents current controls and gaps for prospects, customers, and brokers."
         path="/trust"
         jsonLd={{
           '@context': 'https://schema.org',

@@ -16,7 +16,7 @@ export default function ProductPage() {
   return (
     <>
       <Meta
-        title={`${p.name}: ${p.tagline} | Helm`}
+        title={`${p.metaTitle} | Helm`}
         desc={p.metaDesc}
         path={`/${p.slug}`}
         jsonLd={{

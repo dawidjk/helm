@@ -3,14 +3,26 @@ import {useParams, Navigate, Link} from 'react-router-dom';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {articles} from './articles';
+import {articleSupport} from './articleSupport';
 import {renderParagraph} from '../lib/richText';
 import {bookCta} from './ctaCopy';
 import {canonicalPath, siteUrl} from '../lib/urls';
+import ArticleVisual from '../components/ArticleVisual';
 
 export default function ArticlePage() {
   const {slug} = useParams();
   const a = articles.find((x) => x.slug === slug);
   if (!a) return <Navigate to="/resources/" replace />;
+  const support = articleSupport[a.slug];
+  const relatedArticles = support.relatedSlugs
+    .map((relatedSlug) => articles.find((article) => article.slug === relatedSlug))
+    .filter((article) => article !== undefined);
+  const displayedDate = new Intl.DateTimeFormat('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC',
+  }).format(new Date(`${a.date}T00:00:00Z`));
 
   return (
     <>
@@ -20,7 +32,7 @@ export default function ArticlePage() {
         path={`/resources/${a.slug}`}
         ogType="article"
         publishedTime={a.date}
-        modifiedTime={a.date}
+        modifiedTime={a.updated}
         jsonLd={{
           '@context': 'https://schema.org',
           '@graph': [
@@ -29,7 +41,7 @@ export default function ArticlePage() {
               headline: a.title,
               description: a.metaDesc,
               datePublished: a.date,
-              dateModified: a.date,
+              ...(a.updated ? {dateModified: a.updated} : {}),
               inLanguage: 'en-US',
               mainEntityOfPage: {'@type': 'WebPage', '@id': siteUrl(`/resources/${a.slug}`)},
               image: 'https://helmsecured.com/og.png',
@@ -61,6 +73,13 @@ export default function ArticlePage() {
             · {a.lane} · {a.readMin} min
           </div>
           <h1 className="reveal d1">{a.title}</h1>
+          <div className="article-meta reveal d2">
+            <span>
+              By <Link to="/about/">Helm Security</Link>
+            </span>
+            <span aria-hidden="true">·</span>
+            <time dateTime={a.date}>{displayedDate}</time>
+          </div>
         </div>
         <ScrollCue />
       </header>
@@ -69,6 +88,7 @@ export default function ArticlePage() {
         <article className="article-body">
           <div className="observe">
             <p className="article-intro">{a.intro}</p>
+            <ArticleVisual slug={a.slug} />
             {a.sections.map((s) => (
               <section key={s.h}>
                 <h2>{s.h}</h2>
@@ -82,11 +102,25 @@ export default function ArticlePage() {
             <h2>The takeaway</h2>
             <p>{a.takeaway}</p>
           </div>
+          <section className="article-sources observe d2" aria-labelledby="article-sources-heading">
+            <h2 id="article-sources-heading">Primary sources</h2>
+            <p>These official references support the guidance in this article.</p>
+            <ul>
+              {support.sources.map((source) => (
+                <li key={source.href}>
+                  <a href={source.href}>{source.title}</a>
+                </li>
+              ))}
+            </ul>
+          </section>
           <nav className="article-related observe d2" aria-label="Related pages">
-            <span>Related:</span>
+            <span>Read next:</span>
+            {relatedArticles.map((article) => (
+              <Link key={article.slug} to={canonicalPath(`/resources/${article.slug}`)}>
+                {article.title}
+              </Link>
+            ))}
             <Link to={canonicalPath(a.laneTo)}>{a.lane === 'All industries' ? 'How Helm works' : `Helm for ${a.lane}`}</Link>
-            <Link to="/free-scan/">Free email security scan</Link>
-            <Link to="/pricing/">Pricing</Link>
           </nav>
         </article>
       </Band>

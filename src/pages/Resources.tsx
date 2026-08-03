@@ -10,7 +10,7 @@ export default function Resources() {
     <>
       <Meta
         title="Resources: Plain-English Security Guides | Helm"
-        desc="Plain-English guides on CMMC requirements, cyber insurance questionnaires, wire fraud prevention, DMARC, and deepfake scams, written for business owners, not IT departments."
+        desc="Plain-English guides on CMMC, cyber insurance, wire fraud, DMARC, and AI scams for small-business owners and managers."
         path="/resources"
       />
       <header className="hero lane">
@@ -29,6 +29,14 @@ export default function Resources() {
       </header>
 
       <Band>
+        <div className="resource-feature observe">
+          <div>
+            <div className="kicker">Interactive assessment</div>
+            <h2>AI Scam Readiness Quiz</h2>
+            <p>Answer 10 questions and get a score plus a prioritized action plan. No email address is required to see the result.</p>
+          </div>
+          <Link to="/quiz/" className="resource-feature-link">Take the 3-minute quiz →</Link>
+        </div>
         <div className="lane-strip">
           {articles.map((a, i) => (
             <Link key={a.slug} to={canonicalPath(`/resources/${a.slug}`)} className={`lane-row observe d${(i % 3) + 1}`}>
