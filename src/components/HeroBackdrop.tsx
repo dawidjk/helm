@@ -1,13 +1,41 @@
 import {useEffect, useMemo, useRef} from 'react';
+import desktop1280Avif from '../assets/brand/helm-hero-desktop-1280.avif';
+import desktop1920Avif from '../assets/brand/helm-hero-desktop-1920.avif';
+import desktop1280Webp from '../assets/brand/helm-hero-desktop-1280.webp';
+import desktop1920Webp from '../assets/brand/helm-hero-desktop-1920.webp';
+import mobile640Avif from '../assets/brand/helm-hero-mobile-640.avif';
+import mobile900Avif from '../assets/brand/helm-hero-mobile-900.avif';
+import mobile640Webp from '../assets/brand/helm-hero-mobile-640.webp';
+import mobile900Webp from '../assets/brand/helm-hero-mobile-900.webp';
 
 export type BackdropKind = 'brand-static' | 'cyber' | 'aero' | 'skyline' | 'construction' | 'rain';
 
 function BrandStaticBackdrop() {
   return (
     <picture className="backdrop-picture">
-      <source media="(max-width: 640px)" srcSet="/brand/helm-static-hero-mobile.webp" />
+      <source
+        media="(max-width: 640px)"
+        type="image/avif"
+        srcSet={`${mobile640Avif} 640w, ${mobile900Avif} 900w`}
+        sizes="100vw"
+      />
+      <source
+        media="(max-width: 640px)"
+        type="image/webp"
+        srcSet={`${mobile640Webp} 640w, ${mobile900Webp} 900w`}
+        sizes="100vw"
+      />
+      <source
+        type="image/avif"
+        srcSet={`${desktop1280Avif} 1280w, ${desktop1920Avif} 1920w`}
+        sizes="100vw"
+      />
       <img
-        src="/brand/helm-static-hero-desktop.webp"
+        src={desktop1920Webp}
+        srcSet={`${desktop1280Webp} 1280w, ${desktop1920Webp} 1920w`}
+        sizes="100vw"
+        width="1920"
+        height="1080"
         alt=""
         loading="eager"
         decoding="async"

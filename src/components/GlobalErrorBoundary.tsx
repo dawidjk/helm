@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { productList } from '../pages/products';
-import { articles } from '../pages/articles';
 
 const THEME_GREEN = '#38A169';
 
@@ -18,8 +16,10 @@ const VALID_PAGES = [
   { path: '/trust', label: 'Trust & Security' },
   { path: '/contact', label: 'Contact' },
   { path: '/resources', label: 'Resources' },
-  ...productList.map(p => ({ path: `/${p.slug}`, label: p.slug.replace('-', ' ') })),
-  ...articles.map(a => ({ path: `/resources/${a.slug}`, label: a.slug.replace(/-/g, ' ') }))
+  { path: '/helm-mail', label: 'Helm Mail' },
+  { path: '/helm-aware', label: 'Helm Aware' },
+  { path: '/helm-ready', label: 'Helm Ready' },
+  { path: '/helm-watch', label: 'Helm Watch' },
 ];
 
 export default function GlobalErrorBoundary() {
