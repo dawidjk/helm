@@ -42,7 +42,6 @@ export default function Contact() {
         phone: body.get('phone'),
         interest: body.get('interest'),
         message: body.get('message'),
-        fax: body.get('fax'),
         turnstileToken,
         journeyId: attribution.journeyId,
         source: attribution.source,
@@ -112,15 +111,6 @@ export default function Contact() {
           </div>
         ) : (
           <form className="contact-form observe in" onSubmit={onSubmit}>
-            <input
-              type="text"
-              name="fax"
-              tabIndex={-1}
-              autoComplete="off"
-              aria-hidden="true"
-              style={{position: 'absolute', left: '-10000px'}}
-            />
-
             <div className="cf-row">
               <label>
                 Name
@@ -168,17 +158,17 @@ export default function Contact() {
             </label>
 
             <div className="cf-actions">
-              <Turnstile
-                action="marketing_contact"
-                onToken={setTurnstileToken}
-                resetKey={turnstileResetKey}
-              />
               <Button
                 label={state === 'busy' ? 'Sending…' : 'Send message'}
                 variant="primary"
                 size="lg"
                 type="submit"
                 isDisabled={state === 'busy' || !turnstileToken}
+              />
+              <Turnstile
+                action="marketing_contact"
+                onToken={setTurnstileToken}
+                resetKey={turnstileResetKey}
               />
               <span className="cf-note">A founder reviews every message.</span>
             </div>
