@@ -22,8 +22,8 @@ export default function Pricing() {
           ],
         }}
       />
-      <header className="hero lane">
-        <HeroBackdrop kind="rain" />
+      <header className="hero lane brand-hero">
+        <HeroBackdrop kind="brand-static" />
         <div className="wrap">
           <div className="eyebrow reveal">Pricing</div>
           <h1 className="reveal d1" style={{maxWidth: '18ch'}}>

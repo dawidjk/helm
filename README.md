@@ -2,6 +2,14 @@
 
 Static React site for `helmsecured.com`.
 
+## Static brand hero
+
+The homepage, About, Trust, and Pricing use responsive static WebP backdrops
+from `public/brand/`. The mobile source is selected at 640 pixels and below.
+Industry pages retain their page-specific animated or illustrated backdrops.
+Hero headings and forms remain live HTML rather than being baked into the
+image.
+
 ## Local development
 
 ```bash

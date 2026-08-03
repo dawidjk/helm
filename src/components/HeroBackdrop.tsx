@@ -1,6 +1,21 @@
 import {useEffect, useMemo, useRef} from 'react';
 
-export type BackdropKind = 'cyber' | 'aero' | 'skyline' | 'construction' | 'rain';
+export type BackdropKind = 'brand-static' | 'cyber' | 'aero' | 'skyline' | 'construction' | 'rain';
+
+function BrandStaticBackdrop() {
+  return (
+    <picture className="backdrop-picture">
+      <source media="(max-width: 640px)" srcSet="/brand/helm-static-hero-mobile.webp" />
+      <img
+        src="/brand/helm-static-hero-desktop.webp"
+        alt=""
+        loading="eager"
+        decoding="async"
+        fetchPriority="high"
+      />
+    </picture>
+  );
+}
 
 /* ------------------------------------------------------------------ */
 /* rain: raindrop ripples spreading across a perfectly still surface */
@@ -431,6 +446,7 @@ function ConstructionSvg() {
 export default function HeroBackdrop({kind}: {kind: BackdropKind}) {
   return (
     <div className={`hero-backdrop ${kind}`} aria-hidden>
+      {kind === 'brand-static' && <BrandStaticBackdrop />}
       {kind === 'cyber' && <EnergyCanvas />}
       {kind === 'aero' && <AeroSvg />}
       {kind === 'skyline' && <SkylineSvg />}

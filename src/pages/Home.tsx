@@ -77,8 +77,8 @@ export default function Home() {
           description: 'Email security, AI scam defense, and compliance readiness for small businesses.',
         }}
       />
-      <header className="hero">
-        <HeroBackdrop kind="cyber" />
+      <header className="hero brand-hero">
+        <HeroBackdrop kind="brand-static" />
         <div className="wrap">
           <div className="eyebrow reveal">Security · Compliance · Peace of mind</div>
           <h1 className="reveal d1">Take the helm of your security.</h1>

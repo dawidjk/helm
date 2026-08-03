@@ -55,8 +55,8 @@ export default function Trust() {
           ],
         }}
       />
-      <header className="hero lane">
-        <HeroBackdrop kind="rain" />
+      <header className="hero lane brand-hero">
+        <HeroBackdrop kind="brand-static" />
         <div className="wrap">
           <div className="eyebrow reveal">Trust & Security</div>
           <h1 className="reveal d1" style={{maxWidth: '20ch'}}>

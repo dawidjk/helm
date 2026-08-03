@@ -1035,6 +1035,81 @@ body {
   mask-image: radial-gradient(85% 90% at 50% 45%, #000 40%, transparent 100%);
 }
 
+.hero-backdrop.brand-static {
+  background: #05070d;
+  mask-image: none;
+}
+
+.backdrop-picture,
+.backdrop-picture img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.backdrop-picture img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-backdrop.brand-static::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(5, 7, 13, 0.18), rgba(5, 7, 13, 0.38)),
+    radial-gradient(72% 68% at 50% 42%, rgba(5, 7, 13, 0.34), rgba(5, 7, 13, 0.04) 72%);
+}
+
+.brand-hero {
+  background: #05070d;
+}
+
+.brand-hero::before {
+  background: radial-gradient(700px 480px at 50% 32%, rgba(56, 161, 105, 0.12), transparent 72%);
+}
+
+.brand-hero h1 {
+  background: linear-gradient(180deg, #ffffff 55%, rgba(255, 255, 255, 0.68));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.brand-hero .eyebrow {
+  color: #7ee0a3;
+}
+
+.brand-hero .sub {
+  color: rgba(235, 240, 250, 0.76);
+}
+
+.brand-hero .hero-note,
+.brand-hero .lead-form-consent {
+  color: rgba(235, 240, 250, 0.58);
+}
+
+.brand-hero .lead-form input[type='email'] {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.brand-hero .lead-form input[type='email']::placeholder {
+  color: rgba(235, 240, 250, 0.5);
+}
+
+.brand-hero .lead-form input[type='email']:focus {
+  background: rgba(255, 255, 255, 0.11);
+}
+
+@media (max-width: 640px) {
+  .backdrop-picture img {
+    object-position: 68% center;
+  }
+}
+
 .backdrop-canvas,
 .backdrop-svg {
   position: absolute;
