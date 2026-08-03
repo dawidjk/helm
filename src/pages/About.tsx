@@ -2,7 +2,7 @@ import HeroBackdrop from '../components/HeroBackdrop';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {siteUrl} from '../lib/urls';
-import {businessPhone, serviceAreaJsonLd} from '../lib/business';
+import {businessPhone, linkedInUrl, serviceAreaJsonLd} from '../lib/business';
 
 export default function About() {
   return (
@@ -16,6 +16,7 @@ export default function About() {
           '@type': 'Organization',
           name: 'Helm Security LLC',
           url: siteUrl('/'),
+          sameAs: [linkedInUrl],
           email: 'hello@helmsecured.com',
           telephone: businessPhone.e164,
           areaServed: serviceAreaJsonLd,

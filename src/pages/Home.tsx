@@ -6,7 +6,7 @@ import HeroBackdrop from '../components/HeroBackdrop';
 import LeadForm from '../components/LeadForm';
 import PanelVisual from '../components/PanelVisual';
 import ProductMotif, {type MotifKind} from '../components/ProductMotif';
-import {businessPhone, serviceAreaJsonLd} from '../lib/business';
+import {businessPhone, linkedInUrl, serviceAreaJsonLd} from '../lib/business';
 
 const products: {slug: string; motif: MotifKind; kicker: string; title: string; body: string; price: string}[] = [
   {
@@ -77,6 +77,7 @@ export default function Home() {
           name: 'Helm Security LLC',
           alternateName: 'Helm',
           url: siteUrl('/'),
+          sameAs: [linkedInUrl],
           email: 'hello@helmsecured.com',
           telephone: businessPhone.e164,
           areaServed: serviceAreaJsonLd,

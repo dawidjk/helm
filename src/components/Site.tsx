@@ -5,7 +5,7 @@ import LeadForm, {PORTAL_URL} from './LeadForm';
 import ThemePicker from './ThemePicker';
 import {canonicalPath} from '../lib/urls';
 import {isRemarketingConfigured, openPrivacyChoices} from '../lib/adTracking';
-import {businessPhone, serviceAreaText} from '../lib/business';
+import {businessPhone, linkedInUrl, serviceAreaText} from '../lib/business';
 
 export function HelmMark({size = 28}: {size?: number}) {
   return (
@@ -309,6 +309,8 @@ export function SiteFooter() {
           <a href="mailto:hello@helmsecured.com">hello@helmsecured.com</a>
           <br />
           <a href={`tel:${businessPhone.e164}`}>{businessPhone.display}</a>
+          <br />
+          <a href={linkedInUrl} aria-label="Helm on LinkedIn">LinkedIn</a>
           <br />
           Serving {serviceAreaText}
         </div>

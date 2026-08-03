@@ -3,6 +3,8 @@ export const businessPhone = {
   e164: '+17329430866',
 };
 
+export const linkedInUrl = 'https://www.linkedin.com/company/helm-secured/';
+
 export const serviceAreaText =
   'Monmouth, Ocean, and Middlesex counties, New Jersey';
 
