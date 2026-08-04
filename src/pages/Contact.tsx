@@ -18,7 +18,21 @@ export default function Contact() {
   const [intent, setIntent] = useState<string | null>(null);
   const [turnstileToken, setTurnstileToken] = useState('');
   const [turnstileResetKey, setTurnstileResetKey] = useState(0);
+  const [turnstileTimedOut, setTurnstileTimedOut] = useState(false);
   const sent = state === 'sent';
+
+  // The Send button stays disabled until Turnstile hands over a token. While
+  // that is pending, say so; if no token arrives in a reasonable window (slow
+  // network, privacy extension blocking the script), surface the email
+  // fallback instead of leaving a silently dead button.
+  useEffect(() => {
+    if (turnstileToken) {
+      setTurnstileTimedOut(false);
+      return;
+    }
+    const timer = window.setTimeout(() => setTurnstileTimedOut(true), 15000);
+    return () => window.clearTimeout(timer);
+  }, [turnstileToken, turnstileResetKey]);
 
   useEffect(() => {
     const requestedIntent = new URLSearchParams(window.location.search).get('intent');
@@ -93,7 +107,7 @@ export default function Contact() {
       <header className="hero lane">
         <HeroBackdrop kind="rain" />
         <div className="wrap">
-          <h1 className="reveal" style={{fontSize: 'clamp(36px, 5vw, 56px)'}}>
+          <h1 className="reveal hero-h1-sm">
             Talk to a human.
           </h1>
           <p className="sub reveal d1">
@@ -185,8 +199,20 @@ export default function Contact() {
                 onToken={setTurnstileToken}
                 resetKey={turnstileResetKey}
               />
-              <span className="cf-note">A founder reviews every message.</span>
+              <span className="cf-note" role="status" aria-live="polite">
+                {turnstileToken || turnstileTimedOut
+                  ? 'A founder reviews every message.'
+                  : 'Verifying you’re human… Send unlocks in a moment.'}
+              </span>
             </div>
+            {!turnstileToken && turnstileTimedOut && (
+              <div className="lead-form-error" role="alert">
+                Verification is taking longer than usual. If no check appeared
+                above, a privacy extension or slow connection may be blocking
+                it — you can email us directly instead:{' '}
+                <a href="mailto:hello@helmsecured.com">hello@helmsecured.com</a>
+              </div>
+            )}
             {state === 'error' && (
               <div className="lead-form-error" role="alert">
                 {errorMessage} Email us directly:{' '}

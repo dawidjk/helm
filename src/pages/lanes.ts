@@ -78,7 +78,7 @@ export const professionalServices: Lane = {
   eyebrow: 'New Jersey Law Firms · CPA Firms',
   headline: 'Your clients trust you with everything. Keep it that way.',
   sub: 'Wire fraud, sensitive client records, and security questionnaires shape which firms clients and carriers trust. One spoofed email can redirect client money or expose a confidential matter.',
-  primaryCta: 'Get a free email security assessment',
+  primaryCta: 'Get my free scan',
   pains: [
     {
       title: 'Wire fraud targets your inbox',
@@ -118,7 +118,7 @@ export const professionalServices: Lane = {
       'Payment-instruction protocol designed to prevent unverified changes',
       'Questionnaire answers tied to documented controls and evidence',
       'Published scope and pricing before work begins',
-      'Founder-led delivery with clear vendor attribution',
+      'Direct leadership involvement with clear vendor attribution',
     ],
   },
   resources: [
@@ -143,7 +143,7 @@ export const contractors: Lane = {
   eyebrow: 'Contractors · Trades · Field Services',
   headline: 'One fake invoice can wipe out a job’s profit.',
   sub: 'Spoofed supplier invoices, hijacked payment instructions, and fake GC emails can turn routine payment changes into expensive mistakes. Some GCs and insurers also ask subcontractors to document basic security controls.',
-  primaryCta: 'Get a free fraud-exposure check',
+  primaryCta: 'Get my free scan',
   pains: [
     {
       title: 'Supplier invoice fraud',
@@ -195,6 +195,6 @@ export const contractors: Lane = {
   cta: {
     title: 'How exposed is your payment chain?',
     sub: 'A free scan checks the public email controls involved in impersonation: plain-English report, usually in about a minute.',
-    label: 'Run the free check',
+    label: 'Run the free scan',
   },
 };

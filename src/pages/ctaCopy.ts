@@ -14,6 +14,11 @@ import {manufacturing} from './lanes';
  * It names the 110 controls and an assessor or a prime, so it fits only pages
  * whose reader is a defense contractor. Do not widen it: on a HIPAA page the
  * prime-contractor line is wrong.
+ *
+ * Terminology note: the instant-scan conversion is called the "free scan"
+ * everywhere on the site (nav, /free-scan, articles, lane CTAs). Do not
+ * introduce synonyms like "free check", "free assessment", or "free email
+ * scan" in CTA labels; one noun, one concept.
  */
 export const BOOK_CTA = {
   title: 'Have more questions?',

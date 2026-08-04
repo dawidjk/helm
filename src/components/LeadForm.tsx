@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useId, useState} from 'react';
 import {Button} from '@astryxdesign/core/Button';
 import {trackConversion, withAttribution} from '../lib/measurement';
 
@@ -8,13 +8,33 @@ export const PORTAL_URL = import.meta.env.VITE_PORTAL_URL ?? 'https://app.helmse
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /**
+ * Known personal-mailbox providers. The scan reads the company domain behind
+ * the address, so a personal inbox would send the visitor off to scan
+ * gmail.com and get a useless report. Only well-known consumer providers are
+ * listed; an unrecognized domain is assumed to be a business and passes.
+ */
+const PERSONAL_DOMAINS = new Set([
+  'gmail.com',
+  'googlemail.com',
+  'yahoo.com',
+  'hotmail.com',
+  'outlook.com',
+  'live.com',
+  'aol.com',
+  'icloud.com',
+  'me.com',
+  'proton.me',
+  'protonmail.com',
+]);
+
+/**
  * One-field lead capture: work email in, protected scan form next.
  * On submit, validates the email client-side, then navigates the top-level
  * window to the portal's scan entry route. The portal derives and pre-fills
  * the business domain, then requires its Turnstile-protected POST before any
  * scan work begins. The visitor leaves this page, so there is no success state
- * to manage here, only busy (while navigating) and an inline error for an
- * invalid email.
+ * to manage here, only busy (while navigating) and inline messages for an
+ * invalid email or a personal mailbox.
  */
 export default function LeadForm({
   source,
@@ -25,8 +45,9 @@ export default function LeadForm({
   cta?: string;
   compact?: boolean;
 }) {
+  const inputId = useId();
   const [email, setEmail] = useState('');
-  const [state, setState] = useState<'idle' | 'busy' | 'error'>('idle');
+  const [state, setState] = useState<'idle' | 'busy' | 'error' | 'personal'>('idle');
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,6 +56,12 @@ export default function LeadForm({
     const trimmed = email.trim();
     if (!EMAIL_RE.test(trimmed)) {
       setState('error');
+      return;
+    }
+
+    const domain = trimmed.slice(trimmed.lastIndexOf('@') + 1).toLowerCase();
+    if (PERSONAL_DOMAINS.has(domain)) {
+      setState('personal');
       return;
     }
 
@@ -51,9 +78,9 @@ export default function LeadForm({
 
   return (
     <form className={`lead-form${compact ? ' compact' : ''}`} onSubmit={onSubmit}>
-      <label htmlFor="lead-email" className="sr-only">Work email</label>
+      <label htmlFor={inputId} className="sr-only">Work email</label>
       <input
-        id="lead-email"
+        id={inputId}
         type="email"
         name="email"
         required
@@ -65,7 +92,7 @@ export default function LeadForm({
         disabled={state === 'busy'}
       />
       <Button
-        label={state === 'busy' ? 'Opening secure scan...' : cta}
+        label={state === 'busy' ? 'Opening our secure portal…' : cta}
         variant="primary"
         size={compact ? 'md' : 'lg'}
         type="submit"
@@ -76,9 +103,18 @@ export default function LeadForm({
           Enter a valid work email address to run your scan.
         </div>
       )}
+      {state === 'personal' && (
+        <div className="lead-form-error" role="alert">
+          That looks like a personal inbox. The scan checks your company's
+          domain — the part after the @ — so enter your work email to get a
+          report about your business.
+        </div>
+      )}
       <p className="lead-form-consent">
-        By requesting the scan, you agree to receive your report and a short
-        email follow-up about the findings. Unsubscribe at any time.
+        Next: confirm your domain on our secure portal — your report follows in
+        about a minute. By requesting the scan, you agree to receive your
+        report and a short email follow-up about the findings. Unsubscribe at
+        any time.
       </p>
     </form>
   );

@@ -4,7 +4,7 @@ import {neutralTheme} from '@astryxdesign/theme-neutral';
 /**
  * Helm brand theme, extends Astryx neutral.
  * Aesthetic: Apple/Ubiquiti product-site polish. Deep ink surfaces,
- * signal-blue accent, pill buttons, generous radii.
+ * racing-green accent, pill buttons, generous radii.
  */
 export const helmTheme = defineTheme({
   name: 'helm',

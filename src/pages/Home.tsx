@@ -68,8 +68,8 @@ export default function Home() {
   return (
     <>
       <Meta
-        title="Helm: Email Security for New Jersey Small Business"
-        desc="Founder-led New Jersey security for small businesses: email fraud protection, AI scam readiness, compliance projects, and a free domain scan."
+        title="Helm: Cybersecurity for New Jersey Small Business"
+        desc="Leadership-led New Jersey security for small businesses: email fraud protection, AI scam readiness, compliance projects, 24/7 endpoint monitoring, and a free domain scan."
         path="/"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -118,7 +118,7 @@ export default function Home() {
             <Link
               key={p.kicker}
               to={canonicalPath(`/${p.slug}`)}
-              className={`product-tile observe d${i + 1}`}
+              className={`product-tile observe d${Math.min(i + 1, 5)}`}
               aria-label={`Explore ${p.kicker}: ${p.title}`}
             >
               <ProductMotif kind={p.motif} />
@@ -144,8 +144,8 @@ export default function Home() {
             <ul className="check-list">
               <li className="observe d2">Cyber-insurance questionnaires answered and remediated</li>
               <li className="observe d3">Wire-fraud and payment-verification protocols that hold up</li>
-              <li className="observe d1">CMMC / NIST 800-171 gap assessments against all 110 controls</li>
-              <li className="observe d2">HIPAA-ready controls for medical and dental practices</li>
+              <li className="observe d4">CMMC / NIST 800-171 gap assessments against all 110 controls</li>
+              <li className="observe d5">HIPAA-ready controls for medical and dental practices</li>
             </ul>
           </div>
           <PanelVisual />
@@ -158,16 +158,16 @@ export default function Home() {
         </div>
         <div className="stats">
           <div className="stat observe">
-            <div className="num">Public</div>
-            <div className="lbl">SPF, common DKIM selectors, DMARC, and related domain signals can be checked without access to your systems</div>
+            <div className="num">$0</div>
+            <div className="lbl">to find out where you stand — the email-domain scan is free</div>
           </div>
           <div className="stat observe d1">
-            <div className="num">72 hrs</div>
-            <div className="lbl">to report a cyber incident under DFARS 252.204-7012, a requirement the CMMC suspension did not touch</div>
+            <div className="num">~1 min</div>
+            <div className="lbl">from scan to plain-English report, no meeting required</div>
           </div>
           <div className="stat observe d2">
             <div className="num">24/7</div>
-            <div className="lbl">Huntress SOC monitoring behind Helm Watch, without staffing your own night shift</div>
+            <div className="lbl">Huntress SOC monitoring behind Helm Watch</div>
           </div>
         </div>
       </Band>
@@ -179,7 +179,7 @@ export default function Home() {
         </div>
         <div className="lane-strip">
           {laneLinks.map((l, i) => (
-            <Link key={l.to} to={canonicalPath(l.to)} className={`lane-row observe d${(i % 3) + 1}`}>
+            <Link key={l.to} to={canonicalPath(l.to)} className={`lane-row observe d${Math.min(i + 1, 5)}`}>
               <div>
                 <div className="kicker">{l.kicker}</div>
                 <div className="lane-title">{l.title}</div>

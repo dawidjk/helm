@@ -9,7 +9,7 @@ export default function About() {
     <>
       <Meta
         title="About Helm: Security That Answers to Your Business"
-        desc="Meet Helm Security, a founder-led New Jersey company providing managed email security, AI scam readiness, and compliance support."
+        desc="Meet Helm Security, a leadership-led New Jersey company providing managed email security, AI scam readiness, and compliance support."
         path="/about"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -23,18 +23,18 @@ export default function About() {
           address: {'@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US'},
           description:
             'Email security, AI scam defense, and compliance readiness for small businesses.',
-          founder: [
+          employee: [
             {
               '@type': 'Person',
               name: 'Kelly Kluszczynski',
               image: 'https://helmsecured.com/team/kelly-kluszczynski.png',
-              jobTitle: 'Co-Founder, Growth & Partnerships',
+              jobTitle: 'Vice President, Growth & Partnerships',
             },
             {
               '@type': 'Person',
               name: 'Dawid Kluszczynski',
               image: 'https://helmsecured.com/team/dawid-kluszczynski.png',
-              jobTitle: 'Co-Founder, Product & Delivery',
+              jobTitle: 'Vice President, Product & Delivery',
             },
           ],
         }}
@@ -49,7 +49,7 @@ export default function About() {
           <p className="sub reveal d2">
             Small businesses face email impersonation, payment fraud, and
             compliance demands without a dedicated security department. Helm
-            gives them a clear, founder-led path from finding to action.
+            gives them a clear, leadership-led path from finding to action.
           </p>
         </div>
         <ScrollCue />
@@ -60,7 +60,7 @@ export default function About() {
           <div>
             <h3 className="observe">Who we are</h3>
             <p className="observe d1">
-              Helm is a New Jersey company built by two founders with
+              Helm is a New Jersey company led by two vice presidents with
               complementary responsibilities: security operations and
               automation on one side, and growth, partnerships, and customer
               communication on the other.
@@ -78,12 +78,12 @@ export default function About() {
               <li className="observe d1">Plain English, always. If you need a glossary, we've failed</li>
               <li className="observe d2">Published starting prices and scope bands, confirmed in writing before work starts</li>
               <li className="observe d3">Honest architecture: our monitoring is backed by 24/7 security operations partners, and we say so</li>
-              <li className="observe d1">No fear selling. Every warning we give ends in a concrete, priced fix</li>
-              <li className="observe d2">Automation-first: machines watch the logs, humans make the calls</li>
+              <li className="observe d4">No fear selling. Every warning we give ends in a concrete, priced fix</li>
+              <li className="observe d5">Automation-first: machines watch the logs, humans make the calls</li>
               {/* Restore when earned: Security+ is scheduled but not passed, and E&O/cyber
                   liability insurance is ON HOLD (see human_work.md). Do not publish either
                   claim before both are true.
-              <li className="observe d3">CompTIA Security+ certified engineering, E&amp;O and cyber liability insured</li>
+              <li className="observe d5">CompTIA Security+ certified engineering, E&amp;O and cyber liability insured</li>
               */}
             </ul>
           </div>
@@ -92,11 +92,11 @@ export default function About() {
 
       <Band>
         <div className="band-head">
-          <div className="eyebrow observe">The founders</div>
-          <h2 className="observe d1">A husband-and-wife company. No hidden bench.</h2>
+          <div className="eyebrow observe">The leadership team</div>
+          <h2 className="observe d1">Two operating executives. No hidden bench.</h2>
           <p className="observe d2">
-            When you hire Helm, you work directly with the two people who own
-            the company and are accountable for the result.
+            When you hire Helm, you work directly with the two executives
+            accountable for the result.
           </p>
         </div>
         <div className="founder-grid">
@@ -104,11 +104,11 @@ export default function About() {
             <img
               className="founder-portrait"
               src="/team/kelly-kluszczynski.png"
-              alt="Kelly Kluszczynski, Co-Founder of Helm Security"
+              alt="Kelly Kluszczynski, VP of Growth and Partnerships at Helm Security"
               loading="lazy"
             />
             <div>
-              <div className="kicker">Co-Founder · Growth &amp; Partnerships</div>
+              <div className="kicker">VP, Growth &amp; Partnerships</div>
               <h3>Kelly Kluszczynski</h3>
               <p>
                 Kelly leads discovery, customer communication, marketing, and
@@ -122,11 +122,11 @@ export default function About() {
             <img
               className="founder-portrait"
               src="/team/dawid-kluszczynski.png"
-              alt="Dawid Kluszczynski, Co-Founder of Helm Security"
+              alt="Dawid Kluszczynski, VP of Product and Delivery at Helm Security"
               loading="lazy"
             />
             <div>
-              <div className="kicker">Co-Founder · Product &amp; Delivery</div>
+              <div className="kicker">VP, Product &amp; Delivery</div>
               <h3>Dawid Kluszczynski</h3>
               <p>
                 Dawid designs Helm&apos;s services, automation, and technical
@@ -137,9 +137,9 @@ export default function About() {
           </article>
         </div>
         <p className="founder-note observe d2">
-          Helm is intentionally founder-led today. We use established security
-          platforms for continuous monitoring, and we never imply that a large
-          internal team is sitting behind the logo.
+          Helm is intentionally leadership-led today. We use established
+          security platforms for continuous monitoring, and we never imply
+          that a large internal team is sitting behind the logo.
         </p>
       </Band>
 

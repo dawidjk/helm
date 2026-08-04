@@ -59,7 +59,7 @@ export default function Trust() {
         <HeroBackdrop kind="brand-static" />
         <div className="wrap">
           <div className="eyebrow reveal">Trust & Security</div>
-          <h1 className="reveal d1" style={{maxWidth: '20ch'}}>
+          <h1 className="reveal d1 hero-title-readable">
             The hard questions, answered directly.
           </h1>
           <p className="sub reveal d2">
@@ -82,12 +82,12 @@ export default function Trust() {
               <p>
                 Helm Security is a New Jersey LLC, formed, with an EIN and a
                 business bank account in place. We are two operators, not a
-                large firm dressed up to look like one: Dawid Kluszczynski
-                handles product, automation, and delivery; Kelly Kluszczynski
-                handles sales, marketing, and partnerships. We are
-                husband-and-wife co-founders and co-owners. That is the whole
-                team today, and we say so plainly rather than implying
-                otherwise.
+                large firm dressed up to look like one. Dawid Kluszczynski is
+                VP, Product &amp; Delivery. Kelly Kluszczynski is VP, Growth
+                &amp; Partnerships. That is the whole operating team today,
+                and we say so plainly rather than implying otherwise. Material
+                pricing, scope, legal, and service commitments require both
+                executives to agree.
               </p>
             </section>
 
@@ -105,7 +105,8 @@ export default function Trust() {
                 not describe identity monitoring or SIEM as included.
               </p>
               <p>
-                We review and act on alerts during business hours. We do not
+                We review and act on alerts Monday through Friday, 9:00 a.m. to
+                5:00 p.m. Eastern Time, excluding federal holidays. We do not
                 sell a response-time guarantee we cannot hold.
               </p>
             </section>
@@ -150,64 +151,21 @@ export default function Trust() {
             <section>
               <h2>Our subprocessors</h2>
               <p>Who else touches your data, and what each one actually sees.</p>
-              <div style={{overflowX: 'auto'}}>
-                <table
-                  style={{
-                    width: '100%',
-                    borderCollapse: 'collapse',
-                    fontSize: 15,
-                    lineHeight: 1.5,
-                  }}
-                >
+              <div className="subproc-scroll">
+                <table className="subproc-table">
                   <thead>
                     <tr>
                       {['Service', 'What it does', 'What it sees'].map((h) => (
-                        <th
-                          key={h}
-                          style={{
-                            textAlign: 'left',
-                            padding: '10px 12px',
-                            borderBottom: '1px solid var(--helm-hairline)',
-                            color: 'var(--helm-text-strong)',
-                            fontWeight: 700,
-                          }}
-                        >
-                          {h}
-                        </th>
+                        <th key={h}>{h}</th>
                       ))}
                     </tr>
                   </thead>
                   <tbody>
                     {subprocessors.map((row) => (
                       <tr key={row.service}>
-                        <td
-                          style={{
-                            padding: '10px 12px',
-                            borderBottom: '1px solid var(--helm-hairline)',
-                            color: 'var(--helm-text-strong)',
-                            fontWeight: 600,
-                          }}
-                        >
-                          {row.service}
-                        </td>
-                        <td
-                          style={{
-                            padding: '10px 12px',
-                            borderBottom: '1px solid var(--helm-hairline)',
-                            color: 'var(--helm-text-dim)',
-                          }}
-                        >
-                          {row.does}
-                        </td>
-                        <td
-                          style={{
-                            padding: '10px 12px',
-                            borderBottom: '1px solid var(--helm-hairline)',
-                            color: 'var(--helm-text-dim)',
-                          }}
-                        >
-                          {row.sees}
-                        </td>
+                        <td>{row.service}</td>
+                        <td>{row.does}</td>
+                        <td>{row.sees}</td>
                       </tr>
                     ))}
                   </tbody>

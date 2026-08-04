@@ -58,7 +58,7 @@ export default function ProductPage() {
             <LeadForm source={`product ${p.slug}`} cta="Get my free scan" compact />
           </div>
           <div className="hero-note reveal d3">
-            {p.price} · <Link to="/pricing/" style={{color: 'light-dark(#0c7a44, #AAE2C4)'}}>full pricing</Link>
+            {p.price} · <Link to="/pricing/">full pricing</Link>
           </div>
         </div>
         <ScrollCue />
@@ -69,7 +69,7 @@ export default function ProductPage() {
           <div>
             <h3 className="observe">What you get</h3>
             {p.features.map((f, i) => (
-              <div key={f.title} className={`observe d${(i % 3) + 1}`} style={{marginBottom: 24}}>
+              <div key={f.title} className={`observe d${Math.min(i + 1, 5)}`} style={{marginBottom: 24}}>
                 <h3 style={{fontSize: 20, marginBottom: 8}}>{f.title}</h3>
                 <p style={{marginBottom: 0}}>{f.body}</p>
               </div>
@@ -104,7 +104,7 @@ export default function ProductPage() {
         </div>
         <ol className="steps-flow">
           {p.how.map((s, i) => (
-            <li key={s.num} className={`observe d${i + 1}`}>
+            <li key={s.num} className={`observe d${Math.min(i + 1, 5)}`}>
               <div className="step-dot">{s.num}</div>
               <h3>{s.title}</h3>
               <p>{s.body}</p>
@@ -119,7 +119,7 @@ export default function ProductPage() {
         </div>
         <div className="faq-list">
           {p.faqs.map((f, i) => (
-            <div key={f.q} className={`faq-item observe d${(i % 3) + 1}`}>
+            <div key={f.q} className={`faq-item observe d${Math.min(i + 1, 5)}`}>
               <h3>{f.q}</h3>
               <p>{f.a}</p>
             </div>

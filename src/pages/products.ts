@@ -10,9 +10,16 @@ export type Product = {
   metaDesc: string;
   price: string;
   priceDetail: string;
+  /**
+   * Commitment term shown beside the price (e.g. "Month to month",
+   * "12-month initial term", "Fixed fee"). Must restate a published term,
+   * never introduce one.
+   */
+  term: string;
   pricingOptions?: {
     name: string;
     price: string;
+    term: string;
     detail: string;
   }[];
   features: {title: string; body: string}[];
@@ -38,6 +45,7 @@ export const productList: Product[] = [
     metaDesc:
       'Managed email security for small business across Microsoft 365, Google Workspace, and other providers, from $15/user/month.',
     price: '$15 / user / month',
+    term: 'Month to month',
     priceDetail: 'Works with Microsoft 365, Google Workspace, and other business email providers. Setup and ongoing management included.',
     features: [
       {
@@ -75,16 +83,19 @@ export const productList: Product[] = [
     metaDesc:
       'Managed security awareness training and phishing simulations for small business at $10 per active learner per month, plus fixed-fee AI scam readiness workshops.',
     price: '$10 / active learner / month',
+    term: '12-month initial term',
     priceDetail: 'No customer account minimum. Setup included. 12-month initial agreement, billed monthly.',
     pricingOptions: [
       {
         name: 'Helm Aware Managed',
         price: '$10 / active learner / month',
+        term: '12-month initial term',
         detail: 'No customer account minimum. Setup included. 12-month initial agreement, billed monthly.',
       },
       {
         name: 'Helm Aware Workshop',
         price: '$2,500 to $4,000 fixed fee',
+        term: 'Fixed fee',
         detail: 'A separate project. No Managed subscription is required. Executive deepfake drills are separately authorized add-ons from $1,500.',
       },
     ],
@@ -125,6 +136,7 @@ export const productList: Product[] = [
     metaDesc:
       'Fixed-fee cyber insurance, CMMC, and HIPAA readiness for small businesses, with documented findings and a prioritized roadmap.',
     price: '$2,500 to $7,500 fixed fee',
+    term: 'Fixed fee',
     priceDetail: 'Insurance readiness and CMMC Level 1 from $2,500. HIPAA or full CMMC Level 2 gap assessments typically $5,000 to $7,500.',
     features: [
       {
@@ -161,6 +173,7 @@ export const productList: Product[] = [
     metaDesc:
       'Managed endpoint detection and response with Huntress 24/7 SOC monitoring, human-triaged alerts, and containment from $15 per endpoint monthly.',
     price: '$15 / endpoint / month',
+    term: 'Month to month',
     priceDetail: '$150 monthly account minimum. EDR-only at launch, with a Huntress SOC monitoring covered Windows and Mac endpoints.',
     features: [
       {

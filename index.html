@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <!-- Preload critical Latin subset fonts to eliminate FOIT/FOUT -->
-    <link rel="preload" href="/src/index.css" as="style" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="object-src 'none'; base-uri 'self'; form-action 'self'"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com https://connect.facebook.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.facebook.com; font-src 'self' data:; connect-src 'self' https://app.helmsecured.com https://challenges.cloudflare.com https://www.facebook.com ws://localhost:* ws://127.0.0.1:*; frame-src 'self' https://challenges.cloudflare.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'"
     />
     <meta name="theme-color" content="#05070d" />
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f6f8" />

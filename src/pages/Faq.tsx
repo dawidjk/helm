@@ -83,7 +83,7 @@ export default function Faq() {
       <Band>
         <div className="faq-list">
           {faqs.map((f, i) => (
-            <div key={f.q} className={`faq-item observe d${(i % 3) + 1}`}>
+            <div key={f.q} className={`faq-item observe d${Math.min(i + 1, 5)}`}>
               <h3>{f.q}</h3>
               <p>{renderParagraph(f.a)}</p>
             </div>

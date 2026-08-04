@@ -271,7 +271,7 @@ export default function QuizWidget() {
             <p className="quiz-cta-intro">
               Want hard data to go with your score? Run the free scan of your email domain.
             </p>
-            <LeadForm source="quiz" cta="Run my free email scan" compact />
+            <LeadForm source="quiz" cta="Run my free scan" compact />
             <p className="quiz-cta-alt">
               Prefer to talk it through? <Link to="/contact/">Contact us.</Link>
             </p>

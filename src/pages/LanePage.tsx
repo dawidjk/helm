@@ -63,7 +63,7 @@ export default function LanePage({lane}: {lane: Lane}) {
         <div className="wrap">
           {lane.statusChip && <StatusChip text={lane.statusChip} />}
           <div className="eyebrow reveal">{lane.eyebrow}</div>
-          <h1 className="reveal d1" style={{maxWidth: '20ch'}}>
+          <h1 className="reveal d1 hero-title-readable">
             {lane.headline}
           </h1>
           <p className="sub reveal d2">{lane.sub}</p>
@@ -77,7 +77,7 @@ export default function LanePage({lane}: {lane: Lane}) {
             )}
           </div>
           <div className="hero-note reveal d3">
-            See <Link to="/pricing/" style={{color: 'light-dark(#0c7a44, #AAE2C4)'}}>published pricing</Link> for Helm Mail, Aware, Ready, and Watch
+            See <Link to="/pricing/">published pricing</Link> for Helm Mail, Aware, Ready, and Watch
           </div>
         </div>
         <ScrollCue />
@@ -89,7 +89,7 @@ export default function LanePage({lane}: {lane: Lane}) {
         </div>
         <div className="risk-list">
           {lane.pains.map((p, i) => (
-            <div key={p.title} className={`risk-item observe d${i + 1}`}>
+            <div key={p.title} className={`risk-item observe d${Math.min(i + 1, 5)}`}>
               <div className="risk-index">{String(i + 1).padStart(2, '0')}</div>
               <div>
                 <h3>{p.title}</h3>
@@ -107,7 +107,7 @@ export default function LanePage({lane}: {lane: Lane}) {
         </div>
         <ol className="steps-flow">
           {lane.steps.map((s, i) => (
-            <li key={s.num} className={`observe d${i + 1}`}>
+            <li key={s.num} className={`observe d${Math.min(i + 1, 5)}`}>
               <div className="step-dot">{s.num}</div>
               <h3>{s.title}</h3>
               <p>{s.body}</p>
@@ -122,7 +122,7 @@ export default function LanePage({lane}: {lane: Lane}) {
             <h3 className="observe">{lane.proof.title}</h3>
             <ul className="check-list">
               {lane.proof.points.map((pt, i) => (
-                <li key={pt} className={`observe d${(i % 3) + 1}`}>{pt}</li>
+                <li key={pt} className={`observe d${Math.min(i + 1, 5)}`}>{pt}</li>
               ))}
             </ul>
           </div>
@@ -140,7 +140,7 @@ export default function LanePage({lane}: {lane: Lane}) {
             <Link
               key={resource.slug}
               to={canonicalPath(`/resources/${resource.slug}`)}
-              className={`lane-row observe d${(i % 3) + 1}`}
+              className={`lane-row observe d${Math.min(i + 1, 5)}`}
             >
               <div>
                 <div className="kicker">Resource</div>

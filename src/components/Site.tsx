@@ -71,11 +71,57 @@ const footerCols = [
   },
 ];
 
+/* Mobile drawer IA: one pinned conversion action, a short primary group
+   (lanes + Pricing + Contact), then the rest of the taxonomy collapsed. */
+const drawerPrimary = [
+  ...lanes,
+  {to: '/pricing', label: 'Pricing'},
+  {to: '/contact', label: 'Contact'},
+];
+
+const drawerSecondary = [
+  {
+    title: 'Products',
+    links: [
+      {to: '/helm-mail', label: 'Helm Mail'},
+      {to: '/helm-aware', label: 'Helm Aware'},
+      {to: '/helm-ready', label: 'Helm Ready'},
+      {to: '/helm-watch', label: 'Helm Watch'},
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      {to: '/about', label: 'About'},
+      {to: '/resources', label: 'Resources'},
+      {to: '/quiz', label: 'AI scam quiz'},
+      {to: '/faq', label: 'FAQ'},
+      {to: '/trust', label: 'Trust & Security'},
+    ],
+  },
+  {
+    title: 'Legal',
+    links: [
+      {to: '/terms', label: 'Terms of Service'},
+      {to: '/privacy', label: 'Privacy Policy'},
+    ],
+  },
+];
+
 export function SiteNav() {
   const {pathname} = useLocation();
   const [open, setOpen] = useState(false);
   const urgencyRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => { setOpen(false); }, [pathname]);
+  // Close the drawer on Escape so keyboard users are not trapped in it.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [open]);
 
   // The urgency banner sits in normal flow above the nav, so pages that show
   // it need the hero to be shorter or its bottom (and the scroll cue) lands
@@ -134,6 +180,9 @@ export function SiteNav() {
               </Link>
             </div>
             <ThemePicker />
+            <Link to="/free-scan/" className="nav-cta-mobile">
+              <Button label="Free scan" variant="primary" size="sm" />
+            </Link>
             <button
               className={`nav-burger${open ? ' open' : ''}`}
               aria-label={open ? 'Close menu' : 'Open menu'}
@@ -149,19 +198,33 @@ export function SiteNav() {
       </nav>
       {open && (
         <div className="nav-drawer">
-          {footerCols.map((col) => (
-            <div key={col.title} className="drawer-group">
-              <div className="footer-col-title">{col.title}</div>
-              {col.links.map((l) => (
-                <Link key={l.to} to={canonicalPath(l.to)}>
-                  {l.label}
-                </Link>
-              ))}
-            </div>
-          ))}
+          <Link to="/free-scan/" className="drawer-cta">
+            <Button label="Get my free scan" variant="primary" size="lg" />
+          </Link>
           <div className="drawer-group">
-            <div className="footer-col-title">Account</div>
+            {drawerPrimary.map((l) => (
+              <Link key={l.to} to={canonicalPath(l.to)}>
+                {l.label}
+              </Link>
+            ))}
+          </div>
+          <div className="drawer-sections">
+            {drawerSecondary.map((col) => (
+              <details key={col.title} className="drawer-section">
+                <summary>{col.title}</summary>
+                <div className="drawer-section-links">
+                  {col.links.map((l) => (
+                    <Link key={l.to} to={canonicalPath(l.to)}>
+                      {l.label}
+                    </Link>
+                  ))}
+                </div>
+              </details>
+            ))}
+          </div>
+          <div className="drawer-foot">
             <a href={`${PORTAL_URL}/login`}>Sign in</a>
+            <ThemePicker />
           </div>
         </div>
       )}

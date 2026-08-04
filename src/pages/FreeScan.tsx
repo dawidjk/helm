@@ -40,8 +40,8 @@ export default function FreeScan() {
               <li className="observe d1">Does your DMARC policy tell receivers to reject authentication failures?</li>
               <li className="observe d2">What does your SPF record authorize, and is DKIM visible under common selectors?</li>
               <li className="observe d3">Can the scanner reach your website over HTTPS with a current certificate?</li>
-              <li className="observe d1">Are MTA-STS and TLS-RPT mail-transport records published?</li>
-              <li className="observe d2">Findings grouped by category, with plain-English impact and next steps</li>
+              <li className="observe d4">Are MTA-STS and TLS-RPT mail-transport records published?</li>
+              <li className="observe d5">Findings grouped by category, with plain-English impact and next steps</li>
             </ul>
           </div>
           <PanelVisual domain="yourcompany.com" />
@@ -55,16 +55,21 @@ export default function FreeScan() {
         <ol className="steps-flow">
           <li className="observe d1">
             <div className="step-dot">1</div>
-            <h3>Your report appears</h3>
-            <p>Usually in about a minute, written for a business owner, not an IT department.</p>
+            <h3>Confirm your domain</h3>
+            <p>You land on our secure portal with your company domain filled in from your email. One confirmation and the scan starts.</p>
           </li>
           <li className="observe d2">
             <div className="step-dot">2</div>
-            <h3>We explain the gaps</h3>
-            <p>If the scan finds at least two visible gaps, we send a short follow-up sequence tied to your report.</p>
+            <h3>Your report appears</h3>
+            <p>Usually in about a minute, written for a business owner, not an IT department.</p>
           </li>
           <li className="observe d3">
             <div className="step-dot">3</div>
+            <h3>We explain the gaps</h3>
+            <p>If the scan finds at least two visible gaps, we send a short follow-up sequence tied to your report.</p>
+          </li>
+          <li className="observe d4">
+            <div className="step-dot">4</div>
             <h3>You decide what happens next</h3>
             <p>Fix the findings yourself, ask us for help, or unsubscribe from the follow-up at any time.</p>
           </li>

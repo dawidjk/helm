@@ -39,7 +39,7 @@ export default function Resources() {
         </div>
         <div className="lane-strip">
           {articles.map((a, i) => (
-            <Link key={a.slug} to={canonicalPath(`/resources/${a.slug}`)} className={`lane-row observe d${(i % 3) + 1}`}>
+            <Link key={a.slug} to={canonicalPath(`/resources/${a.slug}`)} className={`lane-row observe d${Math.min(i + 1, 5)}`}>
               <div>
                 <div className="kicker">{a.lane}</div>
                 <div className="lane-title">{a.title}</div>
