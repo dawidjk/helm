@@ -320,6 +320,9 @@ body {
 
 .hero > .wrap {
   position: relative;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .hero .eyebrow {
@@ -353,6 +356,18 @@ body {
   font-weight: 700;
   letter-spacing: 0.02em;
   white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .deadline-chip {
+    justify-content: center;
+    max-width: 100%;
+    min-height: 30px;
+    height: auto;
+    padding: 6px 14px;
+    line-height: 1.35;
+    white-space: normal;
+  }
 }
 
 .hero h1 {

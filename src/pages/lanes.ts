@@ -99,7 +99,7 @@ export const professionalServices: Lane = {
     {
       num: '1',
       title: 'Helm Mail',
-      body: 'Managed MailProtector filtering for compatible Microsoft 365 tenants, configured and reviewed by Helm.',
+      body: 'Managed MailProtector filtering for Microsoft 365, Google Workspace, and other business email providers, configured and reviewed by Helm.',
     },
     {
       num: '2',
@@ -164,7 +164,7 @@ export const contractors: Lane = {
     {
       num: '1',
       title: 'Lock the inbox',
-      body: 'Helm Mail adds managed filtering for compatible Microsoft 365 tenants, with configuration and review handled by Helm.',
+      body: 'Helm Mail adds managed filtering for Microsoft 365, Google Workspace, and other business email providers, with configuration and review handled by Helm.',
     },
     {
       num: '2',
@@ -180,7 +180,7 @@ export const contractors: Lane = {
   proof: {
     title: 'Built for how the trades actually run.',
     points: [
-      'Helm Mail for compatible Microsoft 365 tenants',
+      'Helm Mail for Microsoft 365, Google Workspace, and other business email providers',
       'Payment-verification protocol customized to your approval process',
       'Endpoint protection scoped to the actual covered fleet',
       'Published pricing and account minimums',

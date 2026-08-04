@@ -167,8 +167,8 @@ function Recommendation({tier}: {tier: TierKey}) {
   if (tier === 'exposed') {
     return (
       <p className="quiz-recommendation-text">
-        <Link to="/helm-mail/">Helm Mail</Link> adds managed MailProtector filtering to a compatible
-        Microsoft 365 environment. Pair it with{' '}
+        <Link to="/helm-mail/">Helm Mail</Link> adds managed MailProtector filtering to Microsoft 365,
+        Google Workspace, and other business email providers. Pair it with{' '}
         <Link to="/helm-aware/">Helm Aware</Link> for a focused workshop on modern scams, safe AI use,
         and payment verification.
       </p>

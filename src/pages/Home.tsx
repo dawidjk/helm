@@ -14,7 +14,7 @@ const products: {slug: string; motif: MotifKind; kicker: string; title: string; 
     motif: 'mail',
     kicker: 'Helm Mail',
     title: 'Email fraud, stopped cold.',
-    body: 'Managed Microsoft 365 email filtering, review, and a real escalation path for suspicious messages. Helm configures the platform and explains what matters.',
+    body: 'Managed email filtering for Microsoft 365, Google Workspace, and other business email providers, plus a real escalation path for suspicious messages. Helm configures the platform and explains what matters.',
     price: 'From $15 per user / month',
   },
   {

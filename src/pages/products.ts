@@ -32,13 +32,13 @@ export const productList: Product[] = [
     slug: 'helm-mail',
     motif: 'mail',
     name: 'Helm Mail',
-    metaTitle: 'Helm Mail: Managed Microsoft 365 Email Security',
+    metaTitle: 'Helm Mail: Managed Email Security for Small Business',
     tagline: 'Email fraud, stopped cold.',
-    desc: 'Managed email security for small businesses on Microsoft 365. We configure and monitor the filtering layer, help your team handle suspicious messages, and report the result in plain English.',
+    desc: 'Managed email security for small businesses using Microsoft 365, Google Workspace, or another business email provider. We configure and monitor the filtering layer, help your team handle suspicious messages, and report the result in plain English.',
     metaDesc:
-      'Managed email security for small business on Microsoft 365: phishing, spoofing, and invoice fraud protection from $15/user/month.',
+      'Managed email security for small business across Microsoft 365, Google Workspace, and other providers, from $15/user/month.',
     price: '$15 / user / month',
-    priceDetail: '$300 monthly account minimum. Microsoft 365 only at launch. Setup and ongoing management included.',
+    priceDetail: 'Works with Microsoft 365, Google Workspace, and other business email providers. Setup and ongoing management included.',
     features: [
       {
         title: 'Managed filtering that actually gets managed',
@@ -54,14 +54,14 @@ export const productList: Product[] = [
       },
     ],
     how: [
-      {num: '1', title: 'Qualify', body: 'We confirm your Microsoft 365 tenant is compatible and agree on a deployment window and rollback plan.'},
+      {num: '1', title: 'Qualify', body: 'We confirm your email environment and the appropriate MailProtector deployment path, then agree on a deployment window and rollback plan.'},
       {num: '2', title: 'Protect', body: 'MailProtector filtering is deployed and verified without changing your addresses or migrating mailboxes.'},
       {num: '3', title: 'Report', body: 'Quarterly plain-English report delivered and walked through with you.'},
     ],
     faqs: [
-      {q: 'Do we need to switch email providers?', a: 'No. Helm Mail layers on top of a compatible Microsoft 365 tenant. Nothing about your email addresses or daily workflow changes.'},
-      {q: 'Do you support Google Workspace?', a: 'Not at launch. MailProtector is developing its Google Workspace offering, but we will not sell that deployment until the product and our rollout process are ready.'},
-      {q: 'Is there a minimum seat count?', a: 'There is no hard seat minimum, but there is a $300 monthly account minimum because the managed filtering platform carries an account-level cost.'},
+      {q: 'Do we need to switch email providers?', a: 'No. Helm Mail layers on top of your existing business email service. Nothing about your email addresses or daily workflow changes.'},
+      {q: 'Do you support Google Workspace?', a: 'Yes. MailProtector supports Google Workspace and other providers through its established filtering system. We confirm compatibility and the deployment path before scheduling the rollout.'},
+      {q: 'Is there a minimum seat count?', a: 'No. Helm Mail is billed at $15 per user per month.'},
     ],
   },
   {

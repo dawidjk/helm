@@ -77,11 +77,11 @@ export default function Pricing() {
         <div className="band-head">
           <h2 className="observe">How the numbers work</h2>
           <p className="observe d1">
-            A 20-person business runs $300/month on Helm Mail, which is also
-            the monthly account minimum. Ten covered endpoints run $150/month
-            on Helm Watch. Helm Aware Managed is $10 per active learner with no
-            customer minimum. Aware workshops and Ready projects have defined
-            scope bands so a smaller engagement does not subsidize a larger one.
+            A 20-person business runs $300/month on Helm Mail. Ten covered
+            endpoints run $150/month on Helm Watch. Helm Aware Managed is $10
+            per active learner with no customer minimum. Aware workshops and
+            Ready projects have defined scope bands so a smaller engagement
+            does not subsidize a larger one.
           </p>
         </div>
         <div className="pricing-terms">
