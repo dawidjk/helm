@@ -100,7 +100,7 @@ export default function Home() {
             <Link key={lane.to} to={canonicalPath(lane.to)}>
               <span>{lane.name}</span>
               <strong>{lane.promise}</strong>
-              <DirectionIcon external />
+              <DirectionIcon />
             </Link>
           ))}
         </nav>

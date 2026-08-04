@@ -1,10 +1,11 @@
 import HeroBackdrop from '../components/HeroBackdrop';
 import {Link} from 'react-router-dom';
-import {Band, CtaBand, DirectionIcon, ScrollCue} from '../components/Site';
+import {Band, CtaBand, DirectionIcon} from '../components/Site';
 import Meta from '../components/Meta';
 import {siteUrl} from '../lib/urls';
 import ProductMotif from '../components/ProductMotif';
 import {productList} from './products';
+import './Pricing.css';
 
 /**
  * Pricing-page scan order (2x2 grid): the two month-to-month unit-priced
@@ -25,6 +26,51 @@ const pricingTiles = [...productList].sort((a, b) => tileRank(a.slug) - tileRank
  */
 const displayPrice = (price: string) => price.replace(/\s+fixed fee$/i, '');
 
+type PricingLedgerRow = {
+  offer: string;
+  slug: string;
+  bestFor: string;
+  price: string;
+  commitment: string;
+  minimum: string;
+};
+
+/**
+ * One row per purchasable offer. Values below restate facts already published
+ * in the product catalog and FAQs; the ledger introduces no new terms.
+ */
+const pricingLedger: PricingLedgerRow[] = pricingTiles.flatMap((product) => {
+  if (product.slug === 'helm-aware' && product.pricingOptions) {
+    return product.pricingOptions.map((option) => ({
+      offer: option.name,
+      slug: product.slug,
+      bestFor: option.name === 'Helm Aware Managed'
+        ? 'Teams that need managed monthly learning and phishing'
+        : 'Teams that need an AI scam readiness workshop',
+      price: displayPrice(option.price),
+      commitment: option.term,
+      minimum: option.name === 'Helm Aware Managed'
+        ? 'No account minimum'
+        : '$2,500 project fee',
+    }));
+  }
+
+  const minimumBySlug: Record<string, string> = {
+    'helm-mail': 'No seat minimum',
+    'helm-watch': '$150 / month account',
+    'helm-ready': '$2,500 project fee',
+  };
+
+  return [{
+    offer: product.name,
+    slug: product.slug,
+    bestFor: product.bestFor,
+    price: displayPrice(product.price),
+    commitment: product.term,
+    minimum: minimumBySlug[product.slug] ?? 'See offer details',
+  }];
+});
+
 export default function Pricing() {
   return (
     <>
@@ -41,7 +87,7 @@ export default function Pricing() {
           ],
         }}
       />
-      <header className="hero lane brand-hero">
+      <header className="hero lane brand-hero pricing-hero">
         <HeroBackdrop kind="brand-static" />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">
@@ -53,13 +99,54 @@ export default function Pricing() {
             scope written down before work starts.
           </p>
         </div>
-        <ScrollCue />
       </header>
+
+      <section className="pricing-ledger" aria-labelledby="pricing-ledger-title">
+        <div className="wrap">
+          <div className="pricing-ledger-head">
+            <h2 id="pricing-ledger-title" className="observe">Compare every offer</h2>
+            <p className="observe d1">
+              Start with fit, price, and commitment. Then open the offer for
+              included services, exclusions, and frequently asked questions.
+            </p>
+          </div>
+          <div className="pricing-ledger-scroll observe d2">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Offer</th>
+                  <th scope="col">Best for</th>
+                  <th scope="col">Starting price</th>
+                  <th scope="col">Commitment</th>
+                  <th scope="col">Minimum</th>
+                  <th scope="col"><span className="sr-only">Offer details</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                {pricingLedger.map((row) => (
+                  <tr key={row.offer}>
+                    <th scope="row" data-label="Offer">{row.offer}</th>
+                    <td data-label="Best for">{row.bestFor}</td>
+                    <td data-label="Starting price" className="pricing-ledger-price">{row.price}</td>
+                    <td data-label="Commitment">{row.commitment}</td>
+                    <td data-label="Minimum">{row.minimum}</td>
+                    <td className="pricing-ledger-action">
+                      <a href={`#pricing-${row.slug}`}>
+                        View details <DirectionIcon />
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
 
       <Band variant="raised">
         <div className="product-grid four">
           {pricingTiles.map((p, i) => (
-            <div key={p.slug} className={`product-tile observe d${Math.min(i + 1, 5)}`}>
+            <div id={`pricing-${p.slug}`} key={p.slug} className={`product-tile observe d${Math.min(i + 1, 5)}`}>
               <ProductMotif kind={p.motif} />
               <h2 className="product-tile-title">{p.name}</h2>
               <p><strong>Best for</strong> {p.bestFor}.</p>

@@ -1,11 +1,11 @@
 import {Link} from 'react-router-dom';
-import {Button} from '@astryxdesign/core/Button';
-import {Band, CtaBand, DirectionIcon, ScrollCue} from '../components/Site';
+import {ActionLink, Band, CtaBand, DirectionIcon, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import HeroBackdrop, {type BackdropKind} from '../components/HeroBackdrop';
 import LeadForm from '../components/LeadForm';
 import PanelVisual from '../components/PanelVisual';
 import {canonicalPath, siteUrl} from '../lib/urls';
+import './LanePage.css';
 
 export type Lane = {
   slug: string;
@@ -25,6 +25,11 @@ export type Lane = {
    */
   ctaMode?: 'scan' | 'book';
   statusChip?: string;
+  regulatoryUpdate?: {
+    title: string;
+    changed: string;
+    unchanged: string;
+  };
   pains: {title: string; body: string}[];
   planTitle: string;
   planSub: string;
@@ -58,10 +63,10 @@ export default function LanePage({lane}: {lane: Lane}) {
           ],
         }}
       />
-      <header className="hero lane">
+      <header className={`hero lane lane-hero hero-fit-dense${lane.regulatoryUpdate ? ' lane-hero-decision' : ''}`}>
         <HeroBackdrop kind={lane.backdrop} />
         <div className="wrap">
-          {lane.statusChip && <StatusChip text={lane.statusChip} />}
+          {lane.statusChip && !lane.regulatoryUpdate && <StatusChip text={lane.statusChip} />}
           <h1 className="reveal d1 hero-title-readable">
             {lane.headline}
           </h1>
@@ -70,9 +75,7 @@ export default function LanePage({lane}: {lane: Lane}) {
           </p>
           <div className="hero-ctas reveal d3">
             {lane.ctaMode === 'book' ? (
-              <Link to="/contact/">
-                <Button label={lane.primaryCta} variant="primary" size="lg" />
-              </Link>
+              <ActionLink to="/contact/" label={lane.primaryCta} />
             ) : (
               <LeadForm source={`${lane.slug} hero`} cta={lane.primaryCta} compact />
             )}
@@ -83,6 +86,27 @@ export default function LanePage({lane}: {lane: Lane}) {
         </div>
         <ScrollCue />
       </header>
+
+      {lane.regulatoryUpdate && (
+        <section className="lane-regulatory-update" aria-labelledby={`${lane.slug}-regulatory-update-title`}>
+          <div className="wrap lane-regulatory-update-inner">
+            <header className="lane-regulatory-update-head">
+              {lane.statusChip && <StatusChip text={lane.statusChip} />}
+              <h2 id={`${lane.slug}-regulatory-update-title`}>{lane.regulatoryUpdate.title}</h2>
+            </header>
+            <div className="lane-regulatory-ledger">
+              <div>
+                <h3>What changed</h3>
+                <p>{lane.regulatoryUpdate.changed}</p>
+              </div>
+              <div>
+                <h3>What did not</h3>
+                <p>{lane.regulatoryUpdate.unchanged}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       <Band variant="raised">
         <div className="band-head observe">

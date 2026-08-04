@@ -1,0 +1,232 @@
+.hero.lane.pricing-hero {
+  min-height: clamp(430px, 60svh, 600px);
+  padding-block: clamp(56px, 8svh, 76px);
+}
+
+.pricing-hero .sub {
+  margin-bottom: 0;
+}
+
+.pricing-ledger {
+  padding-block: clamp(64px, 8vw, 88px);
+  background: var(--helm-bg);
+}
+
+.pricing-ledger-head {
+  display: grid;
+  grid-template-columns: minmax(260px, .8fr) minmax(360px, 1.2fr);
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 32px;
+}
+
+.pricing-ledger-head h2 {
+  max-width: 11ch;
+  margin: 0;
+}
+
+.pricing-ledger-head p {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--helm-text-dim);
+  line-height: 1.65;
+}
+
+.pricing-ledger-scroll {
+  border-top: 1px solid var(--helm-hairline);
+}
+
+.pricing-ledger table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.pricing-ledger th,
+.pricing-ledger td {
+  padding: 20px 14px;
+  border-bottom: 1px solid var(--helm-hairline);
+  text-align: left;
+  vertical-align: top;
+}
+
+.pricing-ledger thead th {
+  padding-block: 14px;
+  color: var(--helm-text-dim);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.pricing-ledger thead th:nth-child(1) { width: 14%; }
+.pricing-ledger thead th:nth-child(2) { width: 26%; }
+.pricing-ledger thead th:nth-child(3) { width: 16%; }
+.pricing-ledger thead th:nth-child(4) { width: 15%; }
+.pricing-ledger thead th:nth-child(5) { width: 15%; }
+.pricing-ledger thead th:nth-child(6) { width: 14%; }
+
+.pricing-ledger tbody th {
+  color: var(--helm-text-strong);
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.pricing-ledger tbody td {
+  color: var(--helm-text-dim);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.pricing-ledger tbody tr {
+  transition: background-color 180ms ease;
+}
+
+.pricing-ledger tbody tr:hover,
+.pricing-ledger tbody tr:focus-within {
+  background: light-dark(rgba(33, 75, 59, .045), rgba(210, 185, 147, .045));
+}
+
+.pricing-ledger .pricing-ledger-price {
+  color: var(--helm-text-strong);
+  font-variant-numeric: tabular-nums;
+  font-weight: 650;
+}
+
+.pricing-ledger-action a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  color: var(--helm-accent-text);
+  font-size: 16px;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.pricing-ledger-action svg {
+  width: 1em;
+  height: 1em;
+  flex: none;
+}
+
+.pricing-ledger-action a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.pricing-ledger-action a:focus-visible {
+  border-radius: 6px;
+  outline: 2px solid var(--helm-accent-text);
+  outline-offset: 4px;
+}
+
+.product-tile[id] {
+  scroll-margin-top: 96px;
+}
+
+@media (max-width: 900px) {
+  .pricing-ledger-head {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pricing-ledger-head h2 {
+    max-width: none;
+  }
+
+  .pricing-ledger thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .pricing-ledger tbody,
+  .pricing-ledger tr,
+  .pricing-ledger th,
+  .pricing-ledger td {
+    display: block;
+    width: 100%;
+  }
+
+  .pricing-ledger tbody tr {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 28px;
+    padding-block: 22px;
+    border-bottom: 1px solid var(--helm-hairline);
+  }
+
+  .pricing-ledger th,
+  .pricing-ledger td {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 12px;
+    padding: 7px 0;
+    border: 0;
+  }
+
+  .pricing-ledger th::before,
+  .pricing-ledger td::before {
+    content: attr(data-label);
+    color: var(--helm-text-dim);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    line-height: 1.45;
+    text-transform: uppercase;
+  }
+
+  .pricing-ledger tbody th {
+    grid-column: 1 / -1;
+    margin-bottom: 4px;
+    font-size: 20px;
+  }
+
+  .pricing-ledger-action {
+    grid-column: 1 / -1;
+  }
+
+  .pricing-ledger-action::before {
+    content: none;
+  }
+
+  .pricing-ledger-action a {
+    margin: 4px 0 -4px;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero.lane.pricing-hero {
+    min-height: clamp(400px, 56svh, 480px);
+    padding-block: 48px;
+  }
+
+  .pricing-ledger {
+    padding-block: 56px;
+  }
+
+  .pricing-ledger-head {
+    margin-bottom: 24px;
+  }
+
+  .pricing-ledger tbody tr {
+    grid-template-columns: 1fr;
+    padding-block: 20px;
+  }
+
+  .pricing-ledger th,
+  .pricing-ledger td {
+    grid-template-columns: 104px minmax(0, 1fr);
+  }
+}

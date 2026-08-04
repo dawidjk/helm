@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import {useThemeMode, type ThemeMode} from './ThemeMode';
+import './ThemePicker.css';
 
 /**
  * Explicit three-mode theme control in the nav: Auto (follow system), Light,
@@ -45,7 +46,7 @@ function Icon({mode}: {mode: ThemeMode}) {
   );
 }
 
-export default function ThemePicker() {
+export default function ThemePicker({compact = false}: {compact?: boolean}) {
   const {mode, setMode} = useThemeMode();
   const [mounted, setMounted] = useState(false);
   useEffect(() => { setMounted(true); }, []);
@@ -53,21 +54,40 @@ export default function ThemePicker() {
   // Before mount, show the Auto default so SSR/hydration markup matches.
   const current = mounted ? mode : 'auto';
 
+  const choices = MODES.map((option) => (
+    <button
+      key={option}
+      type="button"
+      className={`theme-choice${current === option ? ' active' : ''}`}
+      onClick={(event) => {
+        setMode(option);
+        event.currentTarget.closest('details')?.removeAttribute('open');
+      }}
+      aria-pressed={current === option}
+      title={`${LABEL[option]} theme`}
+    >
+      <Icon mode={option} />
+      <span>{LABEL[option]}</span>
+    </button>
+  ));
+
+  if (compact) {
+    return (
+      <details className="theme-picker theme-picker-compact">
+        <summary aria-label={`Color theme: ${LABEL[current]}`}>
+          <Icon mode={current} />
+          <span>{LABEL[current]}</span>
+        </summary>
+        <div className="theme-picker-menu" role="group" aria-label="Choose color theme">
+          {choices}
+        </div>
+      </details>
+    );
+  }
+
   return (
     <div className="theme-picker" role="group" aria-label="Color theme">
-      {MODES.map((option) => (
-        <button
-          key={option}
-          type="button"
-          className={`theme-choice${current === option ? ' active' : ''}`}
-          onClick={() => setMode(option)}
-          aria-pressed={current === option}
-          title={`${LABEL[option]} theme`}
-        >
-          <Icon mode={option} />
-          <span>{LABEL[option]}</span>
-        </button>
-      ))}
+      {choices}
     </div>
   );
 }

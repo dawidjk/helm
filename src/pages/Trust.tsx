@@ -56,26 +56,22 @@ export default function Trust() {
           ],
         }}
       />
-      <header className="hero lane brand-hero">
+      <header className="hero lane brand-hero trust-hero">
         <HeroBackdrop kind="brand-static" />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-readable">
             Trust and security, answered directly.
           </h1>
           <p className="sub reveal d2">
-            We sell security, so it is fair for you to ask hard questions about
-            how we protect our own systems and yours before you hand us access
-            to either. This page answers those questions directly, without
-            spin. Where something below reads as a gap, that is intentional:
-            we would rather tell you where we are today than describe a
-            company we are not yet.
+            We sell security, so it is fair to ask how we protect our systems
+            and yours. This page answers directly, including the gaps.
           </p>
         </div>
         <ScrollCue />
       </header>
 
       <Band>
-        <article className="article-body">
+        <article className="article-body trust-article">
           <section className="trust-summary" aria-labelledby="trust-summary-title">
             <div className="trust-summary-intro">
               <h2 id="trust-summary-title">Helm at a glance</h2>

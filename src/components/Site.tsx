@@ -1,6 +1,5 @@
 import {useEffect, useRef, useState, type ReactNode} from 'react';
 import {NavLink as RouterNavLink, Link, useLocation} from 'react-router-dom';
-import {Button} from '@astryxdesign/core/Button';
 import LeadForm, {PORTAL_URL} from './LeadForm';
 import ThemePicker from './ThemePicker';
 import {canonicalPath} from '../lib/urls';
@@ -53,6 +52,27 @@ export function DirectionIcon({
         strokeLinejoin="round"
       />
     </svg>
+  );
+}
+
+export function ActionLink({
+  to,
+  label,
+  size = 'lg',
+  className = '',
+}: {
+  to: string;
+  label: string;
+  size?: 'sm' | 'lg';
+  className?: string;
+}) {
+  return (
+    <Link
+      to={to}
+      className={`action-link action-link-${size}${className ? ` ${className}` : ''}`}
+    >
+      {label}
+    </Link>
   );
 }
 
@@ -235,7 +255,7 @@ export function SiteNav() {
           <div className="nav-right">
             <div className="nav-links">
               <details className={`nav-menu${productActive ? ' active' : ''}`}>
-                <summary>Services</summary>
+                <summary aria-current={productActive ? 'page' : undefined}>Services</summary>
                 <div className="nav-menu-panel">
                   {services.map((service) => (
                     <RouterNavLink key={service.to} to={canonicalPath(service.to)}>
@@ -246,28 +266,24 @@ export function SiteNav() {
                 </div>
               </details>
               <details className={`nav-menu${industryActive ? ' active' : ''}`}>
-                <summary>Industries</summary>
+                <summary aria-current={industryActive ? 'page' : undefined}>Industries</summary>
                 <div className="nav-menu-panel nav-menu-panel-compact">
                   {lanes.map((lane) => (
                     <RouterNavLink key={lane.to} to={canonicalPath(lane.to)}>{lane.label}</RouterNavLink>
                   ))}
                 </div>
               </details>
-              <RouterNavLink to="/resources/" className={resourcesActive ? 'active' : ''}>
+              <RouterNavLink to="/resources/" className={resourcesActive ? 'active' : ''} aria-current={resourcesActive ? 'page' : undefined}>
                 Resources
               </RouterNavLink>
-              <RouterNavLink to="/pricing/" className={pricingActive ? 'active' : ''}>
+              <RouterNavLink to="/pricing/" className={pricingActive ? 'active' : ''} aria-current={pricingActive ? 'page' : undefined}>
                 Pricing
               </RouterNavLink>
               <a href={`${PORTAL_URL}/login`}>Sign in</a>
-              <Link to="/free-scan/" className="nav-cta">
-                <Button label="Free scan" variant="primary" size="sm" />
-              </Link>
+              <ActionLink to="/free-scan/" label="Free scan" size="sm" className="nav-cta" />
             </div>
-            <ThemePicker />
-            <Link to="/free-scan/" className="nav-cta-mobile">
-              <Button label="Free scan" variant="primary" size="sm" />
-            </Link>
+            <ThemePicker compact />
+            <ActionLink to="/free-scan/" label="Free scan" size="sm" className="nav-cta-mobile" />
             <button
               ref={menuButtonRef}
               className={`nav-burger${open ? ' open' : ''}`}
@@ -291,9 +307,7 @@ export function SiteNav() {
           aria-label="Mobile navigation"
           tabIndex={-1}
         >
-          <Link to="/free-scan/" className="drawer-cta">
-            <Button label="Get my free scan" variant="primary" size="lg" />
-          </Link>
+          <ActionLink to="/free-scan/" label="Get my free scan" className="drawer-cta" />
           <div className="drawer-primary" aria-label="Primary navigation">
             <details className={`drawer-section drawer-primary-section${productActive ? ' active' : ''}`}>
               <summary>Services</summary>
@@ -325,7 +339,7 @@ export function SiteNav() {
                 <summary>{col.title}</summary>
                 <div className="drawer-section-links">
                   {col.links.map((l) => (
-                    <Link key={l.to} to={canonicalPath(l.to)}>
+                    <Link key={l.to} to={canonicalPath(l.to)} aria-current={pathname.startsWith(l.to) ? 'page' : undefined}>
                       {l.label}
                     </Link>
                   ))}
@@ -406,9 +420,7 @@ export function CtaBand({
         <p className="observe d1">{sub}</p>
         <div className="cta-form observe d2">
           {mode === 'book' ? (
-            <Link to={canonicalPath(contactPath)}>
-              <Button label={cta} variant="primary" size="lg" />
-            </Link>
+            <ActionLink to={canonicalPath(contactPath)} label={cta} />
           ) : (
             <LeadForm source={source} cta={cta} />
           )}

@@ -1,5 +1,5 @@
 import HeroBackdrop from '../components/HeroBackdrop';
-import {useParams, Navigate, Link} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import LeadForm from '../components/LeadForm';
@@ -7,11 +7,12 @@ import ProductMotif from '../components/ProductMotif';
 import {productList} from './products';
 import {BOOK_CTA} from './ctaCopy';
 import {siteUrl} from '../lib/urls';
+import './ProductPage.css';
 
 export default function ProductPage() {
   const {slug} = useParams();
   const p = productList.find((x) => x.slug === slug);
-  if (!p) return <Navigate to="/" replace />;
+  if (!p) throw new Response('Product not found', {status: 404, statusText: 'Not Found'});
 
   return (
     <>
@@ -46,7 +47,7 @@ export default function ProductPage() {
           ],
         }}
       />
-      <header className="hero lane brand-hero">
+      <header className="hero lane brand-hero product-hero hero-fit-dense">
         <HeroBackdrop kind="brand-static" />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">

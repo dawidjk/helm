@@ -1,3 +1,8 @@
+.hero.lane.resources-hero {
+  min-height: min(520px, calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px)));
+  padding-block: clamp(56px, 8vw, 76px);
+}
+
 .resources-index {
   display: grid;
   gap: clamp(72px, 9vw, 112px);
@@ -11,15 +16,18 @@
 .resources-section-head h2 {
   margin: 0;
   color: var(--helm-text-strong);
+  font-family: 'Tenor Sans', 'Helvetica Neue', sans-serif;
   font-size: clamp(38px, 5vw, 64px);
+  font-weight: 400;
   line-height: 1;
+  letter-spacing: -0.025em;
 }
 
 .resources-section-head p {
   max-width: 58ch;
   margin: 20px 0 0;
   color: var(--helm-text-dim);
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.65;
 }
 
@@ -47,7 +55,9 @@
 
 .resources-start-copy h3 {
   margin: 0;
-  font-size: clamp(20px, 2vw, 24px);
+  color: var(--helm-text-strong);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: -0.015em;
 }
@@ -63,7 +73,7 @@
   align-items: center;
   gap: 14px;
   color: var(--helm-accent-text);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   white-space: nowrap;
 }
@@ -79,7 +89,7 @@
 
 .resources-start-link:hover,
 .resources-guide-link:hover {
-  background: light-dark(rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.045));
+  background: color-mix(in srgb, var(--japandi-oak) 8%, transparent);
 }
 
 .resources-start-link:hover .resources-start-side svg,
@@ -98,7 +108,21 @@
   margin-bottom: 0;
   border-color: var(--helm-hairline);
   border-radius: 16px;
-  background: light-dark(rgba(33, 75, 59, 0.07), rgba(200, 185, 159, 0.07));
+  background: color-mix(in srgb, var(--japandi-pine-field) 7%, var(--helm-surface));
+  box-shadow: 0 18px 42px -36px light-dark(rgba(20, 35, 27, 0.38), rgba(0, 0, 0, 0.74));
+}
+
+.resources-index .resource-feature h2 {
+  color: var(--helm-text-strong);
+  font-family: 'Tenor Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.resources-index .resource-feature-link {
+  color: var(--helm-accent-text);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
 }
 
 .resources-library {
@@ -120,7 +144,8 @@
 .resources-group-intro h3 {
   margin: 0;
   color: var(--helm-text-strong);
-  font-size: clamp(21px, 2.2vw, 27px);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -146,7 +171,7 @@
   min-height: 48px;
   padding: 0 4px;
   color: var(--helm-accent-text);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   cursor: pointer;
   list-style: none;
@@ -187,7 +212,9 @@
 }
 
 .resources-guide-title {
-  font-size: 17px;
+  color: var(--helm-text-strong);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.4;
 }
@@ -199,6 +226,11 @@
 }
 
 @media (max-width: 760px) {
+  .hero.lane.resources-hero {
+    min-height: min(460px, calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px)));
+    padding-block: 48px;
+  }
+
   .resources-index {
     gap: 72px;
   }
@@ -246,7 +278,7 @@
 
 @media (max-width: 420px) {
   .resources-section-head h2 {
-    font-size: clamp(34px, 10.5vw, 44px);
+    font-size: 38px;
   }
 
   .resources-index .resource-feature {

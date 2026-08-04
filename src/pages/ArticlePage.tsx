@@ -1,5 +1,5 @@
 import HeroBackdrop from '../components/HeroBackdrop';
-import {useParams, Navigate, Link} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {articles} from './articles';
@@ -12,7 +12,7 @@ import ArticleVisual from '../components/ArticleVisual';
 export default function ArticlePage() {
   const {slug} = useParams();
   const a = articles.find((x) => x.slug === slug);
-  if (!a) return <Navigate to="/resources/" replace />;
+  if (!a) throw new Response('Resource not found', {status: 404, statusText: 'Not Found'});
   const support = articleSupport[a.slug];
   const relatedArticles = support.relatedSlugs
     .map((relatedSlug) => articles.find((article) => article.slug === relatedSlug))

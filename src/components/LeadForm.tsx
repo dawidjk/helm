@@ -1,6 +1,7 @@
 import {useId, useState} from 'react';
 import {Button} from '@astryxdesign/core/Button';
 import {trackConversion, withAttribution} from '../lib/measurement';
+import './LeadForm.css';
 
 /** Portal origin the protected scan flow navigates to. Override in .env for local dev. */
 export const PORTAL_URL = import.meta.env.VITE_PORTAL_URL ?? 'https://app.helmsecured.com';
@@ -110,12 +111,16 @@ export default function LeadForm({
           report about your business.
         </div>
       )}
-      <p className="lead-form-consent">
-        Next: confirm your domain on our secure portal — your report follows in
-        about a minute. By requesting the scan, you agree to receive your
-        report and a short email follow-up about the findings. Unsubscribe at
-        any time.
-      </p>
+      <div className="lead-form-disclosure">
+        <p className="lead-form-next">
+          <strong>What happens next:</strong> Confirm your domain on our secure
+          portal. Your report usually follows in about a minute.
+        </p>
+        <p className="lead-form-consent">
+          By requesting the scan, you agree to receive your report and a short
+          email follow-up about the findings. Unsubscribe at any time.
+        </p>
+      </div>
     </form>
   );
 }

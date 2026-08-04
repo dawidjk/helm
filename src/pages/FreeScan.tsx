@@ -12,7 +12,7 @@ export default function FreeScan() {
         desc="Free automated scan of public SPF, common DKIM selectors, DMARC, MX, DNSSEC, HTTPS certificate, MTA-STS, TLS-RPT, and limited SMTP signals. No login required."
         path="/free-scan"
       />
-      <header className="hero lane brand-hero">
+      <header className="hero lane brand-hero free-scan-hero hero-fit-dense">
         <HeroBackdrop kind="brand-static" />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">

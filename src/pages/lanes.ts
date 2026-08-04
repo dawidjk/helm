@@ -8,11 +8,16 @@ export const manufacturing: Lane = {
   metaDesc:
     'Fixed-fee CMMC Level 1 and Level 2 gap assessments for New Jersey manufacturers and defense subcontractors, scored against applicable NIST 800-171 requirements.',
   eyebrow: 'NJ Manufacturers · Defense Suppliers',
-  headline: 'The deadline moved. The requirement did not.',
-  sub: 'Third-party CMMC certification was suspended on July 13, 2026. Level 1 and Level 2 self-assessment were not, and neither were your SPRS score, your Affirming Official\'s annual affirmation, or DFARS 72-hour incident reporting. Same 110 NIST 800-171 requirements, now enforced through self-assessments and selected government-led assessments.',
+  headline: 'Which CMMC requirement applies to your contract?',
+  sub: 'Start with the contract clauses and the information you handle. Then assess the right scope, evidence, and remediation work.',
   primaryCta: 'Book a CMMC gap assessment',
   ctaMode: 'book',
   statusChip: 'Phase 2 certification suspended July 2026 · self-assessment still in force',
+  regulatoryUpdate: {
+    title: 'The deadline moved. The requirement did not.',
+    changed: 'Third-party CMMC certification was suspended on July 13, 2026.',
+    unchanged: 'Level 1 and Level 2 self-assessment were not, and neither were your SPRS score, your Affirming Official\'s annual affirmation, or DFARS 72-hour incident reporting. Same 110 NIST 800-171 requirements, now enforced through self-assessments and selected government-led assessments.',
+  },
   pains: [
     {
       title: 'Know what the contract requires',

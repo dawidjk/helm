@@ -37,6 +37,15 @@
   color: var(--helm-accent-text);
 }
 
+.nav-menu > summary[aria-current='page'],
+.nav-links > a[aria-current='page']:not(.action-link) {
+  color: var(--helm-accent-text);
+  text-decoration-line: underline;
+  text-decoration-color: var(--japandi-oak);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+
 .nav-menu-panel {
   position: absolute;
   top: calc(100% + 8px);
@@ -199,7 +208,7 @@
   }
 
   .drawer-foot .theme-choice {
-    min-height: 38px;
+    min-height: 44px;
   }
 }
 

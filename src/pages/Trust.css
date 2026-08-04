@@ -1,3 +1,8 @@
+.hero.lane.trust-hero {
+  min-height: min(520px, calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px)));
+  padding-block: clamp(56px, 8vw, 76px);
+}
+
 .trust-summary {
   margin: 0 0 clamp(64px, 9vw, 96px);
   padding: clamp(28px, 5vw, 44px);
@@ -11,7 +16,7 @@
   margin: 0 0 12px;
   color: var(--helm-text-strong);
   font-family: 'Tenor Sans', 'Helvetica Neue', sans-serif;
-  font-size: clamp(32px, 5vw, 44px);
+  font-size: clamp(38px, 5vw, 64px);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.025em;
@@ -20,6 +25,7 @@
 .article-body .trust-summary-intro p {
   max-width: 58ch;
   margin: 0;
+  color: var(--helm-text-dim);
 }
 
 .trust-summary-grid {
@@ -51,8 +57,8 @@
   margin: 0 0 10px;
   color: var(--helm-text-strong);
   font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 18px;
-  font-weight: 650;
+  font-size: 20px;
+  font-weight: 600;
   line-height: 1.3;
   letter-spacing: -0.015em;
 }
@@ -60,11 +66,39 @@
 .article-body .trust-summary-grid p {
   margin: 0;
   color: var(--helm-text-dim);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.65;
 }
 
+.trust-article > .observe section h2 {
+  color: var(--helm-text-strong);
+  font-family: 'Tenor Sans', 'Helvetica Neue', sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+.trust-article > .observe section p,
+.trust-article > .observe section li,
+.trust-article .subproc-table {
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.trust-article .subproc-table th {
+  color: var(--helm-text-strong);
+}
+
+.trust-article .subproc-table td {
+  color: var(--helm-text-dim);
+}
+
 @media (max-width: 620px) {
+  .hero.lane.trust-hero {
+    min-height: min(460px, calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px)));
+    padding-block: 48px;
+  }
+
   .trust-summary {
     padding: 24px 20px;
   }

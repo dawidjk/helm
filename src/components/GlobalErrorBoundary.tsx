@@ -5,6 +5,7 @@ import {
   useNavigate,
   useRouteError,
 } from 'react-router-dom';
+import {Head} from 'vite-react-ssg';
 import errorStill from '../assets/brand/japandi-error-still-v1.webp';
 
 const VALID_PAGES = [
@@ -32,6 +33,9 @@ export default function GlobalErrorBoundary() {
   const [query, setQuery] = useState('');
   const [message, setMessage] = useState('');
   const isMissing = isRouteErrorResponse(error) && error.status === 404;
+  const pageTitle = isMissing
+    ? 'Page Not Found | Helm Security'
+    : 'Something Went Wrong | Helm Security';
 
   const suggestions = useMemo(() => {
     const normalized = query.trim().toLowerCase();
@@ -53,6 +57,10 @@ export default function GlobalErrorBoundary() {
 
   return (
     <main className="error-page">
+      <Head>
+        <title>{pageTitle}</title>
+        <meta name="robots" content="noindex, follow" />
+      </Head>
       <Link to="/" className="error-brand" aria-label="Helm Security home">
         <svg viewBox="0 0 32 32" aria-hidden="true">
           <circle cx="16" cy="16" r="13" />
