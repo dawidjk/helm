@@ -39,11 +39,11 @@ export const productList: Product[] = [
     slug: 'helm-mail',
     motif: 'mail',
     name: 'Helm Mail',
-    metaTitle: 'Helm Mail: Managed Email Security for Small Business',
+    metaTitle: 'Helm Mail: Managed Email Security for Small and Medium Businesses',
     tagline: 'Email fraud, stopped cold.',
-    desc: 'Managed email security for small businesses using Microsoft 365, Google Workspace, or another business email provider. We configure and monitor the filtering layer, help your team handle suspicious messages, and report the result in plain English.',
+    desc: 'Managed email security for small and medium-sized businesses using Microsoft 365, Google Workspace, or another business email provider. We configure and monitor the filtering layer, help your team handle suspicious messages, and report the result in plain English.',
     metaDesc:
-      'Managed email security for small business across Microsoft 365, Google Workspace, and other providers, from $15/user/month.',
+      'Managed email security for small and medium-sized businesses across Microsoft 365, Google Workspace, and other providers, from $15/user/month.',
     price: '$15 / user / month',
     term: 'Month to month',
     priceDetail: 'Works with Microsoft 365, Google Workspace, and other business email providers. Setup and ongoing management included.',
@@ -81,7 +81,7 @@ export const productList: Product[] = [
     tagline: 'Make the next scam less convincing.',
     desc: 'Managed monthly learning and phishing shaped by active threat profiles Huntress researchers see every day, with clear Helm reporting and review. Add the fixed-fee workshop when your team also needs AI-use and payment-verification controls.',
     metaDesc:
-      'Managed security awareness training and phishing simulations for small business at $10 per active learner per month, plus fixed-fee AI scam readiness workshops.',
+      'Managed security awareness training and phishing simulations for small and medium-sized businesses at $10 per active learner per month, plus fixed-fee AI scam readiness workshops.',
     price: '$10 / active learner / month',
     term: '12-month initial term',
     priceDetail: 'No customer account minimum. Setup included. 12-month initial agreement, billed monthly.',
@@ -134,7 +134,7 @@ export const productList: Product[] = [
     tagline: 'Pass the questionnaire. Win the contract.',
     desc: 'Fixed-fee compliance readiness: cyber-insurance questionnaires, CMMC/NIST 800-171 gap assessments, and HIPAA controls, remediated, documented, and defended in plain English.',
     metaDesc:
-      'Fixed-fee cyber insurance, CMMC, and HIPAA readiness for small businesses, with documented findings and a prioritized roadmap.',
+      'Fixed-fee cyber insurance, CMMC, and HIPAA readiness for small and medium-sized businesses, with documented findings and a prioritized roadmap.',
     price: '$2,500 to $7,500 fixed fee',
     term: 'Fixed fee',
     priceDetail: 'Insurance readiness and CMMC Level 1 from $2,500. HIPAA or full CMMC Level 2 gap assessments typically $5,000 to $7,500.',
@@ -169,7 +169,7 @@ export const productList: Product[] = [
     name: 'Helm Watch',
     metaTitle: 'Helm Watch: 24/7 Managed Endpoint Detection',
     tagline: '24/7 detection and response, without the 24/7 payroll.',
-    desc: 'Managed detection and response for small business endpoints: a round-the-clock security operations center watches every machine, investigates alerts, and isolates compromised endpoints before an incident spreads.',
+    desc: 'Managed detection and response for small and medium-sized business endpoints: a round-the-clock security operations center watches every machine, investigates alerts, and isolates compromised endpoints before an incident spreads.',
     metaDesc:
       'Managed endpoint detection and response with Huntress 24/7 SOC monitoring, human-triaged alerts, and containment from $15 per endpoint monthly.',
     price: '$15 / endpoint / month',

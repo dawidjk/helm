@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState, type ReactNode} from 'react';
+import {useEffect, useState, type ReactNode} from 'react';
 import {NavLink as RouterNavLink, Link, useLocation} from 'react-router-dom';
 import {Button} from '@astryxdesign/core/Button';
 import LeadForm, {PORTAL_URL} from './LeadForm';
@@ -10,8 +10,8 @@ import {businessPhone, linkedInUrl, serviceAreaText} from '../lib/business';
 export function HelmMark({size = 28}: {size?: number}) {
   return (
     <svg width={size} height={size} viewBox="0 0 32 32" fill="none" aria-hidden>
-      <circle cx="16" cy="16" r="13" stroke="#38A169" strokeWidth="2.5" />
-      <circle cx="16" cy="16" r="5" fill="#38A169" />
+      <circle cx="16" cy="16" r="13" stroke="currentColor" strokeWidth="2.5" />
+      <circle cx="16" cy="16" r="5" fill="currentColor" />
       {[0, 45, 90, 135, 180, 225, 270, 315].map((a) => (
         <line
           key={a}
@@ -19,12 +19,38 @@ export function HelmMark({size = 28}: {size?: number}) {
           y1="1"
           x2="16"
           y2="7"
-          stroke="#38A169"
+          stroke="currentColor"
           strokeWidth="2.5"
           strokeLinecap="round"
           transform={`rotate(${a} 16 16)`}
         />
       ))}
+    </svg>
+  );
+}
+
+export function DirectionIcon({
+  className,
+  external = false,
+}: {
+  className?: string;
+  external?: boolean;
+}) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 20 20"
+      fill="none"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d={external ? 'M5 15 15 5M7 5h8v8' : 'M4 10h12M11 5l5 5-5 5'}
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -111,7 +137,6 @@ const drawerSecondary = [
 export function SiteNav() {
   const {pathname} = useLocation();
   const [open, setOpen] = useState(false);
-  const urgencyRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => { setOpen(false); }, [pathname]);
   // Close the drawer on Escape so keyboard users are not trapped in it.
   useEffect(() => {
@@ -123,27 +148,6 @@ export function SiteNav() {
     return () => window.removeEventListener('keydown', onKey);
   }, [open]);
 
-  // The urgency banner sits in normal flow above the nav, so pages that show
-  // it need the hero to be shorter or its bottom (and the scroll cue) lands
-  // below the fold. Publish the banner's measured height as --urgency-offset;
-  // .hero subtracts it from its min-height. ResizeObserver keeps it right
-  // when the banner text wraps at narrow widths.
-  useEffect(() => {
-    const root = document.documentElement;
-    const el = urgencyRef.current;
-    if (!el) {
-      root.style.setProperty('--urgency-offset', '0px');
-      return;
-    }
-    const update = () => root.style.setProperty('--urgency-offset', `${el.offsetHeight}px`);
-    update();
-    const ro = new ResizeObserver(update);
-    ro.observe(el);
-    return () => {
-      ro.disconnect();
-      root.style.setProperty('--urgency-offset', '0px');
-    };
-  }, [pathname]);
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
     return () => {
@@ -153,12 +157,6 @@ export function SiteNav() {
 
   return (
     <>
-      {(pathname === '/manufacturing' || pathname === '/manufacturing/') && (
-        <div className="urgency" ref={urgencyRef}>
-          CMMC Phase 2 certification was suspended in July 2026. Self-assessment,
-          your SPRS score, and the annual affirmation were not. <a href="#contact">Check your readiness →</a>
-        </div>
-      )}
       <nav className="site-nav">
         <div className="wrap">
           <Link to="/" className="nav-brand">
@@ -302,7 +300,8 @@ export function CtaBand({
             <LeadForm source={source} cta={cta} />
           )}
           <div className="cta-alt">
-            Have more to tell us? <Link to="/contact/">Use the full contact form →</Link>
+            Have more to tell us?{' '}
+            <Link to="/contact/">Use the full contact form <DirectionIcon /></Link>
             <br />
             Prefer email?{' '}
             <a
@@ -333,29 +332,8 @@ export function Band({
   );
 }
 
-/** Adds .in to .observe elements as they scroll into view (Apple-style reveals). */
+/** Content remains visible by default; first-viewport hero motion is handled by .reveal. */
 export function RevealManager() {
-  const {pathname} = useLocation();
-  useEffect(() => {
-    const els = Array.from(document.querySelectorAll<HTMLElement>('.observe'));
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      els.forEach((el) => el.classList.add('in'));
-      return;
-    }
-    const io = new IntersectionObserver(
-      (entries) => {
-        for (const e of entries) {
-          if (e.isIntersecting) {
-            (e.target as HTMLElement).classList.add('in');
-            io.unobserve(e.target);
-          }
-        }
-      },
-      {threshold: 0.15, rootMargin: '0px 0px -8% 0px'},
-    );
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
-  }, [pathname]);
   return null;
 }
 
@@ -363,21 +341,20 @@ export function SiteFooter() {
   const remarketingConfigured = isRemarketingConfigured();
   return (
     <footer className="site-footer">
-      <div className="wrap">
-        <div>
-          © {new Date().getFullYear()} Helm Security LLC · New Jersey
-          <br />
-          Security that answers to your business.
-          <br />
-          <a href="mailto:hello@helmsecured.com">hello@helmsecured.com</a>
-          <br />
-          <a href={`tel:${businessPhone.e164}`}>{businessPhone.display}</a>
-          <br />
-          <a href={linkedInUrl} aria-label="Helm on LinkedIn">LinkedIn</a>
-          <br />
-          Serving {serviceAreaText}
+      <div className="wrap footer-layout">
+        <div className="footer-identity">
+          <Link to="/" className="footer-brand">
+            <HelmMark size={36} />
+            <span>Helm Security</span>
+          </Link>
+          <p>Security that answers to your business.</p>
+          <div className="footer-contact">
+            <a href="mailto:hello@helmsecured.com">hello@helmsecured.com</a>
+            <a href={`tel:${businessPhone.e164}`}>{businessPhone.display}</a>
+            <span>Serving {serviceAreaText}</span>
+          </div>
         </div>
-        <div className="footer-cols">
+        <nav className="footer-cols" aria-label="Footer navigation">
           {footerCols.map((col) => (
             <div key={col.title} className="footer-col">
               <div className="footer-col-title">{col.title}</div>
@@ -393,6 +370,10 @@ export function SiteFooter() {
               )}
             </div>
           ))}
+        </nav>
+        <div className="footer-bottom">
+          <span>© {new Date().getFullYear()} Helm Security LLC · New Jersey</span>
+          <a href={linkedInUrl} aria-label="Helm Security on LinkedIn">LinkedIn</a>
         </div>
       </div>
     </footer>

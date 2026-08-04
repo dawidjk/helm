@@ -1,7 +1,7 @@
 import HeroBackdrop from '../components/HeroBackdrop';
 import {Link} from 'react-router-dom';
 import {canonicalPath} from '../lib/urls';
-import {Band, CtaBand, ScrollCue} from '../components/Site';
+import {Band, CtaBand, DirectionIcon, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {articles} from './articles';
 
@@ -10,14 +10,13 @@ export default function Resources() {
     <>
       <Meta
         title="Resources: Plain-English Security Guides | Helm"
-        desc="Plain-English guides on CMMC, cyber insurance, wire fraud, DMARC, and AI scams for small-business owners and managers."
+        desc="Plain-English guides on CMMC, cyber insurance, wire fraud, DMARC, and AI scams for small and medium-sized business owners and managers."
         path="/resources"
       />
-      <header className="hero lane">
-        <HeroBackdrop kind="rain" />
+      <header className="hero lane brand-hero">
+        <HeroBackdrop kind="brand-static" />
         <div className="wrap">
-          <div className="eyebrow reveal">Resources</div>
-          <h1 className="reveal d1" style={{maxWidth: '18ch'}}>
+          <h1 className="reveal d1 hero-title-compact">
             Security, translated.
           </h1>
           <p className="sub reveal d2">
@@ -31,22 +30,23 @@ export default function Resources() {
       <Band>
         <div className="resource-feature observe">
           <div>
-            <div className="kicker">Interactive assessment</div>
             <h2>AI Scam Readiness Quiz</h2>
             <p>Answer 10 questions and get a score plus a prioritized action plan. No email address is required to see the result.</p>
           </div>
-          <Link to="/quiz/" className="resource-feature-link">Take the 3-minute quiz →</Link>
+          <Link to="/quiz/" className="resource-feature-link">
+            Take the 3-minute quiz <DirectionIcon />
+          </Link>
         </div>
         <div className="lane-strip">
           {articles.map((a, i) => (
             <Link key={a.slug} to={canonicalPath(`/resources/${a.slug}`)} className={`lane-row observe d${Math.min(i + 1, 5)}`}>
               <div>
-                <div className="kicker">{a.lane}</div>
+                <div className="lane-meta">{a.lane}</div>
                 <div className="lane-title">{a.title}</div>
               </div>
               <div className="lane-side">
                 <span className="lane-note">{a.readMin} min read</span>
-                <span className="lane-arrow">→</span>
+                <DirectionIcon className="lane-arrow" />
               </div>
             </Link>
           ))}

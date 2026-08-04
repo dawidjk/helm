@@ -22,7 +22,7 @@ export default function About() {
           areaServed: serviceAreaJsonLd,
           address: {'@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US'},
           description:
-            'Email security, AI scam defense, and compliance readiness for small businesses.',
+            'Email security, AI scam defense, and compliance readiness for small and medium-sized businesses.',
           employee: [
             {
               '@type': 'Person',
@@ -42,12 +42,11 @@ export default function About() {
       <header className="hero lane brand-hero">
         <HeroBackdrop kind="brand-static" />
         <div className="wrap">
-          <div className="eyebrow reveal">About Helm</div>
-          <h1 className="reveal d1" style={{maxWidth: '20ch'}}>
-            Enterprise security had a size requirement. We removed it.
+          <h1 className="reveal d1 hero-title-readable">
+            We removed enterprise security&apos;s size requirement.
           </h1>
           <p className="sub reveal d2">
-            Small businesses face email impersonation, payment fraud, and
+            Small and medium-sized businesses face email impersonation, payment fraud, and
             compliance demands without a dedicated security department. Helm
             gives them a clear, leadership-led path from finding to action.
           </p>
@@ -66,7 +65,7 @@ export default function About() {
               communication on the other.
             </p>
             <p className="observe d2">
-              We designed Helm around one observation: small businesses don't
+              We designed Helm around one observation: small and medium-sized businesses don't
               need more security products. They need someone accountable for
               the outcome, at a price that's published, in language that
               doesn't require translation.
@@ -92,7 +91,6 @@ export default function About() {
 
       <Band>
         <div className="band-head">
-          <div className="eyebrow observe">The leadership team</div>
           <h2 className="observe d1">Two operating executives. No hidden bench.</h2>
           <p className="observe d2">
             When you hire Helm, you work directly with the two executives
@@ -108,8 +106,8 @@ export default function About() {
               loading="lazy"
             />
             <div>
-              <div className="kicker">VP, Growth &amp; Partnerships</div>
               <h3>Kelly Kluszczynski</h3>
+              <p className="founder-role">VP, Growth &amp; Partnerships</p>
               <p>
                 Kelly leads discovery, customer communication, marketing, and
                 partner relationships. She keeps every engagement tied to a
@@ -126,8 +124,8 @@ export default function About() {
               loading="lazy"
             />
             <div>
-              <div className="kicker">VP, Product &amp; Delivery</div>
               <h3>Dawid Kluszczynski</h3>
+              <p className="founder-role">VP, Product &amp; Delivery</p>
               <p>
                 Dawid designs Helm&apos;s services, automation, and technical
                 delivery. He is the point of accountability from the first

@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- Vite rewrites this source asset in production. The SSG replaces it
+         per route with that page's actual high-priority hero image. -->
+    <link rel="preload" as="image" href="/src/assets/variants/japandi-hero.webp" fetchpriority="high" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta
@@ -27,6 +30,14 @@
     <!-- title + description are set per-page via Head (see src/components/Meta.tsx) -->
   </head>
   <body>
+    <!--
+      THESIS: Helm is a composed, hospitality-minded security partner; this system refuses the category's cold neon command-center template.
+      OWN-WORLD: Mineral paper and deep pine, ink-black type, warm oak accents, Tenor Sans display lettering, Manrope body copy, ruled lists, and restrained asymmetric curves.
+      STORY: Visitors understand the four offers, see candid operating proof, choose a relevant industry path, and can start with a free scan or a founder conversation.
+      FIRST VIEWPORT: A still sculptural helm fills the canvas; a left-aligned, high-contrast message and domain-scan action occupy the quiet third.
+      FORM: User-pinned Japandi production system, inherited from the approved prototype; seed user-pinned-japandi-2026-08-04.
+      FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+    -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

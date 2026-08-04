@@ -28,9 +28,9 @@ export type Article = {
 export const articles: Article[] = [
   {
     slug: 'mfa-methods-compared',
-    title: 'MFA Methods Compared: Apps, SMS, and Security Keys for Small Business',
+    title: 'MFA Methods Compared: Apps, SMS, and Security Keys for Small and Medium Businesses',
     metaDesc:
-      'Authenticator apps, SMS codes, and hardware security keys all stop different attacks. A plain-English comparison for small businesses deciding where to start.',
+      'Authenticator apps, SMS codes, and hardware security keys all stop different attacks. A plain-English comparison for small and medium-sized businesses deciding where to start.',
     date: '2026-07-17',
     readMin: 5,
     lane: 'All industries',
@@ -49,7 +49,7 @@ export const articles: Article[] = [
         h: 'SMS codes: better than nothing, but the weakest link',
         ps: [
           'A text-message code is easy to set up and better than a password on its own, but it has two real weaknesses. SIM swapping lets an attacker convince a phone carrier to move your number onto a device they control, which sends your codes straight to them. Real-time phishing relays capture the code the moment you type it into a fake login page and use it within seconds on the real one.',
-          'Neither attack is common against every small business, but both are well documented, and neither requires much skill once someone is specifically targeted. SMS still beats password-only, it just should not be the method protecting your most sensitive accounts.',
+          'Neither attack is common against every small or medium-sized business, but both are well documented, and neither requires much skill once someone is specifically targeted. SMS still beats password-only, it just should not be the method protecting your most sensitive accounts.',
         ],
       },
       {
@@ -82,7 +82,7 @@ export const articles: Article[] = [
     slug: 'm365-security-baseline',
     title: 'The Microsoft 365 Security Baseline You Can Set This Week',
     metaDesc:
-      'A practical Microsoft 365 security checklist for small businesses: MFA everywhere, no legacy authentication, separate admin accounts, and the forwarding rules attackers rely on after a breach.',
+      'A practical Microsoft 365 security checklist for small and medium-sized businesses: MFA everywhere, no legacy authentication, separate admin accounts, and the forwarding rules attackers rely on after a breach.',
     date: '2026-07-16',
     readMin: 5,
     lane: 'All industries',
@@ -165,7 +165,7 @@ export const articles: Article[] = [
     lane: 'All industries',
     laneTo: '/',
     intro:
-      'Ask most small business owners where the shared logins live and the honest answer is a spreadsheet, a sticky note on a monitor, or a browser quietly remembering everything. That works fine until someone leaves the company or a password from an unrelated website leaks. Here is what an actual password vault fixes, and the order to introduce one in.',
+      'Ask most small and medium-sized business owners where the shared logins live and the honest answer is a spreadsheet, a sticky note on a monitor, or a browser quietly remembering everything. That works fine until someone leaves the company or a password from an unrelated website leaks. Here is what an actual password vault fixes, and the order to introduce one in.',
     sections: [
       {
         h: 'The failure mode behind most small-team compromises',
@@ -244,7 +244,7 @@ export const articles: Article[] = [
     lane: 'All industries',
     laneTo: '/',
     intro:
-      'If you are the one who pays invoices, whether that is your job title or just a task that landed on your desk, you are the last line of defense against one of the most common frauds a small business faces. It rarely looks suspicious. That is exactly the problem.',
+      'If you are the one who pays invoices, whether that is your job title or just a task that landed on your desk, you are the last line of defense against one of the most common frauds a small or medium-sized business faces. It rarely looks suspicious. That is exactly the problem.',
     sections: [
       {
         h: 'Why this is worth ten minutes of your attention',
@@ -288,7 +288,7 @@ export const articles: Article[] = [
     lane: 'All industries',
     laneTo: '/',
     intro:
-      'Every vendor pitch mentions a SOC, and few explain what one actually does all day. A security operations center is a team that watches security alerts around the clock, decides which ones matter, and steps in when something real is happening. Here is what that looks like in practice, and why most small businesses cannot build one themselves.',
+      'Every vendor pitch mentions a SOC, and few explain what one actually does all day. A security operations center is a team that watches security alerts around the clock, decides which ones matter, and steps in when something real is happening. Here is what that looks like in practice, and why most small and medium-sized businesses cannot build one themselves.',
     sections: [
       {
         h: 'An alert is not the same as a response',
@@ -300,7 +300,7 @@ export const articles: Article[] = [
       {
         h: 'Why continuous coverage is hard to build yourself',
         ps: [
-          'Watching alerts around the clock is not a part-time job for one person. It takes multiple analysts covering different shifts so someone is always awake and paying attention, which is a staffing commitment that is simply out of reach for most small businesses on their own.',
+          'Watching alerts around the clock is not a part-time job for one person. It takes multiple analysts covering different shifts so someone is always awake and paying attention, which is a staffing commitment that is simply out of reach for most small and medium-sized businesses on their own.',
           'Attackers know this, and they plan around it. Nights, weekends, and holidays are not random timing, they are deliberately chosen because fewer people are watching. Attackers also commonly sit quietly inside a network for a while before doing anything visible, which is exactly the kind of activity that only shows up if someone is actually looking.',
         ],
       },
@@ -751,7 +751,7 @@ export const articles: Article[] = [
       {
         h: 'Turn the questionnaire into a roadmap',
         ps: [
-          {text: 'Every "no" on the form is a to-do with a dollar value attached: lower premium, higher coverage limits, and a claim that actually pays. A remediation pass typically takes weeks, not quarters, at small-business scale. Then keep the evidence (screenshots, training logs, backup-test records) in one folder. At claim time, documentation is the difference between a payout and a lawsuit.', links: [{phrase: 'remediation pass', to: '/helm-ready'}]},
+          {text: 'Every "no" on the form is a to-do with a dollar value attached: lower premium, higher coverage limits, and a claim that actually pays. A remediation pass typically takes weeks, not quarters, at small- and medium-business scale. Then keep the evidence (screenshots, training logs, backup-test records) in one folder. At claim time, documentation is the difference between a payout and a lawsuit.', links: [{phrase: 'remediation pass', to: '/helm-ready'}]},
         ],
       },
     ],
@@ -876,7 +876,7 @@ export const articles: Article[] = [
     slug: 'pen-test-vs-vulnerability-scan',
     title: 'Penetration Test vs Vulnerability Scan: What You Are Actually Paying For',
     metaDesc:
-      'A vulnerability scan and a penetration test are not the same service. What each one actually delivers, how to spot a rebranded scan sold at pen test prices, and which one most small businesses need first.',
+      'A vulnerability scan and a penetration test are not the same service. What each one actually delivers, how to spot a rebranded scan sold at pen test prices, and which one most small and medium-sized businesses need first.',
     date: '2026-06-13',
     readMin: 5,
     lane: 'All industries',
@@ -901,7 +901,7 @@ export const articles: Article[] = [
       {
         h: 'Which one to buy first',
         ps: [
-          'Most small businesses get more value out of fixing what a scan already shows, MFA gaps, missing patches, weak email authentication, before paying for a scoped penetration test on top of it. Insurers and compliance frameworks frequently only require a scan in the first place.',
+          'Most small and medium-sized businesses get more value out of fixing what a scan already shows, MFA gaps, missing patches, weak email authentication, before paying for a scoped penetration test on top of it. Insurers and compliance frameworks frequently only require a scan in the first place.',
           {text: 'A free scan is exactly this kind of automated check, run against your own domain, at no cost. If you want help closing what it finds before spending money on anything scoped as a pen test, that prioritized cleanup work is what a readiness engagement is built for.', links: [{phrase: 'free scan', to: '/free-scan'}, {phrase: 'readiness engagement', to: '/helm-ready'}]},
         ],
       },
@@ -941,7 +941,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'incident-response-plan-small-business',
-    title: 'The First Hour After Ransomware or a Wire Fraud Email: A Small Business Incident Response Plan',
+    title: 'The First Hour After Ransomware or a Wire Fraud Email: An Incident Response Plan for Small and Medium Businesses',
     metaDesc:
       'What to do, who to call, and what not to touch in the first hour after ransomware or a business email compromise, plus why a one-page incident response plan beats a binder nobody reads.',
     date: '2026-06-06',
@@ -949,7 +949,7 @@ export const articles: Article[] = [
     lane: 'All industries',
     laneTo: '/',
     intro:
-      'Most small businesses find out they do not have an incident response plan the same way they would find out they do have one: in the first hour of an actual incident. Ransomware and business email compromise both move fast, and the decisions made in that first hour, sometimes made by whoever happens to be at their desk, shape everything that follows.',
+      'Most small and medium-sized businesses find out they do not have an incident response plan the same way they would find out they do have one: in the first hour of an actual incident. Ransomware and business email compromise both move fast, and the decisions made in that first hour, sometimes made by whoever happens to be at their desk, shape everything that follows.',
     sections: [
       {
         h: 'What not to touch',

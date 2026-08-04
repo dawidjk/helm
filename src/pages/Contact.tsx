@@ -104,8 +104,8 @@ export default function Contact() {
         desc="Contact Helm about email security, AI scam defense, or compliance readiness in Monmouth, Ocean, and Middlesex counties, New Jersey."
         path="/contact"
       />
-      <header className="hero lane">
-        <HeroBackdrop kind="rain" />
+      <header className="hero lane brand-hero">
+        <HeroBackdrop kind="brand-static" />
         <div className="wrap">
           <h1 className="reveal hero-h1-sm">
             Talk to a human.

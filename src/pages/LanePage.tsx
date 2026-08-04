@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 import {Button} from '@astryxdesign/core/Button';
-import {Band, CtaBand, ScrollCue} from '../components/Site';
+import {Band, CtaBand, DirectionIcon, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import HeroBackdrop, {type BackdropKind} from '../components/HeroBackdrop';
 import LeadForm from '../components/LeadForm';
@@ -62,11 +62,12 @@ export default function LanePage({lane}: {lane: Lane}) {
         <HeroBackdrop kind={lane.backdrop} />
         <div className="wrap">
           {lane.statusChip && <StatusChip text={lane.statusChip} />}
-          <div className="eyebrow reveal">{lane.eyebrow}</div>
           <h1 className="reveal d1 hero-title-readable">
             {lane.headline}
           </h1>
-          <p className="sub reveal d2">{lane.sub}</p>
+          <p className="sub reveal d2">
+            <strong className="lane-audience">{lane.eyebrow}.</strong> {lane.sub}
+          </p>
           <div className="hero-ctas reveal d3">
             {lane.ctaMode === 'book' ? (
               <Link to="/contact/">
@@ -88,13 +89,10 @@ export default function LanePage({lane}: {lane: Lane}) {
           <h2>What's actually at risk</h2>
         </div>
         <div className="risk-list">
-          {lane.pains.map((p, i) => (
-            <div key={p.title} className={`risk-item observe d${Math.min(i + 1, 5)}`}>
-              <div className="risk-index">{String(i + 1).padStart(2, '0')}</div>
-              <div>
-                <h3>{p.title}</h3>
-                <p>{p.body}</p>
-              </div>
+          {lane.pains.map((p) => (
+            <div key={p.title} className="risk-item observe">
+              <h3>{p.title}</h3>
+              <p>{p.body}</p>
             </div>
           ))}
         </div>
@@ -143,12 +141,11 @@ export default function LanePage({lane}: {lane: Lane}) {
               className={`lane-row observe d${Math.min(i + 1, 5)}`}
             >
               <div>
-                <div className="kicker">Resource</div>
                 <div className="lane-title">{resource.title}</div>
               </div>
               <div className="lane-side">
                 <span className="lane-note">{resource.note}</span>
-                <span className="lane-arrow">→</span>
+                <DirectionIcon className="lane-arrow" />
               </div>
             </Link>
           ))}

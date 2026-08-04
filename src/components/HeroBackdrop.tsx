@@ -1,41 +1,15 @@
 import {useEffect, useMemo, useRef} from 'react';
-import desktop1280Avif from '../assets/brand/helm-hero-desktop-1280.avif';
-import desktop1920Avif from '../assets/brand/helm-hero-desktop-1920.avif';
-import desktop1280Webp from '../assets/brand/helm-hero-desktop-1280.webp';
-import desktop1920Webp from '../assets/brand/helm-hero-desktop-1920.webp';
-import mobile640Avif from '../assets/brand/helm-hero-mobile-640.avif';
-import mobile900Avif from '../assets/brand/helm-hero-mobile-900.avif';
-import mobile640Webp from '../assets/brand/helm-hero-mobile-640.webp';
-import mobile900Webp from '../assets/brand/helm-hero-mobile-900.webp';
+import japandiSecondaryHero from '../assets/brand/japandi-secondary-hero.webp';
 
 export type BackdropKind = 'brand-static' | 'cyber' | 'aero' | 'skyline' | 'construction' | 'rain';
 
 function BrandStaticBackdrop() {
   return (
-    <picture className="backdrop-picture">
-      <source
-        media="(max-width: 640px)"
-        type="image/avif"
-        srcSet={`${mobile640Avif} 640w, ${mobile900Avif} 900w`}
-        sizes="100vw"
-      />
-      <source
-        media="(max-width: 640px)"
-        type="image/webp"
-        srcSet={`${mobile640Webp} 640w, ${mobile900Webp} 900w`}
-        sizes="100vw"
-      />
-      <source
-        type="image/avif"
-        srcSet={`${desktop1280Avif} 1280w, ${desktop1920Avif} 1920w`}
-        sizes="100vw"
-      />
+    <picture className="backdrop-picture japandi-backdrop-picture">
       <img
-        src={desktop1920Webp}
-        srcSet={`${desktop1280Webp} 1280w, ${desktop1920Webp} 1920w`}
-        sizes="100vw"
-        width="1920"
-        height="1080"
+        src={japandiSecondaryHero}
+        width="2048"
+        height="1152"
         alt=""
         loading="eager"
         decoding="async"
@@ -288,7 +262,7 @@ function EnergyCanvas() {
 
 function AeroSvg() {
   return (
-    <svg className="backdrop-svg aero" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden>
+    <svg className="backdrop-svg aero" viewBox="0 0 1200 600" preserveAspectRatio="xMaxYMid meet" aria-hidden>
       <g className="bp-draw" stroke="#38A169" fill="none" strokeWidth="1.6">
         {/* fuselage (top view) */}
         <path d="M600 90 C 588 130 584 190 584 260 L 584 430 C 584 470 590 505 600 525 C 610 505 616 470 616 430 L 616 260 C 616 190 612 130 600 90 Z" />
@@ -360,7 +334,7 @@ function SkylineSvg() {
   }, []);
 
   return (
-    <svg className="backdrop-svg skyline" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden>
+    <svg className="backdrop-svg skyline" viewBox="0 0 1200 600" preserveAspectRatio="xMaxYMid meet" aria-hidden>
       <g className="layer-far" fill="rgba(56, 161, 105, 0.10)">
         {far.map((b, i) => (
           <rect key={i} x={b.x} y={600 - b.h - 60} width={b.w} height={b.h + 60} />
@@ -394,7 +368,7 @@ function SkylineSvg() {
 
 function ConstructionSvg() {
   return (
-    <svg className="backdrop-svg construction" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden>
+    <svg className="backdrop-svg construction" viewBox="0 0 1200 600" preserveAspectRatio="xMaxYMid meet" aria-hidden>
       {/* ground line */}
       <line x1="0" y1="520" x2="1200" y2="520" stroke="rgba(56, 161, 105, 0.35)" strokeWidth="1.5" />
 
@@ -472,8 +446,36 @@ function ConstructionSvg() {
 /* ------------------------------------------------------------------ */
 
 export default function HeroBackdrop({kind}: {kind: BackdropKind}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const animated = kind === 'aero' || kind === 'skyline' || kind === 'construction';
+
+  useEffect(() => {
+    const element = ref.current;
+    if (!element || !animated) return;
+
+    let inView = false;
+    const updatePlayback = () => {
+      element.dataset.active = String(inView && document.visibilityState === 'visible');
+    };
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        inView = entry.isIntersecting;
+        updatePlayback();
+      },
+      {rootMargin: '80px'},
+    );
+    const handleVisibility = () => updatePlayback();
+
+    observer.observe(element);
+    document.addEventListener('visibilitychange', handleVisibility);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener('visibilitychange', handleVisibility);
+    };
+  }, [animated]);
+
   return (
-    <div className={`hero-backdrop ${kind}`} aria-hidden>
+    <div ref={ref} className={`hero-backdrop ${kind}`} data-animated={animated || undefined} aria-hidden>
       {kind === 'brand-static' && <BrandStaticBackdrop />}
       {kind === 'cyber' && <EnergyCanvas />}
       {kind === 'aero' && <AeroSvg />}

@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-04T20:08:19Z",
+  "title": "Design System: Helm Security Marketing Site",
+  "extensions": {
+    "colorMeta": {
+      "deep-pine": {
+        "role": "primary",
+        "displayName": "Deep Pine",
+        "canonical": "#214B3B",
+        "tonalRamp": [
+          "oklch(15% 0.035 157)",
+          "oklch(25% 0.045 157)",
+          "oklch(35% 0.055 157)",
+          "oklch(45% 0.06 157)",
+          "oklch(58% 0.055 157)",
+          "oklch(70% 0.045 157)",
+          "oklch(84% 0.025 157)",
+          "oklch(95% 0.01 157)"
+        ]
+      },
+      "mineral-paper": {
+        "role": "neutral",
+        "displayName": "Mineral Paper",
+        "canonical": "light-dark(#eee9df, #0f1712)",
+        "tonalRamp": [
+          "oklch(15% 0.012 92)",
+          "oklch(27% 0.014 92)",
+          "oklch(39% 0.016 92)",
+          "oklch(52% 0.018 92)",
+          "oklch(65% 0.02 92)",
+          "oklch(77% 0.021 92)",
+          "oklch(88% 0.022 92)",
+          "oklch(95% 0.022 92)"
+        ]
+      },
+      "paper-surface": {
+        "role": "neutral",
+        "displayName": "Paper Surface",
+        "canonical": "light-dark(#f7f3eb, #18221b)",
+        "tonalRamp": [
+          "oklch(15% 0.012 126)",
+          "oklch(27% 0.014 126)",
+          "oklch(39% 0.016 126)",
+          "oklch(52% 0.017 126)",
+          "oklch(65% 0.018 126)",
+          "oklch(77% 0.018 126)",
+          "oklch(88% 0.017 126)",
+          "oklch(95% 0.014 126)"
+        ]
+      },
+      "strong-ink": {
+        "role": "neutral",
+        "displayName": "Strong Ink",
+        "canonical": "light-dark(#16211a, #f7f3ea)",
+        "tonalRamp": [
+          "oklch(15% 0.018 151)",
+          "oklch(27% 0.02 151)",
+          "oklch(39% 0.02 151)",
+          "oklch(52% 0.018 151)",
+          "oklch(65% 0.016 151)",
+          "oklch(77% 0.013 151)",
+          "oklch(88% 0.01 151)",
+          "oklch(95% 0.007 151)"
+        ]
+      },
+      "body-ink": {
+        "role": "neutral",
+        "displayName": "Body Ink",
+        "canonical": "light-dark(#263129, #e7e9e2)",
+        "tonalRamp": [
+          "oklch(15% 0.014 151)",
+          "oklch(27% 0.016 151)",
+          "oklch(39% 0.017 151)",
+          "oklch(52% 0.016 151)",
+          "oklch(65% 0.014 151)",
+          "oklch(77% 0.012 151)",
+          "oklch(88% 0.009 151)",
+          "oklch(95% 0.006 151)"
+        ]
+      },
+      "muted-ink": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "light-dark(#4d5a50, #b7c1b9)",
+        "tonalRamp": [
+          "oklch(15% 0.01 151)",
+          "oklch(27% 0.012 151)",
+          "oklch(39% 0.014 151)",
+          "oklch(52% 0.015 151)",
+          "oklch(65% 0.014 151)",
+          "oklch(77% 0.012 151)",
+          "oklch(88% 0.009 151)",
+          "oklch(95% 0.006 151)"
+        ]
+      },
+      "warm-oak": {
+        "role": "secondary",
+        "displayName": "Warm Oak",
+        "canonical": "light-dark(#9c7f5b, #d2b993)",
+        "tonalRamp": [
+          "oklch(15% 0.035 76)",
+          "oklch(27% 0.045 76)",
+          "oklch(39% 0.055 76)",
+          "oklch(52% 0.065 76)",
+          "oklch(65% 0.065 76)",
+          "oklch(77% 0.055 76)",
+          "oklch(88% 0.035 76)",
+          "oklch(95% 0.018 76)"
+        ]
+      },
+      "pine-field": {
+        "role": "primary",
+        "displayName": "Pine Field",
+        "canonical": "light-dark(#214b3b, #cfc1a7)",
+        "tonalRamp": [
+          "oklch(15% 0.032 157)",
+          "oklch(27% 0.044 157)",
+          "oklch(39% 0.055 157)",
+          "oklch(52% 0.058 157)",
+          "oklch(65% 0.05 157)",
+          "oklch(77% 0.038 157)",
+          "oklch(88% 0.022 157)",
+          "oklch(95% 0.01 157)"
+        ]
+      },
+      "on-pine": {
+        "role": "neutral",
+        "displayName": "On Pine",
+        "canonical": "light-dark(#f5f1e8, #162019)",
+        "tonalRamp": [
+          "oklch(15% 0.012 126)",
+          "oklch(27% 0.014 126)",
+          "oklch(39% 0.016 126)",
+          "oklch(52% 0.017 126)",
+          "oklch(65% 0.018 126)",
+          "oklch(77% 0.017 126)",
+          "oklch(88% 0.014 126)",
+          "oklch(95% 0.009 126)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Pine Hairline",
+        "canonical": "light-dark(rgba(31, 41, 34, 0.18), rgba(231, 236, 229, 0.17))",
+        "tonalRamp": [
+          "oklch(15% 0.008 151)",
+          "oklch(27% 0.009 151)",
+          "oklch(39% 0.01 151)",
+          "oklch(52% 0.011 151)",
+          "oklch(65% 0.01 151)",
+          "oklch(77% 0.009 151)",
+          "oklch(88% 0.007 151)",
+          "oklch(95% 0.005 151)"
+        ]
+      },
+      "action-fill": {
+        "role": "primary",
+        "displayName": "Action Pine / Oak",
+        "canonical": "light-dark(#214b3b, #d2b993)",
+        "tonalRamp": [
+          "oklch(15% 0.035 125)",
+          "oklch(27% 0.045 125)",
+          "oklch(39% 0.055 125)",
+          "oklch(52% 0.06 125)",
+          "oklch(65% 0.055 125)",
+          "oklch(77% 0.045 125)",
+          "oklch(88% 0.028 125)",
+          "oklch(95% 0.012 125)"
+        ]
+      },
+      "action-text": {
+        "role": "neutral",
+        "displayName": "Action Contrast",
+        "canonical": "light-dark(#fffdf7, #132019)",
+        "tonalRamp": [
+          "oklch(15% 0.01 126)",
+          "oklch(27% 0.012 126)",
+          "oklch(39% 0.013 126)",
+          "oklch(52% 0.014 126)",
+          "oklch(65% 0.013 126)",
+          "oklch(77% 0.011 126)",
+          "oklch(88% 0.008 126)",
+          "oklch(95% 0.005 126)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Architectural Display",
+        "purpose": "Hero headlines and the largest brand statements only."
+      },
+      "headline": {
+        "displayName": "Section Headline",
+        "purpose": "Major section openings and closing calls to action."
+      },
+      "title": {
+        "displayName": "Structured Title",
+        "purpose": "Cards, risks, FAQs, and supporting hierarchy."
+      },
+      "body": {
+        "displayName": "Plain-English Body",
+        "purpose": "Scope, evidence, pricing, explanations, and form content."
+      },
+      "label": {
+        "displayName": "Quiet Label",
+        "purpose": "Eyebrows, product names, metadata, and footer groups."
+      }
+    },
+    "shadows": [
+      {
+        "name": "surface-whisper",
+        "value": "0 18px 42px -36px light-dark(rgba(20,35,27,.38), rgba(0,0,0,.74))",
+        "purpose": "Resting cards and informational containers."
+      },
+      {
+        "name": "pine-lift",
+        "value": "0 28px 64px -42px light-dark(rgba(33,75,59,.65), rgba(0,0,0,.9))",
+        "purpose": "Hover feedback on an interactive card."
+      },
+      {
+        "name": "action-lift",
+        "value": "0 12px 28px -14px light-dark(rgba(20,48,37,.9), rgba(0,0,0,.92))",
+        "purpose": "High-contrast lead-form buttons."
+      },
+      {
+        "name": "oak-focus",
+        "value": "0 0 0 4px light-dark(rgba(156,127,91,.17), rgba(210,185,147,.15))",
+        "purpose": "Theme-aware focus feedback for form fields and controls."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-fast",
+        "value": "180ms ease",
+        "purpose": "Field, border, color, and compact control state changes."
+      },
+      {
+        "name": "directional",
+        "value": "220ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "Short SVG-arrow travel that confirms direction."
+      },
+      {
+        "name": "surface-lift",
+        "value": "320ms cubic-bezier(0.2,0.65,0.25,1)",
+        "purpose": "Restrained interactive-card elevation."
+      },
+      {
+        "name": "first-viewport-reveal",
+        "value": "700ms cubic-bezier(0.2,0.65,0.25,1)",
+        "purpose": "A single restrained rise for hero content; not for ordinary sections."
+      },
+      {
+        "name": "industry-context",
+        "value": "14s–48s ease-in-out loops",
+        "purpose": "Slow Aero, Skyline, and Construction scene motion on industry heroes only; disabled for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "340px"
+      },
+      {
+        "name": "phone",
+        "value": "700px"
+      },
+      {
+        "name": "navigation",
+        "value": "760px"
+      },
+      {
+        "name": "wide-stack",
+        "value": "980px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The calm, high-contrast action used for scans, founder contact, and form submission.",
+      "html": "<button class=\"ds-btn-primary\">Get my free scan</button>",
+      "css": ".ds-btn-primary { min-height: 52px; padding: 0 22px; border: 1px solid light-dark(#17382c,#ead9bc); border-radius: 12px; background: light-dark(#214b3b,#d2b993); color: light-dark(#fffdf7,#132019); font: 650 16px/1 Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; box-shadow: 0 12px 28px -14px light-dark(rgba(20,48,37,.9),rgba(0,0,0,.92)); cursor: pointer; transition: transform 180ms ease,box-shadow 180ms ease; } .ds-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 16px 34px -14px light-dark(rgba(20,48,37,.95),rgba(0,0,0,.96)); } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 4px light-dark(rgba(156,127,91,.25),rgba(210,185,147,.22)),0 16px 34px -14px light-dark(rgba(20,48,37,.95),rgba(0,0,0,.96)); } .ds-btn-primary:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "A quiet paper-surface field with warm-oak focus feedback.",
+      "html": "<label class=\"ds-field\"><span>Work email</span><input type=\"email\" placeholder=\"you@company.com\"></label>",
+      "css": ".ds-field { display:grid; gap:8px; color:light-dark(#263129,#e7e9e2); font:600 14px/1.4 Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; } .ds-field input { width:100%; min-height:52px; box-sizing:border-box; padding:13px 16px; border:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); border-radius:12px; background:light-dark(#f7f3eb,#18221b); color:light-dark(#16211a,#f7f3ea); font:400 16px/1.4 Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; outline:none; transition:border-color 180ms ease,box-shadow 180ms ease; } .ds-field input::placeholder { color:light-dark(#6a756c,#99a59c); } .ds-field input:hover { border-color:light-dark(rgba(156,127,91,.55),rgba(210,185,147,.48)); } .ds-field input:focus-visible { border-color:light-dark(#9c7f5b,#d2b993); box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.17),rgba(210,185,147,.15)); }"
+    },
+    {
+      "name": "Elevated Lead Form",
+      "kind": "custom",
+      "refersTo": "button-primary",
+      "description": "The first-viewport conversion unit: one work-email field and a visibly elevated action.",
+      "html": "<form class=\"ds-lead-form\"><input aria-label=\"Work email\" type=\"email\" placeholder=\"Work email\"><button type=\"button\">Get my free scan</button><small>Plain-English report in about a minute.</small></form>",
+      "css": ".ds-lead-form { display:flex; flex-wrap:wrap; gap:10px; max-width:620px; font-family:Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; } .ds-lead-form input { width:min(340px,100%); min-height:52px; box-sizing:border-box; padding:0 22px; border:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); border-radius:12px; background:light-dark(#f7f3eb,#18221b); color:light-dark(#16211a,#f7f3ea); font-size:16px; outline:none; transition:border-color 180ms ease,box-shadow 180ms ease; } .ds-lead-form input:focus-visible { border-color:light-dark(#9c7f5b,#d2b993); box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.17),rgba(210,185,147,.15)); } .ds-lead-form button { min-height:52px; padding:0 22px; border:1px solid light-dark(#17382c,#ead9bc); border-radius:12px; background:light-dark(#214b3b,#d2b993); color:light-dark(#fffdf7,#132019); font:650 16px/1 Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; box-shadow:0 12px 28px -14px light-dark(rgba(20,48,37,.9),rgba(0,0,0,.92)); cursor:pointer; transition:transform 180ms ease,box-shadow 180ms ease; } .ds-lead-form button:hover { transform:translateY(-1px); box-shadow:0 16px 34px -14px light-dark(rgba(20,48,37,.95),rgba(0,0,0,.96)); } .ds-lead-form button:focus-visible { outline:none; box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.25),rgba(210,185,147,.22)); } .ds-lead-form small { flex-basis:100%; color:light-dark(#4d5a50,#b7c1b9); font-size:12px; line-height:1.45; }"
+    },
+    {
+      "name": "Site Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "A quiet 72px brand bar with a persistent conversion action and compact secondary links.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-brand\" href=\"#\"><svg viewBox=\"0 0 32 32\" aria-hidden=\"true\"><circle cx=\"16\" cy=\"16\" r=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><circle cx=\"16\" cy=\"16\" r=\"5\" fill=\"currentColor\"/><path d=\"M16 1v6M16 25v6M1 16h6M25 16h6M5.4 5.4l4.2 4.2M22.4 22.4l4.2 4.2M26.6 5.4l-4.2 4.2M9.6 22.4l-4.2 4.2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\"/></svg>Helm</a><div class=\"ds-nav-links\"><a href=\"#\">Industries</a><a href=\"#\">Pricing</a><a class=\"ds-nav-action\" href=\"#\">Free scan</a></div></nav>",
+      "css": ".ds-nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:0 24px; border-bottom:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); background:light-dark(rgba(238,233,223,.96),rgba(15,23,18,.96)); font-family:Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; } .ds-nav a { text-decoration:none; } .ds-nav-brand { display:inline-flex; align-items:center; gap:10px; color:light-dark(#214b3b,#d5c6aa); font:400 20px/1 \"Tenor Sans\",\"Helvetica Neue\",sans-serif; } .ds-nav-brand svg { width:30px; height:30px; } .ds-nav-links { display:flex; align-items:center; gap:24px; } .ds-nav-links>a { color:light-dark(#4d5a50,#b7c1b9); font-size:13px; font-weight:600; } .ds-nav-links>a:hover,.ds-nav-links>a:focus-visible { color:light-dark(#214b3b,#d5c6aa); } .ds-nav-action { display:inline-flex; align-items:center; min-height:44px; padding:0 18px; border-radius:12px; background:light-dark(#214b3b,#d2b993); color:light-dark(#fffdf7,#132019)!important; } .ds-nav-action:focus-visible { outline:none; box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.17),rgba(210,185,147,.15)); }"
+    },
+    {
+      "name": "Status Chip",
+      "kind": "chip",
+      "description": "A compact informational label for deadlines or pricing terms, never a faux button.",
+      "html": "<span class=\"ds-status-chip\">Fixed fee</span>",
+      "css": ".ds-status-chip { display:inline-flex; align-items:center; min-height:30px; padding:0 14px; border:1px solid light-dark(rgba(33,75,59,.28),rgba(210,185,147,.4)); border-radius:9999px; background:light-dark(rgba(33,75,59,.07),rgba(210,185,147,.1)); color:light-dark(#214b3b,#d5c6aa); font:700 12px/1.35 Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; letter-spacing:.02em; }"
+    },
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "A restrained paper surface for product and pricing summaries, with lift only when interactive.",
+      "html": "<article class=\"ds-product-card\"><span>Helm Mail</span><h3>Managed email security</h3><p>Clear scope, direct delivery, and published pricing.</p><a href=\"#\">Learn more <svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h12M11 5l5 5-5 5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></article>",
+      "css": ".ds-product-card { display:grid; gap:14px; max-width:360px; box-sizing:border-box; padding:32px; border:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); border-radius:16px; background:light-dark(#f7f3eb,#18221b); color:light-dark(#263129,#e7e9e2); box-shadow:0 18px 42px -36px light-dark(rgba(20,35,27,.38),rgba(0,0,0,.74)); font-family:Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; transition:transform 320ms cubic-bezier(.2,.65,.25,1),border-color 320ms ease,box-shadow 320ms ease; } .ds-product-card>span { color:light-dark(#214b3b,#d5c6aa); font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; } .ds-product-card h3 { margin:0; color:light-dark(#16211a,#f7f3ea); font-size:22px; line-height:1.2; } .ds-product-card p { margin:0; color:light-dark(#4d5a50,#b7c1b9); line-height:1.6; } .ds-product-card a { display:inline-flex; align-items:center; gap:6px; color:light-dark(#214b3b,#d5c6aa); font-size:14px; font-weight:700; text-decoration:none; } .ds-product-card a svg { width:1em; height:1em; transition:transform 220ms cubic-bezier(.16,1,.3,1); } .ds-product-card:hover { transform:translateY(-4px); border-color:light-dark(#9c7f5b,#d2b993); box-shadow:0 28px 64px -42px light-dark(rgba(33,75,59,.65),rgba(0,0,0,.9)); } .ds-product-card:hover a svg { transform:translateX(4px); } .ds-product-card:focus-within { border-color:light-dark(#9c7f5b,#d2b993); box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.17),rgba(210,185,147,.15)); }"
+    },
+    {
+      "name": "Ruled Directional Row",
+      "kind": "custom",
+      "description": "The preferred pattern for services, industries, resources, FAQs, and unnumbered risks.",
+      "html": "<a class=\"ds-ruled-row\" href=\"#\"><span><small>Helm Ready</small><strong>Know the gap before you fund the fix.</strong></span><svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h12M11 5l5 5-5 5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-ruled-row { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:28px 8px; border-top:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); border-bottom:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); color:light-dark(#16211a,#f7f3ea); font-family:Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; text-decoration:none; transition:background 260ms ease; } .ds-ruled-row>span { display:grid; gap:8px; } .ds-ruled-row small { color:light-dark(#214b3b,#d5c6aa); font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; } .ds-ruled-row strong { font-size:18px; } .ds-ruled-row>svg { width:20px; height:20px; color:light-dark(#214b3b,#d5c6aa); transition:transform 220ms cubic-bezier(.16,1,.3,1); } .ds-ruled-row:hover { background:light-dark(rgba(255,255,255,.34),rgba(255,255,255,.045)); } .ds-ruled-row:hover>svg { transform:translateX(4px); } .ds-ruled-row:focus-visible { outline:none; box-shadow:inset 0 0 0 2px light-dark(#9c7f5b,#d2b993); }"
+    },
+    {
+      "name": "Asymmetric Closing Panel",
+      "kind": "custom",
+      "description": "The signature curved paper panel reserved for a major closing action.",
+      "html": "<section class=\"ds-closing-panel\"><h2>Find out where you stand.</h2><p>The first look is free. No meeting required.</p><button type=\"button\">Get my free scan</button></section>",
+      "css": ".ds-closing-panel { max-width:900px; box-sizing:border-box; padding:clamp(72px,8vw,106px) 7vw; border-radius:112px 16px 112px 16px; background:light-dark(#ddd5c8,#243028); color:light-dark(#263129,#e7e9e2); text-align:center; font-family:Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; } .ds-closing-panel h2 { margin:0; color:light-dark(#16211a,#f7f3ea); font:400 clamp(38px,5vw,64px)/1 \"Tenor Sans\",\"Helvetica Neue\",sans-serif; letter-spacing:-.025em; } .ds-closing-panel p { color:light-dark(#4d5a50,#b7c1b9); line-height:1.65; } .ds-closing-panel button { min-height:52px; padding:0 22px; border:1px solid light-dark(#17382c,#ead9bc); border-radius:12px; background:light-dark(#214b3b,#d2b993); color:light-dark(#fffdf7,#132019); font:650 16px/1 Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; box-shadow:0 12px 28px -14px light-dark(rgba(20,48,37,.9),rgba(0,0,0,.92)); cursor:pointer; transition:transform 180ms ease,box-shadow 180ms ease; } .ds-closing-panel button:hover { transform:translateY(-1px); box-shadow:0 16px 34px -14px light-dark(rgba(20,48,37,.95),rgba(0,0,0,.96)); } .ds-closing-panel button:focus-visible { outline:none; box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.25),rgba(210,185,147,.22)); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Helm House",
+    "overview": "Helm should feel like a composed security partner welcoming a business owner into a calm, considered room. The production world is the user-pinned Japandi direction (`user-pinned-japandi-2026-08-04`): mineral paper, deep pine, warm oak, generous breathing room, tactile surfaces, and editorial restraint. It communicates steadiness and care without making security feel soft or vague.\n\nThe visual system is persuasive but never theatrical. A left-aligned, high-contrast message and a concrete action anchor the first viewport; candid proof, ruled choices, and published details carry the story afterward. Helm explicitly rejects neon command centers, sci-fi dashboards, fear-driven spectacle, and anonymous enterprise gloss.",
+    "keyCharacteristics": [
+      "Quiet Japanese-modern hospitality with a credible security backbone.",
+      "Mineral-paper and deep-pine tonal fields with warm-oak highlights.",
+      "Tenor Sans display type paired with precise, readable Manrope.",
+      "Ruled lists, asymmetric curves, sparse borders, and restrained lift.",
+      "Still, sculptural photography for the homepage and architectural photography for secondary heroes.",
+      "Motion concentrated in industry context, with content visible by default everywhere else.",
+      "Light and dark themes that preserve the same materials, hierarchy, and contrast."
+    ],
+    "rules": [
+      {
+        "name": "The Material, Not Neon Rule",
+        "body": "Security is expressed through pine, paper, oak, clarity, and evidence—never electric cyan, matrix grids, glowing command centers, or generic hacker imagery.",
+        "section": "colors"
+      },
+      {
+        "name": "The Oak Is Rare Rule",
+        "body": "Warm oak appears as a precise accent or theme counterpart, not a broad decorative wash competing with pine.",
+        "section": "colors"
+      },
+      {
+        "name": "The Theme Continuity Rule",
+        "body": "Dark mode changes material values, not the visual identity: hierarchy, legibility, imagery roles, and action contrast remain intact.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Voice Rule",
+        "body": "Tenor Sans speaks only for the brand and major hierarchy; Manrope does the explanatory, transactional, and evidentiary work.",
+        "section": "typography"
+      },
+      {
+        "name": "The Calm Display Rule",
+        "body": "Display type stays regular-weight and tightly composed. Do not simulate authority with heavy, compressed, all-caps headlines.",
+        "section": "typography"
+      },
+      {
+        "name": "The First-Viewport Rule",
+        "body": "The first viewport presents one left-aligned, high-contrast message, its explanatory line, and the relevant scan or founder action; imagery supports that decision instead of competing with it.",
+        "section": "layout"
+      },
+      {
+        "name": "The Ruled-Choice Rule",
+        "body": "Repeated choices and risks use edge-to-edge hairlines and generous row padding, not floating stacks of lookalike cards. Risk lists remain unnumbered.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat-by-Default Rule",
+        "body": "A section earns separation through tone, whitespace, or a hairline before it earns a shadow.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Action Gets the Lift Rule",
+        "body": "Strong elevation belongs to conversion controls, not decorative containers.",
+        "section": "elevation"
+      },
+      {
+        "name": "The One Curve Gesture Rule",
+        "body": "Use the asymmetric curve as a deliberate focal silhouette, not as a default radius for every card.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Honest Edge Rule",
+        "body": "Default surfaces use 12–16px rounding; pills belong only to genuinely compact labels and controls.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do preserve the two-image hierarchy: sculptural homepage, separate architectural secondary hero.",
+      "Do lead first viewports with a left-aligned, high-contrast message and one obvious scan or founder action.",
+      "Do use Aero, Skyline, and Construction animation only on their matching industry heroes, with reduced-motion fallbacks.",
+      "Do keep section content visible by default and reserve the restrained rise reveal for first-viewport hero content.",
+      "Do use ruled, unnumbered rows for risks and SVG arrows for direction.",
+      "Do preserve 44px minimum interactive targets, dark-mode continuity, and elevated lead-form button contrast.",
+      "Do keep the footer complete, legible, and structurally intact at every breakpoint."
+    ],
+    "donts": [
+      "Don't introduce neon, command-center dashboards, hacker clichés, or fear-selling visual effects.",
+      "Don't replace candid proof with invented testimonials, badges, customer counts, or outcome claims.",
+      "Don't animate ordinary content sections or hide them behind scroll-observer state.",
+      "Don't reuse the homepage sculpture as a generic background for every page.",
+      "Don't turn every section into a rounded card grid or every label into a pill.",
+      "Don't weaken primary lead-form buttons into low-contrast flat fills on elevated or pine backgrounds."
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 import HeroBackdrop from '../components/HeroBackdrop';
 import {Link} from 'react-router-dom';
-import {Band, CtaBand, ScrollCue} from '../components/Site';
+import {Band, CtaBand, DirectionIcon, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {siteUrl} from '../lib/urls';
 import ProductMotif from '../components/ProductMotif';
@@ -44,7 +44,6 @@ export default function Pricing() {
       <header className="hero lane brand-hero">
         <HeroBackdrop kind="brand-static" />
         <div className="wrap">
-          <div className="eyebrow reveal">Pricing</div>
           <h1 className="reveal d1 hero-title-compact">
             Published starting prices. Scope in writing.
           </h1>
@@ -62,7 +61,7 @@ export default function Pricing() {
           {pricingTiles.map((p, i) => (
             <div key={p.slug} className={`product-tile observe d${Math.min(i + 1, 5)}`}>
               <ProductMotif kind={p.motif} />
-              <div className="kicker">{p.name}</div>
+              <h2 className="product-tile-title">{p.name}</h2>
               {p.pricingOptions ? (
                 <div className="price-options">
                   {p.pricingOptions.map((option) => (
@@ -91,7 +90,7 @@ export default function Pricing() {
                 ))}
               </ul>
               <Link to={`/${p.slug}/`} className="tile-link">
-                Learn more about {p.name} →
+                Learn more about {p.name} <DirectionIcon />
               </Link>
             </div>
           ))}
@@ -126,18 +125,15 @@ export default function Pricing() {
         </div>
         <div className="pricing-terms">
           <article className="pricing-term observe">
-            <div className="pricing-term-kicker">Mail and Watch</div>
-            <h3>Month to month</h3>
+            <h3>Mail and Watch: month to month</h3>
             <p>For Mail and Watch, with setup included and no cancellation fee.</p>
           </article>
           <article className="pricing-term observe d1">
-            <div className="pricing-term-kicker">Aware Managed</div>
-            <h3>12-month initial term</h3>
+            <h3>Aware Managed: 12-month initial term</h3>
             <p>Monthly billing at $10 per active learner, with setup included and no customer account minimum.</p>
           </article>
           <article className="pricing-term observe d2">
-            <div className="pricing-term-kicker">Aware workshops and Ready</div>
-            <h3>Fixed fee</h3>
+            <h3>Aware workshops and Ready: fixed fee</h3>
             <p>Deliverables, exclusions, and separately priced follow-on work are written down before the project starts.</p>
           </article>
         </div>

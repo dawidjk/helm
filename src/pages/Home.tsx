@@ -1,75 +1,32 @@
 import {Link} from 'react-router-dom';
-import {canonicalPath, siteUrl} from '../lib/urls';
-import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
-import HeroBackdrop from '../components/HeroBackdrop';
 import LeadForm from '../components/LeadForm';
-import PanelVisual from '../components/PanelVisual';
-import ProductMotif, {type MotifKind} from '../components/ProductMotif';
+import {canonicalPath, siteUrl} from '../lib/urls';
 import {businessPhone, linkedInUrl, serviceAreaJsonLd} from '../lib/business';
+import {productList} from './products';
+import japandiHero from '../assets/variants/japandi-hero.webp';
+import {DirectionIcon} from '../components/Site';
 
-const products: {slug: string; motif: MotifKind; kicker: string; title: string; body: string; price: string}[] = [
-  {
-    slug: 'helm-mail',
-    motif: 'mail',
-    kicker: 'Helm Mail',
-    title: 'Email fraud, stopped cold.',
-    body: 'Managed email filtering for Microsoft 365, Google Workspace, and other business email providers, plus a real escalation path for suspicious messages. Helm configures the platform and explains what matters.',
-    price: 'From $15 per user / month',
-  },
-  {
-    slug: 'helm-aware',
-    motif: 'aware',
-    kicker: 'Helm Aware',
-    title: 'Make the next scam less convincing.',
-    body: 'Managed monthly learning and phishing informed by active threats, with Helm reporting and review. Fixed-fee AI scam readiness workshops remain available separately.',
-    price: '$10 per active learner / month',
-  },
-  {
-    slug: 'helm-ready',
-    motif: 'ready',
-    kicker: 'Helm Ready',
-    title: 'Pass the questionnaire. Win the contract.',
-    body: 'Cyber-insurance readiness, HIPAA, and CMMC gap assessments: fixed fee, plain English, done in weeks. When your insurer or a prime contractor asks the 12 hard questions, you have the answers.',
-    price: 'Fixed-fee projects from $2,500',
-  },
-  {
-    slug: 'helm-watch',
-    motif: 'watch',
-    kicker: 'Helm Watch',
-    title: '24/7 endpoint monitoring.',
-    body: 'Huntress-backed managed EDR for Windows and Mac endpoints, with human-triaged alerts, active containment, and plain-English follow-up from Helm.',
-    price: 'From $15 per endpoint / month',
-  },
+const lanes = [
+  {to: '/manufacturing', name: 'Manufacturing & defense', promise: 'CMMC without the panic'},
+  {to: '/professional-services', name: 'Law, CPA & medical', promise: 'Client trust is the product'},
+  {to: '/contractors', name: 'Contractors & trades', promise: 'Stop the fake-invoice loss'},
 ];
 
-const laneLinks = [
-  {
-    to: '/manufacturing',
-    kicker: 'Manufacturing & Defense',
-    title: 'CMMC without the panic',
-    note: 'Self-assessment still required',
-  },
-  {
-    to: '/professional-services',
-    kicker: 'Law · CPA · Medical',
-    title: 'Client trust is the product',
-    note: 'Wire fraud · HIPAA · insurance',
-  },
-  {
-    to: '/contractors',
-    kicker: 'Contractors & Trades',
-    title: 'Stop the fake-invoice loss',
-    note: 'BEC · GC requirements',
-  },
-];
+function Scan({source}: {source: string}) {
+  return (
+    <div className="home-scan">
+      <LeadForm source={source} cta="Get my free scan" compact />
+    </div>
+  );
+}
 
 export default function Home() {
   return (
-    <>
+    <div className="home-japandi">
       <Meta
-        title="Helm: Cybersecurity for New Jersey Small Business"
-        desc="Leadership-led New Jersey security for small businesses: email fraud protection, AI scam readiness, compliance projects, 24/7 endpoint monitoring, and a free domain scan."
+        title="Helm: Cybersecurity for New Jersey Small and Medium Businesses"
+        desc="Leadership-led New Jersey security for small and medium-sized businesses: email fraud protection, AI scam readiness, compliance projects, 24/7 endpoint monitoring, and a free domain scan."
         path="/"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -82,122 +39,78 @@ export default function Home() {
           telephone: businessPhone.e164,
           areaServed: serviceAreaJsonLd,
           address: {'@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US'},
-          description: 'Email security, AI scam defense, and compliance readiness for small businesses.',
+          description: 'Email security, AI scam defense, and compliance readiness for small and medium-sized businesses.',
         }}
       />
-      <header className="hero brand-hero">
-        <HeroBackdrop kind="brand-static" />
-        <div className="wrap">
-          <div className="eyebrow reveal">Security · Compliance · Peace of mind</div>
-          <h1 className="reveal d1">Take the helm of your security.</h1>
-          <p className="sub reveal d2">
-            Practical protection, sized and priced for real businesses: law
-            firms, manufacturers, medical offices, and the trades. No jargon,
-            no bloat, no 40-page reports you'll never read.
+
+      <header className="japandi-home-hero">
+        <img
+          src={japandiHero}
+          className="japandi-home-art"
+          alt="Sculptural wooden helm in a quiet architectural interior"
+          width="1672"
+          height="941"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+        />
+        <div className="japandi-home-shade" aria-hidden="true" />
+        <div className="japandi-home-copy">
+          <h1>Security with less noise.</h1>
+          <p>
+            Practical protection for New Jersey businesses. Clear decisions,
+            thoughtful controls, and a steady hand when the stakes are high.
           </p>
-          <div className="hero-ctas reveal d3">
-            <LeadForm source="home hero" cta="Get my free scan" compact />
-          </div>
-          <div className="hero-note reveal d3">
-            Free automated email-security scan · plain-English report in about a minute · no meeting
-          </div>
+          <Scan source="home hero" />
+          <small>Free email-domain scan · plain-English report in about a minute</small>
         </div>
-        <ScrollCue />
       </header>
 
-      <Band id="products" variant="raised">
-        <div className="band-head">
-          <h2 className="observe">Four services. One steady hand.</h2>
-          <p className="observe d1">
-            Recurring protection where it belongs, fixed-fee projects where
-            the work has a finish line, and plain English throughout.
-          </p>
+      <section id="services" className="home-service-section" aria-labelledby="home-services-title">
+        <div className="home-section-intro">
+          <h2 id="home-services-title">Four services. One steady hand.</h2>
+          <p>Recurring protection where it belongs. Fixed-fee projects where the work has a finish line.</p>
         </div>
-        <div className="product-grid four">
-          {products.map((p, i) => (
-            <Link
-              key={p.kicker}
-              to={canonicalPath(`/${p.slug}`)}
-              className={`product-tile observe d${Math.min(i + 1, 5)}`}
-              aria-label={`Explore ${p.kicker}: ${p.title}`}
-            >
-              <ProductMotif kind={p.motif} />
-              <div className="kicker">{p.kicker}</div>
-              <h3>{p.title}</h3>
-              <p>{p.body}</p>
-              <div className="price">{p.price}</div>
-              <div className="product-link">Explore {p.kicker} →</div>
+        <div className="home-service-list">
+          {productList.map((service) => (
+            <Link key={service.slug} to={canonicalPath(`/${service.slug}`)} className="home-service-link">
+              <span className="home-service-name">{service.name}</span>
+              <strong>{service.tagline}</strong>
+              <span className="home-service-price">{service.price}</span>
+              <DirectionIcon className="home-service-arrow" />
             </Link>
           ))}
         </div>
-      </Band>
+      </section>
 
-      <Band>
-        <div className="split">
-          <div>
-            <h3 className="observe">Built for the questions you're actually being asked.</h3>
-            <p className="observe d1">
-              Your cyber insurer, your biggest customer, and your bank are all
-              asking the same thing: prove you're protected. We make the
-              answer yes.
-            </p>
-            <ul className="check-list">
-              <li className="observe d2">Cyber-insurance questionnaires answered and remediated</li>
-              <li className="observe d3">Wire-fraud and payment-verification protocols that hold up</li>
-              <li className="observe d4">CMMC / NIST 800-171 gap assessments against all 110 controls</li>
-              <li className="observe d5">HIPAA-ready controls for medical and dental practices</li>
-            </ul>
-          </div>
-          <PanelVisual />
+      <section className="home-proof-section">
+        <blockquote>“Prove you’re protected” should have a clear, useful answer.</blockquote>
+        <div className="home-proof-list">
+          <span>Cyber-insurance questionnaires</span>
+          <span>Payment-verification protocols</span>
+          <span>CMMC / NIST 800-171 gaps</span>
+          <span>HIPAA-ready controls</span>
         </div>
-      </Band>
+      </section>
 
-      <Band variant="raised">
-        <div className="band-head observe">
-          <h2>The operating facts.</h2>
-        </div>
-        <div className="stats">
-          <div className="stat observe">
-            <div className="num">$0</div>
-            <div className="lbl">to find out where you stand — the email-domain scan is free</div>
-          </div>
-          <div className="stat observe d1">
-            <div className="num">~1 min</div>
-            <div className="lbl">from scan to plain-English report, no meeting required</div>
-          </div>
-          <div className="stat observe d2">
-            <div className="num">24/7</div>
-            <div className="lbl">Huntress SOC monitoring behind Helm Watch</div>
-          </div>
-        </div>
-      </Band>
-
-      <Band>
-        <div className="band-head">
-          <h2 className="observe">Your industry, your language.</h2>
-          <p className="observe d1">Same protection underneath. A pitch that speaks to your world.</p>
-        </div>
-        <div className="lane-strip">
-          {laneLinks.map((l, i) => (
-            <Link key={l.to} to={canonicalPath(l.to)} className={`lane-row observe d${Math.min(i + 1, 5)}`}>
-              <div>
-                <div className="kicker">{l.kicker}</div>
-                <div className="lane-title">{l.title}</div>
-              </div>
-              <div className="lane-side">
-                <span className="lane-note">{l.note}</span>
-                <span className="lane-arrow">→</span>
-              </div>
+      <section className="home-industries-section">
+        <h2>Built for the way your business actually works.</h2>
+        <nav className="home-industry-links" aria-label="Industry pages">
+          {lanes.map((lane) => (
+            <Link key={lane.to} to={canonicalPath(lane.to)}>
+              <span>{lane.name}</span>
+              <strong>{lane.promise}</strong>
+              <DirectionIcon external />
             </Link>
           ))}
-        </div>
-      </Band>
+        </nav>
+      </section>
 
-      <CtaBand
-        title="Find out where you stand. Free."
-        sub="We run an automated scan of your email domain and show you a plain-English report of the public signals a scammer can check, usually in about a minute, no meeting required."
-        source="home cta band"
-      />
-    </>
+      <section className="home-close-section">
+        <h2>Find out where you stand.</h2>
+        <p>The first look is free. No meeting required.</p>
+        <Scan source="home close" />
+      </section>
+    </div>
   );
 }

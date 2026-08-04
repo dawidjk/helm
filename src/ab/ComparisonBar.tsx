@@ -1,4 +1,4 @@
-import {useCallback, useEffect, useState} from 'react';
+import {useCallback, useEffect, useRef, useState} from 'react';
 import {useLocation} from 'react-router-dom';
 import {useVariant, useVariantList} from './VariantContext';
 import type {Variant} from './variants';
@@ -94,6 +94,13 @@ export default function ComparisonBar() {
     }
   });
   const [compare, setCompare] = useState<CompareState | null>(null);
+  const activeSegmentRef = useRef<HTMLButtonElement | null>(null);
+
+  // A direct mobile link can select a segment beyond the bar's visible edge.
+  // Keep the chosen design centered without moving the page itself.
+  useEffect(() => {
+    activeSegmentRef.current?.scrollIntoView({block: 'nearest', inline: 'center'});
+  }, [variantId, variants.length]);
 
   const collapse = useCallback((next: boolean) => {
     setCollapsed(next);
@@ -156,6 +163,7 @@ export default function ComparisonBar() {
           {variants.map((v) => (
             <button
               key={v.id}
+              ref={v.id === variantId ? activeSegmentRef : undefined}
               type="button"
               aria-pressed={v.id === variantId}
               title={v.description || undefined}

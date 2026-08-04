@@ -144,7 +144,7 @@ function getTier(score: number): Tier {
   return {
     key: 'prepared',
     label: 'Prepared',
-    headline: 'You are ahead of most small businesses on this',
+    headline: 'You are ahead of most small and medium-sized businesses on this',
     copy: 'Your controls are solid. The highest-value move now is keeping them current as AI scams evolve, and making sure your cyber insurance and compliance paperwork reflect what you are actually doing.',
   };
 }

@@ -18,7 +18,7 @@ const faqs: {q: string; a: Paragraph}[] = [
   },
   {
     q: 'Do you do 24/7 monitoring yourselves?',
-    a: 'Monitoring behind Helm products runs 24/7 through established security operations partners whose entire business is round-the-clock detection and response. We are transparent about this: it gives a small business continuous coverage without asking its own staff to run an overnight security operation.',
+    a: 'Monitoring behind Helm products runs 24/7 through established security operations partners whose entire business is round-the-clock detection and response. We are transparent about this: it gives a small or medium-sized business continuous coverage without asking its own staff to run an overnight security operation.',
   },
   {
     q: 'How is pricing structured?',
@@ -67,10 +67,9 @@ export default function Faq() {
           })),
         }}
       />
-      <header className="hero lane">
-        <HeroBackdrop kind="rain" />
+      <header className="hero lane brand-hero">
+        <HeroBackdrop kind="brand-static" />
         <div className="wrap">
-          <div className="eyebrow reveal">FAQ</div>
           <h1 className="reveal d1">Straight answers.</h1>
           <p className="sub reveal d2">
             The questions business owners actually ask us, answered the way

@@ -40,16 +40,24 @@ function readAbFlag(): boolean {
  */
 export default function ABRoot({children}: {children: ReactNode}) {
   const [barEnabled, setBarEnabled] = useState(false);
+  const [variantsReady, setVariantsReady] = useState(false);
 
   // Deliberately post-mount: keeps SSG markup and hydration identical.
   useEffect(() => {
-    setBarEnabled(readAbFlag());
+    const enabled = readAbFlag();
+    const requested = new URLSearchParams(window.location.search).has('variant');
+    setBarEnabled(enabled);
+    if (enabled || requested) {
+      // The alternate page compositions stay out of the production payload.
+      // A direct ?variant= link also loads them inside compare-mode iframes.
+      void import('./designs').then(() => setVariantsReady(true));
+    }
   }, []);
 
   return (
     <VariantProvider>
       {children}
-      {barEnabled ? (
+      {barEnabled && variantsReady ? (
         <Suspense fallback={null}>
           <ComparisonBar />
         </Suspense>

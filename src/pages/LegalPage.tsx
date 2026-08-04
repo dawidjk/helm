@@ -11,10 +11,9 @@ export default function LegalPage({doc}: {doc: LegalDoc}) {
         desc={doc.metaDesc}
         path={`/${doc.slug}`}
       />
-      <header className="hero lane">
-        <HeroBackdrop kind="rain" />
+      <header className="hero lane brand-hero">
+        <HeroBackdrop kind="brand-static" />
         <div className="wrap">
-          <div className="eyebrow reveal">{doc.eyebrow}</div>
           <h1 className="reveal d1">{doc.heading}</h1>
           <p className="sub reveal d2">{doc.sub}</p>
         </div>

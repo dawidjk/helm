@@ -46,12 +46,11 @@ export default function ProductPage() {
           ],
         }}
       />
-      <header className="hero lane">
-        <HeroBackdrop kind="rain" />
+      <header className="hero lane brand-hero">
+        <HeroBackdrop kind="brand-static" />
         <div className="wrap">
-          <div className="eyebrow reveal">{p.name}</div>
-          <h1 className="reveal d1" style={{maxWidth: '18ch'}}>
-            {p.tagline}
+          <h1 className="reveal d1 hero-title-compact">
+            {p.name}: {p.tagline}
           </h1>
           <p className="sub reveal d2">{p.desc}</p>
           <div className="hero-ctas reveal d3">
@@ -69,15 +68,15 @@ export default function ProductPage() {
           <div>
             <h3 className="observe">What you get</h3>
             {p.features.map((f, i) => (
-              <div key={f.title} className={`observe d${Math.min(i + 1, 5)}`} style={{marginBottom: 24}}>
-                <h3 style={{fontSize: 20, marginBottom: 8}}>{f.title}</h3>
-                <p style={{marginBottom: 0}}>{f.body}</p>
+              <div key={f.title} className={`product-feature observe d${Math.min(i + 1, 5)}`}>
+                <h3>{f.title}</h3>
+                <p>{f.body}</p>
               </div>
             ))}
           </div>
-          <div className="product-tile observe d1" style={{alignSelf: 'start'}}>
+          <div className="product-tile product-summary observe d1">
             <ProductMotif kind={p.motif} />
-            <div className="kicker">{p.name}</div>
+            <h2 className="product-tile-title">{p.name}</h2>
             {p.pricingOptions ? (
               <div className="price-options">
                 {p.pricingOptions.map((option) => (
@@ -90,7 +89,7 @@ export default function ProductPage() {
               </div>
             ) : (
               <>
-                <h3 style={{fontSize: 22}}>{p.price}</h3>
+                <h3 className="product-summary-price">{p.price}</h3>
                 <p>{p.priceDetail}</p>
               </>
             )}

@@ -58,9 +58,8 @@ export default function Trust() {
       <header className="hero lane brand-hero">
         <HeroBackdrop kind="brand-static" />
         <div className="wrap">
-          <div className="eyebrow reveal">Trust & Security</div>
           <h1 className="reveal d1 hero-title-readable">
-            The hard questions, answered directly.
+            Trust and security, answered directly.
           </h1>
           <p className="sub reveal d2">
             We sell security, so it is fair for you to ask hard questions about

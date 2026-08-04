@@ -3,8 +3,6 @@ import type {RouteRecord} from 'vite-react-ssg';
 import Layout from './App';
 import Home from './pages/Home';
 import GlobalErrorBoundary from './components/GlobalErrorBoundary';
-import ABRoot from './ab/ABRoot';
-import VariantSlot from './ab/VariantSlot';
 
 const lazyPage = (load: () => Promise<{default: ComponentType}>) => async () => ({
   Component: (await load()).default,
@@ -53,15 +51,11 @@ const lazyPrivacy = async () => {
 export const routes: RouteRecord[] = [
   {
     path: '/',
-    element: (
-      <ABRoot>
-        <Layout />
-      </ABRoot>
-    ),
+    element: <Layout />,
     errorElement: <GlobalErrorBoundary />,
     entry: 'src/App.tsx',
     children: [
-      {index: true, element: <VariantSlot name="home" fallback={<Home />} />},
+      {index: true, element: <Home />},
       {path: 'manufacturing/', lazy: lazyManufacturing},
       {path: 'professional-services/', lazy: lazyProfessionalServices},
       {path: 'contractors/', lazy: lazyContractors},

@@ -12,11 +12,10 @@ export default function FreeScan() {
         desc="Free automated scan of public SPF, common DKIM selectors, DMARC, MX, DNSSEC, HTTPS certificate, MTA-STS, TLS-RPT, and limited SMTP signals. No login required."
         path="/free-scan"
       />
-      <header className="hero">
-        <HeroBackdrop kind="cyber" />
+      <header className="hero lane brand-hero">
+        <HeroBackdrop kind="brand-static" />
         <div className="wrap">
-          <div className="eyebrow reveal">Free · No meeting · Usually about a minute</div>
-          <h1 className="reveal d1" style={{maxWidth: '18ch'}}>
+          <h1 className="reveal d1 hero-title-compact">
             Check the public signals behind email impersonation.
           </h1>
           <p className="sub reveal d2">

@@ -67,17 +67,14 @@ export default function ArticlePage() {
           ],
         }}
       />
-      <header className="hero lane">
-        <HeroBackdrop kind="rain" />
+      <header className="hero lane brand-hero">
+        <HeroBackdrop kind="brand-static" />
         <div className="wrap article-head">
-          <div className="eyebrow reveal">
-            <Link to="/resources/" style={{color: 'inherit', textDecoration: 'none'}}>
-              Resources
-            </Link>{' '}
-            · {a.lane} · {a.readMin} min
-          </div>
           <h1 className="reveal d1">{a.title}</h1>
           <div className="article-meta reveal d2">
+            <span>
+              <Link to="/resources/">Resources</Link> · {a.lane} · {a.readMin} min
+            </span>
             <span>
               By <Link to="/about/#dawid-kluszczynski">Dawid Kluszczynski</Link>
             </span>
