@@ -32,6 +32,7 @@ export default function FreeScan() {
       </header>
 
       <Band variant="raised">
+        <h2 className="sr-only">Inside the free scan report</h2>
         <div className="split">
           <div>
             <h3 className="observe">What the report covers</h3>

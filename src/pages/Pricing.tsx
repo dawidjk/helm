@@ -62,6 +62,7 @@ export default function Pricing() {
             <div key={p.slug} className={`product-tile observe d${Math.min(i + 1, 5)}`}>
               <ProductMotif kind={p.motif} />
               <h2 className="product-tile-title">{p.name}</h2>
+              <p><strong>Best for</strong> {p.bestFor}.</p>
               {p.pricingOptions ? (
                 <div className="price-options">
                   {p.pricingOptions.map((option) => (

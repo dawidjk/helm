@@ -55,6 +55,7 @@ export default function About() {
       </header>
 
       <Band variant="raised">
+        <h2 className="sr-only">How Helm works</h2>
         <div className="split">
           <div>
             <h3 className="observe">Who we are</h3>

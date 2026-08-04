@@ -192,7 +192,8 @@ function EnergyCanvas() {
         ctx.beginPath();
         for (let x = -20; x <= w + 20; x += 7) {
           const y = waveY(i, x, now);
-          x === -20 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+          if (x === -20) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
         }
         ctx.stroke();
       }

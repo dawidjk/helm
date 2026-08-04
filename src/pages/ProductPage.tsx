@@ -64,6 +64,7 @@ export default function ProductPage() {
       </header>
 
       <Band variant="raised">
+        <h2 className="sr-only">Service details</h2>
         <div className="split">
           <div>
             <h3 className="observe">What you get</h3>

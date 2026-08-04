@@ -1,4 +1,4 @@
-import {useEffect, useState, type ReactNode} from 'react';
+import {useEffect, useRef, useState, type ReactNode} from 'react';
 import {NavLink as RouterNavLink, Link, useLocation} from 'react-router-dom';
 import {Button} from '@astryxdesign/core/Button';
 import LeadForm, {PORTAL_URL} from './LeadForm';
@@ -6,6 +6,7 @@ import ThemePicker from './ThemePicker';
 import {canonicalPath} from '../lib/urls';
 import {isRemarketingConfigured, openPrivacyChoices} from '../lib/adTracking';
 import {businessPhone, linkedInUrl, serviceAreaText} from '../lib/business';
+import './SiteNav.css';
 
 export function HelmMark({size = 28}: {size?: number}) {
   return (
@@ -61,6 +62,13 @@ const lanes = [
   {to: '/contractors', label: 'Contractors & Trades'},
 ];
 
+const services = [
+  {to: '/helm-mail', label: 'Helm Mail', clue: 'Managed email protection'},
+  {to: '/helm-aware', label: 'Helm Aware', clue: 'Training and scam readiness'},
+  {to: '/helm-ready', label: 'Helm Ready', clue: 'Insurance and compliance'},
+  {to: '/helm-watch', label: 'Helm Watch', clue: '24/7 endpoint monitoring'},
+];
+
 const footerCols = [
   {
     title: 'Products',
@@ -97,32 +105,15 @@ const footerCols = [
   },
 ];
 
-/* Mobile drawer IA: one pinned conversion action, a short primary group
-   (lanes + Pricing + Contact), then the rest of the taxonomy collapsed. */
-const drawerPrimary = [
-  ...lanes,
-  {to: '/pricing', label: 'Pricing'},
-  {to: '/contact', label: 'Contact'},
-];
-
 const drawerSecondary = [
-  {
-    title: 'Products',
-    links: [
-      {to: '/helm-mail', label: 'Helm Mail'},
-      {to: '/helm-aware', label: 'Helm Aware'},
-      {to: '/helm-ready', label: 'Helm Ready'},
-      {to: '/helm-watch', label: 'Helm Watch'},
-    ],
-  },
   {
     title: 'Company',
     links: [
       {to: '/about', label: 'About'},
-      {to: '/resources', label: 'Resources'},
       {to: '/quiz', label: 'AI scam quiz'},
       {to: '/faq', label: 'FAQ'},
       {to: '/trust', label: 'Trust & Security'},
+      {to: '/contact', label: 'Contact'},
     ],
   },
   {
@@ -136,22 +127,101 @@ const drawerSecondary = [
 
 export function SiteNav() {
   const {pathname} = useLocation();
+  const productActive = services.some(({to}) => pathname.startsWith(to));
+  const industryActive = lanes.some(({to}) => pathname.startsWith(to));
+  const resourcesActive = pathname.startsWith('/resources');
+  const pricingActive = pathname.startsWith('/pricing');
   const [open, setOpen] = useState(false);
-  useEffect(() => { setOpen(false); }, [pathname]);
-  // Close the drawer on Escape so keyboard users are not trapped in it.
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const drawerRef = useRef<HTMLElement>(null);
+  const wasOpenRef = useRef(false);
   useEffect(() => {
-    if (!open) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setOpen(false);
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, [open]);
+    setOpen(false);
+    document.querySelectorAll<HTMLDetailsElement>('.site-nav .nav-menu[open]')
+      .forEach((menu) => menu.removeAttribute('open'));
+  }, [pathname]);
 
   useEffect(() => {
-    document.body.style.overflow = open ? 'hidden' : '';
+    if (!open) {
+      if (wasOpenRef.current) {
+        wasOpenRef.current = false;
+        menuButtonRef.current?.focus({preventScroll: true});
+      }
+      return;
+    }
+
+    wasOpenRef.current = true;
+    const drawer = drawerRef.current;
+    const menuButton = menuButtonRef.current;
+    if (!drawer || !menuButton) return;
+
+    const focusableSelector = [
+      'a[href]',
+      'button:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      'summary',
+      '[tabindex]:not([tabindex="-1"])',
+    ].join(',');
+    const visibleControls = (root: ParentNode) =>
+      Array.from(root.querySelectorAll<HTMLElement>(focusableSelector))
+        .filter((element) => element.getClientRects().length > 0);
+    const drawerControls = () => visibleControls(drawer);
+    const trappedControls = () => [menuButton, ...drawerControls()]
+      .filter((element) => element.getClientRects().length > 0);
+
+    const originalBodyOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const backgroundState = Array.from(document.querySelectorAll<HTMLElement>('main, footer'))
+      .map((element) => ({
+        element,
+        hadInert: element.hasAttribute('inert'),
+        ariaHidden: element.getAttribute('aria-hidden'),
+      }));
+    backgroundState.forEach(({element}) => {
+      element.setAttribute('inert', '');
+      element.setAttribute('aria-hidden', 'true');
+    });
+
+    const firstDrawerControl = drawerControls()[0];
+    (firstDrawerControl ?? drawer).focus({preventScroll: true});
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        setOpen(false);
+        return;
+      }
+      if (event.key !== 'Tab') return;
+
+      const controls = trappedControls();
+      if (controls.length === 0) {
+        event.preventDefault();
+        drawer.focus({preventScroll: true});
+        return;
+      }
+
+      const activeIndex = controls.indexOf(document.activeElement as HTMLElement);
+      if (event.shiftKey && activeIndex <= 0) {
+        event.preventDefault();
+        controls[controls.length - 1].focus();
+      } else if (!event.shiftKey && (activeIndex === -1 || activeIndex === controls.length - 1)) {
+        event.preventDefault();
+        controls[0].focus();
+      }
+    };
+    document.addEventListener('keydown', onKeyDown);
+
     return () => {
-      document.body.style.overflow = '';
+      document.removeEventListener('keydown', onKeyDown);
+      document.body.style.overflow = originalBodyOverflow;
+      backgroundState.forEach(({element, hadInert, ariaHidden}) => {
+        if (!hadInert) element.removeAttribute('inert');
+        if (ariaHidden === null) element.removeAttribute('aria-hidden');
+        else element.setAttribute('aria-hidden', ariaHidden);
+      });
     };
   }, [open]);
 
@@ -164,12 +234,29 @@ export function SiteNav() {
           </Link>
           <div className="nav-right">
             <div className="nav-links">
-              {lanes.map((l) => (
-                <RouterNavLink key={l.to} to={canonicalPath(l.to)} className={({isActive}) => (isActive ? 'active' : '')}>
-                  {l.label}
-                </RouterNavLink>
-              ))}
-              <RouterNavLink to="/pricing/" className={({isActive}) => (isActive ? 'active' : '')}>
+              <details className={`nav-menu${productActive ? ' active' : ''}`}>
+                <summary>Services</summary>
+                <div className="nav-menu-panel">
+                  {services.map((service) => (
+                    <RouterNavLink key={service.to} to={canonicalPath(service.to)}>
+                      <strong>{service.label}</strong>
+                      <span>{service.clue}</span>
+                    </RouterNavLink>
+                  ))}
+                </div>
+              </details>
+              <details className={`nav-menu${industryActive ? ' active' : ''}`}>
+                <summary>Industries</summary>
+                <div className="nav-menu-panel nav-menu-panel-compact">
+                  {lanes.map((lane) => (
+                    <RouterNavLink key={lane.to} to={canonicalPath(lane.to)}>{lane.label}</RouterNavLink>
+                  ))}
+                </div>
+              </details>
+              <RouterNavLink to="/resources/" className={resourcesActive ? 'active' : ''}>
+                Resources
+              </RouterNavLink>
+              <RouterNavLink to="/pricing/" className={pricingActive ? 'active' : ''}>
                 Pricing
               </RouterNavLink>
               <a href={`${PORTAL_URL}/login`}>Sign in</a>
@@ -182,8 +269,10 @@ export function SiteNav() {
               <Button label="Free scan" variant="primary" size="sm" />
             </Link>
             <button
+              ref={menuButtonRef}
               className={`nav-burger${open ? ' open' : ''}`}
               aria-label={open ? 'Close menu' : 'Open menu'}
+              aria-controls="site-nav-drawer"
               aria-expanded={open}
               onClick={() => setOpen(!open)}
             >
@@ -195,16 +284,40 @@ export function SiteNav() {
         </div>
       </nav>
       {open && (
-        <div className="nav-drawer">
+        <nav
+          ref={drawerRef}
+          id="site-nav-drawer"
+          className="nav-drawer"
+          aria-label="Mobile navigation"
+          tabIndex={-1}
+        >
           <Link to="/free-scan/" className="drawer-cta">
             <Button label="Get my free scan" variant="primary" size="lg" />
           </Link>
-          <div className="drawer-group">
-            {drawerPrimary.map((l) => (
-              <Link key={l.to} to={canonicalPath(l.to)}>
-                {l.label}
-              </Link>
-            ))}
+          <div className="drawer-primary" aria-label="Primary navigation">
+            <details className={`drawer-section drawer-primary-section${productActive ? ' active' : ''}`}>
+              <summary>Services</summary>
+              <div className="drawer-section-links drawer-service-links">
+                {services.map((service) => (
+                  <Link key={service.to} to={canonicalPath(service.to)} aria-current={pathname.startsWith(service.to) ? 'page' : undefined}>
+                    <strong>{service.label}</strong>
+                    <span>{service.clue}</span>
+                  </Link>
+                ))}
+              </div>
+            </details>
+            <details className={`drawer-section drawer-primary-section${industryActive ? ' active' : ''}`}>
+              <summary>Industries</summary>
+              <div className="drawer-section-links">
+                {lanes.map((lane) => (
+                  <Link key={lane.to} to={canonicalPath(lane.to)} aria-current={pathname.startsWith(lane.to) ? 'page' : undefined}>
+                    {lane.label}
+                  </Link>
+                ))}
+              </div>
+            </details>
+            <Link className={`drawer-direct${resourcesActive ? ' active' : ''}`} to="/resources/" aria-current={resourcesActive ? 'page' : undefined}>Resources</Link>
+            <Link className={`drawer-direct${pricingActive ? ' active' : ''}`} to="/pricing/" aria-current={pricingActive ? 'page' : undefined}>Pricing</Link>
           </div>
           <div className="drawer-sections">
             {drawerSecondary.map((col) => (
@@ -224,7 +337,7 @@ export function SiteNav() {
             <a href={`${PORTAL_URL}/login`}>Sign in</a>
             <ThemePicker />
           </div>
-        </div>
+        </nav>
       )}
     </>
   );

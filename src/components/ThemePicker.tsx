@@ -2,18 +2,16 @@ import {useEffect, useState} from 'react';
 import {useThemeMode, type ThemeMode} from './ThemeMode';
 
 /**
- * Compact three-mode theme control in the nav: Auto (follow system), Light,
- * Dark. Clicking cycles Auto → Light → Dark → Auto. The actual theme is
- * applied by ThemeModeProvider / the Astryx <Theme> wrapper; this button only
- * reads and updates that shared state.
+ * Explicit three-mode theme control in the nav: Auto (follow system), Light,
+ * and Dark. The actual theme is applied by ThemeModeProvider / the Astryx
+ * <Theme> wrapper; this control only reads and updates that shared state.
  *
  * SSG/hydration-safe: renders the Auto default until mounted (matching the
  * static HTML), then reflects the real stored mode.
  */
 
-const ORDER: ThemeMode[] = ['auto', 'light', 'dark'];
 const LABEL: Record<ThemeMode, string> = {auto: 'Auto', light: 'Light', dark: 'Dark'};
-const NEXT: Record<ThemeMode, string> = {auto: 'Light', light: 'Dark', dark: 'Auto'};
+const MODES: ThemeMode[] = ['auto', 'light', 'dark'];
 
 function Icon({mode}: {mode: ThemeMode}) {
   if (mode === 'light') {
@@ -55,18 +53,21 @@ export default function ThemePicker() {
   // Before mount, show the Auto default so SSR/hydration markup matches.
   const current = mounted ? mode : 'auto';
 
-  const cycle = () => setMode(ORDER[(ORDER.indexOf(current) + 1) % ORDER.length]);
-
   return (
-    <button
-      type="button"
-      className="theme-toggle"
-      onClick={cycle}
-      aria-label={`Theme: ${LABEL[current]}. Switch to ${NEXT[current]}.`}
-      title={`Theme: ${LABEL[current]} (click for ${NEXT[current]})`}
-    >
-      <Icon mode={current} />
-      <span className="theme-toggle-label">{LABEL[current]}</span>
-    </button>
+    <div className="theme-picker" role="group" aria-label="Color theme">
+      {MODES.map((option) => (
+        <button
+          key={option}
+          type="button"
+          className={`theme-choice${current === option ? ' active' : ''}`}
+          onClick={() => setMode(option)}
+          aria-pressed={current === option}
+          title={`${LABEL[option]} theme`}
+        >
+          <Icon mode={option} />
+          <span>{LABEL[option]}</span>
+        </button>
+      ))}
+    </div>
   );
 }

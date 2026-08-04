@@ -3,6 +3,7 @@ import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {BOOK_CTA} from './ctaCopy';
 import {siteUrl} from '../lib/urls';
+import './Trust.css';
 
 const subprocessors: {service: string; does: string; sees: string}[] = [
   {
@@ -75,6 +76,51 @@ export default function Trust() {
 
       <Band>
         <article className="article-body">
+          <section className="trust-summary" aria-labelledby="trust-summary-title">
+            <div className="trust-summary-intro">
+              <h2 id="trust-summary-title">Helm at a glance</h2>
+              <p>
+                The operating model, data footprint, and known limitations we
+                would want to understand before choosing a security partner.
+              </p>
+            </div>
+            <div className="trust-summary-grid">
+              <section>
+                <h3>What Helm does</h3>
+                <p>
+                  We resell and configure Huntress and MailProtector services;
+                  we do not claim to build the underlying detection technology.
+                  Helm Watch is EDR-only at launch.
+                </p>
+              </section>
+              <section>
+                <h3>Who delivers it</h3>
+                <p>
+                  Helm is a two-operator team. Platform vendors supply the
+                  detection and response capability; Helm reviews and acts on
+                  alerts during published weekday business hours.
+                </p>
+              </section>
+              <section>
+                <h3>What data is held</h3>
+                <p>
+                  We store account records, scan findings, and security alerts.
+                  Stripe handles card details in its hosted fields, and Helm
+                  Mail reporting uses aggregate counters rather than message
+                  bodies.
+                </p>
+              </section>
+              <section>
+                <h3>Known gaps today</h3>
+                <p>
+                  We do not have a SOC 2 or ISO 27001 audit or portal MFA yet.
+                  Backup and recovery rely on provider resilience rather than
+                  a process we have independently documented and tested.
+                </p>
+              </section>
+            </div>
+          </section>
+
           <div className="observe">
             <section>
               <h2>Who we are</h2>

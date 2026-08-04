@@ -302,7 +302,10 @@ export default function QuizWidget() {
           aria-valuemax={100}
           aria-label="Quiz progress"
         >
-          <div className="quiz-progress-fill" style={{width: `${progressPct}%`}} />
+          <div
+            className="quiz-progress-fill"
+            style={{transform: `scaleX(${progressPct / 100})`}}
+          />
         </div>
 
         <div className="quiz-question">

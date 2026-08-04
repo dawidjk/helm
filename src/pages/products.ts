@@ -7,6 +7,7 @@ export type Product = {
   metaTitle: string;
   tagline: string;
   desc: string;
+  bestFor: string;
   metaDesc: string;
   price: string;
   priceDetail: string;
@@ -42,6 +43,7 @@ export const productList: Product[] = [
     metaTitle: 'Helm Mail: Managed Email Security for Small and Medium Businesses',
     tagline: 'Email fraud, stopped cold.',
     desc: 'Managed email security for small and medium-sized businesses using Microsoft 365, Google Workspace, or another business email provider. We configure and monitor the filtering layer, help your team handle suspicious messages, and report the result in plain English.',
+    bestFor: 'businesses using Microsoft 365, Google Workspace, or another business email provider that want managed filtering',
     metaDesc:
       'Managed email security for small and medium-sized businesses across Microsoft 365, Google Workspace, and other providers, from $15/user/month.',
     price: '$15 / user / month',
@@ -80,6 +82,7 @@ export const productList: Product[] = [
     metaTitle: 'Helm Aware: Managed Security Awareness Training',
     tagline: 'Make the next scam less convincing.',
     desc: 'Managed monthly learning and phishing shaped by active threat profiles Huntress researchers see every day, with clear Helm reporting and review. Add the fixed-fee workshop when your team also needs AI-use and payment-verification controls.',
+    bestFor: 'teams that need managed monthly learning and phishing, an AI scam readiness workshop, or both',
     metaDesc:
       'Managed security awareness training and phishing simulations for small and medium-sized businesses at $10 per active learner per month, plus fixed-fee AI scam readiness workshops.',
     price: '$10 / active learner / month',
@@ -133,6 +136,7 @@ export const productList: Product[] = [
     metaTitle: 'Helm Ready: Cyber Insurance and CMMC Readiness',
     tagline: 'Pass the questionnaire. Win the contract.',
     desc: 'Fixed-fee compliance readiness: cyber-insurance questionnaires, CMMC/NIST 800-171 gap assessments, and HIPAA controls, remediated, documented, and defended in plain English.',
+    bestFor: 'businesses preparing for cyber-insurance, CMMC, or HIPAA readiness work',
     metaDesc:
       'Fixed-fee cyber insurance, CMMC, and HIPAA readiness for small and medium-sized businesses, with documented findings and a prioritized roadmap.',
     price: '$2,500 to $7,500 fixed fee',
@@ -170,6 +174,7 @@ export const productList: Product[] = [
     metaTitle: 'Helm Watch: 24/7 Managed Endpoint Detection',
     tagline: '24/7 detection and response, without the 24/7 payroll.',
     desc: 'Managed detection and response for small and medium-sized business endpoints: a round-the-clock security operations center watches every machine, investigates alerts, and isolates compromised endpoints before an incident spreads.',
+    bestFor: 'businesses that want 24/7 monitoring and response for covered Windows and Mac endpoints',
     metaDesc:
       'Managed endpoint detection and response with Huntress 24/7 SOC monitoring, human-triaged alerts, and containment from $15 per endpoint monthly.',
     price: '$15 / endpoint / month',

@@ -47,7 +47,7 @@ export default function Home() {
         <img
           src={japandiHero}
           className="japandi-home-art"
-          alt="Sculptural wooden helm in a quiet architectural interior"
+          alt="Deep-pine sculptural helm beside mineral-paper forms in a quiet interior"
           width="1672"
           height="941"
           loading="eager"
@@ -62,7 +62,7 @@ export default function Home() {
             thoughtful controls, and a steady hand when the stakes are high.
           </p>
           <Scan source="home hero" />
-          <small>Free email-domain scan · plain-English report in about a minute</small>
+          <small>Free email-domain scan · no credit card or required meeting</small>
         </div>
       </header>
 

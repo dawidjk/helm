@@ -80,6 +80,7 @@ export default function Faq() {
       </header>
 
       <Band>
+        <h2 className="sr-only">Frequently asked questions</h2>
         <div className="faq-list">
           {faqs.map((f, i) => (
             <div key={f.q} className={`faq-item observe d${Math.min(i + 1, 5)}`}>
