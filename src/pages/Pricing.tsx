@@ -1,6 +1,6 @@
 import HeroBackdrop from '../components/HeroBackdrop';
 import {Link} from 'react-router-dom';
-import {Band, CtaBand, DirectionIcon} from '../components/Site';
+import {Band, CtaBand, DirectionIcon, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {siteUrl} from '../lib/urls';
 import ProductMotif from '../components/ProductMotif';
@@ -99,6 +99,7 @@ export default function Pricing() {
             scope written down before work starts.
           </p>
         </div>
+        <ScrollCue />
       </header>
 
       <section className="pricing-ledger" aria-labelledby="pricing-ledger-title">

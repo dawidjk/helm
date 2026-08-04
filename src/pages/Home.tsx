@@ -5,7 +5,7 @@ import {canonicalPath, siteUrl} from '../lib/urls';
 import {businessPhone, linkedInUrl, serviceAreaJsonLd} from '../lib/business';
 import {productList} from './products';
 import japandiHero from '../assets/variants/japandi-hero.webp';
-import {DirectionIcon} from '../components/Site';
+import {DirectionIcon, ScrollCue} from '../components/Site';
 
 const lanes = [
   {to: '/manufacturing', name: 'Manufacturing & defense', promise: 'CMMC without the panic'},
@@ -64,6 +64,7 @@ export default function Home() {
           <Scan source="home hero" />
           <small>Free email-domain scan · no credit card or required meeting</small>
         </div>
+        <ScrollCue />
       </header>
 
       <section id="services" className="home-service-section" aria-labelledby="home-services-title">

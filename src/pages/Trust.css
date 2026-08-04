@@ -1,5 +1,5 @@
 .hero.lane.trust-hero {
-  min-height: min(520px, calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px)));
+  min-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
   padding-block: clamp(56px, 8vw, 76px);
 }
 
@@ -95,7 +95,7 @@
 
 @media (max-width: 620px) {
   .hero.lane.trust-hero {
-    min-height: min(460px, calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px)));
+    min-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
     padding-block: 48px;
   }
 

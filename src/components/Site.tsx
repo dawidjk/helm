@@ -364,7 +364,7 @@ export function ScrollCue() {
       className="scroll-cue reveal d3"
       aria-label="Scroll to the next section"
       onClick={(e) => {
-        const next = (e.currentTarget.closest('.hero') as HTMLElement | null)?.nextElementSibling;
+        const next = (e.currentTarget.closest('.hero, .japandi-home-hero') as HTMLElement | null)?.nextElementSibling;
         if (next) {
           next.scrollIntoView({
             behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',

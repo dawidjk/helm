@@ -1,6 +1,6 @@
 @media (max-width: 700px) {
   .hero.lane.product-hero {
-    min-height: min(700px, calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px)));
+    min-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
     padding-block: 34px;
   }
 

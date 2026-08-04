@@ -1878,7 +1878,7 @@ body {
 
 /* .hero-tall kept for compatibility; all heroes are now full-viewport */
 .hero-tall {
-  min-height: calc(100svh - var(--site-nav-block-size));
+  min-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
 }
 
 .hero-note {
@@ -3162,9 +3162,15 @@ body {
 }
 
 .hero.lane {
-  min-height: min(780px, calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px)));
+  min-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
   padding-block: 88px;
   text-align: left;
+}
+
+/* Conversion imagery should read as a complete first-screen environment at
+   every viewport height, including tall desktop displays. */
+.hero.lane.free-scan-hero {
+  min-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
 }
 
 .hero.lane::before {
@@ -3665,11 +3671,24 @@ a.nav-cta-mobile.action-link:hover {
 
 .japandi-home-hero {
   position: relative;
-  min-height: min(850px, calc(100svh - var(--site-nav-block-size)));
+  height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
+  min-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
+  max-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
   display: grid;
   grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
   align-items: center;
+  overflow: clip;
   isolation: isolate;
+}
+
+.japandi-home-hero .scroll-cue {
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  border-color: rgba(247, 243, 234, .5);
+  background: rgba(8, 14, 10, .58);
+  box-shadow: 0 12px 30px rgba(4, 10, 7, .24);
+  color: #f7f3ea;
 }
 
 .japandi-home-art,
@@ -3927,7 +3946,7 @@ a.nav-cta-mobile.action-link:hover {
 
 @media (max-width: 700px) {
   .hero.lane {
-    min-height: min(720px, calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px)));
+    min-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
     padding-block: 64px;
   }
 
@@ -3959,7 +3978,7 @@ a.nav-cta-mobile.action-link:hover {
   }
 
   .japandi-home-hero {
-    min-height: calc(100svh - var(--site-nav-block-size));
+    min-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
     grid-template-columns: 1fr;
     align-items: end;
   }
@@ -3982,13 +4001,70 @@ a.nav-cta-mobile.action-link:hover {
   .japandi-home-copy {
     width: 100%;
     margin: 0;
-    padding: 64px 24px 54px;
+    padding: clamp(28px, 6svh, 44px) 24px 76px;
+  }
+
+  .japandi-home-hero .scroll-cue {
+    left: 0;
+    right: 0;
+    bottom: 12px;
+    margin-inline: auto;
   }
 
   .japandi-home-copy h1 {
     max-width: 10ch;
+    margin-bottom: 18px;
     color: #f7f3ea;
-    font-size: clamp(52px, 15vw, 72px);
+    font-size: clamp(46px, 13vw, 58px);
+    line-height: .96;
+  }
+
+  .japandi-home-copy > p {
+    margin-bottom: 18px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .japandi-home-copy .lead-form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .japandi-home-copy .lead-form.compact input[type='email'],
+  .japandi-home-copy .lead-form.compact button {
+    width: auto;
+    min-width: 0;
+    height: 44px;
+  }
+
+  .japandi-home-copy .lead-form.compact input[type='email'] {
+    width: 100%;
+    padding-inline: 16px;
+  }
+
+  .japandi-home-copy .lead-form-disclosure,
+  .japandi-home-copy .lead-form-error {
+    grid-column: 1 / -1;
+  }
+
+  .japandi-home-copy .lead-form-disclosure {
+    gap: 4px;
+    margin-top: 0;
+    padding: 8px 10px 9px;
+  }
+
+  .japandi-home-copy .lead-form-disclosure .lead-form-next,
+  .japandi-home-copy .lead-form-disclosure .lead-form-consent {
+    font-size: 12.5px;
+    line-height: 1.38;
+  }
+
+  .japandi-home-copy > small {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.4;
   }
 
   .japandi-home-copy > p,
@@ -4076,6 +4152,46 @@ a.nav-cta-mobile.action-link:hover {
 
   .footer-bottom {
     display: grid;
+  }
+}
+
+@media (max-width: 700px) and (max-height: 700px) {
+  .japandi-home-copy {
+    padding: 20px 24px 72px;
+  }
+
+  .japandi-home-copy h1 {
+    margin-bottom: 12px;
+    font-size: 44px;
+  }
+
+  .japandi-home-copy > p {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .japandi-home-copy .lead-form-disclosure {
+    padding: 7px 9px 8px;
+  }
+
+  .japandi-home-copy .lead-form-disclosure .lead-form-next,
+  .japandi-home-copy .lead-form-disclosure .lead-form-consent {
+    font-size: 12px;
+    line-height: 1.32;
+  }
+
+  .japandi-home-copy > small {
+    margin-top: 6px;
+  }
+}
+
+@media (max-width: 700px) and (max-height: 650px) {
+  /* This line repeats information already present in the disclosure. Removing
+     the duplicate on very short screens preserves the complete consent copy
+     and keeps the hero image within the first viewport. */
+  .japandi-home-copy > small {
+    display: none;
   }
 }
 
@@ -4531,7 +4647,7 @@ a.nav-cta-mobile.action-link:hover {
 @media (min-width: 701px) and (max-height: 920px) {
   .hero.lane.hero-fit-dense:not(.lane-hero-decision) {
     min-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
-    align-content: start;
+    align-content: center;
     padding-block: 34px 76px;
   }
 
@@ -4576,7 +4692,7 @@ a.nav-cta-mobile.action-link:hover {
 @media (max-width: 700px) {
   .hero.lane.hero-fit-dense:not(.lane-hero-decision) {
     min-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
-    align-content: start;
+    align-content: center;
     padding-block: 28px 72px;
   }
 
@@ -4644,11 +4760,84 @@ a.nav-cta-mobile.action-link:hover {
   }
 }
 
-/* Extremely short screens cannot display the full legal disclosure and a
-   separate 44px cue without collision. Keep the complete decision content;
-   the next section remains reachable by ordinary scrolling. */
+@media (max-width: 390px) and (max-height: 700px) {
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) {
+    padding-block: 20px 64px;
+  }
+
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) h1,
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) h1.hero-h1-sm {
+    margin-bottom: 10px;
+    font-size: clamp(32px, 9vw, 36px);
+  }
+
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) .sub {
+    margin-bottom: 12px;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) .lead-form-disclosure {
+    padding: 7px 9px 8px;
+  }
+
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) .lead-form-disclosure .lead-form-next,
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) .lead-form-disclosure .lead-form-consent {
+    font-size: 12px;
+    line-height: 1.32;
+  }
+
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) .hero-note {
+    margin-top: 6px;
+    font-size: 11.5px;
+  }
+}
+
+/* Extremely short screens keep the complete legal disclosure while reserving
+   a dedicated 44px lane for the cue. Secondary repeated offer copy yields
+   before either the disclosure or the navigation affordance. */
 @media (max-width: 390px) and (max-height: 620px) {
-  .hero.lane.hero-fit-dense:not(.lane-hero-decision) .scroll-cue {
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) {
+    align-content: center;
+    padding: 0 0 62px;
+  }
+
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) h1,
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) h1.hero-h1-sm {
+    margin-bottom: 4px;
+    font-size: 30px;
+  }
+
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) .sub {
+    margin-bottom: 4px;
+    font-size: 12.5px;
+    line-height: 1.28;
+  }
+
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) .lead-form-disclosure {
+    padding: 6px 8px;
+  }
+
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) .lead-form-disclosure .lead-form-next,
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) .lead-form-disclosure .lead-form-consent {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) .hero-note {
+    margin-top: 4px;
+    font-size: 11px;
+  }
+
+  /* The pricing/no-card note is secondary to the complete disclosure above
+     it. Removing that repeated line on the shortest screens restores breathing
+     room above the cue without hiding consent or primary offer details. */
+  .hero.lane.hero-fit-dense .hero-note {
     display: none;
+  }
+
+  .hero.lane .scroll-cue {
+    display: grid;
+    bottom: 4px;
   }
 }

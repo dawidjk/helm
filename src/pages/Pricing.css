@@ -1,5 +1,5 @@
 .hero.lane.pricing-hero {
-  min-height: clamp(430px, 60svh, 600px);
+  min-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
   padding-block: clamp(56px, 8svh, 76px);
 }
 
@@ -208,7 +208,7 @@
 
 @media (max-width: 620px) {
   .hero.lane.pricing-hero {
-    min-height: clamp(400px, 56svh, 480px);
+    min-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
     padding-block: 48px;
   }
 
