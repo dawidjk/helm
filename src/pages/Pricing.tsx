@@ -56,7 +56,7 @@ const pricingLedger: PricingLedgerRow[] = pricingTiles.flatMap((product) => {
   const minimumBySlug: Record<string, string> = {
     'helm-command': 'Qualified fit required',
     'helm-mail': '$300 / month account',
-    'helm-watch': '$150 / month account',
+    'helm-watch': '$200 / month account',
     'helm-ready': '$2,500 project fee',
   };
 
@@ -200,14 +200,14 @@ export default function Pricing() {
         </div>
         <div className="price-math">
           <article className="price-math-tile observe">
-            <div className="price-math-eq">20 people × $15</div>
+            <div className="price-math-eq">12 people × $25</div>
             <div className="price-math-result">$300 / month</div>
-            <p>Helm Mail's minimum monthly charge, equal to 20 users at the published unit price.</p>
+            <p>Helm Mail's minimum monthly charge, equal to 12 users at the published unit price.</p>
           </article>
           <article className="price-math-tile observe d1">
-            <div className="price-math-eq">10 endpoints × $15</div>
-            <div className="price-math-result">$150 / month</div>
-            <p>Helm Watch across ten covered endpoints.</p>
+            <div className="price-math-eq">5 people × $40</div>
+            <div className="price-math-result">$200 / month</div>
+            <p>Helm Watch for five covered users and up to ten eligible workstations.</p>
           </article>
           <article className="price-math-tile observe d2">
             <div className="price-math-eq">Active learners × $10</div>

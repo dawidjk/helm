@@ -104,7 +104,7 @@ export const professionalServices: Lane = {
     {
       num: '1',
       title: 'Helm Mail',
-      body: 'Managed MailProtector filtering for compatible Microsoft 365 tenants, configured and reviewed by Helm. Google Workspace is not supported at launch.',
+      body: 'Managed MailProtector filtering for compatible Microsoft 365 and Google Workspace environments, configured and reviewed by Helm through the appropriate deployment path.',
     },
     {
       num: '2',
@@ -169,7 +169,7 @@ export const contractors: Lane = {
     {
       num: '1',
       title: 'Lock the inbox',
-      body: 'Helm Mail adds managed filtering for compatible Microsoft 365 tenants, with configuration and review handled by Helm. Google Workspace is not supported at launch.',
+      body: 'Helm Mail adds managed filtering for compatible Microsoft 365 and Google Workspace environments, with configuration and review handled by Helm through the appropriate deployment path.',
     },
     {
       num: '2',
@@ -185,7 +185,7 @@ export const contractors: Lane = {
   proof: {
     title: 'Built for how the trades actually run.',
     points: [
-      'Helm Mail for compatible Microsoft 365 tenants',
+      'Helm Mail for compatible Microsoft 365 and Google Workspace environments',
       'Payment-verification protocol customized to your approval process',
       'Endpoint protection scoped to the actual covered fleet',
       'Published pricing and account minimums',

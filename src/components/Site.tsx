@@ -343,7 +343,10 @@ export function SiteNav() {
           </div>
           <div className="drawer-sections">
             {drawerSecondary.map((col) => (
-              <details key={col.title} className="drawer-section">
+              <details
+                key={col.title}
+                className={`drawer-section drawer-secondary-section${col.links.some(({to}) => pathname.startsWith(to)) ? ' active' : ''}`}
+              >
                 <summary>{col.title}</summary>
                 <div className="drawer-section-links">
                   {col.links.map((l) => (

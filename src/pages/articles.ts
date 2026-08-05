@@ -501,7 +501,7 @@ export const articles: Article[] = [
         h: 'The business associate agreement you cannot skip',
         ps: [
           'Any email provider that stores or transmits ePHI on your behalf needs a business associate agreement, a BAA, in place before that PHI ever touches their system.',
-          {text: 'Free consumer email accounts do not come with a BAA available at all. Google Workspace and Microsoft 365 business plans can support a BAA, which is one more reason a practice should use a properly configured business tenant rather than a free personal account for anything touching patient information. Helm Mail currently supports compatible Microsoft 365 tenants. Google Workspace practices can use Helm Ready to assess their email and HIPAA safeguards without being sold an unsupported filtering service.', links: [{phrase: 'Helm Mail', to: '/helm-mail'}, {phrase: 'Helm Ready', to: '/helm-ready'}]},
+          {text: 'Free consumer email accounts do not come with a BAA available at all. Google Workspace and Microsoft 365 business plans can support a BAA, which is one more reason a practice should use a properly configured business tenant rather than a free personal account for anything touching patient information. Helm Mail supports compatible Microsoft 365 and Google Workspace environments through different MailProtector deployment paths. Helm Ready can separately assess the practice\'s email and HIPAA safeguards before any remediation is proposed.', links: [{phrase: 'Helm Mail', to: '/helm-mail'}, {phrase: 'Helm Ready', to: '/helm-ready'}]},
         ],
       },
       {

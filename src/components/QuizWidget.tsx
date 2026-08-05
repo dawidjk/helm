@@ -167,8 +167,8 @@ function Recommendation({tier}: {tier: TierKey}) {
   if (tier === 'exposed') {
     return (
       <p className="quiz-recommendation-text">
-        If you use a compatible Microsoft 365 tenant, <Link to="/helm-mail/">Helm Mail</Link> adds
-        managed MailProtector filtering. Google Workspace is not supported at launch. Pair it with{' '}
+        If you use a compatible Microsoft 365 or Google Workspace environment, <Link to="/helm-mail/">Helm Mail</Link> adds
+        managed MailProtector filtering through the appropriate deployment path. Pair it with{' '}
         <Link to="/helm-aware/">Helm Aware</Link> for a focused workshop on modern scams, safe AI use,
         and payment verification.
       </p>

@@ -93,13 +93,13 @@ export const productList: Product[] = [
     name: 'Helm Mail',
     metaTitle: 'Helm Mail: Managed Email Security for Small and Medium Businesses',
     tagline: 'Email fraud, stopped cold.',
-    desc: 'Managed email security for small and medium-sized businesses using a compatible Microsoft 365 tenant. We configure and monitor the filtering layer, help your team handle suspicious messages, and report the result in plain English.',
-    bestFor: 'businesses using a compatible Microsoft 365 tenant that want managed filtering',
+    desc: 'Managed email security for small and medium-sized businesses using a compatible Microsoft 365 or Google Workspace environment. We configure and monitor the appropriate filtering path, help your team handle suspicious messages, and report the result in plain English.',
+    bestFor: 'businesses using a compatible Microsoft 365 or Google Workspace environment that want managed filtering',
     metaDesc:
-      'Managed email security for small and medium-sized businesses using compatible Microsoft 365 tenants, from $15/user/month with a $300 monthly account minimum.',
-    price: '$15 / user / month',
+      'Managed email security for small and medium-sized businesses using compatible Microsoft 365 or Google Workspace environments, from $25/user/month with a $300 monthly account minimum.',
+    price: '$25 / user / month',
     term: 'Month to month',
-    priceDetail: '$300 monthly account minimum. Available for compatible Microsoft 365 tenants, with setup and ongoing management included.',
+    priceDetail: '$300 monthly account minimum. Available for compatible Microsoft 365 and Google Workspace environments, with setup and ongoing management included.',
     features: [
       {
         title: 'Managed filtering that actually gets managed',
@@ -120,9 +120,9 @@ export const productList: Product[] = [
       {num: '3', title: 'Report', body: 'Quarterly plain-English report delivered and walked through with you.'},
     ],
     faqs: [
-      {q: 'Do we need to migrate Microsoft 365?', a: 'No. Helm Mail connects to a compatible Microsoft 365 tenant without changing your email addresses or migrating mailboxes. We confirm tenant compatibility before scheduling the rollout.'},
-      {q: 'Do you support Google Workspace?', a: 'Not at launch. Helm Mail currently supports compatible Microsoft 365 tenants only. A Google Workspace organization can still use Helm Aware or Helm Ready, and we will not propose Helm Mail until a supported Google Workspace deployment exists.'},
-      {q: 'Is there a minimum monthly charge?', a: 'Yes. Helm Mail is $15 per user per month with a $300 monthly account minimum, equivalent to 20 users at the published unit price.'},
+      {q: 'Do we need to migrate our email?', a: 'No. Helm Mail works with compatible Microsoft 365 and Google Workspace environments without changing your addresses or migrating mailboxes. We confirm compatibility, select the appropriate MailProtector deployment path, and agree on the mail-flow change and rollback plan before rollout.'},
+      {q: 'Do you support Google Workspace?', a: 'Yes. Compatible Google Workspace environments use MailProtector CloudFilter, which routes mail through the filtering gateway. This requires planned DNS and Google Workspace mail-routing changes, with verification and rollback steps agreed before activation.'},
+      {q: 'Is there a minimum monthly charge?', a: 'Yes. Helm Mail is $25 per user per month with a $300 monthly account minimum, equivalent to 12 users at the published unit price.'},
     ],
   },
   {
@@ -224,13 +224,13 @@ export const productList: Product[] = [
     name: 'Helm Watch',
     metaTitle: 'Helm Watch: 24/7 Managed Endpoint Detection',
     tagline: '24/7 detection and response, without the 24/7 payroll.',
-    desc: 'Managed detection and response for small and medium-sized business endpoints: a round-the-clock security operations center watches every machine, investigates alerts, and isolates compromised endpoints before an incident spreads.',
-    bestFor: 'businesses that want 24/7 monitoring and response for covered Windows and Mac endpoints',
+    desc: 'Managed detection and response for small and medium-sized businesses: a round-the-clock security operations center watches each covered user\'s eligible devices, investigates alerts, and isolates compromised endpoints before an incident spreads.',
+    bestFor: 'businesses that want 24/7 monitoring and response for up to two eligible Windows or Mac workstations per covered user',
     metaDesc:
-      'Managed endpoint detection and response with Huntress 24/7 SOC monitoring, human-triaged alerts, and containment from $15 per endpoint monthly.',
-    price: '$15 / endpoint / month',
+      'Managed endpoint detection and response with Huntress 24/7 SOC monitoring, human-triaged alerts, and containment from $40 per user monthly for up to two eligible devices.',
+    price: '$40 / user / month',
     term: 'Month to month',
-    priceDetail: '$150 monthly account minimum. EDR-only at launch, with a Huntress SOC monitoring covered Windows and Mac endpoints.',
+    priceDetail: '$200 monthly account minimum. Includes up to two eligible Windows or Mac workstations per covered user. Servers and other device classes are separately scoped. EDR-only at launch, with a Huntress SOC monitoring covered endpoints.',
     features: [
       {
         title: 'A SOC on duty when you are not',
@@ -254,7 +254,8 @@ export const productList: Product[] = [
       {q: 'Do we need to replace our antivirus?', a: 'Usually yes, and that is a good thing: the EDR agent covers what antivirus does and adds detection and response on top. We sort out the specifics during deployment so nothing overlaps or conflicts.'},
       {q: 'What happens when you find something?', a: 'Human analysts investigate first, so false alarms die quietly. Real incidents get contained, the affected endpoint isolated if needed, and you get a plain-English explanation of what happened and what was done.'},
       {q: 'Does Helm staff the overnight SOC?', a: 'No. Huntress provides the 24/7 SOC monitoring and containment behind Helm Watch. Helm handles deployment, account management, customer communication, and business-hours follow-up.'},
-      {q: 'Can you deploy to Macs?', a: 'Yes. One to five Macs use our validated manual installation path. A larger Mac fleet requires a successful one-device pilot through your exact mobile device management platform before we schedule the wider rollout.'},
+      {q: 'Which devices are included?', a: 'Each covered user includes up to two eligible Windows or Mac workstations. Servers, shared infrastructure, mobile devices, and specialized endpoints are not included automatically and are separately scoped when needed. We confirm the covered user and device roster before deployment.'},
+      {q: 'Can you deploy to Macs?', a: 'Yes. Small Mac fleets can use the validated guided installation path. Larger fleets use the client\'s existing mobile device management platform and the current Huntress deployment profile. The client\'s authorized IT owner or MSP pushes the profile and package, and Helm verifies the required permissions and agent readiness after deployment.'},
       {q: 'Does Helm Watch include identity monitoring, SIEM, or awareness training?', a: 'No. Helm Watch is EDR-only. Managed awareness training is available separately through Helm Aware Managed; identity monitoring and SIEM are not included.'},
     ],
   },
