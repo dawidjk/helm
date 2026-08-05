@@ -93,13 +93,13 @@ export const productList: Product[] = [
     name: 'Helm Mail',
     metaTitle: 'Helm Mail: Managed Email Security for Small and Medium Businesses',
     tagline: 'Email fraud, stopped cold.',
-    desc: 'Managed email security for small and medium-sized businesses using Microsoft 365, Google Workspace, or another business email provider. We configure and monitor the filtering layer, help your team handle suspicious messages, and report the result in plain English.',
-    bestFor: 'businesses using Microsoft 365, Google Workspace, or another business email provider that want managed filtering',
+    desc: 'Managed email security for small and medium-sized businesses using a compatible Microsoft 365 tenant. We configure and monitor the filtering layer, help your team handle suspicious messages, and report the result in plain English.',
+    bestFor: 'businesses using a compatible Microsoft 365 tenant that want managed filtering',
     metaDesc:
-      'Managed email security for small and medium-sized businesses across Microsoft 365, Google Workspace, and other providers, from $15/user/month.',
+      'Managed email security for small and medium-sized businesses using compatible Microsoft 365 tenants, from $15/user/month with a $300 monthly account minimum.',
     price: '$15 / user / month',
     term: 'Month to month',
-    priceDetail: 'Works with Microsoft 365, Google Workspace, and other business email providers. Setup and ongoing management included.',
+    priceDetail: '$300 monthly account minimum. Available for compatible Microsoft 365 tenants, with setup and ongoing management included.',
     features: [
       {
         title: 'Managed filtering that actually gets managed',
@@ -120,9 +120,9 @@ export const productList: Product[] = [
       {num: '3', title: 'Report', body: 'Quarterly plain-English report delivered and walked through with you.'},
     ],
     faqs: [
-      {q: 'Do we need to switch email providers?', a: 'No. Helm Mail layers on top of your existing business email service. Nothing about your email addresses or daily workflow changes.'},
-      {q: 'Do you support Google Workspace?', a: 'Yes. MailProtector supports Google Workspace and other providers through its established filtering system. We confirm compatibility and the deployment path before scheduling the rollout.'},
-      {q: 'Is there a minimum seat count?', a: 'No. Helm Mail is billed at $15 per user per month.'},
+      {q: 'Do we need to migrate Microsoft 365?', a: 'No. Helm Mail connects to a compatible Microsoft 365 tenant without changing your email addresses or migrating mailboxes. We confirm tenant compatibility before scheduling the rollout.'},
+      {q: 'Do you support Google Workspace?', a: 'Not at launch. Helm Mail currently supports compatible Microsoft 365 tenants only. A Google Workspace organization can still use Helm Aware or Helm Ready, and we will not propose Helm Mail until a supported Google Workspace deployment exists.'},
+      {q: 'Is there a minimum monthly charge?', a: 'Yes. Helm Mail is $15 per user per month with a $300 monthly account minimum, equivalent to 20 users at the published unit price.'},
     ],
   },
   {
@@ -137,14 +137,14 @@ export const productList: Product[] = [
     metaDesc:
       'Managed security awareness training and phishing simulations for small and medium-sized businesses at $10 per active learner per month, plus fixed-fee AI scam readiness workshops.',
     price: '$10 / active learner / month',
-    term: '12-month initial term',
-    priceDetail: 'No customer account minimum. Setup included. 12-month initial agreement, billed monthly.',
+    term: 'Month to month',
+    priceDetail: 'No customer account minimum. Setup included. Month to month.',
     pricingOptions: [
       {
         name: 'Helm Aware Managed',
         price: '$10 / active learner / month',
-        term: '12-month initial term',
-        detail: 'No customer account minimum. Setup included. 12-month initial agreement, billed monthly.',
+        term: 'Month to month',
+        detail: 'No customer account minimum. Setup included. Month to month.',
       },
       {
         name: 'Helm Aware Workshop',
@@ -173,7 +173,7 @@ export const productList: Product[] = [
       {num: '3', title: 'Review', body: 'Helm delivers a monthly report and meets with management for 30 minutes each quarter to turn trends into practical next steps.'},
     ],
     faqs: [
-      {q: 'Is there a minimum number of learners?', a: 'No. Helm Aware Managed is $10 per active learner per month with no customer account minimum. The initial agreement is 12 months and billing is monthly.'},
+      {q: 'Is there a minimum number of learners?', a: 'No. Helm Aware Managed is $10 per active learner per month with no customer account minimum and month-to-month service.'},
       {q: 'What is included in Managed?', a: 'Huntress-managed monthly learning and phishing, automatic coaching and reminders, a monthly report, standard program-data API access, and a 30-minute Helm management review each quarter.'},
       {q: 'Is the workshop required?', a: 'No. Managed and the fixed-fee workshop can be purchased separately. The workshop is useful when you also need a shadow-AI review, AI acceptable-use policy, live scam training, and payment-verification protocol.'},
       {q: 'Are custom campaigns or executive deepfake drills included?', a: 'No. Custom campaigns, executive deepfake drills, remediation, HR enforcement, and additional advisory work require separate written scope. Targeted executive drills start at $1,500.'},

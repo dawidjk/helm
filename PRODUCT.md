@@ -24,8 +24,8 @@ Visitors commonly arrive while responding to email fraud, insurance questionnair
 
 ## Capabilities and Constraints
 
-- Helm Mail provides managed email security.
-- Helm Aware provides managed security-awareness learning and fixed-fee AI scam readiness workshops.
+- Helm Mail provides managed email security for compatible Microsoft 365 tenants at $15 per user per month with a $300 monthly account minimum. Google Workspace and other email platforms are not supported at launch.
+- Helm Aware provides managed security-awareness learning at $10 per active learner per month with no customer account minimum and month-to-month service, plus fixed-fee AI scam readiness workshops.
 - Helm Ready provides fixed-fee cyber-insurance, HIPAA, and CMMC readiness work.
 - Helm Watch provides Huntress-backed managed endpoint detection and response.
 - Helm Command provides managed security-program ownership, risk and roadmap maintenance, evidence readiness, leadership reviews, tabletop facilitation, and incumbent IT coordination. Qualified design-partner conversations are open, but public pricing and paid delivery remain gated.

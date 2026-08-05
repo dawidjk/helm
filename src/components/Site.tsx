@@ -332,8 +332,14 @@ export function SiteNav() {
                 ))}
               </div>
             </details>
-            <Link className={`drawer-direct${resourcesActive ? ' active' : ''}`} to="/resources/" aria-current={resourcesActive ? 'page' : undefined}>Resources</Link>
-            <Link className={`drawer-direct${pricingActive ? ' active' : ''}`} to="/pricing/" aria-current={pricingActive ? 'page' : undefined}>Pricing</Link>
+            <Link className={`drawer-direct${resourcesActive ? ' active' : ''}`} to="/resources/" aria-current={resourcesActive ? 'page' : undefined}>
+              <span>Resources</span>
+              <DirectionIcon />
+            </Link>
+            <Link className={`drawer-direct${pricingActive ? ' active' : ''}`} to="/pricing/" aria-current={pricingActive ? 'page' : undefined}>
+              <span>Pricing</span>
+              <DirectionIcon />
+            </Link>
           </div>
           <div className="drawer-sections">
             {drawerSecondary.map((col) => (

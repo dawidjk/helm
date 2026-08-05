@@ -23,7 +23,7 @@ const faqs: {q: string; a: Paragraph}[] = [
   {
     q: 'How is pricing structured?',
     a: {
-      text: 'Helm Mail is $15 per user per month. Helm Watch is $15 per endpoint per month with a $150 account minimum. Helm Aware Managed is $10 per active learner per month with no customer minimum and a 12-month initial agreement. Helm Aware workshops and Helm Ready are fixed-fee projects within published ranges. Work outside the written scope is priced separately.',
+      text: 'Helm Mail is $15 per user per month with a $300 account minimum. Helm Watch is $15 per endpoint per month with a $150 account minimum. Helm Aware Managed is $10 per active learner per month with no customer minimum and month-to-month service. Helm Aware workshops and Helm Ready are fixed-fee projects within published ranges. Work outside the written scope is priced separately.',
       links: [{phrase: 'pricing page', to: '/pricing'}],
     },
   },

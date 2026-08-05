@@ -55,7 +55,7 @@ const pricingLedger: PricingLedgerRow[] = pricingTiles.flatMap((product) => {
 
   const minimumBySlug: Record<string, string> = {
     'helm-command': 'Qualified fit required',
-    'helm-mail': 'No seat minimum',
+    'helm-mail': '$300 / month account',
     'helm-watch': '$150 / month account',
     'helm-ready': '$2,500 project fee',
   };
@@ -202,7 +202,7 @@ export default function Pricing() {
           <article className="price-math-tile observe">
             <div className="price-math-eq">20 people × $15</div>
             <div className="price-math-result">$300 / month</div>
-            <p>Helm Mail for a 20-person business.</p>
+            <p>Helm Mail's minimum monthly charge, equal to 20 users at the published unit price.</p>
           </article>
           <article className="price-math-tile observe d1">
             <div className="price-math-eq">10 endpoints × $15</div>
@@ -217,12 +217,12 @@ export default function Pricing() {
         </div>
         <div className="pricing-terms">
           <article className="pricing-term observe">
-            <h3>Mail and Watch: month to month</h3>
-            <p>For Mail and Watch, with setup included and no cancellation fee.</p>
+            <h3>Mail, Aware Managed, and Watch: month to month</h3>
+            <p>Monthly service with setup included and no cancellation fee.</p>
           </article>
           <article className="pricing-term observe d1">
-            <h3>Aware Managed: 12-month initial term</h3>
-            <p>Monthly billing at $10 per active learner, with setup included and no customer account minimum.</p>
+            <h3>Aware Managed: no learner minimum</h3>
+            <p>$10 per active learner each month, with no customer account minimum.</p>
           </article>
           <article className="pricing-term observe d2">
             <h3>Aware workshops and Ready: fixed fee</h3>

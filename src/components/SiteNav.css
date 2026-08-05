@@ -143,6 +143,7 @@
   display: flex;
   min-height: 48px;
   align-items: center;
+  justify-content: space-between;
   color: var(--helm-text-strong);
   font-size: 18px;
   font-weight: 650;
@@ -151,12 +152,23 @@
   text-transform: none;
 }
 
+.drawer-direct {
+  border-top: 1px solid var(--helm-hairline);
+}
+
+.drawer-direct svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 2px;
+  color: var(--helm-text-dim);
+}
+
 .drawer-primary-section.active > summary,
 .drawer-direct.active {
   color: var(--helm-accent-text);
 }
 
-.drawer-service-links a {
+.drawer-section-links.drawer-service-links a {
   display: grid;
   gap: 2px;
   min-height: 56px;
