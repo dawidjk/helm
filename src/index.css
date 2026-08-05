@@ -3557,7 +3557,7 @@ a.nav-cta-mobile.action-link:hover {
   padding: 80px 0 28px;
   border: 0;
   background: light-dark(#17382c, #090f0b);
-  color: rgba(245, 241, 232, .7);
+  color: #c4ccc5;
 }
 
 .site-footer .footer-layout {
@@ -3583,7 +3583,7 @@ a.nav-cta-mobile.action-link:hover {
 .footer-identity > p {
   max-width: 26ch;
   margin: 28px 0;
-  color: rgba(245, 241, 232, .8);
+  color: #d9ddd8;
   font-size: 18px;
   line-height: 1.55;
 }
@@ -3591,13 +3591,13 @@ a.nav-cta-mobile.action-link:hover {
 .footer-contact {
   display: grid;
   gap: 9px;
-  color: rgba(245, 241, 232, .62);
+  color: #bec8bf;
   line-height: 1.5;
 }
 
 .site-footer a,
 .footer-privacy-button {
-  color: rgba(245, 241, 232, .7);
+  color: #c4ccc5;
 }
 
 .site-footer a:hover,
@@ -3629,7 +3629,7 @@ a.nav-cta-mobile.action-link:hover {
   gap: 24px;
   padding-top: 24px;
   border-top: 1px solid rgba(245, 241, 232, .14);
-  color: rgba(245, 241, 232, .5);
+  color: #b5c0b7;
   font-size: 12px;
 }
 
@@ -3990,10 +3990,10 @@ a.nav-cta-mobile.action-link:hover {
   .japandi-home-shade {
     background: linear-gradient(
       0deg,
-      rgba(8, 14, 10, .98) 0%,
-      rgba(8, 14, 10, .94) 46%,
-      rgba(8, 14, 10, .68) 68%,
-      rgba(8, 14, 10, .18) 88%,
+      rgba(8, 16, 12, .96) 0%,
+      rgba(8, 16, 12, .84) 64%,
+      rgba(8, 14, 10, .65) 80%,
+      rgba(8, 14, 10, .24) 91%,
       rgba(8, 14, 10, 0) 100%
     );
   }
@@ -4070,7 +4070,7 @@ a.nav-cta-mobile.action-link:hover {
   .japandi-home-copy > p,
   .japandi-home-copy > small,
   .japandi-home-copy .lead-form-consent {
-    color: rgba(247, 243, 234, .8);
+    color: #e4e4dd;
   }
 
   .japandi-home-copy .lead-form input[type='email'] {

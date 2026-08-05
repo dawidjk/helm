@@ -5,6 +5,7 @@ import {canonicalPath, siteUrl} from '../lib/urls';
 import {businessPhone, linkedInUrl, serviceAreaJsonLd} from '../lib/business';
 import {productList} from './products';
 import japandiHero from '../assets/variants/japandi-hero.webp';
+import japandiHeroMobile from '../assets/brand/japandi-home-mobile-640.webp';
 import {DirectionIcon, ScrollCue} from '../components/Site';
 
 const lanes = [
@@ -44,16 +45,19 @@ export default function Home() {
       />
 
       <header className="japandi-home-hero">
-        <img
-          src={japandiHero}
-          className="japandi-home-art"
-          alt="Deep-pine sculptural helm beside mineral-paper forms in a quiet interior"
-          width="1672"
-          height="941"
-          loading="eager"
-          decoding="async"
-          fetchPriority="high"
-        />
+        <picture>
+          <source media="(max-width: 700px)" srcSet={japandiHeroMobile} />
+          <img
+            src={japandiHero}
+            className="japandi-home-art"
+            alt="Deep-pine sculptural helm beside mineral-paper forms in a quiet interior"
+            width="1672"
+            height="941"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+          />
+        </picture>
         <div className="japandi-home-shade" aria-hidden="true" />
         <div className="japandi-home-copy">
           <h1>Security with less noise.</h1>
