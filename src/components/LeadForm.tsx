@@ -113,12 +113,12 @@ export default function LeadForm({
       )}
       <div className="lead-form-disclosure">
         <p className="lead-form-next">
-          <strong>What happens next:</strong> Confirm your domain on our secure
-          portal. Your report usually follows in about a minute.
+          <strong>What happens next:</strong> Confirm your domain in our secure
+          portal. Your report usually arrives within a minute.
         </p>
         <p className="lead-form-consent">
-          By requesting the scan, you agree to receive your report and a short
-          email follow-up about the findings. Unsubscribe at any time.
+          By requesting the scan, you agree to receive your report and a brief
+          follow-up email. Unsubscribe anytime.
         </p>
       </div>
     </form>

@@ -4186,15 +4186,6 @@ a.nav-cta-mobile.action-link:hover {
   }
 }
 
-@media (max-width: 700px) and (max-height: 650px) {
-  /* This line repeats information already present in the disclosure. Removing
-     the duplicate on very short screens preserves the complete consent copy
-     and keeps the hero image within the first viewport. */
-  .japandi-home-copy > small {
-    display: none;
-  }
-}
-
 @media (max-width: 340px) {
   .footer-cols {
     grid-template-columns: 1fr;

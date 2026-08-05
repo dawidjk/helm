@@ -62,7 +62,7 @@ export default function Home() {
             thoughtful controls, and a steady hand when the stakes are high.
           </p>
           <Scan source="home hero" />
-          <small>Free email-domain scan · no credit card or required meeting</small>
+          <small>Free domain scan · no card · no required meeting</small>
         </div>
         <ScrollCue />
       </header>
