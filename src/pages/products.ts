@@ -33,9 +33,60 @@ export type Product = {
    * automated scan is the wrong next step.
    */
   ctaMode?: 'scan' | 'book';
+  /**
+   * Design-partner offers may be described publicly, but do not expose a
+   * checkout path or a public rate until their commercial gates are cleared.
+   */
+  commercialState?: 'available' | 'design-partner';
 };
 
 export const productList: Product[] = [
+  {
+    slug: 'helm-command',
+    ctaMode: 'book',
+    commercialState: 'design-partner',
+    motif: 'command',
+    name: 'Helm Command',
+    metaTitle: 'Helm Command: Managed Security Program Leadership',
+    tagline: 'One accountable owner for the security work.',
+    desc: 'A maintained security program for 50 to 249 employee organizations that already have IT but lack someone accountable for risk, roadmap, evidence, and follow-through. Helm coordinates the work without taking over help desk or general IT.',
+    bestFor: '50 to 249 employee organizations with an incumbent IT provider or internal IT capability but no accountable security-program owner',
+    metaDesc:
+      'Helm Command provides managed security program leadership, risk and roadmap management, evidence readiness, and incumbent IT coordination for qualified design partners.',
+    price: 'Qualified design partners',
+    term: 'Early access',
+    priceDetail: 'Scope and pricing are confirmed after a fit and complexity review. Paid delivery begins only after the agreement and insurance gates clear.',
+    features: [
+      {
+        title: 'A maintained risk register and 12-month roadmap',
+        body: 'Security work is prioritized, assigned, and kept current so important decisions do not disappear into an assessment report or an IT ticket queue.',
+      },
+      {
+        title: 'Evidence that stays ready',
+        body: 'Helm maintains agreed control evidence and drafts bounded questionnaire and insurance responses from what can actually be verified. Your organization keeps ownership of every attestation.',
+      },
+      {
+        title: 'Leadership cadence and incident readiness',
+        body: 'Quarterly leadership reviews, an annual tabletop, and a documented incident-coordination path keep executives, internal IT, and incumbent providers working from the same plan.',
+      },
+      {
+        title: 'Coordination without an IT takeover',
+        body: 'Helm owns the security program and follows through with the people doing the work. Help desk, general administration, procurement, and routine IT operations stay with your existing provider or internal team.',
+      },
+    ],
+    how: [
+      {num: '1', title: 'Qualify', body: 'We confirm the business trigger, executive sponsor, existing IT ownership, environment, and whether the program can fit both sides without creating an open-ended support relationship.'},
+      {num: '2', title: 'Establish', body: 'We baseline responsibilities, risks, evidence, incident contacts, and the first 12-month roadmap, then agree on owners and due dates.'},
+      {num: '3', title: 'Maintain', body: 'Helm runs the monthly, quarterly, annual, and event-driven cadence while your IT provider and internal owners perform the operational changes assigned to them.'},
+    ],
+    faqs: [
+      {q: 'Does Helm Command replace our MSP or internal IT team?', a: 'No. Command is the accountable security-program layer. Your MSP or internal IT team keeps responsibility for help desk, administration, patching, procurement, backup operations, and other routine IT work.'},
+      {q: 'What is included?', a: 'The standard program includes a maintained risk and decision register, a prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance-readiness support, quarterly leadership reviews, an annual tabletop, and coordination with the named IT owner.'},
+      {q: 'Is Helm Command available now?', a: 'Qualified design-partner conversations are open now. Paid delivery begins only after the final service agreement and insurance prerequisites are complete.'},
+      {q: 'Why is there no published price yet?', a: 'Command is priced by operating complexity, required control coverage, and coordination load rather than headcount alone. We confirm the scope and price after a fit review while the design-partner offer is being validated.'},
+      {q: 'Does Command include 24/7 support?', a: 'No. Covered security products may include vendor-operated 24/7 monitoring when stated, but Command does not include Helm-operated 24/7 support, forensic response, breach counsel, or unlimited advisory work.'},
+    ],
+  },
   {
     slug: 'helm-mail',
     motif: 'mail',

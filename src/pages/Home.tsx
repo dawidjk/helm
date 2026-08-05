@@ -27,7 +27,7 @@ export default function Home() {
     <div className="home-japandi">
       <Meta
         title="Helm: Cybersecurity for New Jersey Small and Medium Businesses"
-        desc="Leadership-led New Jersey security for small and medium-sized businesses: email fraud protection, AI scam readiness, compliance projects, 24/7 endpoint monitoring, and a free domain scan."
+        desc="Leadership-led New Jersey security for small and medium-sized businesses: accountable security program management, email protection, awareness, compliance readiness, and endpoint monitoring."
         path="/"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -40,7 +40,7 @@ export default function Home() {
           telephone: businessPhone.e164,
           areaServed: serviceAreaJsonLd,
           address: {'@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US'},
-          description: 'Email security, AI scam defense, and compliance readiness for small and medium-sized businesses.',
+          description: 'Managed security program leadership and focused security services for small and medium-sized businesses.',
         }}
       />
 
@@ -73,8 +73,8 @@ export default function Home() {
 
       <section id="services" className="home-service-section" aria-labelledby="home-services-title">
         <div className="home-section-intro">
-          <h2 id="home-services-title">Four services. One steady hand.</h2>
-          <p>Recurring protection where it belongs. Fixed-fee projects where the work has a finish line.</p>
+          <h2 id="home-services-title">One accountable program. Four focused services.</h2>
+          <p>Start with Command when security ownership is the gap. Choose a focused service when one control needs work.</p>
         </div>
         <div className="home-service-list">
           {productList.map((service) => (

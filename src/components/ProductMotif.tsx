@@ -1,9 +1,21 @@
-export type MotifKind = 'mail' | 'aware' | 'ready' | 'watch' | 'lane-mfg' | 'lane-pro' | 'lane-con';
+export type MotifKind = 'command' | 'mail' | 'aware' | 'ready' | 'watch' | 'lane-mfg' | 'lane-pro' | 'lane-con';
 
 /** Static line-art motifs for product tiles: quiet, legible, and theme-aware. */
 export default function ProductMotif({kind}: {kind: MotifKind}) {
   return (
     <div className="tile-motif" aria-hidden>
+      {kind === 'command' && (
+        <svg viewBox="0 0 200 96" fill="none">
+          <circle cx="100" cy="48" r="31" stroke="var(--motif-line)" strokeWidth="1.6" />
+          <circle cx="100" cy="48" r="7" fill="var(--motif-accent)" />
+          <g stroke="var(--motif-line)" strokeWidth="1.6" strokeLinecap="round">
+            <path d="M100 12 V30 M100 66 V84 M64 48 H82 M118 48 H136" />
+            <path d="M75 23 L88 36 M112 60 L125 73 M125 23 L112 36 M88 60 L75 73" />
+          </g>
+          <path d="M100 48 L124 34" stroke="var(--motif-accent)" strokeWidth="2.2" strokeLinecap="round" />
+          <circle cx="142" cy="48" r="5" fill="var(--motif-surface)" stroke="var(--motif-line)" strokeWidth="1.6" />
+        </svg>
+      )}
       {kind === 'mail' && (
         <svg viewBox="0 0 200 96" fill="none">
           <rect x="52" y="18" width="96" height="62" rx="8" stroke="var(--motif-line)" strokeWidth="1.6" />

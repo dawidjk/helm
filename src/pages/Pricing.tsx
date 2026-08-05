@@ -8,12 +8,10 @@ import {productList} from './products';
 import './Pricing.css';
 
 /**
- * Pricing-page scan order (2x2 grid): the two month-to-month unit-priced
- * services share the top row, the committed and fixed-fee offers share the
- * bottom row, and Helm Aware's heavier two-option tile closes the grid
- * instead of interrupting it mid-scan. Product pages keep catalog order.
+ * Command leads as the flagship. The four standardized offers retain their
+ * 2x2 scan order beneath it.
  */
-const tileOrder = ['helm-mail', 'helm-watch', 'helm-ready', 'helm-aware'];
+const tileOrder = ['helm-command', 'helm-mail', 'helm-watch', 'helm-ready', 'helm-aware'];
 const tileRank = (slug: string) => {
   const i = tileOrder.indexOf(slug);
   return i === -1 ? tileOrder.length : i;
@@ -56,6 +54,7 @@ const pricingLedger: PricingLedgerRow[] = pricingTiles.flatMap((product) => {
   }
 
   const minimumBySlug: Record<string, string> = {
+    'helm-command': 'Qualified fit required',
     'helm-mail': 'No seat minimum',
     'helm-watch': '$150 / month account',
     'helm-ready': '$2,500 project fee',
@@ -65,7 +64,7 @@ const pricingLedger: PricingLedgerRow[] = pricingTiles.flatMap((product) => {
     offer: product.name,
     slug: product.slug,
     bestFor: product.bestFor,
-    price: displayPrice(product.price),
+    price: product.commercialState === 'design-partner' ? 'Fit review' : displayPrice(product.price),
     commitment: product.term,
     minimum: minimumBySlug[product.slug] ?? 'See offer details',
   }];
@@ -75,8 +74,8 @@ export default function Pricing() {
   return (
     <>
       <Meta
-        title="Pricing: Published, No Surprises | Helm"
-        desc="Published Helm pricing for managed email security, awareness training, AI scam workshops, compliance readiness, and endpoint monitoring."
+        title="Pricing: Clear Scope, No Surprises | Helm"
+        desc="Fit-priced security program leadership through Helm Command, plus published pricing for email security, awareness, compliance readiness, and endpoint monitoring."
         path="/pricing"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -91,12 +90,12 @@ export default function Pricing() {
         <HeroBackdrop kind="brand-static" />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">
-            Published starting prices. Scope in writing.
+            Clear pricing. Scope in writing.
           </h1>
           <p className="sub reveal d2">
-            Mail, Aware Managed, and Watch use clear monthly unit pricing.
-            Aware workshops and Ready projects use a fixed fee, with the final
-            scope written down before work starts.
+            Command begins with a fit and complexity review while qualified
+            design-partner enrollment is open. Mail, Aware, Ready, and Watch
+            retain published unit or project pricing.
           </p>
         </div>
         <ScrollCue />
@@ -117,7 +116,7 @@ export default function Pricing() {
                 <tr>
                   <th scope="col">Offer</th>
                   <th scope="col">Best for</th>
-                  <th scope="col">Starting price</th>
+                  <th scope="col">Price approach</th>
                   <th scope="col">Commitment</th>
                   <th scope="col">Minimum</th>
                   <th scope="col"><span className="sr-only">Offer details</span></th>
@@ -128,7 +127,7 @@ export default function Pricing() {
                   <tr key={row.offer}>
                     <th scope="row" data-label="Offer">{row.offer}</th>
                     <td data-label="Best for">{row.bestFor}</td>
-                    <td data-label="Starting price" className="pricing-ledger-price">{row.price}</td>
+                    <td data-label="Price approach" className="pricing-ledger-price">{row.price}</td>
                     <td data-label="Commitment">{row.commitment}</td>
                     <td data-label="Minimum">{row.minimum}</td>
                     <td className="pricing-ledger-action">
@@ -145,9 +144,13 @@ export default function Pricing() {
       </section>
 
       <Band variant="raised">
-        <div className="product-grid four">
+        <div className="product-grid four pricing-product-grid">
           {pricingTiles.map((p, i) => (
-            <div id={`pricing-${p.slug}`} key={p.slug} className={`product-tile observe d${Math.min(i + 1, 5)}`}>
+            <div
+              id={`pricing-${p.slug}`}
+              key={p.slug}
+              className={`product-tile observe d${Math.min(i + 1, 5)}${p.commercialState === 'design-partner' ? ' pricing-flagship' : ''}`}
+            >
               <ProductMotif kind={p.motif} />
               <h2 className="product-tile-title">{p.name}</h2>
               <p><strong>Best for</strong> {p.bestFor}.</p>
@@ -190,9 +193,9 @@ export default function Pricing() {
         <div className="band-head">
           <h2 className="observe">How the numbers work</h2>
           <p className="observe d1">
-            Unit prices multiply out in the open. Aware workshops and Ready
-            projects have defined scope bands so a smaller engagement does
-            not subsidize a larger one.
+            Standardized services multiply out in the open. Command is the
+            exception while its design-partner operating model is validated:
+            scope and pricing follow the fit and complexity review.
           </p>
         </div>
         <div className="price-math">
@@ -229,9 +232,11 @@ export default function Pricing() {
       </Band>
 
       <CtaBand
-        title="Not sure which one you need?"
-        sub="Start with the free scan: the report flags gaps in your public domain configuration and explains the next steps."
+        title="Need an accountable security owner?"
+        sub="Tell us what is creating pressure and who owns IT today. We will confirm whether Command or a focused service is the better fit."
+        cta="Talk to us"
         source="pricing cta"
+        mode="book"
       />
     </>
   );

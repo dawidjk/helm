@@ -22,7 +22,7 @@ import {manufacturing} from './lanes';
  */
 export const BOOK_CTA = {
   title: 'Have more questions?',
-  sub: 'Send us your vendor-security questionnaire or ask directly. A founder responds during business hours.',
+  sub: 'Send us your vendor-security questionnaire or ask directly. A Helm executive responds during business hours.',
   label: 'Talk to us',
 };
 

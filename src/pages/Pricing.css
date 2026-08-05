@@ -129,7 +129,33 @@
   scroll-margin-top: 96px;
 }
 
+.pricing-product-grid .pricing-flagship {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  grid-template-areas:
+    "motif price"
+    "title detail"
+    "fit features"
+    "link features";
+  column-gap: clamp(32px, 5vw, 68px);
+  align-items: start;
+}
+
+.pricing-flagship .tile-motif { grid-area: motif; }
+.pricing-flagship .product-tile-title { grid-area: title; }
+.pricing-flagship > p:first-of-type { grid-area: fit; }
+.pricing-flagship > .price-row { grid-area: price; }
+.pricing-flagship > .price-row + p { grid-area: detail; }
+.pricing-flagship > .pricing-feature-list { grid-area: features; }
+.pricing-flagship > .tile-link { grid-area: link; }
+
 @media (max-width: 900px) {
+  .pricing-product-grid .pricing-flagship {
+    grid-column: auto;
+    display: flex;
+  }
+
   .pricing-ledger-head {
     grid-template-columns: 1fr;
     gap: 16px;

@@ -12,11 +12,11 @@ The primary audience is New Jersey small and medium-sized business owners and op
 
 ## Product Purpose
 
-The site helps a visitor understand Helm's security services, compare published pricing and scope, run a free public email-domain scan, or contact Helm for a direct conversation. Success means the visitor can identify the relevant service and take the next step without jargon, inflated claims, or a required sales meeting.
+The site helps a visitor understand Helm's security services, compare price and scope, run a free public email-domain scan, or contact Helm for a direct conversation. Success means the visitor can identify the relevant service and take the next step without jargon, inflated claims, or a required sales meeting.
 
 ## Positioning
 
-Helm combines leadership-led delivery with established security platforms, published starting prices, plain-English explanations, and clear attribution of what Helm operates versus what its vendors provide. Recurring protection is sold where monitoring is ongoing; fixed-fee projects are used where the work has a defined finish line.
+Helm combines executive-led delivery with established security platforms, published prices for standardized services, plain-English explanations, and clear attribution of what Helm operates versus what its vendors provide. Helm Command is the flagship account layer and is fit-priced during qualified design-partner validation. Recurring protection is sold where monitoring is ongoing; fixed-fee projects are used where the work has a defined finish line.
 
 ## Operating Context
 
@@ -28,6 +28,7 @@ Visitors commonly arrive while responding to email fraud, insurance questionnair
 - Helm Aware provides managed security-awareness learning and fixed-fee AI scam readiness workshops.
 - Helm Ready provides fixed-fee cyber-insurance, HIPAA, and CMMC readiness work.
 - Helm Watch provides Huntress-backed managed endpoint detection and response.
+- Helm Command provides managed security-program ownership, risk and roadmap maintenance, evidence readiness, leadership reviews, tabletop facilitation, and incumbent IT coordination. Qualified design-partner conversations are open, but public pricing and paid delivery remain gated.
 - The free scan checks public email-domain and related public configuration signals without credentials or access to internal systems.
 - Existing service definitions, published prices, scope statements, legal claims, routes, and conversion behavior are product truth and must remain unchanged across design variants.
 - The Japandi direction is the production visual system. It may evolve, but the mineral-paper and deep-pine palette, quiet hospitality, still sculptural homepage artwork, and restrained motion are now canonical unless explicitly changed.

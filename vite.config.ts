@@ -52,6 +52,13 @@ function keepOnlyCriticalPreloads(html: string) {
     )
   }
 
+  // Helm publishes a deliberate contact address. Prevent Cloudflare Email
+  // Address Obfuscation from rewriting those links and injecting its decoder
+  // into every statically rendered page.
+  optimized = optimized
+    .replace('<body>', '<body><!--email_off-->')
+    .replace('</body>', '<!--/email_off--></body>')
+
   return optimized
 }
 
@@ -65,7 +72,7 @@ export default defineConfig({
     beastiesOptions: {
       // Inline above-the-fold rules and load the remaining stylesheet without
       // keeping the entire site-wide design system on the render path.
-      preload: 'swap',
+      preload: 'media',
       preloadFonts: false,
     },
     onPageRendered: (_route, html) => keepOnlyCriticalPreloads(html),

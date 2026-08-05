@@ -93,8 +93,8 @@ export function JapandiHome() {
 
       <section className="vj-services" aria-labelledby="vj-services-title">
         <div className="vj-intro">
-          <h2 id="vj-services-title">Four services. One steady hand.</h2>
-          <p>Recurring protection where it belongs. Fixed-fee projects where the work has a finish line.</p>
+          <h2 id="vj-services-title">One accountable program. Four focused services.</h2>
+          <p>Start with Command when security ownership is the gap. Choose a focused service when one control needs work.</p>
         </div>
         <div className="vj-service-list">{productList.map((_, index) => <ServiceLink index={index} key={index} />)}</div>
       </section>
@@ -139,7 +139,7 @@ export function AkariHome() {
       </header>
 
       <section className="va-services" aria-labelledby="va-services-title">
-        <div className="va-heading"><h2 id="va-services-title">Protection, shaped around the work.</h2><p>Four focused services, with ownership and plain-English follow-through.</p></div>
+        <div className="va-heading"><h2 id="va-services-title">Protection, shaped around the work.</h2><p>One accountable program and four focused services, with plain-English follow-through.</p></div>
         <div className="va-orbit">
           {productList.map((service) => (
             <Link key={service.slug} to={canonicalPath(`/${service.slug}`)}>

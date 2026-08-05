@@ -93,7 +93,7 @@ export default function Faq() {
 
       <CtaBand
         title="Question not here?"
-        sub="Email us or use the contact form. A founder responds during business hours."
+        sub="Email us or use the contact form. A Helm executive responds during business hours."
         source="faq cta"
       />
     </>

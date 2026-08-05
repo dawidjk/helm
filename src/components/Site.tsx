@@ -83,6 +83,7 @@ const lanes = [
 ];
 
 const services = [
+  {to: '/helm-command', label: 'Helm Command', clue: 'Security program ownership'},
   {to: '/helm-mail', label: 'Helm Mail', clue: 'Managed email protection'},
   {to: '/helm-aware', label: 'Helm Aware', clue: 'Training and scam readiness'},
   {to: '/helm-ready', label: 'Helm Ready', clue: 'Insurance and compliance'},
@@ -93,6 +94,7 @@ const footerCols = [
   {
     title: 'Products',
     links: [
+      {to: '/helm-command', label: 'Helm Command'},
       {to: '/helm-mail', label: 'Helm Mail'},
       {to: '/helm-aware', label: 'Helm Aware'},
       {to: '/helm-ready', label: 'Helm Ready'},

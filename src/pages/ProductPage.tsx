@@ -1,6 +1,6 @@
 import HeroBackdrop from '../components/HeroBackdrop';
 import {useParams, Link} from 'react-router-dom';
-import {Band, CtaBand, ScrollCue} from '../components/Site';
+import {ActionLink, Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import LeadForm from '../components/LeadForm';
 import ProductMotif from '../components/ProductMotif';
@@ -55,10 +55,21 @@ export default function ProductPage() {
           </h1>
           <p className="sub reveal d2">{p.desc}</p>
           <div className="hero-ctas reveal d3">
-            <LeadForm source={`product ${p.slug}`} cta="Get my free scan" compact />
+            {p.ctaMode === 'book' ? (
+              <ActionLink
+                to="/contact/"
+                label={p.slug === 'helm-command' ? 'Discuss Command' : 'Talk to us'}
+              />
+            ) : (
+              <LeadForm source={`product ${p.slug}`} cta="Get my free scan" compact />
+            )}
           </div>
           <div className="hero-note reveal d3">
-            {p.price} · <Link to="/pricing/">full pricing</Link>
+            {p.commercialState === 'design-partner' ? (
+              <>{p.price} · scope and price after fit review</>
+            ) : (
+              <>{p.price} · <Link to="/pricing/">full pricing</Link></>
+            )}
           </div>
         </div>
         <ScrollCue />
