@@ -141,7 +141,7 @@
 
 .drawer-primary {
   display: grid;
-  height: 178px;
+  grid-auto-rows: max-content;
 }
 
 .drawer-primary .drawer-primary-section > summary,

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-04T20:08:19Z",
+  "generatedAt": "2026-08-17T23:00:26Z",
   "title": "Design System: Helm Security Marketing Site",
   "extensions": {
     "colorMeta": {
@@ -204,7 +204,7 @@
       },
       "label": {
         "displayName": "Quiet Label",
-        "purpose": "Eyebrows, product names, metadata, and footer groups."
+        "purpose": "Compact product names, footer column titles, and concise metadata within established structures; never standalone eyebrow or kicker labels."
       }
     },
     "shadows": [
@@ -410,7 +410,7 @@
     "dos": [
       "Do preserve the two-image hierarchy: sculptural homepage, separate architectural secondary hero.",
       "Do lead first viewports with a left-aligned, high-contrast message and one obvious scan or founder action.",
-      "Do use Aero, Skyline, and Construction animation only on their matching industry heroes, with reduced-motion fallbacks.",
+      "Do use Aero, Skyline, and Construction animation only on their matching industry heroes, right-aligned away from the copy, with off-screen pausing and reduced-motion fallbacks.",
       "Do keep section content visible by default and reserve the restrained rise reveal for first-viewport hero content.",
       "Do use ruled, unnumbered rows for risks and SVG arrows for direction.",
       "Do preserve 44px minimum interactive targets, dark-mode continuity, and elevated lead-form button contrast.",
