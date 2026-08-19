@@ -58,18 +58,14 @@ export default function ProductPage() {
             {p.ctaMode === 'book' ? (
               <ActionLink
                 to="/contact/"
-                label={p.slug === 'helm-command' ? 'Discuss Command' : 'Talk to us'}
+                label="Discuss Command"
               />
             ) : (
               <LeadForm source={`product ${p.slug}`} cta="Get my free scan" compact />
             )}
           </div>
           <div className="hero-note reveal d3">
-            {p.commercialState === 'design-partner' ? (
-              <>{p.price} · scope and price after fit review</>
-            ) : (
-              <>{p.price} · <Link to="/pricing/">full pricing</Link></>
-            )}
+            {p.price} · <Link to="/pricing/">full pricing</Link>
           </div>
         </div>
         <ScrollCue />
@@ -90,22 +86,8 @@ export default function ProductPage() {
           <div className="product-tile product-summary observe d1">
             <ProductMotif kind={p.motif} />
             <h2 className="product-tile-title">{p.name}</h2>
-            {p.pricingOptions ? (
-              <div className="price-options">
-                {p.pricingOptions.map((option) => (
-                  <div className="price-option" key={option.name}>
-                    <div className="price-option-name">{option.name}</div>
-                    <h3>{option.price}</h3>
-                    <p>{option.detail}</p>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <>
-                <h3 className="product-summary-price">{p.price}</h3>
-                <p>{p.priceDetail}</p>
-              </>
-            )}
+            <h3 className="product-summary-price">{p.price}</h3>
+            <p>{p.priceDetail}</p>
           </div>
         </div>
       </Band>
@@ -114,7 +96,7 @@ export default function ProductPage() {
         <div className="band-head observe">
           <h2>How it works</h2>
         </div>
-        <ol className="steps-flow">
+        <ol className="steps-flow product-steps-flow">
           {p.how.map((s, i) => (
             <li key={s.num} className={`observe d${Math.min(i + 1, 5)}`}>
               <div className="step-dot">{s.num}</div>

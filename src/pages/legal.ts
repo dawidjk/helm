@@ -21,7 +21,7 @@ export type LegalDoc = {
 const ENTITY = 'Helm Security LLC';
 const STATE = 'New Jersey';
 const EMAIL = 'hello@helmsecured.com';
-const TERMS_EFFECTIVE = 'July 27, 2026';
+const TERMS_EFFECTIVE = 'August 19, 2026';
 const PRIVACY_EFFECTIVE = 'July 31, 2026';
 
 export const terms: LegalDoc = {
@@ -29,7 +29,7 @@ export const terms: LegalDoc = {
   navLabel: 'Terms of Service',
   metaTitle: 'Terms of Service | Helm',
   metaDesc:
-    'The terms that govern use of the Helm website, the free email security scan, and Helm Mail, Helm Aware, Helm Ready and Helm Watch services.',
+    'The terms that govern use of the Helm website, the free email security scan, Helm Core, and Helm Command.',
   eyebrow: 'Legal',
   heading: 'Terms of Service',
   sub: 'The rules that govern our website, the free scan, and every Helm service. Written to be read, not to hide things.',
@@ -42,7 +42,7 @@ export const terms: LegalDoc = {
     {
       h: '1. What we provide',
       body: [
-        `Helm sells managed security services to small and mid-sized businesses. Our current products are Helm Mail (managed email-threat and human-risk security), Helm Aware (a fixed-fee AI scam readiness workshop), Helm Ready (compliance readiness projects) and Helm Watch (managed endpoint detection and response).`,
+        `Helm sells managed security services to small and mid-sized businesses. Our current products are Helm Core, a standardized managed protection service, and Helm Command, a managed security program that includes the covered Core stack plus hands-on program ownership.`,
         `The specific scope of what we deliver to you is defined in your order form or statement of work ("Order"). These Terms apply to every Order. If an Order and these Terms conflict, the Order controls for that engagement only.`,
       ],
     },
@@ -51,7 +51,7 @@ export const terms: LegalDoc = {
       body: [
         `We are not an insurer. Nothing we sell indemnifies you against loss.`,
         `We are not a law firm and do not provide legal advice, including advice on breach notification obligations. We will support your counsel; we will not replace them.`,
-        `We do not issue certifications. Helm Ready prepares you for assessment and hands you to an independent assessor. For CMMC specifically, certification is performed only by an authorized C3PAO, never by us.`,
+        `We do not issue certifications. Helm may help you prepare for an assessment and organize evidence, but the independent assessor or relevant authority makes the final decision. For CMMC specifically, certification is performed only by an authorized C3PAO, never by us.`,
         `We do not guarantee that your systems will not be compromised. No security provider honestly can. What we commit to is the scope, coverage and response process written in your Order.`,
       ],
     },
@@ -74,17 +74,17 @@ export const terms: LegalDoc = {
     {
       h: '5. Fees, billing and renewal',
       body: [
-        `Subscription unit pricing and account minimums are published on our pricing page. Subscriptions are billed monthly in advance by card or ACH through our payment processor and renew automatically until cancelled.`,
-        `Project work under Helm Ready and Helm Aware is fixed fee, scoped in writing in advance, and billed as set out in the Order.`,
-        `Fees exclude applicable taxes. We may change subscription pricing on at least thirty days written notice, effective at your next renewal. If you do not accept a price change you may cancel before it takes effect, subject to the terms in your Order.`,
+        `Subscription pricing and account minimums are published on our pricing page. Services are billed monthly in advance by card or ACH through our payment processor and renew as described in the Order.`,
+        `A separately scoped paid assessment may be credited toward the first year of a new Core or Command agreement when the Order states that credit. Remediation and other work outside the recurring scope are separately authorized and billed as set out in the Order.`,
+        `Fees exclude applicable taxes. A 12-month Helm Core Order keeps its stated price for the initial term, and any later change requires at least thirty days written notice and takes effect only at renewal. A 36-month Helm Core Order locks its starting per-user price and account minimum for the full initial term. Unless the Order says otherwise, Helm Command pricing adjusts by six percent on each service anniversary. Any other price change takes effect only at a renewal or as otherwise agreed in writing.`,
         `Payments more than fifteen days late may result in suspension under section 11.`,
       ],
     },
     {
       h: '6. Term, cancellation and refunds',
       body: [
-        `Unless your Order says otherwise, Helm Mail has a 12-month initial service term and then renews month to month; non-renewal requires thirty days written notice. Helm Watch runs month to month and may be cancelled on thirty days written notice, effective at the end of the current billing period. We do not charge setup or cancellation fees.`,
-        `We do not pro-rate or refund the current month once a billing period has begun, because our own upstream vendor costs for that period are already committed. Fixed-fee project work is refundable only for work not yet performed at the point of cancellation.`,
+        `Helm Core Orders use either a 12-month or 36-month initial service term, as selected in the Order. Unless your Order says otherwise, Helm Command has a 36-month initial service term. After the initial term, the service renews for the period stated in the Order. Non-renewal requires written notice within the notice window stated in the Order.`,
+        `We do not pro-rate or refund the current month once a billing period has begun because our own upstream vendor costs for that period are already committed. Early termination rights, charges, and any refund for separately scoped work are governed by the Order.`,
         `On termination we will deprovision your protections, and on written request within thirty days we will provide a reasonable export of the reports and documentation we hold for you.`,
       ],
     },
@@ -98,7 +98,7 @@ export const terms: LegalDoc = {
     {
       h: '8. Incident response',
       body: [
-        `Detection and automated containment behind Helm Watch run continuously through our security operations partners. Human follow-up from Helm is provided during business hours and on a best-effort basis outside them, unless your Order states a different commitment in writing.`,
+        `Covered detection and automated containment within Helm Core and Helm Command run continuously through our security operations partners. Human follow-up from Helm follows the operating window and response responsibilities stated in your Order.`,
         `We will not describe our response coverage to you, in sales conversations or anywhere else, as something other than what this section says.`,
       ],
     },

@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom';
 import Meta from '../components/Meta';
 import LeadForm from '../components/LeadForm';
 import {canonicalPath, siteUrl} from '../lib/urls';
-import {businessPhone, linkedInUrl, serviceAreaJsonLd} from '../lib/business';
+import {businessPhone, facebookUrl, instagramUrl, linkedInUrl, serviceAreaJsonLd} from '../lib/business';
 import {productList} from './products';
 import japandiHero from '../assets/variants/japandi-hero.webp';
 import japandiHeroMobile from '../assets/brand/japandi-home-mobile-640.webp';
@@ -27,7 +27,7 @@ export default function Home() {
     <div className="home-japandi">
       <Meta
         title="Helm: Cybersecurity for New Jersey Small and Medium Businesses"
-        desc="Leadership-led New Jersey security for small and medium-sized businesses: accountable security program management, email protection, awareness, compliance readiness, and device monitoring."
+        desc="Complete managed security through Helm Core, with hands-on security program ownership through Helm Command for New Jersey small and medium-sized businesses."
         path="/"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -35,12 +35,12 @@ export default function Home() {
           name: 'Helm Security LLC',
           alternateName: 'Helm',
           url: siteUrl('/'),
-          sameAs: [linkedInUrl],
+          sameAs: [linkedInUrl, facebookUrl, instagramUrl],
           email: 'hello@helmsecured.com',
           telephone: businessPhone.e164,
           areaServed: serviceAreaJsonLd,
           address: {'@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US'},
-          description: 'Managed security program leadership and focused security services for small and medium-sized businesses.',
+          description: 'Complete managed security protection and security program ownership for small and medium-sized businesses.',
         }}
       />
 
@@ -74,8 +74,8 @@ export default function Home() {
 
       <section id="services" className="home-service-section" aria-labelledby="home-services-title">
         <div className="home-section-intro">
-          <h2 id="home-services-title">One accountable program. Four focused services.</h2>
-          <p>Choose Command when security work keeps falling between teams. Choose a focused service when the immediate problem is email, devices, fraud readiness, or compliance evidence.</p>
+          <h2 id="home-services-title">Two ways to put someone in charge of security.</h2>
+          <p>Choose Core for a complete, standardized security stack. Choose Command when leadership also needs a maintained roadmap, evidence, questionnaire response, and quarterly cadence.</p>
         </div>
         <div className="home-service-list">
           {productList.map((service) => (

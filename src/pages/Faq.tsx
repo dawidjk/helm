@@ -6,7 +6,7 @@ import {renderParagraph, paragraphText, type Paragraph} from '../lib/richText';
 const faqs: {q: string; a: Paragraph}[] = [
   {
     q: 'We have an IT person. Why do we need Helm?',
-    a: 'Your IT person or MSP keeps systems running. Helm focuses on the defined security work in your agreement, such as email filtering, device monitoring, or readiness documentation. We can work alongside an existing provider, with responsibilities written down before work begins.',
+    a: 'Your IT person or MSP keeps systems running. Helm owns the defined security program in your agreement while that team keeps help desk, administration, patching, procurement, and routine remediation. Responsibilities are written down before work begins.',
   },
   {
     q: 'Are we really a target? We only have 15 employees.',
@@ -23,28 +23,28 @@ const faqs: {q: string; a: Paragraph}[] = [
   {
     q: 'How is pricing structured?',
     a: {
-      text: 'Helm Mail is $50 per protected user per month with a $1,000 account minimum, equivalent to 20 users, and a 12-month initial term. It includes managed email-threat protection, phishing reporting and triage, simulations, and awareness learning. Helm Watch is $40 per covered user per month with a $200 account minimum and includes up to two eligible Windows or Mac workstations per covered user. Helm Aware and Helm Ready are fixed-fee projects within published ranges. Work outside the written scope is priced separately.',
+      text: 'Helm Core is $125 per covered user per month with a $2,500 monthly account minimum. Choose a 12-month Core term at the current rate or a 36-month Core term that locks the starting price for all three years. Helm Command is $8,000 to $15,000 per month after a fit and complexity review, with a 36-month initial term and a 6% adjustment on each service anniversary. Work outside the written scope is priced separately.',
       links: [{phrase: 'pricing page', to: '/pricing'}],
     },
   },
   {
     q: 'Can you get us CMMC certified?',
     a: {
-      text: 'Formal CMMC certification is performed only by an authorized independent C3PAO when one is required. Helm Ready can document your current state, identify gaps, and help organize remediation. Helm does not certify your business or promise a particular assessment outcome.',
-      links: [{phrase: 'gap assessment', to: '/helm-ready'}],
+      text: 'Formal CMMC certification is performed only by an authorized independent C3PAO when one is required. Helm Command can document your current state, identify gaps, and help organize remediation. Helm does not certify your business or promise a particular assessment outcome.',
+      links: [{phrase: 'Helm Command', to: '/helm-command'}],
     },
   },
   {
     q: 'What happens if we get hit while working with you?',
-    a: 'We follow the escalation and response responsibilities in your signed agreement. Huntress provides continuous monitoring and active containment for devices covered by Helm Watch; Helm follow-up is during business hours and best effort outside them unless your agreement says otherwise. Broader recovery, legal, insurance, and forensic work is not automatically included.',
+    a: 'We follow the escalation and response responsibilities in your signed agreement. Specialist security operations partners provide continuous monitoring and containment within the covered Core or Command scope. Helm follow-up follows the operating window in your agreement. Broader recovery, legal, insurance, and forensic work is not automatically included.',
   },
   {
     q: 'How fast can we start?',
     a: {
-      text: 'The free scan usually returns in about a minute. Helm Mail is scheduled after we confirm your email environment, select the appropriate deployment path, and agree on a rollback window. Project start dates are confirmed in the statement of work.',
+      text: 'The free scan usually returns in about a minute. Core and Command start after we confirm the covered users, systems, provider responsibilities, deployment path, and rollback plan. The start date is written into the service order.',
       links: [
         {phrase: 'free scan', to: '/free-scan'},
-        {phrase: 'Helm Mail', to: '/helm-mail'},
+        {phrase: 'Core and Command', to: '/pricing'},
       ],
     },
   },

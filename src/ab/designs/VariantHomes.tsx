@@ -3,7 +3,7 @@ import Meta from '../../components/Meta';
 import LeadForm from '../../components/LeadForm';
 import HeroVideo from '../../components/HeroVideo';
 import {canonicalPath, siteUrl} from '../../lib/urls';
-import {businessPhone, linkedInUrl, serviceAreaJsonLd} from '../../lib/business';
+import {businessPhone, facebookUrl, instagramUrl, linkedInUrl, serviceAreaJsonLd} from '../../lib/business';
 import {productList} from '../../pages/products';
 import japandiHero from '../../assets/variants/japandi-hero.webp';
 import akariHero from '../../assets/variants/akari-hero.webp';
@@ -21,7 +21,7 @@ function HomeMeta() {
   return (
     <Meta
       title="Helm: Cybersecurity for New Jersey Small and Medium Businesses"
-      desc="Leadership-led New Jersey security for small and medium-sized businesses: email fraud protection, AI scam readiness, compliance projects, 24/7 device monitoring, and a free domain scan."
+      desc="Complete managed security through Helm Core, with hands-on security program ownership through Helm Command for New Jersey small and medium-sized businesses."
       path="/"
       jsonLd={{
         '@context': 'https://schema.org',
@@ -29,12 +29,12 @@ function HomeMeta() {
         name: 'Helm Security LLC',
         alternateName: 'Helm',
         url: siteUrl('/'),
-        sameAs: [linkedInUrl],
+        sameAs: [linkedInUrl, facebookUrl, instagramUrl],
         email: 'hello@helmsecured.com',
         telephone: businessPhone.e164,
         areaServed: serviceAreaJsonLd,
         address: {'@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US'},
-        description: 'Email security, AI scam defense, and compliance readiness for small and medium-sized businesses.',
+        description: 'Complete managed security protection and security program ownership for small and medium-sized businesses.',
       }}
     />
   );
@@ -94,8 +94,8 @@ export function JapandiHome() {
 
       <section className="vj-services" aria-labelledby="vj-services-title">
         <div className="vj-intro">
-          <h2 id="vj-services-title">One accountable program. Four focused services.</h2>
-          <p>Choose Command when security work keeps falling between teams. Choose a focused service when the immediate problem is email, devices, fraud readiness, or compliance evidence.</p>
+          <h2 id="vj-services-title">Two ways to put someone in charge of security.</h2>
+          <p>Choose Core for a complete standardized stack. Choose Command when leadership also needs a maintained roadmap, evidence, and quarterly cadence.</p>
         </div>
         <div className="vj-service-list">{productList.map((_, index) => <ServiceLink index={index} key={index} />)}</div>
       </section>
@@ -140,7 +140,7 @@ export function AkariHome() {
       </header>
 
       <section className="va-services" aria-labelledby="va-services-title">
-        <div className="va-heading"><h2 id="va-services-title">Choose the service that matches the problem.</h2><p>Use Command when security work lacks an owner, or start with the specific email, device, fraud, or readiness issue.</p></div>
+        <div className="va-heading"><h2 id="va-services-title">Choose the operating model that matches the need.</h2><p>Use Core for complete standardized protection. Use Command when security work also needs a hands-on owner.</p></div>
         <div className="va-orbit">
           {productList.map((service) => (
             <Link key={service.slug} to={canonicalPath(`/${service.slug}`)}>

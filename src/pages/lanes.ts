@@ -55,23 +55,6 @@ export const manufacturing: Lane = {
   ],
   planTitle: 'Start with the contract, then protect the systems in scope.',
   planSub: 'First establish what must be assessed. Then address the email and eligible workstations involved in the work.',
-  steps: [
-    {
-      num: '1',
-      title: 'Helm Ready',
-      body: 'A fixed-fee CMMC gap assessment maps the agreed scope against the applicable requirements and delivers scored findings, evidence needs, and a prioritized roadmap. Helm prepares the work but does not certify it.',
-    },
-    {
-      num: '2',
-      title: 'Helm Watch',
-      body: 'Managed device protection watches covered Windows and Mac workstations around the clock, investigates suspicious activity, and isolates compromised devices when needed. Servers, shop-floor systems, and other device classes are separately scoped.',
-    },
-    {
-      num: '3',
-      title: 'Helm Mail',
-      body: 'Managed email-threat protection, suspicious-message triage, simulations, and awareness learning help protect the cloud-email workflows employees use to exchange bids, drawings, invoices, and contract information. Helm Mail is not a CMMC certification by itself.',
-    },
-  ],
   proof: {
     title: 'What the readiness work includes.',
     points: [
@@ -164,23 +147,6 @@ export const professionalServices: Lane = {
   ],
   planTitle: 'Protect the inbox, the work devices, and the answers the firm signs.',
   planSub: 'Each service addresses a specific part of the risk instead of treating every problem as the same security project.',
-  steps: [
-    {
-      num: '1',
-      title: 'Helm Mail',
-      body: 'Managed email-threat protection, suspicious-message reporting and triage, simulations, and awareness learning for compatible Microsoft 365 and Google Workspace environments.',
-    },
-    {
-      num: '2',
-      title: 'Helm Watch',
-      body: 'Managed device protection watches covered Windows and Mac computers around the clock, investigates suspicious activity, and isolates compromised devices when needed.',
-    },
-    {
-      num: '3',
-      title: 'Helm Ready',
-      body: 'A fixed-fee assessment for cyber-insurance or client-questionnaire readiness. Any remediation follows under a separate written scope.',
-    },
-  ],
   proof: {
     title: 'What the firm can put in place and show.',
     points: [
@@ -250,23 +216,6 @@ export const lawFirms: Lane = {
   ],
   planTitle: 'Protect the message, the device, and the decision to release money.',
   planSub: 'Each layer addresses a different way a confidential matter or payment can be exposed.',
-  steps: [
-    {
-      num: '1',
-      title: 'Helm Mail',
-      body: 'Managed filtering, phishing and impersonation protection, suspicious-message triage, simulations, and awareness learning help reduce the chance that a convincing message reaches a payment approver.',
-    },
-    {
-      num: '2',
-      title: 'Helm Watch',
-      body: 'A 24/7 security operations center monitors covered Windows and Mac devices, investigates suspicious activity, and isolates compromised devices before an incident spreads.',
-    },
-    {
-      num: '3',
-      title: 'Helm Ready',
-      body: 'A fixed-fee readiness assessment ties insurance and client-questionnaire answers to current controls, evidence, and a prioritized remediation plan.',
-    },
-  ],
   proof: {
     title: 'What the firm can put in place.',
     points: [
@@ -290,7 +239,7 @@ export const lawFirms: Lane = {
     },
     {
       question: 'Which devices belong in the confidentiality scope?',
-      answer: 'Include every firm-owned or personally owned device that can reach client email, documents, billing, trust accounting, or saved sessions. Standard Helm Watch coverage applies to eligible Windows and Mac computers. Phones and tablets require separate identity, email, and device-management controls.',
+      answer: 'Include every firm-owned or personally owned device that can reach client email, documents, billing, trust accounting, or saved sessions. Standard Helm Core coverage applies to eligible Windows and Mac computers. Phones and tablets require separate identity, email, and device-management controls.',
       resource: {slug: 'law-firm-device-security-checklist', label: 'Use the device checklist'},
     },
     {
@@ -364,23 +313,6 @@ export const accountingFirms: Lane = {
   ],
   planTitle: 'Protect the work, then make the WISP match it.',
   planSub: 'The records behind each control help the firm answer clients, insurers, and regulators without guessing.',
-  steps: [
-    {
-      num: '1',
-      title: 'Helm Mail',
-      body: 'Managed filtering, phishing protection, suspicious-message triage, simulations, and awareness learning help defend the email path used for client documents, payment requests, and tax-season impersonation.',
-    },
-    {
-      num: '2',
-      title: 'Helm Watch',
-      body: 'Covered Windows and Mac devices receive 24/7 monitoring, human investigation, and containment when suspicious activity becomes a real threat.',
-    },
-    {
-      num: '3',
-      title: 'Helm Ready',
-      body: 'A fixed-fee readiness assessment reviews the controls and evidence behind a WISP, insurance application, or client security questionnaire. Remediation is separately scoped.',
-    },
-  ],
   proof: {
     title: 'What the firm can protect and document.',
     points: [
@@ -451,23 +383,6 @@ export const medicalPractices: Lane = {
   ],
   planTitle: 'Protect daily work and document what still needs attention.',
   planSub: 'No single product covers the whole practice. Each service addresses a defined part of the risk analysis.',
-  steps: [
-    {
-      num: '1',
-      title: 'Helm Mail',
-      body: 'Managed filtering, phishing protection, suspicious-message triage, simulations, and awareness learning protect compatible business email. Secure-message delivery and secure file transfer are not included and are separately scoped when required.',
-    },
-    {
-      num: '2',
-      title: 'Helm Watch',
-      body: 'A 24/7 security operations center monitors covered Windows and Mac workstations, investigates alerts, and isolates compromised devices. Phones, tablets, servers, and other device classes require separate scoping.',
-    },
-    {
-      num: '3',
-      title: 'Helm Ready',
-      body: 'A fixed-fee HIPAA Security Rule gap assessment reviews the agreed scope, documents findings, and produces a prioritized remediation roadmap. Helm does not certify HIPAA compliance.',
-    },
-  ],
   proof: {
     title: 'What each service covers, and what it does not.',
     points: [
@@ -537,27 +452,10 @@ export const contractors: Lane = {
   ],
   planTitle: 'Protect the payment request, the work device, and the answer on the form.',
   planSub: 'Each service addresses a specific point where money, access, or a customer requirement can go wrong.',
-  steps: [
-    {
-      num: '1',
-      title: 'Helm Mail',
-      body: 'Helm Mail combines managed phishing and impersonation protection with suspicious-message triage, simulations, and awareness learning for compatible Microsoft 365 and Google Workspace environments.',
-    },
-    {
-      num: '2',
-      title: 'Helm Watch',
-      body: 'Managed device protection watches covered Windows and Mac computers used for estimating, billing, and administration around the clock. Phones, tablets, servers, and other device classes are separately scoped.',
-    },
-    {
-      num: '3',
-      title: 'Helm Ready',
-      body: 'Helm Ready documents the controls you actually have and identifies unsupported answers before they reach a GC or carrier.',
-    },
-  ],
   proof: {
     title: 'What the contractor can put in place.',
     points: [
-      'Helm Mail for compatible Microsoft 365 and Google Workspace environments',
+      'Helm Core for compatible Microsoft 365 and Google Workspace environments',
       'Payment-verification protocol separately scoped to your approval process',
       'Device protection scoped to the actual covered fleet',
       'Published pricing and account minimums',

@@ -24,17 +24,17 @@ const subprocessors: {service: string; does: string; sees: string}[] = [
   },
   {
     service: 'Huntress',
-    does: '24/7 SOC-backed device detection and response for Helm Watch',
-    sees: 'Security telemetry from protected devices',
+    does: '24/7 SOC-backed device and identity protection within Helm Core and Command',
+    sees: 'Security telemetry from covered devices and supported identity environments',
   },
   {
     service: 'MailProtector',
-    does: 'Mail-flow filtering and email traffic controls for Helm Mail',
+    does: 'Mail-flow filtering and email traffic controls within Helm Core and Command',
     sees: 'Email content, metadata, sender and recipient information, and filtering decisions for protected accounts, once live',
   },
   {
     service: 'Doppel',
-    does: 'Social-engineering detection, phishing triage, simulations, and awareness learning for Helm Mail',
+    does: 'Digital risk, social-engineering detection, phishing triage, simulations, and awareness learning within Helm Core and Command',
     sees: 'Mailbox and reported-message content, metadata, user information, and program activity for protected accounts, once live',
   },
 ];
@@ -91,9 +91,9 @@ export default function Trust() {
               <section>
                 <h3>What Helm does</h3>
                 <p>
-                  We resell and configure Huntress, MailProtector, and Doppel services;
-                  we do not claim to build the underlying detection technology.
-                  Helm Watch focuses on managed device detection and response at launch.
+                  We configure and manage security services from Huntress,
+                  MailProtector, Doppel, and other disclosed platform vendors.
+                  We do not claim to build their underlying detection technology.
                 </p>
               </section>
               <section>
@@ -109,7 +109,7 @@ export default function Trust() {
                 <p>
                   We store account records, scan findings, and security alerts.
                   Stripe handles card details in its hosted fields, and Helm
-                  Mail reporting uses aggregate counters rather than message
+                  Core and Command reporting uses aggregate counters rather than message
                   bodies.
                 </p>
               </section>
@@ -143,12 +143,11 @@ export default function Trust() {
                 Helm configures and manages technology supplied by specialist
                 vendors. We do not claim to have built the underlying detection
                 systems or to staff an overnight security desk ourselves.
-                Huntress provides the monitoring and response platform behind
-                Helm Watch. Helm Mail combines MailProtector filtering with
-                Doppel's email-threat and human-risk capabilities. Helm Watch
-                focuses on managed device detection and response at launch.
-                We do not describe identity monitoring, SIEM, encrypted-message
-                delivery, or secure file transfer as included.
+                Huntress provides monitoring and response capabilities within
+                Helm Core and Command. MailProtector supplies mail-flow filtering,
+                while Doppel supplies digital-risk, email-threat, and human-risk
+                capabilities. The signed service order states the covered
+                platforms, users, devices, data sources, and exclusions.
               </p>
               <p>
                 We review and act on alerts Monday through Friday, 9:00 a.m. to
@@ -185,8 +184,8 @@ export default function Trust() {
                 Stripe's hosted fields handle card details, so Helm stores only
                 a Stripe customer identifier. Helm does not copy mailbox content
                 into its portal. MailProtector processes mail-flow data and
-                Doppel processes mailbox and reported-message data to provide
-                Helm Mail. Helm reporting uses security and program activity,
+                Doppel processes mailbox and reported-message data within
+                Helm Core and Command. Helm reporting uses security and program activity,
                 not message bodies. We do store scan findings, security alerts,
                 user and organization records, billing status, and the scan or
                 deployment requests you submit because those records are needed

@@ -16,7 +16,7 @@ The site helps a visitor understand Helm's security services, compare price and 
 
 ## Positioning
 
-Helm combines executive-led delivery with established security platforms, published prices for standardized services, plain-English explanations, and clear attribution of what Helm operates versus what its vendors provide. Helm Command is the flagship account layer and is fit-priced during qualified design-partner validation. Recurring protection is sold where monitoring is ongoing; fixed-fee projects are used where the work has a defined finish line.
+Helm sells two services. Helm Core is the standardized managed protection layer. Helm Command combines that protection with hands-on security-program ownership. Both preserve the client's existing IT provider or internal IT team and state clearly what Helm operates versus what specialist vendors provide.
 
 ## Operating Context
 
@@ -24,13 +24,13 @@ Visitors commonly arrive while responding to email fraud, insurance questionnair
 
 ## Capabilities and Constraints
 
-- Helm Mail provides layered mail-flow filtering, email-threat protection, employee reporting and triage, phishing simulations, and awareness learning for compatible Microsoft 365 and Google Workspace environments at $50 per protected user per month with a $1,000 monthly account minimum and 12-month initial term. MailProtector supplies the filtering layer and Doppel supplies the white-label social-engineering and human-risk layer. Both are disclosed on the Trust and Privacy pages rather than used as customer-facing product branding. Helm Mail does not include Bracket encrypted-message delivery, a secure-message portal, secure file transfer, or SecureStore archiving unless separately quoted in writing.
-- Helm Aware is a fixed-fee AI scam readiness workshop priced from $2,500 to $4,000. Ongoing simulations and awareness learning are included in Helm Mail rather than sold as a separate Helm Aware subscription.
-- Helm Ready provides fixed-fee cyber-insurance, HIPAA, and CMMC readiness work.
-- Helm Watch provides managed device detection and response at $40 per covered user per month with a $200 monthly account minimum. Each covered user includes up to two eligible Windows or Mac workstations; servers and other device classes are separately scoped. Huntress is the underlying platform and is disclosed on the Trust and Privacy pages rather than used on the customer-facing Helm Watch product page. Its technical term for the service is managed EDR. It does not protect iOS or Android devices, so phones and tablets require separate identity, email, and device-management controls.
-- Helm Command provides managed security-program ownership, risk and roadmap maintenance, evidence readiness, leadership reviews, tabletop facilitation, and incumbent IT coordination. Qualified design-partner conversations are open, but public pricing and paid delivery remain gated.
+- Helm Core is for organizations with 20 to 75 people. It combines managed email protection, device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital risk protection, and an automated monthly report. It costs $125 per user per month with a $2,500 monthly minimum, includes up to two eligible Windows or Mac workstations per covered user, and prices additional eligible workstations at $12 each per month.
+- Helm Command is for organizations with 75 to 250 people. It includes Helm Core plus a maintained risk register, 12-month roadmap, evidence upkeep, bounded questionnaire and insurance response, quarterly leadership reviews, an annual tabletop, and coordination with the named IT owner. It is priced at $8,000 to $15,000 per month after a fit and complexity review.
+- Core clients may choose a 12-month initial term at the current rate or a 36-month initial term that locks the starting per-user price and account minimum for all three years. Command uses a 36-month initial term with a 6% annual price adjustment. Paid discovery is $2,500 to $7,500 and is credited to the first year when the client proceeds.
+- Helm does not provide general help desk, routine IT administration, procurement, or patching under either service. The client's existing IT provider or internal team keeps those responsibilities unless a separate written scope says otherwise.
+- Specialist vendor teams provide continuous monitoring and containment behind covered capabilities. Helm owns deployment, account management, coordination, and reporting and does not claim to staff its own 24/7 security operations center.
 - The free scan checks public email-domain and related public configuration signals without credentials or access to internal systems.
-- Existing service definitions, published prices, scope statements, legal claims, routes, and conversion behavior are product truth and must remain unchanged across design variants.
+- The Core and Command service definitions, published prices, scope statements, legal claims, routes, and conversion behavior are product truth and must remain unchanged across design variants.
 - The Japandi direction is the production visual system. It may evolve, but the mineral-paper and deep-pine palette, quiet hospitality, still sculptural homepage artwork, and restrained motion are now canonical unless explicitly changed.
 
 ## Brand Commitments

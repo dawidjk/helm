@@ -71,7 +71,7 @@ export const articles: Article[] = [
         h: 'A sensible rollout order',
         ps: [
           'Start with the accounts that matter most: admins, and anyone who can move money or approve payments, get the strongest option, hardware security keys. Everyone else gets an authenticator app with number matching turned on. SMS is a reasonable fallback for low-risk accounts, not the default for the accounts you would miss most if they were taken over.',
-          {text: 'People are more likely to use MFA correctly when they understand which attack it prevents. Ongoing security awareness training gives the rollout that context instead of leaving it as another unexplained login step.', links: [{phrase: 'Ongoing security awareness training', to: '/helm-mail'}]},
+          {text: 'People are more likely to use MFA correctly when they understand which attack it prevents. Ongoing security awareness training gives the rollout that context instead of leaving it as another unexplained login step.', links: [{phrase: 'Ongoing security awareness training', to: '/helm-core'}]},
           {text: 'Not sure where your own accounts currently stand? A free scan of your domain is a quick way to see what is exposed before you decide where to start.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
@@ -96,7 +96,7 @@ export const articles: Article[] = [
         h: 'Lock the front door first',
         ps: [
           'Start with multi-factor authentication because a password alone can give an attacker access to an entire mailbox. Check the owner’s account, shared inboxes, administrator accounts, and old vendor logins. These are often the accounts missed by a partial rollout.',
-          {text: 'Legacy authentication protocols let an attacker sign in with just a stolen password, bypassing MFA entirely, because those older protocols were never built to ask for a second factor. Disabling legacy auth closes a door most tenants leave open by default, and it pairs directly with the email protections behind Helm Mail.', links: [{phrase: 'Helm Mail', to: '/helm-mail'}]},
+          {text: 'Legacy authentication protocols let an attacker sign in with just a stolen password, bypassing MFA entirely, because those older protocols were never built to ask for a second factor. Disabling legacy auth closes a door most tenants leave open by default, and it pairs directly with the email protections behind Helm Core.', links: [{phrase: 'Helm Core', to: '/helm-core'}]},
           'Separate your admin accounts from the mailbox someone checks every day. An account with global admin rights should not also be the account that opens attachments and clicks links, because compromising one compromises both.',
         ],
       },
@@ -163,7 +163,7 @@ export const articles: Article[] = [
       {
         h: 'How to raise it without guessing',
         ps: [
-          {text: 'Start with a gap assessment scored against all 110 controls. It shows which requirements are supported, which are not, and which gaps have the largest effect on the score.', links: [{phrase: 'gap assessment', to: '/helm-ready'}]},
+          {text: 'Start with a gap assessment scored against all 110 controls. It shows which requirements are supported, which are not, and which gaps have the largest effect on the score.', links: [{phrase: 'gap assessment', to: '/helm-command'}]},
           'Use the methodology to understand which unmet requirements subtract the most points, but do not optimize the number while ignoring the system boundary or lower-weight requirements. Remediate, collect the new evidence, recalculate, and update the score through the authorized process when the assessment record changes.',
         ],
       },
@@ -204,7 +204,7 @@ export const articles: Article[] = [
         ps: [
           'The vault is only as strong as its master password, so make it a long passphrase, several unrelated words strung together, rather than a short password with a symbol swapped in. Pair that master password with MFA on the vault itself.',
           'A vault does not replace MFA on the underlying accounts. Turn MFA on for email, banking, and admin logins the same as you would without a vault; the vault manages the password, not the second factor.',
-          {text: 'Roll it out in order rather than all at once: admin and financial accounts first, since those carry the most risk, then the shared credentials living in spreadsheets and sticky notes, then everyone else\'s individual logins. Pairing the rollout with a short explanation of how credential stuffing actually works, the kind of thing covered in ongoing security awareness training, cuts down on people quietly going back to old habits.', links: [{phrase: 'ongoing security awareness training', to: '/helm-mail'}]},
+          {text: 'Roll it out in order rather than all at once: admin and financial accounts first, since those carry the most risk, then the shared credentials living in spreadsheets and sticky notes, then everyone else\'s individual logins. Pairing the rollout with a short explanation of how credential stuffing actually works, the kind of thing covered in ongoing security awareness training, cuts down on people quietly going back to old habits.', links: [{phrase: 'ongoing security awareness training', to: '/helm-core'}]},
           {text: 'After the passwords and shared accounts are under control, check the public email records that affect domain impersonation. The free scan usually reports on those records in about a minute.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
@@ -246,7 +246,7 @@ export const articles: Article[] = [
         ps: [
           'The clauses in your contract tell you directly: look for DFARS 252.204-7012, 7019, 7020, and 7021. Their presence, and how they are flowed down, points to whether you are being asked to handle CUI or only FCI.',
           'When the contract language is ambiguous, ask your prime in writing which category your work falls into and keep the answer on file. Do not guess, and do not assume.',
-          {text: 'Do not assume Level 1 just because you are a small shop. Company size has no bearing on the requirement: a ten-person shop machining a part from a marked drawing is handling CUI just like a thousand-person prime. A gap assessment against the full control set tells you where you actually stand before an assessor does.', links: [{phrase: 'small shop', to: '/manufacturing'}, {phrase: 'gap assessment', to: '/helm-ready'}]},
+          {text: 'Do not assume Level 1 just because you are a small shop. Company size has no bearing on the requirement: a ten-person shop machining a part from a marked drawing is handling CUI just like a thousand-person prime. A gap assessment against the full control set tells you where you actually stand before an assessor does.', links: [{phrase: 'small shop', to: '/manufacturing'}, {phrase: 'gap assessment', to: '/helm-command'}]},
         ],
       },
       {
@@ -297,7 +297,7 @@ export const articles: Article[] = [
       {
         h: 'Protect your own name too',
         ps: [
-          {text: 'The same scam runs in the other direction: someone spoofs your domain and sends a fake invoice or a fake banking change to your own customers. DMARC and proper email authentication make your domain much harder to fake, which protects your customers and your reputation at the same time.', links: [{phrase: 'DMARC and proper email authentication', to: '/helm-mail'}]},
+          {text: 'The same scam runs in the other direction: someone spoofs your domain and sends a fake invoice or a fake banking change to your own customers. DMARC and proper email authentication make your domain much harder to fake, which protects your customers and your reputation at the same time.', links: [{phrase: 'DMARC and proper email authentication', to: '/helm-core'}]},
           {text: 'A free scan of your domain checks whether the related public authentication records are published and how they are configured.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
@@ -336,7 +336,7 @@ export const articles: Article[] = [
         h: 'What a managed SOC actually buys you',
         ps: [
           'A managed detection and response service uses one security operations team to monitor many customers. That gives a smaller business round-the-clock coverage without hiring enough analysts to staff every shift itself.',
-          {text: 'Helm Watch provides 24/7 managed detection and response for covered devices, giving a smaller business access to human analysts without having to staff overnight and weekend shifts itself.', links: [{phrase: 'Helm Watch', to: '/helm-watch'}]},
+          {text: 'Helm Core provides 24/7 managed detection and response for covered devices, giving a smaller business access to human analysts without having to staff overnight and weekend shifts itself.', links: [{phrase: 'Helm Core', to: '/helm-core'}]},
           'Before signing with any provider, ask who investigates an alert and whether that team can isolate an infected machine or only send a notification. Also ask how and when your company will be contacted when the activity is real.',
           {text: 'A free scan of your domain can identify public email-security gaps worth discussing before you compare broader monitoring services.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
@@ -379,7 +379,7 @@ export const articles: Article[] = [
         ps: [
           'Keep an evidence folder, not just a memory of good intentions: training logs, backup-test records, MFA screenshots, dated and organized. When a claim is filed, this folder is what turns "we believe we were compliant" into proof.',
           {text: 'Carriers may check technical basics such as public email authentication. A free scan of your own domain reports how those public records are configured before a questionnaire or review.', links: [{phrase: 'free scan', to: '/free-scan'}]},
-          {text: 'Re-verify your answers at every renewal instead of rolling over last year\'s form, and remediate gaps at a fixed fee rather than letting them sit until the next application asks again.', links: [{phrase: 'remediate gaps at a fixed fee', to: '/helm-ready'}]},
+          {text: 'Re-verify your answers at every renewal instead of rolling over last year\'s form, and remediate gaps at a fixed fee rather than letting them sit until the next application asks again.', links: [{phrase: 'remediate gaps at a fixed fee', to: '/helm-command'}]},
         ],
       },
     ],
@@ -416,7 +416,7 @@ export const articles: Article[] = [
       {
         h: 'Protect your own name too',
         ps: [
-          {text: 'The same scam runs in the other direction: someone spoofs your company\'s domain and sends a fake invoice to one of your own customers. DMARC on your domain, set up correctly, is what stops your business name from being used to defraud the people who trust you.', links: [{phrase: 'DMARC on your domain', to: '/helm-mail'}]},
+          {text: 'The same scam runs in the other direction: someone spoofs your company\'s domain and sends a fake invoice to one of your own customers. DMARC on your domain, set up correctly, is what stops your business name from being used to defraud the people who trust you.', links: [{phrase: 'DMARC on your domain', to: '/helm-core'}]},
           {text: 'Lookalike domains are the other half of this: a supplier name spelled with a swapped letter or a different ending, close enough to pass a fast read on a phone screen. The free scan does not search for lookalike registrations, but it does report how your own public email authentication is configured.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
@@ -456,7 +456,7 @@ export const articles: Article[] = [
         h: 'Give employees a safe way to use it',
         ps: [
           'A short acceptable-use policy that says plainly what can and cannot go into a prompt closes most of the gap on its own, because most employees want to do the right thing once they know what it is.',
-          {text: 'Give employees a short list of approved tools so they have a practical alternative. A periodic audit can then show whether the tools used in daily work still match the policy.', links: [{phrase: 'periodic audit', to: '/helm-aware'}]},
+          {text: 'Give employees a short list of approved tools so they have a practical alternative. A periodic audit can then show whether the tools used in daily work still match the policy.', links: [{phrase: 'periodic audit', to: '/helm-command'}]},
         ],
       },
     ],
@@ -504,7 +504,7 @@ export const articles: Article[] = [
         ps: [
           'Better, more accurate answers generally translate into better premiums and more carrier options, because you are giving underwriters a clearer, more complete picture to price against rather than a vague one they have to price cautiously.',
           {text: 'None of this works on the night before renewal. Start weeks ahead so there is actually time to close a gap instead of just noting it, and treat the review as part of your ongoing professional services security program rather than a once-a-year scramble.', links: [{phrase: 'professional services security program', to: '/professional-services'}]},
-          {text: 'A readiness review checks the controls before the application is signed, leaving time to fix incomplete deployment or document an accurate answer.', links: [{phrase: 'readiness review', to: '/helm-ready'}]},
+          {text: 'A readiness review checks the controls before the application is signed, leaving time to fix incomplete deployment or document an accurate answer.', links: [{phrase: 'readiness review', to: '/helm-command'}]},
           {text: 'A free scan of your domain is a fast way to see where a few of those answers already stand.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
@@ -538,7 +538,7 @@ export const articles: Article[] = [
         ps: [
           'Any email provider that stores or transmits ePHI on your behalf needs a business associate agreement, a BAA, in place before that PHI ever touches their system.',
           'Free consumer email accounts do not offer a BAA. Google Workspace and Microsoft 365 business plans can support one, so patient information should stay in a properly configured business tenant rather than a personal account.',
-          {text: 'Helm Mail adds phishing and impersonation protection for compatible business tenants, but it does not include encrypted-message delivery or secure file transfer. Helm Ready can separately assess the practice\'s email and HIPAA safeguards before any remediation or secure-email solution is proposed.', links: [{phrase: 'Helm Mail', to: '/helm-mail'}, {phrase: 'Helm Ready', to: '/helm-ready'}]},
+          {text: 'Helm Core adds phishing and impersonation protection for compatible business tenants, but it does not include encrypted-message delivery or secure file transfer. Helm Command can separately assess the practice\'s email and HIPAA safeguards before any remediation or secure-email solution is proposed.', links: [{phrase: 'Helm Core', to: '/helm-core'}, {phrase: 'Helm Command', to: '/helm-command'}]},
         ],
       },
       {
@@ -547,7 +547,7 @@ export const articles: Article[] = [
           'A patient can ask to receive their own information by unencrypted email, and the practice may honor that request after warning them plainly of the risk. That exception applies to the patient\'s own records going to the patient, not to PHI moving between staff, referring providers, or billing.',
           'A message containing PHI that goes to the wrong recipient may trigger a breach analysis even when the mistake was accidental. Safeguards and staff training need to be in place before someone selects the wrong address, not added after the message is gone.',
           'A practical baseline includes business email under a signed BAA, MFA on every mailbox, an approved secure-delivery method when the workflow requires it, staff training, and no PHI sent through personal accounts.',
-          {text: 'A HIPAA gap assessment can show where a professional services practice meets that baseline and where the documented workflow or evidence is incomplete.', links: [{phrase: 'HIPAA gap assessment', to: '/helm-ready'}, {phrase: 'professional services practice', to: '/professional-services'}]},
+          {text: 'A HIPAA gap assessment can show where a professional services practice meets that baseline and where the documented workflow or evidence is incomplete.', links: [{phrase: 'HIPAA gap assessment', to: '/helm-command'}, {phrase: 'professional services practice', to: '/professional-services'}]},
         ],
       },
     ],
@@ -577,9 +577,9 @@ export const articles: Article[] = [
       {
         h: 'What still works',
         ps: [
-          {text: 'Technical controls do not care how fluent the email is. Domain authentication and DMARC, paired with filtering that inspects the message itself rather than trying to judge the writer\'s intent, catch what a careful reading no longer can.', links: [{phrase: 'Domain authentication and DMARC', to: '/helm-mail'}]},
+          {text: 'Technical controls do not care how fluent the email is. Domain authentication and DMARC, paired with filtering that inspects the message itself rather than trying to judge the writer\'s intent, catch what a careful reading no longer can.', links: [{phrase: 'Domain authentication and DMARC', to: '/helm-core'}]},
           {text: 'Check your own domain first: a free scan reports how your public email authentication is configured, which helps identify gaps worth fixing before an impersonation attempt.', links: [{phrase: 'free scan', to: '/free-scan'}]},
-          {text: 'Process controls hold up just as well. A callback protocol for any new or changed payment instruction, verified by phone to a known-good number, stops the fraud regardless of how convincing the email or the voice on the other end sounds.', links: [{phrase: 'callback protocol', to: '/helm-aware'}]},
+          {text: 'Process controls hold up just as well. A callback protocol for any new or changed payment instruction, verified by phone to a known-good number, stops the fraud regardless of how convincing the email or the voice on the other end sounds.', links: [{phrase: 'callback protocol', to: '/helm-command'}]},
         ],
       },
       {
@@ -613,7 +613,7 @@ export const articles: Article[] = [
           'First, confirm your level. Contractors handling Federal Contract Information may fall under Level 1 and its 15 basic safeguarding requirements. If the agreed scope processes, stores, or transmits Controlled Unclassified Information, Level 2 and the 110 Revision 2 requirements may apply. Confirm the information category and the clauses rather than deciding from company size.',
           'Second, locate your CUI. You cannot protect what you have not mapped. Walk every place technical data lives: file servers, email, CAD stations, the quoting inbox, that USB drive in the shop office.',
           'Third, calculate the SPRS score honestly when the assessment requirement applies. Keep the boundary, methodology, working papers, and evidence that reproduce the number. The Department of Justice has resolved False Claims Act allegations involving unsupported cybersecurity representations, including a case centered on a large mismatch between a submitted score and a later assessment.',
-          {text: 'Fourth, run a gap assessment against the applicable control set. The useful deliverable is a scored, evidence-linked list that separates what is implemented, what is not proven, and what still needs remediation.', links: [{phrase: 'gap assessment', to: '/helm-ready'}]},
+          {text: 'Fourth, run a gap assessment against the applicable control set. The useful deliverable is a scored, evidence-linked list that separates what is implemented, what is not proven, and what still needs remediation.', links: [{phrase: 'gap assessment', to: '/helm-command'}]},
         ],
       },
       {
@@ -658,7 +658,7 @@ export const articles: Article[] = [
         h: 'The device itself is the real exposure',
         ps: [
           'A lost or stolen phone or tablet that is logged into an email account with no screen lock is not a minor inconvenience, it is a full account takeover the moment it leaves someone\'s hands.',
-          'Microsoft 365 and Google Workspace business plans can include basic mobile device management features such as requiring a screen lock, encrypting the device, and remotely wiping a lost device. Those controls are part of your productivity tenant, not Helm Mail itself, and the available features depend on your license.',
+          'Microsoft 365 and Google Workspace business plans can include basic mobile device management features such as requiring a screen lock, encrypting the device, and remotely wiping a lost device. Those controls are part of your productivity tenant, not Helm Core itself, and the available features depend on your license.',
           {text: 'A shared job-site tablet signed straight into the owner\'s mailbox is a standing risk for any contractor, because everyone who touches that tablet effectively has the owner\'s access. Give it its own limited account instead of the owner\'s login.', links: [{phrase: 'any contractor', to: '/contractors'}]},
         ],
       },
@@ -716,7 +716,7 @@ export const articles: Article[] = [
       {
         h: 'Run it from a checklist, not from memory',
         ps: [
-          {text: 'Put these steps on one checklist with a named owner and a completion time. Ongoing security awareness training can reinforce why managers, IT, and payroll need to start the process together instead of assuming someone else handled it.', links: [{phrase: 'Ongoing security awareness training', to: '/helm-mail'}]},
+          {text: 'Put these steps on one checklist with a named owner and a completion time. Ongoing security awareness training can reinforce why managers, IT, and payroll need to start the process together instead of assuming someone else handled it.', links: [{phrase: 'Ongoing security awareness training', to: '/helm-core'}]},
           {text: 'A free scan of your domain is a good companion check while you are reviewing access controls, since it shows some of the same exposure an attacker, or a departing employee, would be looking for.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
@@ -757,7 +757,7 @@ export const articles: Article[] = [
         ps: [
           'Insurers may rely on the backup answers throughout the policy year. If the process was working at renewal but later stopped being tested or protected, the company may have trouble supporting its application when a claim is reviewed.',
           {text: 'Document quarterly restore tests: date, what was restored, how long it took, who verified it. That log is what turns "we believe our backups work" into proof at claim time. It is worth checking your email authentication with the same discipline; a free scan reports the public records a reviewer can query today.', links: [{phrase: 'free scan', to: '/free-scan'}]},
-          {text: 'If quarterly restore tests are not happening yet, building the schedule and the documentation around them is a fixed, contained piece of work, not an open-ended project.', links: [{phrase: 'fixed, contained piece of work', to: '/helm-ready'}]},
+          {text: 'If quarterly restore tests are not happening yet, building the schedule and the documentation around them is a fixed, contained piece of work, not an open-ended project.', links: [{phrase: 'fixed, contained piece of work', to: '/helm-command'}]},
         ],
       },
     ],
@@ -783,7 +783,7 @@ export const articles: Article[] = [
         ps: [
           'Carriers commonly ask about MFA, device detection, offline or immutable backups, restore tests, email filtering, security awareness training, incident response, and payment verification.',
           'Check whether each question applies to every relevant account, device, or employee. A control that covers only part of the business may require a qualified answer.',
-          {text: 'MFA is one of the controls carriers examine closely. If it is only partly deployed, identify the uncovered accounts and finish the rollout before answering “yes.”', links: [{phrase: 'MFA', to: '/helm-mail'}]},
+          {text: 'MFA is one of the controls carriers examine closely. If it is only partly deployed, identify the uncovered accounts and finish the rollout before answering “yes.”', links: [{phrase: 'MFA', to: '/helm-core'}]},
         ],
       },
       {
@@ -796,12 +796,12 @@ export const articles: Article[] = [
       {
         h: 'Turn the questionnaire into a roadmap',
         ps: [
-          {text: 'Treat every “no” or partial answer as a decision: fix the control before signing, describe the limitation accurately, or ask the broker how it affects coverage. A remediation pass can organize that work. Keep screenshots, training logs, and backup-test records together so the answer can be supported later.', links: [{phrase: 'remediation pass', to: '/helm-ready'}]},
+          {text: 'Treat every “no” or partial answer as a decision: fix the control before signing, describe the limitation accurately, or ask the broker how it affects coverage. A remediation pass can organize that work. Keep screenshots, training logs, and backup-test records together so the answer can be supported later.', links: [{phrase: 'remediation pass', to: '/helm-command'}]},
         ],
       },
     ],
     takeaway:
-      'Verify every answer before signing, fix or accurately disclose incomplete controls, and save the evidence in one place. Helm Ready can help assess and organize the gaps under a fixed scope.',
+      'Verify every answer before signing, fix or accurately disclose incomplete controls, and save the evidence in one place. Helm Command can help assess and organize the gaps under a fixed scope.',
   },
   {
     slug: 'ssp-poam-explained',
@@ -822,7 +822,7 @@ export const articles: Article[] = [
         ps: [
           'The System Security Plan, required by NIST SP 800-171 Revision 2 requirement 3.12.4, describes the system boundary, operating environment, how the security requirements are implemented, and the connections to other systems. It should name the real tools, roles, locations, and processes inside the assessed scope.',
           'The Plan of Action and Milestones, addressed by requirement 3.12.2, tracks security weaknesses or deficiencies, the work required to correct them, the responsible owner, resources, milestones, and completion dates. A POA&M with no owner, evidence target, or date is a list, not an operating plan.',
-          {text: 'Together they are the paper trail behind your gap assessment: the SSP shows where you stand today, and the POA&M shows the work still ahead, scored against the same 110 controls.', links: [{phrase: 'gap assessment', to: '/helm-ready'}]},
+          {text: 'Together they are the paper trail behind your gap assessment: the SSP shows where you stand today, and the POA&M shows the work still ahead, scored against the same 110 controls.', links: [{phrase: 'gap assessment', to: '/helm-command'}]},
         ],
       },
       {
@@ -843,7 +843,7 @@ export const articles: Article[] = [
         h: 'How the documents are used',
         ps: [
           'A current SSP lets the company explain its boundary and implementation consistently to leadership, primes, technical reviewers, and government assessors. A maintained POA&M lets the same group see what remains open, what evidence will close it, who owns it, and whether the expected completion date is still credible.',
-          {text: 'Use both documents during the gap assessment, not after it. Findings should update the SSP where the description is wrong and create or revise POA&M work where a requirement is not fully implemented.', links: [{phrase: 'gap assessment', to: '/helm-ready'}]},
+          {text: 'Use both documents during the gap assessment, not after it. Findings should update the SSP where the description is wrong and create or revise POA&M work where a requirement is not fully implemented.', links: [{phrase: 'gap assessment', to: '/helm-command'}]},
         ],
       },
     ],
@@ -880,14 +880,14 @@ export const articles: Article[] = [
       {
         h: 'The callback protocol',
         ps: [
-          {text: 'Pause any new or changed payment instruction. Call the known-good number already held in the file, not a number contained in the request. Ask the authorized person to confirm the beneficiary, financial institution, routing details, account information, and reason for the change. Then record the verifier, time, number used, result, and approver before releasing the payment.', links: [{phrase: 'payment instruction', to: '/helm-aware'}]},
+          {text: 'Pause any new or changed payment instruction. Call the known-good number already held in the file, not a number contained in the request. Ask the authorized person to confirm the beneficiary, financial institution, routing details, account information, and reason for the change. Then record the verifier, time, number used, result, and approver before releasing the payment.', links: [{phrase: 'payment instruction', to: '/helm-command'}]},
           'Test the procedure with an authorized simulation and include the awkward cases: a partner asks to skip the rule, the usual contact is unavailable, or the change arrives minutes before a cutoff. The drill should test whether the process survives pressure, not whether one person can spot a fake email.',
         ],
       },
       {
         h: 'What email controls can and cannot do',
         ps: [
-          {text: 'SPF, DKIM, and DMARC can make unauthorized use of the firm\'s exact domain harder. Managed filtering, threat protection, reporting, and triage can reduce the malicious messages that reach staff. Neither control can make a payment change trustworthy, and neither stops every request sent from a compromised real account or a convincing lookalike domain.', links: [{phrase: 'Managed filtering', to: '/helm-mail'}]},
+          {text: 'SPF, DKIM, and DMARC can make unauthorized use of the firm\'s exact domain harder. Managed filtering, threat protection, reporting, and triage can reduce the malicious messages that reach staff. Neither control can make a payment change trustworthy, and neither stops every request sent from a compromised real account or a convincing lookalike domain.', links: [{phrase: 'Managed filtering', to: '/helm-core'}]},
           'Use technical controls to reduce exposure and the callback to authorize the money. Keeping those jobs separate prevents the firm from treating an email-security pass as approval of a financial instruction.',
         ],
       },
@@ -939,9 +939,9 @@ export const articles: Article[] = [
       {
         h: 'This training is part of the program, not an extra',
         ps: [
-          {text: 'NIST 800-171 compliance includes awareness and training requirements. A shop can configure technical controls and still leave a requirement unsupported if the employees handling controlled drawings were never taught the applicable rules.', links: [{phrase: 'NIST 800-171 compliance', to: '/helm-ready'}]},
-          {text: 'A readiness assessment for manufacturing and defense shops can review the technical controls and the floor-level training against the same agreed scope.', links: [{phrase: 'manufacturing and defense shops', to: '/manufacturing'}, {phrase: 'readiness assessment', to: '/helm-ready'}]},
-          {text: 'Use training that reflects the drawings, workstations, removable media, and reporting path employees actually encounter. Ongoing security awareness training can reinforce those decisions without relying on a generic annual slide deck.', links: [{phrase: 'Ongoing security awareness training', to: '/helm-mail'}]},
+          {text: 'NIST 800-171 compliance includes awareness and training requirements. A shop can configure technical controls and still leave a requirement unsupported if the employees handling controlled drawings were never taught the applicable rules.', links: [{phrase: 'NIST 800-171 compliance', to: '/helm-command'}]},
+          {text: 'A readiness assessment for manufacturing and defense shops can review the technical controls and the floor-level training against the same agreed scope.', links: [{phrase: 'manufacturing and defense shops', to: '/manufacturing'}, {phrase: 'readiness assessment', to: '/helm-command'}]},
+          {text: 'Use training that reflects the drawings, workstations, removable media, and reporting path employees actually encounter. Ongoing security awareness training can reinforce those decisions without relying on a generic annual slide deck.', links: [{phrase: 'Ongoing security awareness training', to: '/helm-core'}]},
         ],
       },
     ],
@@ -979,7 +979,7 @@ export const articles: Article[] = [
         h: 'Which one to buy first',
         ps: [
           'Most small and medium-sized businesses get more value out of fixing what a scan already shows, MFA gaps, missing patches, weak email authentication, before paying for a scoped penetration test on top of it. Insurers and compliance frameworks frequently only require a scan in the first place.',
-          {text: 'The free scan is an automated external check of your public domain. If it identifies basic gaps, address those before paying for deeper testing. A readiness engagement can help organize that cleanup and determine whether a penetration test is the next useful step.', links: [{phrase: 'free scan', to: '/free-scan'}, {phrase: 'readiness engagement', to: '/helm-ready'}]},
+          {text: 'The free scan is an automated external check of your public domain. If it identifies basic gaps, address those before paying for deeper testing. A readiness engagement can help organize that cleanup and determine whether a penetration test is the next useful step.', links: [{phrase: 'free scan', to: '/free-scan'}, {phrase: 'readiness engagement', to: '/helm-command'}]},
         ],
       },
     ],
@@ -1009,7 +1009,7 @@ export const articles: Article[] = [
       {
         h: 'Why it matters to your business specifically',
         ps: [
-          {text: 'A criminal can use spoofed email to send a fake invoice that appears to come from your company. If a customer pays it, your team may have to help untangle the fraud even though the message was not sent from your mailbox. Enforced DMARC can make unauthorized use of the exact domain harder and can support delivery of legitimate mail.', links: [{phrase: 'Enforced DMARC', to: '/helm-mail'}]},
+          {text: 'A criminal can use spoofed email to send a fake invoice that appears to come from your company. If a customer pays it, your team may have to help untangle the fraud even though the message was not sent from your mailbox. Enforced DMARC can make unauthorized use of the exact domain harder and can support delivery of legitimate mail.', links: [{phrase: 'Enforced DMARC', to: '/helm-core'}]},
           'Getting to enforcement takes care: flip to p=reject carelessly and you can block your own invoices sent through QuickBooks or your marketing platform. The path is: inventory every service that sends as your domain, authorize each one in SPF/DKIM, watch the reports, then enforce.',
         ],
       },
@@ -1051,7 +1051,7 @@ export const articles: Article[] = [
         ps: [
           'A fifty-page incident response binder is a document nobody reads twice, usually written once for an insurance application and never opened again. In an actual incident, nobody has time to find the right page.',
           'A one-page plan should list the carrier number, reporting deadline, decision owner, and the first actions employees must avoid. That is enough to guide the opening call while the fuller response plan covers the work that follows.',
-          {text: 'A readiness workshop can help build and rehearse both pieces before an incident.', links: [{phrase: 'readiness workshop', to: '/helm-ready'}]},
+          {text: 'A readiness workshop can help build and rehearse both pieces before an incident.', links: [{phrase: 'readiness workshop', to: '/helm-command'}]},
           {text: 'A free scan completed ahead of time also records the public email-authentication signals the response team may need if a mailbox or impersonation attempt is involved.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
@@ -1083,12 +1083,12 @@ export const articles: Article[] = [
         h: 'Do not make employees judge whether a voice is real',
         ps: [
           '"Listen for robotic artifacts" was 2023 advice. Current voice synthesis passes casual inspection, and video is close behind. Any defense that depends on a stressed employee out-detecting a synthetic voice in real time will eventually fail.',
-          {text: 'The controls that work are procedural, because procedure does not care how good the fake is. One: a payment-verification protocol, meaning every new or changed payment instruction gets a callback to a known-good number, no exceptions, including "the CEO" personally. Two: an authorized simulation, testing the process against a realistic impersonation request and coaching on any gap. Helm Aware installs the protocol and trains the team; targeted drills are separately scoped.', links: [{phrase: 'payment-verification protocol', to: '/helm-aware'}, {phrase: 'Helm Aware', to: '/helm-aware'}]},
+          {text: 'The controls that work are procedural, because procedure does not care how good the fake is. One: a payment-verification protocol, meaning every new or changed payment instruction gets a callback to a known-good number, no exceptions, including "the CEO" personally. Two: an authorized simulation, testing the process against a realistic impersonation request and coaching on any gap. Helm Command installs the protocol and trains the team; targeted drills are separately scoped.', links: [{phrase: 'payment-verification protocol', to: '/helm-command'}, {phrase: 'Helm Command', to: '/helm-command'}]},
         ],
       },
     ],
     takeaway:
-      'Require a callback to a known number and a second approval for high-consequence payment changes, even when the request sounds like the owner. Helm Aware can help write and rehearse that process.',
+      'Require a callback to a known number and a second approval for high-consequence payment changes, even when the request sounds like the owner. Helm Command can help write and rehearse that process.',
   },
   {
     slug: 'law-firm-device-security-checklist',
@@ -1120,21 +1120,21 @@ export const articles: Article[] = [
         h: 'Apply a baseline that can be checked',
         ps: [
           'Require a screen lock, full-disk encryption, supported operating systems, automatic security updates, separate administrator access, multi-factor authentication, and a managed security service that can investigate suspicious behavior. CISA ransomware guidance recommends centrally managed protection and detection-and-response coverage across organizational assets.',
-          {text: 'Helm Watch provides round-the-clock monitoring, human investigation, and containment for covered Windows and Mac devices. That does not replace patching, backups, identity controls, or a written incident plan, but it closes the gap between an alert appearing and someone qualified acting on it.', links: [{phrase: 'Helm Watch', to: '/helm-watch'}]},
+          {text: 'Helm Core provides round-the-clock monitoring, human investigation, and containment for covered Windows and Mac devices. That does not replace patching, backups, identity controls, or a written incident plan, but it closes the gap between an alert appearing and someone qualified acting on it.', links: [{phrase: 'Helm Core', to: '/helm-core'}]},
         ],
       },
       {
         h: 'Write the lost-device procedure before a laptop disappears',
         ps: [
           'The procedure should name one person to call, how to disable the user account and revoke active sessions, how to determine what client information may have been accessible, and when counsel, the insurer, affected clients, or other parties must be consulted. Preserve facts and timestamps instead of guessing whether exposure occurred.',
-          'Phones and tablets need their own identity, email, and device-management controls. Standard Helm Watch coverage does not install the same security agent on iOS or Android, so a complete firm plan must address those devices separately.',
+          'Phones and tablets need their own identity, email, and device-management controls. Standard Helm Core coverage does not install the same security agent on iOS or Android, so a complete firm plan must address those devices separately.',
         ],
       },
       {
         h: 'Keep evidence that the checklist is operating',
         ps: [
           'A policy alone cannot show that a device was encrypted, monitored, or updated. Keep a current inventory, deployment status, encryption status, update records, incident contacts, and evidence that departed users were removed. Review exceptions instead of allowing them to become permanent.',
-          {text: 'If a client or carrier asks whether every device is protected, the defensible answer is the current inventory plus the evidence behind it. Helm Ready can help turn those questions into a documented gap list and an owned remediation plan.', links: [{phrase: 'Helm Ready', to: '/helm-ready'}]},
+          {text: 'If a client or carrier asks whether every device is protected, the defensible answer is the current inventory plus the evidence behind it. Helm Command can help turn those questions into a documented gap list and an owned remediation plan.', links: [{phrase: 'Helm Command', to: '/helm-command'}]},
         ],
       },
     ],
@@ -1172,7 +1172,7 @@ export const articles: Article[] = [
         h: 'Assess risk and match each safeguard to it',
         ps: [
           'For each system or workflow, identify the plausible threat, the weakness that could be exploited, the current safeguard, and what remains unresolved. Common examples include mailbox takeover, malicious attachments, stolen passwords, unsupported computers, excessive access, untested backups, and former workers whose accounts remain active.',
-          {text: 'Helm Mail addresses managed email filtering, phishing protection, suspicious-message triage, simulations, and awareness learning. Helm Watch provides 24/7 investigation and containment for covered Windows and Mac devices. Neither service replaces the WISP, but the controls and operating records can support what the plan says.', links: [{phrase: 'Helm Mail', to: '/helm-mail'}, {phrase: 'Helm Watch', to: '/helm-watch'}]},
+          {text: 'Helm Core addresses managed email filtering, phishing protection, suspicious-message triage, simulations, and awareness learning. Helm Core provides 24/7 investigation and containment for covered Windows and Mac devices. Neither service replaces the WISP, but the controls and operating records can support what the plan says.', links: [{phrase: 'Helm Core', to: '/helm-core'}, {phrase: 'Helm Core', to: '/helm-core'}]},
         ],
       },
       {
@@ -1186,7 +1186,7 @@ export const articles: Article[] = [
         h: 'Keep the WISP evergreen',
         ps: [
           'Review the plan after meaningful technology, staffing, vendor, or workflow changes and after any security incident. Record the review date and decisions made, including risks accepted temporarily and the person responsible for closing each gap.',
-          {text: 'Helm Ready can assess the plan against the practice that exists today, identify statements that lack evidence, and produce a prioritized remediation roadmap. Remediation is a separate decision after the gaps are known.', links: [{phrase: 'Helm Ready', to: '/helm-ready'}]},
+          {text: 'Helm Command can assess the plan against the practice that exists today, identify statements that lack evidence, and produce a prioritized remediation roadmap. Remediation is a separate decision after the gaps are known.', links: [{phrase: 'Helm Command', to: '/helm-command'}]},
         ],
       },
     ],
@@ -1223,8 +1223,8 @@ export const articles: Article[] = [
       {
         h: 'Treat email and work devices as different control layers',
         ps: [
-          {text: 'Helm Mail can protect compatible business email from phishing and impersonation while providing employee reporting, triage, simulations, and awareness learning. It does not include a secure-message portal, encrypted outbound delivery, or secure file transfer, so any workflow that sends patient information may require a separately scoped secure delivery solution.', links: [{phrase: 'Helm Mail', to: '/helm-mail'}]},
-          {text: 'Helm Watch provides 24/7 monitoring, investigation, and containment for covered Windows and Mac workstations. It does not cover every technology in a practice. Phones, tablets, servers, medical devices, identity systems, networks, and vendor platforms must be addressed elsewhere in the risk analysis and separately scoped where protection is needed.', links: [{phrase: 'Helm Watch', to: '/helm-watch'}]},
+          {text: 'Helm Core can protect compatible business email from phishing and impersonation while providing employee reporting, triage, simulations, and awareness learning. It does not include a secure-message portal, encrypted outbound delivery, or secure file transfer, so any workflow that sends patient information may require a separately scoped secure delivery solution.', links: [{phrase: 'Helm Core', to: '/helm-core'}]},
+          {text: 'Helm Core provides 24/7 monitoring, investigation, and containment for covered Windows and Mac workstations. It does not cover every technology in a practice. Phones, tablets, servers, medical devices, identity systems, networks, and vendor platforms must be addressed elsewhere in the risk analysis and separately scoped where protection is needed.', links: [{phrase: 'Helm Core', to: '/helm-core'}]},
         ],
       },
       {
@@ -1238,7 +1238,7 @@ export const articles: Article[] = [
         h: 'Revisit the analysis when the practice changes',
         ps: [
           'HHS describes risk analysis as an ongoing process. Review it when the practice changes an EHR or billing vendor, opens a location, adopts telehealth, adds remote work, changes email systems, brings in a new device class, or experiences an incident. Keep the previous analysis and document what changed.',
-          {text: 'Helm Ready provides a fixed-fee HIPAA Security Rule gap assessment for an agreed scope, with documented findings and a prioritized roadmap. It supports readiness and remediation planning, but Helm does not certify that a practice is HIPAA compliant.', links: [{phrase: 'Helm Ready', to: '/helm-ready'}]},
+          {text: 'Helm Command provides a fixed-fee HIPAA Security Rule gap assessment for an agreed scope, with documented findings and a prioritized roadmap. It supports readiness and remediation planning, but Helm does not certify that a practice is HIPAA compliant.', links: [{phrase: 'Helm Command', to: '/helm-command'}]},
         ],
       },
     ],

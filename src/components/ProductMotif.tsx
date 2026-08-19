@@ -1,9 +1,22 @@
-export type MotifKind = 'command' | 'mail' | 'aware' | 'ready' | 'watch' | 'lane-mfg' | 'lane-pro' | 'lane-con';
+export type MotifKind = 'core' | 'command' | 'mail' | 'aware' | 'ready' | 'watch' | 'lane-mfg' | 'lane-pro' | 'lane-con';
 
 /** Static line-art motifs for product tiles: quiet, legible, and theme-aware. */
 export default function ProductMotif({kind}: {kind: MotifKind}) {
   return (
     <div className="tile-motif" aria-hidden>
+      {kind === 'core' && (
+        <svg viewBox="0 0 200 96" fill="none">
+          <circle cx="100" cy="48" r="30" stroke="var(--motif-line)" strokeWidth="1.6" />
+          <circle cx="100" cy="48" r="18" stroke="var(--motif-muted-accent)" strokeWidth="1.4" />
+          <circle cx="100" cy="48" r="6" fill="var(--motif-accent)" />
+          <g fill="var(--motif-surface)" stroke="var(--motif-line)" strokeWidth="1.4">
+            <circle cx="100" cy="13" r="5" />
+            <circle cx="135" cy="48" r="5" />
+            <circle cx="100" cy="83" r="5" />
+            <circle cx="65" cy="48" r="5" />
+          </g>
+        </svg>
+      )}
       {kind === 'command' && (
         <svg viewBox="0 0 200 96" fill="none">
           <circle cx="100" cy="48" r="31" stroke="var(--motif-line)" strokeWidth="1.6" />

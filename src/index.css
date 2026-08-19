@@ -2313,10 +2313,11 @@ html[data-theme='light'] .legal-beam {
 .steps-flow {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(48px, 8vw, 112px);
+  max-width: 960px;
   position: relative;
 }
 
@@ -2324,8 +2325,8 @@ html[data-theme='light'] .legal-beam {
   content: '';
   position: absolute;
   top: 24px;
-  left: 8%;
-  right: 8%;
+  left: 25%;
+  right: 25%;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(56, 161, 105, 0.45), transparent);
 }
@@ -3907,12 +3908,19 @@ a.nav-cta-mobile.action-link:hover {
   color: inherit;
 }
 
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 24px;
+}
+
 @media (max-width: 760px) {
   .site-nav .nav-brand,
   .site-footer .footer-brand,
   .site-footer .footer-contact a,
   .site-footer .footer-col a,
-  .site-footer .footer-bottom a,
+  .site-footer .footer-social a,
   .site-footer .footer-privacy-button {
     min-height: 44px;
     display: inline-flex;
@@ -4422,6 +4430,10 @@ a.nav-cta-mobile.action-link:hover {
 
   .footer-bottom {
     display: grid;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
   }
 }
 

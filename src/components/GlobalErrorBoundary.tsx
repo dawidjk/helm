@@ -21,11 +21,8 @@ const VALID_PAGES = [
   {path: '/trust/', label: 'Trust & Security'},
   {path: '/contact/', label: 'Contact'},
   {path: '/resources/', label: 'Resources'},
+  {path: '/helm-core/', label: 'Helm Core'},
   {path: '/helm-command/', label: 'Helm Command'},
-  {path: '/helm-mail/', label: 'Helm Mail'},
-  {path: '/helm-aware/', label: 'Helm Aware'},
-  {path: '/helm-ready/', label: 'Helm Ready'},
-  {path: '/helm-watch/', label: 'Helm Watch'},
 ];
 
 export default function GlobalErrorBoundary() {

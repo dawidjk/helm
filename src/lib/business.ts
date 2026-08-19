@@ -4,6 +4,8 @@ export const businessPhone = {
 };
 
 export const linkedInUrl = 'https://www.linkedin.com/company/helm-secured/';
+export const facebookUrl = 'https://www.facebook.com/profile.php?id=61592718124707';
+export const instagramUrl = 'https://www.instagram.com/helm.security';
 
 export const serviceAreaText =
   'Monmouth, Ocean, and Middlesex counties, New Jersey';

@@ -151,34 +151,35 @@ function getTier(score: number): Tier {
 
 /**
  * Recommendation copy is a deliberate departure from the source HTML: it
- * points to current Helm products (with real internal links) instead of the
- * old workshop/product names.
+ * points to the current two-offer model with real internal links.
  */
 function Recommendation({tier}: {tier: TierKey}) {
   if (tier === 'risk') {
     return (
       <p className="quiz-recommendation-text">
-        Start with the <Link to="/helm-aware/">Helm Aware workshop</Link>: deepfake awareness, a
-        payment-verification protocol your team can use immediately, and a written AI
-        acceptable-use policy, all in one engagement.
+        Start with <Link to="/helm-core/">Helm Core</Link>. It combines the
+        technical protection with ongoing awareness learning. If the process
+        gaps require hands-on policy and leadership work, Helm Command adds the
+        managed roadmap and operating cadence.
       </p>
     );
   }
   if (tier === 'exposed') {
     return (
       <p className="quiz-recommendation-text">
-        If you use a compatible Microsoft 365 or Google Workspace environment, <Link to="/helm-mail/">Helm Mail</Link> adds
-        managed phishing and impersonation protection, suspicious-message triage, simulations, and awareness learning. Pair it with{' '}
-        <Link to="/helm-aware/">Helm Aware</Link> for a focused workshop on modern scams, safe AI use,
-        and payment verification.
+        <Link to="/helm-core/">Helm Core</Link> combines managed email,
+        device, identity, backup, awareness, and digital risk protection. Use{' '}
+        <Link to="/helm-command/">Helm Command</Link> when leadership also
+        needs Helm to maintain the policies, evidence, and remediation roadmap.
       </p>
     );
   }
   return (
     <p className="quiz-recommendation-text">
-      <Link to="/helm-ready/">Helm Ready</Link> documents your existing controls, gaps, and prioritized
-      action plan for insurers, auditors, or CMMC purposes. Any remediation is quoted separately
-      after the assessment.
+      <Link to="/helm-command/">Helm Command</Link> keeps existing controls,
+      evidence, gaps, and the prioritized roadmap current for insurers,
+      customers, and assessors. Your organization still reviews and owns every
+      final attestation.
     </p>
   );
 }

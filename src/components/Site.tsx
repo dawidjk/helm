@@ -4,7 +4,13 @@ import LeadForm, {PORTAL_URL} from './LeadForm';
 import ThemePicker from './ThemePicker';
 import {canonicalPath} from '../lib/urls';
 import {isRemarketingConfigured, openPrivacyChoices} from '../lib/adTracking';
-import {businessPhone, linkedInUrl, serviceAreaText} from '../lib/business';
+import {
+  businessPhone,
+  facebookUrl,
+  instagramUrl,
+  linkedInUrl,
+  serviceAreaText,
+} from '../lib/business';
 import './SiteNav.css';
 
 export function HelmMark({size = 28}: {size?: number}) {
@@ -86,11 +92,8 @@ const lanes = [
 ];
 
 const services = [
-  {to: '/helm-mail', label: 'Helm Mail', clue: 'Managed email protection'},
-  {to: '/helm-watch', label: 'Helm Watch', clue: '24/7 device monitoring'},
+  {to: '/helm-core', label: 'Helm Core', clue: 'Complete managed protection'},
   {to: '/helm-command', label: 'Helm Command', clue: 'Security program ownership'},
-  {to: '/helm-aware', label: 'Helm Aware', clue: 'Training and scam readiness'},
-  {to: '/helm-ready', label: 'Helm Ready', clue: 'Insurance and compliance'},
 ];
 
 function keepDesktopMenusExclusive(event: SyntheticEvent<HTMLDetailsElement>) {
@@ -109,11 +112,8 @@ const footerCols = [
   {
     title: 'Products',
     links: [
+      {to: '/helm-core', label: 'Helm Core'},
       {to: '/helm-command', label: 'Helm Command'},
-      {to: '/helm-mail', label: 'Helm Mail'},
-      {to: '/helm-aware', label: 'Helm Aware'},
-      {to: '/helm-ready', label: 'Helm Ready'},
-      {to: '/helm-watch', label: 'Helm Watch'},
       {to: '/pricing', label: 'Pricing'},
     ],
   },
@@ -530,7 +530,11 @@ export function SiteFooter() {
         </nav>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Helm Security LLC · New Jersey</span>
-          <a href={linkedInUrl} aria-label="Helm Security on LinkedIn">LinkedIn</a>
+          <div className="footer-social" aria-label="Helm Security social media">
+            <a href={linkedInUrl} aria-label="Helm Security on LinkedIn">LinkedIn</a>
+            <a href={facebookUrl} aria-label="Helm Security on Facebook">Facebook</a>
+            <a href={instagramUrl} aria-label="Helm Security on Instagram">Instagram</a>
+          </div>
         </div>
       </div>
     </footer>

@@ -40,7 +40,6 @@ export type Lane = {
   }[];
   planTitle: string;
   planSub: string;
-  steps: {num: string; title: string; body: string}[];
   proof: {title: string; points: string[]};
   commonQuestions?: {
     question: string;
@@ -114,7 +113,7 @@ export default function LanePage({lane}: {lane: Lane}) {
             )}
           </div>
           <div className="hero-note reveal d3">
-            See <Link to="/pricing/">published pricing</Link> for Helm Mail, Aware, Ready, and Watch
+            See <Link to="/pricing/">published pricing</Link> for Helm Core and Helm Command
           </div>
         </div>
         <ScrollCue />
@@ -179,11 +178,22 @@ export default function LanePage({lane}: {lane: Lane}) {
           <p className="observe d1">{lane.planSub}</p>
         </div>
         <ol className="steps-flow">
-          {lane.steps.map((s, i) => (
-            <li key={s.num} className={`observe d${Math.min(i + 1, 5)}`}>
-              <div className="step-dot">{s.num}</div>
-              <h3>{s.title}</h3>
-              <p>{s.body}</p>
+          {[
+            {
+              num: '1',
+              title: 'Helm Core',
+              body: 'Complete email, device, identity, backup, awareness, and digital risk protection managed as one standardized service, with a clear monthly report.',
+            },
+            {
+              num: '2',
+              title: 'Helm Command',
+              body: 'Everything in Core, plus a maintained risk register, 12-month roadmap, evidence, questionnaire response, quarterly leadership reviews, and coordination with the current IT provider.',
+            },
+          ].map((step, index) => (
+            <li key={step.num} className={`observe d${index + 1}`}>
+              <div className="step-dot">{step.num}</div>
+              <h3>{step.title}</h3>
+              <p>{step.body}</p>
             </li>
           ))}
         </ol>

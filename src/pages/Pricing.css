@@ -129,7 +129,7 @@
   scroll-margin-top: 96px;
 }
 
-.pricing-product-grid .pricing-flagship {
+.pricing-product-grid .pricing-full-width {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
@@ -142,16 +142,16 @@
   align-items: start;
 }
 
-.pricing-flagship .tile-motif { grid-area: motif; }
-.pricing-flagship .product-tile-title { grid-area: title; }
-.pricing-flagship > p:first-of-type { grid-area: fit; }
-.pricing-flagship > .price-row { grid-area: price; }
-.pricing-flagship > .price-row + p { grid-area: detail; }
-.pricing-flagship > .pricing-feature-list { grid-area: features; }
-.pricing-flagship > .tile-link { grid-area: link; }
+.pricing-full-width .tile-motif { grid-area: motif; }
+.pricing-full-width .product-tile-title { grid-area: title; }
+.pricing-full-width > p:first-of-type { grid-area: fit; }
+.pricing-full-width > .price-row { grid-area: price; }
+.pricing-full-width > .price-row + p { grid-area: detail; }
+.pricing-full-width > .pricing-feature-list { grid-area: features; }
+.pricing-full-width > .tile-link { grid-area: link; }
 
 @media (max-width: 900px) {
-  .pricing-product-grid .pricing-flagship {
+  .pricing-product-grid .pricing-full-width {
     grid-column: auto;
     display: flex;
   }

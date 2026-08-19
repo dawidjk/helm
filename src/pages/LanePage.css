@@ -101,7 +101,7 @@
 
 .lane-evidence-row {
   display: grid;
-  grid-template-columns: minmax(120px, 0.3fr) minmax(0, 1.35fr) minmax(160px, 0.55fr);
+  grid-template-columns: minmax(260px, 0.65fr) minmax(0, 1.35fr) minmax(170px, 0.55fr);
   gap: clamp(20px, 4vw, 48px);
   align-items: baseline;
   padding: 28px 4px;
@@ -109,12 +109,14 @@
 }
 
 .lane-evidence-value {
+  min-width: 0;
   color: var(--helm-text-strong);
   font-family: 'Tenor Sans', 'Helvetica Neue', sans-serif;
-  font-size: clamp(30px, 4vw, 48px);
+  font-size: clamp(30px, 3.4vw, 44px);
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.08;
   letter-spacing: -0.025em;
+  text-wrap: balance;
 }
 
 .lane-evidence-row p {
@@ -187,7 +189,7 @@
   }
 
   .lane-evidence-row {
-    grid-template-columns: minmax(96px, 0.3fr) minmax(0, 1fr);
+    grid-template-columns: minmax(190px, 0.55fr) minmax(0, 1fr);
   }
 
   .lane-evidence-row a {

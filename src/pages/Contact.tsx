@@ -101,7 +101,7 @@ export default function Contact() {
     <>
       <Meta
         title="Contact Helm: Talk to an Executive"
-        desc="Contact Helm about email security, AI scam defense, or compliance readiness in Monmouth, Ocean, and Middlesex counties, New Jersey."
+        desc="Contact Helm about complete managed security through Helm Core or hands-on security program ownership through Helm Command."
         path="/contact"
       />
       <header className="hero lane brand-hero">
