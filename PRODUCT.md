@@ -20,14 +20,14 @@ Helm combines executive-led delivery with established security platforms, publis
 
 ## Operating Context
 
-Visitors commonly arrive while responding to email fraud, insurance questionnaires, CMMC or HIPAA readiness demands, suspicious payment changes, or the need for endpoint monitoring and security-awareness training. They evaluate Helm through service pages, industry pages, pricing, practical resources, the Trust page, and the free scan.
+Visitors commonly arrive while responding to email fraud, insurance questionnaires, CMMC or HIPAA readiness demands, suspicious payment changes, or the need for device monitoring and security-awareness training. They evaluate Helm through service pages, industry pages, pricing, practical resources, the Trust page, and the free scan.
 
 ## Capabilities and Constraints
 
-- Helm Mail provides managed email security for compatible Microsoft 365 and Google Workspace environments at $25 per user per month with a $300 monthly account minimum. Microsoft 365 and Google Workspace use different MailProtector deployment paths.
-- Helm Aware provides managed security-awareness learning at $10 per active learner per month with no customer account minimum and month-to-month service, plus fixed-fee AI scam readiness workshops.
+- Helm Mail provides layered mail-flow filtering, email-threat protection, employee reporting and triage, phishing simulations, and awareness learning for compatible Microsoft 365 and Google Workspace environments at $50 per protected user per month with a $1,000 monthly account minimum and 12-month initial term. MailProtector supplies the filtering layer and Doppel supplies the white-label social-engineering and human-risk layer. Both are disclosed on the Trust and Privacy pages rather than used as customer-facing product branding. Helm Mail does not include Bracket encrypted-message delivery, a secure-message portal, secure file transfer, or SecureStore archiving unless separately quoted in writing.
+- Helm Aware is a fixed-fee AI scam readiness workshop priced from $2,500 to $4,000. Ongoing simulations and awareness learning are included in Helm Mail rather than sold as a separate Helm Aware subscription.
 - Helm Ready provides fixed-fee cyber-insurance, HIPAA, and CMMC readiness work.
-- Helm Watch provides Huntress-backed managed endpoint detection and response at $40 per covered user per month with a $200 monthly account minimum. Each covered user includes up to two eligible Windows or Mac workstations; servers and other device classes are separately scoped.
+- Helm Watch provides managed device detection and response at $40 per covered user per month with a $200 monthly account minimum. Each covered user includes up to two eligible Windows or Mac workstations; servers and other device classes are separately scoped. Huntress is the underlying platform and is disclosed on the Trust and Privacy pages rather than used on the customer-facing Helm Watch product page. Its technical term for the service is managed EDR. It does not protect iOS or Android devices, so phones and tablets require separate identity, email, and device-management controls.
 - Helm Command provides managed security-program ownership, risk and roadmap maintenance, evidence readiness, leadership reviews, tabletop facilitation, and incumbent IT coordination. Qualified design-partner conversations are open, but public pricing and paid delivery remain gated.
 - The free scan checks public email-domain and related public configuration signals without credentials or access to internal systems.
 - Existing service definitions, published prices, scope statements, legal claims, routes, and conversion behavior are product truth and must remain unchanged across design variants.

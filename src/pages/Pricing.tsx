@@ -8,8 +8,8 @@ import {productList} from './products';
 import './Pricing.css';
 
 /**
- * Command leads as the flagship. The four standardized offers retain their
- * 2x2 scan order beneath it.
+ * Command leads as the flagship. Standardized offers retain a stable scan
+ * order beneath it.
  */
 const tileOrder = ['helm-command', 'helm-mail', 'helm-watch', 'helm-ready', 'helm-aware'];
 const tileRank = (slug: string) => {
@@ -38,26 +38,12 @@ type PricingLedgerRow = {
  * in the product catalog and FAQs; the ledger introduces no new terms.
  */
 const pricingLedger: PricingLedgerRow[] = pricingTiles.flatMap((product) => {
-  if (product.slug === 'helm-aware' && product.pricingOptions) {
-    return product.pricingOptions.map((option) => ({
-      offer: option.name,
-      slug: product.slug,
-      bestFor: option.name === 'Helm Aware Managed'
-        ? 'Teams that need managed monthly learning and phishing'
-        : 'Teams that need an AI scam readiness workshop',
-      price: displayPrice(option.price),
-      commitment: option.term,
-      minimum: option.name === 'Helm Aware Managed'
-        ? 'No account minimum'
-        : '$2,500 project fee',
-    }));
-  }
-
   const minimumBySlug: Record<string, string> = {
     'helm-command': 'Qualified fit required',
-    'helm-mail': '$300 / month account',
+    'helm-mail': '$1,000 / month account',
     'helm-watch': '$200 / month account',
     'helm-ready': '$2,500 project fee',
+    'helm-aware': '$2,500 project fee',
   };
 
   return [{
@@ -75,7 +61,7 @@ export default function Pricing() {
     <>
       <Meta
         title="Pricing: Clear Scope, No Surprises | Helm"
-        desc="Fit-priced security program leadership through Helm Command, plus published pricing for email security, awareness, compliance readiness, and endpoint monitoring."
+        desc="Fit-priced security program leadership through Helm Command, plus published pricing for email security, awareness, compliance readiness, and device monitoring."
         path="/pricing"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -200,9 +186,9 @@ export default function Pricing() {
         </div>
         <div className="price-math">
           <article className="price-math-tile observe">
-            <div className="price-math-eq">12 people × $25</div>
-            <div className="price-math-result">$300 / month</div>
-            <p>Helm Mail's minimum monthly charge, equal to 12 users at the published unit price.</p>
+            <div className="price-math-eq">20 people × $50</div>
+            <div className="price-math-result">$1,000 / month</div>
+            <p>Helm Mail's minimum monthly charge, including email protection, reporting and triage, simulations, and awareness learning.</p>
           </article>
           <article className="price-math-tile observe d1">
             <div className="price-math-eq">5 people × $40</div>
@@ -210,22 +196,22 @@ export default function Pricing() {
             <p>Helm Watch for five covered users and up to ten eligible workstations.</p>
           </article>
           <article className="price-math-tile observe d2">
-            <div className="price-math-eq">Active learners × $10</div>
-            <div className="price-math-result">No minimum</div>
-            <p>Helm Aware Managed, billed monthly for the learners you actually have.</p>
+            <div className="price-math-eq">One scoped workshop</div>
+            <div className="price-math-result">$2,500 to $4,000</div>
+            <p>Helm Aware is a fixed-fee engagement, not another monthly subscription.</p>
           </article>
         </div>
         <div className="pricing-terms">
           <article className="pricing-term observe">
-            <h3>Mail, Aware Managed, and Watch: month to month</h3>
-            <p>Monthly service with setup included and no cancellation fee.</p>
+            <h3>Mail: 12-month initial term</h3>
+            <p>$50 per protected user each month, with a 20-user or $1,000 account minimum.</p>
           </article>
           <article className="pricing-term observe d1">
-            <h3>Aware Managed: no learner minimum</h3>
-            <p>$10 per active learner each month, with no customer account minimum.</p>
+            <h3>Watch: month to month</h3>
+            <p>$40 per covered user each month, with a five-user or $200 account minimum.</p>
           </article>
           <article className="pricing-term observe d2">
-            <h3>Aware workshops and Ready: fixed fee</h3>
+            <h3>Aware and Ready: fixed fee</h3>
             <p>Deliverables, exclusions, and separately priced follow-on work are written down before the project starts.</p>
           </article>
         </div>

@@ -104,12 +104,12 @@ export const professionalServices: Lane = {
     {
       num: '1',
       title: 'Helm Mail',
-      body: 'Managed MailProtector filtering for compatible Microsoft 365 and Google Workspace environments, configured and reviewed by Helm through the appropriate deployment path.',
+      body: 'Managed email-threat protection, suspicious-message reporting and triage, simulations, and awareness learning for compatible Microsoft 365 and Google Workspace environments.',
     },
     {
       num: '2',
       title: 'Helm Aware',
-      body: 'Managed monthly learning and phishing for the whole team, with a separate fixed-fee workshop when payment approvers also need an AI-use policy and payment-verification protocol.',
+      body: 'A fixed-fee workshop for leaders and payment approvers who need an AI-use policy, live scam practice, and a written payment-verification protocol.',
     },
     {
       num: '3',
@@ -169,7 +169,7 @@ export const contractors: Lane = {
     {
       num: '1',
       title: 'Lock the inbox',
-      body: 'Helm Mail adds managed filtering for compatible Microsoft 365 and Google Workspace environments, with configuration and review handled by Helm through the appropriate deployment path.',
+      body: 'Helm Mail combines managed phishing and impersonation protection with suspicious-message triage, simulations, and awareness learning for compatible Microsoft 365 and Google Workspace environments.',
     },
     {
       num: '2',
@@ -187,7 +187,7 @@ export const contractors: Lane = {
     points: [
       'Helm Mail for compatible Microsoft 365 and Google Workspace environments',
       'Payment-verification protocol customized to your approval process',
-      'Endpoint protection scoped to the actual covered fleet',
+      'Device protection scoped to the actual covered fleet',
       'Published pricing and account minimums',
       'Readiness evidence sized to the questionnaire in front of you',
     ],

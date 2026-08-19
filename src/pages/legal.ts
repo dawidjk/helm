@@ -42,7 +42,7 @@ export const terms: LegalDoc = {
     {
       h: '1. What we provide',
       body: [
-        `Helm sells managed security services to small and mid-sized businesses. Our current products are Helm Mail (managed email security), Helm Aware Managed (managed security awareness learning and phishing), Helm Aware Workshop (fixed-fee AI scam readiness), Helm Ready (compliance readiness projects) and Helm Watch (managed endpoint detection and response).`,
+        `Helm sells managed security services to small and mid-sized businesses. Our current products are Helm Mail (managed email-threat and human-risk security), Helm Aware (a fixed-fee AI scam readiness workshop), Helm Ready (compliance readiness projects) and Helm Watch (managed endpoint detection and response).`,
         `The specific scope of what we deliver to you is defined in your order form or statement of work ("Order"). These Terms apply to every Order. If an Order and these Terms conflict, the Order controls for that engagement only.`,
       ],
     },
@@ -75,7 +75,7 @@ export const terms: LegalDoc = {
       h: '5. Fees, billing and renewal',
       body: [
         `Subscription unit pricing and account minimums are published on our pricing page. Subscriptions are billed monthly in advance by card or ACH through our payment processor and renew automatically until cancelled.`,
-        `Project work under Helm Ready and Helm Aware Workshop is fixed fee, scoped in writing in advance, and billed as set out in the Order. Helm Aware Managed is billed monthly by active learner.`,
+        `Project work under Helm Ready and Helm Aware is fixed fee, scoped in writing in advance, and billed as set out in the Order.`,
         `Fees exclude applicable taxes. We may change subscription pricing on at least thirty days written notice, effective at your next renewal. If you do not accept a price change you may cancel before it takes effect, subject to the terms in your Order.`,
         `Payments more than fifteen days late may result in suspension under section 11.`,
       ],
@@ -83,7 +83,7 @@ export const terms: LegalDoc = {
     {
       h: '6. Term, cancellation and refunds',
       body: [
-        `Unless your Order says otherwise, Helm Mail, Helm Aware Managed and Helm Watch run month to month without a fixed initial service term. They may be cancelled on thirty days written notice, effective at the end of the current billing period. We do not charge setup or cancellation fees.`,
+        `Unless your Order says otherwise, Helm Mail has a 12-month initial service term and then renews month to month; non-renewal requires thirty days written notice. Helm Watch runs month to month and may be cancelled on thirty days written notice, effective at the end of the current billing period. We do not charge setup or cancellation fees.`,
         `We do not pro-rate or refund the current month once a billing period has begun, because our own upstream vendor costs for that period are already committed. Fixed-fee project work is refundable only for work not yet performed at the point of cancellation.`,
         `On termination we will deprovision your protections, and on written request within thirty days we will provide a reasonable export of the reports and documentation we hold for you.`,
       ],
@@ -213,7 +213,7 @@ export const privacy: LegalDoc = {
       h: '4. Who we share it with',
       body: [
         `We use a small number of vendors ("subprocessors") to deliver our services. They are contractually limited to processing data for us and may not use it for their own purposes.`,
-        `Huntress, for managed endpoint detection and response. Stripe, for payment processing and subscription billing. Vercel, for website and portal hosting. Resend, for transactional and notification email. MailProtector, for email security filtering.`,
+        `Huntress, for managed endpoint detection and response. MailProtector, for mail-flow filtering and email traffic controls. Doppel, for social-engineering detection, reported-message triage, phishing simulations, and awareness learning. Stripe, for payment processing and subscription billing. Vercel, for website and portal hosting. Resend, for transactional and notification email.`,
         `Meta, only when a website visitor allows remarketing, for advertising measurement and follow-up advertising. Meta receives page and conversion event data, but Helm does not place form entries or scanned domains in those events.`,
         `We also share information where we must: with your own advisors at your direction, with law enforcement or regulators where legally required, with professional advisors under confidentiality, and with an acquirer if the business is sold.`,
         `A current subprocessor list is maintained on our trust page. We will give notice before adding a subprocessor that processes customer service telemetry.`,

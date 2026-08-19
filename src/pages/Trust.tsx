@@ -24,13 +24,18 @@ const subprocessors: {service: string; does: string; sees: string}[] = [
   },
   {
     service: 'Huntress',
-    does: '24/7 SOC-backed endpoint detection and response for Helm Watch',
-    sees: 'Endpoint telemetry from protected devices',
+    does: '24/7 SOC-backed device detection and response for Helm Watch',
+    sees: 'Security telemetry from protected devices',
   },
   {
     service: 'MailProtector',
-    does: 'Managed email filtering for Helm Mail',
-    sees: 'Message content and metadata for filtered mailboxes, once live',
+    does: 'Mail-flow filtering and email traffic controls for Helm Mail',
+    sees: 'Email content, metadata, sender and recipient information, and filtering decisions for protected accounts, once live',
+  },
+  {
+    service: 'Doppel',
+    does: 'Social-engineering detection, phishing triage, simulations, and awareness learning for Helm Mail',
+    sees: 'Mailbox and reported-message content, metadata, user information, and program activity for protected accounts, once live',
   },
 ];
 
@@ -84,9 +89,9 @@ export default function Trust() {
               <section>
                 <h3>What Helm does</h3>
                 <p>
-                  We resell and configure Huntress and MailProtector services;
+                  We resell and configure Huntress, MailProtector, and Doppel services;
                   we do not claim to build the underlying detection technology.
-                  Helm Watch is EDR-only at launch.
+                  Helm Watch focuses on managed device detection and response at launch.
                 </p>
               </section>
               <section>
@@ -139,11 +144,12 @@ export default function Trust() {
                 the detection technology in front of your business. Detection
                 and response capability lives with the platform vendors we
                 resell and configure, not with an overnight desk we staff
-                ourselves. For endpoint detection and response, that platform
-                is Huntress. For email filtering, it is MailProtector. Helm
-                Watch is EDR-only at launch. Helm Aware Managed uses Huntress
-                for managed security awareness learning and phishing. We do
-                not describe identity monitoring or SIEM as included.
+                ourselves. For Helm Watch device protection, that platform
+                is Huntress. Helm Mail layers MailProtector filtering with
+                Doppel's email-threat and human-risk capabilities. Helm Watch focuses on managed
+                device detection and response at launch.
+                We do not describe identity monitoring, SIEM, encrypted-message
+                delivery, or secure file transfer as included.
               </p>
               <p>
                 We review and act on alerts Monday through Friday, 9:00 a.m. to
@@ -179,9 +185,11 @@ export default function Trust() {
               <p>
                 Card data never touches our systems: Stripe's own hosted
                 fields handle payment details, and we store only a Stripe
-                customer identifier. We do not store your email message
-                content; Helm Mail reporting is built from aggregate daily
-                counters, not message bodies. We do store scan findings and
+                customer identifier. Helm does not copy mailbox content into
+                its own portal; MailProtector processes mail-flow data and
+                Doppel processes mailbox and reported-message data to deliver
+                Helm Mail. Helm reporting is built from
+                security and program activity rather than message bodies. We do store scan findings and
                 security alerts, since tracking your posture over time is the
                 point of the service, along with the account records needed
                 to run your organization (users, org details, billing

@@ -27,7 +27,7 @@ export default function Home() {
     <div className="home-japandi">
       <Meta
         title="Helm: Cybersecurity for New Jersey Small and Medium Businesses"
-        desc="Leadership-led New Jersey security for small and medium-sized businesses: accountable security program management, email protection, awareness, compliance readiness, and endpoint monitoring."
+        desc="Leadership-led New Jersey security for small and medium-sized businesses: accountable security program management, email protection, awareness, compliance readiness, and device monitoring."
         path="/"
         jsonLd={{
           '@context': 'https://schema.org',

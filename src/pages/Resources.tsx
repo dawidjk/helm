@@ -46,7 +46,7 @@ const guideGroups: GuideGroup[] = [
   {
     id: 'secure-everyday-work',
     title: 'Secure everyday accounts and devices',
-    description: 'Email, identity, endpoint, AI-use, and access decisions for the systems your team uses every day.',
+    description: 'Email, identity, device security, AI-use, and access decisions for the systems your team uses every day.',
     slugs: [
       'mfa-methods-compared',
       'password-managers-small-teams',

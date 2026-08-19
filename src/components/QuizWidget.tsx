@@ -168,7 +168,7 @@ function Recommendation({tier}: {tier: TierKey}) {
     return (
       <p className="quiz-recommendation-text">
         If you use a compatible Microsoft 365 or Google Workspace environment, <Link to="/helm-mail/">Helm Mail</Link> adds
-        managed MailProtector filtering through the appropriate deployment path. Pair it with{' '}
+        managed phishing and impersonation protection, suspicious-message triage, simulations, and awareness learning. Pair it with{' '}
         <Link to="/helm-aware/">Helm Aware</Link> for a focused workshop on modern scams, safe AI use,
         and payment verification.
       </p>

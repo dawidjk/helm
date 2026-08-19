@@ -21,7 +21,7 @@ function HomeMeta() {
   return (
     <Meta
       title="Helm: Cybersecurity for New Jersey Small and Medium Businesses"
-      desc="Leadership-led New Jersey security for small and medium-sized businesses: email fraud protection, AI scam readiness, compliance projects, 24/7 endpoint monitoring, and a free domain scan."
+      desc="Leadership-led New Jersey security for small and medium-sized businesses: email fraud protection, AI scam readiness, compliance projects, 24/7 device monitoring, and a free domain scan."
       path="/"
       jsonLd={{
         '@context': 'https://schema.org',
@@ -151,7 +151,7 @@ export function AkariHome() {
 
       <section className="va-proof">
         <div className="va-glow" aria-hidden="true" />
-        <div><h2>When someone asks, the answer is ready.</h2><p>Insurance questionnaires, payment protocols, compliance evidence, and endpoint response—kept understandable enough to use.</p></div>
+        <div><h2>When someone asks, the answer is ready.</h2><p>Insurance questionnaires, payment protocols, compliance evidence, and device protection—kept understandable enough to use.</p></div>
         <div className="va-facts"><span><b>$0</b> first scan</span><span><b>~1 min</b> report</span><span><b>24/7</b> SOC</span></div>
       </section>
       <LaneLinks />

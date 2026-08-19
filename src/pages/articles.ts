@@ -70,7 +70,7 @@ export const articles: Article[] = [
         h: 'A sensible rollout order',
         ps: [
           'Start with the accounts that matter most: admins, and anyone who can move money or approve payments, get the strongest option, hardware security keys. Everyone else gets an authenticator app with number matching turned on. SMS is a reasonable fallback for low-risk accounts, not the default for the accounts you would miss most if they were taken over.',
-          {text: 'Rolling this out well is as much about explaining why as it is about the settings themselves, which is exactly what security awareness training is built to cover.', links: [{phrase: 'security awareness training', to: '/helm-aware'}]},
+          {text: 'Rolling this out well is as much about explaining why as it is about the settings themselves, which is exactly what ongoing security awareness training is built to cover.', links: [{phrase: 'ongoing security awareness training', to: '/helm-mail'}]},
           {text: 'Not sure where your own accounts currently stand? A free scan of your domain is a quick way to see what is exposed before you decide where to start.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
@@ -187,7 +187,7 @@ export const articles: Article[] = [
         ps: [
           'The vault is only as strong as its master password, so make it a long passphrase, several unrelated words strung together, rather than a short password with a symbol swapped in. Pair that master password with MFA on the vault itself.',
           'A vault does not replace MFA on the underlying accounts. Turn MFA on for email, banking, and admin logins the same as you would without a vault; the vault manages the password, not the second factor.',
-          {text: 'Roll it out in order rather than all at once: admin and financial accounts first, since those carry the most risk, then the shared credentials living in spreadsheets and sticky notes, then everyone else\'s individual logins. Pairing the rollout with a short explanation of how credential stuffing actually works, the kind of thing covered in security awareness training, cuts down on people quietly going back to old habits.', links: [{phrase: 'security awareness training', to: '/helm-aware'}]},
+          {text: 'Roll it out in order rather than all at once: admin and financial accounts first, since those carry the most risk, then the shared credentials living in spreadsheets and sticky notes, then everyone else\'s individual logins. Pairing the rollout with a short explanation of how credential stuffing actually works, the kind of thing covered in ongoing security awareness training, cuts down on people quietly going back to old habits.', links: [{phrase: 'ongoing security awareness training', to: '/helm-mail'}]},
           {text: 'Credential hygiene is one half of the picture. The other half is your domain\'s public email configuration, and a free scan usually checks that in about a minute.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
@@ -308,7 +308,7 @@ export const articles: Article[] = [
         h: 'What a managed SOC actually buys you',
         ps: [
           'A managed SOC, or managed detection and response subscription, shares one SOC team across many businesses at once, which is how it delivers around-the-clock coverage at a fraction of what staffing your own would cost.',
-          {text: 'If continuous coverage sounds like something your business needs but could never staff on its own, that is exactly what Helm Watch provides: 24/7 managed detection and response on your endpoints, with human analysts behind every alert.', links: [{phrase: 'Helm Watch', to: '/helm-watch'}]},
+          {text: 'If continuous coverage sounds like something your business needs but could never staff on its own, that is exactly what Helm Watch provides: 24/7 managed detection and response on your covered devices, with human analysts behind every alert.', links: [{phrase: 'Helm Watch', to: '/helm-watch'}]},
           {text: 'Before signing with any provider, ask three questions: who actually investigates an alert, a real analyst or an algorithm; will they take containment action themselves, like isolating an infected machine, or only notify you and leave the response to you; and what is the escalation path when something real is found, including how fast you actually hear about it. A free scan of your own domain is a reasonable first look at where you stand before that conversation even starts.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
@@ -501,7 +501,7 @@ export const articles: Article[] = [
         h: 'The business associate agreement you cannot skip',
         ps: [
           'Any email provider that stores or transmits ePHI on your behalf needs a business associate agreement, a BAA, in place before that PHI ever touches their system.',
-          {text: 'Free consumer email accounts do not come with a BAA available at all. Google Workspace and Microsoft 365 business plans can support a BAA, which is one more reason a practice should use a properly configured business tenant rather than a free personal account for anything touching patient information. Helm Mail supports compatible Microsoft 365 and Google Workspace environments through different MailProtector deployment paths. Helm Ready can separately assess the practice\'s email and HIPAA safeguards before any remediation is proposed.', links: [{phrase: 'Helm Mail', to: '/helm-mail'}, {phrase: 'Helm Ready', to: '/helm-ready'}]},
+          {text: 'Free consumer email accounts do not come with a BAA available at all. Google Workspace and Microsoft 365 business plans can support a BAA, which is one more reason a practice should use a properly configured business tenant rather than a free personal account for anything touching patient information. Helm Mail adds phishing and impersonation protection for compatible business tenants, but it does not include encrypted-message delivery or secure file transfer. Helm Ready can separately assess the practice\'s email and HIPAA safeguards before any remediation or secure-email solution is proposed.', links: [{phrase: 'Helm Mail', to: '/helm-mail'}, {phrase: 'Helm Ready', to: '/helm-ready'}]},
         ],
       },
       {
@@ -674,7 +674,7 @@ export const articles: Article[] = [
       {
         h: 'Run it from a checklist, not from memory',
         ps: [
-          {text: 'Every step above should live on a written checklist that gets run the same day someone leaves, not pieced together from memory over the following week. The gap between those two approaches is exactly where most offboarding failures happen, and it is a gap security awareness training can help close by making the process a habit rather than a favor someone remembers to do.', links: [{phrase: 'security awareness training', to: '/helm-aware'}]},
+          {text: 'Every step above should live on a written checklist that gets run the same day someone leaves, not pieced together from memory over the following week. The gap between those two approaches is exactly where most offboarding failures happen, and it is a gap ongoing security awareness training can help close by making the process a habit rather than a favor someone remembers to do.', links: [{phrase: 'ongoing security awareness training', to: '/helm-mail'}]},
           {text: 'A free scan of your domain is a good companion check while you are reviewing access controls, since it shows some of the same exposure an attacker, or a departing employee, would be looking for.', links: [{phrase: 'free scan', to: '/free-scan'}]},
         ],
       },
@@ -825,7 +825,7 @@ export const articles: Article[] = [
       },
     ],
     takeaway:
-      'Email filtering keeps most attacks from arriving; the callback protocol makes the ones that arrive harmless. Put both in place and wire fraud stops being an existential risk. We deploy both: filtering via Helm Mail, protocol and drills via Helm Aware.',
+      'Managed email defense reduces the attacks that reach people; the callback protocol reduces the damage when a convincing request still arrives. Helm Mail combines phishing protection, reporting, simulations, and ongoing awareness. Helm Aware installs the payment protocol and practices it with leaders.',
   },
   {
     slug: 'cui-handling-shop-floor',
@@ -865,7 +865,7 @@ export const articles: Article[] = [
         ps: [
           {text: 'Training the floor on these rules is part of NIST 800-171 compliance itself, not a nice-to-have layered on top of it. A shop that has every technical control in place but never explained the rules to the people handling the actual drawings still has a real gap.', links: [{phrase: 'NIST 800-171 compliance', to: '/helm-ready'}]},
           {text: 'For manufacturing and defense shops working through what a program like this should look like end to end, a readiness assessment covers both the technical controls and the floor-level training in one pass.', links: [{phrase: 'manufacturing and defense shops', to: '/manufacturing'}, {phrase: 'readiness assessment', to: '/helm-ready'}]},
-          {text: 'Building the specific training your floor needs, rather than a generic slide deck, is exactly what security awareness training is for.', links: [{phrase: 'security awareness training', to: '/helm-aware'}]},
+          {text: 'Building the specific training your floor needs, rather than a generic slide deck, is exactly what ongoing security awareness training is for.', links: [{phrase: 'ongoing security awareness training', to: '/helm-mail'}]},
         ],
       },
     ],

@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState, type ReactNode} from 'react';
+import {useEffect, useRef, useState, type ReactNode, type SyntheticEvent} from 'react';
 import {NavLink as RouterNavLink, Link, useLocation} from 'react-router-dom';
 import LeadForm, {PORTAL_URL} from './LeadForm';
 import ThemePicker from './ThemePicker';
@@ -83,12 +83,24 @@ const lanes = [
 ];
 
 const services = [
-  {to: '/helm-command', label: 'Helm Command', clue: 'Security program ownership'},
   {to: '/helm-mail', label: 'Helm Mail', clue: 'Managed email protection'},
+  {to: '/helm-watch', label: 'Helm Watch', clue: '24/7 device monitoring'},
+  {to: '/helm-command', label: 'Helm Command', clue: 'Security program ownership'},
   {to: '/helm-aware', label: 'Helm Aware', clue: 'Training and scam readiness'},
   {to: '/helm-ready', label: 'Helm Ready', clue: 'Insurance and compliance'},
-  {to: '/helm-watch', label: 'Helm Watch', clue: '24/7 endpoint monitoring'},
 ];
+
+function keepDesktopMenusExclusive(event: SyntheticEvent<HTMLDetailsElement>) {
+  const openedMenu = event.currentTarget;
+  if (!openedMenu.open) return;
+
+  openedMenu
+    .closest('.nav-links')
+    ?.querySelectorAll<HTMLDetailsElement>('.nav-menu[open]')
+    .forEach((menu) => {
+      if (menu !== openedMenu) menu.open = false;
+    });
+}
 
 const footerCols = [
   {
@@ -256,7 +268,10 @@ export function SiteNav() {
           </Link>
           <div className="nav-right">
             <div className="nav-links">
-              <details className={`nav-menu${productActive ? ' active' : ''}`}>
+              <details
+                className={`nav-menu${productActive ? ' active' : ''}`}
+                onToggle={keepDesktopMenusExclusive}
+              >
                 <summary aria-current={productActive ? 'page' : undefined}>Services</summary>
                 <div className="nav-menu-panel">
                   {services.map((service) => (
@@ -267,7 +282,10 @@ export function SiteNav() {
                   ))}
                 </div>
               </details>
-              <details className={`nav-menu${industryActive ? ' active' : ''}`}>
+              <details
+                className={`nav-menu${industryActive ? ' active' : ''}`}
+                onToggle={keepDesktopMenusExclusive}
+              >
                 <summary aria-current={industryActive ? 'page' : undefined}>Industries</summary>
                 <div className="nav-menu-panel nav-menu-panel-compact">
                   {lanes.map((lane) => (

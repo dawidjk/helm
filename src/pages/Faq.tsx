@@ -6,7 +6,7 @@ import {renderParagraph, paragraphText, type Paragraph} from '../lib/richText';
 const faqs: {q: string; a: Paragraph}[] = [
   {
     q: 'We have an IT person. Why do we need Helm?',
-    a: 'Your IT person or MSP keeps systems running. Helm focuses on the defined security work in your agreement, such as email filtering, endpoint monitoring, or readiness documentation. We can work alongside an existing provider, with responsibilities written down before work begins.',
+    a: 'Your IT person or MSP keeps systems running. Helm focuses on the defined security work in your agreement, such as email filtering, device monitoring, or readiness documentation. We can work alongside an existing provider, with responsibilities written down before work begins.',
   },
   {
     q: 'Are we really a target? We only have 15 employees.',
@@ -23,7 +23,7 @@ const faqs: {q: string; a: Paragraph}[] = [
   {
     q: 'How is pricing structured?',
     a: {
-      text: 'Helm Mail is $25 per user per month with a $300 account minimum. Helm Watch is $40 per user per month with a $200 account minimum and includes up to two eligible Windows or Mac workstations per covered user. Servers and other device classes are separately scoped. Helm Aware Managed is $10 per active learner per month with no customer minimum and month-to-month service. Helm Aware workshops and Helm Ready are fixed-fee projects within published ranges. Work outside the written scope is priced separately.',
+      text: 'Helm Mail is $50 per protected user per month with a $1,000 account minimum, equivalent to 20 users, and a 12-month initial term. It includes managed email-threat protection, phishing reporting and triage, simulations, and awareness learning. Helm Watch is $40 per covered user per month with a $200 account minimum and includes up to two eligible Windows or Mac workstations per covered user. Helm Aware and Helm Ready are fixed-fee projects within published ranges. Work outside the written scope is priced separately.',
       links: [{phrase: 'pricing page', to: '/pricing'}],
     },
   },
@@ -36,7 +36,7 @@ const faqs: {q: string; a: Paragraph}[] = [
   },
   {
     q: 'What happens if we get hit while working with you?',
-    a: 'We follow the escalation and response responsibilities in your signed agreement. Huntress provides continuous monitoring and active containment for endpoints covered by Helm Watch; Helm follow-up is during business hours and best effort outside them unless your agreement says otherwise. Broader recovery, legal, insurance, and forensic work is not automatically included.',
+    a: 'We follow the escalation and response responsibilities in your signed agreement. Huntress provides continuous monitoring and active containment for devices covered by Helm Watch; Helm follow-up is during business hours and best effort outside them unless your agreement says otherwise. Broader recovery, legal, insurance, and forensic work is not automatically included.',
   },
   {
     q: 'How fast can we start?',
