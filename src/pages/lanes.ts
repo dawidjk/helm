@@ -7,16 +7,17 @@ export const manufacturing: Lane = {
   metaTitle: 'CMMC Compliance for NJ Manufacturers & Defense Suppliers | Helm',
   metaDesc:
     'Fixed-fee CMMC Level 1 and Level 2 gap assessments for New Jersey manufacturers and defense subcontractors, scored against applicable NIST 800-171 requirements.',
+  serviceType: 'CMMC readiness and managed cybersecurity for New Jersey manufacturers',
   eyebrow: 'NJ Manufacturers · Defense Suppliers',
   headline: 'Which CMMC requirement applies to your contract?',
   sub: 'Start with the contract clauses and the information you handle. Then assess the right scope, evidence, and remediation work.',
   primaryCta: 'Book a CMMC gap assessment',
   ctaMode: 'book',
-  statusChip: 'Phase 2 certification suspended July 2026 · self-assessment still in force',
+  statusChip: 'CMMC Phase II paused July 2026 · Phase I self-assessments remain',
   regulatoryUpdate: {
     title: 'The deadline moved. The requirement did not.',
-    changed: 'Third-party CMMC certification was suspended on July 13, 2026.',
-    unchanged: 'Level 1 and Level 2 self-assessment were not, and neither were your SPRS score, your Affirming Official\'s annual affirmation, or DFARS 72-hour incident reporting. Same 110 NIST 800-171 requirements, now enforced through self-assessments and selected government-led assessments.',
+    changed: 'The Department suspended CMMC Phase II requirements on July 13, 2026. That paused the planned expansion of third-party Level 2 certification requirements.',
+    unchanged: 'Phase I self-assessments remain in force. The Department says it will continue enforcing NIST SP 800-171 Revision 2 through self-assessments and selected government-led assessments. Existing DFARS duties, including applicable incident reporting, also remain contract driven.',
   },
   pains: [
     {
@@ -82,6 +83,28 @@ export const manufacturing: Lane = {
       'Fixed-fee assessment, with remediation scoped only after the gaps are known',
     ],
   },
+  commonQuestions: [
+    {
+      question: 'How do we know whether Level 1 or Level 2 applies?',
+      answer: 'Start with the information and the contract. FCI generally points to Level 1. CUI, including controlled drawings, specifications, and technical data, points to Level 2. Company size does not decide the level. Confirm the clauses and the information category with the prime in writing.',
+      resource: {slug: 'cmmc-level-1-vs-level-2', label: 'Compare Level 1 and Level 2'},
+    },
+    {
+      question: 'What should support an SPRS score?',
+      answer: 'Keep the system boundary, current SSP, control-by-control working papers, evidence references, assessment date, score calculation, and the plan for unmet requirements together. The submitted number should be reproducible from that record, not reconstructed after a request arrives.',
+      resource: {slug: 'sprs-score-explained', label: 'See how SPRS scoring works'},
+    },
+    {
+      question: 'What changed when CMMC Phase II was paused?',
+      answer: 'The planned Phase II expansion was suspended. Phase I self-assessments remain, and the Department says Revision 2 will still be enforced through self-assessments and selected government-led assessments. Treat any new solicitation or contract as the controlling document.',
+      resource: {slug: 'cmmc-deadline-checklist', label: 'Use the current readiness checklist'},
+    },
+    {
+      question: 'What should a fixed-fee gap assessment deliver?',
+      answer: 'It should define the agreed boundary, test the applicable requirements, identify the evidence reviewed, score findings consistently, and separate immediate corrections from longer remediation. It should prepare the company to make an accurate representation, not certify the company.',
+      resource: {slug: 'ssp-poam-explained', label: 'Review the core evidence documents'},
+    },
+  ],
   resources: [
     {slug: 'cmmc-deadline-checklist', title: 'CMMC Deadline Checklist for Small Defense Contractors', note: 'Current requirements'},
     {slug: 'sprs-score-explained', title: 'SPRS Scores Explained', note: 'Scoring and evidence'},
@@ -186,6 +209,7 @@ export const lawFirms: Lane = {
   metaTitle: 'Cybersecurity for New Jersey Law Firms | Helm',
   metaDesc:
     'Managed email and device protection, wire-fraud controls, and security readiness for New Jersey law firms. Start with a free public-domain scan.',
+  serviceType: 'Managed cybersecurity for New Jersey law firms',
   eyebrow: 'New Jersey Law Firms',
   headline: 'Protect the case, the client, and the payment.',
   sub: 'Confidential matters move through email, laptops, cloud systems, and payment workflows. Helm helps smaller firms protect each path without building an internal security department.',
@@ -218,10 +242,10 @@ export const lawFirms: Lane = {
       href: 'https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf',
     },
     {
-      value: 'Rule 1.6(c)',
-      finding: 'The ABA Model Rule says lawyers should make reasonable efforts to prevent unauthorized disclosure of, or access to, information relating to a client representation.',
-      source: 'ABA cybersecurity duties guidance',
-      href: 'https://www.americanbar.org/groups/law_practice/resources/law-practice-today/2019/cybersecurity-attorneys-legal-ethical/',
+      value: 'Reasonable care',
+      finding: 'New Jersey ethics guidance says attorneys should exercise reasonable care against unauthorized access to client information and use professional judgment to select safeguards for foreseeable attempts.',
+      source: 'New Jersey Courts, ACPE Opinion 701',
+      href: 'https://www.njcourts.gov/sites/default/files/notices/2006/03/ACPE_Opinion701_ElectronicStorage_12022005.pdf',
     },
   ],
   planTitle: 'Cover the inbox, the device, and the evidence.',
@@ -253,6 +277,28 @@ export const lawFirms: Lane = {
       'Published scope, prices, and account minimums',
     ],
   },
+  commonQuestions: [
+    {
+      question: 'What should happen when wire instructions change?',
+      answer: 'Pause the payment and call a known-good number already held in the matter file or engagement record. Do not use a number in the change request. Record who verified the instruction, when the call occurred, and who approved the release.',
+      resource: {slug: 'wire-fraud-prevention-law-firms', label: 'Build the callback protocol'},
+    },
+    {
+      question: 'Does DMARC stop mailbox compromise?',
+      answer: 'No. DMARC helps receiving systems reject unauthorized mail sent as your exact domain. It does not stop an attacker using a compromised real mailbox or a lookalike domain. Firms still need mailbox protection, MFA, reporting, and a payment-verification process.',
+      resource: {slug: 'what-is-dmarc', label: 'Understand what DMARC does'},
+    },
+    {
+      question: 'Which devices belong in the confidentiality scope?',
+      answer: 'Include every firm-owned or personally owned device that can reach client email, documents, billing, trust accounting, or saved sessions. Standard Helm Watch coverage applies to eligible Windows and Mac computers. Phones and tablets require separate identity, email, and device-management controls.',
+      resource: {slug: 'law-firm-device-security-checklist', label: 'Use the device checklist'},
+    },
+    {
+      question: 'What evidence will a client or carrier expect?',
+      answer: 'Expect to support answers with current inventories, configuration records, deployment status, training records, test results, incident contacts, and written payment procedures. A policy that does not match the operating evidence is not a defensible answer.',
+      resource: {slug: 'cyber-insurance-questionnaire', label: 'Prepare supportable answers'},
+    },
+  ],
   resources: [
     {slug: 'law-firm-device-security-checklist', title: 'Law Firm Device Security Checklist', note: 'Protect work beyond the office'},
     {slug: 'wire-fraud-prevention-law-firms', title: 'Wire Fraud Prevention for Law Firms', note: 'Build a callback protocol'},

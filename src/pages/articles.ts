@@ -119,41 +119,55 @@ export const articles: Article[] = [
   {
     slug: 'sprs-score-explained',
     ctaMode: 'book-cmmc',
-    title: 'SPRS Score Explained: The Number Your Primes Can Already See',
+    title: 'SPRS Score Explained: What the Number Means and How to Support It',
     metaDesc:
-      'What your SPRS score means under the NIST 800-171 DoD Assessment Methodology, why it can run from -203 to 110, and how to raise it deliberately instead of guessing.',
+      'How the NIST 800-171 DoD Assessment Methodology produces an SPRS score from -203 to 110, who can access it, and what evidence should support it.',
     date: '2026-07-15',
-    readMin: 5,
+    updated: '2026-08-18',
+    readMin: 6,
     lane: 'Manufacturing & Defense',
     laneTo: '/manufacturing',
     intro:
-      'If you handle Controlled Unclassified Information for a defense contract, a number already exists that describes your security posture, and your prime can look it up. It is called your SPRS score, and most subcontractors have never seen it explained in plain English.',
+      'If a defense contract requires your systems to implement NIST SP 800-171, a current summary-level assessment score may need to be posted in the Supplier Performance Risk System, or SPRS. The important question is not whether the number looks impressive. It is whether the scope, calculation, and evidence behind it can be reproduced.',
     sections: [
       {
         h: 'What the score actually measures',
         ps: [
-          'The SPRS score comes from the NIST 800-171 DoD Assessment Methodology: a standardized way of scoring how well a company implements the 110 security controls required for handling CUI. Each control is worth points, and some are worth more than others because they matter more.',
-          'The range runs from negative 203 up to a maximum of 110. It can go negative because missing certain high-value controls, like multi-factor authentication or encrypted CUI storage, subtracts more points than a single control is worth on its own. A company that has done almost nothing can post a deeply negative number.',
-          'That score gets posted to SPRS, the Supplier Performance Risk System, where primes and the DoD can see it before they award or continue a subcontract. It is not a private self-assessment sitting in a drawer.',
+          'The NIST SP 800-171 DoD Assessment Methodology starts at 110 and subtracts the assigned value of each requirement that has not been implemented. The score can fall as low as negative 203 because some unmet requirements subtract three or five points while others subtract one.',
+          'The score is a summary of implementation against the assessment methodology. It is not a general security grade and it does not prove that every system in the company was included. The system boundary and the System Security Plan determine what the number actually describes.',
+        ],
+      },
+      {
+        h: 'Who can access the score',
+        ps: [
+          'DFARS requires contracting officers to verify that a current summary-level score is posted for covered contractor information systems relevant to an award. Authorized representatives of the contractor can view their own score, and authorized DoD personnel can access posted assessment results.',
+          'A prime contractor does not automatically receive unrestricted access to every subcontractor score. It may still require confirmation that a current assessment exists before awarding a covered subcontract. Treat the exact solicitation, contract, and flowdown language as the controlling instruction.',
         ],
       },
       {
         h: 'Why an honest number matters more than a high one',
         ps: [
-          'Primes increasingly screen subcontractors on SPRS score before flowing down work. A low, honest score is a problem you can fix on a timeline. A fabricated or inflated score is a different kind of problem entirely.',
-          'Submitting a score you know is not accurate is a False Claims Act exposure, and it is not theoretical: the DOJ Civil Cyber-Fraud Initiative has already settled cases against companies that misrepresented their security compliance to the government. The number posted to SPRS is treated as a representation the government can rely on.',
+          'A low, well-supported score gives the company an accurate starting point and an owned remediation plan. An inflated score creates a mismatch between the representation and the evidence.',
+          'In a 2025 settlement, the Department of Justice said MORSECORP had submitted a score of 104 before a later third-party review calculated negative 142. The company agreed to pay $4.6 million to resolve False Claims Act allegations tied to cybersecurity requirements. That case is a useful warning: document the actual boundary and calculation, and do not treat a target score as the answer you need to reach on paper.',
+        ],
+      },
+      {
+        h: 'What should be in the assessment file',
+        ps: [
+          'Keep the current System Security Plan, a diagram or inventory defining the assessed boundary, control-by-control working papers, links to evidence, the calculation worksheet, the completion date, and the expected date for implementing unmet requirements. If more than one SSP exists, keep the score tied to the correct system and CAGE codes.',
+          'The file should let another qualified reviewer follow the same methodology and understand why each requirement was marked met or not met. A screenshot without context or a policy without operating evidence is rarely enough by itself.',
         ],
       },
       {
         h: 'How to raise it without guessing',
         ps: [
           {text: 'Start with a gap assessment scored against all 110 controls. It tells you exactly where you stand today and which gaps carry the most point value, instead of guessing which fixes matter most.', links: [{phrase: 'gap assessment', to: '/helm-ready'}]},
-          'Fix the highest-weighted controls first: the ones like MFA and encryption that swing the score the most per dollar and hour spent. Then rescore against the methodology and repost to SPRS so the number primes see reflects the work you actually did.',
+          'Use the methodology to understand which unmet requirements subtract the most points, but do not optimize the number while ignoring the system boundary or lower-weight requirements. Remediate, collect the new evidence, recalculate, and update the score through the authorized process when the assessment record changes.',
         ],
       },
     ],
     takeaway:
-      'Your SPRS score is not a form you fill out once. Score it honestly today, raise it deliberately with the controls that matter most, and repost so the number your primes see is one you can stand behind.',
+      'An SPRS score is only as defensible as its boundary, methodology, and evidence. Calculate it honestly, keep the assessment file reproducible, remediate deliberately, and update the record when the facts change.',
   },
   {
     slug: 'password-managers-small-teams',
@@ -202,7 +216,8 @@ export const articles: Article[] = [
     metaDesc:
       'CMMC Level 1 and Level 2 require very different things. How to tell which one applies to your shop based on your contracts, not your headcount.',
     date: '2026-07-13',
-    readMin: 5,
+    updated: '2026-08-18',
+    readMin: 6,
     lane: 'Manufacturing & Defense',
     laneTo: '/manufacturing',
     intro:
@@ -219,7 +234,8 @@ export const articles: Article[] = [
         h: 'What each level actually requires',
         ps: [
           'Level 1 covers the 15 basic safeguarding requirements of FAR 52.204-21. It is self-assessed annually, with an executive affirmation that the requirements are in place. There is no third-party assessor at Level 1.',
-          'Level 2 covers all 110 controls in NIST 800-171. Before the Phase 2 suspension on July 13, 2026, most contracts required a third-party assessment by a C3PAO every three years. During the suspension, contracting officers may not require the C3PAO route, so in practice Level 2 today is self-assessed against the same 110 controls, and solicitations and contracts that already carry a C3PAO requirement are directed to be amended. Suspended is not repealed, so plan for the third-party route to return. The jump from Level 1 to Level 2 in scope is not incremental: it is a different scale of program either way.',
+          'Level 2 covers 110 requirements in NIST SP 800-171 Revision 2. Under the Phase I rules now in force, Level 2 uses a self-assessment every three years with an annual affirmation. The Department suspended the planned Phase II expansion on July 13, 2026, including the broader use of third-party Level 2 certification requirements. It says Revision 2 will continue to be enforced through self-assessments and selected government-led assessments during the review.',
+          'The jump from Level 1 to Level 2 is not a small increment. Level 2 requires a defined system boundary, a current System Security Plan, control-level evidence, a score, and ongoing ownership of the requirements that apply to the CUI environment.',
         ],
       },
       {
@@ -228,6 +244,13 @@ export const articles: Article[] = [
           'The clauses in your contract tell you directly: look for DFARS 252.204-7012, 7019, 7020, and 7021. Their presence, and how they are flowed down, points to whether you are being asked to handle CUI or only FCI.',
           'When the contract language is ambiguous, ask your prime in writing which category your work falls into and keep the answer on file. Do not guess, and do not assume.',
           {text: 'Do not assume Level 1 just because you are a small shop. Company size has no bearing on the requirement: a ten-person shop machining a part from a marked drawing is handling CUI just like a thousand-person prime. A gap assessment against the full control set tells you where you actually stand before an assessor does.', links: [{phrase: 'small shop', to: '/manufacturing'}, {phrase: 'gap assessment', to: '/helm-ready'}]},
+        ],
+      },
+      {
+        h: 'What to collect before a readiness review',
+        ps: [
+          'Bring the relevant solicitation and contract clauses, every cybersecurity flowdown received from a prime, representative files or markings, a list of systems that store or transmit the information, and any current SPRS assessment or System Security Plan. That is enough to start a boundary and applicability discussion without pretending the answer comes from a generic checklist.',
+          'Record the conclusion and the person or contract source that supports it. If the prime clarifies the information category or required level, keep that written answer with the contract file so the same question does not have to be reconstructed at the next bid or renewal.',
         ],
       },
     ],
@@ -559,40 +582,41 @@ export const articles: Article[] = [
     ctaMode: 'book-cmmc',
     title: 'CMMC After the Phase 2 Suspension: A 12-Step Checklist for Manufacturers',
     metaDesc:
-      'Third-party CMMC certification was suspended in July 2026. Self-assessment was not. A practical 12-step checklist for small manufacturers and defense subcontractors to stay assessment-ready.',
+      'CMMC Phase II was suspended in July 2026. Phase I self-assessments remain. A 12-step readiness checklist for manufacturers and defense subcontractors.',
     date: '2026-07-25',
-    readMin: 6,
+    updated: '2026-08-18',
+    readMin: 7,
     lane: 'Manufacturing & Defense',
     laneTo: '/manufacturing',
     intro:
-      'On July 13, 2026 the Department of War suspended CMMC Phase 2, the change that would have made third-party certification mandatory on applicable Level 2 contracts. Suspended is not repealed. Level 1 and Level 2 self-assessment, your SPRS score, and your annual affirmation are all still required today, scored against the same requirements. If you supply a prime, even two tiers down, here is the punch list that did not change.',
+      'On July 13, 2026 the Department suspended CMMC Phase II, the planned expansion that would have increased the use of third-party certification on applicable Level 2 contracts. Phase I self-assessment requirements remain in force. The Department says it will continue enforcing NIST SP 800-171 Revision 2 through self-assessments and selected government-led assessments while it reviews the program. Here is the readiness work that still matters.',
     sections: [
       {
         h: 'Steps 1 to 4: Know where you stand',
         ps: [
-          'First, confirm your level. Most subs handling Federal Contract Information need Level 1 (15 basic safeguarding requirements, self-assessed annually). If you touch Controlled Unclassified Information (drawings, specs, technical data marked CUI), you need Level 2: 110 controls from NIST 800-171 and, depending on the contract, a third-party assessment. That third-party route is suspended as of July 2026, so in practice Level 2 is self-assessed today.',
+          'First, confirm your level. Contractors handling Federal Contract Information may fall under Level 1 and its 15 basic safeguarding requirements. If the agreed scope processes, stores, or transmits Controlled Unclassified Information, Level 2 and the 110 Revision 2 requirements may apply. Confirm the information category and the clauses rather than deciding from company size.',
           'Second, locate your CUI. You cannot protect what you have not mapped. Walk every place technical data lives: file servers, email, CAD stations, the quoting inbox, that USB drive in the shop office.',
-          'Third, calculate your SPRS score honestly. Primes can see it, and a fabricated score is False Claims Act exposure: the DOJ has already settled cases.',
-          {text: 'Fourth, get a gap assessment against all 110 controls. Two weeks of work turns "we think we\'re fine" into a scored, prioritized list.', links: [{phrase: 'gap assessment', to: '/helm-ready'}]},
+          'Third, calculate the SPRS score honestly when the assessment requirement applies. Keep the boundary, methodology, working papers, and evidence that reproduce the number. The Department of Justice has resolved False Claims Act allegations involving unsupported cybersecurity representations, including a case centered on a large mismatch between a submitted score and a later assessment.',
+          {text: 'Fourth, run a gap assessment against the applicable control set. The useful deliverable is a scored, evidence-linked list that separates what is implemented, what is not proven, and what still needs remediation.', links: [{phrase: 'gap assessment', to: '/helm-ready'}]},
         ],
       },
       {
         h: 'Steps 5 to 9: Close the gaps that matter',
         ps: [
-          'Five: multi-factor authentication everywhere, the single control assessors check first. Six: FIPS-validated encryption for CUI at rest and in transit; your consumer-grade NAS probably does not qualify. Seven: access control, meaning machinists do not need the quoting drive, and the front office does not need CAD.',
-          'Eight: an incident response plan you have actually rehearsed once. Nine: System Security Plan (SSP) and POA&M documents, which assessors read before they read anything else. Thin, generic templates are the most common failure.',
+          'Five: implement multi-factor authentication where the requirement and system design call for it, and preserve the configuration evidence. Six: identify where approved cryptography is required to protect CUI and verify the actual product, mode, and boundary rather than relying on a marketing label. Seven: limit access so each role reaches only the CUI and systems needed for its work.',
+          'Eight: write and rehearse the incident response process, including the contract-driven reporting path. Nine: keep the System Security Plan current and maintain an owned remediation record for unmet requirements. Generic templates are not evidence that the described control is operating.',
         ],
       },
       {
         h: 'Steps 10 to 12: Stay ready without wasting the year',
         ps: [
-          'Ten: do not buy a C3PAO slot against a deadline that no longer exists. No contract can require a Level 2 third-party assessment during the suspension, and no credible post-suspension scheduling lead time has been published by anyone, us included. Book an assessor when a specific contract calls for one. Eleven: run a mock assessment anyway, because failing in private costs nothing and it is the same 110 requirements either way.',
-          'Twelve: put monthly maintenance in place. Scores decay: a patched server drifts, an employee leaves with access intact. Primes increasingly ask for continuous compliance, not a one-time certificate.',
+          'Ten: do not reserve a third-party assessment solely because of the former Phase II date. Recheck the current DoD guidance and the specific solicitation or contract before committing to an assessment route. Eleven: run an internal mock assessment anyway because the underlying Revision 2 requirements and evidence work remain relevant.',
+          'Twelve: assign recurring maintenance. Review access changes, evidence, open remediation, the SSP, and assessment dates on a schedule. A score and policy set can become inaccurate when systems, people, vendors, or the CUI boundary change.',
         ],
       },
     ],
     takeaway:
-      'The deadline moved and the requirement did not. What is in your control is the same thing it was before: a scored gap assessment against all 110 controls, two weeks of work, and the basis of the SPRS score you already owe.',
+      'Phase II paused, but Phase I self-assessments and the underlying Revision 2 evidence work remain. Confirm the contract, define the boundary, calculate any required score honestly, close gaps, and maintain the record as the environment changes.',
   },
   {
     slug: 'job-site-devices-public-wifi',
@@ -761,71 +785,101 @@ export const articles: Article[] = [
   {
     slug: 'ssp-poam-explained',
     ctaMode: 'book-cmmc',
-    title: 'SSP and POA&M Explained: The Two Documents Your CMMC Assessor Reads First',
+    title: 'SSP and POA&M Explained: The Evidence Behind CMMC Readiness',
     metaDesc:
-      'What a System Security Plan and a Plan of Action and Milestones actually are under NIST 800-171, and when a POA&M can still get you conditionally certified under CMMC.',
+      'What an SSP and POA&M document under NIST 800-171, how they support a defensible assessment, and how the Phase II suspension changes the certification context.',
     date: '2026-06-20',
-    readMin: 5,
+    updated: '2026-08-18',
+    readMin: 6,
     lane: 'Manufacturing & Defense',
     laneTo: '/manufacturing',
     intro:
-      'Two documents decide how your CMMC assessment goes before the assessor ever walks your floor: the System Security Plan and the Plan of Action and Milestones. Most shop owners have heard the acronyms, and few have seen either one explained without the jargon.',
+      'Two documents connect a CMMC or NIST SP 800-171 assessment to the environment it is supposed to describe: the System Security Plan and the Plan of Action and Milestones. One records the current system and safeguards. The other owns the work that is still incomplete.',
     sections: [
       {
         h: 'What each document actually is',
         ps: [
-          'The System Security Plan, required under NIST 800-171 control 3.12.4, describes how each of the 110 controls is actually met in your environment: which policy, which setting, which tool, which process. It is not a statement that you comply; it is the specific explanation of how you comply, control by control.',
-          'The Plan of Action and Milestones, control 3.12.2, is the honest companion document: it tracks the controls you have not fully met yet, who owns closing each gap, and the date it is due. A POA&M with no owner and no date is not really a plan.',
+          'The System Security Plan, required by NIST SP 800-171 Revision 2 requirement 3.12.4, describes the system boundary, operating environment, how the security requirements are implemented, and the connections to other systems. It should name the real tools, roles, locations, and processes inside the assessed scope.',
+          'The Plan of Action and Milestones, addressed by requirement 3.12.2, tracks security weaknesses or deficiencies, the work required to correct them, the responsible owner, resources, milestones, and completion dates. A POA&M with no owner, evidence target, or date is a list, not an operating plan.',
           {text: 'Together they are the paper trail behind your gap assessment: the SSP shows where you stand today, and the POA&M shows the work still ahead, scored against the same 110 controls.', links: [{phrase: 'gap assessment', to: '/helm-ready'}]},
         ],
       },
       {
-        h: 'Why assessors read the SSP first',
+        h: 'Why a reviewer starts with the SSP',
         ps: [
-          'An assessor forms a first impression of your shop from the SSP, before they interview anyone or look at a single screen. A thin, generic template copied from somewhere else reads as exactly that, and it sets the tone for the rest of the assessment.',
-          'A specific SSP, one that names your actual tools, your actual access controls, your actual backup process, tells the assessor you know your own environment. That is worth more going in than any single control being perfect.',
+          'A reviewer needs to know which people, systems, facilities, and connections are in scope before a control can be tested. A generic SSP cannot answer that question. If the document describes tools the shop does not use or leaves out the quoting mailbox and CAD workstations that hold CUI, the assessment starts from the wrong boundary.',
+          'A useful SSP points each requirement to the people, technology, procedure, and evidence that implement it. It also identifies dependencies and exceptions so the reviewer can test the description against the operating facts instead of interpreting a template.',
         ],
       },
       {
-        h: 'When a POA&M can still get you certified',
+        h: 'What the Phase II suspension changes',
         ps: [
-          'Under the CMMC final rule, Level 2 allows conditional certification with an open POA&M, but only within specific limits. Your assessment score has to reach at least 80 percent of the maximum, a score of 88 out of 110, and the open items have to fall within a defined set of lower-weight controls, not the ones that carry the most points.',
-          {text: 'Even then, the clock is running: open POA&M items have to be closed out within 180 days. It is a bridge to full certification for your manufacturing operation, not a permanent way to avoid finishing the work.', links: [{phrase: 'manufacturing operation', to: '/manufacturing'}]},
+          'The Department suspended CMMC Phase II on July 13, 2026. That means the planned expansion of third-party Level 2 certification and its conditional-certification path should not be presented as the current default route. Phase I self-assessment requirements remain in force, and the Department says Revision 2 will continue to be enforced through self-assessments and selected government-led assessments.',
+          'The POA&M still matters. The DFARS assessment process asks for the date when all requirements are expected to be implemented, and a real remediation plan is how leadership manages that answer. Treat any future conditional-certification rules as subject to the outcome of the current program review and the contract in front of you.',
+        ],
+      },
+      {
+        h: 'What good documents let you do',
+        ps: [
+          'A current SSP lets the company explain its boundary and implementation consistently to leadership, primes, technical reviewers, and government assessors. A maintained POA&M lets the same group see what remains open, what evidence will close it, who owns it, and whether the expected completion date is still credible.',
+          {text: 'Use both documents during the gap assessment, not after it. Findings should update the SSP where the description is wrong and create or revise POA&M work where a requirement is not fully implemented.', links: [{phrase: 'gap assessment', to: '/helm-ready'}]},
         ],
       },
     ],
     takeaway:
-      'The SSP tells the assessor how you meet each control, and the POA&M tells them what you are still fixing and when. Get both specific and current before the assessment, not written the week of it.',
+      'The SSP defines the real environment and how requirements are implemented. The POA&M owns what is still incomplete. Keep both tied to evidence and current operating facts, regardless of which assessment route the contract requires.',
   },
   {
     slug: 'wire-fraud-prevention-law-firms',
     title: 'Wire Fraud Prevention for Law Firms: The Callback Protocol',
     metaDesc:
-      'Law firms lose six figures to a single spoofed email. The callback protocol, a one-page payment verification procedure, is the control that actually stops wire fraud.',
+      'A practical known-number callback protocol for law firms handling changed wire instructions, including approvals, evidence, testing, and immediate response steps.',
     date: '2026-06-17',
-    readMin: 4,
-    lane: 'Professional Services',
-    laneTo: '/professional-services',
+    updated: '2026-08-18',
+    readMin: 6,
+    lane: 'Law Firms',
+    laneTo: '/law-firms',
     intro:
-      'The scam runs the same way every time. A closing approaches. An email arrives, from the title company, the seller\'s attorney, or a partner, with "updated wire instructions." The formatting is right, the tone is right, the timing is right, because the attacker has been reading the real thread for weeks. The money leaves. It does not come back.',
+      'A closing or settlement creates the conditions business email compromise needs: several parties, a known payment date, time pressure, and instructions moving through email. A criminal may spoof a participant, use a lookalike domain, or compromise a real mailbox and enter the existing thread. The firm needs a payment rule that remains reliable even when the message looks authentic.',
     sections: [
       {
-        h: 'Why smart people wire money to criminals',
+        h: 'Why the email can look completely legitimate',
         ps: [
-          'Business email compromise is not a technology exploit; it is a process exploit. The attacker does not hack your bank: they compromise (or convincingly spoof) one mailbox in the chain, wait for a transaction, and inject new payment instructions at the moment of maximum time pressure.',
-          {text: 'AI has made the last weak signals disappear. The broken English is gone. Voice clones now back up the email with a phone call that sounds exactly like the partner. Training people to "spot the fake" is necessary but no longer sufficient: you need email security that works even when the fake is perfect.', links: [{phrase: 'email security', to: '/helm-mail'}]},
+          'The FBI describes business email compromise as a request that appears to come from a known source. In a legal payment workflow, the attacker can wait for a real transaction and then introduce a changed account number, a new beneficiary, or pressure to release funds before a deadline.',
+          'Grammar, logos, signatures, and reply history are weak evidence. A message sent from a compromised real mailbox may pass normal email-authentication checks. The control therefore cannot depend on a staff member noticing a visual clue that may not exist.',
+        ],
+      },
+      {
+        h: 'Write the payment rule before the matter becomes urgent',
+        ps: [
+          'At intake or the start of the payment process, record a known-good phone number for every party authorized to give or change instructions. Store it in the matter file or another controlled record. Do not wait for a change request to decide which number is trustworthy.',
+          'Name the roles that can receive instructions, perform the callback, approve a release, and resolve an exception. Set a dual-approval threshold based on the firm\'s transaction profile and insurer or client requirements. The rule should also state that urgency, seniority, and a familiar voice do not waive verification.',
         ],
       },
       {
         h: 'The callback protocol',
         ps: [
-          {text: 'The rule fits on one page: any new or changed payment instruction is verified by calling a known-good number (from the file, from the engagement letter, from a prior invoice), never from the email that delivered the change. No exceptions for urgency, seniority, or relationship. The scam depends on bypassing exactly this step, which is why "no exceptions" is the entire control.', links: [{phrase: 'payment instruction is verified', to: '/helm-aware'}]},
-          'Add dual approval above a threshold ($25K is common), and log every verification: two minutes of friction against a six-figure loss. Then drill it once: send your own fake "updated instructions" email and see what happens. Firms that test it once fix the gaps immediately.',
+          {text: 'Pause any new or changed payment instruction. Call the known-good number already held in the file, not a number contained in the request. Ask the authorized person to confirm the beneficiary, financial institution, routing details, account information, and reason for the change. Then record the verifier, time, number used, result, and approver before releasing the payment.', links: [{phrase: 'payment instruction', to: '/helm-aware'}]},
+          'Test the procedure with an authorized simulation and include the awkward cases: a partner asks to skip the rule, the usual contact is unavailable, or the change arrives minutes before a cutoff. The drill should test whether the process survives pressure, not whether one person can spot a fake email.',
+        ],
+      },
+      {
+        h: 'What email controls can and cannot do',
+        ps: [
+          {text: 'SPF, DKIM, and DMARC can make unauthorized use of the firm\'s exact domain harder. Managed filtering, threat protection, reporting, and triage can reduce the malicious messages that reach staff. Neither control can make a payment change trustworthy, and neither stops every request sent from a compromised real account or a convincing lookalike domain.', links: [{phrase: 'Managed filtering', to: '/helm-mail'}]},
+          'Use technical controls to reduce exposure and the callback to authorize the money. Keeping those jobs separate prevents the firm from treating an email-security pass as approval of a financial instruction.',
+        ],
+      },
+      {
+        h: 'If a transfer has already been sent',
+        ps: [
+          'Contact the sending financial institution immediately and ask it to contact the receiving institution. Report the event to the FBI Internet Crime Complaint Center, preserve the original messages and headers, and record the timeline without altering the affected mailbox or device more than necessary.',
+          'Follow the firm\'s incident plan for insurer, counsel, client, law-enforcement, and professional-responsibility decisions. The right notification path depends on the facts and jurisdiction, so preserve what happened and involve the appropriate advisers instead of making an early conclusion about exposure.',
         ],
       },
     ],
     takeaway:
-      'Managed email defense reduces the attacks that reach people; the callback protocol reduces the damage when a convincing request still arrives. Helm Mail combines phishing protection, reporting, simulations, and ongoing awareness. Helm Aware installs the payment protocol and practices it with leaders.',
+      'Record known-good numbers before payment week, require a callback for every new or changed instruction, separate verification from approval, and retain the evidence. Email protection reduces attacks; it does not authorize a transfer.',
   },
   {
     slug: 'cui-handling-shop-floor',

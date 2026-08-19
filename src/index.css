@@ -991,8 +991,8 @@ body {
 
 /* ------------------------- Operating-facts ledger ------------------------- */
 
-/* "The operating facts" reads as a ruled ledger of short entries — a figure
-   and the single clause it belongs to — rather than a centered stat strip. */
+/* "The operating facts" reads as a ruled ledger of short entries: a figure
+   and the single clause it belongs to, rather than a centered stat strip. */
 .stats {
   max-width: 720px;
   margin: 0 auto;
@@ -2245,7 +2245,7 @@ html[data-theme='light'] .legal-beam {
 }
 
 @media (max-width: 640px) {
-  /* Keep each lane's differentiator visible on phones — compact, wrapping
+  /* Keep each lane's differentiator visible on phones: compact, wrapping
      on the right edge instead of disappearing. */
   .lane-row {
     padding: 20px;
@@ -2671,6 +2671,7 @@ html[data-theme='light'] .legal-beam {
 
 .article-meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   margin-top: 20px;
@@ -2761,21 +2762,62 @@ html[data-theme='light'] .legal-beam {
   font-weight: 600;
 }
 
-.article-takeaway {
-  margin-top: 48px;
+.article-quick-answer {
+  margin: 0 0 36px;
   border: 1px solid rgba(56, 161, 105, 0.35);
-  border-radius: 20px;
+  border-radius: 16px;
   padding: 28px 32px;
   background: rgba(56, 161, 105, 0.06);
 }
 
-.article-takeaway h2 {
+.article-quick-answer h2 {
   margin-top: 0;
   font-size: 20px;
 }
 
-.article-takeaway p {
+.article-quick-answer p {
   margin-bottom: 0;
+  color: var(--helm-text);
+}
+
+.article-on-page {
+  margin: 0 0 48px;
+  border-block: 1px solid var(--helm-hairline);
+  padding: 24px 0;
+}
+
+.article-on-page h2 {
+  margin: 0 0 14px;
+  font-size: 18px;
+}
+
+.article-on-page ol {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.article-on-page a,
+.article-trust a {
+  color: var(--helm-accent-text);
+  text-underline-offset: 3px;
+}
+
+.article-trust {
+  margin-top: 52px;
+  border-block: 1px solid var(--helm-hairline);
+  padding: 24px 0;
+}
+
+.article-trust h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.article-trust p {
+  margin: 0;
+  font-size: 15px;
 }
 
 .article-sources {
@@ -2829,6 +2871,17 @@ html[data-theme='light'] .legal-beam {
 
 .article-related a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 560px) {
+  .article-meta {
+    align-items: flex-start;
+    gap: 8px 10px;
+  }
+
+  .article-quick-answer {
+    padding: 24px;
+  }
 }
 
 /* ----------------------------- Footer columns ---------------------------- */

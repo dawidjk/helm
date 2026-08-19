@@ -13,6 +13,7 @@ export type Lane = {
   reportDomain: string;
   metaTitle: string;
   metaDesc: string;
+  serviceType?: string;
   eyebrow: string;
   headline: string;
   sub: string;
@@ -41,6 +42,11 @@ export type Lane = {
   planSub: string;
   steps: {num: string; title: string; body: string}[];
   proof: {title: string; points: string[]};
+  commonQuestions?: {
+    question: string;
+    answer: string;
+    resource?: {slug: string; label: string};
+  }[];
   resources: {slug: string; title: string; note: string}[];
   cta: {title: string; sub: string; label: string};
 };
@@ -62,10 +68,28 @@ export default function LanePage({lane}: {lane: Lane}) {
         path={`/${lane.slug}`}
         jsonLd={{
           '@context': 'https://schema.org',
-          '@type': 'BreadcrumbList',
-          itemListElement: [
-            {'@type': 'ListItem', position: 1, name: 'Industries', item: siteUrl('/')},
-            {'@type': 'ListItem', position: 2, name: lane.eyebrow, item: siteUrl(`/${lane.slug}`)},
+          '@graph': [
+            {
+              '@type': 'Service',
+              name: lane.metaTitle.split(' | ')[0],
+              serviceType: lane.serviceType || 'Managed cybersecurity services',
+              description: lane.metaDesc,
+              url: siteUrl(`/${lane.slug}`),
+              provider: {
+                '@type': 'Organization',
+                name: 'Helm Security LLC',
+                url: siteUrl('/'),
+              },
+              areaServed: {'@type': 'State', name: 'New Jersey'},
+              audience: {'@type': 'BusinessAudience', audienceType: lane.eyebrow},
+            },
+            {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {'@type': 'ListItem', position: 1, name: 'Industries', item: siteUrl('/')},
+                {'@type': 'ListItem', position: 2, name: lane.eyebrow, item: siteUrl(`/${lane.slug}`)},
+              ],
+            },
           ],
         }}
       />
@@ -179,7 +203,29 @@ export default function LanePage({lane}: {lane: Lane}) {
         </div>
       </Band>
 
-      <Band>
+      {lane.commonQuestions && (
+        <Band>
+          <div className="band-head lane-questions-head">
+            <h2 className="observe">Questions to settle before you buy anything.</h2>
+            <p className="observe d1">Clear answers first, then the right scope and next step.</p>
+          </div>
+          <div className="lane-question-list">
+            {lane.commonQuestions.map((item, index) => (
+              <article key={item.question} className={`lane-question-row observe d${Math.min(index + 1, 5)}`}>
+                <h3>{item.question}</h3>
+                <div>
+                  <p>{item.answer}</p>
+                  {item.resource && (
+                    <Link to={canonicalPath(`/resources/${item.resource.slug}`)}>{item.resource.label}</Link>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+        </Band>
+      )}
+
+      <Band variant={lane.commonQuestions ? 'raised' : undefined}>
         <div className="band-head">
           <h2 className="observe">Practical guides for your next decision.</h2>
           <p className="observe d1">Start with the question already in front of you, then follow the related guidance.</p>

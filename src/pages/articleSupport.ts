@@ -33,9 +33,21 @@ const sources = {
     title: 'U.S. Department of Defense: DFARS Subpart 204.76',
     href: 'https://www.acq.osd.mil/dpap/dars/dfars/html/current/204_76.htm',
   },
-  nist171: {
-    title: 'NIST: Protecting Controlled Unclassified Information, SP 800-171 Rev. 3',
-    href: 'https://nvlpubs.nist.gov/nistpubs/SpecialPublications/800-171r3/NIST.SP.800-171r3.html',
+  nist171r2: {
+    title: 'NIST: Protecting Controlled Unclassified Information, SP 800-171 Rev. 2',
+    href: 'https://csrc.nist.gov/pubs/sp/800/171/r2/upd1/final',
+  },
+  dodAssessmentMethodology: {
+    title: 'U.S. Department of Defense: NIST SP 800-171 DoD Assessment Methodology',
+    href: 'https://www.acq.osd.mil/asda/dpc/cp/cyber/docs/safeguarding/NIST-SP-800-171-Assessment-Methodology-Version-1.2.1-6.24.2020.pdf',
+  },
+  dfars7020: {
+    title: 'Acquisition.gov: DFARS 252.204-7020 assessment requirements',
+    href: 'https://www.acquisition.gov/dfars/252.204-7020-nist-sp-800-171dod-assessment-requirements.',
+  },
+  dojMorse: {
+    title: 'U.S. Department of Justice: MORSECORP cybersecurity settlement',
+    href: 'https://www.justice.gov/opa/pr/defense-contractor-morsecorp-inc-agrees-pay-46-million-settle-cybersecurity-fraud',
   },
   nist115: {
     title: 'NIST: Technical Guide to Information Security Testing and Assessment',
@@ -105,6 +117,14 @@ const sources = {
     title: 'ABA: Cybersecurity legal and ethical duties for attorneys',
     href: 'https://www.americanbar.org/groups/law_practice/resources/law-practice-today/2019/cybersecurity-attorneys-legal-ethical/',
   },
+  abaSecureCommunications: {
+    title: 'ABA: Formal Opinion 477R on securing protected client information',
+    href: 'https://www.americanbar.org/products/ecd/chapter/348777154/',
+  },
+  njReasonableCare: {
+    title: 'New Jersey Courts: Opinion 701 on reasonable care for client information',
+    href: 'https://www.njcourts.gov/sites/default/files/notices/2006/03/ACPE_Opinion701_ElectronicStorage_12022005.pdf',
+  },
   irsWisp: {
     title: 'IRS: Tax professionals are required to maintain a WISP',
     href: 'https://www.irs.gov/newsroom/tax-professional-tips-for-creating-a-data-security-plan',
@@ -146,7 +166,7 @@ export const articleSupport: Record<string, ArticleSupport> = {
   },
   'sprs-score-explained': {
     relatedSlugs: ['cmmc-level-1-vs-level-2', 'cmmc-deadline-checklist', 'ssp-poam-explained'],
-    sources: [sources.sprs, sources.nist171],
+    sources: [sources.dodAssessmentMethodology, sources.dfars7020, sources.dojMorse],
   },
   'password-managers-small-teams': {
     relatedSlugs: ['mfa-methods-compared', 'employee-offboarding-checklist', 'm365-security-baseline'],
@@ -154,7 +174,7 @@ export const articleSupport: Record<string, ArticleSupport> = {
   },
   'cmmc-level-1-vs-level-2': {
     relatedSlugs: ['cmmc-deadline-checklist', 'sprs-score-explained', 'cui-handling-shop-floor'],
-    sources: [sources.dodCmmc, sources.nist171],
+    sources: [sources.dodCmmc, sources.nist171r2, sources.dfars7020],
   },
   'invoice-fraud-red-flags': {
     relatedSlugs: ['vendor-email-compromise-contractors', 'wire-fraud-prevention-law-firms', 'what-is-dmarc'],
@@ -190,7 +210,7 @@ export const articleSupport: Record<string, ArticleSupport> = {
   },
   'cmmc-deadline-checklist': {
     relatedSlugs: ['cmmc-level-1-vs-level-2', 'sprs-score-explained', 'ssp-poam-explained'],
-    sources: [sources.dodCmmc, sources.dfars],
+    sources: [sources.dodCmmc, sources.dfars7020, sources.dojMorse],
   },
   'job-site-devices-public-wifi': {
     relatedSlugs: ['vendor-email-compromise-contractors', 'invoice-fraud-red-flags', 'mfa-methods-compared'],
@@ -198,7 +218,7 @@ export const articleSupport: Record<string, ArticleSupport> = {
   },
   'employee-offboarding-checklist': {
     relatedSlugs: ['password-managers-small-teams', 'm365-security-baseline', 'incident-response-plan-small-business'],
-    sources: [sources.nist171, sources.cisaPasswords],
+    sources: [sources.nist171r2, sources.cisaPasswords],
   },
   'backup-testing-insurers': {
     relatedSlugs: ['cyber-insurance-questionnaire', 'incident-response-plan-small-business', 'cyber-insurance-claim-denied'],
@@ -210,15 +230,15 @@ export const articleSupport: Record<string, ArticleSupport> = {
   },
   'ssp-poam-explained': {
     relatedSlugs: ['sprs-score-explained', 'cmmc-level-1-vs-level-2', 'cmmc-deadline-checklist'],
-    sources: [sources.nistSsp, sources.nist171],
+    sources: [sources.dodCmmc, sources.nist171r2, sources.nistSsp],
   },
   'wire-fraud-prevention-law-firms': {
     relatedSlugs: ['invoice-fraud-red-flags', 'ai-phishing-red-flags', 'what-is-dmarc'],
-    sources: [sources.fbiBec, sources.cisaPhishing],
+    sources: [sources.fbiBec, sources.abaSecureCommunications, sources.njReasonableCare],
   },
   'cui-handling-shop-floor': {
     relatedSlugs: ['cmmc-level-1-vs-level-2', 'ssp-poam-explained', 'sprs-score-explained'],
-    sources: [sources.cuiRegistry, sources.nist171],
+    sources: [sources.cuiRegistry, sources.nist171r2],
   },
   'pen-test-vs-vulnerability-scan': {
     relatedSlugs: ['what-a-soc-actually-does', 'incident-response-plan-small-business', 'cyber-insurance-questionnaire'],
@@ -238,7 +258,7 @@ export const articleSupport: Record<string, ArticleSupport> = {
   },
   'law-firm-device-security-checklist': {
     relatedSlugs: ['wire-fraud-prevention-law-firms', 'what-a-soc-actually-does', 'employee-offboarding-checklist'],
-    sources: [sources.abaTechReport, sources.abaCyberDuties, sources.cisaRansomware],
+    sources: [sources.abaTechReport, sources.abaCyberDuties, sources.abaSecureCommunications, sources.njReasonableCare, sources.cisaRansomware],
   },
   'wisp-checklist-accounting-firms': {
     relatedSlugs: ['employee-offboarding-checklist', 'backup-testing-insurers', 'm365-security-baseline'],
