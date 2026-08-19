@@ -68,8 +68,9 @@ export default function Trust() {
             Trust and security, answered directly.
           </h1>
           <p className="sub reveal d2">
-            We sell security, so it is fair to ask how we protect our systems
-            and yours. This page answers directly, including the gaps.
+            Before you trust Helm with account records, scan findings, or
+            security alerts, you should know who can access them, which vendors
+            are involved, and which controls are not in place yet.
           </p>
         </div>
         <ScrollCue />
@@ -81,8 +82,9 @@ export default function Trust() {
             <div className="trust-summary-intro">
               <h2 id="trust-summary-title">Helm at a glance</h2>
               <p>
-                The operating model, data footprint, and known limitations we
-                would want to understand before choosing a security partner.
+                The facts we would want to know before choosing a security
+                provider: who delivers the service, what data is stored, and
+                which limitations still need to be considered.
               </p>
             </div>
             <div className="trust-summary-grid">
@@ -126,28 +128,25 @@ export default function Trust() {
             <section>
               <h2>Who we are</h2>
               <p>
-                Helm Security is a New Jersey LLC, formed, with an EIN and a
-                business bank account in place. We are two operators, not a
-                large firm dressed up to look like one. Dawid Kluszczynski is
+                Helm Security is a New Jersey LLC with an EIN and business bank
+                account. Kelly and Dawid Kluszczynski are the entire operating
+                team today. Dawid is
                 VP, Product &amp; Delivery. Kelly Kluszczynski is VP, Growth
-                &amp; Partnerships. That is the whole operating team today,
-                and we say so plainly rather than implying otherwise. Material
-                pricing, scope, legal, and service commitments require both
-                executives to agree.
+                &amp; Partnerships. Material pricing, scope, legal, and service
+                commitments require both of them to agree.
               </p>
             </section>
 
             <section>
               <h2>How we deliver, and who actually does the monitoring</h2>
               <p>
-                Helm Security is a reseller and integrator, not the builder of
-                the detection technology in front of your business. Detection
-                and response capability lives with the platform vendors we
-                resell and configure, not with an overnight desk we staff
-                ourselves. For Helm Watch device protection, that platform
-                is Huntress. Helm Mail layers MailProtector filtering with
-                Doppel's email-threat and human-risk capabilities. Helm Watch focuses on managed
-                device detection and response at launch.
+                Helm configures and manages technology supplied by specialist
+                vendors. We do not claim to have built the underlying detection
+                systems or to staff an overnight security desk ourselves.
+                Huntress provides the monitoring and response platform behind
+                Helm Watch. Helm Mail combines MailProtector filtering with
+                Doppel's email-threat and human-risk capabilities. Helm Watch
+                focuses on managed device detection and response at launch.
                 We do not describe identity monitoring, SIEM, encrypted-message
                 delivery, or secure file transfer as included.
               </p>
@@ -183,17 +182,15 @@ export default function Trust() {
                 not add our own layer on top.
               </p>
               <p>
-                Card data never touches our systems: Stripe's own hosted
-                fields handle payment details, and we store only a Stripe
-                customer identifier. Helm does not copy mailbox content into
-                its own portal; MailProtector processes mail-flow data and
-                Doppel processes mailbox and reported-message data to deliver
-                Helm Mail. Helm reporting is built from
-                security and program activity rather than message bodies. We do store scan findings and
-                security alerts, since tracking your posture over time is the
-                point of the service, along with the account records needed
-                to run your organization (users, org details, billing
-                status, and any scan or deployment requests you submit).
+                Stripe's hosted fields handle card details, so Helm stores only
+                a Stripe customer identifier. Helm does not copy mailbox content
+                into its portal. MailProtector processes mail-flow data and
+                Doppel processes mailbox and reported-message data to provide
+                Helm Mail. Helm reporting uses security and program activity,
+                not message bodies. We do store scan findings, security alerts,
+                user and organization records, billing status, and the scan or
+                deployment requests you submit because those records are needed
+                to provide and track the service.
               </p>
             </section>
 
@@ -225,10 +222,10 @@ export default function Trust() {
             <section>
               <h2>Access control on our side</h2>
               <p>
-                We use magic-link sign-in: a one-time link by email, no
-                password to steal, reuse, or leak. Sessions are tracked
-                server side, and every admin page and action re-checks your
-                role on the server before doing anything.
+                Portal users sign in through a one-time link sent by email, so
+                there is no portal password to reuse or expose. Sessions are
+                tracked on the server, and every administrator page and action
+                checks the user’s role before proceeding.
               </p>
               <p>
                 Multi-factor authentication is not yet available on portal
@@ -241,8 +238,8 @@ export default function Trust() {
             <section>
               <h2>What we do not have yet</h2>
               <p>
-                We would rather list this plainly than have you find out the
-                hard way.
+                These limitations may affect whether Helm is the right fit for
+                your requirements today.
               </p>
               <ul className="check-list">
                 {gaps.map((g) => (

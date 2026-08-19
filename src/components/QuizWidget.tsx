@@ -105,7 +105,7 @@ const QUESTIONS: Question[] = [
   {
     id: 'incident_plan',
     category: 'Incident response plan',
-    text: 'If you discovered a fraudulent wire transfer or a compromised email account today, would your team know exactly what to do first?',
+    text: 'If you discovered a fraudulent transfer or compromised email account today, would your team know whom to call and what not to touch?',
     options: [
       {label: 'Yes, we have a written incident plan and know the first steps', points: 10},
       {label: 'Somewhat, we would figure it out', points: 5},
@@ -129,23 +129,23 @@ function getTier(score: number): Tier {
     return {
       key: 'risk',
       label: 'At Risk',
-      headline: 'Your business is at high risk of AI-enabled fraud',
-      copy: 'Right now, a well-crafted deepfake call or spoofed vendor email would likely succeed against your team. This is fixable, and fast, but it needs attention before it becomes an incident.',
+      headline: 'Several basic fraud controls are missing',
+      copy: 'A convincing payment request could reach one employee with no required callback, second approval, or written first step. Start with those process gaps before adding more tools.',
     };
   }
   if (score <= 70) {
     return {
       key: 'exposed',
       label: 'Exposed',
-      headline: 'You have real gaps that a determined scammer would find',
-      copy: 'You have some controls in place, but the gaps are big enough that a convincing fake call, email, or invoice could still get through. A few targeted fixes close most of this exposure.',
+      headline: 'Some controls are in place, but important exceptions remain',
+      copy: 'A payment, account, or employee that falls outside the current process may still rely on someone noticing a convincing fake. Review the partial answers first and make the rule consistent.',
     };
   }
   return {
     key: 'prepared',
     label: 'Prepared',
-    headline: 'You are ahead of most small and medium-sized businesses on this',
-    copy: 'Your controls are solid. The highest-value move now is keeping them current as AI scams evolve, and making sure your cyber insurance and compliance paperwork reflect what you are actually doing.',
+    headline: 'The main controls are in place',
+    copy: 'Keep them current as payment processes, employees, vendors, and AI tools change. Make sure insurance and customer-security answers continue to match the controls the business is using.',
   };
 }
 
@@ -251,7 +251,7 @@ export default function QuizWidget() {
           </div>
 
           <div className="quiz-breakdown">
-            <h3 className="quiz-breakdown-title">Where the risk is</h3>
+            <h3 className="quiz-breakdown-title">What to review</h3>
             <div className="quiz-breakdown-list">
               {QUESTIONS.map((q, i) => {
                 const optIndex = answers[i];
@@ -269,7 +269,7 @@ export default function QuizWidget() {
 
           <div className="quiz-cta">
             <p className="quiz-cta-intro">
-              Want hard data to go with your score? Run the free scan of your email domain.
+              Check the public email controls behind your score with the free domain scan.
             </p>
             <LeadForm source="quiz" cta="Run my free scan" compact />
             <p className="quiz-cta-alt">

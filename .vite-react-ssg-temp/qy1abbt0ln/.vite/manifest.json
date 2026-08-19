@@ -1,0 +1,234 @@
+{
+  "_HeroBackdrop-Df6dV91h.js": {
+    "file": "assets/HeroBackdrop-Df6dV91h.js",
+    "name": "HeroBackdrop",
+    "assets": [
+      "assets/japandi-secondary-hero-BEmQogfW.webp"
+    ]
+  },
+  "_PanelVisual-DfnmiR52.js": {
+    "file": "assets/PanelVisual-DfnmiR52.js",
+    "name": "PanelVisual",
+    "imports": [
+      "src/main.tsx"
+    ]
+  },
+  "_ProductMotif-CoTE1ELm.js": {
+    "file": "assets/ProductMotif-CoTE1ELm.js",
+    "name": "ProductMotif"
+  },
+  "_ctaCopy-Zcyc_nKq.js": {
+    "file": "assets/ctaCopy-Zcyc_nKq.js",
+    "name": "ctaCopy",
+    "imports": [
+      "src/pages/lanes.ts"
+    ]
+  },
+  "_richText-BOP0CcG9.js": {
+    "file": "assets/richText-BOP0CcG9.js",
+    "name": "richText",
+    "imports": [
+      "src/main.tsx"
+    ]
+  },
+  "src/main.tsx": {
+    "file": "main.mjs",
+    "name": "main",
+    "src": "src/main.tsx",
+    "isEntry": true,
+    "dynamicImports": [
+      "src/pages/LanePage.tsx",
+      "src/pages/lanes.ts",
+      "src/pages/LanePage.tsx",
+      "src/pages/lanes.ts",
+      "src/pages/LanePage.tsx",
+      "src/pages/lanes.ts",
+      "src/pages/LanePage.tsx",
+      "src/pages/lanes.ts",
+      "src/pages/LanePage.tsx",
+      "src/pages/lanes.ts",
+      "src/pages/LanePage.tsx",
+      "src/pages/lanes.ts",
+      "src/pages/LegalPage.tsx",
+      "src/pages/legal.ts",
+      "src/pages/LegalPage.tsx",
+      "src/pages/legal.ts",
+      "src/pages/Pricing.tsx",
+      "src/pages/ProductPage.tsx",
+      "src/pages/FreeScan.tsx",
+      "src/pages/Quiz.tsx",
+      "src/pages/About.tsx",
+      "src/pages/Faq.tsx",
+      "src/pages/Trust.tsx",
+      "src/pages/Contact.tsx",
+      "src/pages/Resources.tsx",
+      "src/pages/ArticlePage.tsx",
+      "src/pages/articles.ts"
+    ],
+    "assets": [
+      "assets/japandi-hero-B9tC9loB.webp",
+      "assets/japandi-home-mobile-640-BiIsuRKi.webp",
+      "assets/japandi-error-still-v1-Biy-X21Z.webp",
+      "assets/inter-latin-400-normal-C38fXH4l.woff2",
+      "assets/tenor-sans-latin-400-normal-Bloz8C9r.woff2",
+      "assets/manrope-latin-400-normal-PaqtzbVb.woff2",
+      "assets/manrope-latin-600-normal-4f0koTD-.woff2",
+      "assets/inter-latin-500-normal-Cerq10X2.woff2",
+      "assets/inter-latin-600-normal-LgqL8muc.woff2",
+      "assets/inter-latin-700-normal-Yt3aPRUw.woff2",
+      "assets/inter-latin-800-normal-BYj_oED-.woff2"
+    ]
+  },
+  "src/pages/About.tsx": {
+    "file": "assets/About-B5nCdkkL.js",
+    "name": "About",
+    "src": "src/pages/About.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_HeroBackdrop-Df6dV91h.js",
+      "src/main.tsx"
+    ]
+  },
+  "src/pages/ArticlePage.tsx": {
+    "file": "assets/ArticlePage-iAwZVd2W.js",
+    "name": "ArticlePage",
+    "src": "src/pages/ArticlePage.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_HeroBackdrop-Df6dV91h.js",
+      "src/main.tsx",
+      "src/pages/articles.ts",
+      "_richText-BOP0CcG9.js",
+      "_ctaCopy-Zcyc_nKq.js",
+      "src/pages/lanes.ts"
+    ]
+  },
+  "src/pages/Contact.tsx": {
+    "file": "assets/Contact-CWZsVmIj.js",
+    "name": "Contact",
+    "src": "src/pages/Contact.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_HeroBackdrop-Df6dV91h.js",
+      "src/main.tsx"
+    ]
+  },
+  "src/pages/Faq.tsx": {
+    "file": "assets/Faq-E6R81w8h.js",
+    "name": "Faq",
+    "src": "src/pages/Faq.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_HeroBackdrop-Df6dV91h.js",
+      "src/main.tsx",
+      "_richText-BOP0CcG9.js"
+    ]
+  },
+  "src/pages/FreeScan.tsx": {
+    "file": "assets/FreeScan-CddpWHv_.js",
+    "name": "FreeScan",
+    "src": "src/pages/FreeScan.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.tsx",
+      "_PanelVisual-DfnmiR52.js",
+      "_HeroBackdrop-Df6dV91h.js"
+    ]
+  },
+  "src/pages/LanePage.tsx": {
+    "file": "assets/LanePage-D14EdJ2I.js",
+    "name": "LanePage",
+    "src": "src/pages/LanePage.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/main.tsx",
+      "_HeroBackdrop-Df6dV91h.js",
+      "_PanelVisual-DfnmiR52.js"
+    ]
+  },
+  "src/pages/LegalPage.tsx": {
+    "file": "assets/LegalPage-BdTpdrLy.js",
+    "name": "LegalPage",
+    "src": "src/pages/LegalPage.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_HeroBackdrop-Df6dV91h.js",
+      "src/main.tsx"
+    ]
+  },
+  "src/pages/Pricing.tsx": {
+    "file": "assets/Pricing-CjbVg2zK.js",
+    "name": "Pricing",
+    "src": "src/pages/Pricing.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_HeroBackdrop-Df6dV91h.js",
+      "src/main.tsx",
+      "_ProductMotif-CoTE1ELm.js"
+    ]
+  },
+  "src/pages/ProductPage.tsx": {
+    "file": "assets/ProductPage-fM1zdZiV.js",
+    "name": "ProductPage",
+    "src": "src/pages/ProductPage.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_HeroBackdrop-Df6dV91h.js",
+      "src/main.tsx",
+      "_ProductMotif-CoTE1ELm.js",
+      "_ctaCopy-Zcyc_nKq.js",
+      "src/pages/lanes.ts"
+    ]
+  },
+  "src/pages/Quiz.tsx": {
+    "file": "assets/Quiz-CL2l0YbS.js",
+    "name": "Quiz",
+    "src": "src/pages/Quiz.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_HeroBackdrop-Df6dV91h.js",
+      "src/main.tsx"
+    ]
+  },
+  "src/pages/Resources.tsx": {
+    "file": "assets/Resources-BeUuMdl9.js",
+    "name": "Resources",
+    "src": "src/pages/Resources.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_HeroBackdrop-Df6dV91h.js",
+      "src/main.tsx",
+      "src/pages/articles.ts"
+    ]
+  },
+  "src/pages/Trust.tsx": {
+    "file": "assets/Trust-BWfQYriN.js",
+    "name": "Trust",
+    "src": "src/pages/Trust.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_HeroBackdrop-Df6dV91h.js",
+      "src/main.tsx",
+      "_ctaCopy-Zcyc_nKq.js",
+      "src/pages/lanes.ts"
+    ]
+  },
+  "src/pages/articles.ts": {
+    "file": "assets/articles-BOOF_50T.js",
+    "name": "articles",
+    "src": "src/pages/articles.ts",
+    "isDynamicEntry": true
+  },
+  "src/pages/lanes.ts": {
+    "file": "assets/lanes-BgR10_g3.js",
+    "name": "lanes",
+    "src": "src/pages/lanes.ts",
+    "isDynamicEntry": true
+  },
+  "src/pages/legal.ts": {
+    "file": "assets/legal-C-W1MdG8.js",
+    "name": "legal",
+    "src": "src/pages/legal.ts",
+    "isDynamicEntry": true
+  }
+}

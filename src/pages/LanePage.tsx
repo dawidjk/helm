@@ -143,7 +143,7 @@ export default function LanePage({lane}: {lane: Lane}) {
 
       <Band variant="raised">
         <div className="band-head observe">
-          <h2>What's actually at risk</h2>
+          <h2>What can go wrong</h2>
         </div>
         <div className="risk-list">
           {lane.pains.map((p) => (
@@ -158,8 +158,8 @@ export default function LanePage({lane}: {lane: Lane}) {
       {lane.evidence && (
         <Band>
           <div className="band-head lane-evidence-head">
-            <h2 className="observe">What the evidence says.</h2>
-            <p className="observe d1">Published figures and official guidance, with the scope stated plainly.</p>
+            <h2 className="observe">What published sources show.</h2>
+            <p className="observe d1">The figures and guidance below include the limits needed to read them accurately.</p>
           </div>
           <div className="lane-evidence-list">
             {lane.evidence.map((item, i) => (
@@ -206,8 +206,8 @@ export default function LanePage({lane}: {lane: Lane}) {
       {lane.commonQuestions && (
         <Band>
           <div className="band-head lane-questions-head">
-            <h2 className="observe">Questions to settle before you buy anything.</h2>
-            <p className="observe d1">Clear answers first, then the right scope and next step.</p>
+            <h2 className="observe">Questions to answer before choosing a service.</h2>
+            <p className="observe d1">The answer determines which systems, people, and evidence belong in scope.</p>
           </div>
           <div className="lane-question-list">
             {lane.commonQuestions.map((item, index) => (
@@ -227,8 +227,8 @@ export default function LanePage({lane}: {lane: Lane}) {
 
       <Band variant={lane.commonQuestions ? 'raised' : undefined}>
         <div className="band-head">
-          <h2 className="observe">Practical guides for your next decision.</h2>
-          <p className="observe d1">Start with the question already in front of you, then follow the related guidance.</p>
+          <h2 className="observe">Guides for the problem in front of you.</h2>
+          <p className="observe d1">Start with the closest question and use the related guide for the next step.</p>
         </div>
         <div className="lane-strip">
           {lane.resources.map((resource, i) => (

@@ -48,8 +48,8 @@ export const productList: Product[] = [
     motif: 'command',
     name: 'Helm Command',
     metaTitle: 'Helm Command: Managed Security Program Leadership',
-    tagline: 'One accountable owner for the security work.',
-    desc: 'A maintained security program for 50 to 249 employee organizations that already have IT but lack someone accountable for risk, roadmap, evidence, and follow-through. Helm coordinates the work without taking over help desk or general IT.',
+    tagline: 'Keep important security work from getting lost between teams.',
+    desc: 'Security decisions often get split across IT tickets, insurance forms, vendor projects, and leadership meetings. When nobody owns the whole list, overdue work can stay open until a customer, insurer, or incident exposes it. Helm Command keeps the risks, decisions, evidence, and follow-up in one managed program without taking over help desk or general IT.',
     bestFor: '50 to 249 employee organizations with an incumbent IT provider or internal IT capability but no accountable security-program owner',
     metaDesc:
       'Helm Command provides managed security program leadership, risk and roadmap management, evidence readiness, and incumbent IT coordination for qualified design partners.',
@@ -59,25 +59,25 @@ export const productList: Product[] = [
     features: [
       {
         title: 'A maintained risk register and 12-month roadmap',
-        body: 'Security work is prioritized, assigned, and kept current so important decisions do not disappear into an assessment report or an IT ticket queue.',
+        body: 'Each important security issue has an owner, a due date, and a reason it matters. Helm keeps the list current so unfinished work does not disappear into an old assessment or a crowded IT queue.',
       },
       {
         title: 'Evidence that stays ready',
-        body: 'Helm maintains agreed control evidence and drafts bounded questionnaire and insurance responses from what can actually be verified. Your organization keeps ownership of every attestation.',
+        body: 'When a customer or insurer asks what is protected, the answer should not depend on memory. Helm maintains the agreed evidence and drafts responses from what can be verified. Your organization still reviews and owns every attestation.',
       },
       {
         title: 'Leadership cadence and incident readiness',
-        body: 'Quarterly leadership reviews, an annual tabletop, and a documented incident-coordination path keep executives, internal IT, and incumbent providers working from the same plan.',
+        body: 'Quarterly reviews, an annual tabletop, and a written incident path give leaders, internal IT, and outside providers the same plan to follow before a serious problem forces them to coordinate under pressure.',
       },
       {
         title: 'Coordination without an IT takeover',
-        body: 'Helm owns the security program and follows through with the people doing the work. Help desk, general administration, procurement, and routine IT operations stay with your existing provider or internal team.',
+        body: 'Helm follows the security work through with the people responsible for completing it. Your existing provider or internal team still handles help desk, administration, procurement, and routine IT operations.',
       },
     ],
     how: [
-      {num: '1', title: 'Qualify', body: 'We confirm the business trigger, executive sponsor, existing IT ownership, environment, and whether the program can fit both sides without creating an open-ended support relationship.'},
-      {num: '2', title: 'Establish', body: 'We baseline responsibilities, risks, evidence, incident contacts, and the first 12-month roadmap, then agree on owners and due dates.'},
-      {num: '3', title: 'Maintain', body: 'Helm runs the monthly, quarterly, annual, and event-driven cadence while your IT provider and internal owners perform the operational changes assigned to them.'},
+      {num: '1', title: 'Confirm the fit', body: 'We review why the program is needed, who sponsors it, who owns IT today, and whether the work can be clearly bounded for both sides.'},
+      {num: '2', title: 'Build the working plan', body: 'We document responsibilities, current risks, available evidence, incident contacts, and the first 12-month roadmap. Every action receives an owner and due date.'},
+      {num: '3', title: 'Keep it moving', body: 'Helm runs the agreed monthly, quarterly, annual, and event-driven reviews while the named IT and business owners complete the operational changes assigned to them.'},
     ],
     faqs: [
       {q: 'Does Helm Command replace our MSP or internal IT team?', a: 'No. Command is the accountable security-program layer. Your MSP or internal IT team keeps responsibility for help desk, administration, patching, procurement, backup operations, and other routine IT work.'},
@@ -93,7 +93,7 @@ export const productList: Product[] = [
     name: 'Helm Mail',
     metaTitle: 'Helm Mail: Managed Email and Human-Risk Security',
     tagline: 'Protect the inbox. Prepare the person.',
-    desc: 'Layered email and human-risk security for compatible Microsoft 365 and Google Workspace environments. Helm combines mail-flow filtering, threat-informed phishing and impersonation protection, employee reporting and triage, ongoing simulations, and awareness training in one managed service.',
+    desc: 'A convincing email can lead an employee to enter a password, open a malicious file, or approve a fraudulent payment. Helm Mail combines filtering, phishing and impersonation protection, employee reporting, triage, simulations, and awareness learning in one managed service for compatible Microsoft 365 and Google Workspace environments.',
     bestFor: 'businesses that want email-threat protection, phishing response, and ongoing employee readiness managed together',
     metaDesc:
       'Layered email filtering, phishing protection, triage, simulations, and awareness learning at $50/user/month with a $1,000 monthly account minimum.',
@@ -103,21 +103,21 @@ export const productList: Product[] = [
     features: [
       {
         title: 'Two layers of email defense',
-        body: 'Mail-flow filtering handles malicious, suspicious, and unwanted messages while a second detection layer focuses on phishing, business-email compromise, impersonation, and coordinated campaigns.',
+        body: 'Mail-flow filtering blocks malicious, suspicious, and unwanted messages. A second detection layer looks for phishing, business-email compromise, impersonation, and related campaigns that can otherwise appear to be ordinary business email.',
       },
       {
         title: 'Report, triage, and remove',
-        body: 'Employees can report suspicious messages from Outlook or Gmail. Helm Mail triages them, removes confirmed malicious messages, and gives people plain-English feedback.',
+        body: 'Employees report suspicious messages from Outlook or Gmail instead of deciding alone. Helm Mail triages the report, removes confirmed malicious messages, and explains the result in plain English.',
       },
       {
         title: 'Training connected to real threats',
-        body: 'Managed simulations and awareness learning use reporting and campaign signals to reinforce the behaviors attackers are actually testing, with Helm review and reporting.',
+        body: 'Managed simulations and awareness learning reinforce the decisions attackers are testing, including suspicious sign-ins, payment changes, and urgent requests. Helm reviews the results and reports what needs attention.',
       },
     ],
     how: [
       {num: '1', title: 'Connect', body: 'We confirm compatibility, connect the detection layer, and configure the appropriate mail-flow protection for your Microsoft 365 or Google Workspace environment. Your mailboxes stay where they are.'},
-      {num: '2', title: 'Protect and prepare', body: 'Filtering, threat detection, employee reporting, automated triage, simulations, and awareness learning are configured as one managed program.'},
-      {num: '3', title: 'Improve', body: 'Helm reviews notable threats and human-risk trends, then turns them into practical recommendations and management reporting.'},
+      {num: '2', title: 'Protect and prepare', body: 'We configure filtering, threat detection, employee reporting, triage, simulations, and awareness learning as one program.'},
+      {num: '3', title: 'Review what happens', body: 'Helm reviews notable threats and employee-reporting patterns, then explains what happened and what the business should adjust.'},
     ],
     faqs: [
       {q: 'Do we need to migrate our email?', a: 'No. Your mailboxes stay in Microsoft 365 or Google Workspace. Helm configures the appropriate filtering and detection connections for your environment; the exact mail-flow and DNS changes are confirmed before deployment.'},
@@ -132,8 +132,8 @@ export const productList: Product[] = [
     motif: 'aware',
     name: 'Helm Aware',
     metaTitle: 'Helm Aware: AI Scam Readiness Workshop',
-    tagline: 'Make the next scam less convincing.',
-    desc: 'A fixed-fee working session that turns AI-enabled fraud into practical controls: a shadow-AI review, live scam training, a written AI-use policy, and a payment-verification protocol your team can use immediately.',
+    tagline: 'Give your team a process that a convincing scam cannot bypass.',
+    desc: 'A cloned voice or polished email can sound completely legitimate. If the business has no rule for checking payment changes or sensitive AI use, employees have to make high-consequence decisions on their own. Helm Aware is a fixed-fee working session that produces an AI-use policy, live scam training, and a payment-verification protocol the team can use immediately.',
     bestFor: 'leadership teams that need an AI-use policy, payment-verification process, and practical live scam training',
     metaDesc:
       'A fixed-fee AI scam readiness workshop for small and medium-sized businesses, including policy, training, and a payment-verification protocol.',
@@ -143,15 +143,15 @@ export const productList: Product[] = [
     features: [
       {
         title: 'See where AI is already in the business',
-        body: 'A focused shadow-AI review identifies the tools employees use, the information they place into them, and the decisions that need clearer boundaries.',
+        body: 'A focused review identifies which AI tools employees use, what information they put into them, and where the lack of a clear rule could expose client or company information.',
       },
       {
         title: 'Practice the scams that move money',
-        body: 'A live session uses realistic voice-clone, deepfake, impersonation, and payment-change examples so leaders and approvers know what to verify.',
+        body: 'A live session walks through realistic voice-clone, deepfake, impersonation, and payment-change requests so leaders and approvers know when to stop and how to verify them.',
       },
       {
         title: 'Leave with usable controls',
-        body: 'Helm delivers a written AI acceptable-use policy and a payment-verification protocol sized to how your organization actually approves money movement.',
+        body: 'You receive a written AI acceptable-use policy and a payment-verification protocol that reflects how your organization actually approves and releases money.',
       },
     ],
     how: [
@@ -171,8 +171,8 @@ export const productList: Product[] = [
     motif: 'ready',
     name: 'Helm Ready',
     metaTitle: 'Helm Ready: Cyber Insurance and CMMC Readiness',
-    tagline: 'Pass the questionnaire. Win the contract.',
-    desc: 'Fixed-fee compliance readiness: cyber-insurance questionnaires, CMMC/NIST 800-171 gap assessments, and HIPAA controls, remediated, documented, and defended in plain English.',
+    tagline: 'Know which answers you can support before you sign.',
+    desc: 'An unsupported answer on an insurance form, CMMC assessment, or customer questionnaire can create a problem when the evidence is reviewed. Helm Ready is fixed-fee readiness work that identifies what is in place, what is missing, and what needs to be documented before the business makes a representation.',
     bestFor: 'businesses preparing for cyber-insurance, CMMC, or HIPAA readiness work',
     metaDesc:
       'Fixed-fee cyber insurance, CMMC, and HIPAA readiness for small and medium-sized businesses, with documented findings and a prioritized roadmap.',
@@ -182,21 +182,21 @@ export const productList: Product[] = [
     features: [
       {
         title: 'Cyber-insurance questionnaire, answered',
-        body: 'We answer the 12 hard questions accurately, fix the gaps that would have been "no," and give you documentation that holds up at claim time, when it actually matters.',
+        body: 'We verify the common control questions, identify incomplete answers, and organize the evidence behind what the business can support. Any remediation is agreed separately after the gaps are known.',
       },
       {
         title: 'CMMC / NIST 800-171 gap assessment',
-        body: 'For Level 2, all 110 requirements are scored and prioritized. Remediation and any formal C3PAO assessment are separate engagements, so preparation and certification stay independent.',
+        body: 'For Level 2, the agreed scope is assessed against all 110 requirements and each finding is tied to evidence. Remediation and any formal C3PAO assessment remain separate so the preparation work is not confused with certification.',
       },
       {
         title: 'HIPAA for practices without an IT department',
-        body: 'Security-rule controls with documented evidence, sized for dental and medical offices: the same obligations as a hospital, without the hospital budget.',
+        body: 'The assessment follows electronic patient information through the systems and workflows used by the practice, then documents the safeguards, gaps, and next decisions without pretending one checklist establishes compliance.',
       },
     ],
     how: [
-      {num: '1', title: 'Assess', body: 'Gap assessment against your target framework: scored, prioritized, plain English.'},
-      {num: '2', title: 'Plan', body: 'You receive a prioritized roadmap with evidence needs, owners, and practical next steps.'},
-      {num: '3', title: 'Remediate', body: 'If you want implementation help, we scope that work separately after the assessment exposes the real gaps.'},
+      {num: '1', title: 'Assess', body: 'We review the agreed systems, requirements, and available evidence, then document what is implemented and what cannot yet be supported.'},
+      {num: '2', title: 'Plan', body: 'You receive a prioritized roadmap that names the evidence needed, the responsible owner, and the next practical step for each finding.'},
+      {num: '3', title: 'Decide what to fix', body: 'After the assessment, you can address the findings internally or ask Helm to scope specific implementation work separately.'},
     ],
     faqs: [
       {q: 'Can you certify us for CMMC?', a: 'No. A formal certification assessment, when required, is performed by an independent accredited C3PAO. Helm Ready documents your current state and prioritized gaps; Helm Security does not certify or promise an assessor relationship.'},
@@ -210,7 +210,7 @@ export const productList: Product[] = [
     name: 'Helm Watch',
     metaTitle: 'Helm Watch: 24/7 Managed Device Protection',
     tagline: '24/7 detection and response, without the 24/7 payroll.',
-    desc: 'Managed device protection for small and medium-sized businesses: a round-the-clock security operations center watches each covered user\'s eligible devices, investigates alerts, and isolates compromised devices before an incident spreads.',
+    desc: 'An alert that appears overnight can sit untouched until morning while an attacker moves to another device or account. Helm Watch gives covered Windows and Mac workstations round-the-clock monitoring, human investigation, and containment when suspicious activity becomes a real threat.',
     bestFor: 'businesses that want 24/7 monitoring and response for up to two eligible Windows or Mac workstations per covered user',
     metaDesc:
       'Managed device detection and response with 24/7 monitoring, human-triaged alerts, and containment from $40 per user monthly for up to two eligible devices.',
@@ -220,21 +220,21 @@ export const productList: Product[] = [
     features: [
       {
         title: 'A SOC on duty when you are not',
-        body: 'Most of the damage in a breach happens at night, on weekends, and over holidays, when nobody is at a desk to notice. A 24/7 security operations center watches your covered devices so an attack at 3 a.m. gets a response at 3 a.m.',
+        body: 'Security alerts do not wait for office hours. A 24/7 security operations center watches covered devices overnight, on weekends, and on holidays so suspicious activity can be investigated when it happens.',
       },
       {
         title: 'Response, not just another alert',
-        body: 'Antivirus tells you something happened. Helm Watch does something about it: suspicious activity is investigated by human analysts, and a compromised device gets isolated before the problem spreads to the rest of your network.',
+        body: 'Human analysts investigate suspicious activity instead of forwarding every raw alert to the customer. If a covered device is compromised, they can isolate it to help keep the activity from spreading.',
       },
       {
         title: 'You only hear about what matters',
-        body: 'Alerts are triaged by analysts, not forwarded raw to your inbox. When something is real, you get a plain-English account of what happened and what was done, plus a quarterly summary useful for insurance and customer diligence.',
+        body: 'Analysts discard false alarms and escalate activity that needs attention. When something is real, you receive a plain-English explanation of what happened, what was done, and what needs to happen next.',
       },
     ],
     how: [
       {num: '1', title: 'Deploy', body: 'A lightweight security agent is installed on covered Windows and Mac devices using the rollout method agreed during qualification.'},
-      {num: '2', title: 'Watch', body: 'The SOC monitors around the clock; human analysts investigate anything suspicious and discard the noise.'},
-      {num: '3', title: 'Respond', body: 'Real threats get contained, compromised machines isolated, and you get a plain-English account of what happened.'},
+      {num: '2', title: 'Watch', body: 'The security operations center monitors the covered devices around the clock. Human analysts investigate suspicious activity and discard false alarms.'},
+      {num: '3', title: 'Respond', body: 'When the activity is malicious, the response may include isolating the affected device. You receive a plain-English account of the incident and the action taken.'},
     ],
     faqs: [
       {q: 'Do we need to replace our antivirus?', a: 'Usually yes, and that is a good thing: the security agent covers what antivirus does and adds detection and response on top. We sort out the specifics during deployment so nothing overlaps or conflicts.'},
@@ -256,5 +256,5 @@ export const contactInterests = [
   ...productList.flatMap((product) =>
     product.pricingOptions?.map((option) => option.name) ?? [product.name],
   ),
-  'Not sure — help me choose',
+  'Not sure, help me choose',
 ];

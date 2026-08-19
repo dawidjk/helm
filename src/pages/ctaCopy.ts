@@ -21,8 +21,8 @@ import {manufacturing} from './lanes';
  * scan" in CTA labels; one noun, one concept.
  */
 export const BOOK_CTA = {
-  title: 'Have more questions?',
-  sub: 'Send us your vendor-security questionnaire or ask directly. A Helm executive responds during business hours.',
+  title: 'Need to check a requirement before you decide?',
+  sub: 'Send the question or vendor-security form. A Helm executive will review it and respond during business hours.',
   label: 'Talk to us',
 };
 

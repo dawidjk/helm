@@ -83,8 +83,9 @@ export function JapandiHome() {
         <div className="vj-copy">
           <h1>Security with less noise.</h1>
           <p>
-            Practical protection for New Jersey businesses. Clear decisions,
-            thoughtful controls, and a steady hand when the stakes are high.
+            Protect the email, devices, and business processes attackers use
+            to steal money or sensitive information. Helm gives New Jersey
+            businesses clear next steps and someone accountable for following through.
           </p>
           <Scan source="variant japandi hero" />
           <small>Free email-domain scan · plain-English report in about a minute</small>
@@ -94,13 +95,13 @@ export function JapandiHome() {
       <section className="vj-services" aria-labelledby="vj-services-title">
         <div className="vj-intro">
           <h2 id="vj-services-title">One accountable program. Four focused services.</h2>
-          <p>Start with Command when security ownership is the gap. Choose a focused service when one control needs work.</p>
+          <p>Choose Command when security work keeps falling between teams. Choose a focused service when the immediate problem is email, devices, fraud readiness, or compliance evidence.</p>
         </div>
         <div className="vj-service-list">{productList.map((_, index) => <ServiceLink index={index} key={index} />)}</div>
       </section>
 
       <section className="vj-proof">
-        <blockquote>“Prove you’re protected” should have a clear, useful answer.</blockquote>
+        <blockquote>When a customer or insurer asks what is protected, you should not have to guess.</blockquote>
         <div>
           <span>Cyber-insurance questionnaires</span>
           <span>Payment-verification protocols</span>
@@ -110,7 +111,7 @@ export function JapandiHome() {
       </section>
 
       <section className="vj-industries">
-        <h2>Built for the way your business actually works.</h2>
+        <h2>Start with the problem your business is dealing with.</h2>
         <LaneLinks />
       </section>
 
@@ -132,14 +133,14 @@ export function AkariHome() {
         <div className="va-shade" />
         <div className="va-copy">
           <h1>Clarity in the dark.</h1>
-          <p>Helm turns security noise into a small number of useful decisions—for your team, your customers, and the people asking for proof.</p>
+          <p>Helm turns security alerts and open tasks into clear decisions for your team, your customers, and the people asking for evidence.</p>
           <Scan source="variant akari hero" />
           <small>Free email-domain scan · report in about a minute</small>
         </div>
       </header>
 
       <section className="va-services" aria-labelledby="va-services-title">
-        <div className="va-heading"><h2 id="va-services-title">Protection, shaped around the work.</h2><p>One accountable program and four focused services, with plain-English follow-through.</p></div>
+        <div className="va-heading"><h2 id="va-services-title">Choose the service that matches the problem.</h2><p>Use Command when security work lacks an owner, or start with the specific email, device, fraud, or readiness issue.</p></div>
         <div className="va-orbit">
           {productList.map((service) => (
             <Link key={service.slug} to={canonicalPath(`/${service.slug}`)}>
@@ -151,7 +152,7 @@ export function AkariHome() {
 
       <section className="va-proof">
         <div className="va-glow" aria-hidden="true" />
-        <div><h2>When someone asks, the answer is ready.</h2><p>Insurance questionnaires, payment protocols, compliance evidence, and device protection—kept understandable enough to use.</p></div>
+        <div><h2>When someone asks what is protected, use evidence instead of memory.</h2><p>Keep insurance answers, payment procedures, compliance records, and device coverage clear enough for the people responsible for them.</p></div>
         <div className="va-facts"><span><b>$0</b> first scan</span><span><b>~1 min</b> report</span><span><b>24/7</b> SOC</span></div>
       </section>
       <LaneLinks />

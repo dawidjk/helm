@@ -10,7 +10,7 @@ const faqs: {q: string; a: Paragraph}[] = [
   },
   {
     q: 'Are we really a target? We only have 15 employees.',
-    a: 'Attackers can automate domain scanning and impersonation, so they do not need to choose a large company first. Team size alone is not a security control. The free scan is a practical first check because it reads the same public domain configuration that anyone on the internet can query.',
+    a: 'An attacker does not need to research the company for weeks. Public domain checks and impersonation attempts can be automated, and a smaller team may have fewer people available to notice or respond. The free scan shows the same public domain configuration that anyone on the internet can query.',
   },
   {
     q: 'What does the free scan actually check?',
@@ -72,8 +72,8 @@ export default function Faq() {
         <div className="wrap">
           <h1 className="reveal d1">Straight answers.</h1>
           <p className="sub reveal d2">
-            The questions business owners actually ask us, answered the way
-            we'd answer them across a table.
+            Direct answers about what Helm does, what it costs, and where the
+            service stops.
           </p>
         </div>
         <ScrollCue />

@@ -16,12 +16,12 @@ export default function FreeScan() {
         <HeroBackdrop kind="brand-static" />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">
-            Check the public signals behind email impersonation.
+            See whether your public email controls make impersonation easier.
           </h1>
           <p className="sub reveal d2">
-            Enter your work email. The scan checks your company's public domain
-            configuration and returns a scored, plain-English report, usually
-            in about a minute.
+            Enter your work email. The scan checks the public records receiving
+            mail systems use when someone sends a message in your company’s
+            name. You receive a scored, plain-English report, usually in about a minute.
           </p>
           <div className="hero-ctas reveal d3">
             <LeadForm source="free-scan page" cta="Run my free scan" compact />

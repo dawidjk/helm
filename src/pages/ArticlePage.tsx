@@ -150,7 +150,7 @@ export default function ArticlePage() {
               <time dateTime={a.date}>{displayedDate}</time>
               {displayedUpdatedDate && (
                 <> and materially reviewed on <time dateTime={a.updated}>{displayedUpdatedDate}</time></>
-              )}. The recommendations are supported by {support.sources.length} primary or authoritative sources listed below.
+              )}. We checked the factual guidance against the {support.sources.length} primary or authoritative sources listed below.
             </p>
           </section>
           <section className="article-sources observe d2" aria-labelledby="article-sources-heading">
@@ -186,8 +186,8 @@ export default function ArticlePage() {
         />
       ) : (
         <CtaBand
-          title="Get your actual numbers."
-          sub="The free scan reads your domain's public email and web configuration and reports back in plain English, usually in about a minute."
+          title="See what your public domain configuration shows."
+          sub="The free scan checks public email and web configuration and returns a plain-English report, usually in about a minute."
           source={`article ${a.slug}`}
         />
       )}

@@ -43,12 +43,13 @@ export default function About() {
         <HeroBackdrop kind="brand-static" />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-readable">
-            We removed enterprise security&apos;s size requirement.
+            Clear security help for businesses without a security department.
           </h1>
           <p className="sub reveal d2">
-            Small and medium-sized businesses face email impersonation, payment fraud, and
-            compliance demands without a dedicated security department. Helm
-            gives them a clear, leadership-led path from finding to action.
+            A small business can lose money through one changed invoice, expose
+            client information through one account, or lose a contract because
+            it cannot support a security answer. Helm helps identify the problem,
+            choose a practical response, and follow the work through.
           </p>
         </div>
         <ScrollCue />
@@ -60,16 +61,16 @@ export default function About() {
           <div>
             <h3 className="observe">Who we are</h3>
             <p className="observe d1">
-              Helm is a New Jersey company led by two vice presidents with
-              complementary responsibilities: security operations and
-              automation on one side, and growth, partnerships, and customer
-              communication on the other.
+              Helm is a New Jersey company run by Kelly and Dawid Kluszczynski.
+              Dawid leads the technical delivery. Kelly leads customer
+              communication, growth, and partnerships.
             </p>
             <p className="observe d2">
-              We designed Helm around one observation: small and medium-sized businesses don't
-              need more security products. They need someone accountable for
-              the outcome, at a price that's published, in language that
-              doesn't require translation.
+              Small and medium-sized businesses already have plenty of tools
+              and alerts. The harder problem is knowing which issue matters,
+              who should fix it, and whether the work was completed. Helm is
+              designed to provide that accountability in plain language and
+              with the price and scope stated up front.
             </p>
           </div>
           <div>
@@ -92,10 +93,10 @@ export default function About() {
 
       <Band>
         <div className="band-head">
-          <h2 className="observe d1">Two operating executives. No hidden bench.</h2>
+          <h2 className="observe d1">You work directly with the two people running Helm.</h2>
           <p className="observe d2">
-            When you hire Helm, you work directly with the two executives
-            accountable for the result.
+            Kelly and Dawid stay involved from the first conversation through
+            delivery and follow-up.
           </p>
         </div>
         <div className="founder-grid">
@@ -111,9 +112,8 @@ export default function About() {
               <p className="founder-role">VP, Growth &amp; Partnerships</p>
               <p>
                 Kelly leads discovery, customer communication, marketing, and
-                partner relationships. She keeps every engagement tied to a
-                business outcome and understandable to the people responsible
-                for acting on it.
+                partner relationships. She makes sure the work addresses the
+                reason the customer came to Helm and that the next step is clear.
               </p>
             </div>
           </article>
@@ -129,16 +129,16 @@ export default function About() {
               <p className="founder-role">VP, Product &amp; Delivery</p>
               <p>
                 Dawid designs Helm&apos;s services, automation, and technical
-                delivery. He is the point of accountability from the first
-                scan through deployment, documentation, and ongoing review.
+                delivery. He follows the work from the first scan through
+                deployment, documentation, and ongoing review.
               </p>
             </div>
           </article>
         </div>
         <p className="founder-note observe d2">
-          Helm is intentionally leadership-led today. We use established
-          security platforms for continuous monitoring, and we never imply
-          that a large internal team is sitting behind the logo.
+          Helm is a two-person company today. Established security platforms
+          provide continuous monitoring where the service says so, and we are
+          clear about which work they perform and which work Helm performs.
         </p>
       </Band>
 

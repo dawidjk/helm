@@ -9,28 +9,28 @@ export const manufacturing: Lane = {
     'Fixed-fee CMMC Level 1 and Level 2 gap assessments for New Jersey manufacturers and defense subcontractors, scored against applicable NIST 800-171 requirements.',
   serviceType: 'CMMC readiness and managed cybersecurity for New Jersey manufacturers',
   eyebrow: 'NJ Manufacturers · Defense Suppliers',
-  headline: 'Which CMMC requirement applies to your contract?',
-  sub: 'Start with the contract clauses and the information you handle. Then assess the right scope, evidence, and remediation work.',
+  headline: 'Know what your defense contract requires before you affirm it.',
+  sub: 'The wrong CMMC assumption can lead to unsupported answers or unnecessary work. Start with the contract clauses and the information your shop actually handles.',
   primaryCta: 'Book a CMMC gap assessment',
   ctaMode: 'book',
   statusChip: 'CMMC Phase II paused July 2026 · Phase I self-assessments remain',
   regulatoryUpdate: {
-    title: 'The deadline moved. The requirement did not.',
+    title: 'Phase II paused, but current contract duties still matter.',
     changed: 'The Department suspended CMMC Phase II requirements on July 13, 2026. That paused the planned expansion of third-party Level 2 certification requirements.',
     unchanged: 'Phase I self-assessments remain in force. The Department says it will continue enforcing NIST SP 800-171 Revision 2 through self-assessments and selected government-led assessments. Existing DFARS duties, including applicable incident reporting, also remain contract driven.',
   },
   pains: [
     {
       title: 'Know what the contract requires',
-      body: 'Cybersecurity requirements can appear in solicitations and contract clauses. Before you bid or affirm, know which requirement applies and whether your current evidence supports it.',
+      body: 'A shop can bid on covered work and later discover that its systems or evidence do not support the required assessment. Review the solicitation, clauses, and information category before making the commitment.',
     },
     {
       title: 'Your score and affirmation need support',
-      body: 'An SPRS score and annual affirmation should be tied to current evidence. A gap assessment separates what is implemented, what still needs proof, and what belongs in a remediation plan.',
+      body: 'If the SPRS number cannot be reproduced from the assessment file, the company may struggle to support it when a contracting officer or customer asks. A gap assessment shows what is implemented, what still needs evidence, and what remains open.',
     },
     {
       title: 'Internal review still takes real time',
-      body: 'NIST 800-171 has 110 requirements. Interpreting them across systems, policies, and evidence takes focused technical and business time. A gap assessment shows where that work is before you fund it.',
+      body: 'The 110 requirements touch systems, policies, vendors, people, and daily shop workflows. A scoped assessment shows how much work is actually open before the company spends against a guess.',
     },
   ],
   evidence: [
@@ -53,8 +53,8 @@ export const manufacturing: Lane = {
       href: 'https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf',
     },
   ],
-  planTitle: 'Build the right security layers around the contract.',
-  planSub: 'Start with scope and evidence, then protect the mail and eligible devices involved in the work.',
+  planTitle: 'Start with the contract, then protect the systems in scope.',
+  planSub: 'First establish what must be assessed. Then address the email and eligible workstations involved in the work.',
   steps: [
     {
       num: '1',
@@ -73,7 +73,7 @@ export const manufacturing: Lane = {
     },
   ],
   proof: {
-    title: 'Built for the defense supply chain.',
+    title: 'What the readiness work includes.',
     points: [
       'CMMC Level 1 & 2 gap assessments against NIST 800-171',
       'SPRS score calculation and submission support',
@@ -91,7 +91,7 @@ export const manufacturing: Lane = {
     },
     {
       question: 'What should support an SPRS score?',
-      answer: 'Keep the system boundary, current SSP, control-by-control working papers, evidence references, assessment date, score calculation, and the plan for unmet requirements together. The submitted number should be reproducible from that record, not reconstructed after a request arrives.',
+      answer: 'Keep the system boundary, current SSP, working papers, evidence references, assessment date, score calculation, and plan for unmet requirements together. Another qualified reviewer should be able to follow that file and reach the same result.',
       resource: {slug: 'sprs-score-explained', label: 'See how SPRS scoring works'},
     },
     {
@@ -111,8 +111,8 @@ export const manufacturing: Lane = {
     {slug: 'cmmc-level-1-vs-level-2', title: 'CMMC Level 1 vs. Level 2', note: 'Choose the right scope'},
   ],
   cta: {
-    title: 'Where do you stand on all 110 controls?',
-    sub: 'Use a free 30-minute readiness call to clarify which requirement applies, what evidence to gather, and whether a fixed-fee assessment is the right next step.',
+    title: 'Do your current records support the requirement in the contract?',
+    sub: 'A free 30-minute readiness call can clarify which requirement applies, what evidence to gather, and whether a fixed-fee assessment would be useful.',
     label: 'Book the readiness call',
   },
 };
@@ -125,21 +125,21 @@ export const professionalServices: Lane = {
   metaDesc:
     'Email impersonation checks, wire-fraud controls, and questionnaire readiness for New Jersey law and CPA firms. Start with a free domain scan.',
   eyebrow: 'New Jersey Law Firms · CPA Firms',
-  headline: 'Your clients trust you with everything. Keep it that way.',
-  sub: 'Wire fraud, sensitive client records, and security questionnaires shape which firms clients and carriers trust. One spoofed email can redirect client money or expose a confidential matter.',
+  headline: 'Protect the client information and payments your firm handles every day.',
+  sub: 'A compromised mailbox can redirect a payment, expose a confidential matter, or leave the firm unable to support an insurance or client-security answer.',
   primaryCta: 'Get my free scan',
   pains: [
     {
       title: 'Wire fraud targets your inbox',
-      body: 'Attackers impersonate partners and title companies to redirect closings, settlements, and tax payments. One convincing message can turn a routine payment into a recovery and liability problem.',
+      body: 'An attacker can enter a real email thread and replace the account number on a closing, settlement, or tax payment. The message may look normal until the intended recipient says the money never arrived.',
     },
     {
       title: 'Your carrier is asking harder questions',
-      body: 'Cyber-insurance forms commonly ask about controls such as MFA, email authentication, staff readiness, and incident response. An answer should be accurate and supported, not guessed.',
+      body: 'Cyber-insurance forms ask about MFA, email protection, staff training, backups, and incident response. If the answer on the form is broader than the control in place, the difference may surface during a claim.',
     },
     {
       title: 'Client questionnaires need evidence',
-      body: 'A client may ask how you protect email, payments, access, or incidents. A defensible answer is tied to a control and a record, not a guess made before a deadline.',
+      body: 'A client may ask how the firm protects email, payments, access, or incidents. Current inventories, settings, procedures, and test records give the firm an answer it can support.',
     },
   ],
   evidence: [
@@ -162,8 +162,8 @@ export const professionalServices: Lane = {
       href: 'https://www.irs.gov/newsroom/security-summit-irs-reminds-tax-pros-to-guard-against-identity-theft-as-summer-series-wraps-up',
     },
   ],
-  planTitle: 'Protection that fits a practice.',
-  planSub: 'Managed for you. Priced per seat. Explained in English.',
+  planTitle: 'Protect the inbox, the work devices, and the answers the firm signs.',
+  planSub: 'Each service addresses a specific part of the risk instead of treating every problem as the same security project.',
   steps: [
     {
       num: '1',
@@ -182,7 +182,7 @@ export const professionalServices: Lane = {
     },
   ],
   proof: {
-    title: 'What your carrier and your clients see.',
+    title: 'What the firm can put in place and show.',
     points: [
       'Payment-instruction protocol designed to prevent unverified changes',
       'Questionnaire answers tied to documented controls and evidence',
@@ -196,8 +196,8 @@ export const professionalServices: Lane = {
     {slug: 'cyber-insurance-questionnaire', title: 'Cyber-Insurance Questionnaire Checklist', note: 'Prepare your evidence'},
   ],
   cta: {
-    title: 'Would your firm catch the fake wire request?',
-    sub: 'A free automated scan shows whether your public email controls make impersonation easier: plain-English report, usually in about a minute.',
+    title: 'Could a criminal send a convincing message in your firm’s name?',
+    sub: 'The free automated scan checks the public email controls involved in domain impersonation and returns a plain-English report, usually in about a minute.',
     label: 'Run the free scan',
   },
 };
@@ -211,21 +211,21 @@ export const lawFirms: Lane = {
     'Managed email and device protection, wire-fraud controls, and security readiness for New Jersey law firms. Start with a free public-domain scan.',
   serviceType: 'Managed cybersecurity for New Jersey law firms',
   eyebrow: 'New Jersey Law Firms',
-  headline: 'Protect the case, the client, and the payment.',
-  sub: 'Confidential matters move through email, laptops, cloud systems, and payment workflows. Helm helps smaller firms protect each path without building an internal security department.',
+  headline: 'Keep one compromised account from becoming a client or payment crisis.',
+  sub: 'Confidential matters move through email, laptops, cloud systems, and payment workflows. A failure in any one of them can expose client information or send money to the wrong account.',
   primaryCta: 'Get my free scan',
   pains: [
     {
       title: 'A real thread can carry a fake payment change',
-      body: 'An attacker who compromises email can study a matter, imitate the people involved, and insert new wire instructions at the moment a transfer is expected.',
+      body: 'An attacker who compromises a mailbox can study the matter and insert new wire instructions when the transfer is expected. Staff may see the real participants and history around the fraudulent change.',
     },
     {
       title: 'Client information travels with the lawyer',
-      body: 'Remote work and court appearances put confidential email and documents on laptops outside the office. A lost, unmonitored, or compromised device can become a client-confidentiality problem.',
+      body: 'Remote work and court appearances put confidential email and documents on laptops outside the office. If a device is lost without encryption or remains signed in, someone may be able to open client information before the firm can revoke access.',
     },
     {
       title: 'Clients and carriers expect supportable answers',
-      body: 'Security questionnaires and insurance applications ask what is actually protected, monitored, tested, and documented. The answer should match current evidence.',
+      body: 'Security questionnaires and insurance applications ask which devices, accounts, and procedures are protected, monitored, and tested. The firm needs records that match the answer it signs.',
     },
   ],
   evidence: [
@@ -248,8 +248,8 @@ export const lawFirms: Lane = {
       href: 'https://www.njcourts.gov/sites/default/files/notices/2006/03/ACPE_Opinion701_ElectronicStorage_12022005.pdf',
     },
   ],
-  planTitle: 'Cover the inbox, the device, and the evidence.',
-  planSub: 'Three managed layers, each tied to a risk a law-firm owner can recognize.',
+  planTitle: 'Protect the message, the device, and the decision to release money.',
+  planSub: 'Each layer addresses a different way a confidential matter or payment can be exposed.',
   steps: [
     {
       num: '1',
@@ -268,7 +268,7 @@ export const lawFirms: Lane = {
     },
   ],
   proof: {
-    title: 'Security sized for a working law firm.',
+    title: 'What the firm can put in place.',
     points: [
       'Email protection and employee learning managed as one service',
       'Round-the-clock monitoring for covered Windows and Mac devices',
@@ -295,7 +295,7 @@ export const lawFirms: Lane = {
     },
     {
       question: 'What evidence will a client or carrier expect?',
-      answer: 'Expect to support answers with current inventories, configuration records, deployment status, training records, test results, incident contacts, and written payment procedures. A policy that does not match the operating evidence is not a defensible answer.',
+      answer: 'Keep current inventories, configuration records, deployment status, training records, test results, incident contacts, and written payment procedures. If the policy describes a control that is not operating, correct the control or the answer before submitting it.',
       resource: {slug: 'cyber-insurance-questionnaire', label: 'Prepare supportable answers'},
     },
   ],
@@ -305,8 +305,8 @@ export const lawFirms: Lane = {
     {slug: 'cyber-insurance-questionnaire', title: 'Cyber-Insurance Questionnaire Checklist', note: 'Prepare supportable answers'},
   ],
   cta: {
-    title: 'Could someone convincingly impersonate your firm?',
-    sub: 'The free scan checks public email controls that influence domain impersonation and reports the findings in plain English, usually in about a minute.',
+    title: 'Could a client receive a convincing fake message from your domain?',
+    sub: 'The free scan checks public email controls involved in domain impersonation and reports the findings in plain English, usually in about a minute.',
     label: 'Run the free scan',
   },
 };
@@ -319,21 +319,21 @@ export const accountingFirms: Lane = {
   metaDesc:
     'Managed email and device protection plus WISP and security readiness for New Jersey CPA, accounting, and tax firms. Start with a free domain scan.',
   eyebrow: 'New Jersey CPA · Accounting · Tax Firms',
-  headline: 'Tax data makes every inbox and work device worth protecting.',
-  sub: 'A small accounting practice can hold years of identity, payroll, banking, and tax information. Helm helps protect the systems carrying that data and document the safeguards the firm relies on.',
+  headline: 'One compromised account can expose years of client tax data.',
+  sub: 'Identity, payroll, banking, and tax information move through email, workstations, portals, and vendor systems. The firm needs to protect those paths and keep its WISP aligned with the safeguards actually in place.',
   primaryCta: 'Get my free scan',
   pains: [
     {
       title: 'One account can expose hundreds of clients',
-      body: 'A compromised mailbox or work computer can give an attacker tax documents, identity information, client contacts, and a credible platform for follow-on fraud.',
+      body: 'A compromised mailbox or work computer can expose tax documents, identity information, and client contacts. The same account can then be used to send believable requests to those clients.',
     },
     {
       title: 'Tax season compresses every decision',
-      body: 'Long hours, seasonal staff, urgent client messages, and document portals create more opportunities for a malicious attachment or sign-in request to look routine.',
+      body: 'During tax season, long hours, seasonal staff, urgent client messages, and document portals make a malicious attachment or sign-in request easier to mistake for routine work.',
     },
     {
       title: 'A WISP must describe the real practice',
-      body: 'A written plan is useful only when its named safeguards, responsible people, service providers, testing, and response steps match what the firm actually does.',
+      body: 'A downloaded WISP may omit seasonal access, current vendors, or the systems holding client data. If the document promises safeguards that are not operating, the mismatch can create a problem during a breach or review.',
     },
   ],
   evidence: [
@@ -362,8 +362,8 @@ export const accountingFirms: Lane = {
       href: 'https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know',
     },
   ],
-  planTitle: 'Protect the work and document the safeguards.',
-  planSub: 'The same controls that reduce risk should also make the WISP and client answers more accurate.',
+  planTitle: 'Protect the work, then make the WISP match it.',
+  planSub: 'The records behind each control help the firm answer clients, insurers, and regulators without guessing.',
   steps: [
     {
       num: '1',
@@ -382,7 +382,7 @@ export const accountingFirms: Lane = {
     },
   ],
   proof: {
-    title: 'A practical security baseline for tax and accounting work.',
+    title: 'What the firm can protect and document.',
     points: [
       'Managed protection for compatible Microsoft 365 or Google Workspace email',
       'Round-the-clock monitoring for covered Windows and Mac devices',
@@ -397,8 +397,8 @@ export const accountingFirms: Lane = {
     {slug: 'backup-testing-insurers', title: 'What Insurers Mean by Tested Backups', note: 'Support your answers'},
   ],
   cta: {
-    title: 'Start with the public controls around your domain.',
-    sub: 'The free scan checks email and web configuration visible from the outside and returns a plain-English report, usually in about a minute.',
+    title: 'See what an outsider can learn from your domain.',
+    sub: 'The free scan checks public email and web configuration and returns a plain-English report, usually in about a minute.',
     label: 'Run the free scan',
   },
 };
@@ -411,22 +411,22 @@ export const medicalPractices: Lane = {
   metaDesc:
     'Managed email and device protection plus HIPAA Security Rule readiness for independent New Jersey medical and dental practices.',
   eyebrow: 'New Jersey Medical · Dental Practices',
-  headline: 'Protect patient information without turning the practice into a security department.',
-  sub: 'Patient care depends on email, workstations, cloud systems, and vendors staying available and trustworthy. Helm helps smaller practices identify risk, protect everyday work, and document the next steps.',
+  headline: 'Know where patient information can be exposed before a device or account is compromised.',
+  sub: 'Patient information can appear in email, workstations, cloud systems, phones, backups, and vendor accounts. A smaller practice needs a complete view without trying to build its own security department.',
   primaryCta: 'Book a HIPAA readiness call',
   ctaMode: 'book',
   pains: [
     {
       title: 'The EHR is not the whole risk analysis',
-      body: 'Electronic patient information can also appear in email, workstations, imaging workflows, billing systems, backups, tablets, phones, copiers, and vendor systems.',
+      body: 'A practice that reviews only the EHR can miss patient information in email, imaging, billing, backups, tablets, phones, copiers, and vendor systems. Those gaps become harder to reconstruct after an incident.',
     },
     {
       title: 'A compromised device can stop the day',
-      body: 'Malicious activity on a front-desk or clinical workstation can threaten patient information and interrupt scheduling, billing, communication, and care delivery.',
+      body: 'Malicious activity on a front-desk or clinical workstation can expose patient information and interrupt scheduling, billing, communication, and care delivery at the same time.',
     },
     {
       title: 'HIPAA readiness needs evidence',
-      body: 'A risk analysis should identify the systems, threats, vulnerabilities, current safeguards, responsible owners, and documented remediation decisions across the practice.',
+      body: 'A risk analysis needs to show which systems were reviewed, what could go wrong, which safeguards exist, and who owns each unresolved issue. A completed checklist without those details leaves the practice unable to explain its decisions.',
     },
   ],
   evidence: [
@@ -449,8 +449,8 @@ export const medicalPractices: Lane = {
       href: 'https://www.hhs.gov/guidance/sites/default/files/hhs-guidance-documents//attachmenta-security_risk_assessment_tool_user_guide_v6.pdf',
     },
   ],
-  planTitle: 'Protect daily work, then document what remains.',
-  planSub: 'HIPAA readiness is broader than a product. These services cover specific parts of the practice risk picture.',
+  planTitle: 'Protect daily work and document what still needs attention.',
+  planSub: 'No single product covers the whole practice. Each service addresses a defined part of the risk analysis.',
   steps: [
     {
       num: '1',
@@ -469,7 +469,7 @@ export const medicalPractices: Lane = {
     },
   ],
   proof: {
-    title: 'Clear scope for an independent practice.',
+    title: 'What each service covers, and what it does not.',
     points: [
       'Risk analysis work sized for smaller medical and dental practices',
       'Managed email protection without implying secure PHI delivery',
@@ -484,8 +484,8 @@ export const medicalPractices: Lane = {
     {slug: 'what-a-soc-actually-does', title: 'What a 24/7 Security Operations Center Does', note: 'Understand device monitoring'},
   ],
   cta: {
-    title: 'Is your last HIPAA risk analysis still accurate?',
-    sub: 'Use a short readiness call to clarify the systems in scope, the evidence already available, and whether a fixed-fee assessment is the right next step.',
+    title: 'Does your last risk analysis include the systems you use today?',
+    sub: 'A short readiness call can clarify which systems belong in scope, what evidence already exists, and whether a fixed-fee assessment would be useful.',
     label: 'Book the readiness call',
   },
 };
@@ -498,21 +498,21 @@ export const contractors: Lane = {
   metaDesc:
     'Reduce exposure to fake invoices and hijacked payment instructions. Practical email, payment-verification, and readiness support for contractors and trades.',
   eyebrow: 'Contractors · Trades · Field Services',
-  headline: 'One fake invoice can wipe out a job’s profit.',
-  sub: 'Spoofed supplier invoices, hijacked payment instructions, and fake GC emails can turn routine payment changes into expensive mistakes. Some GCs and insurers also ask subcontractors to document basic security controls.',
+  headline: 'One changed bank account can turn a paid invoice into an unpaid bill.',
+  sub: 'A fake supplier or GC message can redirect the payment while the legitimate vendor still expects to be paid. Customers and insurers may also ask the contractor to show which security controls are in place.',
   primaryCta: 'Get my free scan',
   pains: [
     {
       title: 'Supplier invoice fraud',
-      body: 'Attackers can imitate a supplier or compromise a real thread, then send changed bank details. Once a transfer is sent, recovery can be difficult and time-sensitive.',
+      body: 'An attacker can imitate a supplier or compromise a real email thread, then replace the bank details. By the time the supplier asks about the missing payment, recovery may depend on how quickly the bank is contacted.',
     },
     {
       title: 'GCs now require security',
-      body: 'Some general contractors and insurers ask subcontractors to document email, payment, access, or incident controls. It is better to know what you can support before the form arrives.',
+      body: 'Some general contractors and insurers ask subcontractors to document email, payment, access, or incident controls. An unsupported answer can delay a bid, renewal, or claim.',
     },
     {
       title: 'Field teams, office risk',
-      body: 'Estimators and office managers may review payment requests from phones and job sites, where context switching can make a changed instruction harder to verify.',
+      body: 'Estimators and office managers may review payment requests from phones and job sites. When several jobs are moving at once, a changed instruction can look like one more urgent item unless the callback rule is mandatory.',
     },
   ],
   evidence: [
@@ -535,8 +535,8 @@ export const contractors: Lane = {
       href: 'https://www.ic3.gov/PSA/2024/PSA240911',
     },
   ],
-  planTitle: 'Protect the inbox, the device, and the proof.',
-  planSub: 'Three managed layers for payment workflows, covered computers, and the evidence a customer or insurer requests.',
+  planTitle: 'Protect the payment request, the work device, and the answer on the form.',
+  planSub: 'Each service addresses a specific point where money, access, or a customer requirement can go wrong.',
   steps: [
     {
       num: '1',
@@ -555,7 +555,7 @@ export const contractors: Lane = {
     },
   ],
   proof: {
-    title: 'Built for how the trades actually run.',
+    title: 'What the contractor can put in place.',
     points: [
       'Helm Mail for compatible Microsoft 365 and Google Workspace environments',
       'Payment-verification protocol separately scoped to your approval process',
@@ -570,8 +570,8 @@ export const contractors: Lane = {
     {slug: 'job-site-devices-public-wifi', title: 'Job-Site Devices and Public Wi-Fi', note: 'Reduce field risk'},
   ],
   cta: {
-    title: 'How exposed is your payment chain?',
-    sub: 'A free scan checks the public email controls involved in impersonation: plain-English report, usually in about a minute.',
+    title: 'Could a supplier or customer receive a fake message in your name?',
+    sub: 'The free scan checks public email controls involved in domain impersonation and returns a plain-English report, usually in about a minute.',
     label: 'Run the free scan',
   },
 };

@@ -62,8 +62,9 @@ export default function Home() {
         <div className="japandi-home-copy">
           <h1>Security with less noise.</h1>
           <p>
-            Practical protection for New Jersey businesses. Clear decisions,
-            thoughtful controls, and a steady hand when the stakes are high.
+            Protect the email, devices, and business processes attackers use
+            to steal money or sensitive information. Helm gives New Jersey
+            businesses clear next steps and someone accountable for following through.
           </p>
           <Scan source="home hero" />
           <small>Free domain scan · no card · no required meeting</small>
@@ -74,7 +75,7 @@ export default function Home() {
       <section id="services" className="home-service-section" aria-labelledby="home-services-title">
         <div className="home-section-intro">
           <h2 id="home-services-title">One accountable program. Four focused services.</h2>
-          <p>Start with Command when security ownership is the gap. Choose a focused service when one control needs work.</p>
+          <p>Choose Command when security work keeps falling between teams. Choose a focused service when the immediate problem is email, devices, fraud readiness, or compliance evidence.</p>
         </div>
         <div className="home-service-list">
           {productList.map((service) => (
@@ -89,7 +90,7 @@ export default function Home() {
       </section>
 
       <section className="home-proof-section">
-        <blockquote>“Prove you’re protected” should have a clear, useful answer.</blockquote>
+        <blockquote>When a customer or insurer asks what is protected, you should not have to guess.</blockquote>
         <div className="home-proof-list">
           <span>Cyber-insurance questionnaires</span>
           <span>Payment-verification protocols</span>
@@ -99,7 +100,7 @@ export default function Home() {
       </section>
 
       <section className="home-industries-section">
-        <h2>Built for the way your business actually works.</h2>
+        <h2>Start with the problem your business is dealing with.</h2>
         <nav className="home-industry-links" aria-label="Industry pages">
           {lanes.map((lane) => (
             <Link key={lane.to} to={canonicalPath(lane.to)}>

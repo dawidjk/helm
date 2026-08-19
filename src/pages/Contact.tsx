@@ -209,7 +209,7 @@ export default function Contact() {
               <div className="lead-form-error" role="alert">
                 Verification is taking longer than usual. If no check appeared
                 above, a privacy extension or slow connection may be blocking
-                it — you can email us directly instead:{' '}
+                it. You can email us directly instead:{' '}
                 <a href="mailto:hello@helmsecured.com">hello@helmsecured.com</a>
               </div>
             )}

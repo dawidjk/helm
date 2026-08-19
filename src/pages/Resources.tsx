@@ -144,11 +144,11 @@ export default function Resources() {
         <HeroBackdrop kind="brand-static" />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">
-            Security, translated.
+            Start with the problem you need to solve.
           </h1>
           <p className="sub reveal d2">
-            Guides written for the person who signs the checks: no jargon, no
-            fear-mongering, every article ends in something you can do.
+            These guides explain what can go wrong, what the control changes,
+            and what to do next without assuming you have a security team.
           </p>
         </div>
         <ScrollCue />
@@ -158,8 +158,8 @@ export default function Resources() {
         <div className="resources-index">
           <section className="resources-start" aria-labelledby="resources-start-title">
             <div className="resources-section-head">
-              <h2 id="resources-start-title">Start with the decision in front of you.</h2>
-              <p>Choose the closest task. Each path begins with one practical guide.</p>
+              <h2 id="resources-start-title">What brought you here?</h2>
+              <p>Choose the closest problem and start with one practical guide.</p>
             </div>
             <div className="resources-start-list">
               {startChoices.map((choice) => {
@@ -196,8 +196,8 @@ export default function Resources() {
 
           <section className="resources-library" aria-labelledby="resources-library-title">
             <div className="resources-section-head">
-              <h2 id="resources-library-title">Browse the full guide library.</h2>
-              <p>Open the task that matches what you need to protect, prove, or prepare for.</p>
+              <h2 id="resources-library-title">Browse every guide.</h2>
+              <p>Choose what you need to protect, document, or prepare for.</p>
             </div>
             <div className="resources-groups">
               {guideGroups.map((group) => (
@@ -225,8 +225,8 @@ export default function Resources() {
       </Band>
 
       <CtaBand
-        title="Reading is free. So is the scan."
-        sub="The free email security scan turns theory into findings from your own public domain configuration: report usually in about a minute."
+        title="See what your own domain is showing."
+        sub="The free email security scan checks public domain configuration and returns a plain-English report, usually in about a minute."
         source="resources cta"
       />
     </>

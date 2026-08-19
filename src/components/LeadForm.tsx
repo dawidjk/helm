@@ -107,7 +107,7 @@ export default function LeadForm({
       {state === 'personal' && (
         <div className="lead-form-error" role="alert">
           That looks like a personal inbox. The scan checks your company's
-          domain — the part after the @ — so enter your work email to get a
+          domain, which is the part after the @. Enter your work email to get a
           report about your business.
         </div>
       )}

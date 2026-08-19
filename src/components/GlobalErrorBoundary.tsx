@@ -82,11 +82,11 @@ export default function GlobalErrorBoundary() {
 
       <section className="error-shell" aria-labelledby="error-title">
         <div className="error-copy">
-          <h1 id="error-title">Everything will be okay.</h1>
+          <h1 id="error-title">We could not open that page.</h1>
           <p>
             {isMissing
-              ? 'This path does not lead anywhere, but you have not lost your place. Choose a familiar route and we will get you moving again.'
-              : 'Something interrupted this page. Take a breath, choose a familiar route, and we will get you moving again.'}
+              ? 'The address may have changed or the page may no longer exist. Choose one of the links below or search for the page you need.'
+              : 'The page did not load correctly. Return home, try another page, or contact Helm if the problem continues.'}
           </p>
 
           <div className="error-actions" aria-label="Recovery options">

@@ -76,12 +76,12 @@ export default function Pricing() {
         <HeroBackdrop kind="brand-static" />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">
-            Clear pricing. Scope in writing.
+            Know the price and scope before work starts.
           </h1>
           <p className="sub reveal d2">
-            Command begins with a fit and complexity review while qualified
-            design-partner enrollment is open. Mail, Aware, Ready, and Watch
-            retain published unit or project pricing.
+            Helm Mail, Aware, Ready, and Watch have published unit or project
+            pricing. Command begins with a fit and complexity review because
+            the work depends on the systems, responsibilities, and coordination involved.
           </p>
         </div>
         <ScrollCue />
@@ -92,8 +92,9 @@ export default function Pricing() {
           <div className="pricing-ledger-head">
             <h2 id="pricing-ledger-title" className="observe">Compare every offer</h2>
             <p className="observe d1">
-              Start with fit, price, and commitment. Then open the offer for
-              included services, exclusions, and frequently asked questions.
+              Compare who each service is for, how it is priced, and the
+              minimum commitment. Open the service page for inclusions,
+              exclusions, and common questions.
             </p>
           </div>
           <div className="pricing-ledger-scroll observe d2">
@@ -177,11 +178,11 @@ export default function Pricing() {
 
       <Band>
         <div className="band-head">
-          <h2 className="observe">How the numbers work</h2>
+          <h2 className="observe">What the price looks like in practice</h2>
           <p className="observe d1">
-            Standardized services multiply out in the open. Command is the
-            exception while its design-partner operating model is validated:
-            scope and pricing follow the fit and complexity review.
+            The standardized services use the published unit or project price.
+            Command is different because the scope depends on the security
+            work already underway and the number of teams Helm must coordinate.
           </p>
         </div>
         <div className="price-math">
