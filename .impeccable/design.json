@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-17T23:00:26Z",
+  "generatedAt": "2026-08-19T02:08:08Z",
   "title": "Design System: Helm Security Marketing Site",
   "extensions": {
     "colorMeta": {
@@ -252,8 +252,8 @@
       },
       {
         "name": "industry-context",
-        "value": "14s–48s ease-in-out loops",
-        "purpose": "Slow Aero, Skyline, and Construction scene motion on industry heroes only; disabled for reduced motion."
+        "value": "0.9s–48s coordinated loops",
+        "purpose": "Code-native Aero, Skyline, law, accounting, medical and dental, and Construction scenes on matching industry heroes only; paused off-screen and static under reduced motion."
       }
     ],
     "breakpoints": [
@@ -410,7 +410,7 @@
     "dos": [
       "Do preserve the two-image hierarchy: sculptural homepage, separate architectural secondary hero.",
       "Do lead first viewports with a left-aligned, high-contrast message and one obvious scan or founder action.",
-      "Do use Aero, Skyline, and Construction animation only on their matching industry heroes, right-aligned away from the copy, with off-screen pausing and reduced-motion fallbacks.",
+      "Do keep each approved code-native SVG scene on its matching industry hero—Aero, Skyline, law balancing scales, accounting reconciliation workspace, medical and dental bedside monitor, or Construction—at large scale, right-aligned away from desktop copy, placed in-flow between headline and supporting copy on phones, paused off-screen, and static under reduced motion.",
       "Do keep section content visible by default and reserve the restrained rise reveal for first-viewport hero content.",
       "Do use ruled, unnumbered rows for risks and SVG arrows for direction.",
       "Do preserve 44px minimum interactive targets, dark-mode continuity, and elevated lead-form button contrast.",

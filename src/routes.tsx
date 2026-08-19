@@ -24,6 +24,30 @@ const lazyProfessionalServices = async () => {
   return {Component: () => <LanePage lane={professionalServices} />};
 };
 
+const lazyLawFirms = async () => {
+  const [{default: LanePage}, {lawFirms}] = await Promise.all([
+    import('./pages/LanePage'),
+    import('./pages/lanes'),
+  ]);
+  return {Component: () => <LanePage lane={lawFirms} />};
+};
+
+const lazyAccountingFirms = async () => {
+  const [{default: LanePage}, {accountingFirms}] = await Promise.all([
+    import('./pages/LanePage'),
+    import('./pages/lanes'),
+  ]);
+  return {Component: () => <LanePage lane={accountingFirms} />};
+};
+
+const lazyMedicalPractices = async () => {
+  const [{default: LanePage}, {medicalPractices}] = await Promise.all([
+    import('./pages/LanePage'),
+    import('./pages/lanes'),
+  ]);
+  return {Component: () => <LanePage lane={medicalPractices} />};
+};
+
 const lazyContractors = async () => {
   const [{default: LanePage}, {contractors}] = await Promise.all([
     import('./pages/LanePage'),
@@ -58,6 +82,9 @@ export const routes: RouteRecord[] = [
       {index: true, element: <Home />},
       {path: 'manufacturing/', lazy: lazyManufacturing},
       {path: 'professional-services/', lazy: lazyProfessionalServices},
+      {path: 'law-firms/', lazy: lazyLawFirms},
+      {path: 'accounting-firms/', lazy: lazyAccountingFirms},
+      {path: 'medical-practices/', lazy: lazyMedicalPractices},
       {path: 'contractors/', lazy: lazyContractors},
       {path: 'pricing/', lazy: lazyPage(() => import('./pages/Pricing'))},
       {

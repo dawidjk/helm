@@ -1,7 +1,16 @@
 import {useEffect, useMemo, useRef} from 'react';
 import japandiSecondaryHero from '../assets/brand/japandi-secondary-hero.webp';
 
-export type BackdropKind = 'brand-static' | 'cyber' | 'aero' | 'skyline' | 'construction' | 'rain';
+export type BackdropKind =
+  | 'brand-static'
+  | 'cyber'
+  | 'aero'
+  | 'skyline'
+  | 'legal'
+  | 'ledger'
+  | 'clinical'
+  | 'construction'
+  | 'rain';
 
 function BrandStaticBackdrop() {
   return (
@@ -364,6 +373,180 @@ function SkylineSvg() {
 }
 
 /* ------------------------------------------------------------------ */
+/* legal: large balanced scales settle into an even resting state      */
+/* ------------------------------------------------------------------ */
+
+function LegalSvg() {
+  return (
+    <svg className="backdrop-svg legal" viewBox="260 0 900 600" preserveAspectRatio="xMaxYMid meet" aria-hidden>
+      <g className="legal-architecture" stroke="rgba(56, 161, 105, 0.2)" strokeWidth="1" fill="none">
+        <path d="M350 505 H1100" />
+        <path d="M430 480 V165 M1040 480 V165" />
+        <path d="M400 165 H1070 M420 145 H1050" />
+        <path d="M470 480 V205 M1000 480 V205" strokeDasharray="5 10" />
+      </g>
+
+      <g className="legal-scales" stroke="rgba(155, 220, 185, 0.72)" strokeWidth="2.2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="730" cy="145" r="11" fill="rgba(56, 161, 105, 0.16)" />
+        <path d="M730 156 V438" />
+        <path d="M680 470 H780 M700 438 H760 L780 470 H680 Z" fill="rgba(18, 30, 54, 0.64)" />
+        <path d="M695 190 H765 L730 225 Z" fill="rgba(56, 161, 105, 0.12)" />
+      </g>
+
+      <g className="legal-beam" stroke="rgba(214, 241, 227, 0.9)" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M440 230 Q730 190 1020 230" />
+        <circle cx="730" cy="213" r="9" fill="rgba(56, 161, 105, 0.26)" />
+        <g className="legal-pan-left">
+          <path d="M485 224 L425 365 M485 224 L545 365" />
+          <path d="M400 365 Q485 425 570 365 Z" fill="rgba(56, 161, 105, 0.1)" />
+        </g>
+        <g className="legal-pan-right">
+          <path d="M975 224 L915 365 M975 224 L1035 365" />
+          <path d="M890 365 Q975 425 1060 365 Z" fill="rgba(56, 161, 105, 0.1)" />
+        </g>
+      </g>
+    </svg>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* ledger: paired entries reconcile and settle into a balanced record  */
+/* ------------------------------------------------------------------ */
+
+function LedgerSvg() {
+  const rows = [255, 296, 337, 378];
+  return (
+    <svg className="backdrop-svg ledger" viewBox="200 0 1000 600" preserveAspectRatio="xMaxYMid meet" aria-hidden>
+      <g className="ledger-sheet" stroke="rgba(155, 220, 185, 0.52)" strokeWidth="1.6" fill="none">
+        <rect x="370" y="75" width="735" height="450" rx="16" fill="rgba(18, 30, 54, 0.74)" />
+        <path d="M370 145 H1105 M515 145 V525" />
+        <circle cx="408" cy="110" r="5" fill="rgba(214, 241, 227, 0.6)" stroke="none" />
+        <circle cx="430" cy="110" r="5" fill="rgba(155, 220, 185, 0.38)" stroke="none" />
+        <path d="M465 110 H665" strokeWidth="8" strokeLinecap="round" opacity="0.34" />
+      </g>
+
+      <g className="ledger-sidebar" stroke="rgba(155, 220, 185, 0.46)" fill="none" strokeLinecap="round">
+        <path d="M407 190 H477 M407 225 H465 M407 260 H483 M407 295 H452" strokeWidth="8" />
+        <rect x="397" y="174" width="96" height="32" rx="7" fill="rgba(56, 161, 105, 0.1)" />
+        <circle cx="445" cy="445" r="30" strokeWidth="9" strokeDasharray="138 52" transform="rotate(-70 445 445)" />
+        <path d="M430 445 H460" strokeWidth="3" />
+      </g>
+
+      <g className="ledger-summary" stroke="rgba(155, 220, 185, 0.5)" fill="none">
+        <rect x="550" y="170" width="158" height="60" rx="10" fill="rgba(56, 161, 105, 0.07)" />
+        <rect x="730" y="170" width="158" height="60" rx="10" fill="rgba(56, 161, 105, 0.07)" />
+        <rect x="910" y="170" width="158" height="60" rx="10" fill="rgba(56, 161, 105, 0.07)" />
+        <path d="M570 192 H625 M570 210 H680 M750 192 H805 M750 210 H860 M930 192 H985 M930 210 H1040" strokeLinecap="round" />
+      </g>
+
+      <g className="ledger-grid" stroke="rgba(56, 161, 105, 0.2)" fill="none">
+        <path d="M550 245 H1068 V410 H550 Z M550 286 H1068 M550 327 H1068 M550 368 H1068" />
+        <path d="M820 245 V410" />
+      </g>
+
+      {rows.map((y, i) => (
+        <g key={y} className={`ledger-row l${i + 1}`}>
+          <rect x="570" y={y + 15} width={128 + i * 14} height="8" rx="4" fill="rgba(155, 220, 185, 0.38)" />
+          <rect x={i % 2 ? 910 : 890} y={y + 15} width={118 - i * 7} height="8" rx="4" fill="rgba(214, 241, 227, 0.64)" />
+          <path d={`M780 ${y + 19} H855`} stroke="rgba(56, 161, 105, 0.42)" strokeWidth="1.4" strokeDasharray="5 7" />
+          <circle className="ledger-match" cx="820" cy={y + 19} r="5" fill="rgba(214, 241, 227, 0.84)" />
+        </g>
+      ))}
+
+      <g className="ledger-total" stroke="rgba(214, 241, 227, 0.82)" fill="none" strokeLinecap="round">
+        <rect x="550" y="435" width="518" height="58" rx="10" fill="rgba(56, 161, 105, 0.08)" stroke="rgba(155, 220, 185, 0.42)" />
+        <path d="M580 464 H735 M900 464 H1035" strokeWidth="10" opacity="0.34" />
+        <g className="ledger-equals" strokeWidth="3">
+          <path d="M790 455 H840" />
+          <path d="M790 473 H840" />
+        </g>
+      </g>
+
+      <g className="ledger-scan" stroke="rgba(214, 241, 227, 0.72)" fill="none">
+        <path d="M550 245 V410" strokeWidth="1.5" />
+        <circle cx="550" cy="245" r="5" fill="rgba(214, 241, 227, 0.88)" stroke="none" />
+      </g>
+
+      <g className="ledger-chart" stroke="rgba(214, 241, 227, 0.7)" fill="rgba(56, 161, 105, 0.12)" strokeLinejoin="round">
+        <path d="M575 390 L630 350 L680 366 L735 303 L785 322 V390 Z" />
+        <circle cx="735" cy="303" r="5" fill="rgba(214, 241, 227, 0.9)" />
+      </g>
+      <g className="ledger-check" transform="translate(1040 110)" stroke="rgba(214, 241, 227, 0.88)" fill="rgba(56, 161, 105, 0.16)" strokeLinecap="round" strokeLinejoin="round">
+        <circle r="24" />
+        <path d="M-10 0 L-2 9 L12 -10" fill="none" strokeWidth="3" />
+      </g>
+    </svg>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* clinical: a portable bedside monitor synchronizes care and privacy */
+/* ------------------------------------------------------------------ */
+
+function ClinicalSvg() {
+  return (
+    <svg className="backdrop-svg clinical" viewBox="200 0 1000 600" preserveAspectRatio="xMaxYMid meet" aria-hidden>
+      <g className="clinical-stand" stroke="rgba(155, 220, 185, 0.68)" strokeWidth="2.8" fill="none" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="717" y="405" width="26" height="265" rx="13" fill="rgba(18, 30, 54, 0.72)" />
+        <path d="M730 420 V690" />
+        <path d="M690 408 H770 M706 432 H754" />
+        <path d="M730 650 L565 748 M730 650 L895 748 M730 650 V770" />
+        <circle cx="552" cy="756" r="15" fill="rgba(18, 30, 54, 0.84)" />
+        <circle cx="908" cy="756" r="15" fill="rgba(18, 30, 54, 0.84)" />
+        <circle cx="730" cy="782" r="15" fill="rgba(18, 30, 54, 0.84)" />
+        <path d="M655 86 V60 C655 48 665 40 677 40 H783 C795 40 805 48 805 60 V86" />
+      </g>
+
+      <g className="clinical-monitor" stroke="rgba(155, 220, 185, 0.62)" strokeWidth="1.8" fill="none">
+        <rect x="385" y="75" width="690" height="345" rx="22" fill="rgba(18, 30, 54, 0.78)" />
+        <rect x="410" y="100" width="640" height="275" rx="12" fill="rgba(10, 19, 35, 0.46)" />
+        <path d="M410 175 H1050" opacity="0.48" />
+        <path d="M515 100 V175 M945 100 V175" opacity="0.48" />
+        <circle className="clinical-power" cx="1020" cy="398" r="6" fill="rgba(214, 241, 227, 0.8)" stroke="none" />
+        <path d="M970 398 H993" strokeLinecap="round" />
+      </g>
+
+      <g className="clinical-care-node" transform="translate(885 137)" stroke="rgba(214, 241, 227, 0.84)" strokeWidth="2" fill="none">
+        <circle r="30" fill="rgba(56, 161, 105, 0.12)" />
+        <path d="M-12 0 H12 M0 -12 V12" strokeWidth="4" strokeLinecap="round" />
+      </g>
+
+      <g className="clinical-tooth-node" transform="translate(1010 137)" stroke="rgba(214, 241, 227, 0.78)" strokeWidth="2" fill="rgba(56, 161, 105, 0.08)" strokeLinejoin="round">
+        <circle r="30" fill="rgba(56, 161, 105, 0.12)" />
+        <path d="M-12 -14 C-23 -11 -21 3 -15 10 C-10 17 -11 24 -5 24 C0 24 -2 11 3 11 C8 11 7 24 13 24 C19 24 18 15 22 8 C27 -1 22 -14 12 -14 C5 -14 1 -9 -1 -9 C-4 -9 -6 -14 -12 -14 Z" transform="scale(.72) translate(-1 -3)" />
+      </g>
+
+      <g stroke="rgba(56, 161, 105, 0.16)" strokeWidth="1">
+        <path d="M430 215 H1030 M430 257 H1030 M430 299 H1030" />
+        <path d="M505 195 V325 M580 195 V325 M655 195 V325 M730 195 V325 M805 195 V325 M880 195 V325 M955 195 V325" />
+      </g>
+
+      <path
+        className="clinical-pulse"
+        d="M430 259 H555 L580 227 L608 293 L640 207 L675 272 L705 259 H1030"
+        stroke="rgba(214, 241, 227, 0.9)"
+        strokeWidth="3"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      <g className="clinical-records" fill="rgba(155, 220, 185, 0.38)">
+        <rect className="clinical-record c1" x="430" y="330" width="150" height="10" rx="5" />
+        <rect className="clinical-record c2" x="430" y="352" width="205" height="10" rx="5" />
+        <rect className="clinical-record c3" x="680" y="330" width="130" height="10" rx="5" />
+        <rect className="clinical-record c4" x="680" y="352" width="165" height="10" rx="5" />
+      </g>
+
+      <g className="clinical-shield" transform="translate(970 338)" stroke="rgba(214, 241, 227, 0.88)" strokeWidth="2.3" fill="rgba(56, 161, 105, 0.12)" strokeLinejoin="round">
+        <path d="M0 -30 C15 -24 25 -23 34 -23 V-2 C34 19 20 34 0 42 C-20 34 -34 19 -34 -2 V-23 C-25 -23 -15 -24 0 -30 Z" />
+        <path d="M-12 3 L-3 12 L15 -8" fill="none" strokeWidth="3.5" strokeLinecap="round" />
+      </g>
+    </svg>
+  );
+}
+
+/* ------------------------------------------------------------------ */
 /* construction: jobsite: steel frame, crane, forklift, welding robot  */
 /* ------------------------------------------------------------------ */
 
@@ -448,7 +631,13 @@ function ConstructionSvg() {
 
 export default function HeroBackdrop({kind}: {kind: BackdropKind}) {
   const ref = useRef<HTMLDivElement>(null);
-  const animated = kind === 'aero' || kind === 'skyline' || kind === 'construction';
+  const animated =
+    kind === 'aero' ||
+    kind === 'skyline' ||
+    kind === 'legal' ||
+    kind === 'ledger' ||
+    kind === 'clinical' ||
+    kind === 'construction';
 
   useEffect(() => {
     const element = ref.current;
@@ -481,6 +670,9 @@ export default function HeroBackdrop({kind}: {kind: BackdropKind}) {
       {kind === 'cyber' && <EnergyCanvas />}
       {kind === 'aero' && <AeroSvg />}
       {kind === 'skyline' && <SkylineSvg />}
+      {kind === 'legal' && <LegalSvg />}
+      {kind === 'ledger' && <LedgerSvg />}
+      {kind === 'clinical' && <ClinicalSvg />}
       {kind === 'construction' && <ConstructionSvg />}
       {kind === 'rain' && <RainCanvas />}
     </div>

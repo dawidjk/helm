@@ -169,7 +169,7 @@ The palette is botanical, mineral, and warm: pine provides authority, paper prov
 
 The site uses a centered 1200px maximum canvas with 24px desktop gutters, broad section spacing, and strong left alignment where visitors make decisions. Full-width pine fields and photographic heroes punctuate the paper canvas; content-heavy pages return to bounded, readable measures.
 
-Homepage storytelling follows four clear movements after the hero: the four offers in a ruled service list, candid proof, an industry choice, and a closing scan action. Secondary pages use a distinct architectural photographic hero before structured bands. Industry pages alone use contextual animated hero illustrations—Aero for manufacturing and defense, Skyline for professional services, and Construction for contractors and trades.
+Homepage storytelling follows four clear movements after the hero: the four offers in a ruled service list, candid proof, an industry choice, and a closing scan action. Secondary pages use a distinct architectural photographic hero before structured bands. Industry pages alone use large, code-native contextual SVG scenes on a right-aligned desktop stage: Aero for manufacturing and defense, Skyline for professional services, large balancing scales for law firms, a full reconciliation workspace for accounting and tax firms, a raised portable bedside monitor for medical and dental practices, and Construction for contractors and trades. On phones, the matching scene moves into its own in-flow panel between the headline and supporting copy so imagery never sits behind the text.
 
 Desktop layouts commonly use asymmetric two-column proportions rather than equal card grids. At 980px, large two-column compositions and the footer collapse; at 700px, heroes and lists stack, image crops shift, and the asymmetric closing panel tightens. Navigation changes to a 44px menu control at 760px. Small-screen content gutters reduce to 16px where needed without shrinking interactive targets.
 
@@ -244,7 +244,7 @@ Service, industry, resource, proof, FAQ, and risk patterns favor ruled rows over
 
 ### Hero Imagery
 
-The homepage uses the original still sculptural helm image as its singular brand statement. Product, pricing, trust, contact, and other secondary brand heroes share a different, simpler pine-and-oak architectural still, with a left-side shade and explicit light- and dark-theme text contrast. Only industry heroes animate, using Aero, Skyline, or Construction linework. Those illustrations occupy a bounded, right-aligned stage so the left copy field stays calm; they pause when off-screen and stop or resolve to a legible static state when reduced motion is requested.
+The homepage uses the original still sculptural helm image as its singular brand statement. Product, pricing, trust, contact, and other secondary brand heroes share a different, simpler pine-and-oak architectural still, with a left-side shade and explicit light- and dark-theme text contrast. Only industry heroes animate, using large code-native SVG scenes at a scale comparable to Aero. Manufacturing and defense use Aero; professional services use Skyline; law firms use large balancing scales that settle into an even resting state, with a stronger stroke treatment in light mode; accounting and tax firms use a full reconciliation workspace with a sidebar, summary cards, paired entries, a scan, trend chart, total, and verification state; medical and dental practices use a raised portable bedside monitor with a handle, controls, pulse, right-side medical-cross and tooth-care status nodes, records, a privacy shield, and a thick telescoping support that continues into the bottom of the desktop hero; contractors and trades use Construction. Desktop keeps each scene bounded and right-aligned so the left copy field stays calm. Phones place the scene in a dedicated in-flow panel between the headline and supporting copy. Every scene pauses when off-screen and resolves to a complete static composition when reduced motion is requested.
 
 ### Footer
 
@@ -256,7 +256,7 @@ The footer is a fixed dark-pine conclusion with a clear Helm identity block, dir
 
 - **Do** preserve the two-image hierarchy: sculptural homepage, separate architectural secondary hero.
 - **Do** lead first viewports with a left-aligned, high-contrast message and one obvious scan or founder action.
-- **Do** use Aero, Skyline, and Construction animation only on their matching industry heroes, right-aligned away from the copy, with off-screen pausing and reduced-motion fallbacks.
+- **Do** keep each approved code-native SVG scene on its matching industry hero—Aero, Skyline, law balancing scales, accounting reconciliation workspace, medical and dental bedside monitor, or Construction—at large scale, right-aligned away from desktop copy, placed in-flow between headline and supporting copy on phones, paused off-screen, and static under reduced motion.
 - **Do** keep section content visible by default and reserve the restrained rise reveal for first-viewport hero content.
 - **Do** use ruled, unnumbered rows for risks and SVG arrows for direction.
 - **Do** preserve 44px minimum interactive targets, dark-mode continuity, and elevated lead-form button contrast.

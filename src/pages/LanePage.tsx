@@ -31,6 +31,12 @@ export type Lane = {
     unchanged: string;
   };
   pains: {title: string; body: string}[];
+  evidence?: {
+    value: string;
+    finding: string;
+    source: string;
+    href: string;
+  }[];
   planTitle: string;
   planSub: string;
   steps: {num: string; title: string; body: string}[];
@@ -70,6 +76,9 @@ export default function LanePage({lane}: {lane: Lane}) {
           <h1 className="reveal d1 hero-title-readable">
             {lane.headline}
           </h1>
+          <div className="lane-hero-mobile-scene reveal d2" aria-hidden>
+            <HeroBackdrop kind={lane.backdrop} />
+          </div>
           <p className="sub reveal d2">
             <strong className="lane-audience">{lane.eyebrow}.</strong> {lane.sub}
           </p>
@@ -121,6 +130,24 @@ export default function LanePage({lane}: {lane: Lane}) {
           ))}
         </div>
       </Band>
+
+      {lane.evidence && (
+        <Band>
+          <div className="band-head lane-evidence-head">
+            <h2 className="observe">What the evidence says.</h2>
+            <p className="observe d1">Published figures and official guidance, with the scope stated plainly.</p>
+          </div>
+          <div className="lane-evidence-list">
+            {lane.evidence.map((item, i) => (
+              <article key={`${item.value}-${item.source}`} className={`lane-evidence-row observe d${Math.min(i + 1, 5)}`}>
+                <strong className="lane-evidence-value">{item.value}</strong>
+                <p>{item.finding}</p>
+                <a href={item.href}>{item.source}</a>
+              </article>
+            ))}
+          </div>
+        </Band>
+      )}
 
       <Band>
         <div className="band-head">

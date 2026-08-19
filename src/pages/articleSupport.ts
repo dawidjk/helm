@@ -79,7 +79,7 @@ const sources = {
   },
   fbiIc3: {
     title: 'FBI: 2025 Internet Crime Report',
-    href: 'https://www.fbi.gov/file-repository/2025_ic3report.pdf',
+    href: 'https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf',
   },
   ftcInsurance: {
     title: 'FTC: Cyber insurance for small business',
@@ -96,6 +96,38 @@ const sources = {
   hhsRisk: {
     title: 'HHS: HIPAA Security Rule risk analysis guidance',
     href: 'https://www.hhs.gov/hipaa/for-professionals/security/guidance/guidance-risk-analysis/index.html',
+  },
+  abaTechReport: {
+    title: 'ABA: 2023 Cybersecurity TechReport',
+    href: 'https://www.americanbar.org/groups/law_practice/resources/tech-report/2023/2023-cybersecurity-techreport/',
+  },
+  abaCyberDuties: {
+    title: 'ABA: Cybersecurity legal and ethical duties for attorneys',
+    href: 'https://www.americanbar.org/groups/law_practice/resources/law-practice-today/2019/cybersecurity-attorneys-legal-ethical/',
+  },
+  irsWisp: {
+    title: 'IRS: Tax professionals are required to maintain a WISP',
+    href: 'https://www.irs.gov/newsroom/tax-professional-tips-for-creating-a-data-security-plan',
+  },
+  irsTaxBreaches2025: {
+    title: 'IRS: First-half 2025 tax-professional breach reports',
+    href: 'https://www.irs.gov/newsroom/security-summit-irs-reminds-tax-pros-to-guard-against-identity-theft-as-summer-series-wraps-up',
+  },
+  ftcSafeguards: {
+    title: 'FTC: Safeguards Rule guidance for covered businesses',
+    href: 'https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know',
+  },
+  hhsNprm: {
+    title: 'HHS: HIPAA Security Rule proposed update and breach trends',
+    href: 'https://www.hhs.gov/hipaa/for-professionals/security/hipaa-security-rule-nprm/index.html',
+  },
+  hhsSraGuide: {
+    title: 'HHS: Security Risk Assessment Tool user guide for smaller practices',
+    href: 'https://www.hhs.gov/guidance/sites/default/files/hhs-guidance-documents//attachmenta-security_risk_assessment_tool_user_guide_v6.pdf',
+  },
+  healthItProviderResources: {
+    title: 'HealthIT.gov: Privacy and security resources for providers',
+    href: 'https://healthit.gov/privacy-security/health-it-privacy-and-security-resources-providers/',
   },
   dmarc: {
     title: 'IETF: DMARC standard, RFC 9989',
@@ -203,5 +235,17 @@ export const articleSupport: Record<string, ArticleSupport> = {
   'deepfake-ceo-fraud': {
     relatedSlugs: ['ai-phishing-red-flags', 'shadow-ai-at-work', 'wire-fraud-prevention-law-firms'],
     sources: [sources.fbiIc3, sources.nistAi],
+  },
+  'law-firm-device-security-checklist': {
+    relatedSlugs: ['wire-fraud-prevention-law-firms', 'what-a-soc-actually-does', 'employee-offboarding-checklist'],
+    sources: [sources.abaTechReport, sources.abaCyberDuties, sources.cisaRansomware],
+  },
+  'wisp-checklist-accounting-firms': {
+    relatedSlugs: ['employee-offboarding-checklist', 'backup-testing-insurers', 'm365-security-baseline'],
+    sources: [sources.irsWisp, sources.irsTaxBreaches2025, sources.ftcSafeguards],
+  },
+  'hipaa-risk-analysis-medical-practices': {
+    relatedSlugs: ['hipaa-email-rules-small-practices', 'what-a-soc-actually-does', 'incident-response-plan-small-business'],
+    sources: [sources.hhsRisk, sources.hhsSraGuide, sources.healthItProviderResources, sources.hhsNprm],
   },
 };

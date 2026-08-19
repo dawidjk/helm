@@ -26,7 +26,7 @@ const urls = [];
 function getPriority(route) {
   if (route === '') return '1.0';
   if (route === 'free-scan' || route === 'pricing') return '0.9';
-  if (['helm-mail', 'helm-aware', 'helm-ready', 'manufacturing', 'professional-services', 'contractors'].includes(route)) return '0.8';
+  if (['helm-mail', 'helm-aware', 'helm-ready', 'manufacturing', 'professional-services', 'law-firms', 'accounting-firms', 'medical-practices', 'contractors'].includes(route)) return '0.8';
   if (route === 'resources') return '0.7';
   if (route.startsWith('resources/')) return '0.6';
   if (['about', 'faq', 'contact'].includes(route)) return '0.5';

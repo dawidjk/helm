@@ -79,6 +79,9 @@ export function ActionLink({
 const lanes = [
   {to: '/manufacturing', label: 'Manufacturing & Defense'},
   {to: '/professional-services', label: 'Professional Services'},
+  {to: '/law-firms', label: 'Law Firms'},
+  {to: '/accounting-firms', label: 'Accounting & Tax Firms'},
+  {to: '/medical-practices', label: 'Medical & Dental Practices'},
   {to: '/contractors', label: 'Contractors & Trades'},
 ];
 

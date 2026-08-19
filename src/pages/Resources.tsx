@@ -55,6 +55,7 @@ const guideGroups: GuideGroup[] = [
       'ai-phishing-red-flags',
       'job-site-devices-public-wifi',
       'employee-offboarding-checklist',
+      'law-firm-device-security-checklist',
       'pen-test-vs-vulnerability-scan',
       'what-is-dmarc',
     ],
@@ -78,6 +79,7 @@ const guideGroups: GuideGroup[] = [
       'cyber-insurance-claim-denied',
       'cyber-insurance-application-walkthrough',
       'backup-testing-insurers',
+      'wisp-checklist-accounting-firms',
     ],
   },
   {
@@ -87,6 +89,7 @@ const guideGroups: GuideGroup[] = [
     slugs: [
       'sprs-score-explained',
       'hipaa-email-rules-small-practices',
+      'hipaa-risk-analysis-medical-practices',
       'cmmc-deadline-checklist',
       'ssp-poam-explained',
       'cui-handling-shop-floor',

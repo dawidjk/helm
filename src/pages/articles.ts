@@ -1009,4 +1009,159 @@ export const articles: Article[] = [
     takeaway:
       'You cannot rely on ears to beat synthetic voices, but a known-number callback and dual approval create a process the voice cannot bypass. Helm Aware installs that protocol and trains the people expected to use it.',
   },
+  {
+    slug: 'law-firm-device-security-checklist',
+    title: 'Law Firm Device Security Checklist: Laptops, Remote Work, and Lost Devices',
+    metaDesc:
+      'A practical device security checklist for small law firms covering inventory, monitoring, encryption, remote work, lost devices, and evidence for clients and insurers.',
+    date: '2026-08-18',
+    readMin: 6,
+    lane: 'Law Firms',
+    laneTo: '/law-firms',
+    intro:
+      'A law firm can protect its office network and still carry the most sensitive part of the practice out the door every evening. Client email, case files, document systems, and saved sessions live on laptops used at home, in court, and on the road. Protecting those devices is part of protecting the representation, not a separate IT housekeeping task.',
+    sections: [
+      {
+        h: 'Why the device belongs in the confidentiality conversation',
+        ps: [
+          'ABA Model Rule 1.6(c) calls for reasonable efforts to prevent unauthorized disclosure of, or access to, information relating to a client representation. The ABA describes that as a risk-based duty, which means the sensitivity of the information, the likelihood of exposure, and the practical safeguards available all matter.',
+          'The ABA 2023 Cybersecurity TechReport found that 29 percent of respondents said their firm had experienced a security incident. The survey definition included events such as lost or stolen computers and smartphones, so the figure should not be read as 29 percent confirmed data breaches. It does show why device loss and compromise belong in the same risk discussion as hacking.',
+        ],
+      },
+      {
+        h: 'Start with a device inventory that names an owner',
+        ps: [
+          'List every firm-owned Windows and Mac computer, who uses it, what operating system it runs, whether storage encryption is enabled, whether security updates install automatically, and whether the firm can see when its security software stops checking in. Include shared reception computers and seldom-used loaners, not only partner laptops.',
+          'Record which systems each device can reach. A laptop with access to email, the document-management platform, billing, trust accounting, and cloud storage deserves a different response plan than a public kiosk with no saved credentials.',
+        ],
+      },
+      {
+        h: 'Apply a baseline that can be checked',
+        ps: [
+          'Require a screen lock, full-disk encryption, supported operating systems, automatic security updates, separate administrator access, multi-factor authentication, and a managed security service that can investigate suspicious behavior. CISA ransomware guidance recommends centrally managed protection and detection-and-response coverage across organizational assets.',
+          {text: 'Helm Watch provides round-the-clock monitoring, human investigation, and containment for covered Windows and Mac devices. That does not replace patching, backups, identity controls, or a written incident plan, but it closes the gap between an alert appearing and someone qualified acting on it.', links: [{phrase: 'Helm Watch', to: '/helm-watch'}]},
+        ],
+      },
+      {
+        h: 'Write the lost-device procedure before a laptop disappears',
+        ps: [
+          'The procedure should name one person to call, how to disable the user account and revoke active sessions, how to determine what client information may have been accessible, and when counsel, the insurer, affected clients, or other parties must be consulted. Preserve facts and timestamps instead of guessing whether exposure occurred.',
+          'Phones and tablets need their own identity, email, and device-management controls. Standard Helm Watch coverage does not install the same security agent on iOS or Android, so a complete firm plan must address those devices separately.',
+        ],
+      },
+      {
+        h: 'Keep evidence that the checklist is operating',
+        ps: [
+          'A policy alone cannot show that a device was encrypted, monitored, or updated. Keep a current inventory, deployment status, encryption status, update records, incident contacts, and evidence that departed users were removed. Review exceptions instead of allowing them to become permanent.',
+          {text: 'If a client or carrier asks whether every device is protected, the defensible answer is the current inventory plus the evidence behind it. Helm Ready can help turn those questions into a documented gap list and an owned remediation plan.', links: [{phrase: 'Helm Ready', to: '/helm-ready'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'Inventory every work device, apply a checkable baseline, monitor covered Windows and Mac computers around the clock, and write the lost-device procedure before it is needed. Treat phones and tablets as a separate control decision, not an assumed part of laptop coverage.',
+  },
+  {
+    slug: 'wisp-checklist-accounting-firms',
+    title: 'WISP Checklist for Tax and Accounting Firms',
+    metaDesc:
+      'What a Written Information Security Plan should contain for a small tax or accounting firm, with IRS and FTC requirements translated into an operating checklist.',
+    date: '2026-08-18',
+    readMin: 6,
+    lane: 'Accounting Firms',
+    laneTo: '/accounting-firms',
+    intro:
+      'A Written Information Security Plan is not a policy downloaded for tax season and filed away. The IRS says tax professionals are required by law to maintain one, and the FTC Safeguards Rule explicitly includes tax preparation firms among the covered financial institutions. The useful version names the firm’s real systems, people, service providers, risks, and next actions.',
+    ctaMode: 'book',
+    sections: [
+      {
+        h: 'Why the plan needs current facts',
+        ps: [
+          'The IRS reported nearly 300 tax-professional data breaches in the first half of 2025, potentially affecting as many as 250,000 clients. Those are reported incidents, not an estimate of every breach, and they cover tax professionals nationally. The scale shows how one compromised practice can expose far more people than its employee count suggests.',
+          'A WISP should be appropriate to the size and complexity of the firm and the sensitivity of the customer information it handles. A five-person tax practice does not need the bureaucracy of a national firm, but it does need a plan that accurately describes its own safeguards.',
+        ],
+      },
+      {
+        h: 'Name the coordinator and the information in scope',
+        ps: [
+          'Assign one person to coordinate the information-security program, even if security is not that person’s full-time role. Give that owner the authority to maintain the plan, collect evidence, follow up on exceptions, and coordinate service providers.',
+          'Inventory the customer information the firm receives and where it moves: email, portals, tax software, workstations, shared drives, payroll systems, cloud storage, backups, paper records, and vendor platforms. Include seasonal staff and remote work because the plan must cover the way the firm actually operates during its busiest months.',
+        ],
+      },
+      {
+        h: 'Assess risk and match each safeguard to it',
+        ps: [
+          'For each system or workflow, identify the plausible threat, the weakness that could be exploited, the current safeguard, and what remains unresolved. Common examples include mailbox takeover, malicious attachments, stolen passwords, unsupported computers, excessive access, untested backups, and former workers whose accounts remain active.',
+          {text: 'Helm Mail addresses managed email filtering, phishing protection, suspicious-message triage, simulations, and awareness learning. Helm Watch provides 24/7 investigation and containment for covered Windows and Mac devices. Neither service replaces the WISP, but the controls and operating records can support what the plan says.', links: [{phrase: 'Helm Mail', to: '/helm-mail'}, {phrase: 'Helm Watch', to: '/helm-watch'}]},
+        ],
+      },
+      {
+        h: 'Document service providers, testing, and response',
+        ps: [
+          'The IRS checklist includes selecting service providers that maintain safeguards for customer information. Record what each provider handles, the relevant contract or assurance evidence, the responsible internal owner, and how the relationship is reviewed.',
+          'State how the firm checks whether safeguards still work. That can include account reviews, device-coverage checks, training records, backup restoration tests, phishing reporting, and an annual tabletop. Add a response path for a suspected breach that names the insurer, legal contacts, technology providers, and IRS and state reporting steps.',
+        ],
+      },
+      {
+        h: 'Keep the WISP evergreen',
+        ps: [
+          'Review the plan after meaningful technology, staffing, vendor, or workflow changes and after any security incident. Record the review date and decisions made, including risks accepted temporarily and the person responsible for closing each gap.',
+          {text: 'Helm Ready can assess the plan against the practice that exists today, identify statements that lack evidence, and produce a prioritized remediation roadmap. Remediation is a separate decision after the gaps are known.', links: [{phrase: 'Helm Ready', to: '/helm-ready'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'A useful WISP names an accountable coordinator, inventories customer information, documents risks and safeguards, governs service providers, defines testing and response, and records how the plan stays current. If the document and the practice disagree, fix the gap rather than polishing the wording.',
+  },
+  {
+    slug: 'hipaa-risk-analysis-medical-practices',
+    title: 'HIPAA Security Risk Analysis for Small Medical Practices',
+    metaDesc:
+      'How a small medical or dental practice can scope and document a HIPAA Security Rule risk analysis across email, devices, EHR access, vendors, and daily workflows.',
+    date: '2026-08-18',
+    readMin: 7,
+    lane: 'Medical Practices',
+    laneTo: '/medical-practices',
+    intro:
+      'The HIPAA Security Rule requires covered entities to conduct an accurate and thorough assessment of risks and vulnerabilities to electronic protected health information. For a smaller practice, that does not mean copying a hospital template. It means following patient information through the actual systems, devices, people, locations, and vendors used every day.',
+    ctaMode: 'book',
+    sections: [
+      {
+        h: 'Start with scope, not a checklist score',
+        ps: [
+          'HHS says the analysis covers all electronic protected health information the organization creates, receives, maintains, or transmits. The EHR is only one system. Email, billing, imaging, scheduling, backups, file shares, cloud services, copiers, workstations, laptops, tablets, phones, and vendor access can all enter scope.',
+          'HealthIT.gov specifically warns providers not to limit the analysis to the EHR and says to include devices that can access EHR data, including tablets and a practice manager’s mobile phone. A system does not need to store a permanent copy of patient information to create access risk.',
+        ],
+      },
+      {
+        h: 'Use the small-practice tools for their intended purpose',
+        ps: [
+          'The HHS Security Risk Assessment Tool was designed for smaller practices. Its user guide says the historical small-to-medium definition used for the tool is one to ten healthcare providers. HHS also makes clear that completing the tool does not by itself establish compliance.',
+          'A tool can organize the work, but the evidence still has to describe the practice. Record each system, the information involved, who can access it, where it is used, the threats and vulnerabilities, existing safeguards, likelihood, impact, and the decision made about remediation.',
+        ],
+      },
+      {
+        h: 'Treat email and work devices as different control layers',
+        ps: [
+          {text: 'Helm Mail can protect compatible business email from phishing and impersonation while providing employee reporting, triage, simulations, and awareness learning. It does not include a secure-message portal, encrypted outbound delivery, or secure file transfer, so any workflow that sends patient information may require a separately scoped secure delivery solution.', links: [{phrase: 'Helm Mail', to: '/helm-mail'}]},
+          {text: 'Helm Watch provides 24/7 monitoring, investigation, and containment for covered Windows and Mac workstations. It does not cover every technology in a practice. Phones, tablets, servers, medical devices, identity systems, networks, and vendor platforms must be addressed elsewhere in the risk analysis and separately scoped where protection is needed.', links: [{phrase: 'Helm Watch', to: '/helm-watch'}]},
+        ],
+      },
+      {
+        h: 'Turn findings into owned decisions',
+        ps: [
+          'A risk analysis is an input to risk management. For each finding, name the corrective action, owner, expected evidence, target date, and any interim safeguard. If the practice decides that a particular measure is not reasonable and appropriate, document the rationale and any equivalent measure rather than treating the requirement as optional.',
+          'Prioritize issues that combine sensitive information, broad access, weak detection, and meaningful operational impact. A front-desk workstation with EHR, email, and billing access may deserve attention before a rarely used system with tightly limited access, even if both appear on the inventory.',
+        ],
+      },
+      {
+        h: 'Revisit the analysis when the practice changes',
+        ps: [
+          'HHS describes risk analysis as an ongoing process. Review it when the practice changes an EHR or billing vendor, opens a location, adopts telehealth, adds remote work, changes email systems, brings in a new device class, or experiences an incident. Keep the previous analysis and document what changed.',
+          {text: 'Helm Ready provides a fixed-fee HIPAA Security Rule gap assessment for an agreed scope, with documented findings and a prioritized roadmap. It supports readiness and remediation planning, but Helm does not certify that a practice is HIPAA compliant.', links: [{phrase: 'Helm Ready', to: '/helm-ready'}]},
+        ],
+      },
+    ],
+    takeaway:
+      'Scope every place electronic patient information is stored or accessible, use HHS tools to organize rather than replace judgment, separate email and device controls, document each remediation decision, and revisit the analysis when the practice changes. No single product or checklist makes the practice compliant.',
+  },
 ];
