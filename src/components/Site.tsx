@@ -494,6 +494,19 @@ export function RevealManager() {
   return null;
 }
 
+export function MailingAddress() {
+  return (
+    <address className="mailing-address">
+      <a href="https://www.google.com/maps/search/?api=1&query=865%20NJ%2033%20Business%20Ste%203%20Unit%20%23256%2C%20Freehold%2C%20NJ%2007728">
+        Helm Security<br />
+        865 NJ 33 Business<br />
+        Ste 3, Unit #256<br />
+        Freehold, NJ 07728
+      </a>
+    </address>
+  );
+}
+
 export function SiteFooter() {
   const remarketingConfigured = isRemarketingConfigured();
   return (
@@ -509,6 +522,10 @@ export function SiteFooter() {
             <a href="mailto:hello@helmsecured.com">hello@helmsecured.com</a>
             <a href={`tel:${businessPhone.e164}`}>{businessPhone.display}</a>
             <span>Serving {serviceAreaText}</span>
+            <div className="footer-mailing-address">
+              <strong>Mailing address</strong>
+              <MailingAddress />
+            </div>
           </div>
         </div>
         <nav className="footer-cols" aria-label="Footer navigation">

@@ -2498,7 +2498,7 @@ html[data-theme='light'] .legal-beam {
   margin: 0 auto 48px;
   padding: 24px;
   display: grid;
-  grid-template-columns: minmax(140px, 0.7fr) minmax(210px, 1fr) minmax(260px, 1.4fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
   border: 1px solid var(--helm-hairline);
   border-radius: 18px;
@@ -3864,6 +3864,18 @@ a.nav-cta-mobile.action-link:hover {
   gap: 9px;
   color: #bec8bf;
   line-height: 1.5;
+}
+
+.mailing-address {
+  margin: 0;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.footer-mailing-address {
+  display: grid;
+  gap: 6px;
+  margin-top: 15px;
 }
 
 .site-footer a,
