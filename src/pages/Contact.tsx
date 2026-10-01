@@ -1,5 +1,6 @@
 import HeroBackdrop from '../components/HeroBackdrop';
 import {useEffect, useState} from 'react';
+import {useSearchParams} from 'react-router-dom';
 import {Button} from '@astryxdesign/core/Button';
 import {Band, MailingAddress, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
@@ -13,6 +14,9 @@ const CONTACT_ENDPOINT =
   'https://app.helmsecured.com/api/contact';
 
 export default function Contact() {
+  const [searchParams] = useSearchParams();
+  const requestedService = searchParams.get('service');
+  const [interest, setInterest] = useState('');
   const [state, setState] = useState<'idle' | 'busy' | 'sent' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const [intent, setIntent] = useState<string | null>(null);
@@ -20,6 +24,10 @@ export default function Contact() {
   const [turnstileResetKey, setTurnstileResetKey] = useState(0);
   const [turnstileTimedOut, setTurnstileTimedOut] = useState(false);
   const sent = state === 'sent';
+
+  useEffect(() => {
+    setInterest(requestedService === 'secure-ai-adoption' ? 'Secure AI Adoption' : '');
+  }, [requestedService]);
 
   // The Send button stays disabled until Turnstile hands over a token. While
   // that is pending, say so; if no token arrives in a reasonable window (slow
@@ -101,7 +109,7 @@ export default function Contact() {
     <>
       <Meta
         title="Contact Helm: Talk to an Executive"
-        desc="Contact Helm about complete managed security through Helm Core or hands-on security program ownership through Helm Command."
+        desc="Contact Helm about managed cybersecurity through Core or Command, or a separately scoped Secure AI Adoption engagement."
         path="/contact"
       />
       <header className="hero lane brand-hero">
@@ -168,11 +176,11 @@ export default function Contact() {
 
             <label>
               What do you need help with?
-              <select name="interest" required defaultValue="">
+              <select name="interest" required value={interest} onChange={(event) => setInterest(event.target.value)}>
                 <option value="" disabled>
                   Choose one…
                 </option>
-                {contactInterests.map((o) => (
+                {[...contactInterests.slice(0, -1), 'Secure AI Adoption', contactInterests[contactInterests.length - 1]].map((o) => (
                   <option key={o} value={o}>
                     {o}
                   </option>
@@ -186,9 +194,17 @@ export default function Contact() {
                 name="message"
                 rows={5}
                 maxLength={2000}
-                placeholder="Team size, deadlines, what your insurer or customer is asking for…"
+                placeholder={interest === 'Secure AI Adoption'
+                  ? 'Describe one internal task, who does it, and what takes time today…'
+                  : 'Team size, deadlines, what your insurer or customer is asking for…'}
+                aria-describedby={interest === 'Secure AI Adoption' ? 'ai-inquiry-guidance' : undefined}
               />
             </label>
+            {interest === 'Secure AI Adoption' && (
+              <p id="ai-inquiry-guidance" className="cf-note">
+                Describe the workflow without client records, confidential information, or other sensitive data.
+              </p>
+            )}
 
             <div className="cf-actions">
               <Button

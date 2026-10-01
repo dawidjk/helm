@@ -7,6 +7,7 @@ import {productList} from './products';
 import japandiHero from '../assets/variants/japandi-hero.webp';
 import japandiHeroMobile from '../assets/brand/japandi-home-mobile-640.webp';
 import {DirectionIcon, ScrollCue} from '../components/Site';
+import './SecureAiAdoption.css';
 
 const lanes = [
   {to: '/manufacturing', name: 'Manufacturing & defense', promise: 'CMMC without the panic'},
@@ -26,7 +27,7 @@ export default function Home() {
   return (
     <div className="home-japandi">
       <Meta
-        title="Helm: Cybersecurity for New Jersey Small and Medium Businesses"
+        title="Managed Cybersecurity for New Jersey Businesses | Helm"
         desc="Complete managed security through Helm Core, with hands-on security program ownership through Helm Command for New Jersey small and medium-sized businesses."
         path="/"
         jsonLd={{
@@ -86,6 +87,21 @@ export default function Home() {
               <DirectionIcon className="home-service-arrow" />
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="home-ai-section" aria-labelledby="home-ai-title">
+        <h2 id="home-ai-title">Secure AI Adoption</h2>
+        <div>
+          <p>A separate consulting engagement for New Jersey professional-services firms.
+            Evaluate one recurring internal workflow, review the tools and data it needs,
+            and decide whether a pilot is appropriate. Compare staff effort, checking time,
+            and software costs before deciding what to keep.</p>
+          <p>Pricing quoted after scoping. Any pilot has a separate scope.</p>
+          <div className="home-ai-links">
+            <Link to="/secure-ai-adoption/">Explore Secure AI Adoption <DirectionIcon /></Link>
+            <Link to="/contact/?service=secure-ai-adoption">Discuss an AI workflow <DirectionIcon /></Link>
+          </div>
         </div>
       </section>
 

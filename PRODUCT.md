@@ -16,7 +16,11 @@ The site helps a visitor understand Helm's security services, compare price and 
 
 ## Positioning
 
-Helm sells two services. Helm Core is the standardized managed protection layer. Helm Command combines that protection with hands-on security-program ownership. Both preserve the client's existing IT provider or internal IT team and state clearly what Helm operates versus what specialist vendors provide.
+Helm's two primary managed cybersecurity services are Helm Core and Helm Command. Helm Core is the standardized managed protection layer. Helm Command combines that protection with hands-on security-program ownership. Both preserve the client's existing IT provider or internal IT team and state clearly what Helm operates versus what specialist vendors provide.
+
+Secure AI Adoption is a secondary consulting engagement approved for publication on October 1, 2026. It serves New Jersey professional-services firms with roughly 20–250 employees and an existing IT provider. The scope starts with one recurring internal workflow, its current effort and cost, and a review of tools, data handling, permissions, licensing, and human review. Helm recommends whether a pilot is appropriate. Any pilot has a separate scope and quote for one workflow on one approved platform, with output quality, review and correction time, and software costs informing whether to continue.
+
+Deliverables are conditional on agreed scope. Testing starts with public, synthetic, or explicitly approved low-sensitivity data. Confidential client data is not uploaded by default. The engagement excludes autonomous legal, financial, medical, and hiring decisions; custom applications, production integrations, company-wide rollouts, and ongoing support require separate scoping. Pricing is quoted after scoping. These commitments do not change Core or Command services or pricing.
 
 ## Operating Context
 

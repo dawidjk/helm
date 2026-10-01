@@ -83,6 +83,16 @@ const guideGroups: GuideGroup[] = [
     ],
   },
   {
+    id: 'evaluate-ai-workflows',
+    title: 'Evaluate an internal AI workflow',
+    description: 'Choose a task, check document access, and measure the work needed to produce an acceptable result.',
+    slugs: [
+      'choose-first-ai-workflow',
+      'ai-access-business-documents',
+      'measure-ai-time-savings',
+    ],
+  },
+  {
     id: 'cmmc-and-hipaa',
     title: 'Work through CMMC and HIPAA requirements',
     description: 'Understand the deadlines, scores, documents, and handling rules behind the requirement in front of you.',

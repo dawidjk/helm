@@ -1,0 +1,138 @@
+.home-ai-section {
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto;
+  padding-block: 40px 64px;
+  border-top: 1px solid var(--helm-hairline);
+  display: grid;
+  grid-template-columns: minmax(220px, .72fr) minmax(0, 1.28fr);
+  gap: clamp(32px, 6vw, 96px);
+}
+
+.home-ai-section h2 {
+  margin: 0;
+  font-size: clamp(32px, 3.4vw, 42px);
+  line-height: 1.12;
+  color: var(--helm-text-strong);
+}
+
+.home-ai-section p {
+  max-width: 68ch;
+  margin: 0 0 16px;
+  color: var(--helm-text-dim);
+  line-height: 1.7;
+}
+
+.home-ai-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 28px;
+}
+
+.home-ai-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  color: var(--helm-accent-text);
+  text-underline-offset: 4px;
+}
+
+.home-ai-links svg {
+  width: 20px;
+  height: 20px;
+}
+
+.ai-section-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(32px, 7vw, 96px);
+  align-items: start;
+}
+
+.ai-adoption-page .brand-hero .hero-note {
+  color: #f5f1e8;
+}
+
+.ai-section-layout h2 {
+  margin: 0;
+  font-size: clamp(32px, 3.5vw, 44px);
+  line-height: 1.12;
+  color: var(--helm-text-strong);
+}
+
+.ai-prose p,
+.ai-review-steps p,
+.ai-measures dd {
+  max-width: 70ch;
+  margin: 0;
+  color: var(--helm-text-dim);
+  line-height: 1.7;
+}
+
+.ai-prose > p + p,
+.ai-prose > h2 + p,
+.ai-prose > p + ul {
+  margin-top: 20px;
+}
+
+.ai-prose a {
+  color: var(--helm-accent-text);
+  text-underline-offset: 4px;
+}
+
+.ai-review-steps {
+  margin: 0;
+  padding-left: 24px;
+  list-style: decimal;
+}
+
+.ai-review-steps li {
+  padding-left: 8px;
+}
+
+.ai-review-steps li + li {
+  margin-top: 32px;
+}
+
+.ai-review-steps h3,
+.ai-measures dt {
+  margin: 0 0 8px;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--helm-text-strong);
+}
+
+.ai-measures {
+  margin: 0;
+  border-top: 1px solid var(--helm-hairline);
+}
+
+.ai-measures > div {
+  padding-block: 24px;
+  border-bottom: 1px solid var(--helm-hairline);
+}
+
+.ai-deliverables {
+  padding-left: 22px;
+  color: var(--helm-text-dim);
+  line-height: 1.7;
+}
+
+.ai-deliverables li + li {
+  margin-top: 12px;
+}
+
+.ai-adoption-page .cta-form .ai-quote-note {
+  margin: 16px 0 0;
+  font-size: 16px;
+}
+
+@media (max-width: 760px) {
+  .home-ai-section,
+  .ai-section-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+}

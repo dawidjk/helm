@@ -4,6 +4,7 @@ export type {Paragraph, LinkedParagraph};
 export type Article = {
   slug: string;
   title: string;
+  metaTitle?: string;
   metaDesc: string;
   date: string;
   updated?: string;
@@ -13,6 +14,9 @@ export type Article = {
   intro: string;
   sections: {h: string; ps: Paragraph[]}[];
   takeaway: string;
+  organizationByline?: boolean;
+  hideVisual?: boolean;
+  consultation?: {title: string; sub: string; label: string; to: string};
   /**
    * 'scan' (default) sends the reader to the free domain scan CTA.
    * 'book' sends compliance-research readers (cyber-insurance, HIPAA topics)
@@ -27,57 +31,400 @@ export type Article = {
 
 export const articles: Article[] = [
   {
-    slug: 'mfa-methods-compared',
-    title: 'MFA Methods Compared: Apps, SMS, and Security Keys for Small and Medium Businesses',
-    metaDesc:
-      'Authenticator apps, SMS codes, and hardware security keys all stop different attacks. A plain-English comparison for small and medium-sized businesses deciding where to start.',
-    date: '2026-07-17',
-    updated: '2026-08-18',
-    readMin: 5,
-    lane: 'All industries',
-    laneTo: '/',
-    intro:
-      'Turning on MFA can stop a stolen password from becoming a stolen mailbox, bank login, or admin account. The method matters, though. Text messages, authenticator apps, and security keys fail in different ways, so the strongest option should protect the people who can move money or change systems.',
-    sections: [
+    "slug": "choose-first-ai-workflow",
+    "title": "How to choose your first AI workflow",
+    "metaTitle": "How to Choose Your First AI Workflow | Helm",
+    "metaDesc": "Choose a repeatable internal AI task with an owner, approved inputs, a review process, and a measurable outcome before committing to a pilot.",
+    "date": "2026-10-01",
+    "readMin": 4,
+    "lane": "All industries",
+    "laneTo": "/",
+    "organizationByline": true,
+    "hideVisual": true,
+    "consultation": {
+      "title": "Discuss one internal workflow.",
+      "sub": "Tell us who does the task and what takes time today. Keep client records and sensitive information out of the inquiry.",
+      "label": "Discuss an AI workflow",
+      "to": "/contact/?service=secure-ai-adoption"
+    },
+    "intro": "For a New Jersey accounting, law, insurance, or financial-services firm, a useful first AI question is specific: which recurring internal task takes time, and could an approved tool help? Pick a task you can describe and measure before buying licenses or connecting business documents.",
+    "takeaway": "Choose a frequent internal task with reliable inputs, a named reviewer, and mistakes that are easy to detect and correct. Compare the complete task, including checking time, before deciding whether a pilot deserves a separate scope.",
+    "sections": [
       {
-        h: 'Start by covering every account',
-        ps: [
-          'Any multi-factor authentication beats none. A password alone is one stolen or guessed credential away from a full account takeover, and every method below closes that gap. If the choice is between debating which option is best and turning nothing on at all, turn something on today.',
-          'That said, the methods are not equally strong, and knowing where each one bends helps you decide who gets which method first.',
-        ],
+        "h": "Define the task and its owner",
+        "ps": [
+          "Write down the starting input and the finished output. “Help with administration” is too broad. “Draft an internal onboarding checklist from the current approved procedures” gives staff something they can test. Name the person who owns those procedures and can accept or reject the draft.",
+          {
+            "text": "NIST’s AI Risk Management Framework Playbook recommends documenting the intended purpose, expected benefits, costs, and human oversight. For a first workflow, put those decisions on one page before discussing tools.",
+            "links": [
+              {
+                "phrase": "NIST’s AI Risk Management Framework Playbook",
+                "to": "https://airc.nist.gov/airmf-resources/playbook/map/"
+              }
+            ]
+          },
+          "Bring your existing IT provider into the discussion early. The workflow owner decides what useful work looks like; IT checks the proposed platform, accounts, permissions, and configuration. Agree who can approve changes."
+        ]
       },
       {
-        h: 'SMS codes: better than nothing, but the weakest link',
-        ps: [
-          'A text-message code is easy to set up and better than a password on its own, but it has two real weaknesses. SIM swapping lets an attacker convince a phone carrier to move your number onto a device they control, which sends your codes straight to them. Real-time phishing relays capture the code the moment you type it into a fake login page and use it within seconds on the real one.',
-          'Neither attack is common against every small or medium-sized business, but both are well documented, and neither requires much skill once someone is specifically targeted. SMS still beats password-only, it just should not be the method protecting your most sensitive accounts.',
-        ],
+        "h": "Measure frequency and current effort",
+        "ps": [
+          "Count how often the task happens in a normal month, including seasonal differences. Record several completed examples: preparation, drafting, checking, corrections, and handoff. A task that takes ten minutes twice a year has little time available to recover the effort of setup and testing.",
+          "Choose an outcome you can observe. For a checklist, that might mean all required steps appear in the correct order, no unsupported steps are added, and a staff member spends less total time producing an approved version. Faster drafting alone is an incomplete measure."
+        ]
       },
       {
-        h: 'Authenticator apps: free, stronger, and one thing to turn on',
-        ps: [
-          'An authenticator app generates a code on the device itself rather than sending one over the phone network, which removes the SIM-swapping risk entirely. The apps are free, widely supported, and a meaningful step up from SMS for most day-to-day accounts.',
-          'Their weak spot is push-approval fatigue: an attacker who already has your password sends a flood of approval prompts hoping you tap approve once just to make them stop. Number matching, where the app makes you type a specific number shown on the login screen rather than tapping a single button, closes that gap and is worth turning on wherever it is offered.',
-        ],
+        "h": "Check the inputs and the cost of mistakes",
+        "ps": [
+          "Use public, synthetic, or explicitly approved low-sensitivity material first. Confirm that procedures are current, readable, and consistent. If staff disagree about which version is authoritative, settle that before asking AI to summarize it. Document cleanup may solve more of the problem than a new tool.",
+          "Ask what happens if the output is wrong and who would notice. An internal draft that an experienced manager can compare with a short source document is a better first candidate than a decision affecting a client’s money or legal rights. Keep autonomous legal, financial, medical, and hiring decisions outside this pilot.",
+          {
+            "text": "Assign review time to someone who understands the work. NIST’s measurement guidance calls for testing whether a system is fit for its purpose and defining acceptable performance limits. A confident-looking answer is not a quality check.",
+            "links": [
+              {
+                "phrase": "NIST’s measurement guidance",
+                "to": "https://airc.nist.gov/airmf-resources/playbook/measure/"
+              }
+            ]
+          }
+        ]
       },
       {
-        h: 'Hardware security keys: the phishing-resistant option',
-        ps: [
-          'A FIDO2 security key is a small physical device that plugs in or taps to approve a sign-in. The key checks that it is communicating with the real site before it responds. If someone enters a password on a convincing fake login page, the key will not approve that page.',
-          'Keys typically run under $60 each, and most people only need one plus a backup.',
-        ],
+        "h": "Hypothetical example: an internal checklist",
+        "ps": [
+          "Imagine a 45-person New Jersey accounting firm that regularly adapts internal onboarding checklists for different staff roles. Its operations manager has approved procedure documents with no client records. The proposed test asks one approved platform to draft a role-specific checklist from those documents.",
+          "The manager checks every instruction against the source, marks omissions and invented steps, and records the minutes spent preparing, reviewing, and correcting each draft. Nothing goes to new staff until approved. The example describes a possible test, not a Helm client or a measured result."
+        ]
       },
       {
-        h: 'A sensible rollout order',
-        ps: [
-          'Start with the accounts that matter most: admins, and anyone who can move money or approve payments, get the strongest option, hardware security keys. Everyone else gets an authenticator app with number matching turned on. SMS is a reasonable fallback for low-risk accounts, not the default for the accounts you would miss most if they were taken over.',
-          {text: 'People are more likely to use MFA correctly when they understand which attack it prevents. Ongoing security awareness training gives the rollout that context instead of leaving it as another unexplained login step.', links: [{phrase: 'Ongoing security awareness training', to: '/helm-core'}]},
-          {text: 'Not sure where your own accounts currently stand? A free scan of your domain is a quick way to see what is exposed before you decide where to start.', links: [{phrase: 'free scan', to: '/free-scan'}]},
-        ],
+        "h": "Decide whether a pilot is justified",
+        "ps": [
+          "A pilot may add little value when the task rarely occurs, the inputs change constantly, or checking the output takes as long as doing the work. Stop before testing if there is no accountable reviewer, no approved data set, or no way to recognize an unacceptable result. A standard template or a clearer procedure may be sufficient.",
+          {
+            "text": "Helm’s Secure AI Adoption assessment reviews one workflow, its effort and cost, and the tool and data requirements before recommending whether to pilot. Any pilot is separately scoped for one workflow on one approved platform, with pricing quoted after scoping. Managed cybersecurity remains Helm’s primary offering.",
+            "links": [
+              {
+                "phrase": "Secure AI Adoption",
+                "to": "/secure-ai-adoption/"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ai-access-business-documents",
+    "title": "What to check before giving AI access to business documents",
+    "metaTitle": "AI Access to Business Documents: What to Check | Helm",
+    "metaDesc": "Review document permissions, client confidentiality, retention, training use, connected services, and human checks before approving an AI workflow.",
+    "date": "2026-10-01",
+    "readMin": 4,
+    "lane": "All industries",
+    "laneTo": "/",
+    "organizationByline": true,
+    "hideVisual": true,
+    "consultation": {
+      "title": "Discuss one internal workflow.",
+      "sub": "Tell us who does the task and what takes time today. Keep client records and sensitive information out of the inquiry.",
+      "label": "Discuss an AI workflow",
+      "to": "/contact/?service=secure-ai-adoption"
+    },
+    "intro": "Before an AI tool can summarize a folder, someone must decide whether it should have access to that folder. For a professional-services firm, the answer depends on the documents, the task, the people using the tool, and the services receiving the data. A business subscription alone does not approve the use.",
+    "takeaway": "Review access, confidentiality, storage, model-training terms, and connected services separately. Start with approved low-sensitivity material and require a person to check the output before it is used.",
+    "sections": [
+      {
+        "h": "Define the documents and permitted use",
+        "ps": [
+          "Name the workflow, document owner, intended users, and expected output. Identify confidential client information, personal information, and material subject to contractual restrictions. Have the responsible person confirm what the firm is allowed to process and share. This decision should happen before an upload or connection.",
+          "For example, a law firm could first test an internal checklist using approved office procedures with no matter files. An insurance agency could use synthetic correspondence instead of policyholder records. Removing a client’s name may leave identifying facts elsewhere, so do not treat a quick redaction as automatic approval."
+        ]
       },
-    ],
-    takeaway:
-      'Turn on MFA everywhere first. Then give security keys to administrators and anyone who can move money, use authenticator apps with number matching for the rest of the team, and keep text messages as a fallback.',
+      {
+        "h": "Review permissions with the existing IT provider",
+        "ps": [
+          {
+            "text": "Microsoft’s Copilot privacy documentation says it surfaces organizational information the individual user has permission to view. That makes existing access important: an overly broad folder permission can expose material to someone who should not see it, even when the AI tool follows that permission.",
+            "links": [
+              {
+                "phrase": "Microsoft’s Copilot privacy documentation",
+                "to": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy"
+              }
+            ]
+          },
+          "Ask your IT provider to inspect group membership, shared links, guest access, and the permissions requested by each connection. Prefer the smallest approved document set that can answer the question. Confirm whether a connection can only read or can also create, edit, send, or delete information.",
+          "Write down who approves access and who removes it when the test ends or a staff member leaves. Test with a normal staff account, not only an administrator’s account."
+        ]
+      },
+      {
+        "h": "Separate training terms from retention",
+        "ps": [
+          {
+            "text": "Microsoft states that prompts, responses, and information accessed through Microsoft Graph are not used to train foundation models. The same documentation says Copilot stores interaction data, including prompts and responses. “Not used for model training” does not mean “not stored.”",
+            "links": [
+              {
+                "phrase": "The same documentation",
+                "to": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy"
+              }
+            ]
+          },
+          {
+            "text": "Microsoft’s retention documentation also explains that retention policies and holds can affect permanent deletion. Deleting an item from the visible chat history is not sufficient evidence that every retained copy is gone.",
+            "links": [
+              {
+                "phrase": "Microsoft’s retention documentation",
+                "to": "https://learn.microsoft.com/en-us/purview/retention-policies-copilot"
+              }
+            ]
+          },
+          "For the exact product and license under consideration, record what is stored, where it is processed, who can retrieve it, how long it remains, and what deletion does. Check files, prompts, outputs, and logs separately. Ask IT to verify which controls your subscription actually includes and how they are configured."
+        ]
+      },
+      {
+        "h": "Check connected services and human review",
+        "ps": [
+          {
+            "text": "Connections, agents, and web search can introduce additional data handling. Microsoft’s web-search documentation says Copilot can send generated queries to Bing, informed by the prompt and, in some circumstances, document content. Review this setting even if the intended task only concerns internal documents.",
+            "links": [
+              {
+                "phrase": "Microsoft’s web-search documentation",
+                "to": "https://learn.microsoft.com/en-us/microsoft-365/copilot/manage-public-web-access"
+              }
+            ]
+          },
+          {
+            "text": "Microsoft also directs customers to review an agent’s privacy statement and terms. Record each approved connection and its recipient, purpose, permissions, and deletion process. Leave unnecessary connections disabled.",
+            "links": [
+              {
+                "phrase": "an agent’s privacy statement and terms",
+                "to": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy"
+              }
+            ]
+          },
+          "Assign someone to compare outputs with the source documents. A summary that drops an exception, misstates a deadline, or combines two clients’ details can be unusable even if the access settings are correct. Keep drafts internal until that review is complete."
+        ]
+      },
+      {
+        "h": "Record the approval before testing",
+        "ps": [
+          "Keep a short record of the approved platform and license, permitted documents, users, reviewer, retention settings, and stop conditions. Revisit it when a connection, permission, vendor term, or workflow changes. Begin with public, synthetic, or explicitly approved low-sensitivity data; confidential client files are not the default.",
+          {
+            "text": "Helm’s Secure AI Adoption assessment can review these questions alongside your existing IT provider before recommending a pilot. Any pilot has a separate scope for one workflow on one approved platform. Deliverables and pricing are agreed after scoping; company-wide rollout and ongoing support require separate scoping.",
+            "links": [
+              {
+                "phrase": "Secure AI Adoption",
+                "to": "/secure-ai-adoption/"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "measure-ai-time-savings",
+    "title": "Is AI saving your team time? Count the checking and corrections",
+    "metaTitle": "Measuring AI Time Savings: Review and Corrections | Helm",
+    "metaDesc": "Compare the whole task with and without AI, including preparation, checking, corrections, software costs, and maintenance. Includes a hypothetical example.",
+    "date": "2026-10-01",
+    "readMin": 4,
+    "lane": "All industries",
+    "laneTo": "/",
+    "organizationByline": true,
+    "hideVisual": true,
+    "consultation": {
+      "title": "Discuss one internal workflow.",
+      "sub": "Tell us who does the task and what takes time today. Keep client records and sensitive information out of the inquiry.",
+      "label": "Discuss an AI workflow",
+      "to": "/contact/?service=secure-ai-adoption"
+    },
+    "intro": "A draft produced in seconds can still take twenty minutes to check. Before renewing AI licenses or expanding a pilot, measure the time required to produce usable work. For a firm with an existing IT provider, the comparison should include staff review, software fees, and the effort needed to keep the workflow working.",
+    "takeaway": "Compare complete, accepted outputs at the same quality standard. Record preparation, checking, corrections, fees, and maintenance. Time freed for other work is useful capacity; it becomes cash savings or revenue only when a separate business change produces that result.",
+    "sections": [
+      {
+        "h": "Measure the existing task first",
+        "ps": [
+          "Choose one recurring internal task and define when it is finished. Record several examples without AI, including difficult cases. Count time spent finding source material, doing the work, checking it, correcting it, and handing it over. Use the same acceptance criteria during the pilot.",
+          {
+            "text": "NIST’s AI RMF Playbook calls for comparing expected benefits and costs with appropriate benchmarks. Your own completed work provides a more relevant starting point than a vendor’s demonstration.",
+            "links": [
+              {
+                "phrase": "NIST’s AI RMF Playbook",
+                "to": "https://airc.nist.gov/airmf-resources/playbook/map/"
+              }
+            ]
+          },
+          "If one person prepares the work and a partner reviews it, record both people’s minutes and agreed labor-cost assumptions. Keep elapsed waiting time separate from active staff time. A quicker response does not necessarily use fewer paid hours."
+        ]
+      },
+      {
+        "h": "Hypothetical worked example: twenty internal checklists",
+        "ps": [
+          "This illustration is not a customer result, a Helm quote, or a vendor price. Assume a firm produces twenty internal checklists per month from approved procedures. Without AI, each takes thirty minutes, including its normal review. At an assumed loaded labor cost of $40 per hour, ten hours of work cost $400.",
+          "With AI, assume each checklist needs six minutes to prepare inputs, two minutes to generate and handle the draft, eight minutes to review, and four minutes to correct. That is twenty minutes per accepted checklist, or 400 minutes for twenty checklists.",
+          "Add sixty minutes per month to update instructions and test changes. Total staff time is now 460 minutes, or seven hours and forty minutes. At the same $40 hourly assumption, labor costs $306.67. An assumed $30 monthly software allocation brings the recurring process cost to $336.67, compared with $400 before AI.",
+          "The difference is two hours and twenty minutes of staff capacity and $63.33 in modeled monthly process cost. If setup also requires a one-time $180 of effort, the first month costs $516.67, which is $116.67 more than the original process. Include any actual consulting or additional licensing fees separately."
+        ]
+      },
+      {
+        "h": "Check what the numbers leave out",
+        "ps": [
+          "Record failed attempts and drafts that staff abandon. Otherwise, measuring only the successful outputs overstates the benefit. Check whether review shifted from an administrator to a more expensive partner, whether usage charges vary, and whether maintenance takes longer as source documents change.",
+          "The example’s $63.33 is not automatically money back in the bank. Salaried staff may cost the same after the change. Cash savings require a reduction in an actual expense, such as overtime. Additional revenue requires demand, available billable work, and work that is completed and paid for. Identify how the freed time will be used before assigning revenue to it."
+        ]
+      },
+      {
+        "h": "Agree when to continue, change, or stop",
+        "ps": [
+          {
+            "text": "NIST’s measurement guidance recommends defining acceptable performance limits and checking results over time. Set the criteria before testing so the decision does not depend on one impressive draft.",
+            "links": [
+              {
+                "phrase": "NIST’s measurement guidance",
+                "to": "https://airc.nist.gov/airmf-resources/playbook/measure/"
+              }
+            ]
+          },
+          "Continue when accepted outputs meet the agreed quality standard, approved data handling remains intact, and total effort and cost justify continued use across representative tasks. Change the instructions, source material, or task boundary when a specific, fixable problem explains the result, then test again.",
+          "Stop when material mistakes remain hard to detect, review consumes the expected time gain, costs exceed the agreed limit, or staff need unapproved data or access to make the task work. Keep a usable manual procedure."
+        ]
+      },
+      {
+        "h": "Scope the measurement before expanding",
+        "ps": [
+          {
+            "text": "Helm’s Secure AI Adoption assessment documents one workflow’s current effort and cost before recommending whether to pilot. A separately scoped pilot can compare output quality, checking time, corrections, and software costs on one approved platform. Pricing follows scoping. Production integrations, wider rollout, and ongoing support need separate scopes.",
+            "links": [
+              {
+                "phrase": "Secure AI Adoption",
+                "to": "/secure-ai-adoption/"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "mfa-methods-compared",
+    "title": "MFA methods compared: SMS, TOTP, push, and passkeys",
+    "metaTitle": "MFA Compared: SMS, TOTP, Push, and Passkeys | Helm",
+    "metaDesc": "Compare MFA phishing resistance, daily use, and account recovery. Plan SMS, TOTP, push, passkeys, and security keys with your existing IT provider.",
+    "date": "2026-07-17",
+    "updated": "2026-10-01",
+    "readMin": 5,
+    "lane": "All industries",
+    "laneTo": "/",
+    "intro": "An authenticator app can generate a code, request approval, or hold a passkey. Those are different sign-in methods with different protections. When reviewing MFA with your IT provider, ask which method is enforced on each account, how people recover access, and whether weaker alternatives remain available.",
+    "takeaway": "SMS, authenticator-generated TOTP codes, and push approvals with number matching are not phishing-resistant. Passkeys and FIDO2 security keys provide phishing-resistant sign-in. Prioritize administrators and payment approvers, and test recovery before expanding the rollout.",
+    "consultation": {
+      "title": "Review your account protection.",
+      "sub": "Discuss MFA coverage, recovery, and responsibilities with Helm and your existing IT provider.",
+      "label": "Discuss account protection",
+      "to": "/contact/?intent=findings-call&src=article%20mfa-methods-compared"
+    },
+    "sections": [
+      {
+        "h": "SMS codes",
+        "ps": [
+          {
+            "text": "SMS sends a one-time code to a phone number. It is familiar and does not require an authenticator app, but a fake sign-in page can capture and relay the code. Microsoft’s authentication overview distinguishes these phishable methods from passkeys and other phishing-resistant options.",
+            "links": [
+              {
+                "phrase": "Microsoft’s authentication overview",
+                "to": "https://learn.microsoft.com/en-us/entra/identity/authentication/overview-authentication"
+              }
+            ]
+          },
+          "SMS also depends on control of the phone number. A lost phone, changed number, or fraudulent number transfer can create access or security problems. Ask IT how recovery works before keeping SMS as a fallback. For administrators and payment approvers, plan a stronger supported method rather than relying on text messages."
+        ]
+      },
+      {
+        "h": "Authenticator-generated TOTP codes",
+        "ps": [
+          {
+            "text": "Time-based one-time passwords, or TOTP codes, are generated by an app from a registered secret and the time. Microsoft’s OATH documentation describes this separately from push notifications. Generating a code does not require delivery over the mobile network, but entering it into a phishing site can still let an attacker relay it. TOTP is not phishing-resistant.",
+            "links": [
+              {
+                "phrase": "Microsoft’s OATH documentation",
+                "to": "https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-oath-tokens"
+              }
+            ]
+          },
+          "The user opens the app and types the current code. Push fatigue does not describe this process: there is no approval notification to accept. When replacing a phone, follow the app and account provider’s supported transfer or recovery procedure. Have IT verify recovery before the old device is erased, and protect any recovery codes as credentials."
+        ]
+      },
+      {
+        "h": "Push approvals, including number matching",
+        "ps": [
+          "Push authentication asks a user to approve a sign-in on a registered device. Repeated unsolicited prompts can pressure someone into approving an attacker’s attempt. Staff should reject and report requests they did not initiate.",
+          {
+            "text": "Number matching requires the user to match the sign-in request with a number, reducing accidental approval. Microsoft’s number-matching guidance describes the current Authenticator behavior, including differences for sign-ins on the same phone. Test the actual apps your staff use.",
+            "links": [
+              {
+                "phrase": "Microsoft’s number-matching guidance",
+                "to": "https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-mfa-number-match"
+              }
+            ]
+          },
+          "Number matching is not phishing-resistant: a phishing interaction can still relay the sign-in process. Push is convenient when the registered phone and its connection are available, but lost phones or unavailable notifications need a documented recovery path. Re-register replacement devices through a verified process."
+        ]
+      },
+      {
+        "h": "Phishing-resistant passkeys and FIDO2 security keys",
+        "ps": [
+          {
+            "text": "Passkeys use cryptographic credentials bound to the legitimate service, so a lookalike website cannot collect a reusable code. Microsoft documents both device-bound passkeys, including FIDO2 security keys, and synced passkeys. The provider and your organization’s policy determine which options are available.",
+            "links": [
+              {
+                "phrase": "Microsoft documents both device-bound passkeys",
+                "to": "https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-passkeys-fido2"
+              }
+            ]
+          },
+          "A person typically unlocks a passkey with a device PIN or biometric check. A separate security key can be carried between compatible devices. Confirm browser, device, and application support, including any USB or NFC requirements. This protects the sign-in; it does not make every action after sign-in safe.",
+          "Plan for lost keys and replaced devices. Device-bound credentials may need a separately registered backup; synced credentials depend on the passkey provider’s account and recovery controls. Agree with IT which backup methods are acceptable so recovery does not quietly reintroduce a weak sign-in route."
+        ]
+      },
+      {
+        "h": "Roll out with your existing IT provider",
+        "ps": [
+          {
+            "text": "Inventory accounts and authentication policies with your IT provider. Prioritize administrator access and people who approve payments. Microsoft’s deployment guidance recommends planning and piloting phishing-resistant authentication; test enrollment, everyday sign-in, and recovery on representative devices before broad enforcement.",
+            "links": [
+              {
+                "phrase": "Microsoft’s deployment guidance",
+                "to": "https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-plan-prerequisites-phishing-resistant-passwordless-authentication"
+              }
+            ]
+          },
+          "Budget staff time for enrollment and help-desk recovery. Agree who verifies a locked-out employee’s identity, who can reset a method, and how emergency administrator access is controlled and tested. Record exceptions and remove weaker methods when the stronger method and recovery process are ready.",
+          {
+            "text": "Helm Core includes supported identity protection as part of managed cybersecurity. Discuss the division of responsibilities with Helm and your current IT provider before changing account policies.",
+            "links": [
+              {
+                "phrase": "Helm Core",
+                "to": "/helm-core/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "h": "What the public scan can and cannot show",
+        "ps": [
+          {
+            "text": "Helm’s free public domain scan checks public email and web configuration: SPF, common DKIM selectors, DMARC, MX, DNSSEC, HTTPS certificate information, MTA-STS, TLS-RPT, and limited SMTP signals. It does not sign in to your systems or verify internal MFA enrollment, enforcement, or coverage. That requires an authorized account and policy review with your IT provider.",
+            "links": [
+              {
+                "phrase": "free public domain scan",
+                "to": "/free-scan/"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     slug: 'm365-security-baseline',

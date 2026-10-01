@@ -1,6 +1,6 @@
 import HeroBackdrop from '../components/HeroBackdrop';
 import {useParams, Link} from 'react-router-dom';
-import {Band, CtaBand, ScrollCue} from '../components/Site';
+import {ActionLink, Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {articles} from './articles';
 import {articleSupport} from './articleSupport';
@@ -36,6 +36,8 @@ export default function ArticlePage() {
     .filter((article) => article !== undefined);
   const displayedDate = formatDate(a.date);
   const displayedUpdatedDate = a.updated ? formatDate(a.updated) : undefined;
+  const authorName = a.organizationByline ? 'Helm Security' : 'Dawid Kluszczynski';
+  const authorPath = a.organizationByline ? '/about/' : '/about/#dawid-kluszczynski';
   const wordCount = [
     a.intro,
     a.takeaway,
@@ -47,7 +49,7 @@ export default function ArticlePage() {
   return (
     <>
       <Meta
-        title={`${a.title} | Helm`}
+        title={a.metaTitle ?? `${a.title} | Helm`}
         desc={a.metaDesc}
         path={`/resources/${a.slug}`}
         ogType="article"
@@ -70,9 +72,9 @@ export default function ArticlePage() {
               mainEntityOfPage: {'@type': 'WebPage', '@id': siteUrl(`/resources/${a.slug}`)},
               image: 'https://helmsecured.com/og.png',
               author: {
-                '@type': 'Person',
-                name: 'Dawid Kluszczynski',
-                url: siteUrl('/about#dawid-kluszczynski'),
+                '@type': a.organizationByline ? 'Organization' : 'Person',
+                name: authorName,
+                url: siteUrl(authorPath),
               },
               publisher: {
                 '@type': 'Organization',
@@ -100,7 +102,7 @@ export default function ArticlePage() {
               <Link to="/resources/">Resources</Link> · {a.lane} · {a.readMin} min
             </span>
             <span>
-              By <Link to="/about/#dawid-kluszczynski">Dawid Kluszczynski</Link>
+              By <Link to={authorPath}>{authorName}</Link>
             </span>
             <span aria-hidden="true">·</span>
             {displayedUpdatedDate ? (
@@ -123,7 +125,7 @@ export default function ArticlePage() {
               <h2 id="article-quick-answer-heading">Quick answer</h2>
               <p>{a.takeaway}</p>
             </aside>
-            <ArticleVisual slug={a.slug} />
+            {!a.hideVisual && <ArticleVisual slug={a.slug} />}
             <nav className="article-on-page" aria-labelledby="article-on-page-heading">
               <h2 id="article-on-page-heading">On this page</h2>
               <ol>
@@ -146,7 +148,7 @@ export default function ArticlePage() {
           <section className="article-trust observe d1" aria-labelledby="article-trust-heading">
             <h2 id="article-trust-heading">How this guide was checked</h2>
             <p>
-              Written by <Link to="/about/#dawid-kluszczynski">Dawid Kluszczynski</Link>, first published{' '}
+              By <Link to={authorPath}>{authorName}</Link>, first published{' '}
               <time dateTime={a.date}>{displayedDate}</time>
               {displayedUpdatedDate && (
                 <> and materially reviewed on <time dateTime={a.updated}>{displayedUpdatedDate}</time></>
@@ -176,7 +178,17 @@ export default function ArticlePage() {
         </article>
       </Band>
 
-      {a.ctaMode === 'book' || a.ctaMode === 'book-cmmc' ? (
+      {a.consultation ? (
+        <section className="cta-band">
+          <div className="wrap">
+            <h2 className="observe">{a.consultation.title}</h2>
+            <p className="observe d1">{a.consultation.sub}</p>
+            <div className="cta-form observe d2">
+              <ActionLink to={a.consultation.to} label={a.consultation.label} />
+            </div>
+          </div>
+        </section>
+      ) : a.ctaMode === 'book' || a.ctaMode === 'book-cmmc' ? (
         <CtaBand
           title={bookCta(a.ctaMode).title}
           sub={bookCta(a.ctaMode).sub}

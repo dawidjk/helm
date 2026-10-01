@@ -2723,6 +2723,7 @@ html[data-theme='light'] .legal-beam {
   font-weight: 750;
   letter-spacing: -0.02em;
   margin: 44px 0 16px;
+  scroll-margin-top: 104px;
 }
 
 .article-body p {
@@ -2846,7 +2847,7 @@ html[data-theme='light'] .legal-beam {
 }
 
 .article-sources a {
-  color: light-dark(#0c7a44, #AAE2C4);
+  color: var(--helm-accent-text);
   font-size: 15px;
   line-height: 1.5;
   text-underline-offset: 3px;
@@ -2866,12 +2867,22 @@ html[data-theme='light'] .legal-beam {
 }
 
 .article-related a {
-  color: light-dark(#0c7a44, #AAE2C4);
+  color: var(--helm-accent-text);
   text-decoration: none;
 }
 
 .article-related a:hover {
   text-decoration: underline;
+}
+
+/* Standalone article links need a usable touch target; inline citations keep
+   their normal text flow. The fixed navigation is 72px tall. */
+.article-on-page a,
+.article-sources a,
+.article-related a {
+  display: block;
+  min-height: 44px;
+  padding-block: 10px;
 }
 
 @media (max-width: 560px) {
@@ -3510,6 +3521,7 @@ body {
 
 .hero.lane.brand-hero h1,
 .hero.lane.brand-hero .sub,
+.hero.lane.brand-hero .article-meta,
 .hero.lane.brand-hero .eyebrow {
   color: #f5f1e8;
   -webkit-text-fill-color: currentColor;

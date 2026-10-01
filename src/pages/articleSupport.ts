@@ -156,9 +156,89 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
-  'mfa-methods-compared': {
-    relatedSlugs: ['m365-security-baseline', 'password-managers-small-teams', 'employee-offboarding-checklist'],
-    sources: [sources.cisaMfa, sources.microsoftDefaults],
+  "choose-first-ai-workflow": {
+    "relatedSlugs": [
+      "ai-access-business-documents",
+      "measure-ai-time-savings",
+      "shadow-ai-at-work"
+    ],
+    "sources": [
+      {
+        "title": "NIST AI RMF Playbook: Map",
+        "href": "https://airc.nist.gov/airmf-resources/playbook/map/"
+      },
+      {
+        "title": "NIST AI RMF Playbook: Measure",
+        "href": "https://airc.nist.gov/airmf-resources/playbook/measure/"
+      }
+    ]
+  },
+  "ai-access-business-documents": {
+    "relatedSlugs": [
+      "choose-first-ai-workflow",
+      "measure-ai-time-savings",
+      "shadow-ai-at-work"
+    ],
+    "sources": [
+      {
+        "title": "Microsoft: Copilot data, privacy, and security",
+        "href": "https://learn.microsoft.com/en-us/microsoft-365/copilot/microsoft-365-copilot-privacy"
+      },
+      {
+        "title": "Microsoft: Retention for Copilot and AI apps",
+        "href": "https://learn.microsoft.com/en-us/purview/retention-policies-copilot"
+      },
+      {
+        "title": "Microsoft: Copilot web-search data handling",
+        "href": "https://learn.microsoft.com/en-us/microsoft-365/copilot/manage-public-web-access"
+      }
+    ]
+  },
+  "measure-ai-time-savings": {
+    "relatedSlugs": [
+      "choose-first-ai-workflow",
+      "ai-access-business-documents",
+      "shadow-ai-at-work"
+    ],
+    "sources": [
+      {
+        "title": "NIST AI RMF Playbook: Map",
+        "href": "https://airc.nist.gov/airmf-resources/playbook/map/"
+      },
+      {
+        "title": "NIST AI RMF Playbook: Measure",
+        "href": "https://airc.nist.gov/airmf-resources/playbook/measure/"
+      }
+    ]
+  },
+  "mfa-methods-compared": {
+    "relatedSlugs": [
+      "m365-security-baseline",
+      "password-managers-small-teams",
+      "employee-offboarding-checklist"
+    ],
+    "sources": [
+      {
+        "title": "Microsoft: Authentication overview",
+        "href": "https://learn.microsoft.com/en-us/entra/identity/authentication/overview-authentication"
+      },
+      {
+        "title": "Microsoft: OATH tokens and TOTP",
+        "href": "https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-oath-tokens"
+      },
+      {
+        "title": "Microsoft: Number matching in Authenticator",
+        "href": "https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-mfa-number-match"
+      },
+      {
+        "title": "Microsoft: Passkeys and FIDO2",
+        "href": "https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-passkeys-fido2"
+      },
+      {
+        "title": "Microsoft: Plan a phishing-resistant authentication deployment",
+        "href": "https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-plan-prerequisites-phishing-resistant-passwordless-authentication"
+      }
+    ]
   },
   'm365-security-baseline': {
     relatedSlugs: ['mfa-methods-compared', 'employee-offboarding-checklist', 'what-is-dmarc'],

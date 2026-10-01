@@ -87,6 +87,7 @@ export const routes: RouteRecord[] = [
       {path: 'medical-practices/', lazy: lazyMedicalPractices},
       {path: 'contractors/', lazy: lazyContractors},
       {path: 'pricing/', lazy: lazyPage(() => import('./pages/Pricing'))},
+      {path: 'secure-ai-adoption/', lazy: lazyPage(() => import('./pages/SecureAiAdoption'))},
       {
         path: ':slug/',
         lazy: lazyPage(() => import('./pages/ProductPage')),
