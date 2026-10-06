@@ -41,7 +41,7 @@ export const articles: Article[] = [
     "laneTo": "/",
     "organizationByline": true,
     "hideVisual": true,
-    "intro": "Managed service providers help businesses run defined technology services under an ongoing agreement. For a small or midsized New Jersey business, the useful question is which work needs an accountable owner: everyday IT support, cybersecurity, or both. A slow help desk and an unanswered customer security questionnaire can point to different needs. This guide explains seven signs to investigate, how common service models differ, and what to verify before signing.",
+    "intro": "Managed service providers help businesses run defined technology services under an ongoing agreement. For a small or midsized New Jersey business, the useful question is which work needs an accountable owner: everyday IT support, cybersecurity, or both. A slow help desk and an unanswered customer security questionnaire can point to different needs.",
     "takeaway": "Choose a general MSP when everyday IT needs ongoing ownership. Choose a security-focused provider when your IT works but protection, monitoring, or security evidence needs attention. Use a written responsibility map to make the two work together. Compare actual coverage, response duties, evidence, and total contract cost before choosing a tier.",
     "sections": [
       {
