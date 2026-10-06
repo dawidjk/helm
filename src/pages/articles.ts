@@ -1024,6 +1024,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'sprs-score-explained',
+    metaTitle: "SPRS Score Explained: Scoring and Supporting Evidence | Helm",
     ctaMode: 'book-cmmc',
     title: 'SPRS Score Explained: What the Number Means and How to Support It',
     metaDesc:
@@ -1077,6 +1078,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'password-managers-small-teams',
+    metaTitle: "Password Managers vs Browser Passwords for Small Teams | Helm",
     title: 'Password Managers for Small Teams: What a Vault Adds Over Browser-Saved Passwords',
     metaDesc:
       'Why password reuse is the most common small-team security failure, what a shared password vault adds beyond browser-saved logins, and the order to roll one out across your team.',
@@ -1118,6 +1120,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'cmmc-level-1-vs-level-2',
+    metaTitle: "CMMC Level 1 vs Level 2: Which Do You Need? | Helm",
     ctaMode: 'book-cmmc',
     title: 'CMMC Level 1 vs Level 2: Which One Does Your Shop Actually Need?',
     metaDesc:
@@ -1166,6 +1169,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'invoice-fraud-red-flags',
+    metaTitle: "Invoice Fraud Red Flags: Check Before You Pay | Helm",
     title: 'Invoice Fraud Red Flags: What to Check Before You Pay a Vendor',
     metaDesc:
       'The red flags that separate a legitimate vendor payment change from an invoice fraud attempt, and the callback habit that catches it every time.',
@@ -1211,6 +1215,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'what-a-soc-actually-does',
+    metaTitle: "What a SOC Does: Monitoring, Investigation, and Response | Helm",
     title: 'What a SOC Actually Does (and Why an Alert Is Not the Same as a Response)',
     metaDesc:
       'What a security operations center actually does around the clock, why EDR software alone still needs a human behind it, and the questions to ask before buying a managed SOC subscription.',
@@ -1251,6 +1256,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'cyber-insurance-claim-denied',
+    metaTitle: "Why Cyber Insurance Claims Get Denied | Helm",
     ctaMode: 'book',
     title: 'Why Cyber Insurance Claims Get Denied (and How to Keep Yours Payable)',
     metaDesc:
@@ -1292,6 +1298,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'vendor-email-compromise-contractors',
+    metaTitle: "Vendor Email Compromise: Spotting Supplier Invoice Scams | Helm",
     title: 'Vendor Email Compromise: When Your Supplier\'s Invoice Is Actually a Scam',
     metaDesc:
       'How fraudsters compromise or spoof a supplier or general contractor to redirect payment on a real invoice, and the callback and DMARC controls that stop it before the money moves.',
@@ -1330,6 +1337,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'shadow-ai-at-work',
+    metaTitle: "Shadow AI at Work: Chatbots and Company Data | Helm",
     title: 'Shadow AI: What Employees Paste into Chatbots When Nobody Is Looking',
     metaDesc:
       'Employees may paste client data and contract terms into AI chatbots the company never approved. Learn what can go wrong and how a practical AI-use policy helps.',
@@ -1369,6 +1377,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'cyber-insurance-application-walkthrough',
+    metaTitle: "Cyber Insurance Application: A Practical Walkthrough | Helm",
     ctaMode: 'book',
     title: 'Walking Through a Cyber Insurance Application Without Tripping Over Your Own Answers',
     metaDesc:
@@ -1418,6 +1427,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'hipaa-email-rules-small-practices',
+    metaTitle: "HIPAA Email Rules: Addressable Safeguards Explained | Helm",
     ctaMode: 'book',
     title: 'HIPAA Email Rules for Small Practices: What "Addressable" Actually Means',
     metaDesc:
@@ -1499,6 +1509,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'cmmc-deadline-checklist',
+    metaTitle: "CMMC Phase 2 Suspension: Manufacturer Checklist | Helm",
     ctaMode: 'book-cmmc',
     title: 'CMMC After the Phase 2 Suspension: A 12-Step Checklist for Manufacturers',
     metaDesc:
@@ -1540,6 +1551,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'job-site-devices-public-wifi',
+    metaTitle: "Job Site Devices and Public Wi-Fi: Contractor Risks | Helm",
     title: 'Job Site Devices and Public Wi-Fi: What Actually Puts a Contractor at Risk',
     metaDesc:
       'Why public Wi-Fi is not the real risk for contractors working out of a truck or a job site, what is, and the basic mobile device settings that stop a lost phone from becoming a full account takeover.',
@@ -1579,6 +1591,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'employee-offboarding-checklist',
+    metaTitle: "Employee Offboarding Checklist: Accounts and Devices | Helm",
     title: 'The Employee Offboarding Checklist Most Companies Run From Memory (and Miss)',
     metaDesc:
       'A written employee offboarding checklist covering account access, sessions, shared credentials, devices, and the SaaS accounts most companies forget to close.',
@@ -1670,6 +1683,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'cyber-insurance-questionnaire',
+    metaTitle: "How to Answer a Cyber Insurance Questionnaire | Helm",
     ctaMode: 'book',
     title: 'How to Answer a Cyber Insurance Questionnaire (Without Voiding Your Coverage)',
     metaDesc:
@@ -1709,6 +1723,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'ssp-poam-explained',
+    metaTitle: "SSP and POA&M: Evidence for CMMC Readiness | Helm",
     ctaMode: 'book-cmmc',
     title: 'SSP and POA&M Explained: The Evidence Behind CMMC Readiness',
     metaDesc:
@@ -1756,6 +1771,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'wire-fraud-prevention-law-firms',
+    metaTitle: "Wire Fraud Prevention for Law Firms: Callbacks | Helm",
     title: 'Wire Fraud Prevention for Law Firms: The Callback Protocol',
     metaDesc:
       'A practical known-number callback protocol for law firms handling changed wire instructions, including approvals, evidence, testing, and immediate response steps.',
@@ -1808,6 +1824,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'cui-handling-shop-floor',
+    metaTitle: "CUI Handling Rules for the Shop Floor | Helm",
     ctaMode: 'book-cmmc',
     title: 'Explaining CUI to Your Shop Floor: The Rules That Actually Matter',
     metaDesc:
@@ -1854,6 +1871,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'pen-test-vs-vulnerability-scan',
+    metaTitle: "Penetration Test vs Vulnerability Scan: Costs and Scope | Helm",
     title: 'Penetration Test vs Vulnerability Scan: What You Are Actually Paying For',
     metaDesc:
       'A vulnerability scan and a penetration test are not the same service. What each one actually delivers, how to spot a rebranded scan sold at pen test prices, and which one most small and medium-sized businesses need first.',
@@ -1923,6 +1941,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'incident-response-plan-small-business',
+    metaTitle: "Incident Response Plan for Small and Medium Businesses | Helm",
     title: 'The First Hour After Ransomware or a Wire Fraud Email: An Incident Response Plan for Small and Medium Businesses',
     metaDesc:
       'What to do, who to call, and what not to touch in the first hour after ransomware or a business email compromise, plus why a one-page incident response plan beats a binder nobody reads.',
@@ -1965,6 +1984,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'deepfake-ceo-fraud',
+    metaTitle: "Deepfake CEO Fraud: Cases and Prevention Controls | Helm",
     title: 'Deepfake CEO Fraud: Real Cases and the Controls That Stop It',
     metaDesc:
       'Voice cloning needs three seconds of audio. Real deepfake fraud cases, including a $25M video-call heist, and the two controls that stop synthetic executives.',
@@ -1996,6 +2016,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'law-firm-device-security-checklist',
+    metaTitle: "Law Firm Device Security: Laptops and Remote Work | Helm",
     title: 'Law Firm Device Security Checklist: Laptops, Remote Work, and Lost Devices',
     metaDesc:
       'A practical device security checklist for small law firms covering inventory, monitoring, encryption, remote work, lost devices, and evidence for clients and insurers.',
