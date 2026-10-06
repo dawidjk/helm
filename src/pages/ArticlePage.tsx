@@ -31,7 +31,7 @@ export default function ArticlePage() {
   const a = articles.find((x) => x.slug === slug);
   if (!a) throw new Response('Resource not found', {status: 404, statusText: 'Not Found'});
   const support = articleSupport[a.slug];
-  const isMspGuide = ['managed-service-providers-new-jersey', 'managed-service-provider-security-models'].includes(a.slug);
+  const isBuyingGuide = ['managed-service-providers-new-jersey', 'managed-service-provider-security-models', 'cyber-insurance-cybersecurity-vendors'].includes(a.slug);
   const relatedArticles = support.relatedSlugs
     .map((relatedSlug) => articles.find((article) => article.slug === relatedSlug))
     .filter((article) => article !== undefined);
@@ -95,7 +95,7 @@ export default function ArticlePage() {
           ],
         }}
       />
-      <header className={`hero lane brand-hero${isMspGuide ? ' article-read-hero' : ''}`}>
+      <header className={`hero lane brand-hero${isBuyingGuide ? ' article-read-hero' : ''}`}>
         <HeroBackdrop kind="brand-static" />
         <div className="wrap article-head">
           <h1 className="reveal d1">{a.title}</h1>
@@ -120,7 +120,7 @@ export default function ArticlePage() {
       </header>
 
       <Band>
-        <article className={`article-body${isMspGuide ? ' article-read-body' : ''}`}>
+        <article className={`article-body${isBuyingGuide ? ' article-read-body' : ''}`}>
           <div className="observe">
             <p className="article-intro">{a.intro}</p>
             <aside className="article-quick-answer" aria-labelledby="article-quick-answer-heading">
@@ -146,7 +146,7 @@ export default function ArticlePage() {
                 ))}
                 {s.table && (
                   <>
-                  <p className="article-table-hint" id={`table-help-${index}`}>On a narrow screen, scroll the table sideways to compare both models. Keyboard users can focus the table and use the arrow keys.</p>
+                  <p className="article-table-hint" id={`table-help-${index}`}>On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.</p>
                   <div className="subproc-scroll article-comparison" role="region" aria-label={s.table.caption} aria-describedby={`table-help-${index}`} tabIndex={0}>
                     <table className="subproc-table">
                       <caption>{s.table.caption}</caption>

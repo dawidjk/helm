@@ -30,6 +30,219 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+{
+  "slug": "cyber-insurance-cybersecurity-vendors",
+  "title": "How to evaluate and select a cybersecurity partner that proves your controls to insurers",
+  "metaTitle": "Cyber Insurance: Choosing a Cybersecurity Partner | Helm",
+  "metaDesc": "Compare cybersecurity vendors for New Jersey SMB cyber insurance: controls, evidence, response duties, costs, timelines, and a practical selection checklist.",
+  "date": "2026-10-06",
+  "readMin": 10,
+  "lane": "All industries",
+  "laneTo": "/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "intro": "Your cyber insurance renewal arrives with questions about multifactor authentication, device monitoring, and backups. Your IT provider says the tools are installed. The insurer asks what is covered and whether the controls actually work. Choosing a cybersecurity partner starts with that gap: who operates the controls, who verifies the evidence, and who helps your business explain the answers?",
+  "takeaway": "Start with your broker’s current application and any quote conditions. Hire for the work you need: protection, program leadership, incident response, independent assessment, or evidence upkeep. Ask for dated, scoped deliverables and confirm the insurer’s requirements before paying for a report. Better controls can support underwriting, but no cybersecurity vendor can promise a lower premium or coverage approval.",
+  "sections": [
+    {
+      "h": "What insurers look for, and what better rates really mean",
+      "ps": [
+        {
+          "text": "Travelers lists MFA, endpoint detection and response, backup arrangements, email filtering, encryption, and remote-access controls among common quote conditions for its Corvus Smart Cyber and Smart Tech E&O products. A condition, sometimes called a subjectivity, can require work before the policy is bound. It is not a universal checklist for every carrier.",
+          "links": [
+            {
+              "phrase": "Travelers lists",
+              "to": "https://www.travelers.com/cyber-knowledge/cyber-risk-services/what-are-common-subjectivities-to-cyber-and-tech-eo-policies"
+            }
+          ]
+        },
+        {
+          "text": "Travelers’ readiness guidance also recommends keeping systems updated, maintaining an incident response plan, and backing up data. Use these as starting questions, then read the definitions in your own application. A cloud email backup does not establish recoverability for a separate server or tax application.",
+          "links": [
+            {
+              "phrase": "Travelers’ readiness guidance",
+              "to": "https://www.travelers.com/resources/business-topics/cyber-security/cyber-security-best-practices"
+            }
+          ]
+        },
+        "Ask your broker which gaps affect eligibility, which affect the quote, and what evidence the underwriter wants. Disclose your actual operations, revenue, information handled, and incident history as requested. Give the technical questions to someone who can verify them; keep the business representations with the authorized signer.",
+        "Compare quotes on the same coverage limits, retention, sublimits, exclusions, and services. A lower premium with less useful coverage may be a worse purchase. Ask the broker to explain changes in writing. Measure the security service against reduced exposure and work completed, rather than assuming a premium saving will pay its fee."
+      ]
+    },
+    {
+      "h": "Match the vendor category to the missing work",
+      "ps": [
+        "Provider labels overlap. One firm may perform several roles, while another supplies only software. Ask what it will operate, what it will document, and what your existing IT team must still complete.",
+        "Managed security service providers (MSSPs) run defined protections and monitoring. A virtual chief information security officer (vCISO) provides security leadership and an agreed program cadence. Neither label automatically includes forensic investigation, independent certification, or hands-on IT remediation."
+      ],
+      "table": {
+        "caption": "Five provider roles to compare against your insurance requirements",
+        "headers": [
+          "Provider type",
+          "Work to request",
+          "Deliverable to examine"
+        ],
+        "rows": [
+          [
+            "MSSP",
+            "Operate covered email, endpoint, identity, and monitoring controls.",
+            "Covered inventory, deployment report, exceptions, and escalation responsibilities."
+          ],
+          [
+            "vCISO or program consultant",
+            "Own agreed risks, priorities, policy upkeep, and leadership decisions.",
+            "Risk register, roadmap, responsibility map, and response-plan review."
+          ],
+          [
+            "Incident response (IR) firm",
+            "Provide separately agreed investigation, containment, and recovery assistance.",
+            "Retainer scope, response commitments, included hours, and insurer coordination path."
+          ],
+          [
+            "Compliance assessor",
+            "Evaluate a named standard or conduct a defined independent assessment.",
+            "Report with criteria, scope, test dates, findings, and limitations."
+          ],
+          [
+            "Evidence-management provider",
+            "Maintain records and map evidence to questionnaire answers.",
+            "Dated evidence register with owners, exceptions, review status, and export process."
+          ]
+        ]
+      }
+    },
+    {
+      "h": "Request evidence the underwriter can evaluate",
+      "ps": [
+        "There is no evidence package every insurer accepts. Before buying an assessment, have your broker confirm the required control, systems in scope, acceptable proof, submission channel, and deadline. The examples below are practical deliverables to discuss with the underwriter, not preapproved insurance documents.",
+        "MFA: request a dated configuration export or coverage report tied to the account inventory. It should distinguish email, remote access, administrator access, and other applications the question names. Record exceptions and compensating measures; do not turn partial coverage into an unqualified “yes.”",
+        "Endpoint monitoring: request the product and service tier, covered-device inventory, recent reporting status, and who investigates and contains a threat. Compare those records with the full device list. Identify unsupported computers, servers, or other equipment outside the contract.",
+        "Backup and recovery: request the covered data, retention, access protections, and a dated restore-test record. A useful record states what was restored, whether it was usable, and any unresolved problem. Include critical business applications separately from email-platform backup.",
+        "Incident readiness: request a response plan with contacts, authority, escalation steps, and the carrier notification path. Ask for a tabletop record showing who participated, what decisions were tested, and which follow-up tasks remain. Agree who updates the plan after staff or provider changes."
+      ]
+    },
+    {
+      "h": "Read vendor attestations for their actual scope",
+      "ps": [
+        "A vendor’s statement can confirm the service it delivers to your business: covered systems, control settings, monitoring responsibilities, dates, and known exceptions. Request the person responsible for the statement and the records supporting it. The wording should answer the specific question, not repeat a marketing claim.",
+        "A vendor’s own certification or assurance report concerns the scope described in that report. It does not demonstrate that your accounts all require MFA, your backups restore, or your excluded server is monitored. Ask an assessor to explain exactly what it examined and whether its report meets the underwriter’s request.",
+        "Your organization reviews and owns the final application. Keep the submitted answers, evidence references, technical reviewer, business approver, and date together. If a control is incomplete, explain the gap through the insurer’s process instead of borrowing a vendor’s attestation to hide it."
+      ]
+    },
+    {
+      "h": "A practical vendor evaluation checklist",
+      "ps": [
+        "First, give every bidder the same user count, device inventory, platforms, locations, current IT owner, application questions, and renewal date. Ask it to mark each requirement as included, excluded, or separately priced.",
+        "Second, request one redacted deliverable that links a questionnaire answer to a dated operating record. Ask who gathers the evidence, who checks completeness, how exceptions are recorded, and what happens when an account or device stops reporting.",
+        "Third, walk through a fictional compromised-account event. Name the monitoring team, containment authority, business contact, IT remediation owner, and insurer notification contact. For an IR retainer, have the broker check carrier panel requirements and consent terms before you commit. Ask whether work must be authorized through the carrier’s breach hotline.",
+        "Fourth, inspect access and exit arrangements. Ask how the provider secures administrator access, which subcontractors participate, where evidence is stored, and how your firm receives its records when the agreement ends.",
+        "Fifth, compare total cost and service limits. Include onboarding, licenses, extra devices, questionnaire volume, response expectations, project work, travel, annual increases, renewal notice, and exit support. Name who executes remediation; a roadmap alone does not complete it.",
+        {
+          "text": "Use the downloadable vendor evaluation scorecard to organize the comparison. Add the specific insurer requirement beside each relevant criterion and record unanswered questions with an owner and due date. Resolve essential coverage or evidence gaps before signing.",
+          "links": [
+            {
+              "phrase": "vendor evaluation scorecard",
+              "to": "/downloads/Helm_MSP_Vendor_Evaluation_Scorecard.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "h": "Plan the renewal work before the deadline",
+      "ps": [
+        {
+          "text": "For Coalition’s Standard Renewal process, the carrier sends application materials 90 days before expiration and describes an updated quote at least 30 days before expiration. Requirements vary by renewal path and account. Ask your broker for your own schedule rather than assuming another carrier follows those dates.",
+          "links": [
+            {
+              "phrase": "Coalition’s Standard Renewal process",
+              "to": "https://help.coalitioninc.com/hc/en-us/articles/6959642379547-How-do-Cyber-renewals-work-at-Coalition"
+            }
+          ]
+        },
+        "For planning, a small firm could reserve the first one to two weeks for inventory, application review, and gathering existing evidence. The next two to six weeks could cover agreed control changes and validation. Reserve a further one to two weeks for technical review, signer approval, and broker follow-up. These are illustrative scheduling allowances, not typical market averages or a Helm deployment promise.",
+        "Legacy systems, missing administrative access, procurement, and several providers can extend the work. If renewal is close, tell the broker which controls are complete and which remain open, with proposed dates. Do not represent scheduled work as already implemented.",
+        "After submission, keep evidence current. Record new devices, changed access, unresolved alerts, restore tests, and completed remediation. Otherwise the next renewal begins with another scramble to reconstruct the year."
+      ]
+    },
+    {
+      "h": "Budget for protection, leadership, and separate projects",
+      "ps": [
+        "An assessment, an ongoing service, and an emergency retainer buy different work. Ask for separate prices for discovery, recurring operation, implementation projects, and specialist response. There is no reliable single “typical SMB cost” without a system inventory and written scope.",
+        {
+          "text": "As a published reference point checked in October 2026, vCISO.com lists advisory engagements from $3,000 per month and managed engagements from $5,000 per month. These are that vendor’s starting prices, not market averages or a like-for-like quote for a protection stack.",
+          "links": [
+            {
+              "phrase": "vCISO.com lists",
+              "to": "https://www.vciso.com/pricing"
+            }
+          ]
+        },
+        "Helm’s published prices provide another concrete reference. Core costs $125 per covered user per month with a $2,500 monthly minimum. For 35 covered users, the base recurring cost is $4,375 per month, or $52,500 over 12 months, before separately scoped work or additional workstations. Keep existing general-IT costs in the budget.",
+        "Command costs $8,000 to $15,000 per month after fit and complexity review, including its covered protection stack and program scope. The first 12 months therefore total $96,000 to $180,000 at the starting monthly price. Its initial term is 36 months, with a 6% adjustment on each service anniversary.",
+        "For IR firms and independent assessors, request a written quote. Check whether a retainer purchases availability, prepaid hours, or both; how after-hours rates work; and whether unused hours expire. Evidence software may also need a person to collect and verify records. Avoid paying twice for services already included through your insurer."
+      ]
+    },
+    {
+      "h": "Where Helm Core and Helm Command fit",
+      "ps": [
+        {
+          "text": "Helm Core fits a standard 20 to 75-person organization that needs managed email protection, device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital-risk protection, and a monthly report. It provides the security stack while a named IT owner continues general IT.",
+          "links": [
+            {
+              "phrase": "Helm Core",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        "Core includes up to two eligible Windows or Mac workstations per covered user; extra eligible workstations cost $12 each per month. Choose a 12-month initial term or a 36-month lock on the starting per-user price and minimum. Quarterly leadership reviews and open-ended vCISO work are outside Core.",
+        {
+          "text": "Helm Command fits a qualified 75 to 250-person organization that also needs ongoing program ownership. It adds a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance response, quarterly leadership reviews, an annual tabletop, and coordination with the named IT owner. Response volume and turnaround belong in the written scope.",
+          "links": [
+            {
+              "phrase": "Helm Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        "Specialist vendor teams provide continuous monitoring and containment for covered capabilities. Helm does not staff its own 24/7 SOC. Help desk, administration, procurement, patching, and general IT remain with the existing provider or internal team. Servers, phones, tablets, network equipment, specialized systems, forensic response, breach counsel, and hands-on remediation need separate written scope unless expressly included.",
+        "Consider Helm when those defined responsibilities match your gap. Command helps prepare responses from verified program evidence; your business owns final attestations. Helm does not issue certifications, insurer approvals, or guarantees of premium savings."
+      ]
+    },
+    {
+      "h": "A New Jersey example: separate the control gap from the paperwork",
+      "ps": [
+        "Consider a hypothetical 35-person accounting firm in Freehold renewing cyber insurance before tax season. Its MSP runs IT, but the firm cannot show whether all remote-access accounts require MFA or when its tax-software backup was last restored. This is an illustrative case, not a Helm customer story.",
+        "The partner asks the broker for the application definitions and evidence requirements. The MSP checks remote access, records exceptions, and tests the tax-system restore. A security provider documents the covered email and workstation protections. The partner then reviews the answers against those records before submission.",
+        "Core could fit the covered protection needs if a named owner handles the wider program and questionnaire work. If recurring evidence and risk coordination require ongoing ownership, review the program-service scope and fit; do not assume that one renewal question means the firm needs Command. No insurance quote, discount, or customer outcome is asserted in this example."
+      ]
+    },
+    {
+      "h": "Start with the question you need answered",
+      "ps": [
+        {
+          "text": "Helm’s free scan checks publicly reachable email and web configuration for a domain you control, without credentials. It offers a limited initial view; it is not a free internal security assessment, device audit, or proof that you meet an insurer’s controls.",
+          "links": [
+            {
+              "phrase": "free scan",
+              "to": "/free-scan/"
+            }
+          ]
+        },
+        "Bring the scan findings, application questions, deadline, and current IT responsibilities to a fit conversation. If fit or scope cannot responsibly be confirmed from that conversation, Helm’s bounded paid discovery costs $2,500 to $7,500 and is credited to the first service year if you proceed.",
+        {
+          "text": "If your immediate need is insurance evidence, discuss the required scope with Helm and your broker. Begin with the actual application and the work needed to answer it accurately. That gives each provider a defined job and your business a reviewable next step.",
+          "links": [
+            {
+              "phrase": "discuss the required scope with Helm",
+              "to": "/contact/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
   {
     "slug": "managed-service-provider-security-models",
     "title": "Comparing Managed Service Provider Models: Standard Security Stack versus Full Program Ownership",

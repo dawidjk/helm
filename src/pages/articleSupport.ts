@@ -156,6 +156,47 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+"cyber-insurance-cybersecurity-vendors": {
+  "relatedSlugs": [
+    "cyber-insurance-application-walkthrough",
+    "managed-service-provider-security-models",
+    "backup-testing-insurers"
+  ],
+  "sources": [
+    {
+      "title": "Travelers: Common cyber insurance quote conditions",
+      "href": "https://www.travelers.com/cyber-knowledge/cyber-risk-services/what-are-common-subjectivities-to-cyber-and-tech-eo-policies"
+    },
+    {
+      "title": "Travelers: Five cyber readiness practices",
+      "href": "https://www.travelers.com/resources/business-topics/cyber-security/cyber-security-best-practices"
+    },
+    {
+      "title": "Coalition: Cyber renewal paths and timelines",
+      "href": "https://help.coalitioninc.com/hc/en-us/articles/6959642379547-How-do-Cyber-renewals-work-at-Coalition"
+    },
+    {
+      "title": "FTC: Cyber insurance coverage questions for small businesses",
+      "href": "https://www.ftc.gov/business-guidance/small-businesses/cybersecurity/cyber-insurance"
+    },
+    {
+      "title": "vCISO.com: Published engagement price baselines",
+      "href": "https://www.vciso.com/pricing"
+    },
+    {
+      "title": "Helm: Core scope and commercial terms",
+      "href": "https://helmsecured.com/helm-core/"
+    },
+    {
+      "title": "Helm: Command scope and commercial terms",
+      "href": "https://helmsecured.com/helm-command/"
+    },
+    {
+      "title": "Helm: Free public-domain scan limitations",
+      "href": "https://helmsecured.com/terms/"
+    }
+  ]
+},
   "managed-service-provider-security-models": {
     relatedSlugs: ["managed-service-providers-new-jersey", "cyber-insurance-application-walkthrough", "choose-first-ai-workflow"],
     sources: [
