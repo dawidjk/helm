@@ -31,6 +31,160 @@ export type Article = {
 
 export const articles: Article[] = [
   {
+    "slug": "managed-service-providers-new-jersey",
+    "title": "Seven signs your company needs a managed service provider, and what to do next",
+    "metaTitle": "Managed Service Providers in New Jersey: 7 Signs | Helm",
+    "metaDesc": "Compare general MSPs and security-focused providers, check seven buying signals, and download a vendor scorecard for your New Jersey small or midsized business.",
+    "date": "2026-10-06",
+    "readMin": 8,
+    "lane": "All industries",
+    "laneTo": "/",
+    "organizationByline": true,
+    "hideVisual": true,
+    "intro": "Managed service providers help businesses run defined technology services under an ongoing agreement. For a small or midsized New Jersey business, the useful question is which work needs an accountable owner: everyday IT support, cybersecurity, or both. A slow help desk and an unanswered customer security questionnaire can point to different needs. This guide explains seven signs to investigate, how common service models differ, and what to verify before signing.",
+    "takeaway": "Choose a general MSP when everyday IT needs ongoing ownership. Choose a security-focused provider when your IT works but protection, monitoring, or security evidence needs attention. Use a written responsibility map to make the two work together. Compare actual coverage, response duties, evidence, and total contract cost before choosing a tier.",
+    "sections": [
+      {
+        "h": "General MSPs and security-focused providers: what is the difference?",
+        "ps": [
+          "A general managed service provider, or MSP, commonly handles help desk support, account administration, device management, patching, networks, and other IT operations. Some include substantial security services. Others offer only a limited baseline. The label alone does not establish coverage.",
+          "A managed security service provider, or MSSP, focuses on security controls and their operation. That can include email protection, device and identity monitoring, investigation, and defined containment. A security-program service can add risk tracking, evidence upkeep, and leadership reviews. Neither label promises that someone will fix a printer or restore every business application.",
+          {
+            "text": "NIST’s guidance on building a cybersecurity team recommends setting clear outcomes, comparing quotes, and documenting service expectations. Start with the work your business needs, then ask each vendor to explain which team owns it.",
+            "links": [
+              {
+                "phrase": "NIST’s guidance on building a cybersecurity team",
+                "to": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/building-your-team"
+              }
+            ]
+          },
+          "For example, a hypothetical 35-person accounting firm in Morristown may have reliable IT support but no clear owner for monitoring suspicious account activity. It may need a security provider alongside its MSP. A hypothetical 25-person engineering firm in Edison with unreliable laptops and no patching owner may need general IT management first. These are illustrative scenarios, not Helm customer stories."
+        ]
+      },
+      {
+        "h": "1. Routine IT problems keep interrupting billable work",
+        "ps": [
+          "Employees repeatedly lose access, wait for device repairs, or work around the same application issue. An office manager has become the unofficial IT dispatcher. Track the recurring problems, affected staff, and time lost over two weeks.",
+          "Ask a general MSP for its support hours, escalation process, onsite arrangements, and responsibility for the applications you depend on. Separate response time from resolution time. A New Jersey address can make an onsite visit easier, but you still need the availability and travel charges in writing."
+        ]
+      },
+      {
+        "h": "2. Nobody can show a current list of accounts and devices",
+        "ps": [
+          "You cannot confidently identify which laptops reach company email, who has administrator access, or whether a departed employee still has an active session. More software will not solve an ownership gap by itself.",
+          "Ask the IT owner to reconcile users, devices, administrators, and shared accounts. Agree who approves new access, who removes it, and how completion is recorded. For a seasonal tax team, include temporary staff and personally owned devices that access firm information."
+        ]
+      },
+      {
+        "h": "3. Security tools exist, but the response path is unclear",
+        "ps": [
+          "You pay for protection but cannot answer who reviews an alert, who can isolate a device, or who calls leadership outside business hours. Tool deployment and an operated security service are different commitments.",
+          "Ask for the covered systems, monitoring hours, named monitoring provider, containment authority, escalation contacts, and exclusions. Request a walkthrough of a fictional suspicious-login event. Have the vendor explain what its team does, what your MSP does, and what requires separate authorization."
+        ]
+      },
+      {
+        "h": "4. A customer or insurer asks questions you cannot evidence",
+        "ps": [
+          "An application asks whether multifactor authentication covers all relevant accounts or whether devices are monitored. Your team has a policy, a sales brochure, and a screenshot from last year, but no verified answer for today’s environment.",
+          "Pick the next real questionnaire and map each answer to a dated record, system boundary, owner, and known exception. A provider that maintains evidence may help when these requests recur. You still need an authorized business reviewer to approve the final submission."
+        ]
+      },
+      {
+        "h": "5. Backups have never been demonstrated through a restore",
+        "ps": [
+          "A successful backup notification does not tell you how quickly the business can recover a usable file or application. Ask which data is backed up, how long it is retained, who can restore it, and which systems are excluded.",
+          "Arrange an authorized restore test for a representative business file and document the result. If the critical system is a tax application, server, or industry platform, check its recovery arrangements separately from Microsoft 365 or Google Workspace backup. Assign an owner and agree an acceptable interruption before discussing service tiers."
+        ]
+      },
+      {
+        "h": "6. Growth has outpaced the informal IT arrangement",
+        "ps": [
+          "New locations, remote staff, and more demanding customers introduce work that one helpful employee or an occasional contractor cannot reliably coordinate. Tasks remain open because each person assumes another provider owns them.",
+          "Write a responsibility map for help desk, patching, account changes, monitoring, backup, incident response, and evidence. For every task, name the operator, business approver, escalation contact, and completion record. Ask bidders to mark what they include, exclude, or subcontract."
+        ]
+      },
+      {
+        "h": "7. Staff are using AI without agreed data and review rules",
+        "ps": [
+          "Employees are summarizing documents or drafting client work with tools the firm has never reviewed. An accounting, law, or insurance firm needs to know which inputs are permitted, who approves connected access, and who checks outputs before use.",
+          {
+            "text": "Helm’s Secure AI Adoption consulting reviews one internal workflow, its effort and cost, and its tool and data requirements before recommending whether to pilot. Any pilot is separately scoped for one workflow on one approved platform. Pricing is quoted after scoping, and this consulting is separate from Helm Core and Helm Command.",
+            "links": [
+              {
+                "phrase": "Secure AI Adoption",
+                "to": "/secure-ai-adoption/"
+              }
+            ]
+          },
+          "Begin with public, synthetic, or explicitly approved low-sensitivity material. Keep client records out of an exploratory inquiry. A workflow review is useful when the uncertainty concerns data access and human checks; it does not replace routine IT ownership or managed cybersecurity."
+        ]
+      },
+      {
+        "h": "Common service tiers and the responsibilities behind them",
+        "ps": [
+          "Tier names are vendor-specific. A common general-IT progression is reactive support, recurring managed IT, then a broader package with security or advisory services. Reactive support handles authorized individual jobs. Managed IT adds agreed ongoing tasks. A more expensive package is useful only when its written duties match a business need.",
+          "Helm illustrates a different model: two security tiers alongside the existing IT owner. Helm remains a security-focused provider. Clients retain help desk, routine administration, procurement, patching, and general IT unless a separate written scope says otherwise.",
+          {
+            "text": "Helm Core is the standardized model for organizations with 20 to 75 people. It includes managed email protection, device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital-risk protection, and a monthly report. It costs $125 per covered user per month with a $2,500 monthly account minimum.",
+            "links": [
+              {
+                "phrase": "Helm Core",
+                "to": "/helm-core/"
+              }
+            ]
+          },
+          "Core includes up to two eligible Windows or Mac workstations per covered user. Additional eligible workstations cost $12 each per month. Clients choose a 12-month initial term or a 36-month lock on the starting per-user price and account minimum. Core does not include quarterly leadership reviews or open-ended security advisory work.",
+          {
+            "text": "Helm Command is the program-ownership model for organizations with 75 to 250 people. It includes the covered Core stack plus a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance response, quarterly leadership reviews, an annual tabletop, and coordination with the named IT owner.",
+            "links": [
+              {
+                "phrase": "Helm Command",
+                "to": "/helm-command/"
+              }
+            ]
+          },
+          "Command costs $8,000 to $15,000 per month after fit and complexity review, with a 36-month initial term and a 6% adjustment on each service anniversary. Scope and complexity determine fit, particularly at the overlapping 75-person boundary. Specialist vendor teams provide continuous monitoring and containment for covered capabilities; Helm does not staff its own 24/7 security operations center.",
+          "Servers, phones, tablets, network equipment, specialized systems, forensic response, breach counsel, and hands-on remediation require separate written scope unless expressly included. In a hypothetical 45-person Princeton accounting firm, Core could provide standardized protection while its MSP runs IT. A hypothetical 120-person Newark professional-services firm with recurring questionnaires may need Command’s program cadence. Headcount alone does not settle either decision."
+        ]
+      },
+      {
+        "h": "How to validate evidence before answering a questionnaire",
+        "ps": [
+          "Start with the exact question and its definitions. Identify the systems, users, locations, and date the answer covers. “MFA is enabled” is incomplete if the question also covers administrator accounts, remote access, or an application outside the email platform.",
+          "Collect a current configuration export or other appropriate record, check it against the account or device inventory, and record exceptions. For backups, include the covered data and a dated restore result. For monitoring, include deployment coverage and the agreed response responsibilities. A policy states intent; operating records show what happened.",
+          "Have the technical owner verify the evidence and the authorized business signer approve the answer. If a required control is absent or uncertain, use the form’s explanation process and document the gap. Keep the submitted answer, evidence reference, reviewer, and date together in a controlled location. Share only what the recipient needs through an approved channel.",
+          "Helm Command supports bounded questionnaire and insurance responses from verified program evidence. The client owns final attestations. Helm does not issue certifications, audit opinions, insurer decisions, or regulatory approvals."
+        ]
+      },
+      {
+        "h": "A practical New Jersey buyer checklist and downloadable scorecard",
+        "ps": [
+          "Before requesting quotes, list your users, work locations, email platform, critical applications, current IT owner, next customer or insurance deadline, and the three problems you most need solved. Decide whether you need general IT, a security layer, or both.",
+          "Give each shortlisted vendor the same scope. Ask for a sample redacted report, a responsibility map, an incident-escalation walkthrough, an explanation of how it protects its own access to your systems, and the full contract economics. Compare onboarding, minimums, extra devices, onsite work, separately billed projects, annual adjustments, renewal notice, and exit support.",
+          {
+            "text": "Download the one-page vendor evaluation scorecard (PDF). It compares eight criteria using a 0 to 2 evidence scale and includes a space for unresolved gaps and the next decision. Use one copy per vendor. A score helps organize judgment; it is not a certification or a substitute for reading the agreement.",
+            "links": [
+              {
+                "phrase": "vendor evaluation scorecard (PDF)",
+                "to": "/downloads/Helm_MSP_Vendor_Evaluation_Scorecard.pdf"
+              }
+            ]
+          },
+          {
+            "text": "If you want an initial view of Helm’s free offering, start with the free scan. It checks publicly reachable email and web configuration for a domain you control without credentials. It is a limited starting check, not an internal security assessment, device audit, or compliance determination.",
+            "links": [
+              {
+                "phrase": "free scan",
+                "to": "/free-scan/"
+              }
+            ]
+          },
+          "Bring the findings and your responsibility map to a fit conversation with the relevant IT or security provider. When Helm cannot responsibly confirm fit or scope from the initial conversation, bounded paid discovery costs $2,500 to $7,500 and is credited to the first service year if you proceed. End that conversation with a named owner, written next step, and date."
+        ]
+      }
+    ]
+  },
+  {
     "slug": "choose-first-ai-workflow",
     "title": "How to choose your first AI workflow",
     "metaTitle": "How to Choose Your First AI Workflow | Helm",
