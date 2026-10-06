@@ -44,6 +44,7 @@ export default function ArticlePage() {
     ...a.sections.flatMap((section) => section.ps.map((paragraph) => (
       typeof paragraph === 'string' ? paragraph : paragraph.text
     ))),
+    ...a.sections.flatMap((section) => section.table ? [section.table.caption, ...section.table.headers, ...section.table.rows.flat()] : []),
   ].join(' ').trim().split(/\s+/).filter(Boolean).length;
 
   return (
@@ -142,6 +143,17 @@ export default function ArticlePage() {
                 {s.ps.map((p, i) => (
                   <p key={i}>{renderParagraph(p)}</p>
                 ))}
+                {s.table && (
+                  <div className="subproc-scroll" role="region" aria-label={s.table.caption} tabIndex={0}>
+                    <table className="subproc-table">
+                      <caption>{s.table.caption}</caption>
+                      <thead><tr>{s.table.headers.map((heading) => <th scope="col" key={heading}>{heading}</th>)}</tr></thead>
+                      <tbody>{s.table.rows.map((row) => (
+                        <tr key={row[0]}>{row.map((cell, i) => i === 0 ? <th scope="row" key={i}>{cell}</th> : <td key={i}>{cell}</td>)}</tr>
+                      ))}</tbody>
+                    </table>
+                  </div>
+                )}
               </section>
             ))}
           </div>

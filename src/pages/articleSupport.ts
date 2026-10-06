@@ -156,8 +156,20 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+  "managed-service-provider-security-models": {
+    relatedSlugs: ["managed-service-providers-new-jersey", "cyber-insurance-application-walkthrough", "choose-first-ai-workflow"],
+    sources: [
+      {title: "NIST: Building Your Small Business’s Cybersecurity Team", href: "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/building-your-team"},
+      {title: "CISA and partner agencies: Protecting MSPs and their customers", href: "https://media.defense.gov/2022/May/11/2002994383/0/0/0/CSA_Protecting_Against_Cyber_Threats_to_MSPs_and_their_Customers_05112022.PDF"},
+      {title: "Helm: Core service scope and terms", href: "https://helmsecured.com/helm-core/"},
+      {title: "Helm: Command service scope and terms", href: "https://helmsecured.com/helm-command/"},
+      {title: "Helm: Secure AI Adoption consulting", href: "https://helmsecured.com/secure-ai-adoption/"},
+      {title: "Helm: Scope of the free public-domain scan", href: "https://helmsecured.com/terms/"},
+    ],
+  },
   "managed-service-providers-new-jersey": {
     "relatedSlugs": [
+      "managed-service-provider-security-models",
       "what-a-soc-actually-does",
       "cyber-insurance-application-walkthrough",
       "choose-first-ai-workflow"

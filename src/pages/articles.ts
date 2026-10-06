@@ -12,7 +12,7 @@ export type Article = {
   lane: string;
   laneTo: string;
   intro: string;
-  sections: {h: string; ps: Paragraph[]}[];
+  sections: {h: string; ps: Paragraph[]; table?: {caption: string; headers: string[]; rows: string[][]}}[];
   takeaway: string;
   organizationByline?: boolean;
   hideVisual?: boolean;
@@ -30,6 +30,196 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+  {
+    "slug": "managed-service-provider-security-models",
+    "title": "Comparing Managed Service Provider Models: Standard Security Stack versus Full Program Ownership",
+    "metaTitle": "MSP Security Models: Standard Stack vs Program Ownership | Helm",
+    "metaDesc": "Compare cybersecurity service models for New Jersey SMBs: coverage, incident duties, evidence, onboarding, and how Helm Core and Helm Command differ.",
+    "date": "2026-10-06",
+    "readMin": 8,
+    "lane": "All industries",
+    "laneTo": "/",
+    "organizationByline": true,
+    "hideVisual": true,
+    "intro": "Two managed service providers can propose similar security tools and offer very different services. One manages the protection stack and sends a monthly report. Another also keeps the risk register current, follows up on assigned work, and prepares evidence for customer questionnaires. For a New Jersey business comparing proposals, that difference affects who does the work after onboarding and what leadership still needs to manage.",
+    "takeaway": "A standardized security stack fits a business that needs defined protection and has someone to own the wider security program. Full program ownership adds an agreed cadence for risks, evidence, priorities, and leadership decisions. In both models, write down the covered systems, response duties, exclusions, and responsibilities your business retains.",
+    "sections": [
+      {
+        "h": "What managed service providers do for small and medium businesses",
+        "ps": [
+          "An MSP manages agreed technology services for a recurring fee. General IT work often includes help desk support, account administration, patching, devices, and networks. Cybersecurity work may be bundled into that agreement or delivered by a separate security-focused provider. Ask which work the proposed contract covers.",
+          {
+            "text": "NIST’s outsourcing guidance recommends starting with the outcomes you need and documenting responsibilities in the agreement. If your existing IT provider handles daily operations well, you may need a security layer alongside it. If nobody owns routine IT, a security service alone will leave that work unassigned.",
+            "links": [
+              {
+                "phrase": "NIST’s outsourcing guidance",
+                "to": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/building-your-team"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "h": "Standard stack versus full program ownership",
+        "ps": [
+          "A standardized stack covers a defined set of security services through a repeatable deployment and reporting process. It can suit a firm with supported platforms, a clear IT owner, and manageable reporting needs. The business still needs someone to decide priorities and coordinate work outside the service.",
+          "Full program ownership adds an ongoing management role. The provider maintains the agreed risk register and roadmap, organizes evidence, prepares bounded questionnaire responses, and brings decisions to leadership. Your business still approves spending, accepts risks, and signs its own representations. “Full” describes the agreed security-program role; the contract must name its limits."
+        ],
+        "table": {
+          "caption": "Compare the responsibilities, then check them against each proposal",
+          "headers": [
+            "Responsibility",
+            "Standard security stack",
+            "Full program ownership"
+          ],
+          "rows": [
+            [
+              "Protection",
+              "Operates defined controls for covered users and systems.",
+              "Includes the covered protection stack."
+            ],
+            [
+              "Priorities",
+              "Business or its named owner manages wider priorities.",
+              "Provider maintains an agreed risk register and roadmap."
+            ],
+            [
+              "Reporting",
+              "Service activity and exceptions on an agreed schedule.",
+              "Service reporting plus leadership reviews and tracked decisions."
+            ],
+            [
+              "Questionnaires",
+              "Check whether evidence help is included or separately scoped.",
+              "Defined evidence upkeep and bounded response support."
+            ],
+            [
+              "Remediation",
+              "Assigned to the responsible IT team or separately authorized.",
+              "Provider coordinates assigned work; execution remains with the named owner."
+            ],
+            [
+              "Business accountability",
+              "Client approves scope, risks, and final attestations.",
+              "Client retains those approvals and final attestations."
+            ]
+          ]
+        }
+      },
+      {
+        "h": "Cybersecurity coverage to check in either model",
+        "ps": [
+          "Email protection: confirm which mailboxes and platforms are covered, how filtering and impersonation detection work, and how employees report a suspicious message. Ask who investigates those reports and how a payment-change request reaches the person authorized to verify it.",
+          "Endpoint protection: get a list of supported computers and exclusions. A proposal that covers Windows and Mac workstations may leave servers, phones, tablets, or specialized equipment outside scope. Compare deployment records with your device inventory rather than assuming every device is protected.",
+          "Monitoring: identify the team that reviews activity, its operating hours, and the systems it can see. Ask what triggers an escalation and what happens when a device stops reporting. “24/7 monitoring” does not by itself describe your provider’s human follow-up hours.",
+          "Incident response: distinguish detection, investigation, containment, recovery, forensic work, and legal support. Ask who can isolate a workstation, disable access, contact leadership, and authorize separately billed work. Walk through a suspicious-login scenario with both your IT and security providers.",
+          {
+            "text": "The joint MSP security advisory calls for contracts that assign security responsibilities clearly. Include the provider’s access to your environment in that conversation: administrator accounts, multifactor authentication, access logs, and removal of access when the agreement ends.",
+            "links": [
+              {
+                "phrase": "joint MSP security advisory",
+                "to": "https://media.defense.gov/2022/May/11/2002994383/0/0/0/CSA_Protecting_Against_Cyber_Threats_to_MSPs_and_their_Customers_05112022.PDF"
+              }
+            ]
+          },
+          "Backup and staff learning: confirm the data covered by backup, retention, and restore responsibilities. Request a dated restore demonstration. For awareness training and phishing simulations, ask who schedules them and follows up on missed participation."
+        ]
+      },
+      {
+        "h": "Evidence for customer and insurer questionnaires",
+        "ps": [
+          "Ask a bidder to show a redacted example of how it supports one questionnaire answer. A useful example connects the question to a control, the systems in scope, a dated record, and any exceptions. It also names the technical reviewer and business approver.",
+          "For example, a statement about device monitoring needs a covered-device inventory and deployment evidence for those devices. A statement about multifactor authentication needs evidence for the accounts and applications the question names. A policy or a tool invoice alone leaves implementation unverified.",
+          "Agree where the records live, who updates them, how often they are reviewed, and how much questionnaire work is included. Record turnaround expectations and volume limits. Your authorized signer reviews the final answer; the vendor’s draft does not transfer responsibility for it."
+        ]
+      },
+      {
+        "h": "Helm Core and Helm Command as New Jersey examples",
+        "ps": [
+          "Helm is a security-focused New Jersey provider. Its clients keep their existing MSP or internal IT team for help desk, routine administration, patching, procurement, and general IT. Both Helm tiers depend on a named IT owner and written service boundaries.",
+          {
+            "text": "Helm Core illustrates the standardized model for organizations with 20 to 75 people. It combines managed email protection, device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital-risk protection, and one monthly security report. Quarterly leadership reviews and open-ended advisory work are outside Core.",
+            "links": [
+              {
+                "phrase": "Helm Core",
+                "to": "/helm-core/"
+              }
+            ]
+          },
+          "Core costs $125 per covered user per month with a $2,500 monthly account minimum. It includes up to two eligible Windows or Mac workstations per covered user; additional eligible workstations cost $12 each per month. Choose a 12-month initial term or a 36-month lock on the starting per-user price and minimum.",
+          {
+            "text": "Helm Command illustrates the program model for organizations with 75 to 250 people. It includes the covered Core stack plus a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance response, quarterly leadership reviews, an annual tabletop, and coordination with the IT owner.",
+            "links": [
+              {
+                "phrase": "Helm Command",
+                "to": "/helm-command/"
+              }
+            ]
+          },
+          "Command costs $8,000 to $15,000 per month after fit and complexity review. Its initial term is 36 months, with a 6% adjustment on each service anniversary. At the overlapping 75-person boundary, the work required helps determine fit. Headcount is one input.",
+          "Specialist vendor teams provide continuous monitoring and containment for covered capabilities. Helm does not staff its own 24/7 security operations center. Servers, phones, tablets, network equipment, specialized systems, forensic response, breach counsel, and hands-on remediation require separate written scope unless expressly included. Helm does not issue certifications or guarantee customer, regulatory, or insurance decisions."
+        ]
+      },
+      {
+        "h": "Which model fits your firm?",
+        "ps": [
+          "Consider a hypothetical 40-person accounting firm in Freehold. Its MSP runs IT, a partner owns security priorities, and the firm needs consistent protection and a monthly service report. A standardized stack may fit if the systems and exclusions are acceptable.",
+          "Now consider a hypothetical 110-person professional-services firm in New Brunswick. Its operations team spends time gathering evidence, questionnaire deadlines compete with remediation, and leaders need a recurring forum to decide priorities. Program ownership may address that coordination work. These examples are illustrative, not Helm customer stories.",
+          "Before choosing the larger service, name the work it would take off someone’s plate. If you cannot identify who currently maintains the risks, evidence, and roadmap, settle that responsibility explicitly. If you already have an effective internal security owner, check whether the standardized service provides what that person needs."
+        ]
+      },
+      {
+        "h": "A vendor evaluation checklist you can use in a meeting",
+        "ps": [
+          "Bring the same user count, locations, platforms, device inventory, critical applications, and customer deadlines to every bidder. Ask each to return a coverage list and responsibility map. Have them explain how they would handle an alert involving a system outside the standard scope.",
+          "Compare support hours, monitoring hours, containment authority, reporting cadence, questionnaire limits, and who completes remediation. Request redacted reporting and evidence examples. Ask how the provider protects its own administrator access and which subcontractors participate in delivery.",
+          "Check the full economics: onboarding, minimum fees, extra devices, projects, annual adjustments, renewal notice, and exit support. Record unanswered questions with an owner and due date. Resolve critical gaps before signing.",
+          {
+            "text": "Use the downloadable vendor evaluation scorecard to compare eight criteria on a 0 to 2 evidence scale. The same scorecard works for both models. Treat the scores as prompts for discussion and verify the contract before making a decision.",
+            "links": [
+              {
+                "phrase": "vendor evaluation scorecard",
+                "to": "/downloads/Helm_MSP_Vendor_Evaluation_Scorecard.pdf"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "h": "What onboarding should establish",
+        "ps": [
+          "Before granting access, agree the users and systems in scope, administrative permissions, business contacts, and incident escalation path. Confirm how your current IT provider will participate and who can authorize changes.",
+          "After deployment, reconcile the covered inventory with the planned scope, record exclusions, and check the reporting and employee-reporting paths. Agree who resolves failed deployments and when the first service report arrives. These are acceptance checks to request, not a promise of a particular deployment timeline.",
+          "For program ownership, also establish the initial risk register, evidence location, roadmap, leadership-review schedule, and rules for accepting risks. Name the business sponsor who can make decisions and the IT owner who carries out assigned work."
+        ]
+      },
+      {
+        "h": "Choose a first step based on the question you need answered",
+        "ps": [
+          {
+            "text": "Helm’s free scan checks publicly reachable email and web configuration for a domain you control, without credentials. Use it for an initial view of that public configuration. It is not an internal security assessment, a device audit, or a compliance determination.",
+            "links": [
+              {
+                "phrase": "free scan",
+                "to": "/free-scan/"
+              }
+            ]
+          },
+          "Bring the findings and your service requirements to a fit conversation. If Helm cannot responsibly confirm fit or scope from the initial conversation, separately scoped paid discovery costs $2,500 to $7,500 and is credited to the first service year if you proceed.",
+          {
+            "text": "For an accounting, law, insurance, or other professional-services firm evaluating AI, Secure AI Adoption consulting reviews one internal workflow, its effort and cost, and its tool and data requirements. Any pilot has a separate scope for one workflow on one approved platform. Pricing is quoted after scoping; this consulting is separate from Core and Command.",
+            "links": [
+              {
+                "phrase": "Secure AI Adoption",
+                "to": "/secure-ai-adoption/"
+              }
+            ]
+          },
+          "Keep client records and sensitive information out of an exploratory inquiry. Describe the work you need covered, who owns IT today, and the next deadline. That gives the provider a starting point for an agreed next step."
+        ]
+      }
+    ]
+  },
   {
     "slug": "managed-service-providers-new-jersey",
     "title": "Seven signs your company needs a managed service provider, and what to do next",
