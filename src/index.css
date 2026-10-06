@@ -5138,3 +5138,68 @@ a.nav-cta-mobile.action-link:hover {
     bottom: 4px;
   }
 }
+
+/* Reading treatments for the two MSP buying guides. */
+.hero.lane.article-read-hero {
+  min-height: auto;
+  padding-block: clamp(64px, 8vw, 96px);
+}
+
+.hero.lane.article-read-hero h1 {
+  max-width: 1000px;
+  font-size: clamp(32px, 4.5vw, 64px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.article-read-body p.article-intro {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--helm-text);
+}
+
+.article-read-body .article-quick-answer {
+  background: var(--helm-surface);
+  border-color: var(--helm-hairline);
+}
+
+.article-read-body .article-on-page a {
+  display: block;
+  min-height: 44px;
+  padding-block: 8px;
+}
+
+.article-read-body a:focus-visible,
+.article-comparison:focus-visible {
+  outline: 2px solid var(--helm-text-strong);
+  outline-offset: 4px;
+}
+
+.article-read-body p.article-table-hint {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.article-comparison .subproc-table {
+  min-width: 704px;
+  table-layout: fixed;
+  font-size: 16px;
+}
+
+.article-comparison th:first-child {
+  width: 24%;
+}
+
+.article-comparison caption {
+  text-align: left;
+  padding-block: 12px;
+  color: var(--helm-text-strong);
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .article-read-body p.article-table-hint {
+    display: none;
+  }
+}
