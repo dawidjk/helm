@@ -44,6 +44,27 @@ const startChoices: StartChoice[] = [
 
 const guideGroups: GuideGroup[] = [
   {
+    id: 'choose-security-partner',
+    title: 'Choose a security provider and service model',
+    description: 'Compare coverage, operating responsibilities and evidence before choosing software or an ongoing security partner.',
+    slugs: [
+      'managed-service-providers-new-jersey',
+      'managed-service-provider-security-models',
+      'cyber-insurance-cybersecurity-vendors',
+      'email-security-gateway-managed-service',
+      'managed-awareness-training-vs-diy',
+      'iam-security-core-vs-command',
+      'email-security-services-evaluation',
+      'siem-software-managed-detection',
+      'law-firm-managed-vs-in-house-security',
+      'virtual-ciso-service-evaluation',
+      'digital-risk-protection-services',
+      'accounting-firms-core-vs-command',
+      'google-workspace-security-managed-vs-diy',
+      'managed-identity-threat-response',
+    ],
+  },
+  {
     id: 'secure-everyday-work',
     title: 'Secure everyday accounts and devices',
     description: 'Email, identity, device security, AI-use, and access decisions for the systems your team uses every day.',
@@ -58,6 +79,12 @@ const guideGroups: GuideGroup[] = [
       'law-firm-device-security-checklist',
       'pen-test-vs-vulnerability-scan',
       'what-is-dmarc',
+      'outlook-email-encryption-options',
+      'managed-endpoint-protection-rollout',
+      'zero-day-vs-known-vulnerabilities',
+      'vulnerability-management-new-jersey',
+      'check-website-security',
+      'windows-defender-vs-managed-security',
     ],
   },
   {
@@ -69,6 +96,7 @@ const guideGroups: GuideGroup[] = [
       'wire-fraud-prevention-law-firms',
       'incident-response-plan-small-business',
       'deepfake-ceo-fraud',
+      'intentional-insider-threats',
     ],
   },
   {
@@ -80,6 +108,11 @@ const guideGroups: GuideGroup[] = [
       'cyber-insurance-application-walkthrough',
       'backup-testing-insurers',
       'wisp-checklist-accounting-firms',
+      'cybersecurity-risk-assessment-tools',
+      'microsoft-365-retention-vs-backup',
+      'security-questionnaire-response-services',
+      'google-workspace-retention-vs-backup',
+      'cybersecurity-roadmap-milestones',
     ],
   },
   {

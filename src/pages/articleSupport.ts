@@ -156,6 +156,302 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+  "email-security-gateway-managed-service": {
+  "relatedSlugs": [
+    "what-is-dmarc"
+  ],
+  "sources": [
+    {
+      "title": "Microsoft Safe Links",
+      "href": "https://learn.microsoft.com/en-us/defender-office-365/safe-links-about"
+    },
+    {
+      "title": "Microsoft Safe Attachments",
+      "href": "https://learn.microsoft.com/en-us/defender-office-365/safe-attachments-about"
+    }
+  ]
+},
+  "managed-awareness-training-vs-diy": {
+  "relatedSlugs": [
+    "wire-fraud-prevention-law-firms"
+  ],
+  "sources": [
+    {
+      "title": "NIST SP 800-50 Revision 1",
+      "href": "https://csrc.nist.gov/pubs/sp/800/50/r1/final"
+    }
+  ]
+},
+  "iam-security-core-vs-command": {
+  "relatedSlugs": [
+    "employee-offboarding-checklist"
+  ],
+  "sources": [
+    {
+      "title": "Microsoft IAM concepts",
+      "href": "https://learn.microsoft.com/en-us/entra/fundamentals/identity-fundamental-concepts"
+    }
+  ]
+},
+  "outlook-email-encryption-options": {
+  "relatedSlugs": [
+    "hipaa-email-rules-small-practices"
+  ],
+  "sources": [
+    {
+      "title": "Microsoft email-encryption comparison",
+      "href": "https://learn.microsoft.com/en-us/purview/email-encryption"
+    }
+  ]
+},
+  "email-security-services-evaluation": {
+  "relatedSlugs": [
+    "wire-fraud-prevention-law-firms",
+    "cyber-insurance-questionnaire"
+  ],
+  "sources": [
+    {
+      "title": "FTC small-business scam guidance",
+      "href": "https://www.ftc.gov/business-guidance/resources/scams-your-small-business-guide-business"
+    }
+  ]
+},
+  "managed-endpoint-protection-rollout": {
+  "relatedSlugs": [
+    "incident-response-plan-small-business"
+  ],
+  "sources": [
+    {
+      "title": "Microsoft Defender for Endpoint",
+      "href": "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint"
+    }
+  ]
+},
+  "zero-day-vs-known-vulnerabilities": {
+  "relatedSlugs": [
+    "incident-response-plan-small-business"
+  ],
+  "sources": [
+    {
+      "title": "CISA vulnerability-reporting definitions",
+      "href": "https://www.cisa.gov/sites/default/files/publications/guide-vulnerability-reporting-americas-election-admins_508.pdf"
+    },
+    {
+      "title": "Microsoft's Exchange report",
+      "href": "https://www.microsoft.com/en-us/security/blog/2021/03/02/hafnium-targeting-exchange-servers/"
+    },
+    {
+      "title": "CISA KEV catalog",
+      "href": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    }
+  ]
+},
+  "vulnerability-management-new-jersey": {
+  "relatedSlugs": [
+    "pen-test-vs-vulnerability-scan"
+  ],
+  "sources": [
+    {
+      "title": "CISA KEV catalog",
+      "href": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    }
+  ]
+},
+  "check-website-security": {
+  "relatedSlugs": [
+    "pen-test-vs-vulnerability-scan"
+  ],
+  "sources": [
+    {
+      "title": "Mozilla HSTS documentation",
+      "href": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security"
+    },
+    {
+      "title": "Mozilla CSP documentation",
+      "href": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy"
+    }
+  ]
+},
+  "windows-defender-vs-managed-security": {
+  "relatedSlugs": [
+    "law-firm-device-security-checklist",
+    "what-a-soc-actually-does"
+  ],
+  "sources": [
+    {
+      "title": "Microsoft Defender Antivirus",
+      "href": "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows"
+    },
+    {
+      "title": "Microsoft Defender for Endpoint",
+      "href": "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint"
+    }
+  ]
+},
+  "siem-software-managed-detection": {
+  "relatedSlugs": [
+    "what-a-soc-actually-does"
+  ],
+  "sources": [
+    {
+      "title": "Microsoft Sentinel overview",
+      "href": "https://learn.microsoft.com/en-us/azure/sentinel/overview"
+    }
+  ]
+},
+  "intentional-insider-threats": {
+  "relatedSlugs": [
+    "employee-offboarding-checklist",
+    "incident-response-plan-small-business"
+  ],
+  "sources": [
+    {
+      "title": "CISA Insider Threat Mitigation Guide",
+      "href": "https://www.cisa.gov/sites/default/files/publications/Insider%20Threat%20Mitigation%20Guide_Final_508.pdf"
+    }
+  ]
+},
+  "law-firm-managed-vs-in-house-security": {
+  "relatedSlugs": [
+    "law-firm-device-security-checklist",
+    "wire-fraud-prevention-law-firms",
+    "incident-response-plan-small-business"
+  ],
+  "sources": [
+    {
+      "title": "New Jersey Rules of Professional Conduct",
+      "href": "https://www.njcourts.gov/sites/default/files/rpc.pdf"
+    }
+  ]
+},
+  "cybersecurity-risk-assessment-tools": {
+  "relatedSlugs": [
+    "pen-test-vs-vulnerability-scan",
+    "cyber-insurance-questionnaire"
+  ],
+  "sources": [
+    {
+      "title": "NIST SP 800-30 Revision 1",
+      "href": "https://csrc.nist.gov/pubs/sp/800/30/r1/final"
+    }
+  ]
+},
+  "virtual-ciso-service-evaluation": {
+  "relatedSlugs": [
+    "managed-service-provider-security-models"
+  ],
+  "sources": [
+    {
+      "title": "NIST SP 1300",
+      "href": "https://csrc.nist.gov/pubs/sp/1300/final"
+    }
+  ]
+},
+  "digital-risk-protection-services": {
+  "relatedSlugs": [
+    "what-is-dmarc",
+    "invoice-fraud-red-flags"
+  ],
+  "sources": [
+    {
+      "title": "FTC business-impersonation guidance",
+      "href": "https://consumer.ftc.gov/features/pass-it-on/impersonator-scams/business-impersonator-scams"
+    }
+  ]
+},
+  "accounting-firms-core-vs-command": {
+  "relatedSlugs": [
+    "wisp-checklist-accounting-firms",
+    "employee-offboarding-checklist",
+    "backup-testing-insurers"
+  ],
+  "sources": [
+    {
+      "title": "IRS client-data guidance",
+      "href": "https://www.irs.gov/tax-professionals/protect-your-clients-protect-yourself"
+    },
+    {
+      "title": "FTC Safeguards Rule guidance",
+      "href": "https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know"
+    }
+  ]
+},
+  "google-workspace-security-managed-vs-diy": {
+  "relatedSlugs": [
+    "shadow-ai-at-work"
+  ],
+  "sources": [
+    {
+      "title": "Google Workspace security checklist",
+      "href": "https://knowledge.workspace.google.com/admin/security/security-checklist-for-small-businesses-1-100-users?hl=en"
+    }
+  ]
+},
+  "microsoft-365-retention-vs-backup": {
+  "relatedSlugs": [
+    "backup-testing-insurers"
+  ],
+  "sources": [
+    {
+      "title": "Microsoft Purview retention",
+      "href": "https://learn.microsoft.com/en-us/purview/retention"
+    },
+    {
+      "title": "Microsoft 365 Backup overview",
+      "href": "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview"
+    }
+  ]
+},
+  "security-questionnaire-response-services": {
+  "relatedSlugs": [
+    "managed-service-provider-security-models",
+    "cyber-insurance-application-walkthrough"
+  ],
+  "sources": [
+    {
+      "title": "FTC Safeguards Rule guidance",
+      "href": "https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know"
+    }
+  ]
+},
+  "managed-identity-threat-response": {
+  "relatedSlugs": [
+    "employee-offboarding-checklist",
+    "incident-response-plan-small-business"
+  ],
+  "sources": [
+    {
+      "title": "Microsoft Entra ID Protection",
+      "href": "https://learn.microsoft.com/en-us/entra/id-protection/overview-identity-protection"
+    }
+  ]
+},
+  "google-workspace-retention-vs-backup": {
+  "relatedSlugs": [
+    "backup-testing-insurers"
+  ],
+  "sources": [
+    {
+      "title": "Google Vault FAQ",
+      "href": "https://knowledge.workspace.google.com/vault/getting-started/google-vault-faq?hl=en"
+    },
+    {
+      "title": "Google Drive administrator recovery",
+      "href": "https://knowledge.workspace.google.com/admin/drive/recover-deleted-files-and-folders-for-drive-users?hl=en"
+    }
+  ]
+},
+  "cybersecurity-roadmap-milestones": {
+  "relatedSlugs": [
+    "managed-service-provider-security-models"
+  ],
+  "sources": [
+    {
+      "title": "NIST Small Business Quick-Start Guide",
+      "href": "https://csrc.nist.gov/pubs/sp/1300/final"
+    }
+  ]
+},
 "cyber-insurance-cybersecurity-vendors": {
   "relatedSlugs": [
     "cyber-insurance-application-walkthrough",

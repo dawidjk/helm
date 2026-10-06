@@ -1,4 +1,5 @@
 import HeroBackdrop from '../components/HeroBackdrop';
+import {Fragment} from 'react';
 import {useParams, Link} from 'react-router-dom';
 import {ActionLink, Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
@@ -31,7 +32,7 @@ export default function ArticlePage() {
   const a = articles.find((x) => x.slug === slug);
   if (!a) throw new Response('Resource not found', {status: 404, statusText: 'Not Found'});
   const support = articleSupport[a.slug];
-  const isBuyingGuide = ['managed-service-providers-new-jersey', 'managed-service-provider-security-models', 'cyber-insurance-cybersecurity-vendors'].includes(a.slug);
+  const isBuyingGuide = a.readingLayout || ['managed-service-providers-new-jersey', 'managed-service-provider-security-models', 'cyber-insurance-cybersecurity-vendors'].includes(a.slug);
   const relatedArticles = support.relatedSlugs
     .map((relatedSlug) => articles.find((article) => article.slug === relatedSlug))
     .filter((article) => article !== undefined);
@@ -40,10 +41,11 @@ export default function ArticlePage() {
   const authorName = a.organizationByline ? 'Helm Security' : 'Dawid Kluszczynski';
   const authorPath = a.organizationByline ? '/about/' : '/about/#dawid-kluszczynski';
   const wordCount = [
-    a.intro,
+    typeof a.intro === 'string' ? a.intro : a.intro.text,
+    ...(a.lead ?? []).map((paragraph) => typeof paragraph === 'string' ? paragraph : paragraph.text),
     a.takeaway,
     ...a.sections.flatMap((section) => section.ps.map((paragraph) => (
-      typeof paragraph === 'string' ? paragraph : paragraph.text
+      typeof paragraph === 'string' ? paragraph : 'list' in paragraph ? paragraph.list.map((item) => typeof item === 'string' ? item : item.text).join(' ') : paragraph.text
     ))),
     ...a.sections.flatMap((section) => section.table ? [section.table.caption, ...section.table.headers, ...section.table.rows.flat()] : []),
   ].join(' ').trim().split(/\s+/).filter(Boolean).length;
@@ -122,7 +124,8 @@ export default function ArticlePage() {
       <Band>
         <article className={`article-body${isBuyingGuide ? ' article-read-body' : ''}`}>
           <div className="observe">
-            <p className="article-intro">{a.intro}</p>
+            <p className="article-intro">{renderParagraph(a.intro)}</p>
+            {a.lead?.map((paragraph, index) => <p key={index}>{renderParagraph(paragraph)}</p>)}
             <aside className="article-quick-answer" aria-labelledby="article-quick-answer-heading">
               <h2 id="article-quick-answer-heading">Quick answer</h2>
               <p>{a.takeaway}</p>
@@ -142,7 +145,12 @@ export default function ArticlePage() {
               <section key={s.h} aria-labelledby={sectionId(s.h, index)}>
                 <h2 id={sectionId(s.h, index)}>{s.h}</h2>
                 {s.ps.map((p, i) => (
-                  <p key={i}>{renderParagraph(p)}</p>
+                  <Fragment key={i}>
+                    {typeof p !== 'string' && 'list' in p ? (
+                      p.ordered ? <ol className="article-checklist">{p.list.map((item, itemIndex) => <li key={itemIndex}>{renderParagraph(item)}</li>)}</ol>
+                        : <ul className="article-checklist">{p.list.map((item, itemIndex) => <li key={itemIndex}>{renderParagraph(item)}</li>)}</ul>
+                    ) : <p>{renderParagraph(p)}</p>}
+                  </Fragment>
                 ))}
                 {s.table && (
                   <>

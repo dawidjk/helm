@@ -5170,6 +5170,18 @@ a.nav-cta-mobile.action-link:hover {
   padding-block: 8px;
 }
 
+.article-checklist {
+  padding-left: 1.5em;
+  margin-block: 0 24px;
+  color: var(--helm-text-dim);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.article-checklist li + li {
+  margin-top: 10px;
+}
+
 .article-read-body a:focus-visible,
 .article-comparison:focus-visible {
   outline: 2px solid var(--helm-text-strong);

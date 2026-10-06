@@ -11,8 +11,10 @@ export type Article = {
   readMin: number;
   lane: string;
   laneTo: string;
-  intro: string;
-  sections: {h: string; ps: Paragraph[]; table?: {caption: string; headers: string[]; rows: string[][]}}[];
+  intro: Paragraph;
+  lead?: Paragraph[];
+  readingLayout?: boolean;
+  sections: {h: string; ps: (Paragraph | {list: Paragraph[]; ordered?: boolean})[]; table?: {caption: string; headers: string[]; rows: string[][]}}[];
   takeaway: string;
   organizationByline?: boolean;
   hideVisual?: boolean;
@@ -30,6 +32,2142 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+{
+  "slug": "email-security-gateway-managed-service",
+  "title": "Email security gateway versus managed gateway service: choosing the right model for your SMB",
+  "metaTitle": "Email Security Gateway vs Managed Service | Helm",
+  "metaDesc": "Compare gateway deployment, filtering features, quarantine ownership and managed service scope before choosing email protection.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "An email security gateway checks messages before they reach your staff. A managed gateway service adds people and operating responsibilities around that technology. For a New Jersey firm with an existing IT provider, the buying decision depends on who will maintain the filters, review reports and handle messages that need a judgment call.",
+  "lead": [
+    "A blocked attachment and a delayed client email can arrive in the same quarantine queue. Someone needs to distinguish them and respond within the firm's agreed working hours."
+  ],
+  "takeaway": "Compare gateway deployment, filtering features, quarantine ownership and managed service scope before choosing email protection.",
+  "sections": [
+    {
+      "h": "Compare the deployment before the service contract",
+      "ps": [
+        "A gateway can run on infrastructure your IT team maintains or as a cloud service through which your mail is routed. Other email-security products connect to a cloud mailbox platform instead of sitting in front of it. Ask the provider to draw the proposed mail flow and identify which traffic it can inspect, including internal messages and mail from business applications.",
+        {
+          "text": "Features need the same scrutiny. Microsoft describes Safe Links as URL scanning and rewriting with checks when a user clicks, while Safe Attachments examines attachments for threats. Those are examples of specific protections, with licensing and policy requirements. They do not establish what another vendor includes. Microsoft Safe Links, Microsoft Safe Attachments.",
+          "links": [
+            {
+              "phrase": "Microsoft Safe Links",
+              "to": "https://learn.microsoft.com/en-us/defender-office-365/safe-links-about"
+            },
+            {
+              "phrase": "Microsoft Safe Attachments",
+              "to": "https://learn.microsoft.com/en-us/defender-office-365/safe-attachments-about"
+            }
+          ]
+        },
+        {
+          "text": "Ask for separate explanations of impersonation checks, malicious-file inspection, link handling and quarantine. Sender authentication also matters, but it answers a different question. Use Helm's DMARC guide to review domain authentication with your IT owner.",
+          "links": [
+            {
+              "phrase": "DMARC guide",
+              "to": "/resources/what-is-dmarc/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "h": "Decide who operates the queue",
+      "ps": [
+        "With a software-only purchase, your firm or IT provider usually needs to configure policies, handle exceptions and review suspicious messages. A managed service should define which of those tasks the provider performs and which still need your approval.",
+        "Consider a hypothetical 40-person CPA firm receiving tax documents from unfamiliar clients. Its team needs a safe way to request release of a legitimate file without creating a permanent exception for an entire sender domain. During evaluation, ask the vendor to demonstrate that request, the review decision and the resulting record.",
+        "Use these questions in the proposal review:",
+        {
+          "list": [
+            "Which mailboxes, domains and message routes are covered?",
+            "Who reviews user-reported messages and quarantine requests?",
+            "How are exceptions approved, limited and revisited?",
+            "What happens if filtering interrupts mail delivery?",
+            "Which events trigger account investigation or an incident handoff?"
+          ],
+          "ordered": false
+        },
+        "A pilot should include normal client correspondence, automated billing messages and shared mailboxes. Agree on how to measure delivery delays and review workload before changing mail routing across the firm."
+      ]
+    },
+    {
+      "h": "Fit the service into existing IT",
+      "ps": [
+        {
+          "text": "Helm Core includes managed email protection within a defined security stack, alongside device, supported identity, backup, awareness and digital-risk protection, with monthly reporting. It is intended for a standard 20 to 75-person fit and costs $125 per covered user per month, with a $2,500 minimum.",
+          "links": [
+            {
+              "phrase": "Helm Core",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        {
+          "text": "Helm Command adds program responsibilities such as a risk register, roadmap, evidence upkeep, bounded questionnaire responses and quarterly leadership reviews. Existing IT retains administration, patching and routine remediation. Neither tier should be read as a promise to replace every mail-system administrator or investigate every incident without a written scope.",
+          "links": [
+            {
+              "phrase": "Helm Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        {
+          "text": "Start by reviewing your current email contract and naming the owner of each unanswered question. Helm's free public-domain scan can check public email and web configuration. Internal mailbox coverage and gateway operations need a separate scope conversation.",
+          "links": [
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "managed-awareness-training-vs-diy",
+  "title": "Managed cyber security awareness training programs versus DIY: choosing the right path for your SMB",
+  "metaTitle": "Managed Awareness Training vs DIY for SMBs | Helm",
+  "metaDesc": "Choose awareness training by the business decisions employees need to practice, the work your team can maintain and the evidence you need.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "A training subscription gives employees access to lessons. Your firm still needs to decide what they should learn, when they should learn it and how to respond when someone reports a suspicious message. That work determines whether a DIY program is manageable or a managed service would help.",
+  "lead": [
+    "For a professional-services firm, training should follow the work. Staff who approve payments need to practice verifying bank-detail changes. People handling client records need to know which sharing methods are approved and where to report an accidental disclosure."
+  ],
+  "takeaway": "Choose awareness training by the business decisions employees need to practice, the work your team can maintain and the evidence you need.",
+  "sections": [
+    {
+      "h": "Build around decisions employees make",
+      "ps": [
+        {
+          "text": "NIST's learning-program guidance emphasizes behavior change and regular evaluation. It offers a lifecycle approach that organizations can adapt rather than a single annual course. NIST SP 800-50 Revision 1.",
+          "links": [
+            {
+              "phrase": "NIST SP 800-50 Revision 1",
+              "to": "https://csrc.nist.gov/pubs/sp/800/50/r1/final"
+            }
+          ]
+        },
+        "Choose a small set of business tasks and write down the expected behavior for each. For example, a hypothetical New Jersey accounting firm could ask its payment team to verify changed instructions through a known contact, while its tax team practices reporting an unexpected document-sharing request. Neither exercise requires exposing actual client information.",
+        "A training calendar should include onboarding, refreshers and reminders after a process changes. Choose frequency based on your staff's work and the risks you are addressing. There is no universal simulation cadence that proves a firm is secure."
+      ]
+    },
+    {
+      "h": "Compare the work each model leaves with you",
+      "ps": [
+        "DIY can fit a firm with a named owner who can maintain the employee roster, assign material, follow up on missed lessons and discuss results with IT. Budget for that person's time as well as the subscription.",
+        "A managed provider may supply learning content, simulations and reporting. Ask whether it also handles enrollment changes, adapts material for different roles and reviews recurring mistakes. Confirm those responsibilities in the service order rather than assuming that the word managed includes them.",
+        "Measure more than clicks on a simulated message. Review whether employees report suspicious requests, how quickly reports reach the right person and whether a payment or sharing procedure is followed. Completion records show that a lesson was assigned and finished; they do not establish that every employee will respond correctly under pressure."
+      ]
+    },
+    {
+      "h": "Keep evidence proportionate",
+      "ps": [
+        "For a customer questionnaire, retain the training policy, covered staff list, dated assignment and completion records, and a description of follow-up. Explain exclusions, including contractors or staff on leave. Restrict access to individual results and agree on how long to retain them.",
+        "Before choosing a vendor, request a sample report with fictional data. Check that an authorized reviewer can distinguish overdue training from a failed simulation and can export the relevant evidence. Ask how the provider handles an employee's report of a genuine incident during an exercise.",
+        {
+          "text": "Helm's Core service includes awareness learning and simulations in its standardized protection stack, with a monthly security report. Command adds evidence upkeep and program coordination, including a quarterly leadership cadence. These services operate alongside existing IT, and Core does not include open-ended security leadership work.",
+          "links": [
+            {
+              "phrase": "Core service",
+              "to": "/helm-core/"
+            },
+            {
+              "phrase": "Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        {
+          "text": "Use the wire-fraud callback guide when turning payment training into a written procedure. For firms considering Helm, the free public-domain scan offers an initial view of public configuration; it does not measure employee awareness. Bring your roster, current training records and reporting procedure to a separate fit discussion.",
+          "links": [
+            {
+              "phrase": "wire-fraud callback guide",
+              "to": "/resources/wire-fraud-prevention-law-firms/"
+            },
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "iam-security-core-vs-command",
+  "title": "IAM Cyber Security for SMBs: How Helm Core Compares to Helm Command",
+  "metaTitle": "IAM Security: Helm Core vs Command for SMBs | Helm",
+  "metaDesc": "Identity protection, access administration and program ownership need distinct owners. Compare supported coverage and evidence before choosing a tier.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "Identity and access management, or IAM, determines who can use your systems and what they can do after signing in. For a growing firm, that includes employees, outside advisers, application integrations and administrator accounts.",
+  "lead": [
+    {
+      "text": "Microsoft distinguishes authentication, which verifies identity, from authorization, which grants access. Multifactor authentication helps with the first task. A permission review addresses the second. A firm needs both. Microsoft IAM concepts.",
+      "links": [
+        {
+          "phrase": "Microsoft IAM concepts",
+          "to": "https://learn.microsoft.com/en-us/entra/fundamentals/identity-fundamental-concepts"
+        }
+      ]
+    }
+  ],
+  "takeaway": "Identity protection, access administration and program ownership need distinct owners. Compare supported coverage and evidence before choosing a tier.",
+  "sections": [
+    {
+      "h": "Review access by business role",
+      "ps": [
+        "Begin with the systems holding client information or allowing money to move. Ask your IT owner for the account list, administrator roles, guest access and connected applications. Have the responsible business manager confirm who needs access and at what level.",
+        "A hypothetical 60-person consulting firm might find that an employee who changed departments still has access to a former client's shared workspace. The correction starts with the business owner confirming the required access. IT then changes the permissions and records completion. An identity-alert service alone would not settle that decision.",
+        "Single sign-on can simplify access across supported applications, but it does not automatically remove unnecessary permissions. Privileged access also needs separate attention: define who can administer systems, why they need that power and how their actions are reviewed."
+      ]
+    },
+    {
+      "h": "Separate protection from administration",
+      "ps": [
+        "Helm Core includes supported identity protection as part of its defined stack. That description does not promise administration of every directory, SSO deployment, privileged-access system or joiner-and-leaver workflow. Confirm supported platforms, required licensing and the actions authorized under the service order.",
+        "Your existing IT team retains routine administration. HR or another business owner must tell IT when someone joins, changes roles or leaves. Managers approve access requirements; a named executive accepts exceptions that carry business risk.",
+        {
+          "text": "Helm Command adds the covered Core stack plus program ownership: a maintained risk register, prioritized roadmap, evidence upkeep, bounded questionnaire responses and quarterly leadership reviews. It can coordinate assigned access-control work with your named IT owner. It does not make Helm the administrator of every application or transfer final attestations away from the client. Compare the written scopes for Core and Command.",
+          "links": [
+            {
+              "phrase": "Core",
+              "to": "/helm-core/"
+            },
+            {
+              "phrase": "Command",
+              "to": "/helm-command/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "h": "Ask for evidence of the workflow",
+      "ps": [
+        {
+          "text": "A useful access review records the system, reviewer, date, approved roles and unresolved exceptions. For an offboarding example, request evidence that access was revoked in the relevant systems, including those outside the main identity platform. Use the existing employee offboarding checklist for the detailed handoff.",
+          "links": [
+            {
+              "phrase": "employee offboarding checklist",
+              "to": "/resources/employee-offboarding-checklist/"
+            }
+          ]
+        },
+        "When evaluating an identity-security provider, ask:",
+        {
+          "list": [
+            "Which users, privileged accounts and applications are supported?",
+            "Who can disable an account, and under what authority?",
+            "Who reviews permissions that are technically valid but unnecessary?",
+            "What evidence remains after an access change?"
+          ],
+          "ordered": false
+        },
+        "Before answering a questionnaire with a blanket claim about MFA or access reviews, check the actual population and exceptions. Keep the answer narrower when some systems remain outside the control.",
+        {
+          "text": "Helm's free public-domain scan does not inspect your tenant or user permissions. A fit conversation should establish what identity protection is supported and what administrative work stays with IT. For New Jersey professional-services firms, that division is the starting point for an accountable access program.",
+          "links": [
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            },
+            {
+              "phrase": "New Jersey professional-services firms",
+              "to": "/professional-services/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "outlook-email-encryption-options",
+  "title": "S/MIME vs Office 365 Message Encryption vs TLS: Choosing the Right Outlook Encryption for Your Company",
+  "metaTitle": "Outlook Encryption: S/MIME, Purview and TLS | Helm",
+  "metaDesc": "Choose Outlook encryption around recipient access and required protection. Have existing IT verify licensing and test the full exchange.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "Before choosing Outlook encryption, identify who needs to read the message and what protection should remain after delivery. Sending a tax document to an individual client creates different requirements from exchanging files with a business that mandates certificates.",
+  "lead": [
+    {
+      "text": "Microsoft now uses the name Microsoft Purview Message Encryption for its message-encryption service. The selected title retains the older Office 365 wording that buyers may recognize. Availability depends on your subscription, configuration and client support. Microsoft email-encryption comparison.",
+      "links": [
+        {
+          "phrase": "Microsoft email-encryption comparison",
+          "to": "https://learn.microsoft.com/en-us/purview/email-encryption"
+        }
+      ]
+    }
+  ],
+  "takeaway": "Choose Outlook encryption around recipient access and required protection. Have existing IT verify licensing and test the full exchange.",
+  "sections": [
+    {
+      "h": "Match the method to the exchange",
+      "ps": [
+        "TLS protects the connection used to carry mail between servers. It does not give the sender persistent control over a recipient's copy after delivery. Ask IT whether a particular partner connection requires enforced TLS and how a failed connection is handled.",
+        {
+          "text": "Purview Message Encryption provides a way to send protected messages to external recipients, with recipient access handled through supported sign-in or passcode experiences. S/MIME uses certificates and keys for message encryption and digital signatures. Both parties' setup matters when choosing S/MIME. These methods serve different operational requirements; combining several on one message can create compatibility problems. Microsoft's comparison and cautions.",
+          "links": [
+            {
+              "phrase": "Microsoft's comparison and cautions",
+              "to": "https://learn.microsoft.com/en-us/purview/email-encryption"
+            }
+          ]
+        },
+        "Decide which method fits the recipient population before writing a firm-wide policy. A certificate-based workflow may be appropriate for a partner that requires it, while individual clients may need a simpler access experience."
+      ]
+    },
+    {
+      "h": "Test the full exchange with harmless files",
+      "ps": [
+        "Ask your existing IT provider to prepare a test using non-sensitive sample data. Send from the Outlook versions employees use and receive on the clients and devices your recipients are likely to use. Include the reply, attachment access and the handling of an incorrectly addressed message.",
+        "During the pilot:",
+        {
+          "list": [
+            "Confirm the licensed feature and policy applying to the sender.",
+            "Check that the intended recipient can open the message and reply.",
+            "Test the configured restrictions instead of assuming the word encrypted prevents forwarding.",
+            "Record what users should do when protection is unavailable or a certificate expires.",
+            "Have the business owner approve the workflow before client data is used."
+          ],
+          "ordered": true
+        },
+        "Avoid giving employees a fallback that silently sends sensitive files without the agreed protection. Provide an approved alternative, such as an appropriately configured client portal, while IT resolves the failure."
+      ]
+    },
+    {
+      "h": "Keep the claim narrower than the evidence",
+      "ps": [
+        "A successful test shows that a particular workflow worked for the tested clients and configuration. It does not certify all messages, attachments or devices. Keep dated test results, the policy scope and exception records. Have counsel or the responsible compliance adviser determine whether the workflow meets applicable obligations; this article does not establish that encryption alone satisfies them.",
+        {
+          "text": "Helm's Core service includes managed email protection. That protects against defined email threats and does not promise tenant encryption administration, certificate management or legal compliance. Command adds evidence and program coordination within its written scope, while existing IT performs administration.",
+          "links": [
+            {
+              "phrase": "Core",
+              "to": "/helm-core/"
+            },
+            {
+              "phrase": "Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        {
+          "text": "For a separate discussion of healthcare obligations, read the scoped HIPAA email guide. For other professional-services workflows, start by asking IT to identify the current encryption method and demonstrate one external exchange. Helm's free public-domain scan checks public configuration and cannot verify the confidentiality of internal or encrypted messages.",
+          "links": [
+            {
+              "phrase": "HIPAA email guide",
+              "to": "/resources/hipaa-email-rules-small-practices/"
+            },
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "email-security-services-evaluation",
+  "title": "How to evaluate email security services for small businesses: checklist and vendor questions",
+  "metaTitle": "How to Evaluate Email Security Services | Helm",
+  "metaDesc": "Evaluate email security services through coverage, report handling, containment authority, escalation and the work retained by existing IT.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "An email security proposal should explain what happens after a suspicious message reaches an employee. Filtering matters, but the service also needs a route for reports, a person or team authorized to act and a handoff when the problem extends into an account or payment.",
+  "lead": [
+    "For a firm with existing IT, review those responsibilities before comparing the monthly price. Two offers can list similar tools while leaving very different amounts of work with your staff."
+  ],
+  "takeaway": "Evaluate email security services through coverage, report handling, containment authority, escalation and the work retained by existing IT.",
+  "sections": [
+    {
+      "h": "Walk through one incident before signing",
+      "ps": [
+        "Give each vendor the same hypothetical scenario: an employee at a New Jersey professional-services firm reports a message requesting a bank-detail change, then says they entered their password on the linked page. Ask the vendor to explain who receives the report, checks the message, investigates the account and informs your business contact.",
+        "Request the boundaries around containment. A provider may be authorized to take particular actions on a covered account, while restoration, payment recovery, forensic investigation or legal advice require other parties. Agree on the handoff and contact method before an incident occurs.",
+        {
+          "text": "The FTC advises businesses to train staff to recognize impersonation and verify requests rather than act under pressure. Pair technical filtering with a business approval procedure for payments. FTC small-business scam guidance, Helm's callback procedure.",
+          "links": [
+            {
+              "phrase": "FTC small-business scam guidance",
+              "to": "https://www.ftc.gov/business-guidance/resources/scams-your-small-business-guide-business"
+            },
+            {
+              "phrase": "Helm's callback procedure",
+              "to": "/resources/wire-fraud-prevention-law-firms/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "h": "Review coverage and everyday work",
+      "ps": [
+        "Ask for a mailbox and domain coverage schedule, including shared accounts and third-party senders. Have IT confirm how the service connects to your platform and which protections overlap with existing subscriptions.",
+        "Then request written answers to these vendor questions:",
+        {
+          "list": [
+            "Who reviews user-reported messages, and during which hours?",
+            "Who approves quarantine releases and changes to filtering exceptions?",
+            "Which account actions can the provider take without waiting for approval?",
+            "What triggers escalation to IT, leadership or a separately retained responder?",
+            "What can the firm export when changing providers?",
+            "Which onboarding, licensing and out-of-scope charges are separate?"
+          ],
+          "ordered": false
+        },
+        "A sample report should show covered services, relevant events and unresolved exceptions. A large blocked-message count alone does not tell you whether the right people investigated a credential compromise."
+      ]
+    },
+    {
+      "h": "Distinguish stack coverage from program ownership",
+      "ps": [
+        "Helm Core includes managed email protection alongside device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital-risk protection and monthly reporting. It is a standardized service for a typical 20 to 75-person fit.",
+        {
+          "text": "Helm Command includes the covered Core stack and adds risk, roadmap, evidence and leadership responsibilities. Bounded questionnaire and insurance responses help organize support for particular answers; the client still approves final attestations. Review Core and Command for scope and current commercial terms.",
+          "links": [
+            {
+              "phrase": "Core",
+              "to": "/helm-core/"
+            },
+            {
+              "phrase": "Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        "Specialist vendor teams provide continuous monitoring and containment behind covered capabilities. Helm does not staff its own 24/7 SOC. Existing IT retains administration and routine remediation; specialist incident work needs written scope.",
+        {
+          "text": "For a questionnaire, tie each answer to dated evidence and its coverage. Identify excluded mailboxes and any unresolved policies rather than answering for the whole organization based on one console screenshot. Use the insurance questionnaire guide for that review.",
+          "links": [
+            {
+              "phrase": "insurance questionnaire guide",
+              "to": "/resources/cyber-insurance-questionnaire/"
+            }
+          ]
+        },
+        {
+          "text": "The first step is to assemble your current contract, mailbox inventory and escalation contacts. Helm's free public-domain scan can add public email and web findings to that conversation, but it cannot establish internal mail-service coverage.",
+          "links": [
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "managed-endpoint-protection-rollout",
+  "title": "How to Implement Endpoint Security Protection with a Managed Service: Assessment, Rollout, and Ongoing Evidence",
+  "metaTitle": "Managed Endpoint Protection: Rollout and Evidence | Helm",
+  "metaDesc": "Reconcile eligible devices, pilot the protection, test escalation and keep current coverage evidence. Confirm exclusions before rollout.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "Endpoint protection starts with knowing which devices employees use. A provider cannot establish coverage from the employee count alone: one person may use two laptops, a temporary worker may use a personal device and a shared workstation may have no clear owner.",
+  "lead": [
+    "Before choosing a managed service, reconcile the device inventory with your IT provider. Record the operating system, owner, business use and whether the device can run the proposed protection."
+  ],
+  "takeaway": "Reconcile eligible devices, pilot the protection, test escalation and keep current coverage evidence. Confirm exclusions before rollout.",
+  "sections": [
+    {
+      "h": "Agree on the device population",
+      "ps": [
+        {
+          "text": "Endpoint detection and response, or EDR, helps detect activity on supported devices and gives responders investigation and response capabilities. Product availability differs by operating system, licensing and configuration. Microsoft's endpoint documentation illustrates why deployment planning must include platform requirements and a pilot. Microsoft Defender for Endpoint.",
+          "links": [
+            {
+              "phrase": "Microsoft Defender for Endpoint",
+              "to": "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint"
+            }
+          ]
+        },
+        "Ask the proposed provider to identify eligible devices and exclusions in writing. Phones, servers, network equipment and specialized systems need their own coverage decision. An agent installed on employee laptops does not prove that all those systems are protected.",
+        "Existing IT also needs to settle conflicts with current security software, update requirements and deployment permissions. Keep those administrative tasks assigned rather than leaving them between providers."
+      ]
+    },
+    {
+      "h": "Roll out with a measurable acceptance check",
+      "ps": [
+        "A hypothetical 50-person New Jersey consulting firm could pilot protection with staff who use different applications and work locations. The purpose is to discover deployment problems before extending the rollout, not to claim that a small pilot proves protection against every attack.",
+        "Agree on these acceptance checks:",
+        {
+          "list": [
+            "Each eligible device appears in the inventory and the protection console.",
+            "The device reports current health rather than merely an old installation record.",
+            "The authorized team demonstrates a safe test of the alert and escalation path.",
+            "IT confirms that essential business applications still work.",
+            "The owner records excluded or failed devices with a next action."
+          ],
+          "ordered": true
+        },
+        {
+          "text": "Specify who can isolate a device, how staff receive instructions and who restores normal operations. Containment and hands-on recovery are separate responsibilities. Use the incident-response guide to prepare the wider business handoff.",
+          "links": [
+            {
+              "phrase": "incident-response guide",
+              "to": "/resources/incident-response-plan-small-business/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "h": "Keep coverage evidence current",
+      "ps": [
+        "After onboarding, compare the current inventory with reporting devices. Track stale devices and new starters rather than treating rollout completion as permanent coverage. Keep dated reports, exceptions and authorized response records in a restricted evidence location.",
+        "For a customer questionnaire, use the eligible device population and the actual reporting coverage. If some devices are excluded, disclose the scope instead of answering that all endpoints are monitored.",
+        {
+          "text": "Helm Core includes up to two eligible Windows or Mac workstations per covered user; additional eligible workstations cost $12 per month. Device detection and response is part of its standardized security stack. Servers, phones, tablets and specialized systems require separate written scope. Helm Core.",
+          "links": [
+            {
+              "phrase": "Helm Core",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        {
+          "text": "Helm Command adds program ownership and evidence upkeep to the covered stack, with coordination through your named IT owner. Existing IT keeps patching, administration, procurement and routine remediation. Specialist vendor teams provide continuous monitoring and containment for covered capabilities. Helm Command.",
+          "links": [
+            {
+              "phrase": "Helm Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        {
+          "text": "Bring a current device list to the fit discussion. Helm's free public-domain scan checks public email and web configuration; it does not inspect endpoint health or substitute for the device assessment needed before rollout.",
+          "links": [
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "zero-day-vs-known-vulnerabilities",
+  "title": "Zero-Day vs Known Vulnerabilities: How Patch Management, Threat Intelligence, and Managed Services Reduce Your Risk",
+  "metaTitle": "Zero-Day vs Known Vulnerabilities: SMB Response | Helm",
+  "metaDesc": "Use the affected product inventory and vendor advisory to choose mitigation, patching and incident escalation with your existing IT owner.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": {
+    "text": "A zero-day vulnerability is a software or hardware weakness unknown to its vendor. An attacker may exploit it before the vendor has a fix ready. A known vulnerability has already been identified, though the affected system may still be unpatched. The terms describe the state of knowledge and repair, not a guarantee about how damaging an attack will be. CISA vulnerability-reporting definitions.",
+    "links": [
+      {
+        "phrase": "CISA vulnerability-reporting definitions",
+        "to": "https://www.cisa.gov/sites/default/files/publications/guide-vulnerability-reporting-americas-election-admins_508.pdf"
+      }
+    ]
+  },
+  "lead": [
+    "For a professional-services firm, the immediate question is whether the affected product is in use, exposed and holding information or access the business depends on."
+  ],
+  "takeaway": "Use the affected product inventory and vendor advisory to choose mitigation, patching and incident escalation with your existing IT owner.",
+  "sections": [
+    {
+      "h": "Respond to the advisory with an inventory",
+      "ps": [
+        {
+          "text": "Microsoft's March 2021 report on HAFNIUM described exploitation of on-premises Exchange Server vulnerabilities and released security updates. That public example shows why identifying the exact product and deployment matters: an advisory about one environment should not be treated as proof that every similarly named cloud service is affected. Microsoft's Exchange report.",
+          "links": [
+            {
+              "phrase": "Microsoft's Exchange report",
+              "to": "https://www.microsoft.com/en-us/security/blog/2021/03/02/hafnium-targeting-exchange-servers/"
+            }
+          ]
+        },
+        "Have your IT provider maintain a list of internet-facing systems and their owners. When an advisory appears, IT should establish which versions are affected, read the vendor's instructions and document the immediate action. If a patch is unavailable, use the vendor's supported mitigation where appropriate. Restricting access or disabling an affected feature may interrupt work, so leadership needs to approve the business consequence.",
+        "A temporary filtering rule, sometimes described as virtual patching, only addresses the traffic or exploit path it covers. Ask the responsible specialist what it blocks, what remains exposed and when it should be removed. Do not assume it repairs the software."
+      ]
+    },
+    {
+      "h": "Separate prevention from incident response",
+      "ps": [
+        "Patching closes an identified weakness. It does not prove that a system was never compromised. If the advisory or your monitoring indicates possible exploitation, follow the incident plan and involve the authorized responder before destroying logs or rebuilding affected systems.",
+        {
+          "text": "Use threat information as an input to prioritization. CISA's Known Exploited Vulnerabilities catalog identifies vulnerabilities with observed exploitation; it can help IT prioritize applicable findings. Absence from the catalog does not establish safety. CISA KEV catalog.",
+          "links": [
+            {
+              "phrase": "CISA KEV catalog",
+              "to": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+            }
+          ]
+        },
+        "For a hypothetical New Jersey firm using a vulnerable remote-access appliance, the work record should show the version check, mitigation or patch, verification and any incident escalation. The appliance's owner performs that work even if a separate provider monitors employee laptops."
+      ]
+    },
+    {
+      "h": "Confirm the managed-service boundary",
+      "ps": [
+        {
+          "text": "Helm's Core service includes device detection and response and supported identity protection within a defined stack. Specialist vendor teams provide continuous monitoring and containment for covered capabilities. This does not mean every zero-day exploit will be detected or that servers and network appliances are covered by default.",
+          "links": [
+            {
+              "phrase": "Core",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        {
+          "text": "Command adds risk, roadmap, evidence and coordination responsibilities, including quarterly leadership reviews. Existing IT retains patching and routine remediation; forensic response and hands-on recovery require separate written scope.",
+          "links": [
+            {
+              "phrase": "Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        {
+          "text": "Review the first-hour incident guide with your IT owner and name who monitors vendor advisories. Helm's free public-domain scan checks public email and web configuration. It cannot certify that your internal systems are free of unknown vulnerabilities.",
+          "links": [
+            {
+              "phrase": "first-hour incident guide",
+              "to": "/resources/incident-response-plan-small-business/"
+            },
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "vulnerability-management-new-jersey",
+  "title": "How to build a vulnerability management program for small businesses in New Jersey",
+  "metaTitle": "Vulnerability Management for New Jersey SMBs | Helm",
+  "metaDesc": "Build a finding-to-action workflow with authorized scope, risk-based priority, responsible IT owners and verified closure evidence.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "A vulnerability program needs a way to move a finding from discovery to verified action. A scanner report can identify a possible weakness, but it leaves several business decisions open: whether the finding is accurate, who owns the affected system and how quickly the firm should act.",
+  "lead": [
+    "Start with those responsibilities before buying another scan subscription. For a firm with existing IT, the program should make that provider's work visible and give leadership a route to resolve exceptions."
+  ],
+  "takeaway": "Build a finding-to-action workflow with authorized scope, risk-based priority, responsible IT owners and verified closure evidence.",
+  "sections": [
+    {
+      "h": "Establish the scope and permission to scan",
+      "ps": [
+        "List devices, applications, cloud services and public-facing systems with an owner for each. Identify which assets the proposed scanner can examine and which require another method. Obtain authorization before scanning and agree on the timing, particularly for systems whose availability affects client work.",
+        {
+          "text": "A public scan, an authenticated internal scan and a penetration test answer different questions. Use the existing penetration-test and vulnerability-scan comparison when defining the engagement.",
+          "links": [
+            {
+              "phrase": "penetration-test and vulnerability-scan comparison",
+              "to": "/resources/pen-test-vs-vulnerability-scan/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "h": "Prioritize applicable findings",
+      "ps": [
+        {
+          "text": "Ask IT to validate the affected version and exposure before assigning a task. Consider exploitation evidence, internet access, business importance and available mitigations alongside the scanner's severity rating. CISA recommends using its Known Exploited Vulnerabilities catalog as an input to vulnerability prioritization. Its federal deadlines should not be presented as a universal deadline for private New Jersey firms. CISA KEV catalog.",
+          "links": [
+            {
+              "phrase": "CISA KEV catalog",
+              "to": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+            }
+          ]
+        },
+        "A hypothetical accounting firm might have an exposed remote-access system and a less consequential application on an isolated test device. The two findings can require different urgency even when their numerical ratings look similar.",
+        "For each confirmed finding, record the asset, evidence, responsible IT owner, planned action, target date and verification method. If the firm postpones a fix, leadership should record the reason, temporary safeguards and a date to reconsider the decision."
+      ]
+    },
+    {
+      "h": "Close findings with a check",
+      "ps": [
+        "A completed patch ticket is useful evidence, but verify the result through the appropriate version check, rescan or configuration review. Keep any failed deployment or remaining exposure open. Set a regular review cadence that matches your environment and add checks after meaningful system changes.",
+        "Report unresolved high-priority findings and aging exceptions, not just the number of scans run. For questionnaires, identify the scanned population and dates. A clean report on one public website does not support a claim about all internal devices.",
+        {
+          "text": "Helm's Core provides a defined protection stack and monthly reporting. It is not a standalone vulnerability-scanning or patch-management service. Command adds a risk register, roadmap, evidence upkeep and coordination with the named IT owner. IT performs patching and routine remediation; scanning engagements and work outside covered services need written scope.",
+          "links": [
+            {
+              "phrase": "Core",
+              "to": "/helm-core/"
+            },
+            {
+              "phrase": "Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        {
+          "text": "Begin with a meeting between the business owner and IT to agree on the asset list and finding-to-ticket workflow. Helm's free public-domain scan can contribute limited public configuration findings. It does not replace the authorized assessment needed to establish a vulnerability-management baseline.",
+          "links": [
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "check-website-security",
+  "title": "How to check website security: a simple step-by-step checklist for New Jersey small businesses",
+  "metaTitle": "How to Check Website Security for Your Business | Helm",
+  "metaDesc": "Combine public website checks with administrator evidence about updates, access and recovery. A public scan cannot assess every internal control.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "A website can use HTTPS and still have an outdated content-management system, excessive administrator access or an untested backup. Checking website security therefore needs two views: what an outside visitor can observe and what the website owner can verify inside the hosting and administration systems.",
+  "lead": [
+    "For a professional-services firm, identify the owner of the public website and any separate client portal first. They may have different providers, data and recovery arrangements."
+  ],
+  "takeaway": "Combine public website checks with administrator evidence about updates, access and recovery. A public scan cannot assess every internal control.",
+  "sections": [
+    {
+      "h": "Check the public surface",
+      "ps": [
+        {
+          "text": "Open the firm's actual domain and confirm that the browser does not report a certificate error. Ask the website administrator to review HTTPS behavior and relevant security headers. HSTS tells supporting browsers to use HTTPS for a host after receiving the policy; Content Security Policy controls which resources a page may load under its configured rules. Neither header proves the application is free of vulnerabilities. Mozilla HSTS documentation, Mozilla CSP documentation.",
+          "links": [
+            {
+              "phrase": "Mozilla HSTS documentation",
+              "to": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security"
+            },
+            {
+              "phrase": "Mozilla CSP documentation",
+              "to": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy"
+            }
+          ]
+        },
+        "A public scanner can help identify observable configuration issues. Check its data-handling terms and use it only on domains you own or are authorized to assess. Keep the scan date and scope with the result. A rating should lead to a review of specific findings rather than an unsupported assurance that the site is safe."
+      ]
+    },
+    {
+      "h": "Ask the owner to verify internal controls",
+      "ps": [
+        "Send these questions to your website or IT provider:",
+        {
+          "list": [
+            "Which CMS, plugins and custom applications are in use, and who updates them?",
+            "Which accounts can administer the site, and how is access protected?",
+            "What information do forms collect, and where does it go?",
+            "What does the backup cover, and when was a restore tested?",
+            "Who investigates a suspected compromise and restores the site?"
+          ],
+          "ordered": true
+        },
+        "These answers usually require access to systems a public scanner cannot see. Request dated evidence where a customer questionnaire depends on the answer. Avoid sharing administrator credentials through a form to obtain a generic scan."
+      ]
+    },
+    {
+      "h": "Assign findings to the right provider",
+      "ps": [
+        "A hypothetical New Jersey consulting firm might receive a report showing a missing header while its hosting provider discovers an unsupported plugin. The website administrator should evaluate both findings, decide the appropriate changes and test the site afterward. Applying a copied header policy without testing can break forms or other legitimate features.",
+        "Keep confirmed weaknesses, responsible owners, target dates and closure evidence together. If a finding involves possible client-data exposure, use the incident process and get the appropriate legal and specialist advice before making external claims.",
+        {
+          "text": "Helm's free public-domain scan checks public email and web configuration. It cannot inspect CMS administration, internal access, backup restores or all application vulnerabilities. It is not a penetration test or compliance certification.",
+          "links": [
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        },
+        {
+          "text": "Core provides defined email, device, supported identity, backup, awareness and digital-risk protection. Command adds program coordination and evidence upkeep. Neither description promises website hosting or blanket remediation of scan findings; your website owner and existing IT remain responsible for their assigned work.",
+          "links": [
+            {
+              "phrase": "Core",
+              "to": "/helm-core/"
+            },
+            {
+              "phrase": "Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        {
+          "text": "Start with the public scan and the five owner questions. Use the scanner comparison if your site handles sensitive information or needs a deeper authorized assessment.",
+          "links": [
+            {
+              "phrase": "scanner comparison",
+              "to": "/resources/pen-test-vs-vulnerability-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "windows-defender-vs-managed-security",
+  "title": "Windows Defender vs Managed Endpoint Security: Which Is Right for Your New Jersey Business",
+  "metaTitle": "Windows Defender vs Managed Endpoint Security | Helm",
+  "metaDesc": "Check the exact Defender product, active licenses and reporting devices. Then compare who investigates alerts and performs authorized response.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "Microsoft Defender Antivirus is built into Windows. Whether it is enough for your business depends on the controls around it and the work your firm needs someone to perform. A working antivirus engine does not answer who reviews an alert, checks missing devices or authorizes containment after hours.",
+  "lead": [
+    "First clarify the product name. Defender Antivirus, Defender for Business and Defender for Endpoint are different parts of Microsoft's product family. A proposal that says only Defender leaves licensing, management and response responsibilities unclear."
+  ],
+  "takeaway": "Check the exact Defender product, active licenses and reporting devices. Then compare who investigates alerts and performs authorized response.",
+  "sections": [
+    {
+      "h": "Check the existing protection before replacing it",
+      "ps": [
+        {
+          "text": "Microsoft documents Defender Antivirus as built into Windows and as a component that works with Defender for Endpoint. Its business endpoint products add capabilities under their respective licenses and configurations. This makes a blanket claim that Defender has no centralized management or EDR misleading. Microsoft Defender Antivirus, Microsoft Defender for Endpoint.",
+          "links": [
+            {
+              "phrase": "Microsoft Defender Antivirus",
+              "to": "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-antivirus-windows"
+            },
+            {
+              "phrase": "Microsoft Defender for Endpoint",
+              "to": "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint"
+            }
+          ]
+        },
+        "Ask your IT provider which subscriptions are active, which devices are enrolled and which settings are applied. Confirm the population against the device inventory. If a device stopped reporting last month, a dashboard showing its old enrollment is insufficient evidence of current coverage."
+      ]
+    },
+    {
+      "h": "Compare the operating models",
+      "ps": [
+        "An internally operated business endpoint platform can fit a firm whose IT team has the time, skills and authority to maintain it and handle incidents. Budget for that work and confirm who covers absences and out-of-hours events.",
+        "A managed detection service adds defined investigation and response responsibilities. Ask which activities are included, which are automated and which require approval. Product quality and service coverage are separate questions, so request evidence for both rather than accepting a vendor's claim that one brand is always enough or never enough.",
+        "Consider a hypothetical 35-person New Jersey law firm. A partner's laptop raises an alert during a client deadline. The firm needs to know who assesses the alert, whether that team can isolate the device and who helps the partner continue work. Adding another antivirus product without deciding those responsibilities leaves the incident handoff unresolved.",
+        "Before signing, confirm supported operating systems, device exclusions, monitoring coverage, containment authority and the escalation route. Ask for a sample report and a safe demonstration of the response workflow."
+      ]
+    },
+    {
+      "h": "Fit Helm to the uncovered work",
+      "ps": [
+        {
+          "text": "Helm Core includes device detection and response within a standardized security stack. Coverage includes up to two eligible Windows or Mac workstations per covered user. Phones, servers, tablets and network equipment require separate written scope.",
+          "links": [
+            {
+              "phrase": "Helm Core",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        {
+          "text": "Specialist vendor teams provide continuous monitoring and containment behind covered capabilities; Helm does not staff its own 24/7 SOC. Existing IT retains patching, administration and routine remediation. Command adds evidence upkeep, risk and roadmap ownership, leadership reviews and IT coordination rather than unlimited incident recovery.",
+          "links": [
+            {
+              "phrase": "Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        {
+          "text": "Use the device-security checklist to review practical device controls and the SOC guide to evaluate the response service. Start with your inventory and existing licenses. Helm's free public-domain scan cannot determine whether Defender is correctly configured on internal laptops.",
+          "links": [
+            {
+              "phrase": "device-security checklist",
+              "to": "/resources/law-firm-device-security-checklist/"
+            },
+            {
+              "phrase": "SOC guide",
+              "to": "/resources/what-a-soc-actually-does/"
+            },
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "siem-software-managed-detection",
+  "title": "How small businesses in New Jersey should evaluate SIEM security software and managed detection services",
+  "metaTitle": "SIEM Software vs Managed Detection for SMBs | Helm",
+  "metaDesc": "Choose SIEM around a defined detection use case, required data and staffed response. Compare ongoing costs and ownership before buying software.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "Security information and event management software, or SIEM, collects and analyzes security events across connected systems. It can help a team connect activity that would be harder to understand in separate consoles. The firm still needs people, permissions and procedures to investigate the resulting alerts.",
+  "lead": [
+    {
+      "text": "Microsoft Sentinel illustrates that separation with data connectors, analytics, investigation features and response automation. The available platform capabilities do not establish that a particular buyer has connected the right data or staffed the response workflow. Microsoft Sentinel overview.",
+      "links": [
+        {
+          "phrase": "Microsoft Sentinel overview",
+          "to": "https://learn.microsoft.com/en-us/azure/sentinel/overview"
+        }
+      ]
+    }
+  ],
+  "takeaway": "Choose SIEM around a defined detection use case, required data and staffed response. Compare ongoing costs and ownership before buying software.",
+  "sections": [
+    {
+      "h": "Begin with a detection question",
+      "ps": [
+        "Ask what your firm needs to detect that its current services cannot adequately address. For example, a hypothetical New Jersey consulting firm might need to investigate a suspicious cloud sign-in alongside activity on a covered laptop. Determine whether existing tools can already support that investigation before buying a separate log platform.",
+        "Map the data required for the proposed use case. Identify who owns each source, whether collection needs additional licensing and whether the provider can detect a failed connector. Keeping logs from one system does not establish visibility across the business."
+      ]
+    },
+    {
+      "h": "Price the work around the software",
+      "ps": [
+        "A SIEM proposal should explain ingestion and storage charges, retention, connector setup, tuning and investigation. Ask how costs change when more systems or higher log volumes are added. Include the time your IT provider must spend maintaining integrations.",
+        "During evaluation, request a demonstration using fictional data. Follow an event through collection, detection, investigation and authorized action. Check what happens when the event is harmless and who adjusts the rule afterward.",
+        "Use these procurement questions:",
+        {
+          "list": [
+            "Which sources and detection use cases are included?",
+            "Who maintains connectors and notices missing telemetry?",
+            "Which alerts receive human review, during which coverage hours?",
+            "Who can contain a device or account, and what approval is required?",
+            "What log retention and export rights does the firm have?",
+            "Which response work costs extra?"
+          ],
+          "ordered": false
+        },
+        "A managed SIEM service can operate a platform for you. A managed detection service may instead use a defined security stack to investigate covered threats. Compare the written sources and actions rather than assuming those labels promise identical coverage."
+      ]
+    },
+    {
+      "h": "Avoid buying an unassigned queue",
+      "ps": [
+        {
+          "text": "An alert forwarded to a shared mailbox needs an owner. Agree on the escalation contact, backup contact and authority for urgent action. Use Helm's SOC guide for the broader distinction between an alert and a response.",
+          "links": [
+            {
+              "phrase": "SOC guide",
+              "to": "/resources/what-a-soc-actually-does/"
+            }
+          ]
+        },
+        {
+          "text": "Helm's Core includes device detection and response and other defined protections. It is not advertised as a standalone SIEM service or universal log-ingestion platform. Specialist vendor teams operate the continuous monitoring and containment behind covered capabilities.",
+          "links": [
+            {
+              "phrase": "Core",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        {
+          "text": "Command adds program ownership, evidence upkeep, bounded questionnaire responses and coordination with existing IT. A need for unrelated log sources, long-term forensic retention or specialized investigation should receive a separate scope decision.",
+          "links": [
+            {
+              "phrase": "Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        {
+          "text": "Start with one detection use case and ask your IT provider to map current visibility. Helm's free public-domain scan provides limited public configuration findings, not an assessment of your internal logging or SIEM coverage.",
+          "links": [
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "intentional-insider-threats",
+  "title": "What Business Owners Need to Know About Intentional Insider Threats",
+  "metaTitle": "Intentional Insider Threats: Access and Response | Helm",
+  "metaDesc": "Limit access, document sensitive approvals and review events through an authorized process. Unusual activity alone does not prove malicious intent.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": {
+    "text": "An insider can have legitimate access and still use it in a way the firm has not authorized. Intentional misuse can involve deliberately sharing confidential files, changing records or bypassing an approval process. CISA also distinguishes intentional actions from malicious intent: a deliberate action is not automatically an attempt to harm the organization. CISA Insider Threat Mitigation Guide.",
+    "links": [
+      {
+        "phrase": "CISA Insider Threat Mitigation Guide",
+        "to": "https://www.cisa.gov/sites/default/files/publications/Insider%20Threat%20Mitigation%20Guide_Final_508.pdf"
+      }
+    ]
+  },
+  "lead": [
+    "For a small business, the practical focus is access and process evidence. An unusual download or failed sign-in needs context; it is not proof that an employee is malicious."
+  ],
+  "takeaway": "Limit access, document sensitive approvals and review events through an authorized process. Unusual activity alone does not prove malicious intent.",
+  "sections": [
+    {
+      "h": "Limit what an account can do",
+      "ps": [
+        "Have business managers approve access based on the work people perform. Existing IT should implement the permissions, restrict administrator access and remove access when roles change. Review guest accounts and application access as well as employees.",
+        {
+          "text": "Payment changes and sensitive exports need a documented approval route. Where the business can support it, separate the person requesting a change from the person approving it. Use the existing offboarding checklist to coordinate HR, managers and IT rather than rebuilding that workflow here.",
+          "links": [
+            {
+              "phrase": "offboarding checklist",
+              "to": "/resources/employee-offboarding-checklist/"
+            }
+          ]
+        },
+        "Consider a hypothetical professional-services firm preparing for an employee departure. The manager identifies client matters that need reassignment; IT removes access at the approved time and records completion. That routine process is appropriate regardless of anyone's speculation about the employee's intentions."
+      ]
+    },
+    {
+      "h": "Review events through an authorized process",
+      "ps": [
+        "Decide in advance which records the firm may collect, who may review them and how long they should be retained. Keep access proportionate and obtain legal advice on employment, privacy and notice requirements that apply to your circumstances.",
+        "If an event raises concern, have the authorized reviewer establish the account, action, system and business context. Preserve relevant records and document the source and time. Limit circulation to people who need the information. Avoid employee suspicion scores, psychological profiles or informal accusations.",
+        "Containment may be necessary to protect data, but the firm should distinguish a protective access restriction from a conclusion about misconduct. Counsel, HR and any separately retained investigator should direct their respective decisions. A security-alert vendor should not be treated as the firm's employment-law adviser."
+      ]
+    },
+    {
+      "h": "Confirm what a provider can support",
+      "ps": [
+        {
+          "text": "Helm's Core includes defined email, device and supported identity protection. Covered monitoring can contribute relevant events, but it does not promise surveillance of every employee action or a forensic investigation.",
+          "links": [
+            {
+              "phrase": "Core",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        {
+          "text": "Command adds risk, roadmap, evidence upkeep and coordination responsibilities. Evidence upkeep for a security program is not an unbounded investigative evidence-collection service. Hands-on forensic response, breach counsel and specialized systems require separate written scope. Existing IT retains administration and routine remediation.",
+          "links": [
+            {
+              "phrase": "Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        "Automation deserves an access review too. A workflow that can read client files or send messages needs a named owner and bounded permissions. Helm's Secure AI Adoption consulting is a separate scoped service; consider it when evaluating a specific AI workflow, rather than as a general insider-investigation product.",
+        {
+          "text": "Begin with one sensitive business process and review its access and approvals with IT. Helm's free public-domain scan cannot assess insider intent or internal access. The incident-response guide can help the firm prepare the authorized business handoff before an event occurs.",
+          "links": [
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            },
+            {
+              "phrase": "incident-response guide",
+              "to": "/resources/incident-response-plan-small-business/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "law-firm-managed-vs-in-house-security",
+  "title": "In-House vs Managed Cybersecurity for Law Firms: Pros, Cons, and Budget-Friendly Choices",
+  "metaTitle": "Law Firm Cybersecurity: In-House vs Managed | Helm",
+  "metaDesc": "Compare law-firm security responsibilities, coverage and evidence alongside existing IT. The firm retains professional and business decisions.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Law firms",
+  "laneTo": "/law-firms/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "A law firm can keep its existing IT provider and add security expertise without outsourcing every technology decision. The choice is how to cover security operations and program leadership while preserving clear responsibility for client information.",
+  "lead": [
+    {
+      "text": "New Jersey RPC 1.6(f) requires reasonable efforts to prevent inadvertent or unauthorized disclosure of, or access to, information relating to client representation. It does not prescribe a particular vendor or certify a service package as sufficient. Have the firm's responsible lawyer assess the applicable duties and circumstances. New Jersey Rules of Professional Conduct.",
+      "links": [
+        {
+          "phrase": "New Jersey Rules of Professional Conduct",
+          "to": "https://www.njcourts.gov/sites/default/files/rpc.pdf"
+        }
+      ]
+    }
+  ],
+  "takeaway": "Compare law-firm security responsibilities, coverage and evidence alongside existing IT. The firm retains professional and business decisions.",
+  "sections": [
+    {
+      "h": "Compare responsibilities before staffing models",
+      "ps": [
+        "In-house security can give a firm direct knowledge of its systems and priorities. It also requires enough time, specialist capability and coverage for the work assigned. If one administrator handles both routine tickets and incident review, confirm how those responsibilities compete during a busy period or absence.",
+        "A managed provider can supply defined protection and specialist coverage. The firm still needs an internal decision-maker, an IT owner and a written route for incidents, exceptions and spending approvals. Outsourcing a service does not transfer the firm's professional responsibilities.",
+        {
+          "text": "For a hypothetical 45-person New Jersey practice, begin with the business processes that expose client files or move money. Review email reports, laptop coverage, access to matter files and payment-change approvals. Use the existing device checklist and callback protocol for the detailed procedures.",
+          "links": [
+            {
+              "phrase": "device checklist",
+              "to": "/resources/law-firm-device-security-checklist/"
+            },
+            {
+              "phrase": "callback protocol",
+              "to": "/resources/wire-fraud-prevention-law-firms/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "h": "Budget for the uncovered work",
+      "ps": [
+        "Compare proposals against the same account and device population. Include existing subscriptions, onboarding work, IT time, training and specialist response exclusions. Avoid comparing a software license with a managed-service price as though both buy the same responsibilities.",
+        {
+          "text": "Helm Core is a standardized service for a typical 20 to 75-person fit, at $125 per covered user per month with a $2,500 minimum. It includes email, device, supported identity, cloud productivity backup, awareness and digital-risk protection, with monthly reporting. Core scope and terms.",
+          "links": [
+            {
+              "phrase": "Core scope and terms",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        {
+          "text": "Helm Command is intended for a qualified 75 to 250-person organization that needs program ownership. Its $8,000 to $15,000 monthly range is confirmed after a fit and complexity review. It adds a risk register, prioritized roadmap, evidence upkeep, bounded questionnaire responses, quarterly leadership reviews and an annual tabletop to the covered stack. Command scope and terms.",
+          "links": [
+            {
+              "phrase": "Command scope and terms",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        "Existing IT retains help desk, administration, patching and routine remediation. Specialist vendor teams provide continuous monitoring and containment for covered capabilities. Forensic response, breach counsel and hands-on recovery require separate written scope."
+      ]
+    },
+    {
+      "h": "Prepare the questionnaire and incident handoff",
+      "ps": [
+        "For a client review, map each answer to a dated record and its coverage. Check that training completion, device coverage and access-review claims include their exceptions. The firm approves final representations; an evidence folder does not guarantee acceptance.",
+        {
+          "text": "If an employee reports a suspected compromise, route it to the authorized responder and preserve relevant records. Leadership and counsel should direct business and notification decisions. Use the incident-response guide to establish contacts before an event.",
+          "links": [
+            {
+              "phrase": "incident-response guide",
+              "to": "/resources/incident-response-plan-small-business/"
+            }
+          ]
+        },
+        {
+          "text": "Review the law-firm service page with your IT owner. Helm's free public-domain scan checks public email and web configuration; internal coverage and professional obligations need a separate discussion.",
+          "links": [
+            {
+              "phrase": "law-firm service page",
+              "to": "/law-firms/"
+            },
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "cybersecurity-risk-assessment-tools",
+  "title": "How to evaluate a cybersecurity risk assessment tool for small businesses",
+  "metaTitle": "How to Evaluate Cybersecurity Assessment Tools | Helm",
+  "metaDesc": "Choose an assessment tool that distinguishes evidence from assertions and connects findings to business impact, owners and decisions.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "A risk assessment tool should help your firm explain what could go wrong, why the business would care and who will act. A vulnerability scanner contributes technical findings, but it cannot decide the business impact of losing access to a tax application during filing season or exposing a client's matter files.",
+  "lead": [
+    {
+      "text": "NIST's risk-assessment guidance considers threats, vulnerabilities, likelihood and impact, with preparation, assessment and maintenance over time. It provides a method rather than a claim that one automated score establishes risk. NIST SP 800-30 Revision 1.",
+      "links": [
+        {
+          "phrase": "NIST SP 800-30 Revision 1",
+          "to": "https://csrc.nist.gov/pubs/sp/800/30/r1/final"
+        }
+      ]
+    }
+  ],
+  "takeaway": "Choose an assessment tool that distinguishes evidence from assertions and connects findings to business impact, owners and decisions.",
+  "sections": [
+    {
+      "h": "Check what the tool observes",
+      "ps": [
+        "Ask which inputs come from live systems, which are uploaded documents and which are self-reported answers. A tool may combine several methods, but the reviewer needs to distinguish them. Record the assessed population and the date of each input.",
+        "A hypothetical 80-person New Jersey consulting firm might use a tool that checks public configuration and collects staff answers about backups. The public checks may be observable; the backup answer still needs evidence from the responsible IT owner. A single score should not hide that difference.",
+        "Asset discovery, scanning, questionnaire collection and evidence storage can all be useful, but no tool needs every feature to fit every assessment. Choose the capabilities that support your defined scope and protect the information being collected."
+      ]
+    },
+    {
+      "h": "Test the output before purchasing",
+      "ps": [
+        "Request a sample assessment with fictional data and follow one finding through the report. Check whether it identifies the source, limitations, business impact and responsible action. Ask whether you can correct an inaccurate input without losing the review history.",
+        "Use these evaluation questions:",
+        {
+          "list": [
+            "Can the reviewer distinguish observed evidence from an unchecked assertion?",
+            "Does the score show its assumptions and method?",
+            "Can findings be assigned to IT owners with target dates?",
+            "Does the tool retain decisions and exceptions without exposing sensitive records unnecessarily?",
+            "Can you export your data and evidence when leaving the service?"
+          ],
+          "ordered": false
+        },
+        "Review access controls, data location, retention and integration permissions before uploading confidential documents. An evidence-management tool itself needs a scope and access decision."
+      ]
+    },
+    {
+      "h": "Convert results into a decision record",
+      "ps": [
+        "For each material risk, record the affected business process, supporting evidence, proposed treatment and accountable owner. Leadership decides which risks to accept and what to fund. IT implements assigned technical changes. Review the result when systems or business requirements change.",
+        {
+          "text": "Helm's Core provides a defined protection stack and monthly reporting; it is not a complete enterprise risk assessment. Command adds a risk register, prioritized roadmap, evidence upkeep and leadership cadence, coordinating with your existing IT provider. It does not issue audit opinions or compliance certifications.",
+          "links": [
+            {
+              "phrase": "Core",
+              "to": "/helm-core/"
+            },
+            {
+              "phrase": "Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        {
+          "text": "Use the scanner comparison to define any technical testing and the questionnaire guide to connect answers with evidence. Helm's free public-domain scan supplies limited public email and web findings. Deeper discovery, when required to confirm fit and scope, is a separate bounded paid engagement rather than a free internal assessment.",
+          "links": [
+            {
+              "phrase": "scanner comparison",
+              "to": "/resources/pen-test-vs-vulnerability-scan/"
+            },
+            {
+              "phrase": "questionnaire guide",
+              "to": "/resources/cyber-insurance-questionnaire/"
+            },
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "virtual-ciso-service-evaluation",
+  "title": "How to Choose a Virtual CISO Service That Delivers Roadmaps, Evidence, and Quarterly Accountability",
+  "metaTitle": "Choosing Virtual CISO Services for Your SMB | Helm",
+  "metaDesc": "Buy defined security-leadership deliverables, meeting cadence and evidence responsibilities. Confirm limits and retain final business approvals.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "A virtual chief information security officer service supplies security-leadership work without a full-time executive appointment. Providers use the label for different scopes, so compare deliverables and decision rights before comparing the title.",
+  "lead": [
+    "For a professional-services firm with existing IT, the engagement should explain who maintains the risk view, recommends priorities, tracks evidence and brings unresolved decisions to leadership."
+  ],
+  "takeaway": "Buy defined security-leadership deliverables, meeting cadence and evidence responsibilities. Confirm limits and retain final business approvals.",
+  "sections": [
+    {
+      "h": "Buy a defined leadership role",
+      "ps": [
+        "Ask the provider to describe the work it performs each month and what happens at a leadership review. Request a sample risk register and roadmap with fictional data. Look for business consequences, accountable owners and decisions that need approval rather than a list of recommended tools.",
+        {
+          "text": "NIST's Small Business Quick-Start Guide provides a way to organize cybersecurity across governance and operational activities. Use it as a discussion structure, not as certification that a vCISO service meets every obligation. NIST SP 1300.",
+          "links": [
+            {
+              "phrase": "NIST SP 1300",
+              "to": "https://csrc.nist.gov/pubs/sp/1300/final"
+            }
+          ]
+        },
+        "A hypothetical 100-person New Jersey accounting firm may need to decide how to fund stronger access controls, prepare customer responses and address an unresolved restore-test gap. Its adviser should present the evidence and options. Partners approve the spending and risk decisions; IT performs the assigned administrative work."
+      ]
+    },
+    {
+      "h": "Set limits around cadence and evidence",
+      "ps": [
+        "Agree on how many meetings, questionnaires and hours of coordination the service covers. Define what counts as an urgent escalation and who covers a provider absence. Specialist incident response, legal advice and independent assessments need explicit treatment in the contract.",
+        "For evidence, ask who requests records from IT, checks their dates and coverage, and follows up when a claim lacks support. The firm should approve every external representation. An adviser can help prepare an answer without becoming the authority that certifies it.",
+        "The roadmap should identify dependencies and costs beyond the advisory fee. A recommendation to change access policies may need licenses and implementation time; a recovery improvement may need a separate backup or response engagement."
+      ]
+    },
+    {
+      "h": "Compare Helm's two scopes",
+      "ps": [
+        {
+          "text": "Helm Core is a standardized protection stack with monthly reporting. It does not include quarterly leadership reviews or open-ended vCISO work. It fits firms that can retain program decisions and coordination internally. Helm Core.",
+          "links": [
+            {
+              "phrase": "Helm Core",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        {
+          "text": "Helm Command provides managed security-program ownership: the covered Core stack, a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance responses, quarterly leadership reviews, an annual tabletop and IT coordination. Its published range is $8,000 to $15,000 per month after fit and complexity review. Compare that written scope with a prospective vCISO engagement rather than assuming the services are interchangeable. Helm Command.",
+          "links": [
+            {
+              "phrase": "Helm Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        "Existing IT retains help desk, patching, administration, procurement and routine remediation. The client retains final attestations and business decisions. Command does not provide unlimited specialist work merely because it owns the security-program cadence.",
+        {
+          "text": "Bring one unfinished security decision and a recent questionnaire to your evaluation meeting, with sensitive details shared only through an approved process. The managed-provider models guide can help compare stack coverage with program ownership. Helm's free public-domain scan is a limited public check, not the risk assessment needed to build an entire roadmap.",
+          "links": [
+            {
+              "phrase": "managed-provider models guide",
+              "to": "/resources/managed-service-provider-security-models/"
+            },
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "digital-risk-protection-services",
+  "title": "How to evaluate and implement digital risk protection services on a budget for small businesses",
+  "metaTitle": "Digital Risk Protection Services: SMB Buyer Guide | Helm",
+  "metaDesc": "Scope the public assets and sources a service monitors, then confirm who reviews findings and what response assistance is included.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "Digital risk protection services look for defined external exposures, such as impersonation of a business or exposed credentials. Coverage varies by provider, monitored assets and data sources. Ask what the service can observe and what action follows a finding before treating the label as coverage of everything outside your network.",
+  "lead": [
+    "For a New Jersey professional-services firm, begin with the domains, public identities and online services clients use to recognize you."
+  ],
+  "takeaway": "Scope the public assets and sources a service monitors, then confirm who reviews findings and what response assistance is included.",
+  "sections": [
+    {
+      "h": "Choose the assets that matter",
+      "ps": [
+        "List the firm's approved domains and client-facing accounts. Identify who can confirm whether a reported page, account or message is authorized. Keep the initial scope small enough that someone can review and act on findings.",
+        {
+          "text": "The FTC describes how impersonation scams use trusted identities and pressure to obtain payment or information. External monitoring can contribute signals, but staff still need a way to verify requests independently. FTC business-impersonation guidance.",
+          "links": [
+            {
+              "phrase": "FTC business-impersonation guidance",
+              "to": "https://consumer.ftc.gov/features/pass-it-on/impersonator-scams/business-impersonator-scams"
+            }
+          ]
+        },
+        "A hypothetical accounting firm might learn about a lookalike website using its name. The authorized reviewer should preserve relevant evidence without submitting credentials to the suspected site, confirm the impersonation and identify the appropriate hosting, registrar or platform reporting route."
+      ]
+    },
+    {
+      "h": "Ask what happens after detection",
+      "ps": [
+        "Some services send notifications; others help prepare abuse reports or coordinate defined response actions. Takedown depends on the relevant platform and evidence, so a provider should not promise that every impersonation will disappear on demand.",
+        "For an exposed-credential alert, have IT verify the affected account and take the approved access actions. The alert alone does not prove a current account compromise or establish the completeness of the exposed information. Keep the investigation proportionate and involve the authorized responder when evidence suggests a wider incident.",
+        "Ask prospective vendors:",
+        {
+          "list": [
+            "Which domains, accounts and sources are monitored?",
+            "How does a reviewer check a possible match?",
+            "Who receives the alert and takes the next action?",
+            "Does the price include assistance with reports or only detection?",
+            "What evidence and export rights remain with the firm?"
+          ],
+          "ordered": false
+        },
+        "Evaluate the workload as well as the subscription. A low-cost service that produces unreviewed notifications can leave the important work with an already busy administrator."
+      ]
+    },
+    {
+      "h": "Connect external findings with existing controls",
+      "ps": [
+        {
+          "text": "Helm Core includes digital-risk protection within its defined stack, alongside email, device, supported identity, backup and awareness protection. Confirm the monitored assets and response scope before relying on that coverage. Helm Core.",
+          "links": [
+            {
+              "phrase": "Helm Core",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        {
+          "text": "Helm Command adds a risk register, roadmap, evidence upkeep and coordination with the named IT owner. These responsibilities can help track an unresolved external finding and its owner; they do not guarantee takedowns or include unlimited forensic, legal or administrative work. Helm Command.",
+          "links": [
+            {
+              "phrase": "Helm Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        {
+          "text": "Use the DMARC guide for your own domain's authentication and the invoice-fraud guide for verification procedures. Those controls address related problems without replacing external-risk review.",
+          "links": [
+            {
+              "phrase": "DMARC guide",
+              "to": "/resources/what-is-dmarc/"
+            },
+            {
+              "phrase": "invoice-fraud guide",
+              "to": "/resources/invoice-fraud-red-flags/"
+            }
+          ]
+        },
+        {
+          "text": "Start by identifying approved public assets and naming the response owner. Helm's free public-domain scan checks public email and web configuration. It does not search every external data source or establish that your brand and credentials have never been misused.",
+          "links": [
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "accounting-firms-core-vs-command",
+  "title": "Choosing between a standardized stack and full program ownership: Helm Core vs Helm Command for accounting firms",
+  "metaTitle": "Accounting Firm Security: Core vs Command | Helm",
+  "metaDesc": "Choose a standardized stack when program work already has an owner. Compare Command when recurring risk, evidence and coordination need ownership.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Accounting firms",
+  "laneTo": "/accounting-firms/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "An accounting firm can have security tools in place and still struggle to show who reviews the controls, tracks exceptions and prepares customer answers. Choosing between a standardized protection stack and program ownership depends on whether those responsibilities already have an owner.",
+  "lead": [
+    {
+      "text": "For New Jersey accounting and tax firms, begin with client information, payment workflows and the systems supporting time-sensitive work. Keep the detailed written-plan review in the existing WISP checklist.",
+      "links": [
+        {
+          "phrase": "WISP checklist",
+          "to": "/resources/wisp-checklist-accounting-firms/"
+        }
+      ]
+    }
+  ],
+  "takeaway": "Choose a standardized stack when program work already has an owner. Compare Command when recurring risk, evidence and coordination need ownership.",
+  "sections": [
+    {
+      "h": "Establish the obligations for your practice",
+      "ps": [
+        {
+          "text": "The IRS states that professional tax preparers must create and implement security plans to protect client data. The FTC's Safeguards Rule applies to covered financial institutions, including tax preparation firms; some provisions have limited exemptions. Applicability depends on the firm's activities and the rule, not simply the word accounting in its name. Have the responsible adviser confirm the firm's obligations. IRS client-data guidance, FTC Safeguards Rule guidance.",
+          "links": [
+            {
+              "phrase": "IRS client-data guidance",
+              "to": "https://www.irs.gov/tax-professionals/protect-your-clients-protect-yourself"
+            },
+            {
+              "phrase": "FTC Safeguards Rule guidance",
+              "to": "https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know"
+            }
+          ]
+        },
+        "Assign a firm owner for the program and identify which records IT must provide. A written plan should describe the firm's actual practices and remaining work rather than language copied from a vendor's brochure."
+      ]
+    },
+    {
+      "h": "Choose a stack when the program already has an owner",
+      "ps": [
+        {
+          "text": "Helm Core includes managed email protection, device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital-risk protection and monthly reporting. Its standard fit is 20 to 75 people, at $125 per covered user per month with a $2,500 minimum. Helm Core.",
+          "links": [
+            {
+              "phrase": "Helm Core",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        "A hypothetical 30-person CPA firm may have a partner who owns the WISP and an IT provider that implements assigned changes. Core can cover the defined security layer while those owners maintain program decisions. It does not add quarterly leadership reviews or open-ended questionnaire work.",
+        "Review eligible devices and supported platforms before comparing price. The workstation allowance does not include every phone, server or network device. Existing IT retains patching, administration, procurement and routine remediation."
+      ]
+    },
+    {
+      "h": "Choose program ownership when coordination is missing",
+      "ps": [
+        {
+          "text": "Helm Command includes the covered Core stack plus a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance responses, quarterly leadership reviews, an annual tabletop and IT coordination. Its $8,000 to $15,000 monthly range is confirmed after a fit and complexity review for a qualified 75 to 250-person organization. Helm Command.",
+          "links": [
+            {
+              "phrase": "Helm Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        "That scope addresses recurring decisions and evidence work. It does not guarantee compliance, insurer approval or completion of every recommended fix. The firm approves final attestations and business decisions; the responsible IT owner implements assigned administrative work."
+      ]
+    },
+    {
+      "h": "Review one workflow before choosing",
+      "ps": [
+        {
+          "text": "Select a process such as staff departure, a payment-change request or recovery of a deleted client file. Ask who operates each step and what dated record supports completion. Use the offboarding checklist and backup-testing guide for those procedures.",
+          "links": [
+            {
+              "phrase": "offboarding checklist",
+              "to": "/resources/employee-offboarding-checklist/"
+            },
+            {
+              "phrase": "backup-testing guide",
+              "to": "/resources/backup-testing-insurers/"
+            }
+          ]
+        },
+        {
+          "text": "Review the accounting-firm page with existing IT. Helm's free public-domain scan checks public email and web configuration; it cannot assess the firm's full WISP or certify internal controls. Use the findings as a starting point for a scoped fit conversation.",
+          "links": [
+            {
+              "phrase": "accounting-firm page",
+              "to": "/accounting-firms/"
+            },
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "google-workspace-security-managed-vs-diy",
+  "title": "Managed Google Workspace Security vs DIY: Which Is Right for Your SMB",
+  "metaTitle": "Google Workspace Security: Managed vs DIY | Helm",
+  "metaDesc": "Review your Workspace edition, administrator access and sharing controls. Confirm supported protection and the administration retained by IT.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "Google Workspace security involves more than Gmail filtering. Administrator access, file sharing, connected applications and recovery arrangements all affect how client information is handled. A firm can manage these responsibilities through existing IT or add a security provider for defined protection and program work.",
+  "lead": [
+    "Start by identifying your Workspace edition and current settings. Features available in one edition or configuration should not be assumed to exist in another."
+  ],
+  "takeaway": "Review your Workspace edition, administrator access and sharing controls. Confirm supported protection and the administration retained by IT.",
+  "sections": [
+    {
+      "h": "Review the Google-specific controls",
+      "ps": [
+        {
+          "text": "Google's small-business checklist covers two-step verification, administrator safeguards, Gmail protections and file-sharing controls. Firms with more demanding requirements may need the larger-business guidance even when their employee count is small. Google Workspace security checklist.",
+          "links": [
+            {
+              "phrase": "Google Workspace security checklist",
+              "to": "https://knowledge.workspace.google.com/admin/security/security-checklist-for-small-businesses-1-100-users?hl=en"
+            }
+          ]
+        },
+        "Have your IT owner review the administrator population, authentication enforcement and recovery arrangements. Check who can share client files outside the firm, whether guests still need their access and which applications have permission to use Workspace data.",
+        "If a proposal includes contextual access policies, data-loss prevention or expanded audit capabilities, ask for the exact edition and license requirements. Confirm the proposed feature in your environment before including it in a customer answer. Device administration is a separate responsibility from detecting threats on supported workstations."
+      ]
+    },
+    {
+      "h": "Compare effort and authority",
+      "ps": [
+        "DIY can fit a firm whose IT team maintains the tenant and has time to review security events and evidence. Budget for that work, including roster changes, permissions and policy exceptions.",
+        "A managed provider should identify supported Workspace capabilities and the response actions it is authorized to perform. Ask who maintains tenant settings, who investigates a suspicious account and who handles recovery or an unavailable device. Do not assume a service labeled Workspace security includes all administration or all Google products.",
+        "A hypothetical 55-person New Jersey consulting firm could start with a client-sharing workflow. IT verifies the current Drive permissions, the business manager approves the intended recipients and the security owner records any exceptions. This connects a technical setting to a business decision without claiming that a configuration alone proves compliance."
+      ]
+    },
+    {
+      "h": "Confirm Helm's fit in writing",
+      "ps": [
+        {
+          "text": "Helm Core includes a defined email, device, supported identity, cloud productivity backup, awareness and digital-risk stack with monthly reporting. Supported Google services and workloads must be confirmed during fit review rather than inferred from the overall product description. Helm Core.",
+          "links": [
+            {
+              "phrase": "Helm Core",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        {
+          "text": "Helm Command adds a risk register, roadmap, evidence upkeep, bounded questionnaire response and leadership cadence. Existing IT retains tenant administration, patching and routine remediation. Command coordinates assigned work; it does not promise unrestricted Workspace hardening or universal recovery. Helm Command.",
+          "links": [
+            {
+              "phrase": "Helm Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        {
+          "text": "For an AI workflow using Workspace information, review the permissions, data handling and approved use before a pilot. Helm's Secure AI Adoption consulting is a separate scoped service, not an included configuration feature or approval of every Gemini or third-party integration. The existing shadow-AI guide explains the business review.",
+          "links": [
+            {
+              "phrase": "shadow-AI guide",
+              "to": "/resources/shadow-ai-at-work/"
+            }
+          ]
+        },
+        {
+          "text": "Collect your edition, user population, application list and current sharing rules for the fit discussion. Helm's free public-domain scan checks public email and web configuration, without inspecting your Workspace tenant. It cannot verify internal permissions, backup coverage or all licensed controls.",
+          "links": [
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "microsoft-365-retention-vs-backup",
+  "title": "Microsoft 365 Native Retention vs Third-Party Backup: Which Is Right for Your Small Business",
+  "metaTitle": "Microsoft 365 Retention vs Backup for SMBs | Helm",
+  "metaDesc": "Microsoft offers retention, recovery and native backup. Compare workload coverage, restore requirements and operating duties before choosing a service.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "Microsoft 365 has retention, recovery and native backup capabilities. Choosing a backup approach starts with the data you need to recover and the recovery process your business can operate. A claim that Microsoft has no backup is an inadequate basis for a purchase.",
+  "lead": [
+    {
+      "text": "Retention and backup serve related but different purposes. Retention policies can preserve or delete content according to configured rules. Microsoft 365 Backup is a separate recovery product, covering supported SharePoint sites, OneDrive accounts and Exchange mailboxes. Licensing, billing and configuration need their own review. Microsoft Purview retention, Microsoft 365 Backup overview.",
+      "links": [
+        {
+          "phrase": "Microsoft Purview retention",
+          "to": "https://learn.microsoft.com/en-us/purview/retention"
+        },
+        {
+          "phrase": "Microsoft 365 Backup overview",
+          "to": "https://learn.microsoft.com/en-us/microsoft-365/backup/backup-overview"
+        }
+      ]
+    }
+  ],
+  "takeaway": "Microsoft offers retention, recovery and native backup. Compare workload coverage, restore requirements and operating duties before choosing a service.",
+  "sections": [
+    {
+      "h": "Compare recovery requirements by workload",
+      "ps": [
+        "Ask your IT owner to list the mailboxes, accounts, sites and other business data the firm depends on. Include shared data and departing employees. Then identify which native or third-party product covers each item and where coverage stops.",
+        "Do not assume a product that covers mailbox data also restores every Teams conversation, application configuration or connected service. Read the current workload and restore documentation for the particular product. Check whether permissions, versions and other needed information return with the content.",
+        "A hypothetical 40-person New Jersey accounting firm could define one recovery requirement for a deleted client file and another for widespread damage to a shared document site. The firm should evaluate both, including how a restore might affect legitimate changes made after the chosen recovery point."
+      ]
+    },
+    {
+      "h": "Test the operator as well as the product",
+      "ps": [
+        "Choose non-sensitive sample data and arrange a controlled restore through the provider authorized to perform it. Record the source, recovery point, restored destination and result. Confirm that the business owner can use the returned data.",
+        "During vendor evaluation, ask:",
+        {
+          "list": [
+            "Which workloads and users are protected, and how are new ones enrolled?",
+            "What retention and recovery points apply?",
+            "Who can change or delete backup policies?",
+            "Who authorizes and performs restores?",
+            "What recovery work, testing and charges are included?",
+            "What happens to recoverability when the contract ends?"
+          ],
+          "ordered": false
+        },
+        "Separate a provider's recovery objective from a guarantee. Actual restoration depends on the supported workload, amount of data, scenario and configured service. Keep exceptions and failed tests visible rather than recording only successful jobs."
+      ]
+    },
+    {
+      "h": "Confirm the managed-service scope",
+      "ps": [
+        {
+          "text": "Helm Core includes cloud productivity backup within its defined protection stack. Covered Microsoft workloads, restore responsibilities and test duties must be confirmed in the service order. It does not mean every Microsoft 365 asset is backed up or that every recovery task is included. Helm Core.",
+          "links": [
+            {
+              "phrase": "Helm Core",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        {
+          "text": "Helm Command adds evidence upkeep, roadmap ownership and coordination with the named IT owner. Existing IT retains backup operations outside covered services, routine administration and remediation. Specialist recovery work needs separate written scope. Helm Command.",
+          "links": [
+            {
+              "phrase": "Helm Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        {
+          "text": "Use the backup-testing guide to prepare support for questionnaire answers. Start by documenting one important restore scenario and its responsible operator. Helm's free public-domain scan cannot inspect your tenant, backup policies or restore history.",
+          "links": [
+            {
+              "phrase": "backup-testing guide",
+              "to": "/resources/backup-testing-insurers/"
+            },
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "security-questionnaire-response-services",
+  "title": "Security questionnaire response services versus DIY: what SMBs should consider",
+  "metaTitle": "Security Questionnaire Services vs DIY | Helm",
+  "metaDesc": "Map questionnaire answers to current scoped evidence. A response service can help draft and organize; your firm approves every final representation.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "A client questionnaire can ask for broad assurances while your evidence covers only part of the business. The response process needs someone to notice that mismatch before an answer is approved.",
+  "lead": [
+    "DIY can work when the firm has an owner who understands its controls, can obtain evidence from IT and has time to manage reviews. A response service can help organize that work, but the customer still owns every final representation."
+  ],
+  "takeaway": "Map questionnaire answers to current scoped evidence. A response service can help draft and organize; your firm approves every final representation.",
+  "sections": [
+    {
+      "h": "Start with the question's scope",
+      "ps": [
+        "Record who is asking, which service or business unit they are assessing, the deadline and the expected approval process. Different questionnaires can use similar language to ask about different populations. A question about all production systems should not be answered using a report covering only employee laptops.",
+        "For each question, identify the responsible control owner and supporting record. Mark an answer as unsupported when evidence is missing. If a control is planned or partially deployed, say so and explain the relevant scope rather than converting a roadmap item into a present-tense claim.",
+        {
+          "text": "The FTC's guidance for covered financial institutions includes evaluating service providers and overseeing safeguards. That is one reason a customer may request evidence; it does not mean every questionnaire has the same legal basis or response requirements. FTC Safeguards Rule guidance.",
+          "links": [
+            {
+              "phrase": "FTC Safeguards Rule guidance",
+              "to": "https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "h": "Maintain a reviewed answer library",
+      "ps": [
+        "Store approved answers with their scope, evidence date, reviewer and conditions for reuse. A template can shorten drafting, but the control owner should check it against current systems and the new question. Retire answers when configurations, providers or coverage change.",
+        "A hypothetical 90-person New Jersey consultancy might reuse an answer describing endpoint coverage. Before the next submission, it needs to check newly acquired devices and any contractors outside the service. Reusing last quarter's answer without that check could overstate the current control.",
+        "Keep supporting evidence in an approved restricted location and share only what the requesting party is entitled to receive. Redact confidential details where appropriate and confirm the recipient's secure transfer process."
+      ]
+    },
+    {
+      "h": "Define the service limit",
+      "ps": [
+        "Ask a response provider which formats, volumes and deadlines it covers. Clarify whether it drafts answers, maps controls, requests evidence, handles follow-up questions or reviews contract commitments. Legal interpretation and independent assurance need their own responsible advisers.",
+        {
+          "text": "Helm Command includes bounded client questionnaire and insurance responses, evidence upkeep and coordination with your named IT owner. That work is part of a managed program rather than an unlimited standalone response desk. The firm reviews and approves final attestations. Helm Command.",
+          "links": [
+            {
+              "phrase": "Helm Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        {
+          "text": "Helm Core provides a defined protection stack and monthly reporting. It does not include Command's questionnaire scope or full program-evidence ownership. Helm Core.",
+          "links": [
+            {
+              "phrase": "Helm Core",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        {
+          "text": "Review the managed-provider models guide when deciding who should own recurring evidence work. For insurer-specific questions, use the separate insurance application walkthrough.",
+          "links": [
+            {
+              "phrase": "managed-provider models guide",
+              "to": "/resources/managed-service-provider-security-models/"
+            },
+            {
+              "phrase": "insurance application walkthrough",
+              "to": "/resources/cyber-insurance-application-walkthrough/"
+            }
+          ]
+        },
+        {
+          "text": "Begin by assigning one questionnaire owner and identifying the evidence gaps in the next request. Helm's free public-domain scan checks limited public configuration; it cannot support blanket claims about internal access, training, backup or response coverage.",
+          "links": [
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "managed-identity-threat-response",
+  "title": "Key capabilities to look for in a managed identity threat detection and response provider",
+  "metaTitle": "Managed Identity Threat Response: Buyer Checklist | Helm",
+  "metaDesc": "Confirm supported identity platforms, available signals and written response authority. Keep administration, recovery and specialist duties assigned.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "Identity threat detection and response looks for signs that an account or sign-in may be compromised and supports defined action. It is different from the routine work of creating accounts, approving permissions and removing access when staff leave.",
+  "lead": [
+    "A firm buying the service should ask which identity platforms are supported, what signals are available and what the provider can do when it finds a suspicious event."
+  ],
+  "takeaway": "Confirm supported identity platforms, available signals and written response authority. Keep administration, recovery and specialist duties assigned.",
+  "sections": [
+    {
+      "h": "Check the signals and their limits",
+      "ps": [
+        {
+          "text": "Microsoft Entra ID Protection is one example of a product that detects identity risks and supports investigation and policy-based actions. Available detections, reporting and policies depend on licensing and configuration. A product's capabilities do not establish what a particular managed provider has deployed or is authorized to operate. Microsoft Entra ID Protection.",
+          "links": [
+            {
+              "phrase": "Microsoft Entra ID Protection",
+              "to": "https://learn.microsoft.com/en-us/entra/id-protection/overview-identity-protection"
+            }
+          ]
+        },
+        "Ask for the covered account population and data sources. Include administrator accounts, guests and any application identities relevant to your service. Identify where logs are missing or where a system sits outside the supported platform.",
+        "A suspicious sign-in is a signal for review, not automatic proof of compromise. A hypothetical New Jersey consultant traveling to a client site could generate unusual activity. The provider needs enough context to assess the event without ignoring a genuine account takeover."
+      ]
+    },
+    {
+      "h": "Require a written response path",
+      "ps": [
+        "Have the vendor demonstrate a fictional incident from detection to escalation. Establish who checks the event, who contacts the user through a trusted route and which actions can occur automatically.",
+        "Depending on the platform and authority, actions may include restricting an account or requiring additional verification. Ask specifically about session handling and connected applications. A password reset should not be presented as proof that all active access everywhere has ended.",
+        "Agree on the handoff to existing IT for administrative changes and recovery. Forensic investigation, client notification and legal decisions need their own owners. Keep a record of the signal, reviewer, authorized action and unresolved questions.",
+        "Use these evaluation criteria:",
+        {
+          "list": [
+            "The provider names supported platforms and excluded identities.",
+            "The contract states monitoring coverage and escalation contacts.",
+            "Response permissions are explicit and proportionate.",
+            "Evidence records show coverage and actions without unnecessary data disclosure.",
+            "The firm knows who restores access and handles work outside the service."
+          ],
+          "ordered": false
+        }
+      ]
+    },
+    {
+      "h": "Confirm Helm's supported scope",
+      "ps": [
+        {
+          "text": "Helm Core includes supported identity protection inside its standardized security stack. Confirm the relevant platform, account coverage and containment authority during fit review. Specialist vendor teams provide continuous monitoring and containment behind covered capabilities; Helm does not staff its own 24/7 SOC. Helm Core.",
+          "links": [
+            {
+              "phrase": "Helm Core",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        {
+          "text": "Helm Command adds risk, roadmap, evidence upkeep, bounded questionnaire responses and program coordination. It does not promise universal session revocation, unrestricted tenant administration or forensic remediation. Existing IT retains routine administration and remediation. Helm Command.",
+          "links": [
+            {
+              "phrase": "Helm Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        {
+          "text": "Use the offboarding guide for the separate account-lifecycle workflow and the incident-response guide for the wider handoff. Bring your identity platforms and current response contacts to a fit discussion. Helm's free public-domain scan cannot inspect internal identity telemetry or prove that accounts have not been compromised.",
+          "links": [
+            {
+              "phrase": "offboarding guide",
+              "to": "/resources/employee-offboarding-checklist/"
+            },
+            {
+              "phrase": "incident-response guide",
+              "to": "/resources/incident-response-plan-small-business/"
+            },
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "google-workspace-retention-vs-backup",
+  "title": "Google Workspace Native Retention vs Managed Backup Services: Choosing the Right Fit for Your Business",
+  "metaTitle": "Google Workspace Retention vs Managed Backup | Helm",
+  "metaDesc": "Compare Google recovery and Vault retention with your restore requirements. Confirm each protected workload and the authorized restore operator.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "Google Workspace provides retention and recovery features, but each has a particular scope. Your firm needs to know whether it can recover the information required for client work and who will perform the restore.",
+  "lead": [
+    {
+      "text": "Google explicitly states that Vault is not designed as a backup or archive tool. Its exports support legal discovery, with limits that differ from an operational backup workflow. Treating Vault as a substitute for every restore requirement can leave gaps. Google Vault FAQ.",
+      "links": [
+        {
+          "phrase": "Google Vault FAQ",
+          "to": "https://knowledge.workspace.google.com/vault/getting-started/google-vault-faq?hl=en"
+        }
+      ]
+    }
+  ],
+  "takeaway": "Compare Google recovery and Vault retention with your restore requirements. Confirm each protected workload and the authorized restore operator.",
+  "sections": [
+    {
+      "h": "Review native recovery before adding a service",
+      "ps": [
+        {
+          "text": "Ask your Workspace administrator to document the current edition, retention rules and recovery methods for the data the business uses. Google documents a limited administrator recovery window for deleted Drive data and describes restrictions on the recovery process. Check the current documentation and the specific loss event instead of assuming every deleted item can be restored indefinitely. Google Drive administrator recovery.",
+          "links": [
+            {
+              "phrase": "Google Drive administrator recovery",
+              "to": "https://knowledge.workspace.google.com/admin/drive/recover-deleted-files-and-folders-for-drive-users?hl=en"
+            }
+          ]
+        },
+        "Separate personal Drive content, shared drives, Gmail and other workloads in the inventory. Calendar, Contacts and Chat need explicit coverage decisions. A vendor that backs up one workload should not be assumed to protect all of them."
+      ]
+    },
+    {
+      "h": "Compare the restoration process",
+      "ps": [
+        "A hypothetical 35-person New Jersey firm could define a test around recovery of a deleted client folder. The authorized administrator should restore non-sensitive sample data and check that the expected files and access arrangements are usable afterward. Test sharing and permissions rather than assuming a successful content restore returns every working relationship.",
+        "Ask prospective backup providers:",
+        {
+          "list": [
+            "Which Workspace workloads and account types are covered?",
+            "How are new users and shared data included?",
+            "What recovery points and retention periods apply?",
+            "Who authorizes, performs and verifies a restore?",
+            "What happens when the source account is deleted or licensing changes?",
+            "How can the firm recover or export data at contract end?"
+          ],
+          "ordered": false
+        },
+        "A recovery-time objective is a target for an agreed scenario. Confirm the assumptions behind it and the charges for work outside the standard process. Record failed tests and excluded data alongside successful results."
+      ]
+    },
+    {
+      "h": "Verify the managed scope in writing",
+      "ps": [
+        {
+          "text": "Helm Core includes cloud productivity backup within its defined protection stack. Supported Google workloads, provider capabilities, restore duties and test responsibilities must be confirmed in writing. The service description does not promise backup of every Gmail, Drive, Calendar, Contacts or Chat asset. Helm Core.",
+          "links": [
+            {
+              "phrase": "Helm Core",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        {
+          "text": "Helm Command adds program ownership, evidence upkeep and IT coordination. Existing IT retains tenant administration and backup operations outside covered services. Specialized recovery or remediation needs separate scope. Helm Command.",
+          "links": [
+            {
+              "phrase": "Helm Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        {
+          "text": "For a customer answer, state the protected population, workload and test date rather than saying all Workspace data is backed up based on one console. Use the backup-testing guide for the evidence discussion.",
+          "links": [
+            {
+              "phrase": "backup-testing guide",
+              "to": "/resources/backup-testing-insurers/"
+            }
+          ]
+        },
+        {
+          "text": "Start with a workload inventory and one controlled restore test. Helm's free public-domain scan checks public email and web configuration, not Workspace retention rules or recoverability. Bring the inventory and test responsibilities to a separate fit conversation.",
+          "links": [
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+{
+  "slug": "cybersecurity-roadmap-milestones",
+  "title": "Key milestones to include in a cybersecurity roadmap for New Jersey professional-services firms",
+  "metaTitle": "Cybersecurity Roadmap Milestones for NJ Firms | Helm",
+  "metaDesc": "Build a roadmap with a checked baseline, dependencies, responsible owners and acceptance evidence. Leadership approves priorities and risk decisions.",
+  "date": "2026-10-06",
+  "readMin": 3,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "A cybersecurity roadmap should show which work comes next, who will perform it and how the firm will know it is complete. A list of recommended tools leaves those decisions open.",
+  "lead": [
+    {
+      "text": "For a New Jersey professional-services firm with existing IT, connect the roadmap to client information, business continuity and the evidence customers request. NIST's small-business guidance offers a structure for organizing cybersecurity work; use it to identify gaps without treating the framework as a certification. NIST Small Business Quick-Start Guide.",
+      "links": [
+        {
+          "phrase": "NIST Small Business Quick-Start Guide",
+          "to": "https://csrc.nist.gov/pubs/sp/1300/final"
+        }
+      ]
+    }
+  ],
+  "takeaway": "Build a roadmap with a checked baseline, dependencies, responsible owners and acceptance evidence. Leadership approves priorities and risk decisions.",
+  "sections": [
+    {
+      "h": "Establish a baseline with known limits",
+      "ps": [
+        "The first milestone is an agreed description of systems, responsibilities and existing controls. Record what has been checked, what is self-reported and what remains unknown. Identify contractual or regulatory requirements with the responsible adviser before labeling a gap as a compliance failure.",
+        "A public-domain scan can contribute observable configuration findings. It cannot establish internal access, device coverage or restore capability. Deeper discovery should have a signed scope, authorized access and defined deliverables."
+      ]
+    },
+    {
+      "h": "Sequence work around dependencies",
+      "ps": [
+        "Choose priorities by business impact, exposure and the ability to act. An access-policy change may require new licensing, enrollment or a recovery procedure before rollout. A backup improvement needs a clear workload inventory and an authorized restore operator.",
+        "For a hypothetical 85-person New Jersey consulting firm, a roadmap could begin by confirming client-file access owners, then assign the relevant permission changes to IT and arrange a controlled restore test for an important shared workspace. This is a planning example, not a Helm client outcome or a universal sequence.",
+        "Each milestone should identify the responsible person, expected cost or budget decision, dependencies, target date and acceptance evidence. If implementation depends on IT or another vendor, obtain that owner's agreement before presenting the date as committed."
+      ]
+    },
+    {
+      "h": "Add evidence and leadership decisions",
+      "ps": [
+        "A milestone closes when the agreed acceptance check passes. Installation records, configuration exports, training records and restore-test results support different claims; choose the evidence that matches the change and store sensitive records appropriately.",
+        "At a leadership review, address completed work, missed dates and decisions requiring approval. Keep deferred risks visible with a reason and reconsideration date. Update the roadmap when systems, staff or client obligations change instead of repeatedly circulating the original plan."
+      ]
+    },
+    {
+      "h": "Choose the right ownership level",
+      "ps": [
+        {
+          "text": "Helm Core supplies a standardized protection stack and monthly reporting. It does not include a maintained roadmap or quarterly leadership reviews. Helm Core.",
+          "links": [
+            {
+              "phrase": "Helm Core",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        {
+          "text": "Helm Command includes the covered Core stack, a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire responses, quarterly leadership reviews, an annual tabletop and coordination with the named IT owner. Its $8,000 to $15,000 monthly range is confirmed after fit and complexity review. Helm Command.",
+          "links": [
+            {
+              "phrase": "Helm Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        "Program ownership does not mean Helm implements every recommendation. Existing IT retains administration, patching, procurement and routine remediation; specialist work needs separate written scope. Leadership retains final business and risk decisions.",
+        {
+          "text": "Use the managed-provider models guide to compare those responsibilities. Start with one unfinished security action and name its owner and completion evidence. Helm's free public-domain scan can supply limited public findings; an internal assessment and roadmap require a separately defined engagement.",
+          "links": [
+            {
+              "phrase": "managed-provider models guide",
+              "to": "/resources/managed-service-provider-security-models/"
+            },
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
 {
   "slug": "cyber-insurance-cybersecurity-vendors",
   "title": "How to evaluate and select a cybersecurity partner that proves your controls to insurers",
