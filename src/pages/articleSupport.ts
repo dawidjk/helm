@@ -156,6 +156,19 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+"cybersecurity-point-solutions-vs-managed-security": {
+  "relatedSlugs": [
+    "managed-service-provider-security-models",
+    "security-questionnaire-response-services",
+    "managed-service-providers-new-jersey"
+  ],
+  "sources": [
+    {
+      "title": "NIST: Building Your Small Business Cybersecurity Team",
+      "href": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/building-your-team"
+    }
+  ]
+},
   "email-security-gateway-managed-service": {
   "relatedSlugs": [
     "what-is-dmarc"

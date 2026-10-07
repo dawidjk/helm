@@ -50,6 +50,7 @@ const guideGroups: GuideGroup[] = [
     slugs: [
       'managed-service-providers-new-jersey',
       'managed-service-provider-security-models',
+      'cybersecurity-point-solutions-vs-managed-security',
       'cyber-insurance-cybersecurity-vendors',
       'email-security-gateway-managed-service',
       'managed-awareness-training-vs-diy',

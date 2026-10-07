@@ -33,6 +33,154 @@ export type Article = {
 
 export const articles: Article[] = [
 {
+  "slug": "cybersecurity-point-solutions-vs-managed-security",
+  "title": "Cybersecurity Point Solutions vs Managed Security for NJ SMBs",
+  "metaTitle": "Point Solutions vs Managed Security for NJ SMBs | Helm",
+  "metaDesc": "Compare separate security tools with Helm Core and Command. Map coverage, response duties and questionnaire evidence before choosing managed security.",
+  "date": "2026-10-06",
+  "readMin": 5,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "organizationByline": true,
+  "hideVisual": true,
+  "readingLayout": true,
+  "intro": "Your accounting firm has an email filter, endpoint protection and a backup subscription. A customer then asks who investigates suspicious activity and whether every laptop is covered. The invoices show what you bought. Answering the customer requires coverage records and named responsibilities.",
+  "lead": [
+    "That is the buying decision behind cybersecurity point solutions versus managed security: which protections do you need, and who will operate them and keep the evidence current? For a New Jersey business with existing IT, start with the work falling between contracts."
+  ],
+  "takeaway": "Keep a point solution when it addresses a defined gap and has an operating owner. Consider a standardized managed stack when protection needs consistent coverage. Add program ownership when recurring risk, evidence and leadership decisions need coordination.",
+  "sections": [
+    {
+      "h": "What a cybersecurity point solution does",
+      "ps": [
+        "A point solution addresses a particular security job, such as filtering email, detecting threats on endpoints or backing up cloud data. You can buy it directly or through a provider. Its operating model matters: the subscription may supply software, managed investigation or a combination, depending on the agreement.",
+        "Separate tools can be a sensible choice when your IT team has the expertise and time to maintain them. Check compatibility, overlapping licenses and the handoff between products. An email alert that suggests a compromised account may also require an identity review and a decision about access.",
+        {
+          "text": "NIST's guidance on building a cybersecurity team recommends starting with the outcomes you need and documenting the provider's service level, responsibilities and expectations. Use those responsibilities to compare proposals before comparing product names.",
+          "links": [
+            {
+              "phrase": "NIST's guidance on building a cybersecurity team",
+              "to": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/building-your-team"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "h": "Find the gaps between tools and operating work",
+      "ps": [
+        "Review one recent task with your existing IT provider: a reported phishing email, an unprotected laptop or a customer questionnaire. Follow it from the initial request to closure. Identify where somebody had to guess who owned the next step.",
+        {
+          "list": [
+            "For email, name who reviews reported messages, approves exceptions and escalates a suspected account compromise.",
+            "For endpoints, reconcile the device inventory with protection records. Assign investigation and containment separately from patching and routine administration.",
+            "For evidence, identify who checks the scope and date of each record, records exceptions and gets approval for a questionnaire answer."
+          ]
+        },
+        "Fewer notifications alone do not establish better protection. Ask a managed provider to show how an alert becomes an investigation, an authorized response and a record of the outcome. Confirm what appears in reporting and which decisions still reach your business."
+      ]
+    },
+    {
+      "h": "Compare Helm Core, Helm Command and AI consulting",
+      "ps": [
+        "Helm is a New Jersey managed cybersecurity provider that works alongside your existing IT team. Its two recurring services address different operating needs. Secure AI Adoption consulting is a separate engagement for a specific workflow."
+      ],
+      "table": {
+        "caption": "Match the service to the work that needs an owner",
+        "headers": [
+          "Option",
+          "Covered work",
+          "Work your firm retains"
+        ],
+        "rows": [
+          [
+            "Helm Core",
+            "Standardized security stack and monthly reporting; standard fit is 20 to 75 people.",
+            "Wider program priorities, evidence coordination and routine IT."
+          ],
+          [
+            "Helm Command",
+            "Covered Core stack plus risk register, roadmap, evidence upkeep, bounded questionnaire responses and quarterly leadership reviews; qualified fit is 75 to 250 people.",
+            "Final attestations, spending and risk decisions. Existing IT implements assigned routine work."
+          ],
+          [
+            "Secure AI Adoption consulting",
+            "Assessment of one internal workflow, its effort and cost, and tool and data requirements; any pilot is separately scoped.",
+            "Workflow approval, authorized data access and acceptance of outputs. Wider rollout requires separate scope."
+          ]
+        ]
+      }
+    },
+    {
+      "h": "Choose the stack or the program owner",
+      "ps": [
+        {
+          "text": "Helm Core includes managed email protection, device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital risk protection and one monthly security report. Specialist vendor teams provide the continuous monitoring behind covered capabilities. Core does not include quarterly leadership reviews or open-ended advisory work.",
+          "links": [
+            {
+              "phrase": "Helm Core",
+              "to": "/helm-core/"
+            }
+          ]
+        },
+        "Consider a hypothetical 30-person CPA firm whose partner owns its security plan and whose IT provider maintains its systems. If those owners can manage priorities and evidence, Core may fit the need for a defined security layer. The firm should first confirm supported platforms, eligible workstations and exclusions.",
+        {
+          "text": "Helm Command adds ongoing program ownership: a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded customer and insurance responses, quarterly leadership reviews, an annual tabletop and IT coordination. A hypothetical 100-person professional-services firm with recurring questionnaires and unresolved cross-team work could evaluate that scope.",
+          "links": [
+            {
+              "phrase": "Helm Command",
+              "to": "/helm-command/"
+            }
+          ]
+        },
+        "Both examples are illustrative, not customer results. Helm retains a security-only role. Help desk, procurement, administration and routine patching stay with existing IT. Servers, phones, networks, specialized systems, forensic response and hands-on remediation require separate written scope unless expressly included."
+      ]
+    },
+    {
+      "h": "Test the evidence before signing a questionnaire",
+      "ps": [
+        "For a question about endpoint protection, start with the population the question covers. Compare a current device inventory with protection deployment records and list any exceptions. A report covering eligible workstations cannot support an answer about every server and mobile device.",
+        "Keep the question, evidence reference, date, technical reviewer and approved answer together. For a backup question, check covered data and the relevant restore-test record. A written policy needs operating evidence behind its claims.",
+        "A quarterly review can track unresolved gaps, owners and deadlines so the same unanswered question does not return at renewal. Command supports that cadence and bounded response work. The client approves every final attestation; customers and insurers decide whether the evidence meets their requirements."
+      ]
+    },
+    {
+      "h": "Use a buyer checklist and start with a bounded review",
+      "ps": [
+        {
+          "list": [
+            "List users, email and identity platforms, eligible devices and critical data. Name the existing IT owner.",
+            "Ask each provider for a coverage map, sample report and response handoff with authority and escalation clearly assigned.",
+            "Request a fictional evidence example and identify who validates it before a questionnaire answer is submitted.",
+            "Compare total contract cost, term, response scope, questionnaire limits, separately billed work and exit arrangements.",
+            "Choose a first review date and define what must be verified before onboarding is complete."
+          ],
+          "ordered": true
+        },
+        {
+          "text": "If your team is considering an AI tool for client-document work, review the workflow and data access before a pilot. Helm's Secure AI Adoption consulting is separately scoped; it is not a feature automatically included in Core or Command.",
+          "links": [
+            {
+              "phrase": "Secure AI Adoption consulting",
+              "to": "/professional-services/"
+            }
+          ]
+        },
+        {
+          "text": "Start with Helm's free public-domain scan for a domain you control. It checks publicly reachable email and web configuration without credentials. Bring the findings and your responsibility map to a fit conversation. The scan is a limited external check, not an internal assessment or compliance determination.",
+          "links": [
+            {
+              "phrase": "free public-domain scan",
+              "to": "/free-scan/"
+            }
+          ]
+        },
+        "If fit or scope needs deeper investigation, agree on bounded paid discovery before the work begins. Finish with a named owner, written next step and review date."
+      ]
+    }
+  ]
+},
+{
   "slug": "email-security-gateway-managed-service",
   "title": "Email security gateway versus managed gateway service: choosing the right model for your SMB",
   "metaTitle": "Email Security Gateway vs Managed Service | Helm",
