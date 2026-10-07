@@ -637,7 +637,7 @@ export const articleSupport: Record<string, ArticleSupport> = {
   },
   'm365-security-baseline': {
     relatedSlugs: ['mfa-methods-compared', 'employee-offboarding-checklist', 'what-is-dmarc'],
-    sources: [sources.microsoftDefaults, sources.microsoftBaseline],
+    sources: [sources.microsoftDefaults, sources.microsoftBaseline, {title: 'Microsoft: About shared mailboxes in Microsoft 365', href: 'https://learn.microsoft.com/en-us/microsoft-365/admin/email/about-shared-mailboxes?view=o365-worldwide'}],
   },
   'sprs-score-explained': {
     relatedSlugs: ['cmmc-level-1-vs-level-2', 'cmmc-deadline-checklist', 'ssp-poam-explained'],

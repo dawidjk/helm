@@ -3285,8 +3285,8 @@ export const articles: Article[] = [
       {
         h: 'Lock the front door first',
         ps: [
-          'Start with multi-factor authentication because a password alone can give an attacker access to an entire mailbox. Check the owner’s account, shared inboxes, administrator accounts, and old vendor logins. These are often the accounts missed by a partial rollout.',
-          {text: 'Legacy authentication protocols let an attacker sign in with just a stolen password, bypassing MFA entirely, because those older protocols were never built to ask for a second factor. Disabling legacy auth closes a door most tenants leave open by default, and it pairs directly with the email protections behind Helm Core.', links: [{phrase: 'Helm Core', to: '/helm-core'}]},
+          'Start with multi-factor authentication for the people who can access your mail. Review the owner’s account, administrator accounts, vendor accounts, and the users with delegated access to shared mailboxes. Keep direct sign-in blocked for shared mailbox accounts; people should access them through their own authorized accounts.',
+          {text: 'Legacy authentication does not support MFA. Have your IT owner verify that legacy authentication is blocked in your tenant and check for any applications or devices that still depend on it before changing settings. Microsoft security defaults include this protection and are enabled on new tenants by default. More complex environments may use Conditional Access instead. Review the current configuration rather than assuming your tenant is unprotected. This complements the managed email protection in Helm Core.', links: [{phrase: 'Helm Core', to: '/helm-core'}]},
           'Separate your admin accounts from the mailbox someone checks every day. An account with global admin rights should not also be the account that opens attachments and clicks links, because compromising one compromises both.',
         ],
       },
@@ -4383,7 +4383,7 @@ export const articles: Article[] = [
         h: 'Assess risk and match each safeguard to it',
         ps: [
           'For each system or workflow, identify the plausible threat, the weakness that could be exploited, the current safeguard, and what remains unresolved. Common examples include mailbox takeover, malicious attachments, stolen passwords, unsupported computers, excessive access, untested backups, and former workers whose accounts remain active.',
-          {text: 'Helm Core addresses managed email filtering, phishing protection, suspicious-message triage, simulations, and awareness learning. Helm Core provides 24/7 investigation and containment for covered Windows and Mac devices. Neither service replaces the WISP, but the controls and operating records can support what the plan says.', links: [{phrase: 'Helm Core', to: '/helm-core'}, {phrase: 'Helm Core', to: '/helm-core'}]},
+          {text: 'Helm Core includes managed email protection, suspicious-message triage, simulations, and awareness learning. Specialist vendor security teams provide continuous investigation and containment for covered Windows and Mac devices; Helm manages deployment, coordination, and reporting. Core does not replace the WISP. Its covered controls and operating records can support the statements in the plan.', links: [{phrase: 'Helm Core', to: '/helm-core'}]},
         ],
       },
       {

@@ -1,10 +1,11 @@
 import HeroBackdrop from '../components/HeroBackdrop';
-import {useEffect, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import {useSearchParams} from 'react-router-dom';
 import {Button} from '@astryxdesign/core/Button';
 import {Band, MailingAddress, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {getAttribution, trackConversion} from '../lib/measurement';
+import {contactSubmissionId, trackContactSuccess} from '../lib/contactSubmission';
 import Turnstile from '../components/Turnstile';
 import {contactInterests} from './products';
 import {businessPhone, serviceAreaText} from '../lib/business';
@@ -24,6 +25,7 @@ export default function Contact() {
   const [turnstileResetKey, setTurnstileResetKey] = useState(0);
   const [turnstileTimedOut, setTurnstileTimedOut] = useState(false);
   const sent = state === 'sent';
+  const submitting = useRef(false);
 
   useEffect(() => {
     setInterest(requestedService === 'secure-ai-adoption' ? 'Secure AI Adoption' : '');
@@ -52,7 +54,8 @@ export default function Contact() {
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (state === 'busy') return;
+    if (submitting.current || state === 'sent' || !turnstileToken) return;
+    submitting.current = true;
     setErrorMessage('');
     setState('busy');
     try {
@@ -74,10 +77,11 @@ export default function Contact() {
         utmContent: attribution.utmContent,
         utmTerm: attribution.utmTerm,
       };
+      const submissionId = await contactSubmissionId(payload);
       const res = await fetch(CONTACT_ENDPOINT, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(payload),
+        body: JSON.stringify({...payload, submissionId}),
       });
       if (!res.ok) {
         const response = (await res.json().catch(() => null)) as
@@ -89,8 +93,9 @@ export default function Contact() {
             : 'Something went wrong. Please try again.',
         );
       }
-      trackConversion('contact_submitted', intent ? undefined : 'contact page');
       setState('sent');
+      trackContactSuccess(submissionId);
+      try { trackConversion('contact_submitted', intent ? undefined : 'contact page'); } catch { /* Accepted submission stays successful. */ }
     } catch (error) {
       // The single-use token may already be spent; require a fresh challenge
       // before the visitor can retry, whether the failure was HTTP or network.
@@ -102,6 +107,8 @@ export default function Contact() {
           : 'Something went wrong. Please try again.',
       );
       setState('error');
+    } finally {
+      submitting.current = false;
     }
   };
 

@@ -83,6 +83,9 @@ function ensureMetaPixel(): boolean {
     document.head.appendChild(script);
   }
   fbq('consent', 'grant');
+  // Disable Meta AutomaticSetup before initialization. This does not
+  // suppress all SDK or browser metadata.
+  fbq('set', 'autoConfig', false, META_PIXEL_ID);
   fbq('init', META_PIXEL_ID);
   initialized = true;
   return true;
@@ -98,14 +101,8 @@ export function trackMetaConversion(event: ConversionEvent): void {
   if (!ensureMetaPixel()) return;
 
   switch (event) {
-    case 'scan_started':
-      window.fbq?.('trackCustom', 'ScanStarted');
-      break;
-    case 'findings_call_selected':
-      window.fbq?.('track', 'Schedule');
-      break;
     case 'contact_submitted':
-      window.fbq?.('track', 'Contact');
+      window.fbq?.('track', 'Lead');
       break;
   }
 }
