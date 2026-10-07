@@ -22,7 +22,7 @@ const ENTITY = 'Helm Security LLC';
 const STATE = 'New Jersey';
 const EMAIL = 'hello@helmsecured.com';
 const TERMS_EFFECTIVE = 'August 19, 2026';
-const PRIVACY_EFFECTIVE = 'July 31, 2026';
+const PRIVACY_EFFECTIVE = 'October 7, 2026';
 
 export const terms: LegalDoc = {
   slug: 'terms',
