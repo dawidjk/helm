@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="530" viewBox="0 0 400 530" role="img" aria-labelledby="title desc">
+<title id="title">Verify the network boundaries</title><desc id="desc">Illustrative network groups: employee devices use required services, guests use the internet with internal isolation, and office equipment uses documented connections with restricted management.</desc>
+<rect width="400" height="530" fill="#f6f4ee"/>
+<g font-family="Arial, sans-serif" fill="#183b33">
+<text x="24" y="38" font-size="21" font-weight="700">Verify the network boundaries</text>
+<rect x="24" y="68" width="352" height="120" rx="8" fill="#fff" stroke="#537166"/>
+<text x="40" y="94" font-size="15" fill="#4b655b">01</text>
+<text x="40" y="120" font-size="18" font-weight="700">Employee devices</text>
+<text x="40" y="147" font-size="16">Allow required applications</text>
+<text x="40" y="169" font-size="16">and approved internal services.</text>
+<rect x="24" y="214" width="352" height="120" rx="8" fill="#fff" stroke="#537166"/>
+<text x="40" y="240" font-size="15" fill="#4b655b">02</text>
+<text x="40" y="266" font-size="18" font-weight="700">Guest devices</text>
+<text x="40" y="293" font-size="16">Allow internet access.</text>
+<text x="40" y="315" font-size="16">Test isolation from internal systems.</text>
+<rect x="24" y="360" width="352" height="120" rx="8" fill="#fff" stroke="#537166"/>
+<text x="40" y="386" font-size="15" fill="#4b655b">03</text>
+<text x="40" y="412" font-size="18" font-weight="700">Office equipment</text>
+<text x="40" y="439" font-size="16">Allow documented connections.</text>
+<text x="40" y="461" font-size="16">Restrict management access.</text>
+<text x="24" y="519" font-size="12" fill="#4b655b">HELM SECURITY · BUSINESS RESOURCE</text>
+</g></svg>

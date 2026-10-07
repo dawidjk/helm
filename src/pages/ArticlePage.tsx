@@ -9,6 +9,7 @@ import {renderParagraph} from '../lib/richText';
 import {bookCta} from './ctaCopy';
 import {canonicalPath, siteUrl} from '../lib/urls';
 import ArticleVisual from '../components/ArticleVisual';
+import './Resources.css';
 
 function formatDate(date: string) {
   return new Intl.DateTimeFormat('en-US', {
@@ -152,6 +153,12 @@ export default function ArticlePage() {
                     ) : <p>{renderParagraph(p)}</p>}
                   </Fragment>
                 ))}
+                {s.figure && (
+                  <figure className="article-explainer">
+                    <img src={s.figure.src} alt={s.figure.alt} width="400" height="530" loading="lazy" decoding="async" />
+                    <figcaption>{s.figure.caption}</figcaption>
+                  </figure>
+                )}
                 {s.table && (
                   <>
                   <p className="article-table-hint" id={`table-help-${index}`}>On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.</p>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="530" viewBox="0 0 400 530" role="img" aria-labelledby="title desc">
+<title id="title">Recovery targets before and after failure</title>
+<desc id="desc">Hypothetical timeline at one hour per interval: a recovery copy one hour before failure, interruption at zero, and a restoration target four hours after failure. RPO measures acceptable data loss before failure; RTO measures restoration time after failure.</desc>
+<rect width="400" height="530" fill="#f6f4ee"/>
+<g font-family="Arial, sans-serif" fill="#183b33">
+<text x="24" y="33" font-size="20" font-weight="700">Recovery targets on a timeline</text>
+<text x="24" y="56" font-size="15">Hypothetical targets, not a guarantee</text>
+<path d="M52 100V450" stroke="#537166" stroke-width="2"/>
+<path d="M52 100v70" stroke="#87603b" stroke-width="8"/>
+<path d="M52 170v280" stroke="#183b33" stroke-width="8"/>
+<g stroke="#537166" stroke-width="2"><path d="M40 100h24M40 170h24M40 240h24M40 310h24M40 380h24M40 450h24"/></g>
+<text x="78" y="100" font-size="18" font-weight="700">Last recoverable copy: -1 hour</text>
+<text x="78" y="125" font-size="16" fill="#69472b">RPO: one hour of data loss</text>
+<text x="78" y="170" font-size="18" font-weight="700">Interruption begins: 0</text>
+<text x="78" y="240" font-size="16">+1 hour</text>
+<text x="78" y="276" font-size="17" font-weight="700">RTO: four hours to restore</text>
+<text x="78" y="310" font-size="16">+2 hours</text>
+<text x="78" y="380" font-size="16">+3 hours</text>
+<text x="78" y="450" font-size="18" font-weight="700">Workflow restored: +4 hours</text>
+<text x="24" y="496" font-size="15">Test whether your design meets the targets.</text>
+<text x="24" y="519" font-size="12" fill="#4b655b">HELM SECURITY · BUSINESS RESOURCE</text>
+</g></svg>

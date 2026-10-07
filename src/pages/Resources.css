@@ -8,6 +8,26 @@
   gap: clamp(72px, 9vw, 112px);
 }
 
+.article-explainer {
+  margin: 32px 0;
+  max-width: 100%;
+}
+
+.article-explainer img {
+  display: block;
+  width: min(100%, 400px);
+  height: auto;
+  border: 1px solid var(--helm-hairline);
+}
+
+.article-explainer figcaption {
+  max-width: 65ch;
+  margin-top: 12px;
+  color: var(--helm-text-dim);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
 .resources-section-head {
   max-width: 760px;
   margin-bottom: 42px;

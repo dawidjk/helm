@@ -1,3 +1,4 @@
+import {refreshedArticleSupport} from './refreshedArticleSupport';
 export type ArticleSource = {
   title: string;
   href: string;
@@ -715,10 +716,7 @@ export const articleSupport: Record<string, ArticleSupport> = {
     relatedSlugs: ['cmmc-level-1-vs-level-2', 'ssp-poam-explained', 'sprs-score-explained'],
     sources: [sources.cuiRegistry, sources.nist171r2],
   },
-  'pen-test-vs-vulnerability-scan': {
-    relatedSlugs: ['what-a-soc-actually-does', 'incident-response-plan-small-business', 'cyber-insurance-questionnaire'],
-    sources: [sources.nist115, sources.nistCsf],
-  },
+
   'what-is-dmarc': {
     relatedSlugs: ['invoice-fraud-red-flags', 'vendor-email-compromise-contractors', 'wire-fraud-prevention-law-firms'],
     sources: [sources.dmarc, sources.fbiBec],
@@ -743,4 +741,67 @@ export const articleSupport: Record<string, ArticleSupport> = {
     relatedSlugs: ['hipaa-email-rules-small-practices', 'what-a-soc-actually-does', 'incident-response-plan-small-business'],
     sources: [sources.hhsRisk, sources.hhsSraGuide, sources.healthItProviderResources, sources.hhsNprm],
   },
+
+  "pen-test-vs-vulnerability-scan": {
+    "relatedSlugs": [
+      "vulnerability-management-new-jersey",
+      "cybersecurity-risk-assessment-tools",
+      "network-hardening-small-business"
+    ],
+    "sources": [
+      {
+        "title": "NIST's technical testing guide",
+        "href": "https://csrc.nist.gov/pubs/sp/800/115/final"
+      }
+    ]
+  },
+  "dns-filtering-small-business": {
+    "relatedSlugs": [
+      "network-hardening-small-business",
+      "mfa-methods-compared",
+      "email-security-services-evaluation"
+    ],
+    "sources": [
+      {
+        "title": "Cloudflare's DNS filtering documentation",
+        "href": "https://developers.cloudflare.com/cloudflare-one/traffic-policies/get-started/dns/"
+      }
+    ]
+  },
+  "network-hardening-small-business": {
+    "relatedSlugs": [
+      "dns-filtering-small-business",
+      "employee-offboarding-checklist",
+      "vulnerability-management-new-jersey"
+    ],
+    "sources": [
+      {
+        "title": "CISA's infrastructure hardening guidance",
+        "href": "https://www.cisa.gov/resources-tools/resources/enhanced-visibility-and-hardening-guidance-communications-infrastructure"
+      },
+      {
+        "title": "CISA recommends phishing-resistant MFA",
+        "href": "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/require-multifactor-authentication"
+      }
+    ]
+  },
+  "disaster-recovery-small-business": {
+    "relatedSlugs": [
+      "backup-testing-insurers",
+      "microsoft-365-retention-vs-backup",
+      "incident-response-plan-small-business"
+    ],
+    "sources": [
+      {
+        "title": "NIST's contingency planning guide",
+        "href": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final"
+      },
+      {
+        "title": "CISA's ransomware guidance",
+        "href": "https://www.cisa.gov/stopransomware/ransomware-guide"
+      }
+    ]
+  },
+
+  ...refreshedArticleSupport,
 };

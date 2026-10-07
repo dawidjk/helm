@@ -71,6 +71,8 @@ const guideGroups: GuideGroup[] = [
     description: 'Email, identity, device security, AI-use, and access decisions for the systems your team uses every day.',
     slugs: [
       'mfa-methods-compared',
+      'dns-filtering-small-business',
+      'network-hardening-small-business',
       'password-managers-small-teams',
       'what-a-soc-actually-does',
       'shadow-ai-at-work',
@@ -108,6 +110,7 @@ const guideGroups: GuideGroup[] = [
       'cyber-insurance-claim-denied',
       'cyber-insurance-application-walkthrough',
       'backup-testing-insurers',
+      'disaster-recovery-small-business',
       'wisp-checklist-accounting-firms',
       'cybersecurity-risk-assessment-tools',
       'microsoft-365-retention-vs-backup',
