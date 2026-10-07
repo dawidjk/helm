@@ -2,6 +2,7 @@ import type {Lane} from './LanePage';
 
 export const manufacturing: Lane = {
   slug: 'manufacturing',
+  metaKeywords: ['CMMC gap assessment New Jersey', 'CMMC readiness for manufacturers', 'NIST 800-171 gap assessment', 'SPRS score support', 'defense supplier cybersecurity'],
   backdrop: 'aero',
   reportDomain: 'precision-mfg.com',
   metaTitle: 'CMMC Compliance for NJ Manufacturers & Defense Suppliers | Helm',
@@ -102,6 +103,7 @@ export const manufacturing: Lane = {
 
 export const professionalServices: Lane = {
   slug: 'professional-services',
+  metaKeywords: ['professional services cybersecurity New Jersey', 'law firm cybersecurity', 'CPA firm cybersecurity', 'managed cybersecurity', 'cyber insurance security controls'],
   backdrop: 'skyline',
   reportDomain: 'riveralaw.com',
   metaTitle: 'Cybersecurity for New Jersey Law Firms & CPAs | Helm',

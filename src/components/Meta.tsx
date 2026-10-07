@@ -4,6 +4,7 @@ import {SITE_ORIGIN, siteUrl} from '../lib/urls';
 export default function Meta({
   title,
   desc,
+  keywords,
   path,
   jsonLd,
   ogImage = '/og.png',
@@ -13,6 +14,7 @@ export default function Meta({
 }: {
   title: string;
   desc: string;
+  keywords?: string[];
   path: string;
   jsonLd?: object;
   ogImage?: string;
@@ -26,6 +28,7 @@ export default function Meta({
     <Head>
       <title>{title}</title>
       <meta name="description" content={desc} />
+      {keywords?.length ? <meta name="keywords" content={keywords.join(', ')} /> : null}
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={canonicalUrl} />
       <meta property="og:title" content={title} />

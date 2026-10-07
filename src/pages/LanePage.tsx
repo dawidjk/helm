@@ -13,6 +13,7 @@ export type Lane = {
   reportDomain: string;
   metaTitle: string;
   metaDesc: string;
+  metaKeywords?: string[];
   serviceType?: string;
   eyebrow: string;
   headline: string;
@@ -62,6 +63,7 @@ export default function LanePage({lane}: {lane: Lane}) {
   return (
     <>
       <Meta
+        keywords={lane.metaKeywords}
         title={lane.metaTitle}
         desc={lane.metaDesc}
         path={`/${lane.slug}`}
