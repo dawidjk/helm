@@ -35,7 +35,7 @@ export default function Meta({
       <meta property="og:description" content={desc} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content={ogType} />
-      <meta property="og:site_name" content="Helm" />
+      <meta property="og:site_name" content="Helm Security" />
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       <meta property="og:image" content={absoluteOgImage} />

@@ -44,7 +44,7 @@ export default function FreeScan() {
               <li className="observe d5">Findings grouped by category, with plain-English impact and next steps</li>
             </ul>
           </div>
-          <PanelVisual domain="yourcompany.com" />
+          <PanelVisual />
         </div>
       </Band>
 
@@ -65,8 +65,8 @@ export default function FreeScan() {
           </li>
           <li className="observe d3">
             <div className="step-dot">3</div>
-            <h3>We explain the gaps</h3>
-            <p>If the scan finds at least two visible gaps, we send a short follow-up sequence tied to your report.</p>
+            <h3>Choose email follow-up</h3>
+            <p>In the portal, choose whether to receive an emailed report link and one short follow-up about the findings.</p>
           </li>
           <li className="observe d4">
             <div className="step-dot">4</div>

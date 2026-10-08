@@ -9,7 +9,9 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "theme:build": "astryx theme build src/theme.ts -o src/theme.css",
-    "prepare": "husky"
+    "prepare": "husky",
+    "prebuild": "node scripts/generate-article-data.mjs",
+    "predev": "node scripts/generate-article-data.mjs"
   },
   "dependencies": {
     "@astryxdesign/core": "^0.1.3",

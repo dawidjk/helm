@@ -1,4 +1,6 @@
 import type {ComponentType} from 'react';
+import type {LoaderFunctionArgs} from 'react-router-dom';
+import {articleCatalog} from './pages/articleCatalog';
 import type {RouteRecord} from 'vite-react-ssg';
 import Layout from './App';
 import Home from './pages/Home';
@@ -105,7 +107,22 @@ export const routes: RouteRecord[] = [
       {
         path: 'resources/:slug/',
         lazy: lazyPage(() => import('./pages/ArticlePage')),
-        getStaticPaths: async () => (await import('./pages/articles')).articles.map((a) => `resources/${a.slug}/`),
+        loader: async ({params}: LoaderFunctionArgs) => {
+          const slug = params.slug;
+          if (!articleCatalog.some((article) => article.slug === slug)) {
+            throw new Response('Resource not found', {status: 404});
+          }
+          if (import.meta.env.SSR) {
+            const [{articles}, {articleSupport}] = await Promise.all([
+              import('./pages/articles'), import('./pages/articleSupport'),
+            ]);
+            return {article: articles.find((article) => article.slug === slug), support: articleSupport[slug!]};
+          }
+          const response = await fetch(`/article-data/${slug}.json`);
+          if (!response.ok) throw new Response('Resource unavailable', {status: response.status});
+          return response.json();
+        },
+        getStaticPaths: async () => articleCatalog.map((a) => `resources/${a.slug}/`),
       },
     ],
   },

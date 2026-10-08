@@ -26,8 +26,11 @@ export default function ProductPage() {
             {
               '@type': 'Service',
               name: p.name,
+              url: siteUrl(`/${p.slug}`),
+              serviceType: p.slug === 'helm-core' ? 'Managed cybersecurity' : 'vCISO leadership and managed cybersecurity',
+              areaServed: {'@type': 'State', name: 'New Jersey'},
               description: p.metaDesc,
-              provider: {'@type': 'Organization', name: 'Helm Security LLC', url: siteUrl('/')},
+              provider: {'@type': 'Organization', '@id': siteUrl('/#organization'), name: 'Helm Security LLC', url: siteUrl('/')},
             },
             {
               '@type': 'FAQPage',
@@ -40,7 +43,7 @@ export default function ProductPage() {
             {
               '@type': 'BreadcrumbList',
               itemListElement: [
-                {'@type': 'ListItem', position: 1, name: 'Products', item: siteUrl('/')},
+                {'@type': 'ListItem', position: 1, name: 'Services', item: siteUrl('/')},
                 {'@type': 'ListItem', position: 2, name: p.name, item: siteUrl(`/${p.slug}`)},
               ],
             },

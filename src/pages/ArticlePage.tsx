@@ -1,10 +1,11 @@
 import HeroBackdrop from '../components/HeroBackdrop';
 import {Fragment} from 'react';
-import {useParams, Link} from 'react-router-dom';
+import {useLoaderData, Link} from 'react-router-dom';
 import {ActionLink, Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
-import {articles} from './articles';
-import {articleSupport} from './articleSupport';
+import {articleCatalog} from './articleCatalog';
+import type {Article} from './articles';
+import type {ArticleSupport} from './articleSupport';
 import {renderParagraph} from '../lib/richText';
 import {bookCta} from './ctaCopy';
 import {canonicalPath, siteUrl} from '../lib/urls';
@@ -29,13 +30,10 @@ function sectionId(heading: string, index: number) {
 }
 
 export default function ArticlePage() {
-  const {slug} = useParams();
-  const a = articles.find((x) => x.slug === slug);
-  if (!a) throw new Response('Resource not found', {status: 404, statusText: 'Not Found'});
-  const support = articleSupport[a.slug];
+  const {article: a, support} = useLoaderData() as {article: Article; support: ArticleSupport};
   const isBuyingGuide = a.readingLayout || ['managed-service-providers-new-jersey', 'managed-service-provider-security-models', 'cyber-insurance-cybersecurity-vendors'].includes(a.slug);
   const relatedArticles = support.relatedSlugs
-    .map((relatedSlug) => articles.find((article) => article.slug === relatedSlug))
+    .map((relatedSlug) => articleCatalog.find((article) => article.slug === relatedSlug))
     .filter((article) => article !== undefined);
   const displayedDate = formatDate(a.date);
   const displayedUpdatedDate = a.updated ? formatDate(a.updated) : undefined;

@@ -411,7 +411,7 @@ export const contractors: Lane = {
   slug: 'contractors',
   backdrop: 'construction',
   reportDomain: 'summitbuilders.com',
-  metaTitle: 'Payment Fraud Protection for Contractors & Trades | Helm',
+  metaTitle: 'Cybersecurity for NJ Contractors & Trades | Helm',
   metaDesc:
     'Reduce exposure to fake invoices and hijacked payment instructions. Practical email, payment-verification, and readiness support for contractors and trades.',
   eyebrow: 'Contractors · Trades · Field Services',

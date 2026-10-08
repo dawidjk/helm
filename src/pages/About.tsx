@@ -9,11 +9,14 @@ export default function About() {
     <>
       <Meta
         title="About Helm: Security That Answers to Your Business"
-        desc="Meet Helm Security, a leadership-led New Jersey company providing managed email security, AI scam readiness, and compliance support."
+        desc="Meet the New Jersey team behind Helm Core managed protection and Helm Command vCISO leadership. See how we work alongside your existing IT."
         path="/about"
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'Organization',
+          '@id': siteUrl('/#organization'),
+          alternateName: ['Helm Security', 'Helm'],
+          logo: {'@type': 'ImageObject', url: siteUrl('/favicon.png'), width: 2048, height: 2048},
           name: 'Helm Security LLC',
           url: siteUrl('/'),
           sameAs: [linkedInUrl, facebookUrl, instagramUrl],
@@ -22,7 +25,7 @@ export default function About() {
           areaServed: serviceAreaJsonLd,
           address: {'@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US'},
           description:
-            'Email security, AI scam defense, and compliance readiness for small and medium-sized businesses.',
+            'Managed cybersecurity alongside existing IT, with security-program leadership through Helm Command.',
           employee: [
             {
               '@type': 'Person',

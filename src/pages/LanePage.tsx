@@ -211,7 +211,7 @@ export default function LanePage({lane}: {lane: Lane}) {
               ))}
             </ul>
           </div>
-          <PanelVisual domain={lane.reportDomain} />
+          <PanelVisual />
         </div>
       </Band>
 

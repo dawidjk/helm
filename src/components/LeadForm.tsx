@@ -71,7 +71,6 @@ export default function LeadForm({
     trackConversion('scan_started', source);
     const url = new URL('/scan/auto', PORTAL_URL);
     url.searchParams.set('email', trimmed);
-    url.searchParams.set('followup', '1');
     const attributedUrl = withAttribution(url.toString(), source);
     // Full top-level navigation (not a fetch): the visitor leaves this page
     // and lands on the protected scan form in the portal.
@@ -114,16 +113,7 @@ export default function LeadForm({
           report about your business.
         </div>
       )}
-      <div className="lead-form-disclosure">
-        <p className="lead-form-next">
-          <strong>What happens next:</strong> Confirm your domain in our secure
-          portal. Your report usually arrives within a minute.
-        </p>
-        <p className="lead-form-consent">
-          By requesting the scan, you agree to receive your report and, when it identifies actionable gaps,
-          a short report-related follow-up sequence. Unsubscribe anytime.
-        </p>
-      </div>
+
     </form>
   );
 }

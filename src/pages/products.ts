@@ -23,9 +23,9 @@ export const productList: Product[] = [
     slug: 'helm-core',
     motif: 'core',
     name: 'Helm Core',
-    metaTitle: 'Helm Core: Complete Managed Security Protection',
+    metaTitle: 'Helm Core: Managed Cybersecurity for NJ Businesses',
     tagline: 'The security stack your business needs, managed as one service.',
-    desc: 'Helm Core combines email protection, managed detection and response, identity protection, cloud backup, security awareness, and digital risk protection in one per-user service. Your existing IT provider keeps the help desk and routine IT. Helm runs the security layer and gives you one clear monthly report.',
+    desc: 'Helm Core gives New Jersey businesses managed cybersecurity alongside their existing IT team. It combines email protection, managed detection and response, identity protection, cloud backup, security awareness, and digital risk protection in one per-user service. Your existing IT provider keeps the help desk and routine IT. Helm runs the security layer and gives you one clear monthly report.',
     bestFor: 'organizations with 20 to 75 people that need complete, standardized protection without adding another high-touch consulting relationship',
     metaDesc:
       'Helm Core combines email, device, identity, backup, awareness, and digital risk protection for $125 per user each month with a $2,500 monthly minimum.',

@@ -28,7 +28,12 @@ export default function Contact() {
   const submitting = useRef(false);
 
   useEffect(() => {
-    setInterest(requestedService === 'secure-ai-adoption' ? 'Secure AI Adoption' : '');
+    const services: Record<string, string> = {
+      'helm-core': 'Helm Core',
+      'helm-command': 'Helm Command',
+      'secure-ai-adoption': 'Secure AI Adoption',
+    };
+    setInterest(services[requestedService ?? ''] ?? '');
   }, [requestedService]);
 
   // The Send button stays disabled until Turnstile hands over a token. While

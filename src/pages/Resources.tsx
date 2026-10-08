@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom';
 import {canonicalPath} from '../lib/urls';
 import {Band, CtaBand, DirectionIcon, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
-import {articles, type Article} from './articles';
+import {articleCatalog as articles} from './articleCatalog';
+type Article = (typeof articles)[number];
 import './Resources.css';
 
 type StartChoice = {
@@ -22,7 +23,7 @@ type GuideGroup = {
 const startChoices: StartChoice[] = [
   {
     title: 'Protect email and accounts',
-    description: 'Set a practical Microsoft 365 security baseline.',
+    description: 'Check the Microsoft 365 security settings your team needs.',
     slug: 'm365-security-baseline',
   },
   {
@@ -37,8 +38,13 @@ const startChoices: StartChoice[] = [
   },
   {
     title: 'Understand CMMC requirements',
-    description: 'Start with the requirement that applies to your business.',
+    description: 'Check which CMMC level your defense contract requires.',
     slug: 'cmmc-level-1-vs-level-2',
+  },
+  {
+    title: 'Plan a HIPAA risk analysis',
+    description: 'Understand the security work a medical or dental practice needs to document.',
+    slug: 'hipaa-risk-analysis-medical-practices',
   },
 ];
 
@@ -46,7 +52,7 @@ const guideGroups: GuideGroup[] = [
   {
     id: 'choose-security-partner',
     title: 'Choose a security provider and service model',
-    description: 'Compare coverage, operating responsibilities and evidence before choosing software or an ongoing security partner.',
+    description: 'Compare what each option covers, who handles the work, and what evidence you can expect.',
     slugs: [
       'managed-service-providers-new-jersey',
       'managed-service-provider-security-models',
@@ -68,7 +74,7 @@ const guideGroups: GuideGroup[] = [
   {
     id: 'secure-everyday-work',
     title: 'Secure everyday accounts and devices',
-    description: 'Email, identity, device security, use of AI, and access decisions for the systems your team uses every day.',
+    description: 'Protect email and devices, manage account access, and check how your team uses AI.',
     slugs: [
       'mfa-methods-compared',
       'dns-filtering-small-business',
@@ -132,11 +138,10 @@ const guideGroups: GuideGroup[] = [
   {
     id: 'cmmc-and-hipaa',
     title: 'Work through CMMC and HIPAA requirements',
-    description: 'Understand the deadlines, scores, documents, and handling rules behind the requirement in front of you.',
+    description: 'Understand deadlines, security scores and required documents. Check the rules for handling regulated information.',
     slugs: [
       'sprs-score-explained',
       'hipaa-email-rules-small-practices',
-      'hipaa-risk-analysis-medical-practices',
       'cmmc-deadline-checklist',
       'ssp-poam-explained',
       'cui-handling-shop-floor',
@@ -233,8 +238,8 @@ export default function Resources() {
 
           <aside className="resource-feature" aria-labelledby="resources-quiz-title">
             <div>
-              <h2 id="resources-quiz-title">AI Scam Readiness Quiz</h2>
-              <p>Answer 10 questions and get a score plus a prioritized action plan. No email address is required to see the result.</p>
+              <h2 id="resources-quiz-title">AI scam readiness quiz</h2>
+              <p>Answer 10 questions and get a score and a list of gaps to address. No email address is required to see the result.</p>
             </div>
             <Link to="/quiz/" className="resource-feature-link">
               Take the 3-minute quiz <DirectionIcon />
@@ -272,7 +277,7 @@ export default function Resources() {
       </Band>
 
       <CtaBand
-        title="See what your own domain is showing."
+        title="Check your domain's public security settings."
         sub="The free email security scan checks public domain configuration and returns a plain-English report, usually in about a minute."
         source="resources cta"
       />

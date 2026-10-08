@@ -1,64 +1,25 @@
-import {HelmMark} from './Site';
+import './ScanPreview.css';
 
-/** Product visual: mock Helm scan report, the thing a lead actually receives. */
-export default function PanelVisual({domain = 'acme-mfg.com'}: {domain?: string}) {
+/** Illustrative public-scan fields, matching the portal's score and finding model. */
+export default function PanelVisual() {
   return (
-    <div className="panel-visual report observe d1">
-      <div className="rv-head">
-        <span className="rv-brand">
-          <HelmMark size={18} /> Example Scan Report
-        </span>
-        <span className="rv-domain">{domain}</span>
+    <figure className="scan-preview">
+      <figcaption>
+        <h3>Scan report preview</h3>
+        <p>Illustrative example for example.org. No customer data or actual scan result.</p>
+      </figcaption>
+      <dl className="scan-preview-summary">
+        <div><dt>Domain</dt><dd>example.org</dd></div>
+        <div><dt>Email security score</dt><dd>Calculated from recorded checks, out of 100</dd></div>
+      </dl>
+      <div className="scan-preview-finding">
+        <span className="scan-preview-severity">High · example finding</span>
+        <h4>DMARC policy set to monitor only</h4>
+        <p>A published <code>p=none</code> policy does not request quarantine or rejection for messages that fail DMARC.</p>
+        <p><strong>Impact:</strong> Other receiver controls may still block suspicious mail. DNS records alone do not show what reaches an inbox.</p>
+        <p><strong>Next step:</strong> Ask your mail administrator to review legitimate senders before changing the policy.</p>
       </div>
-
-      <div className="rv-score">
-        <svg viewBox="0 0 96 96" aria-hidden>
-          <circle cx="48" cy="48" r="40" stroke="rgba(56, 161, 105, 0.18)" strokeWidth="8" fill="none" />
-          <circle
-            className="rv-ring"
-            cx="48"
-            cy="48"
-            r="40"
-            stroke="#38A169"
-            strokeWidth="8"
-            fill="none"
-            strokeLinecap="round"
-            strokeDasharray="251"
-            strokeDashoffset="251"
-            transform="rotate(-90 48 48)"
-          />
-          <text x="48" y="44" textAnchor="middle" fill="#fff" fontSize="22" fontWeight="700">
-            68
-          </text>
-          <text x="48" y="62" textAnchor="middle" fill="rgba(235,240,250,0.55)" fontSize="9">
-            / 100
-          </text>
-        </svg>
-        <div>
-          <div className="rv-score-label">Email exposure score</div>
-          <div className="rv-score-sub">3 findings need attention</div>
-        </div>
-      </div>
-
-      <ul className="rv-rows">
-        <li>
-          <span className="rv-badge ok">✓</span> SPF record valid
-        </li>
-        <li>
-          <span className="rv-badge ok">✓</span> MX records healthy
-        </li>
-        <li>
-          <span className="rv-badge warn">!</span> DMARC not enforced, spoofing possible
-        </li>
-        <li>
-          <span className="rv-badge warn">!</span> MTA-STS policy not published
-        </li>
-        <li>
-          <span className="rv-badge warn">!</span> DNSSEC does not appear to be enabled
-        </li>
-      </ul>
-
-      <div className="rv-foot">Delivered in plain English, in about a minute.</div>
-    </div>
+      <p className="scan-preview-limit">Public configuration only. The scan does not assess your internal controls or determine compliance.</p>
+    </figure>
   );
 }
