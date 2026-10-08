@@ -160,7 +160,7 @@ export default function LanePage({lane}: {lane: Lane}) {
         <Band>
           <div className="band-head lane-evidence-head">
             <h2 className="observe">What published sources show.</h2>
-            <p className="observe d1">The figures and guidance below include the limits needed to read them accurately.</p>
+            <p className="observe d1">Read each finding with its source and scope. National figures do not establish your firm’s likelihood of an incident.</p>
           </div>
           <div className="lane-evidence-list">
             {lane.evidence.map((item, i) => (
@@ -184,12 +184,12 @@ export default function LanePage({lane}: {lane: Lane}) {
             {
               num: '1',
               title: 'Helm Core',
-              body: 'Complete email, device, identity, backup, awareness, and digital risk protection managed as one standardized service, with a clear monthly report.',
+              body: 'Covered email, device, identity, backup, awareness, and digital risk protection managed as one standardized service, with a clear monthly report.',
             },
             {
               num: '2',
               title: 'Helm Command',
-              body: 'Everything in Core, plus a maintained risk register, 12-month roadmap, evidence, questionnaire response, quarterly leadership reviews, and coordination with the current IT provider.',
+              body: 'The covered Core stack plus vCISO leadership: a maintained risk register, 12-month roadmap, evidence upkeep, bounded questionnaire responses, quarterly leadership reviews and coordination with existing IT.',
             },
           ].map((step, index) => (
             <li key={step.num} className={`observe d${index + 1}`}>

@@ -35,7 +35,7 @@ export default function Pricing() {
         <HeroBackdrop kind="brand-static" />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">
-            Two offers. One complete security foundation.
+            Managed protection, with leadership when you need it.
           </h1>
           <p className="sub reveal d2">
             Core gives a 20 to 75 person organization a standardized managed
@@ -52,8 +52,8 @@ export default function Pricing() {
           <div className="pricing-ledger-head">
             <h2 id="pricing-ledger-title" className="observe">Compare the two offers</h2>
             <p className="observe d1">
-              Start with the service model that matches the organization&apos;s
-              size and the amount of ongoing leadership it needs.
+              Choose an offer based on the covered work, your organization&apos;s
+              size and its need for ongoing leadership.
             </p>
           </div>
           <div className="pricing-ledger-scroll observe d2">
@@ -131,7 +131,7 @@ export default function Pricing() {
           <article className="price-math-tile observe">
             <div className="price-math-eq">20 people × $125</div>
             <div className="price-math-result">$2,500 / month</div>
-            <p>Helm Core&apos;s minimum relationship, including the complete standardized protection stack and monthly reporting.</p>
+            <p>At Helm Core&apos;s monthly minimum, you get the complete standardized protection stack and monthly reporting.</p>
           </article>
           <article className="price-math-tile observe d1">
             <div className="price-math-eq">75 to 250 people</div>
@@ -149,8 +149,8 @@ export default function Pricing() {
             <p>Help desk, routine IT, patching, and remediation stay with your IT provider unless a separate written scope says otherwise.</p>
           </article>
           <article className="pricing-term observe d2">
-            <h3>Paid discovery is credited</h3>
-            <p>When a separately scoped assessment is needed, its fee is credited toward the first year after a Core or Command agreement starts.</p>
+            <h3>Assessment credit, when agreed</h3>
+            <p>A separately scoped paid assessment may be credited toward the first year of Core or Command when the service order states that credit.</p>
           </article>
         </div>
       </Band>

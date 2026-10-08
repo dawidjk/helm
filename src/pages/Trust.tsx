@@ -40,7 +40,7 @@ const subprocessors: {service: string; does: string; sees: string}[] = [
 ];
 
 const gaps = [
-  'No SOC 2 or ISO 27001 audit: we are two people, and an audit of that scope is not something we can honestly represent as in place',
+  'No SOC 2 or ISO 27001 audit is in place for our two-person company',
   'No multi-factor authentication on portal accounts yet. Today the control is the magic link itself, sent only to the mailbox you gave us',
   "Backups and disaster recovery rely on our hosting and database providers' own resilience, not on a process we have independently documented and tested ourselves",
 ];
@@ -82,9 +82,9 @@ export default function Trust() {
             <div className="trust-summary-intro">
               <h2 id="trust-summary-title">Helm at a glance</h2>
               <p>
-                The facts we would want to know before choosing a security
-                provider: who delivers the service, what data is stored, and
-                which limitations still need to be considered.
+                Before choosing a security provider, consider who delivers
+                the service, what data is stored, and which limitations affect
+                your requirements.
               </p>
             </div>
             <div className="trust-summary-grid">
@@ -151,8 +151,7 @@ export default function Trust() {
               </p>
               <p>
                 We review and act on alerts Monday through Friday, 9:00 a.m. to
-                5:00 p.m. Eastern Time, excluding federal holidays. We do not
-                sell a response-time guarantee we cannot hold.
+                5:00 p.m. Eastern Time, excluding federal holidays. Helm does not offer a response-time guarantee.
               </p>
             </section>
 
@@ -175,17 +174,17 @@ export default function Trust() {
             <section>
               <h2>What data we hold about you, and where</h2>
               <p>
-                Your portal runs on Next.js (Vercel) with a Turso database,
-                reached over an authenticated connection, all traffic over
-                HTTPS/TLS. Encryption at rest is Turso's and Vercel's; we do
-                not add our own layer on top.
+                Your portal runs on Next.js, hosted by Vercel, with a Turso
+                database accessed over an authenticated connection. All traffic
+                uses HTTPS/TLS. Turso and Vercel provide encryption at rest;
+                we do not add a separate encryption layer.
               </p>
               <p>
                 Stripe's hosted fields handle card details, so Helm stores only
                 a Stripe customer identifier. Helm does not copy mailbox content
                 into its portal. MailProtector processes mail-flow data and
                 Doppel processes mailbox and reported-message data within
-                Helm Core and Command. Helm reporting uses security and program activity,
+                Helm Core and Command. Helm reporting uses security and program activity data,
                 not message bodies. We do store scan findings, security alerts,
                 user and organization records, billing status, and the scan or
                 deployment requests you submit because those records are needed
@@ -259,12 +258,11 @@ export default function Trust() {
                 starting signal, and it is not a penetration test.
               </p>
               <p>
-                One thing worth knowing: a scan report has a shareable link
-                containing a long random token, and anyone holding that link
-                can read the report without signing in. That is deliberate,
-                so you can forward a report to a colleague or your broker,
-                but treat the link like an attachment rather than a logged-in
-                page. Reports inside your portal account require sign-in.
+                A scan report's shareable link contains a long random token.
+                Anyone with that link can read the report without signing in,
+                including a colleague or broker you send it to. Treat the link
+                with the same care as the report itself. Reports inside your
+                portal account require sign-in.
               </p>
             </section>
           </div>

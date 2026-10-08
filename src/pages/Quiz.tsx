@@ -20,8 +20,8 @@ export default function Quiz() {
           <p className="sub reveal d2">
             Answer 10 quick questions about payment verification, training,
             and email security. You get a score out of 100 and a
-            plain-English list of what to fix first, no email address
-            required to see your result.
+            plain-English list of the gaps in your answers. You can see your
+            result without providing an email address.
           </p>
         </div>
         <ScrollCue />

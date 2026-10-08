@@ -117,6 +117,10 @@ export const refreshedArticleSupport: Record<string, ArticleSupport> = {
     ],
     "sources": [
       {
+        "title": "DOJ MORSECORP settlement announcement",
+        "href": "https://www.justice.gov/opa/pr/defense-contractor-morsecorp-inc-agrees-pay-46-million-settle-cybersecurity-fraud"
+      },
+      {
         "title": "current CMMC overview",
         "href": "https://dodcio.defense.gov/cmmc/About/"
       },
@@ -504,6 +508,8 @@ export const refreshedArticleSupport: Record<string, ArticleSupport> = {
       "mfa-methods-compared"
     ],
     "sources": [
+      {"title": "Microsoft Intune device management", "href": "https://learn.microsoft.com/en-us/intune/fundamentals/what-is-intune"},
+      {"title": "Google endpoint management overview", "href": "https://knowledge.workspace.google.com/admin/devices/overview-manage-devices-with-google-endpoint-management"},
       {
         "title": "FTC explains",
         "href": "https://consumer.ftc.gov/articles/are-public-wi-fi-networks-safe-what-you-need-know"
@@ -551,6 +557,10 @@ export const refreshedArticleSupport: Record<string, ArticleSupport> = {
       "what-is-dmarc"
     ],
     "sources": [
+      {
+        "title": "Microsoft shared-mailbox access and permissions",
+        "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/email/about-shared-mailboxes?view=o365-worldwide#access-and-permissions"
+      },
       {
         "title": "Microsoft security defaults",
         "href": "https://learn.microsoft.com/en-us/entra/fundamentals/security-defaults"

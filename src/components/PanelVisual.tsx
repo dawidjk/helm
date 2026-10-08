@@ -6,7 +6,7 @@ export default function PanelVisual({domain = 'acme-mfg.com'}: {domain?: string}
     <div className="panel-visual report observe d1">
       <div className="rv-head">
         <span className="rv-brand">
-          <HelmMark size={18} /> Helm Scan Report
+          <HelmMark size={18} /> Example Scan Report
         </span>
         <span className="rv-domain">{domain}</span>
       </div>

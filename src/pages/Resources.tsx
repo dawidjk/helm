@@ -26,7 +26,7 @@ const startChoices: StartChoice[] = [
     slug: 'm365-security-baseline',
   },
   {
-    title: 'Stop payment fraud',
+    title: 'Verify payment changes',
     description: 'Know what to check before accepting changed bank details.',
     slug: 'invoice-fraud-red-flags',
   },
@@ -36,7 +36,7 @@ const startChoices: StartChoice[] = [
     slug: 'cyber-insurance-questionnaire',
   },
   {
-    title: 'Meet CMMC or HIPAA requirements',
+    title: 'Understand CMMC requirements',
     description: 'Start with the requirement that applies to your business.',
     slug: 'cmmc-level-1-vs-level-2',
   },
@@ -68,7 +68,7 @@ const guideGroups: GuideGroup[] = [
   {
     id: 'secure-everyday-work',
     title: 'Secure everyday accounts and devices',
-    description: 'Email, identity, device security, AI-use, and access decisions for the systems your team uses every day.',
+    description: 'Email, identity, device security, use of AI, and access decisions for the systems your team uses every day.',
     slugs: [
       'mfa-methods-compared',
       'dns-filtering-small-business',
@@ -104,7 +104,7 @@ const guideGroups: GuideGroup[] = [
   },
   {
     id: 'prove-readiness',
-    title: 'Prove readiness to an insurer or customer',
+    title: 'Prepare evidence for an insurer or customer',
     description: 'Prepare accurate answers and evidence for applications, renewals, questionnaires, and backup reviews.',
     slugs: [
       'cyber-insurance-claim-denied',
@@ -194,7 +194,7 @@ export default function Resources() {
             Start with the problem you need to solve.
           </h1>
           <p className="sub reveal d2">
-            These guides explain what can go wrong, what the control changes,
+            These guides explain what can go wrong, how security measures help,
             and what to do next without assuming you have a security team.
           </p>
         </div>
@@ -217,10 +217,10 @@ export default function Resources() {
                     to={canonicalPath(`/resources/${article.slug}`)}
                     className="resources-start-link"
                   >
-                    <span className="resources-start-copy">
+                    <div className="resources-start-copy">
                       <h3>{choice.title}</h3>
                       <span>{choice.description}</span>
-                    </span>
+                    </div>
                     <span className="resources-start-side">
                       <span>{article.readMin} min read</span>
                       <DirectionIcon />

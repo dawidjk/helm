@@ -31,7 +31,7 @@ export const manufacturing: Lane = {
     },
     {
       title: 'Internal review still takes real time',
-      body: 'The 110 requirements touch systems, policies, vendors, people, and daily shop workflows. A scoped assessment shows how much work is actually open before the company spends against a guess.',
+      body: "The 110 requirements cover systems, policies, vendors, people, and daily shop workflows. A scoped assessment identifies the remaining work so the company can budget for it.",
     },
   ],
   evidence: [
@@ -49,7 +49,7 @@ export const manufacturing: Lane = {
     },
     {
       value: '3,600+',
-      finding: 'IC3 received more than 3,600 ransomware complaints in 2025 and identified critical manufacturing among the most targeted critical-infrastructure sectors. This is national reporting, not a count of New Jersey suppliers.',
+      finding: 'IC3 received more than 3,600 ransomware complaints in 2025 and identified critical manufacturing among the most targeted critical-infrastructure sectors. These complaints include international reports and do not count New Jersey suppliers separately.',
       source: 'FBI 2025 Internet Crime Report',
       href: 'https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf',
     },
@@ -111,7 +111,7 @@ export const professionalServices: Lane = {
     'Email impersonation checks, wire-fraud controls, and questionnaire readiness for New Jersey law and CPA firms. Start with a free domain scan.',
   eyebrow: 'New Jersey Law Firms · CPA Firms',
   headline: 'Protect the client information and payments your firm handles every day.',
-  sub: 'A compromised mailbox can redirect a payment, expose a confidential matter, or leave the firm unable to support an insurance or client-security answer.',
+  sub: "A compromised mailbox can redirect a payment, expose a confidential matter, or leave the firm unable to support an answer to an insurer or a client’s security questionnaire.",
   primaryCta: 'Get my free scan',
   pains: [
     {
@@ -124,13 +124,13 @@ export const professionalServices: Lane = {
     },
     {
       title: 'Client questionnaires need evidence',
-      body: 'A client may ask how the firm protects email, payments, access, or incidents. Current inventories, settings, procedures, and test records give the firm an answer it can support.',
+      body: "A client may ask how the firm protects email and access, verifies payments, or responds to incidents. Current inventories, settings, procedures, and test records give the firm an answer it can support.",
     },
   ],
   evidence: [
     {
       value: '$3.05B',
-      finding: 'IC3 recorded 24,768 business-email-compromise complaints and $3.05 billion in reported losses during 2025. These are nationwide figures across all industries, not professional-services losses alone.',
+      finding: 'IC3 recorded 24,768 business-email-compromise complaints and $3.05 billion in reported losses during 2025. These figures cover complaints across all industries, including international reports, rather than professional-services losses alone.',
       source: 'FBI 2025 Internet Crime Report',
       href: 'https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf',
     },
@@ -148,7 +148,7 @@ export const professionalServices: Lane = {
     },
   ],
   planTitle: 'Protect the inbox, the work devices, and the answers the firm signs.',
-  planSub: 'Each service addresses a specific part of the risk instead of treating every problem as the same security project.',
+  planSub: "Helm Core provides managed protection. Helm Command adds vCISO leadership and evidence upkeep to support the firm’s security answers.",
   proof: {
     title: 'What the firm can put in place and show.',
     points: [
@@ -205,7 +205,7 @@ export const lawFirms: Lane = {
     },
     {
       value: 'About $3B',
-      finding: 'Reported Business Email Compromise losses across all IC3 complaints in 2025. This national figure covers many industries, not law firms alone.',
+      finding: 'Reported Business Email Compromise losses across all IC3 complaints in 2025. This total covers complaints across many industries, including international reports, rather than law firms alone.',
       source: 'FBI 2025 Internet Crime Report',
       href: 'https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf',
     },
@@ -271,7 +271,7 @@ export const accountingFirms: Lane = {
     'Managed email and device protection plus WISP and security readiness for New Jersey CPA, accounting, and tax firms. Start with a free domain scan.',
   eyebrow: 'New Jersey CPA · Accounting · Tax Firms',
   headline: 'One compromised account can expose years of client tax data.',
-  sub: 'Identity, payroll, banking, and tax information move through email, workstations, portals, and vendor systems. The firm needs to protect those paths and keep its WISP aligned with the safeguards actually in place.',
+  sub: "Identity, payroll, banking, and tax information move through email, workstations, portals, and vendor systems. The firm needs to protect those paths and keep its Written Information Security Plan (WISP) consistent with the safeguards actually in place.",
   primaryCta: 'Get my free scan',
   pains: [
     {
@@ -424,12 +424,12 @@ export const contractors: Lane = {
       body: 'An attacker can imitate a supplier or compromise a real email thread, then replace the bank details. By the time the supplier asks about the missing payment, recovery may depend on how quickly the bank is contacted.',
     },
     {
-      title: 'GCs now require security',
+      title: 'Some GCs require security',
       body: 'Some general contractors and insurers ask subcontractors to document email, payment, access, or incident controls. An unsupported answer can delay a bid, renewal, or claim.',
     },
     {
       title: 'Field teams, office risk',
-      body: 'Estimators and office managers may review payment requests from phones and job sites. When several jobs are moving at once, a changed instruction can look like one more urgent item unless the callback rule is mandatory.',
+      body: "Estimators and office managers may review payment requests from phones and job sites. When several jobs are moving at once, a changed instruction can look like one more urgent item unless staff are required to verify the change by phone.",
     },
   ],
   evidence: [
@@ -441,7 +441,7 @@ export const contractors: Lane = {
     },
     {
       value: '$3.05B',
-      finding: 'IC3 recorded $3.05 billion in reported business-email-compromise losses during 2025. The total covers all industries nationwide, not contractors alone.',
+      finding: 'IC3 recorded $3.05 billion in reported business-email-compromise losses during 2025. The total covers complaints across all industries, including international reports, rather than contractors alone.',
       source: 'FBI 2025 Internet Crime Report',
       href: 'https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf',
     },

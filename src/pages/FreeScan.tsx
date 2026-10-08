@@ -19,14 +19,14 @@ export default function FreeScan() {
             See whether your public email controls make impersonation easier.
           </h1>
           <p className="sub reveal d2">
-            Enter your work email. The scan checks the public records receiving
-            mail systems use when someone sends a message in your company’s
-            name. You receive a scored, plain-English report, usually in about a minute.
+            Enter your work email. The scan checks public email records and limited web configuration
+            for your domain. It does not access your accounts or assess internal
+            controls. You receive a scored, plain-English report, usually in about a minute.
           </p>
           <div className="hero-ctas reveal d3">
             <LeadForm source="free-scan page" cta="Run my free scan" compact />
           </div>
-          <div className="hero-note reveal d3">No credit card. No required meeting. Your report usually appears in about a minute.</div>
+          <div className="hero-note reveal d3">You do not need a credit card or a meeting to get your report.</div>
         </div>
         <ScrollCue />
       </header>
@@ -56,12 +56,12 @@ export default function FreeScan() {
           <li className="observe d1">
             <div className="step-dot">1</div>
             <h3>Confirm your domain</h3>
-            <p>You land on our secure portal with your company domain filled in from your email. One confirmation and the scan starts.</p>
+            <p>Our secure portal opens with your company domain filled in from your email. Confirm the domain to start the scan.</p>
           </li>
           <li className="observe d2">
             <div className="step-dot">2</div>
             <h3>Your report appears</h3>
-            <p>Usually in about a minute, written for a business owner, not an IT department.</p>
+            <p>The report usually appears in about a minute. It explains the findings and next steps for a business owner.</p>
           </li>
           <li className="observe d3">
             <div className="step-dot">3</div>

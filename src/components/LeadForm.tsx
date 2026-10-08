@@ -47,6 +47,7 @@ export default function LeadForm({
   compact?: boolean;
 }) {
   const inputId = useId();
+  const errorId = `${inputId}-error`;
   const [email, setEmail] = useState('');
   const [state, setState] = useState<'idle' | 'busy' | 'error' | 'personal'>('idle');
 
@@ -79,7 +80,7 @@ export default function LeadForm({
 
   return (
     <form className={`lead-form${compact ? ' compact' : ''}`} onSubmit={onSubmit}>
-      <label htmlFor={inputId} className="sr-only">Work email</label>
+      <label htmlFor={inputId} className="lead-form-label">Work email</label>
       <input
         id={inputId}
         type="email"
@@ -88,6 +89,8 @@ export default function LeadForm({
         placeholder="Work email"
         autoComplete="email"
         aria-label="Work email"
+        aria-invalid={state === 'error' || state === 'personal'}
+        aria-describedby={state === 'error' || state === 'personal' ? errorId : undefined}
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         disabled={state === 'busy'}
@@ -100,12 +103,12 @@ export default function LeadForm({
         isLoading={state === 'busy'}
       />
       {state === 'error' && (
-        <div className="lead-form-error" role="alert">
+        <div id={errorId} className="lead-form-error" role="alert">
           Enter a valid work email address to run your scan.
         </div>
       )}
       {state === 'personal' && (
-        <div className="lead-form-error" role="alert">
+        <div id={errorId} className="lead-form-error" role="alert">
           That looks like a personal inbox. The scan checks your company's
           domain, which is the part after the @. Enter your work email to get a
           report about your business.
@@ -117,8 +120,8 @@ export default function LeadForm({
           portal. Your report usually arrives within a minute.
         </p>
         <p className="lead-form-consent">
-          By requesting the scan, you agree to receive your report and a brief
-          follow-up email. Unsubscribe anytime.
+          By requesting the scan, you agree to receive your report and, when it identifies actionable gaps,
+          a short report-related follow-up sequence. Unsubscribe anytime.
         </p>
       </div>
     </form>

@@ -48,7 +48,7 @@ export default function About() {
           <p className="sub reveal d2">
             A small business can lose money through one changed invoice, expose
             client information through one account, or lose a contract because
-            it cannot support a security answer. Helm helps identify the problem,
+            it cannot back up an answer to a security question. Helm helps identify the problem,
             choose a practical response, and follow the work through.
           </p>
         </div>
@@ -76,11 +76,11 @@ export default function About() {
           <div>
             <h3 className="observe">How we operate</h3>
             <ul className="check-list">
-              <li className="observe d1">Plain English, always. If you need a glossary, we've failed</li>
-              <li className="observe d2">Published starting prices and scope bands, confirmed in writing before work starts</li>
-              <li className="observe d3">Honest architecture: our monitoring is backed by 24/7 security operations partners, and we say so</li>
-              <li className="observe d4">No fear selling. Every warning we give ends in a concrete, priced fix</li>
-              <li className="observe d5">Automation-first: machines watch the logs, humans make the calls</li>
+              <li className="observe d1">Plain English, with technical terms explained when you need them</li>
+              <li className="observe d2">Published starting prices and scope ranges, confirmed in writing before work starts</li>
+              <li className="observe d3">24/7 monitoring supplied by disclosed security operations partners</li>
+              <li className="observe d4">Findings explained with practical next steps and a written scope for paid work</li>
+              <li className="observe d5">Automated monitoring with people responsible for investigation and decisions</li>
               {/* Restore when earned: Security+ is scheduled but not passed, and E&O/cyber
                   liability insurance is ON HOLD (see human_work.md). Do not publish either
                   claim before both are true.
@@ -137,7 +137,7 @@ export default function About() {
         </div>
         <p className="founder-note observe d2">
           Helm is a two-person company today. Established security platforms
-          provide continuous monitoring where the service says so, and we are
+          provide continuous monitoring where included in the service scope, and we are
           clear about which work they perform and which work Helm performs.
         </p>
       </Band>
@@ -146,17 +146,17 @@ export default function About() {
         <div className="band-head">
           <h2 className="observe">Why "Helm"</h2>
           <p className="observe d1">
-            The helm is the one place on a ship where you can see everything
-            and steer. That's the product: not another alarm going off
-            somewhere below deck, but a steady hand and a clear view, so you can
-            run your business while someone competent watches the water.
+            A ship's helm gives the person steering a way to set direction.
+            The name reflects the work we want security reporting to support:
+            understanding the issue, deciding what needs attention and knowing
+            who is responsible for the next step.
           </p>
         </div>
       </Band>
 
       <CtaBand
         title="Start with the free scan."
-        sub="It's the fastest way to see how we work: real findings, plain English, no pressure."
+        sub="Review your public email and web configuration, with findings and next steps explained in plain English."
         source="about cta"
       />
     </>

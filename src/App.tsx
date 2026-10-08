@@ -44,8 +44,9 @@ function ThemedShell() {
       <LinkProvider component={NavLink}>
         <ScrollToTop />
         <RevealManager />
+        <a className="skip-link" href="#main-content">Skip to content</a>
         <SiteNav />
-        <main>
+        <main id="main-content" tabIndex={-1}>
           <Outlet />
         </main>
         <SiteFooter />

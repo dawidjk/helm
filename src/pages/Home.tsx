@@ -12,7 +12,7 @@ import './SecureAiAdoption.css';
 const lanes = [
   {to: '/manufacturing', name: 'Manufacturing & defense', promise: 'CMMC without the panic'},
   {to: '/professional-services', name: 'Law, CPA & medical', promise: 'Client trust is the product'},
-  {to: '/contractors', name: 'Contractors & trades', promise: 'Stop the fake-invoice loss'},
+  {to: '/contractors', name: 'Contractors & trades', promise: 'Verify supplier payment changes'},
 ];
 
 function Scan({source}: {source: string}) {
@@ -76,7 +76,7 @@ export default function Home() {
       <section id="services" className="home-service-section" aria-labelledby="home-services-title">
         <div className="home-section-intro">
           <h2 id="home-services-title">Two ways to put someone in charge of security.</h2>
-          <p>Choose Core for a complete, standardized security stack. Choose Command when leadership also needs a maintained roadmap, evidence, questionnaire response, and quarterly cadence.</p>
+          <p>Core manages the defined security stack. Command includes Core and adds virtual security leadership (vCISO). It also includes a maintained roadmap, evidence, bounded questionnaire responses and quarterly leadership reviews.</p>
         </div>
         <div className="home-service-list">
           {productList.map((service) => (
@@ -111,7 +111,7 @@ export default function Home() {
           <span>Cyber-insurance questionnaires</span>
           <span>Payment-verification protocols</span>
           <span>CMMC / NIST 800-171 gaps</span>
-          <span>HIPAA-ready controls</span>
+          <span>HIPAA security planning</span>
         </div>
       </section>
 
@@ -130,7 +130,7 @@ export default function Home() {
 
       <section className="home-close-section">
         <h2>Find out where you stand.</h2>
-        <p>The first look is free. No meeting required.</p>
+        <p>Check your public email and web configuration for free. No meeting required.</p>
         <Scan source="home close" />
       </section>
     </div>

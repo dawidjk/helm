@@ -88,6 +88,7 @@ export default function ProductPage() {
             <h2 className="product-tile-title">{p.name}</h2>
             <h3 className="product-summary-price">{p.price}</h3>
             <p>{p.priceDetail}</p>
+            <p>{p.term}</p>
           </div>
         </div>
       </Band>

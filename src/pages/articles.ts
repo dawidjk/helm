@@ -47,7 +47,7 @@ export const articles: Article[] = [
   "laneTo": "/",
   "organizationByline": true,
   "hideVisual": true,
-  "intro": "Your cyber insurance renewal arrives with questions about multifactor authentication, device monitoring, and backups. Your IT provider says the tools are installed. The insurer asks what is covered and whether the controls actually work. Choosing a cybersecurity partner starts with that gap: who operates the controls, who verifies the evidence, and who helps your business explain the answers?",
+  "intro": "At renewal, your insurer may ask whether MFA, device monitoring and backups cover the business. A purchase record establishes which tools you bought; answering the application also requires evidence of where they are working. Compare security partners by who runs the controls, checks that coverage and helps the firm prepare answers supported by current records.",
   "takeaway": "Start with your broker’s current application and any quote conditions. Hire for the work you need: protection, program leadership, incident response, independent assessment, or evidence upkeep. Ask for dated, scoped deliverables and confirm the insurer’s requirements before paying for a report. Better controls can support underwriting, but no cybersecurity vendor can promise a lower premium or coverage approval.",
   "sections": [
     {
@@ -71,7 +71,7 @@ export const articles: Article[] = [
             }
           ]
         },
-        "Ask your broker which gaps affect eligibility, which affect the quote, and what evidence the underwriter wants. Disclose your actual operations, revenue, information handled, and incident history as requested. Give the technical questions to someone who can verify them; keep the business representations with the authorized signer.",
+        "Use the broker to establish which gaps affect eligibility, which affect the quote and what evidence the underwriter needs. The authorized signer should provide the requested business representations, including operations, revenue, information handled and incident history. Assign technical questions to someone who can verify the answers.",
         "Compare quotes on the same coverage limits, retention, sublimits, exclusions, and services. A lower premium with less useful coverage may be a worse purchase. Ask the broker to explain changes in writing. Measure the security service against reduced exposure and work completed, rather than assuming a premium saving will pay its fee."
       ]
     },
@@ -79,7 +79,7 @@ export const articles: Article[] = [
       "h": "Match the vendor category to the missing work",
       "ps": [
         "Provider labels overlap. One firm may perform several roles, while another supplies only software. Ask what it will operate, what it will document, and what your existing IT team must still complete.",
-        "Managed security service providers (MSSPs) run defined protections and monitoring. A virtual chief information security officer (vCISO) provides security leadership and an agreed program cadence. Neither label automatically includes forensic investigation, independent certification, or hands-on IT remediation."
+        "Managed security service providers (MSSPs) run defined protections and monitoring. A virtual chief information security officer (vCISO) provides security leadership and an agreed schedule of program work. Neither label automatically includes forensic investigation, independent certification, or hands-on IT remediation."
       ],
       "table": {
         "caption": "Five provider roles to compare against your insurance requirements",
@@ -120,7 +120,7 @@ export const articles: Article[] = [
     {
       "h": "Request evidence the underwriter can evaluate",
       "ps": [
-        "There is no evidence package every insurer accepts. Before buying an assessment, have your broker confirm the required control, systems in scope, acceptable proof, submission channel, and deadline. The examples below are practical deliverables to discuss with the underwriter, not preapproved insurance documents.",
+        "Before purchasing an assessment, ask the broker to confirm the required control, systems in scope, acceptable evidence, submission channel and deadline. Insurers do not all accept the same package. Discuss the deliverables below with the underwriter; they are examples, not preapproved insurance documents.",
         "MFA: request a dated configuration export or coverage report tied to the account inventory. It should distinguish email, remote access, administrator access, and other applications the question names. Record exceptions and compensating measures; do not turn partial coverage into an unqualified “yes.”",
         "Endpoint monitoring: request the product and service tier, covered-device inventory, recent reporting status, and who investigates and contains a threat. Compare those records with the full device list. Identify unsupported computers, servers, or other equipment outside the contract.",
         "Backup and recovery: request the covered data, retention, access protections, and a dated restore-test record. A useful record states what was restored, whether it was usable, and any unresolved problem. Include critical business applications separately from email-platform backup.",
@@ -130,7 +130,7 @@ export const articles: Article[] = [
     {
       "h": "Read vendor attestations for their actual scope",
       "ps": [
-        "A vendor’s statement can confirm the service it delivers to your business: covered systems, control settings, monitoring responsibilities, dates, and known exceptions. Request the person responsible for the statement and the records supporting it. The wording should answer the specific question, not repeat a marketing claim.",
+        "Request a vendor statement identifying the covered systems, control settings, monitoring duties, dates and known exceptions for your business. Ask the vendor to identify who is responsible for the statement and which records support it. That makes the statement useful for a specific application question instead of merely repeating a marketing claim.",
         "A vendor’s own certification or assurance report concerns the scope described in that report. It does not demonstrate that your accounts all require MFA, your backups restore, or your excluded server is monitored. Ask an assessor to explain exactly what it examined and whether its report meets the underwriter’s request.",
         "Your organization reviews and owns the final application. Keep the submitted answers, evidence references, technical reviewer, business approver, and date together. If a control is incomplete, explain the gap through the insurer’s process instead of borrowing a vendor’s attestation to hide it."
       ]
@@ -138,11 +138,11 @@ export const articles: Article[] = [
     {
       "h": "A practical vendor evaluation checklist",
       "ps": [
-        "First, give every bidder the same user count, device inventory, platforms, locations, current IT owner, application questions, and renewal date. Ask it to mark each requirement as included, excluded, or separately priced.",
-        "Second, request one redacted deliverable that links a questionnaire answer to a dated operating record. Ask who gathers the evidence, who checks completeness, how exceptions are recorded, and what happens when an account or device stops reporting.",
-        "Third, walk through a fictional compromised-account event. Name the monitoring team, containment authority, business contact, IT remediation owner, and insurer notification contact. For an IR retainer, have the broker check carrier panel requirements and consent terms before you commit. Ask whether work must be authorized through the carrier’s breach hotline.",
-        "Fourth, inspect access and exit arrangements. Ask how the provider secures administrator access, which subcontractors participate, where evidence is stored, and how your firm receives its records when the agreement ends.",
-        "Fifth, compare total cost and service limits. Include onboarding, licenses, extra devices, questionnaire volume, response expectations, project work, travel, annual increases, renewal notice, and exit support. Name who executes remediation; a roadmap alone does not complete it.",
+        "Give every bidder the same starting information: user count, device inventory, platforms, locations, current IT owner, application questions and renewal date. Have each bidder mark requirements as included, excluded or separately priced so the resulting offers can be compared.",
+        "Follow one questionnaire answer through a redacted sample deliverable to its dated operating record. Identify who gathers the evidence, checks completeness and records exceptions. Ask how that process handles an account or device that stops reporting.",
+        "Walk through a fictional compromised-account event and identify the monitoring team, containment authority, business contact, IT remediation owner and insurer notification contact. Before committing to an IR retainer, have the broker check carrier panel requirements and consent terms, including whether work must be authorized through the carrier’s breach hotline.",
+        "Review how the provider secures administrator access, which subcontractors participate and where evidence is stored. Establish how the firm will receive its records when the agreement ends.",
+        "Compare the full cost with the agreed service limits. Include onboarding, licenses, extra devices, questionnaire volume, response expectations, project work, travel, annual increases, renewal notice and exit support. Assign remediation to someone responsible for carrying it out; delivery of a roadmap does not complete that work.",
         {
           "text": "Use the downloadable vendor evaluation scorecard to organize the comparison. Add the specific insurer requirement beside each relevant criterion and record unanswered questions with an owner and due date. Resolve essential coverage or evidence gaps before signing.",
           "links": [
@@ -166,9 +166,9 @@ export const articles: Article[] = [
             }
           ]
         },
-        "For planning, a small firm could reserve the first one to two weeks for inventory, application review, and gathering existing evidence. The next two to six weeks could cover agreed control changes and validation. Reserve a further one to two weeks for technical review, signer approval, and broker follow-up. These are illustrative scheduling allowances, not typical market averages or a Helm deployment promise.",
+        "As an illustrative planning allowance, a small firm could reserve one to two weeks for inventory, application review and existing evidence. Agreed changes and validation could take another two to six weeks, followed by one to two weeks for technical review, signer approval and broker follow-up. These are planning examples, not market averages or a Helm deployment promise.",
         "Legacy systems, missing administrative access, procurement, and several providers can extend the work. If renewal is close, tell the broker which controls are complete and which remain open, with proposed dates. Do not represent scheduled work as already implemented.",
-        "After submission, keep evidence current. Record new devices, changed access, unresolved alerts, restore tests, and completed remediation. Otherwise the next renewal begins with another scramble to reconstruct the year."
+        "Keep the evidence current after submission by recording new devices, access changes, unresolved alerts, restore tests and completed remediation. Those records give the next renewal a starting point without requiring the team to reconstruct the year under deadline pressure."
       ]
     },
     {
@@ -186,7 +186,7 @@ export const articles: Article[] = [
         },
         "Helm’s published prices provide another concrete reference. Core costs $125 per covered user per month with a $2,500 monthly minimum. For 35 covered users, the base recurring cost is $4,375 per month, or $52,500 over 12 months, before separately scoped work or additional workstations. Keep existing general-IT costs in the budget.",
         "Command costs $8,000 to $15,000 per month after fit and complexity review, including its covered protection stack and program scope. The first 12 months therefore total $96,000 to $180,000 at the starting monthly price. Its initial term is 36 months, with a 6% adjustment on each service anniversary.",
-        "For IR firms and independent assessors, request a written quote. Check whether a retainer purchases availability, prepaid hours, or both; how after-hours rates work; and whether unused hours expire. Evidence software may also need a person to collect and verify records. Avoid paying twice for services already included through your insurer."
+        "Obtain written quotes from IR firms and independent assessors. For a retainer, distinguish availability from prepaid hours and check after-hours rates and expiry of unused hours. Evidence software may still require someone to collect and verify the records. Compare the offer with insurer-provided services to avoid buying the same work twice."
       ]
     },
     {
@@ -218,7 +218,7 @@ export const articles: Article[] = [
     {
       "h": "A New Jersey example: separate the control gap from the paperwork",
       "ps": [
-        "Consider a hypothetical 35-person accounting firm in Freehold renewing cyber insurance before tax season. Its MSP runs IT, but the firm cannot show whether all remote-access accounts require MFA or when its tax-software backup was last restored. This is an illustrative case, not a Helm customer story.",
+        "Consider a hypothetical 35-person accounting firm in Freehold preparing its cyber insurance renewal before tax season. The MSP runs IT, but the firm lacks evidence of MFA across remote-access accounts and of the last tax-software backup restore. This illustrates a control-and-evidence problem, not a Helm customer result.",
         "The partner asks the broker for the application definitions and evidence requirements. The MSP checks remote access, records exceptions, and tests the tax-system restore. A security provider documents the covered email and workstation protections. The partner then reviews the answers against those records before submission.",
         "Core could fit the covered protection needs if a named owner handles the wider program and questionnaire work. If recurring evidence and risk coordination require ongoing ownership, review the program-service scope and fit; do not assume that one renewal question means the firm needs Command. No insurance quote, discount, or customer outcome is asserted in this example."
       ]
@@ -235,9 +235,9 @@ export const articles: Article[] = [
             }
           ]
         },
-        "Bring the scan findings, application questions, deadline, and current IT responsibilities to a fit conversation. If fit or scope cannot responsibly be confirmed from that conversation, Helm’s bounded paid discovery costs $2,500 to $7,500 and is credited to the first service year if you proceed.",
+        "Bring the scan findings, application questions, deadline, and current IT responsibilities to a fit conversation. If fit or scope cannot responsibly be confirmed from that conversation, Helm’s bounded paid discovery costs $2,500 to $7,500 and may be credited toward the first service year when stated in the service order.",
         {
-          "text": "If your immediate need is insurance evidence, discuss the required scope with Helm and your broker. Begin with the actual application and the work needed to answer it accurately. That gives each provider a defined job and your business a reviewable next step.",
+          "text": "If insurance evidence is the immediate need, discuss the required scope with Helm and your broker using the actual application. Work out what must be verified to support each answer, then assign the jobs to the appropriate providers. The business can review that plan before proceeding.",
           "links": [
             {
               "phrase": "discuss the required scope with Helm",
@@ -260,13 +260,13 @@ export const articles: Article[] = [
     "laneTo": "/",
     "organizationByline": true,
     "hideVisual": true,
-    "intro": "Two managed service providers can propose similar security tools and offer very different services. One manages the protection stack and sends a monthly report. Another also keeps the risk register current, follows up on assigned work, and prepares evidence for customer questionnaires. For a New Jersey business comparing proposals, that difference affects who does the work after onboarding and what leadership still needs to manage.",
+    "intro": "Two providers may propose the same security tools while taking on different work. One operates the stack and reports each month. Another also maintains risk records, follows up on assigned tasks and prepares questionnaire evidence. Compare that work before deciding what leadership will still need to manage after onboarding.",
     "takeaway": "A standardized security stack fits a business that needs defined protection and has someone to own the wider security program. Full program ownership adds an agreed cadence for risks, evidence, priorities, and leadership decisions. In both models, write down the covered systems, response duties, exclusions, and responsibilities your business retains.",
     "sections": [
       {
         "h": "What managed service providers do for small and medium businesses",
         "ps": [
-          "An MSP manages agreed technology services for a recurring fee. General IT work often includes help desk support, account administration, patching, devices, and networks. Cybersecurity work may be bundled into that agreement or delivered by a separate security-focused provider. Ask which work the proposed contract covers.",
+          "An MSP runs agreed technology services for a recurring fee. Help desk, account administration, patching, devices and networks often belong to general IT. Security may be included or supplied by another provider. Compare the actual contract to find out who operates each part.",
           {
             "text": "NIST’s outsourcing guidance recommends starting with the outcomes you need and documenting responsibilities in the agreement. If your existing IT provider handles daily operations well, you may need a security layer alongside it. If nobody owns routine IT, a security service alone will leave that work unassigned.",
             "links": [
@@ -282,7 +282,7 @@ export const articles: Article[] = [
         "h": "Standard stack versus full program ownership",
         "ps": [
           "A standardized stack covers a defined set of security services through a repeatable deployment and reporting process. It can suit a firm with supported platforms, a clear IT owner, and manageable reporting needs. The business still needs someone to decide priorities and coordinate work outside the service.",
-          "Full program ownership adds an ongoing management role. The provider maintains the agreed risk register and roadmap, organizes evidence, prepares bounded questionnaire responses, and brings decisions to leadership. Your business still approves spending, accepts risks, and signs its own representations. “Full” describes the agreed security-program role; the contract must name its limits."
+          "With program ownership, the provider maintains the agreed risk register and roadmap, organizes evidence and prepares bounded questionnaire responses. Leadership reviews the decisions the provider brings forward, while retaining approval of spending, risk acceptance and final representations. Define that ongoing management role and its limits in the contract."
         ],
         "table": {
           "caption": "Compare the responsibilities, then check them against each proposal",
@@ -330,7 +330,7 @@ export const articles: Article[] = [
         "ps": [
           "Email protection: confirm which mailboxes and platforms are covered, how filtering and impersonation detection work, and how employees report a suspicious message. Ask who investigates those reports and how a payment-change request reaches the person authorized to verify it.",
           "Endpoint protection: get a list of supported computers and exclusions. A proposal that covers Windows and Mac workstations may leave servers, phones, tablets, or specialized equipment outside scope. Compare deployment records with your device inventory rather than assuming every device is protected.",
-          "Monitoring: identify the team that reviews activity, its operating hours, and the systems it can see. Ask what triggers an escalation and what happens when a device stops reporting. “24/7 monitoring” does not by itself describe your provider’s human follow-up hours.",
+          "For monitoring, identify the reviewing team, its hours and the systems it can observe. Ask how it escalates events and detects a device that stops reporting. Continuous monitoring and your provider’s human follow-up hours are separate commitments; check both.",
           "Incident response: distinguish detection, investigation, containment, recovery, forensic work, and legal support. Ask who can isolate a workstation, disable access, contact leadership, and authorize separately billed work. Walk through a suspicious-login scenario with both your IT and security providers.",
           {
             "text": "The joint MSP security advisory calls for contracts that assign security responsibilities clearly. Include the provider’s access to your environment in that conversation: administrator accounts, multifactor authentication, access logs, and removal of access when the agreement ends.",
@@ -341,14 +341,14 @@ export const articles: Article[] = [
               }
             ]
           },
-          "Backup and staff learning: confirm the data covered by backup, retention, and restore responsibilities. Request a dated restore demonstration. For awareness training and phishing simulations, ask who schedules them and follows up on missed participation."
+          "For backup, confirm covered data, retention and the person responsible for restores, then request a dated restore demonstration. For staff learning, ask who schedules awareness training and simulations and follows up on missed participation. Both services need an operating owner after deployment."
         ]
       },
       {
         "h": "Evidence for customer and insurer questionnaires",
         "ps": [
           "Ask a bidder to show a redacted example of how it supports one questionnaire answer. A useful example connects the question to a control, the systems in scope, a dated record, and any exceptions. It also names the technical reviewer and business approver.",
-          "For example, a statement about device monitoring needs a covered-device inventory and deployment evidence for those devices. A statement about multifactor authentication needs evidence for the accounts and applications the question names. A policy or a tool invoice alone leaves implementation unverified.",
+          "Match evidence to the users or systems named in the question. A device-monitoring answer needs the relevant inventory and deployment records; an MFA answer needs the accounts and applications covered by the requirement. A policy or invoice cannot show that those controls were implemented.",
           "Agree where the records live, who updates them, how often they are reviewed, and how much questionnaire work is included. Record turnaround expectations and volume limits. Your authorized signer reviews the final answer; the vendor’s draft does not transfer responsibility for it."
         ]
       },
@@ -384,7 +384,7 @@ export const articles: Article[] = [
         "ps": [
           "Consider a hypothetical 40-person accounting firm in Freehold. Its MSP runs IT, a partner owns security priorities, and the firm needs consistent protection and a monthly service report. A standardized stack may fit if the systems and exclusions are acceptable.",
           "Now consider a hypothetical 110-person professional-services firm in New Brunswick. Its operations team spends time gathering evidence, questionnaire deadlines compete with remediation, and leaders need a recurring forum to decide priorities. Program ownership may address that coordination work. These examples are illustrative, not Helm customer stories.",
-          "Before choosing the larger service, name the work it would take off someone’s plate. If you cannot identify who currently maintains the risks, evidence, and roadmap, settle that responsibility explicitly. If you already have an effective internal security owner, check whether the standardized service provides what that person needs."
+          "Before choosing program ownership, identify which work the provider would take over and who handles it today. Settle ownership of risks, evidence and the roadmap explicitly if it is unclear. If an effective internal security owner already does that work, check whether the standard stack gives them the protection and reporting they need."
         ]
       },
       {
@@ -392,7 +392,7 @@ export const articles: Article[] = [
         "ps": [
           "Bring the same user count, locations, platforms, device inventory, critical applications, and customer deadlines to every bidder. Ask each to return a coverage list and responsibility map. Have them explain how they would handle an alert involving a system outside the standard scope.",
           "Compare support hours, monitoring hours, containment authority, reporting cadence, questionnaire limits, and who completes remediation. Request redacted reporting and evidence examples. Ask how the provider protects its own administrator access and which subcontractors participate in delivery.",
-          "Check the full economics: onboarding, minimum fees, extra devices, projects, annual adjustments, renewal notice, and exit support. Record unanswered questions with an owner and due date. Resolve critical gaps before signing.",
+          "Review onboarding charges, minimum fees, extra devices, projects, annual adjustments, renewal notice and exit support together. Give unanswered questions an owner and due date, and resolve critical gaps before signing. The recurring headline price is only part of that decision.",
           {
             "text": "Use the downloadable vendor evaluation scorecard to compare eight criteria on a 0 to 2 evidence scale. The same scorecard works for both models. Treat the scores as prompts for discussion and verify the contract before making a decision.",
             "links": [
@@ -408,7 +408,7 @@ export const articles: Article[] = [
         "h": "What onboarding should establish",
         "ps": [
           "Before granting access, agree the users and systems in scope, administrative permissions, business contacts, and incident escalation path. Confirm how your current IT provider will participate and who can authorize changes.",
-          "After deployment, reconcile the covered inventory with the planned scope, record exclusions, and check the reporting and employee-reporting paths. Agree who resolves failed deployments and when the first service report arrives. These are acceptance checks to request, not a promise of a particular deployment timeline.",
+          "After deployment, compare the covered inventory with the agreed scope and record exclusions. Test reporting and how staff report suspicious messages. Name who will resolve failed deployments and agree when the first report arrives. These checks establish acceptance of the service; they do not prescribe a universal deployment timeline.",
           "For program ownership, also establish the initial risk register, evidence location, roadmap, leadership-review schedule, and rules for accepting risks. Name the business sponsor who can make decisions and the IT owner who carries out assigned work."
         ]
       },
@@ -424,9 +424,9 @@ export const articles: Article[] = [
               }
             ]
           },
-          "Bring the findings and your service requirements to a fit conversation. If Helm cannot responsibly confirm fit or scope from the initial conversation, separately scoped paid discovery costs $2,500 to $7,500 and is credited to the first service year if you proceed.",
+          "Bring the findings and your service requirements to a fit conversation. If Helm cannot responsibly confirm fit or scope from the initial conversation, separately scoped paid discovery costs $2,500 to $7,500 and may be credited toward the first service year when stated in the service order.",
           {
-            "text": "For an accounting, law, insurance, or other professional-services firm evaluating AI, Secure AI Adoption consulting reviews one internal workflow, its effort and cost, and its tool and data requirements. Any pilot has a separate scope for one workflow on one approved platform. Pricing is quoted after scoping; this consulting is separate from Core and Command.",
+            "text": "Secure AI Adoption is separate consulting for professional-services firms evaluating one internal workflow. The review covers effort, cost, tools and data. A pilot needs its own scope for one workflow on one approved platform. Pricing follows scoping; neither the review nor the pilot is included in Core or Command.",
             "links": [
               {
                 "phrase": "Secure AI Adoption",
@@ -450,13 +450,13 @@ export const articles: Article[] = [
     "laneTo": "/",
     "organizationByline": true,
     "hideVisual": true,
-    "intro": "Managed service providers help businesses run defined technology services under an ongoing agreement. For a small or midsized New Jersey business, the useful question is which work needs an accountable owner: everyday IT support, cybersecurity, or both. A slow help desk and an unanswered customer security questionnaire can point to different needs.",
+    "intro": "A slow help desk and an unanswered security questionnaire point to different needs. A managed service provider can run agreed IT services, cybersecurity or both. For a New Jersey business, start by identifying the work that needs an owner, then compare the responsibilities in the proposed agreement.",
     "takeaway": "Choose a general MSP when everyday IT needs ongoing ownership. Choose a security-focused provider when your IT works but protection, monitoring, or security evidence needs attention. Use a written responsibility map to make the two work together. Compare actual coverage, response duties, evidence, and total contract cost before choosing a tier.",
     "sections": [
       {
         "h": "General MSPs and security-focused providers: what is the difference?",
         "ps": [
-          "A general managed service provider, or MSP, commonly handles help desk support, account administration, device management, patching, networks, and other IT operations. Some include substantial security services. Others offer only a limited baseline. The label alone does not establish coverage.",
+          "A general managed service provider, or MSP, commonly handles help desk, account administration, devices, patching and networks. Its security work may range from a limited baseline to substantial services. Ask which tasks the proposal covers; the MSP label alone does not describe them.",
           "A managed security service provider, or MSSP, focuses on security controls and their operation. That can include email protection, device and identity monitoring, investigation, and defined containment. A security-program service can add risk tracking, evidence upkeep, and leadership reviews. Neither label promises that someone will fix a printer or restore every business application.",
           {
             "text": "NIST’s guidance on building a cybersecurity team recommends setting clear outcomes, comparing quotes, and documenting service expectations. Start with the work your business needs, then ask each vendor to explain which team owns it.",
@@ -480,14 +480,14 @@ export const articles: Article[] = [
       {
         "h": "2. Nobody can show a current list of accounts and devices",
         "ps": [
-          "You cannot confidently identify which laptops reach company email, who has administrator access, or whether a departed employee still has an active session. More software will not solve an ownership gap by itself.",
+          "If you cannot identify the laptops accessing company email, administrator accounts or a departed employee’s remaining sessions, start by assigning ownership of that inventory. Adding software will not, by itself, resolve who checks and maintains those records.",
           "Ask the IT owner to reconcile users, devices, administrators, and shared accounts. Agree who approves new access, who removes it, and how completion is recorded. For a seasonal tax team, include temporary staff and personally owned devices that access firm information."
         ]
       },
       {
         "h": "3. Security tools exist, but the response path is unclear",
         "ps": [
-          "You pay for protection but cannot answer who reviews an alert, who can isolate a device, or who calls leadership outside business hours. Tool deployment and an operated security service are different commitments.",
+          "Check who reviews alerts, who can isolate a device and who contacts leadership outside business hours. A deployed tool can leave all three duties unassigned. The proposal needs to explain how the service operates after deployment.",
           "Ask for the covered systems, monitoring hours, named monitoring provider, containment authority, escalation contacts, and exclusions. Request a walkthrough of a fictional suspicious-login event. Have the vendor explain what its team does, what your MSP does, and what requires separate authorization."
         ]
       },
@@ -501,7 +501,7 @@ export const articles: Article[] = [
       {
         "h": "5. Backups have never been demonstrated through a restore",
         "ps": [
-          "A successful backup notification does not tell you how quickly the business can recover a usable file or application. Ask which data is backed up, how long it is retained, who can restore it, and which systems are excluded.",
+          "Ask how backed-up information can be restored so staff can use it again. Identify the data covered, retention, authorized restore operator and excluded systems. A successful backup notification does not tell you how long it will take to recover a usable file or application.",
           "Arrange an authorized restore test for a representative business file and document the result. If the critical system is a tax application, server, or industry platform, check its recovery arrangements separately from Microsoft 365 or Google Workspace backup. Assign an owner and agree an acceptable interruption before discussing service tiers."
         ]
       },
@@ -531,7 +531,7 @@ export const articles: Article[] = [
       {
         "h": "Common service tiers and the responsibilities behind them",
         "ps": [
-          "Tier names are vendor-specific. A common general-IT progression is reactive support, recurring managed IT, then a broader package with security or advisory services. Reactive support handles authorized individual jobs. Managed IT adds agreed ongoing tasks. A more expensive package is useful only when its written duties match a business need.",
+          "Compare the duties behind each vendor’s tier names. Reactive support usually handles authorized individual jobs; recurring managed IT adds agreed ongoing tasks. A broader package may add security or advisory services. Check which added duties address your business need before paying for the higher tier.",
           "Helm illustrates a different model: two security tiers alongside the existing IT owner. Helm remains a security-focused provider. Clients retain help desk, routine administration, procurement, patching, and general IT unless a separate written scope says otherwise.",
           {
             "text": "Helm Core is the standardized model for organizations with 20 to 75 people. It includes managed email protection, device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital-risk protection, and a monthly report. It costs $125 per covered user per month with a $2,500 monthly account minimum.",
@@ -560,7 +560,7 @@ export const articles: Article[] = [
         "h": "How to validate evidence before answering a questionnaire",
         "ps": [
           "Start with the exact question and its definitions. Identify the systems, users, locations, and date the answer covers. “MFA is enabled” is incomplete if the question also covers administrator accounts, remote access, or an application outside the email platform.",
-          "Collect a current configuration export or other appropriate record, check it against the account or device inventory, and record exceptions. For backups, include the covered data and a dated restore result. For monitoring, include deployment coverage and the agreed response responsibilities. A policy states intent; operating records show what happened.",
+          "Check a current configuration export or other appropriate record against the account or device inventory, then record exceptions. Backup evidence should include the covered data and a dated restore result. Monitoring evidence should include deployed coverage and response responsibilities. These records answer operating questions that a policy’s statement of intent cannot establish.",
           "Have the technical owner verify the evidence and the authorized business signer approve the answer. If a required control is absent or uncertain, use the form’s explanation process and document the gap. Keep the submitted answer, evidence reference, reviewer, and date together in a controlled location. Share only what the recipient needs through an approved channel.",
           "Helm Command supports bounded questionnaire and insurance responses from verified program evidence. The client owns final attestations. Helm does not issue certifications, audit opinions, insurer decisions, or regulatory approvals."
         ]
@@ -569,7 +569,7 @@ export const articles: Article[] = [
         "h": "A practical New Jersey buyer checklist and downloadable scorecard",
         "ps": [
           "Before requesting quotes, list your users, work locations, email platform, critical applications, current IT owner, next customer or insurance deadline, and the three problems you most need solved. Decide whether you need general IT, a security layer, or both.",
-          "Give each shortlisted vendor the same scope. Ask for a sample redacted report, a responsibility map, an incident-escalation walkthrough, an explanation of how it protects its own access to your systems, and the full contract economics. Compare onboarding, minimums, extra devices, onsite work, separately billed projects, annual adjustments, renewal notice, and exit support.",
+          "Send shortlisted vendors the same scope so their proposals can be compared. Request a redacted sample report, responsibility map, fictional incident-escalation walkthrough and explanation of how the vendor protects its access to your systems. Then check the full contract cost: onboarding, minimums, extra devices, onsite work, separately billed projects, annual adjustments, renewal notice and exit support.",
           {
             "text": "Download the one-page vendor evaluation scorecard (PDF). It compares eight criteria using a 0 to 2 evidence scale and includes a space for unresolved gaps and the next decision. Use one copy per vendor. A score helps organize judgment; it is not a certification or a substitute for reading the agreement.",
             "links": [
@@ -580,7 +580,7 @@ export const articles: Article[] = [
             ]
           },
           {
-            "text": "If you want an initial view of Helm’s free offering, start with the free scan. It checks publicly reachable email and web configuration for a domain you control without credentials. It is a limited starting check, not an internal security assessment, device audit, or compliance determination.",
+            "text": "For an initial view of your domain’s public configuration, start with the free scan. It checks publicly reachable email and web configuration for a domain you control without credentials. It is a limited starting check, not an internal security assessment, device audit, or compliance determination.",
             "links": [
               {
                 "phrase": "free scan",
@@ -588,7 +588,7 @@ export const articles: Article[] = [
               }
             ]
           },
-          "Bring the findings and your responsibility map to a fit conversation with the relevant IT or security provider. When Helm cannot responsibly confirm fit or scope from the initial conversation, bounded paid discovery costs $2,500 to $7,500 and is credited to the first service year if you proceed. End that conversation with a named owner, written next step, and date."
+          "Take the findings and responsibility map to the relevant IT or security provider. If the initial Helm conversation cannot establish fit or scope, bounded paid discovery costs $2,500 to $7,500, which may be credited toward the first service year when stated in the service order. Agree on the responsible owner, written next step and date before ending the discussion."
         ]
       }
     ]

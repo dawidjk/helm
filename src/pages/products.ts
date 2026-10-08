@@ -47,12 +47,12 @@ export const productList: Product[] = [
       },
       {
         title: 'One monthly security report',
-        body: 'Helm brings the available signals into one automated monthly view so leaders can see what is covered, what changed, and which action belongs with the business or its IT provider.',
+        body: "Helm combines the available security signals in one automated monthly report. Leaders can see what is covered, what changed, and which actions the business or its IT provider needs to take.",
       },
     ],
     how: [
-      {num: '1', title: 'Confirm the standard fit', body: 'We confirm user count, supported email and identity platforms, covered workstations, current IT ownership, and any exclusions before an order is signed.'},
-      {num: '2', title: 'Deploy the protection', body: 'Helm follows a standardized onboarding runbook across the security platforms, records the covered scope, and provides the first evidence baseline.'},
+      {num: '1', title: 'Confirm the standard fit', body: "We confirm user count, supported email and identity platforms, covered workstations, who handles your IT, and any exclusions before an order is signed."},
+      {num: '2', title: 'Deploy the protection', body: "Helm follows a standard onboarding process across the security platforms, records the covered scope, and provides the first evidence baseline."},
       {num: '3', title: 'Monitor and report', body: 'The platforms operate continuously within their stated scope. Helm reviews exceptions and sends one monthly report. Quarterly leadership reviews and open-ended advisory work are not included.'},
     ],
     faqs: [
@@ -96,12 +96,12 @@ export const productList: Product[] = [
       },
       {
         title: 'Coordination without an IT takeover',
-        body: 'Helm follows security actions through with the responsible teams. Your existing provider or internal staff still owns help desk, administration, patching, procurement, and routine remediation unless a separate written scope says otherwise.',
+        body: "Helm follows up on security actions with the responsible teams. Your existing provider or internal staff still owns help desk, administration, patching, procurement, and routine remediation unless a separate written scope says otherwise.",
       },
     ],
     how: [
       {num: '1', title: 'Confirm the fit', body: 'We review the business pressure, leadership sponsor, current IT owner, required frameworks, systems in scope, and coordination load. Both sides agree on boundaries before detailed design.'},
-      {num: '2', title: 'Build the program baseline', body: 'Helm deploys the covered Core stack, documents responsibilities and evidence, establishes the risk register, and sequences the first 12-month roadmap.'},
+      {num: '2', title: 'Build the program baseline', body: "Helm deploys the covered Core stack, documents responsibilities and evidence, establishes the risk register, and sets the order of work for the first 12-month roadmap."},
       {num: '3', title: 'Run the cadence', body: 'Helm maintains the evidence and roadmap, prepares the agreed questionnaire responses, leads quarterly leadership reviews, and tracks assigned remediation to a named owner.'},
     ],
     faqs: [

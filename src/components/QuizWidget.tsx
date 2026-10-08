@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {Button} from '@astryxdesign/core/Button';
 import LeadForm from './LeadForm';
@@ -144,8 +144,8 @@ function getTier(score: number): Tier {
   return {
     key: 'prepared',
     label: 'Prepared',
-    headline: 'The main controls are in place',
-    copy: 'Keep them current as payment processes, employees, vendors, and AI tools change. Make sure insurance and customer-security answers continue to match the controls the business is using.',
+    headline: 'Your answers suggest stronger overall readiness',
+    copy: 'Review any answers marked Gap or Partial, and keep your controls current as payment processes, employees, vendors, and AI tools change. Make sure insurance and customer-security answers continue to match the controls the business is using.',
   };
 }
 
@@ -200,6 +200,12 @@ export default function QuizWidget() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<(number | null)[]>(() => Array(QUESTIONS.length).fill(null));
   const [submitted, setSubmitted] = useState(false);
+  const contentHeading = useRef<HTMLHeadingElement>(null);
+  const hasNavigated = useRef(false);
+
+  useEffect(() => {
+    if (hasNavigated.current) contentHeading.current?.focus();
+  }, [currentIndex, submitted]);
 
   const question = QUESTIONS[currentIndex];
   const isLast = currentIndex === QUESTIONS.length - 1;
@@ -214,11 +220,15 @@ export default function QuizWidget() {
   };
 
   const goBack = () => {
-    if (currentIndex > 0) setCurrentIndex((i) => i - 1);
+    if (currentIndex > 0) {
+      hasNavigated.current = true;
+      setCurrentIndex((i) => i - 1);
+    }
   };
 
   const goNext = () => {
     if (selectedIndex === null) return;
+    hasNavigated.current = true;
     if (isLast) {
       setSubmitted(true);
       return;
@@ -242,7 +252,7 @@ export default function QuizWidget() {
               <div className="quiz-score-num">{score}</div>
               <div className="quiz-score-max">out of 100</div>
             </div>
-            <h2 className="quiz-tier-headline">{tier.headline}</h2>
+            <h2 ref={contentHeading} tabIndex={-1} className="quiz-tier-headline">{tier.headline}</h2>
             <p className="quiz-tier-copy">{tier.copy}</p>
           </div>
 
@@ -270,7 +280,7 @@ export default function QuizWidget() {
 
           <div className="quiz-cta">
             <p className="quiz-cta-intro">
-              Check the public email controls behind your score with the free domain scan.
+              Use the free domain scan to review public email configuration. It cannot verify your quiz answers or internal controls.
             </p>
             <LeadForm source="quiz" cta="Run my free scan" compact />
             <p className="quiz-cta-alt">
@@ -311,7 +321,7 @@ export default function QuizWidget() {
 
         <div className="quiz-question">
           <div className="quiz-question-category">{question.category}</div>
-          <h2 className="quiz-question-text">{question.text}</h2>
+          <h2 ref={contentHeading} tabIndex={-1} className="quiz-question-text">{question.text}</h2>
           <div className="quiz-options">
             {question.options.map((opt, optIndex) => (
               <button

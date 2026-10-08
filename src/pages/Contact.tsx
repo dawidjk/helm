@@ -90,7 +90,7 @@ export default function Contact() {
         throw new Error(
           typeof response?.error === 'string'
             ? response.error
-            : 'Something went wrong. Please try again.',
+            : 'We could not confirm your message was sent. Please try again.',
         );
       }
       setState('sent');
@@ -104,7 +104,7 @@ export default function Contact() {
       setErrorMessage(
         error instanceof Error
           ? error.message
-          : 'Something went wrong. Please try again.',
+          : 'We could not confirm your message was sent. Please try again.',
       );
       setState('error');
     } finally {
@@ -123,11 +123,11 @@ export default function Contact() {
         <HeroBackdrop kind="brand-static" />
         <div className="wrap">
           <h1 className="reveal hero-h1-sm">
-            Talk to a human.
+            Talk with Helm.
           </h1>
           <p className="sub reveal d1">
             Tell us a little about your business. A Helm executive will respond during
-            business hours with a straight answer.
+            business hours about fit and next steps.
           </p>
         </div>
         <ScrollCue />
@@ -154,7 +154,7 @@ export default function Contact() {
         </div>
         {sent ? (
           <div className="contact-done reveal" role="status">
-            <h3>✓ Message received.</h3>
+            <h2>✓ Message received.</h2>
             <p>A Helm executive will reply during business hours from hello@helmsecured.com.</p>
           </div>
         ) : (
@@ -229,12 +229,12 @@ export default function Contact() {
               <span className="cf-note" role="status" aria-live="polite">
                 {turnstileToken || turnstileTimedOut
                   ? 'A Helm executive reviews every message.'
-                  : 'Verifying you’re human… Send unlocks in a moment.'}
+                  : 'Waiting for the security check to finish. You can then send your message.'}
               </span>
             </div>
             {!turnstileToken && turnstileTimedOut && (
               <div className="lead-form-error" role="alert">
-                Verification is taking longer than usual. If no check appeared
+                The security check is taking longer than usual. If no check appeared
                 above, a privacy extension or slow connection may be blocking
                 it. You can email us directly instead:{' '}
                 <a href="mailto:hello@helmsecured.com">hello@helmsecured.com</a>

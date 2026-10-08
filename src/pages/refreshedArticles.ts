@@ -14,7 +14,7 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "An accounting firm can have security tools in place and still struggle to show who reviews the controls, tracks exceptions and prepares customer answers. Choosing between a standardized protection stack and program ownership depends on whether those responsibilities already have an owner.",
+    "intro": "An accounting firm can have security tools and still leave a partner chasing control reviews, unresolved exceptions and customer answers. If someone already owns that work, a standardized protection stack may fit. If it keeps falling between partners and IT, compare the program ownership included in Command.",
     "lead": [
       {
         "text": "For New Jersey accounting and tax firms, begin with client information, payment workflows and the systems supporting time-sensitive work. Keep the detailed written-plan review in the existing WISP checklist.",
@@ -26,7 +26,7 @@ export const refreshedArticles: Article[] = [
         ]
       }
     ],
-    "takeaway": "Choose a standardized stack when program work already has an owner. Compare Command when recurring risk, evidence and coordination need ownership.",
+    "takeaway": "If the firm already owns recurring risk decisions, evidence and coordination, compare Core's standardized stack. If that work lacks an owner, review Command's program scope.",
     "sections": [
       {
         "h": "Establish the obligations for your practice",
@@ -44,7 +44,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Assign a firm owner for the program and identify which records IT must provide. A written plan should describe the firm's actual practices and remaining work rather than language copied from a vendor's brochure."
+          "Give one person at the firm responsibility for the program, then agree which records IT will supply. The written plan needs to describe what staff and IT actually do, including work still outstanding. Copying a vendor's description of its tools will leave those responsibilities unexplained."
         ]
       },
       {
@@ -112,8 +112,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Map the systems behind the client workflow",
         "ps": [
-          "An accounting firm's information can extend beyond its email platform. List tax and accounting applications, document portals, shared storage and the devices used by staff. Include temporary workers and outside specialists deliberately. A protection report for the primary tenant cannot establish coverage of an independent client portal.",
-          "For each important workflow, name its business owner and technical administrator. The owner explains how staff use the information and what interruption would affect. IT identifies access, configuration and recovery dependencies. That shared view helps define which parts of a proposed security service are relevant.",
+          "Start with the systems staff use to handle client work: tax and accounting applications, document portals, shared storage and devices. Include temporary workers and outside specialists in that inventory. Otherwise, a protection report for the primary email tenant may look complete while an independent client portal remains outside its coverage.",
+          "Once those systems are listed, name the business owner and technical administrator for each important workflow. The business owner can explain how staff use the information and what an interruption would affect. IT can identify the access, configuration and recovery dependencies. Use their explanations to decide which parts of the proposed security service apply.",
           "Review one client-document journey from receipt through retention or disposal. Identify approved transfer methods, where working copies are created and who can access them. Use fictional records for any demonstration. The exercise should expose an unclear handoff without spreading actual taxpayer or client data.",
           "Record unknowns as work to resolve. If nobody can confirm who administers a specialist application, assign that question before claiming it is protected. Service fit depends on supported platforms and a usable operating arrangement, not only employee count."
         ]
@@ -122,7 +122,7 @@ export const refreshedArticles: Article[] = [
         "h": "Separate a written plan from operating evidence",
         "ps": [
           "A written plan records the firm's intended safeguards and responsibilities. Evidence helps establish what is operating within a defined population and period. Keep them connected: a procedure about staff departures should have an owner and records showing how completed departures were handled.",
-          "Review broad statements before using them externally. An assertion that all devices are protected needs a device population and deployment evidence. A statement that backups are tested needs a workload, test date and result. A purchased subscription or annual policy approval supports a different claim.",
+          "Before telling a customer that all devices are protected, check the device list against deployment records. For a claim that backups are tested, identify the workload, test date and result. A subscription receipt shows that a tool was purchased; an annual policy approval shows that a policy was approved. Neither establishes those operating facts.",
           "Keep exceptions visible. An unsupported device, a delayed access change or a recovery test awaiting IT needs an owner and next action. Do not remove the exception from a customer response merely because the firm intends to correct it. Future work belongs in the roadmap until verified.",
           "Use the detailed WISP resource with the responsible adviser for rule-specific decisions. This service comparison cannot determine every firm's legal obligations. The practical buying question is who will maintain the program record, check evidence and bring unresolved gaps to the person authorized to decide."
         ]
@@ -130,17 +130,17 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Assess whether internal ownership is sustainable",
         "ps": [
-          "A partner can own the security program without personally administering every system. The role needs a routine for receiving information, making decisions and following up with IT. Ask how much time the partner can actually allocate and who covers the role during an absence.",
-          "For a hypothetical 30-person practice, internal ownership could work if IT supplies current records, a manager maintains the exception list and partners resolve spending decisions. Core would supply the defined protection layer. This example describes an operating arrangement, not a claim that size alone determines the correct service.",
-          "Test the arrangement during a demanding period. If every questionnaire is postponed until after filing deadlines, identify whether the problem is missing evidence, limited review time or unclear approval. Those constraints may require different solutions. Adding more tools will not automatically provide an evidence owner.",
+          "A partner can own the security program without personally administering every system. The role needs a routine for receiving information, making decisions and following up with IT. Ask how much time the partner can allocate and who covers the role during an absence.",
+          "For a hypothetical 30-person practice, internal ownership could work if IT supplies current records, a manager maintains the exception list and partners resolve spending decisions. Core would supply the defined protection layer. Headcount alone does not determine the correct service.",
+          "Check how this arrangement holds up during filing deadlines. If questionnaires keep getting postponed, find out what blocks them. Missing evidence calls for different work than a partner with no review time or an unclear approval route. Buying more tools will leave those problems unresolved unless someone takes responsibility for the evidence.",
           "Discuss the same issue with a larger firm before assuming it needs Command. Some larger organizations have a capable internal program function. Others have recurring gaps across several teams. Evaluate the work and complexity against the qualified fit instead of treating the user-count ranges as automatic tier boundaries."
         ]
       },
       {
         "h": "Price the two models over the same scope",
         "ps": [
-          "At the published Core rate, a fictional 30-covered-user calculation is $3,750 per month before separately scoped work or applicable charges. A smaller calculation below $2,500 would still be subject to the published minimum. Neither example is a quote; supported platforms, coverage and written terms need confirmation.",
-          "Compare that recurring stack cost with Command's program scope rather than subtracting one price from the other and calling the difference an advisory fee. Command is reviewed for fit and complexity. Its service order should describe the covered population, coordination, evidence work and questionnaire limits.",
+          "For a fictional firm with 30 covered users, the published Core rate works out to $3,750 per month before separately scoped work or applicable charges. A smaller calculation below $2,500 would still be subject to the published minimum. Neither example is a quote; supported platforms, coverage and written terms need confirmation.",
+          "Compare what each proposal leaves your firm responsible for. Subtracting Core's price from Command's price will not isolate an advisory fee, because Command is scoped after a review of fit and complexity. Its service order should explain the covered population and the limits on coordination, evidence work and questionnaires.",
           "Put retained IT charges, transition work, licensing changes and specialist exclusions in the same worksheet. Confirm contract duration, renewal terms and price changes using the proposal. Do not assume that a monthly figure means the service can be canceled month to month.",
           "Avoid assigning a cash value to every hour saved unless the cost actually changes. Reduced evidence-chasing may free partner or IT capacity. That can support the business case, but label it as capacity and use the firm's own time records if you quantify it."
         ]
@@ -148,17 +148,17 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Plan changes around the accounting calendar",
         "ps": [
-          "Ask IT which periods make disruptive changes difficult and which controls can be improved safely before them. Some urgent findings still require prompt action. The calendar informs sequencing; it should not become an automatic reason to defer every security task until the quiet season.",
+          "Ask IT which periods make disruptive changes difficult and which controls can be improved safely beforehand. Use that calendar to sequence the work. Urgent findings may still need prompt attention, so give each proposed delay a reason instead of postponing every task until the quiet season.",
           "For an access change, check the required license, enrollment and recovery procedure before rollout. For a backup change, confirm workload coverage and arrange an authorized restore check. Name who can approve the implementation window and what evidence will show completion.",
           "At onboarding, reconcile eligible users and devices with the service records. Document unsupported applications and any separate protection. Establish a trusted reporting route and an escalation contact who can act when the principal partner is unavailable.",
-          "Set an early review to resolve onboarding exceptions. A signed contract is not the acceptance test for coverage. Review actual deployment, reporting access and the handoff to existing IT. Keep the firm's responsibility map available for new staff and changes in providers."
+          "Schedule an early review of onboarding exceptions. Check actual deployment, access to reports and the handoff to existing IT before accepting coverage as complete. Keep the responsibility map available as staff or providers change; the signed contract alone cannot show whether those handoffs worked."
         ]
       },
       {
         "h": "Use a specific unfinished task to make the decision",
         "ps": [
           "Bring a redacted questionnaire, a pending restore test or an unresolved access review to the fit discussion. Ask who would do each step under Core and under Command. Identify where the firm's own owner or IT provider must act and where separately scoped work is required.",
-          "Request a fictional sample monthly report and, for Command, a sample risk record and leadership agenda. Check whether they help the partners approve work and understand exceptions. The useful output is an operating decision, not a larger pile of documents.",
+          "Ask for a fictional monthly report and, for Command, a sample risk record and leadership agenda. Check whether partners can use them to understand an exception and approve the next action. If the samples leave that unclear, ask how the proposed service will support those decisions.",
           "Choose the arrangement whose retained responsibilities your firm can sustain. Record the next review date, the person accountable for it and the evidence expected. Revisit the choice when client requirements, staff structure or supported systems change.",
           "For seasonal staffing, check onboarding and departure dates against the covered roster. Assign who approves temporary access and who verifies removal after the engagement. Keep this task visible even when the permanent headcount does not change."
         ]
@@ -183,13 +183,13 @@ export const refreshedArticles: Article[] = [
       "label": "Discuss an AI workflow",
       "to": "/contact/?service=secure-ai-adoption"
     },
-    "intro": "Before an AI tool can summarize a folder, someone must decide whether it should have access to that folder. For a professional-services firm, the answer depends on the documents, the task, the people using the tool, and the services receiving the data. A business subscription alone does not approve the use.",
+    "intro": "Before connecting an AI tool to business documents, decide which documents it may use and who should receive the resulting work. A useful task can still involve confidential information or access the firm has not approved. Review the proposed connection, the users and any services receiving the data before enabling it. A business subscription alone does not settle those permissions or confidentiality questions.",
     "takeaway": "Review access, confidentiality, storage, model-training terms, and connected services separately. Start with approved low-sensitivity material and require a person to check the output before it is used.",
     "sections": [
       {
         "h": "Define the documents and permitted use",
         "ps": [
-          "Name the workflow, document owner, intended users, and expected output. Identify confidential client information, personal information, and material subject to contractual restrictions. Have the responsible person confirm what the firm is allowed to process and share. This decision should happen before an upload or connection.",
+          "Start with the task: who needs the output, which documents it requires and who owns those documents. Before uploading them, check for client confidentiality, personal information and contractual restrictions. The information owner should approve the processing and sharing the task involves.",
           "For example, a law firm could first test an internal checklist using approved office procedures with no matter files. An insurance agency could use synthetic correspondence instead of policyholder records. Removing a client’s name may leave identifying facts elsewhere, so do not treat a quick redaction as automatic approval."
         ]
       },
@@ -205,7 +205,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Ask your IT provider to inspect group membership, shared links, guest access, and the permissions requested by each connection. Prefer the smallest approved document set that can answer the question. Confirm whether a connection can only read or can also create, edit, send, or delete information.",
+          "Review those source permissions with your IT provider. Check group membership, shared links and guest access, then examine the permissions each connection requests. Limit the test to the smallest approved document set that can answer the question. Check its actions too: a connection may be able to create, edit, send or delete information as well as read it.",
           "Write down who approves access and who removes it when the test ends or a staff member leaves. Test with a normal staff account, not only an administrator’s account."
         ]
       },
@@ -230,7 +230,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "For the exact product and license under consideration, record what is stored, where it is processed, who can retrieve it, how long it remains, and what deletion does. Check files, prompts, outputs, and logs separately. Ask IT to verify which controls your subscription actually includes and how they are configured."
+          "For the exact product and license you are considering, make a record of storage, processing location, retrieval access, retention period and deletion behavior. Check files, prompts, outputs and logs separately because the answer may differ for each. IT should verify both that your subscription includes the required controls and that those controls are configured."
         ]
       },
       {
@@ -275,8 +275,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Draw the data path before approving a connection",
         "ps": [
-          "List the source repository, the person initiating the task, the AI platform and any connected services. Record where an input, generated response and interaction log may be stored. Add the person receiving the finished output. This simple map prevents a review from focusing only on the original folder while overlooking the copied summary.",
-          "Distinguish a manual upload from an ongoing connection. An upload supplies selected material; a connection may make additional documents discoverable over time. Ask whether it indexes content, follows changes or requests permissions beyond the test folder. Confirm the behavior for the exact product rather than assuming all connectors operate alike.",
+          "Follow the documents through the proposed task: from their repository to the user, AI platform, connected services and recipient of the finished output. Note where inputs, responses and interaction logs may remain. The resulting summary is another copy to protect, even if the original folder has the right permissions.",
+          "That path differs between a manual upload and an ongoing connection. An upload supplies selected material; a connection may make more documents discoverable as the repository changes. Ask whether the exact product indexes content, follows updates or requests access beyond the test folder. Connector behavior varies.",
           "Review actions separately from reading. A connection able to edit records, send messages or delete files has a different consequence from one that retrieves information for a draft. Leave actions outside the approved purpose disabled where the platform allows it. If the requested permissions cannot be limited appropriately, reconsider the connection.",
           "Include other recipients in the review. An approved platform does not automatically approve every third-party agent or integration available inside it. Record each service’s purpose and data handling before enabling it for company information."
         ]
@@ -284,17 +284,17 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Check permissions as an ordinary user",
         "ps": [
-          "Choose test accounts that represent the intended users. Ask IT to inspect which documents each account can find through normal access and through the proposed AI workflow. An administrator’s successful test tells you little about whether an ordinary employee can see only the material intended for that role.",
-          "Look at group membership, inherited folder permissions, broadly shared links and guest access. Resolve unnecessary access at the source instead of expecting a prompt instruction to serve as a permission boundary. Telling a tool not to reveal a file is weaker than removing access the user should not have.",
-          "For an illustrative test, create a set of approved dummy documents with clearly different access rules. Confirm that a permitted user can retrieve the intended material and that an account without permission cannot retrieve it. Keep the test controlled; do not use real confidential files to find out whether access isolation works.",
+          "Once IT has reviewed the permissions, test them with accounts representing the intended users. Check what each account can find both through normal access and through the AI workflow. An administrator's successful test will not establish what an ordinary employee can retrieve.",
+          "Check inherited permissions, group membership, broadly shared links and guests. If any of those grant unnecessary access, correct the source permissions. A prompt telling the tool not to reveal a file cannot replace a permission boundary that prevents the user from accessing it.",
+          "Create a set of approved dummy documents with clearly different access rules for the test. Confirm that a permitted user can retrieve the intended material and that an account without permission cannot retrieve it. Keep the test controlled; do not use real confidential files to find out whether access isolation works.",
           "Record the account, expected result and observed result. If the result is unexpected, stop the connection and investigate with IT. Do not broaden permissions to make the demonstration succeed before the document owner has approved that change."
         ]
       },
       {
         "h": "Decide which source is authoritative",
         "ps": [
-          "An AI tool can summarize an obsolete document accurately and still produce the wrong business instruction. Before connecting a folder, identify current procedures, superseded versions and drafts. Give each approved document an owner and a review date where appropriate.",
-          "Keep source references in the output when the platform supports them, then verify the references. A link to a document does not prove that the claim next to it appears there. The reviewer should check the actual passage and any surrounding exception that changes its meaning.",
+          "Correct access still leaves a content question: which documents should the answer rely on? A tool can summarize an obsolete procedure accurately and produce the wrong instruction. Identify current procedures, superseded versions and drafts before connecting the folder, with owners and review dates where appropriate.",
+          "Where the platform supports source references, retain them and check the passages they point to. The reviewer needs to confirm that the cited passage supports the claim and that a surrounding exception does not change it. A document link by itself cannot do that review.",
           "For a policy summary, define which document controls when sources conflict. Resolve that conflict with the responsible owner before using the generated answer. Do not ask the model to decide which legal obligation or company rule should prevail based only on its preferred wording.",
           "Also consider what belongs in the output. A summary may expose sensitive information to a wider audience than the original document. Its destination needs an access review too, particularly if staff intend to paste it into email, chat or a shared presentation."
         ]
@@ -302,9 +302,9 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Keep a usable approval record",
         "ps": [
-          "Record the platform, account type, permitted data, purpose, users and reviewer. Note the configuration checked, the sources used to assess vendor terms and the date of review. Assign someone to reopen the decision when the workflow or connected service changes.",
-          "The record should answer several separate questions: is the firm allowed to provide the data, does the product support the required controls, are those controls configured, and has the intended use been approved? A procurement approval or business subscription answers only part of that review.",
-          "Keep contractual or professional-confidentiality questions with the responsible adviser. The operational reviewer can identify that a document contains client records or contractual restrictions. They should not quietly resolve uncertain disclosure rights by assuming that an enterprise license makes every use acceptable.",
+          "Record the platform, account type, permitted data, purpose, users and reviewer. Note the configuration checked, the sources used to assess vendor terms and the date of review. Assign someone to review the approval again when the workflow or connected service changes.",
+          "Keep four decisions distinct in the approval record: whether the firm may provide the data, whether the product supports the required controls, whether they are configured and whether this use has been approved. A procurement decision or business subscription can address part of that review without settling the rest.",
+          "Refer uncertain contractual or professional-confidentiality questions to the responsible adviser. An operational reviewer can identify client records and restrictions, but should not decide that an enterprise license permits their disclosure. Record the unresolved question until the appropriate owner answers it.",
           "Define stop conditions in advance. Unexpected access, an unapproved recipient, uncertain retention or output that exposes information to the wrong audience should trigger a review. Staff need a named contact and a practical way to stop using the workflow while that happens."
         ]
       },
@@ -313,8 +313,8 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Write down how the organization disconnects the source, revokes the integration and removes unnecessary account permissions when the test ends. Confirm what happens to any indexed or uploaded content under the platform’s documented controls. Disconnecting a source and deleting retained copies are separate questions.",
           "Check offboarding as well. Removing an employee from a source folder may not address information they previously copied into prompts or outputs. Your retention, account and incident processes should account for those records without promising that every copy can be instantly erased.",
-          "Test the removal procedure using approved dummy material. Ask IT to confirm that the access grant is gone and that the account can no longer retrieve the intended source. Record any remaining retention dependency rather than declaring deletion complete from a disappearing button or chat entry.",
-          "Keep the review proportional to the task. A narrow test using synthetic information needs a smaller approval record than an ongoing connection to a business repository. The purpose is to make the real data movement and responsibilities clear, so the firm can make an informed decision before granting access."
+          "Use approved dummy material to test removal. IT should verify that the grant has been revoked and that the account can no longer retrieve the source. Record any retention dependency separately; a disappearing chat entry or button is not evidence that all stored copies were deleted.",
+          "Scale the record to the task. A narrow synthetic-data test needs less documentation than an ongoing connection to a business repository. In either case, the firm needs to understand where information moves and who is responsible before granting access."
         ]
       }
     ],
@@ -331,13 +331,13 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "A well-written message can still ask an employee to hand over credentials, disclose client information or move money without authorization. Grammar and presentation may supply clues, but they do not establish whether the requested action is legitimate. Staff need a way to verify the action through an approved route.",
+    "intro": "A polished email can ask for a password, confidential client information or an unauthorized payment. Spelling and grammar offer clues, but they cannot verify the request. Staff need an approved way to check the action being requested, even when the message reads well.",
     "sections": [
       {
         "h": "Start with what the message asks you to do",
         "ps": [
-          "Identify the requested action before evaluating the writing. Does it ask for a password, an authentication approval, an attachment upload, a payment change or access to a new application? Determine whether that action belongs in the firm's normal workflow and whether the sender has the relevant authority.",
-          "An expected invoice and an unexpected banking change are different decisions even when they arrive in the same thread. A familiar client requesting a file and an unfamiliar destination for that file also require separate consideration. The message's context can be accurate while the requested next step is unauthorized.",
+          "Read the requested action first. A password request, authentication approval, upload, payment change and new application access each need a different check. Compare the request with the firm's normal procedure and confirm that the sender has authority to ask for it.",
+          "An invoice can be expected even when the banking change in its thread is not. Verify the change separately. The same applies to a familiar client asking for a file: knowing the client does not confirm that a new upload destination is authorized. Accurate context can make the next instruction convincing without making it legitimate.",
           "Give employees concrete questions: was this action expected, where is the approved record and which trusted contact can confirm it? They should not have to infer intent from a writing style or decide whether an AI model produced the text. A suspicious request can be reported without identifying the technology behind it."
         ]
       },
@@ -345,14 +345,14 @@ export const refreshedArticles: Article[] = [
         "h": "Keep useful clues in their proper place",
         "ps": [
           "Unexpected urgency, secrecy, a new destination or pressure to bypass approval can justify a pause. So can an unusual attachment, changed domain or request for information unrelated to the task. These are clues requiring verification, not a formula that identifies every malicious message.",
-          "A message with no obvious clues may still be fraudulent if it comes from a compromised real account. Conversely, a legitimate client may write hurriedly or make a spelling mistake. Avoid training staff to approve polished messages and reject imperfect ones. Teach the action and verification rule that applies in either case.",
+          "A compromised real account can send fraudulent instructions without obvious warning signs. A legitimate client can also write hurriedly or make a spelling mistake. Staff need the same verification rule in either case. Train them to check the requested action regardless of how well the message is written.",
           "On a phone, a display name or shortened link can make a mismatch harder to notice. Use an approved application or independently saved address for the task where possible. A link's appearance alone should not become authorization to enter credentials or upload confidential files."
         ]
       },
       {
         "h": "Verify through an established route",
         "ps": [
-          "For an account or login issue, open the approved application directly or use the organization's known support route. Do not supply a password in response to an email asking IT to check it. Have the administrator define how legitimate support requests are communicated so staff can compare an unusual request with that procedure.",
+          "For an account or login issue, open the approved application directly or use the organization's known support route. Do not send a password in reply to an email claiming that IT needs it to check your account. Have the administrator define how legitimate support requests are communicated so staff can compare an unusual request with that procedure.",
           {
             "text": "For a payment instruction, call a trusted number established outside the request and confirm the relevant details with an authorized person. Follow the documented approval rule before release. The invoice-fraud guide explains that process and the records connecting verification to the executed payment.",
             "links": [
@@ -378,7 +378,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Likewise, an external-sender label identifies a message from outside the organization under the configured behavior. It does not establish that every external message is dangerous or that an unlabeled message is safe. Explain the label's purpose without asking it to carry a broader trust decision."
+          "An external-sender label shows that the message came from outside the organization, according to the configured rule. Staff can use it as context when reviewing a request. It cannot establish that an external message is dangerous or that a message without the label is safe."
         ]
       },
       {
@@ -386,7 +386,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Have IT review authentication enforcement and allowed methods for the relevant accounts. Stronger methods can reduce particular attack paths while requiring an operating plan for enrollment and recovery. Check administrative, vendor and independent application accounts as appropriate to the firm's environment.",
           {
-            "text": "The MFA comparison distinguishes method capabilities. A general statement that the firm has MFA should be supported by the actual policy and account population. Exceptions and alternate access paths matter when the control is being evaluated.",
+            "text": "The MFA comparison explains what different methods can do. To establish the firm's actual coverage, check the policy, accounts it applies to, exceptions and alternate access paths. Saying that the firm has MFA leaves those questions unanswered.",
             "links": [
               {
                 "phrase": "MFA comparison",
@@ -402,14 +402,14 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Give staff one clear reporting route for suspicious messages and requests. Explain what information to provide and what to do while waiting. A process that requires employees to diagnose the threat before reporting can discourage useful early reports.",
           "Avoid forwarding live suspicious attachments across the firm for opinions. Use the platform's approved reporting function or the route established by IT and the security provider. Preserve the original information in a way the authorized team can use without unnecessary redistribution.",
-          "Provide feedback when appropriate. An employee who reports a legitimate but confusing message may reveal a workflow that needs clearer instructions. An employee who reports after clicking still supplies useful information. The response should focus on prompt fact gathering and corrective action."
+          "Feedback can help improve the reporting process. A legitimate but confusing message may expose instructions that staff cannot follow. A report made after clicking can still help the authorized team establish what happened and take corrective action. Gather those facts promptly, without making staff diagnose the threat first."
         ]
       },
       {
         "h": "Train around the business decision",
         "ps": [
           "Use harmless training materials reflecting the firm's actual tasks. A tax practice can test document exchange; a contractor can test supplier changes; a law firm can test matter-related payment instructions. The useful measure is whether staff follow the intended verification and reporting steps.",
-          "Do not present a single simulation score as a complete security rating. Outcomes depend on the scenario, population and conditions. Record what was tested, how participants responded and what correction is needed. Use the result to improve the process rather than claim that all future phishing will be stopped."
+          "Record the training scenario, who took part, how they responded and what needs correction. Those conditions explain a simulation score and make it useful for improving the process. The score alone cannot describe the firm's overall security or establish that future phishing will be stopped."
         ],
         "table": {
           "caption": "Train around the business decision",
@@ -444,7 +444,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Respond when an action has already occurred",
         "ps": [
-          "Ask the employee to report promptly and describe the action: opening a message, following a link, entering credentials, approving a prompt, uploading information or releasing money. Those actions can require different responses. Preserve the available facts without assuming every click caused compromise or every lack of symptoms means no issue.",
+          "Ask the employee to report promptly and describe the action: opening a message, following a link, entering credentials, approving a prompt, uploading information or releasing money. Those actions can require different responses. Preserve the available facts without assuming every click caused compromise or treating a lack of symptoms as proof that nothing happened.",
           {
             "text": "Authorized IT and security teams should assess the affected account or device and perform supported containment. The business response owner handles finance, insurer and adviser contacts when relevant. Use the incident-response guide to connect those duties.",
             "links": [
@@ -455,7 +455,7 @@ export const refreshedArticles: Article[] = [
             ]
           },
           {
-            "text": "For a suspected fraudulent transfer, immediate bank contact is time-sensitive. The FBI BEC guidance describes that response and IC3 reporting. Do not delay the financial action while determining whether the message was generated by AI.",
+            "text": "For a suspected fraudulent transfer, contact the bank immediately. The FBI BEC guidance describes that response and IC3 reporting. Do not delay the financial action while determining whether the message was generated by AI.",
             "links": [
               {
                 "phrase": "FBI BEC guidance",
@@ -468,8 +468,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Review the workflow after a useful report",
         "ps": [
-          "A convincing request may succeed because the firm has no trusted contact record, unclear approval authority or an unavailable approved exchange. Fix that specific gap. Adding another warning poster does not supply the missing contact or decision-maker.",
-          "Review the reporting and response handoff with IT and the security provider. Confirm the covered service, required information and urgent contact route. A filtering product that blocks some mail does not necessarily investigate every employee report or perform account recovery. Those duties need written scope.",
+          "When a convincing request gets through, check the workflow it relied on. Staff may have lacked a trusted contact record, a clear approver or a usable document exchange. Repair that gap so the next employee has a way to verify the request. Another warning poster will not supply the missing contact or decision-maker.",
+          "Review the handoff with IT and the security provider: which service covers the report, what information the team needs and how staff reach it urgently. Email filtering does not automatically include investigation of every employee report or account recovery. Assign those duties in the written scope.",
           "Keep technical changes and staff instructions aligned. If IT introduces a new sign-in process, tell staff how legitimate prompts appear and where to obtain help. An unexplained rollout can resemble the unusual messages training asks employees to question."
         ]
       },
@@ -503,8 +503,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Record the action without collecting passwords",
         "ps": [
-          "A useful report identifies the message time, apparent sender, requested action and what the employee actually did. Record whether a link was opened, credentials were entered, a prompt was approved, information was uploaded or money was released. The authorized team can then choose the relevant investigation instead of responding to a vague statement that someone clicked something.",
-          "Do not request the employee's password or authentication code as evidence. Use the approved platform records and reporting method. If the employee cannot supply every detail immediately, record what is known and the next fact-finding step. Accurate uncertainty is more useful than a confident assumption about whether the account was affected. Keep sensitive client content and investigation records in the approved restricted location."
+          "A report should identify the message time, apparent sender and requested action, then describe what the employee did. Opening a link, entering credentials, approving a prompt, uploading information and releasing money call for different investigations. Recording the action lets the authorized team respond to the event instead of trying to interpret 'someone clicked something.'",
+          "Use approved platform records and the reporting method as evidence. Never ask an employee for their password or authentication code. If details are missing, record what is known and who will establish the next fact. Keep client content and investigation records in the approved restricted location. If account impact is uncertain, have the authorized team investigate it."
         ]
       }
     ],
@@ -535,14 +535,14 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "Professional Services",
     "laneTo": "/professional-services",
-    "intro": "A backup job can complete successfully without proving that the business can recover. It may protect only part of the information, depend on an unavailable administrator or take longer to restore than the business can tolerate. A useful restore test makes those limits visible before an incident.",
+    "intro": "A successful backup job tells you that a copy was made. To find out whether the business can use it, you need to restore something. That test may reveal missing information, a dependency on an unavailable administrator or a recovery time the business cannot tolerate.",
     "sections": [
       {
         "h": "Start with the application wording",
         "ps": [
-          "Read the question carefully and define its scope with the broker where necessary. Does it refer to all critical information, particular systems or a specific testing period? Does it ask for offline storage, immutability, encryption or separation of administrative access? Those are different characteristics.",
+          "Ask the broker to clarify the question's scope when needed. A question about all critical information differs from one about a named system or testing period. Offline storage, immutability, encryption and separate administrative access also describe different properties. Check the wording before gathering a report that answers something else.",
           "Ask the existing IT provider or backup owner to identify the configuration that answers each part. Record the systems included, the date checked and the relevant evidence. If a service covers cloud email and documents, do not use it to answer a question about server, application or device recovery unless those systems are actually covered.",
-          "Keep unknowns visible. If the form provides only yes or no and the true answer requires qualification, request clarification through the broker rather than making the scope sound broader than it is. The organization submitting the application owns the final representation.",
+          "If an answer remains unknown, say so. A yes-or-no form may not have room for a qualification; ask the broker how to handle it before submitting an answer that overstates coverage. The organization submitting the application remains responsible for that representation.",
           {
             "text": "Review coverage and response terms alongside the technical questions. The FTC’s cyber insurance guidance recommends discussing the company’s needs and coverage with its insurance agent. Backup evidence is one part of that discussion, not a substitute for reviewing the policy.",
             "links": [
@@ -560,7 +560,7 @@ export const refreshedArticles: Article[] = [
           "An offline copy is not continuously reachable through the ordinary network connection. An immutable arrangement restricts changes or deletion for a configured period under its supported controls. Encryption protects data through a different mechanism. None of these labels alone proves that the business can restore the required information.",
           "Ask who can change the protection settings, delete copies or shorten retention. Identify which credentials control the backup system and whether compromise of ordinary production access could affect recovery copies. The answer depends on the actual implementation, not the feature name on a proposal.",
           {
-            "text": "CISA recommends offline, encrypted backups of critical data and regular testing of backup availability and integrity in a recovery scenario. That is useful general guidance, not a universal insurance condition. CISA StopRansomware guide.",
+            "text": "The CISA StopRansomware guide recommends offline, encrypted backups of critical data and regular testing of backup availability and integrity in a recovery scenario. That is useful general guidance, not a universal insurance condition.",
             "links": [
               {
                 "phrase": "CISA StopRansomware guide",
@@ -568,7 +568,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Record the limits. An immutable copy can still contain incomplete or unusable information. An offline copy can be out of date. A cloud service can depend on account access that staff cannot recover during a disruption. A restore test should investigate those dependencies rather than assuming the storage label resolves them."
+          "These protections still leave questions for a restore test. An immutable copy can contain incomplete or unusable information, and an offline copy can be out of date. A cloud service may depend on account access that staff cannot recover during a disruption. Test those dependencies as well as the stored copy."
         ]
       },
       {
@@ -584,7 +584,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "For example, a firm may tolerate a short interruption in an archive but need current billing information before the next payment run. That is an illustrative distinction, not a prescribed target. The owners should choose the limits from the business consequences and compare them with the systems’ real capabilities.",
+          "For example, a firm might tolerate a brief interruption in an archive while needing current billing information before the next payment run. The process owners should choose recovery limits from those business consequences, then compare the limits with what the systems can deliver. This example illustrates the decision; it does not prescribe a target.",
           "Do not set an ambitious target merely to make an application answer look strong. If current recovery capability falls short, record the gap, owner and planned action. That is more useful than confusing a desired outcome with a tested one."
         ]
       },
@@ -593,14 +593,14 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Select the system or data set, recovery point, test destination and success criteria. Obtain authorization from the relevant owners. Use an isolated or otherwise approved destination that avoids overwriting production information or exposing sensitive records to an unnecessary audience.",
           "Identify who will perform the restore and who will validate the result. The technical operator can confirm that files or an application were recovered. The business reviewer should confirm that the result is usable for the intended work. Both observations belong in the test record.",
-          "Include access and dependencies. The test may require backup credentials, encryption keys, licenses, application software or a vendor response. Verify that authorized staff can obtain them through a documented route. A recovery plan that depends on the unavailable employee’s personal account needs correction.",
+          "Check the access and dependencies needed to perform that restore. Backup credentials, encryption keys, licenses, application software or a vendor response may all be required. Authorized staff need a documented way to obtain them. If the plan depends on an unavailable employee’s personal account, correct that dependency before relying on it.",
           "State what the test excludes. Recovering one file does not demonstrate full system recovery. A successful application restore in an existing environment does not establish that the environment can be rebuilt from scratch. Scope clarity makes the evidence credible and helps select the next test."
         ]
       },
       {
         "h": "Measure actual recovery and usability",
         "ps": [
-          "Record when the test begins, when the selected information is available and when the business reviewer accepts it. Note active effort and delays where they explain the result. Compare the observed time with the relevant target without hiding dependencies that were supplied in advance.",
+          "Time the test from the start of recovery to availability of the selected information, then to acceptance by the business reviewer. Note active effort and delays so the result can be explained. When comparing it with the target, identify any dependencies supplied in advance; those preparations may affect how long recovery would take during a disruption.",
           "Check completeness and the chosen recovery point. Verify that expected records are present and readable. For an application, use approved functional checks with the application owner rather than declaring success because the service starts or a folder contains files.",
           "Look at permissions and destination security. A restore can recover content while applying access incorrectly. Confirm that the result is available to the intended users and protected from others. Keep any test copies under the required data-handling and retention process.",
           "Document failures and corrections. If the backup was missing a folder or the operator lacked required access, do not erase the failed result after fixing it. Retain the original observation, corrective action and retest outcome. That history shows what changed and supports a more accurate application answer."
@@ -652,16 +652,16 @@ export const refreshedArticles: Article[] = [
       {
         "h": "An illustrative incomplete test",
         "ps": [
-          "Suppose a firm restores a client document successfully in a test folder. This is an illustrative example, not a Helm result. The file recovery confirms that particular content could be retrieved from the selected copy. It does not show whether the firm can operate its client-delivery process after losing identity access and its main application.",
-          "The next test should address the remaining dependencies appropriate to the business priority. The firm may need to verify authorized recovery access, restore an application data set or test the handover to a business reviewer. It should not repeat the same easy file restore and describe repetition as broader recovery proof.",
-          "The insurance answer should reflect the actual test. If the application asks whether critical systems are tested, the team needs to reconcile that wording with the systems covered and disclose unresolved gaps through the appropriate channel."
+          "Suppose a firm successfully restores a client document into a test folder. It has shown that this particular content could be retrieved from the selected copy. The firm still needs to find out whether its client-delivery process could operate after losing identity access and the main application. This is a hypothetical example, not a Helm result.",
+          "Choose the next test around those remaining dependencies and the business priority. It might check authorized recovery access, restore an application data set or include a business reviewer’s handover. Repeating the same file restore can confirm that result again, but it cannot demonstrate broader recovery.",
+          "The insurance answer should reflect the actual test. If the application asks whether critical systems are tested, compare that wording with the systems covered and ask the broker how to disclose unresolved gaps."
         ]
       },
       {
         "h": "Close the test without leaving new exposure",
         "ps": [
           "Decide how the restored test copy will be removed or retained after validation. Record its location, permitted users and disposal owner. A successful test should not leave client information in an unmanaged folder that was created only for the exercise.",
-          "Check temporary accounts and permissions too. Remove unnecessary access through the approved process, and retain the evidence summary in its intended record. If the team needs a test environment for future exercises, assign ongoing ownership and a data-handling rule. That makes the next exercise easier without allowing temporary recovery arrangements to become unreviewed production systems."
+          "Remove unnecessary temporary accounts and permissions through the approved process, then save the evidence summary. If a test environment will remain for future exercises, give it an ongoing owner and data-handling rule. Otherwise a temporary restore arrangement can drift into production use without a review."
         ]
       },
       {
@@ -669,7 +669,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Choose a frequency that reflects system changes, business priorities and any applicable policy or contract conditions. There is no general rule that every insurer requires quarterly tests. A major platform change can justify a new test before the ordinary review date.",
           "Include changes in data locations, permissions, backup configuration and recovery personnel. A test performed before a migration may not represent the current environment. Record which changes require the owner to reopen the recovery review.",
-          "Keep test completion and corrective actions in the reporting process. A calendar entry alone does not show that the exercise occurred. An unresolved failed test should remain visible until it has a responsible owner and an accepted correction."
+          "Report test completion and the status of corrective actions together. A calendar entry shows a plan, not a completed exercise. Keep a failed result visible, with a responsible owner, until the correction has been accepted."
         ]
       },
       {
@@ -701,7 +701,7 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "A website can use HTTPS and still have an outdated content-management system, excessive administrator access or an untested backup. Checking website security therefore needs two views: what an outside visitor can observe and what the website owner can verify inside the hosting and administration systems.",
+    "intro": "HTTPS protects a website connection. It tells you little about whether the site has outdated software, unnecessary administrator access or a usable backup. A useful website review combines what a visitor can see with evidence from the people managing hosting and administration.",
     "lead": [
       "For a professional-services firm, identify the owner of the public website and any separate client portal first. They may have different providers, data and recovery arrangements."
     ],
@@ -711,7 +711,7 @@ export const refreshedArticles: Article[] = [
         "h": "Check the public surface",
         "ps": [
           {
-            "text": "Open the firm's actual domain and confirm that the browser does not report a certificate error. Ask the website administrator to review HTTPS behavior and relevant security headers. HSTS tells supporting browsers to use HTTPS for a host after receiving the policy; Content Security Policy controls which resources a page may load under its configured rules. Neither header proves the application is free of vulnerabilities. Mozilla HSTS documentation, Mozilla CSP documentation.",
+            "text": "Open the firm's actual domain and look for browser certificate errors. Ask the website administrator to check HTTPS behavior and the relevant headers. HSTS tells supporting browsers to use HTTPS after receiving the host's policy. Content Security Policy sets rules for the resources a page may load. Those controls have specific jobs; neither establishes that the application is free of vulnerabilities. Mozilla HSTS documentation, Mozilla CSP documentation.",
             "links": [
               {
                 "phrase": "Mozilla HSTS documentation",
@@ -723,7 +723,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "A public scanner can help identify observable configuration issues. Check its data-handling terms and use it only on domains you own or are authorized to assess. Keep the scan date and scope with the result. A rating should lead to a review of specific findings rather than an unsupported assurance that the site is safe."
+          "A public scanner can flag configuration issues visible from outside the site. Before using one, check its data-handling terms and confirm that you own the domain or have permission to assess it. Save the date and scope with the findings so the administrator knows what was checked. Review those findings individually; the overall rating cannot establish that the site is safe."
         ]
       },
       {
@@ -747,7 +747,7 @@ export const refreshedArticles: Article[] = [
         "h": "Assign findings to the right provider",
         "ps": [
           "A hypothetical New Jersey consulting firm might receive a report showing a missing header while its hosting provider discovers an unsupported plugin. The website administrator should evaluate both findings, decide the appropriate changes and test the site afterward. Applying a copied header policy without testing can break forms or other legitimate features.",
-          "Keep confirmed weaknesses, responsible owners, target dates and closure evidence together. If a finding involves possible client-data exposure, use the incident process and get the appropriate legal and specialist advice before making external claims.",
+          "Record each confirmed weakness with its owner, target date and evidence of the completed repair. If a finding suggests client data may have been exposed, move it into the incident process. Legal and specialist advisers should assess the facts before the firm makes external claims.",
           {
             "text": "Helm's free public-domain scan checks public email and web configuration. It cannot inspect CMS administration, internal access, backup restores or all application vulnerabilities. It is not a penetration test or compliance certification.",
             "links": [
@@ -785,8 +785,8 @@ export const refreshedArticles: Article[] = [
         "h": "Separate the brochure site from client systems",
         "ps": [
           "A public marketing website may collect a name and email address, while a client portal handles confidential documents. Map them separately. Identify the actual domain, hosting provider, administrator, application owner and data destination for each. An assessment of the marketing site does not establish that a separate portal is secure.",
-          "List important third-party components, including forms, appointment tools, analytics and embedded content. Ask who approved each component and who maintains the integration. A form displayed on your site may send information to another provider. The visitor's experience alone does not reveal that data path.",
-          "Check the authoritative administrative contacts. Know who owns the domain registration and hosting account, how renewal notices arrive and who can approve a change. A former agency's account should not be the firm's only route to essential access. Resolve ownership through the authorized provider rather than sharing a password among employees."
+          "Forms, appointment tools, analytics and embedded content can involve providers beyond the website host. List the components, who approved them and who maintains each integration. Then trace where they send information. A form can look like part of your site while delivering its submissions to another provider.",
+          "Confirm the administrative contacts for the domain and hosting accounts. Know who owns the domain registration and hosting account, how renewal notices arrive and who can approve a change. A former agency's account should not be the firm's only route to essential access. Resolve ownership through the authorized provider rather than sharing a password among employees."
         ]
       },
       {
@@ -794,7 +794,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Open the correct site through a trusted address on an updated browser. Check that the intended domain loads and that the browser does not show a certificate warning. Follow common routes such as the contact page and client-portal link. Record unexpected redirects, changed content or unfamiliar destinations for the website owner to investigate.",
           "Use harmless sample data if the owner authorizes a form test. Confirm where the submission arrives and who can access it. Avoid entering real client information into a test. Check whether an attachment is necessary and whether the business has approved the handling of uploaded files.",
-          "HTTPS protects a connection under the relevant protocol and configuration. It does not establish that the receiving business is trustworthy, that the application lacks flaws or that the information will be handled appropriately after submission. Staff should not treat a padlock as approval to upload confidential documents to an unfamiliar site."
+          "HTTPS protects the connection to a website, subject to the protocol and configuration in use. Once information reaches the site, HTTPS tells you nothing about how the receiving business handles it. It also does not establish that the business is trustworthy or the application is free of flaws. A padlock alone is therefore insufficient evidence that an unfamiliar site is suitable for confidential uploads."
         ]
       },
       {
@@ -813,14 +813,14 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "A copied policy can block a legitimate form, image or integration. Have the administrator test proposed changes using a controlled process. The right result is an appropriate policy that works with required business functions, not simply a higher score from one scanner.",
+          "Have the administrator test a proposed header policy against the site’s required features. A copied policy can block a legitimate form, image or integration. Raising a scanner score is useful only if the resulting policy is appropriate and the business functions still work.",
           "When a report identifies a missing header, record the relevant purpose and the proposed action. Avoid treating every warning as equally urgent or assuming every suggested header applies to every deployment. A website owner should explain a material exception with enough detail for the business to understand it."
         ]
       },
       {
         "h": "Ask for evidence behind updates and access",
         "ps": [
-          "For a content-management system, ask who reviews platform, theme and plugin updates. Identify unsupported components and unnecessary extensions. Removing an unused component can be preferable to maintaining it indefinitely, but the administrator should confirm dependencies before changing production.",
+          "Ask the administrator who reviews updates for the content-management system, themes and plugins. The review should identify unsupported components and extensions the site no longer uses. Removing an unused extension can reduce ongoing maintenance, provided the administrator checks its dependencies before changing production.",
           "Review accounts when employees and agencies change. Each administrative account should have an owner and a reason for its privileges. Ask how the provider removes access and preserves any required records. A shared login obscures who made a change and can complicate departure handling."
         ],
         "table": {
@@ -863,7 +863,7 @@ export const refreshedArticles: Article[] = [
         "h": "Examine forms as a business workflow",
         "ps": [
           "Identify what each form requests and why. If the website only needs enough information to arrange a consultation, collecting a detailed confidential narrative may create unnecessary handling work. Decide the appropriate information with the business owner and provide a suitable route for anything more sensitive.",
-          "Check who receives submissions, how they are stored and how long they remain under the firm's approved process. Include email notifications and copies held by the form provider. Do not assume deleting a notification removes every submitted copy. Product behavior and contractual terms need their own review.",
+          "Follow the submission beyond the form itself. Check who receives it, where copies are stored and how long the approved process keeps them. Include email notifications and records held by the form provider: deleting a notification may leave those other copies intact. Confirm the product behavior and contractual terms with the owner.",
           "Test error and success messages with harmless information. A visitor should know whether the submission worked and what to expect next. Avoid exposing internal technical details or echoing sensitive content unnecessarily. Useful confirmation can be concise while giving the visitor a clear next step."
         ]
       },
@@ -871,23 +871,23 @@ export const refreshedArticles: Article[] = [
         "h": "Verify a recovery route before changing the site",
         "ps": [
           "Ask what the backup includes: application content, uploaded files, database and any necessary configuration. Determine what remains outside it, such as a third-party form service or domain account. Name the person permitted to authorize and perform a restore.",
-          "Use a non-production or otherwise approved test to demonstrate that the site can return to a usable state. Check pages, forms and important integrations after recovery. Restoring files without a working database or required configuration may not restore the business function.",
-          "For a change, agree on rollback and the point at which the administrator should use it. A header adjustment, update or plugin removal can affect client-facing behavior. Keep the change record and observed test result so a later failure can be traced without relying on memory."
+          "Demonstrate recovery in a non-production environment or another approved test. After the restore, check pages, forms and important integrations. The files may have returned successfully while a missing database or configuration still prevents the site from doing its job.",
+          "Before making a change, agree on how to roll it back and when the administrator should do so. A header adjustment, update or plugin removal can affect client-facing behavior. Keep the change record and observed test result so a later failure can be traced without relying on memory."
         ]
       },
       {
         "h": "Handle suspected compromise differently from routine findings",
         "ps": [
-          "Unexpected administrator accounts, unauthorized content or suspicious redirects require investigation by the authorized owner and responder. Preserve relevant information and follow the firm's incident process. Do not repeatedly edit the site to make a symptom disappear while the underlying access remains unexplained.",
+          "Unexpected administrator accounts, unauthorized content or suspicious redirects should go to the authorized owner and responder for investigation. Preserve the relevant information and follow the incident process. Repeatedly editing away a symptom can leave the unexplained access behind.",
           "If client information may be affected, have the appropriate advisers assess the facts and obligations. A public report cannot determine every disclosure requirement. Communicate confirmed information through the approved route and avoid declaring the issue harmless before the investigation supports that conclusion.",
-          "Routine findings should still have owners and closure evidence. An unsupported component may need replacement, while a configuration warning may need testing and adjustment. Assign the work to the website provider responsible for that system. A security coordinator can track the decision without becoming the hosting administrator."
+          "Routine findings should still have owners and evidence that the work is complete. An unsupported component may need replacement, while a configuration warning may need testing and adjustment. Assign the work to the website provider responsible for that system. A security coordinator can track the decision without becoming the hosting administrator."
         ]
       },
       {
         "h": "Repeat checks after meaningful changes",
         "ps": [
           "Revisit the public surface and owner evidence after a hosting migration, major application update, new form or provider transition. Record the date and scope of the review. A result obtained before the change may no longer describe the live site.",
-          "For customer answers, explain what was checked and which provider supplies the internal evidence. A clean public result supports a limited statement about observed configuration. A broader answer about access, maintenance or recoverability needs the corresponding administrative records and test evidence."
+          "When answering a customer questionnaire, say what was checked and which provider supplied the internal evidence. Public findings support a statement about the configuration observed at that time. Claims about access, maintenance or recovery also need the administrative records or test results for those controls."
         ]
       }
     ],
@@ -910,13 +910,13 @@ export const refreshedArticles: Article[] = [
       "label": "Discuss an AI workflow",
       "to": "/contact/?service=secure-ai-adoption"
     },
-    "intro": "For a New Jersey accounting, law, insurance, or financial-services firm, a useful first AI question is specific: which recurring internal task takes time, and could an approved tool help? Pick a task you can describe and measure before buying licenses or connecting business documents.",
-    "takeaway": "Choose a frequent internal task with reliable inputs, a named reviewer, and mistakes that are easy to detect and correct. Compare the complete task, including checking time, before deciding whether a pilot deserves a separate scope.",
+    "intro": "At a New Jersey accounting, law, insurance or financial-services firm, start your AI review with one recurring internal task you can describe and measure. Decide what an approved tool would help with before buying licenses or connecting business documents.",
+    "takeaway": "Choose a frequent internal task with reliable inputs, a named reviewer, and mistakes that are easy to detect and correct. Compare the time spent on the complete task, including checking, before deciding whether to separately scope a pilot.",
     "sections": [
       {
         "h": "Define the task and its owner",
         "ps": [
-          "Write down the starting input and the finished output. “Help with administration” is too broad. “Draft an internal onboarding checklist from the current approved procedures” gives staff something they can test. Name the person who owns those procedures and can accept or reject the draft.",
+          "Describe the task from input to finished output. An internal onboarding checklist drafted from current approved procedures gives staff something they can test; a request for help with administration leaves the result undefined. The person who owns those procedures should decide whether the draft is acceptable.",
           {
             "text": "NIST’s AI Risk Management Framework Playbook recommends documenting the intended purpose, expected benefits, costs, and human oversight. For a first workflow, put those decisions on one page before discussing tools.",
             "links": [
@@ -932,7 +932,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Measure frequency and current effort",
         "ps": [
-          "Count how often the task happens in a normal month, including seasonal differences. Record several completed examples: preparation, drafting, checking, corrections, and handoff. A task that takes ten minutes twice a year has little time available to recover the effort of setup and testing.",
+          "Count how often the task happens in a normal month, including seasonal differences. For several completed examples, record the time spent on preparation, drafting, checking, corrections, and handoff. A task that takes ten minutes twice a year leaves little time to save against the effort of setup and testing.",
           "Choose an outcome you can observe. For a checklist, that might mean all required steps appear in the correct order, no unsupported steps are added, and a staff member spends less total time producing an approved version. Faster drafting alone is an incomplete measure."
         ]
       },
@@ -962,7 +962,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Decide whether a pilot is justified",
         "ps": [
-          "A pilot may add little value when the task rarely occurs, the inputs change constantly, or checking the output takes as long as doing the work. Stop before testing if there is no accountable reviewer, no approved data set, or no way to recognize an unacceptable result. A standard template or a clearer procedure may be sufficient.",
+          "An infrequent task or constantly changing input may not justify a pilot. Checking the output can also take as long as doing the work. Stop before testing if there is no reviewer, approved data set or way to recognize an unacceptable result. A standard template or clearer procedure may solve the problem with less work.",
           {
             "text": "Helm’s Secure AI Adoption assessment reviews one workflow, its effort and cost, and the tool and data requirements before recommending whether to pilot. Any pilot is separately scoped for one workflow on one approved platform, with pricing quoted after scoping. Managed cybersecurity remains Helm’s primary offering.",
             "links": [
@@ -977,10 +977,10 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Compare a few candidates using the same questions",
         "ps": [
-          "Begin with the work rather than a product demonstration. Ask staff for recurring tasks that involve preparing an internal draft, organizing approved information or turning a current procedure into a usable format. Limit the first discussion to a few candidates so you can inspect their inputs and outputs properly.",
+          "Ask staff which recurring tasks involve drafting internal documents, organizing approved information or making a current procedure usable. Select a few to examine closely. Their inputs and finished outputs will tell you more about fit than a product demonstration.",
           "For each candidate, ask how often it happens, how long it takes, which information it requires and who can recognize an incorrect result. Also ask whether a simpler fix exists. A standard template, a better search function or removal of duplicate approval steps may solve the problem with less maintenance.",
-          "Use a comparison table rather than a precise-looking score with invented weights. A weak candidate should not become acceptable because it earned enough points elsewhere. Unapproved data, no competent reviewer or an inability to detect a serious error are reasons to stop and resolve the issue before testing.",
-          "This is a suggested selection method, not a research finding about the best task for every firm. It makes the tradeoffs visible before anyone buys software or grants access."
+          "Compare the candidates in a table so a serious problem stays visible. A weighted score can conceal that problem: enough points for frequency or speed will not make unapproved data acceptable. If nobody can review the output, or a serious error would be hard to detect, resolve that issue before testing.",
+          "Use this method to discuss the tradeoffs before buying software or granting access. It is a suggested selection process, not a research finding that establishes the best task for every firm."
         ],
         "table": {
           "caption": "Compare a few candidates using the same questions",
@@ -1023,8 +1023,8 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Specify what a reviewer will accept. For an onboarding checklist, that may mean all required steps appear, the sequence reflects the approved procedure and links point to the right documents. Include the exceptions that matter, such as a different approval route for a particular staff role.",
           "Define unacceptable results separately. An invented requirement, a missing mandatory check or information taken from an unapproved source should not pass simply because most of the draft looks useful. Decide whether an error requires correction, rejection of the output or suspension of the test.",
-          "Keep the reviewer’s assessment distinct from the tool’s own explanation. Asking an AI system whether its answer is accurate does not provide an independent quality check. The person accepting the work needs access to the authoritative sources and enough time to compare them.",
-          "Use the same criteria for the existing process. Otherwise, an AI draft can appear faster because it is being held to a lower standard. A fair comparison includes the work needed to reach the same accepted output, not just the time to generate text."
+          "Give the reviewer the authoritative sources and enough time to compare the draft against them. Asking the tool whether its own answer is accurate does not provide an independent quality check. Acceptance belongs to the person responsible for the work.",
+          "Apply those same criteria to the existing process. Holding an AI draft to a lower standard can make it look faster simply because less checking is required. Compare the total time needed to produce an output you would accept from either process."
         ]
       },
       {
@@ -1032,7 +1032,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Write a short test brief with the task, approved platform, permitted inputs, intended users and reviewer. State the decision the test will support: continue with this workflow, modify it or keep the manual process. Avoid an open-ended instruction to explore what the tool can do.",
           "Choose examples that reflect ordinary variation. Include a routine case and a case with a known exception. Keep the examples approved for the platform and avoid importing client data just to make a demonstration feel realistic. Synthetic material can test the workflow without reproducing a live matter or account.",
-          "Record the platform and relevant settings at the time of testing. If instructions, source files or configuration change during the pilot, record that change. Otherwise, a better result may be attributed to the model when staff actually repaired the source procedure.",
+          "Record the platform and relevant settings when testing begins, then note any changes to instructions, source files or configuration. That record helps explain an improved result. If staff repaired the source procedure halfway through the pilot, the improvement should not be attributed entirely to the model.",
           "Limit actions as well as data. A tool that drafts a checklist should not also send it, update a business record or approve a transaction unless that action has been separately evaluated and authorized. Read-only drafting is easier to assess than a workflow whose mistakes immediately alter other systems."
         ]
       },
@@ -1040,7 +1040,7 @@ export const refreshedArticles: Article[] = [
         "h": "Assign the work after the demonstration",
         "ps": [
           "The task owner decides whether the output is useful. The document owner keeps the sources current. The existing IT provider reviews supported accounts, access, configuration and the proposed platform. Leadership approves the business purpose and cost. One person may hold several roles, but the responsibilities still need to be explicit.",
-          "Agree who updates the instructions when a procedure changes. Include the staff time needed to check that the change did not break the workflow. A demonstration can be successful while the operating model remains too expensive or unclear to sustain.",
+          "Agree who will update the instructions when a procedure changes and who will check that the revised workflow still works. Include their time in the operating cost. A good demonstration can be followed by a process that requires more upkeep than the firm can sustain.",
           "Plan staff training around the actual task. Show what information is permitted, how to start the workflow, what must be checked and how to report a failure. A broad presentation on AI capabilities will not substitute for those practical steps.",
           "Do not make continued access dependent on one person’s personal account. Confirm business ownership and offboarding with IT. If the employee who ran the pilot leaves, the organization should still know where the approved sources, instructions and decision record belong."
         ]
@@ -1049,7 +1049,7 @@ export const refreshedArticles: Article[] = [
         "h": "Make the continuation decision from the record",
         "ps": [
           "Summarize accepted outputs, rejected outputs, total staff time and recurring costs. Explain failures rather than hiding them in an average. If the tool handles straightforward cases but fails on important exceptions, state that boundary in the decision.",
-          "Separate useful capacity from a financial return. Ten minutes saved does not become revenue unless the business has suitable work for that time and completes it. A pilot can still be worthwhile for consistency or reduced administrative delay, but those benefits should be named and measured honestly.",
+          "Report time saved as available capacity unless it produces a measured financial return. Ten minutes does not become revenue just because it is available; the business needs suitable work for that time and must complete it. Consistency or shorter administrative delays can also justify a pilot, provided you measure and name those benefits.",
           "If the test is stopped, preserve what it taught you. The firm may have discovered outdated procedures, excessive folder access or an unnecessary approval step. Fixing those issues can improve the manual process without committing to the AI workflow.",
           "If the test continues, define the next scope and review point. Do not turn success on one internal checklist into approval for client advice, autonomous decisions or company-wide connections. Each extension changes the data, consequences or people involved and deserves its own assessment."
         ]
@@ -1070,7 +1070,7 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "Manufacturing & Defense",
     "laneTo": "/manufacturing",
-    "intro": "The July 2026 suspension of CMMC Phase II did not erase the cybersecurity requirements already appearing in defense contracts. A manufacturer that stops its readiness work may still face a self-assessment, an unsupported SPRS score, or a customer asking for evidence the shop cannot produce. The practical response is to confirm the contract, keep the assessment current, and avoid spending against a deadline or assessment route that no longer applies.",
+    "intro": "CMMC Phase II was suspended in July 2026. Cybersecurity requirements already included in defense contracts still need attention. A manufacturer may still need a self-assessment, support for its SPRS score or evidence for a customer. Check the contract and current assessment route before changing the readiness plan or spending against an old deadline.",
     "sections": [
       {
         "h": "Check the current program status",
@@ -1090,8 +1090,8 @@ export const refreshedArticles: Article[] = [
         "h": "Steps 1 to 4: Know where you stand",
         "ps": [
           "First, confirm your level. Contractors handling Federal Contract Information may fall under Level 1 and its 15 basic safeguarding requirements. If the agreed scope processes, stores, or transmits Controlled Unclassified Information, Level 2 and the 110 Revision 2 requirements may apply. Confirm the information category and the clauses rather than deciding from company size.",
-          "Second, locate your CUI. You cannot protect what you have not mapped. Walk every place technical data lives: file servers, email, CAD stations, the quoting inbox, that USB drive in the shop office.",
-          "Third, calculate the SPRS score honestly when the assessment requirement applies. Keep the boundary, methodology, working papers, and evidence that reproduce the number. The Department of Justice has resolved False Claims Act allegations involving unsupported cybersecurity representations, including a case centered on a large mismatch between a submitted score and a later assessment.",
+          "Second, map where CUI is handled. Follow technical data through file servers, email, CAD stations, the quoting inbox and removable media in the shop office. That map defines the places the review must cover.",
+          "Third, calculate the SPRS score from the applicable assessment method and keep the boundary, working papers and evidence needed to reproduce it. Unsupported cybersecurity representations can have consequences: the Department of Justice has resolved False Claims Act allegations that included a large mismatch between a submitted score and a later assessment.",
           {
             "text": "Fourth, run a gap assessment against the applicable control set. The useful deliverable is a scored, evidence-linked list that separates what is implemented, what is not proven, and what still needs remediation.",
             "links": [
@@ -1107,7 +1107,7 @@ export const refreshedArticles: Article[] = [
         "h": "Steps 5 to 9: Close the gaps that matter",
         "ps": [
           "Five: implement multi-factor authentication where the requirement and system design call for it, and preserve the configuration evidence. Six: identify where approved cryptography is required to protect CUI and verify the actual product, mode, and boundary rather than relying on a marketing label. Seven: limit access so each role reaches only the CUI and systems needed for its work.",
-          "Eight: write and rehearse the incident response process, including the contract-driven reporting path. Nine: keep the System Security Plan current and maintain an owned remediation record for unmet requirements. Generic templates are not evidence that the described control is operating."
+          "Eight: write and rehearse the incident response process, including the contract-driven reporting path. Nine: keep the System Security Plan current and maintain a remediation record with an assigned owner for unmet requirements. Generic templates are not evidence that the described control is operating."
         ]
       },
       {
@@ -1120,8 +1120,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Turn the checklist into a working record",
         "ps": [
-          "Give each step an owner, evidence reference, status and next action. Separate complete work from work that is implemented but not yet verified. A checklist with twelve ticks and no supporting records is difficult to use during an assessment or a customer inquiry.",
-          "Record the source of the requirement. It may be a contract clause, a current program instruction or a specific customer request. If you cannot establish why a task is needed, resolve the scope question before spending against a deadline. If the task is required, record what demonstrates completion rather than assuming a policy title is enough.",
+          "Give each step an owner, evidence reference, status and next action. Mark implemented work that still needs verification separately from completed work. During an assessment or customer inquiry, those records explain what supports each tick on the checklist.",
+          "For each task, identify the requirement behind it: a contract clause, current program instruction or specific customer request. Resolve uncertain scope before spending against a deadline. Once the requirement is clear, record how the firm will demonstrate completion; a policy title alone may not provide that evidence.",
           "Use dates that represent real decisions. The contract’s due date, an internal remediation target and the next review date are different. Label them so leadership can see which delays affect a contractual obligation and which affect the firm’s own improvement plan."
         ]
       },
@@ -1129,7 +1129,7 @@ export const refreshedArticles: Article[] = [
         "h": "Read contracts before scheduling assessments",
         "ps": [
           "Collect the solicitation, award, modifications and subcontract flowdowns. Ask the responsible contract owner to identify the safeguarding, assessment and affirmation instructions relevant to the proposed work. Record written clarification from the prime or contracting contact where needed.",
-          "Do not assume every purchase order has the same requirements because it comes from the same customer. The information, service and contract terms can differ. Maintain a review route for new work so a change in scope is identified before the shop begins handling new material.",
+          "Review new work even when it comes from an existing customer. Purchase orders can differ in information, services and terms. A consistent contract review process helps the shop identify a scope change before staff begin handling the new material.",
           "An assessment proposal should specify its purpose and authority. A readiness review, mock assessment and government or authorized assessment are different engagements. Clarify which result the customer requires and which result the provider can actually deliver."
         ]
       },
@@ -1145,14 +1145,14 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Include paper, removable media and workstations as well as the main file server. Ask what happens when a machine needs a program file, a drawing must be printed or a supervisor works remotely. Those everyday paths can change the assessed boundary.",
-          "Resolve undocumented shortcuts. If a staff member uses a personal account because the approved transfer method is too slow, the firm needs an operational correction. Writing that the shortcut is prohibited does not show that the process now works without it."
+          "Follow the everyday paths as well as the main file server. Include paper, removable media and workstations. Ask how a machine receives a program file, how a drawing is printed and how a supervisor works remotely, because those paths can change the assessed boundary.",
+          "If staff use personal accounts because the approved transfer method is too slow, fix the workflow that drives the shortcut. Verify that staff can complete the transfer through the approved process. A written prohibition alone does not establish that the process works."
         ]
       },
       {
         "h": "Inspect implementation before collecting screenshots",
         "ps": [
-          "Identify the requirement, the intended safeguard and the evidence needed to evaluate it. Ask the responsible owner to demonstrate the control in the assessed environment. Evidence collection should follow that question rather than begin with every export the tools can produce.",
+          "Start evidence collection with the requirement being evaluated. Ask the responsible owner to demonstrate the intended safeguard in the assessed environment, then collect the records needed to evaluate it. That keeps the review focused instead of accumulating every export the tools can produce.",
           "Keep the relevant standard and version clear. The Department’s program instructions and contract determine the assessment context; the existence of a newer NIST publication does not automatically change the current contract obligation. Retain the basis for the version selected in the review record.",
           "Evaluate provider dependencies. If a vendor supplies a control, determine what remains the shop’s responsibility and which evidence is available. A service description alone may not show that the relevant users, systems or information are covered."
         ]
@@ -1160,8 +1160,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Sequence remediation around dependencies",
         "ps": [
-          "Some work should happen before other corrections can be verified. For example, an inaccurate user or device inventory can make coverage evidence unreliable. A business workflow change can affect the scope of later technical implementation. Identify those dependencies before assigning isolated due dates.",
-          "Set closure criteria with a qualified reviewer. Buying a tool or approving a policy is often an intermediate milestone. The item should close when the implementation and appropriate evidence support the requirement, with any remaining limitation clearly recorded.",
+          "An inaccurate user or device inventory can make later coverage evidence unreliable. A workflow change can also alter the scope of technical implementation. Resolve those dependencies before assigning due dates to isolated tasks.",
+          "Agree with a qualified reviewer on what closes each item. Buying a tool or approving a policy may be a milestone. Closing the item still requires implementation and evidence supporting the requirement. Record any limitation that remains.",
           "Track interim arrangements. If a correction will take time, record the current state, permitted safeguard and person responsible for the decision. Do not imply that a documented plan automatically makes every unmet requirement acceptable under CMMC or the contract."
         ]
       },
@@ -1177,7 +1177,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Staff need a prompt internal reporting process and a trusted contact. The designated incident owner evaluates the event with the appropriate responders and advisers. Confirm access to the required reporting route and any prerequisites rather than discovering them during the incident.",
+          "Staff need a prompt internal reporting process and a trusted contact. The designated incident owner evaluates the event with the appropriate responders and advisers. Confirm access to the required reporting route and any prerequisites before an incident occurs.",
           "Use a fictional exercise to test who receives the report, who authorizes action and how the relevant records are preserved. Record delays and missing responsibilities, then correct the plan. Keep live findings and incident evidence in their approved restricted systems."
         ]
       },
@@ -1185,13 +1185,13 @@ export const refreshedArticles: Article[] = [
         "h": "Check a proposed change against the checklist",
         "ps": [
           "Use an approved fictional example to test whether the owners can maintain readiness: a shop adds a new workstation that will display controlled information. Ask who approves it, updates the inventory, confirms access and checks the effect on the SSP and evidence. No live system change is needed for this exercise.",
-          "The useful result is a clear sequence and named owners. If the device can be bought and used before anyone considers the information boundary, improve the procurement and onboarding process. If documentation is updated but coverage remains unknown, assign the technical verification. This links the checklist to daily decisions instead of reserving it for assessment season."
+          "Use the exercise to find where the sequence breaks. If a workstation can be bought and used before anyone reviews its information boundary, change procurement and onboarding. If the documents are updated but protection remains unknown, assign technical verification. The checklist then supports production decisions throughout the year."
         ]
       },
       {
         "h": "Review readiness with leadership",
         "ps": [
-          "Present the current scope, supported requirements, open items and decisions needed. Explain the consequences of unresolved work using the contract and qualified review, not invented urgency. Leadership should understand what it will affirm and which evidence supports that conclusion.",
+          "Bring leadership the current scope, supported requirements, open items and decisions needed. Use the contract and qualified review to explain what unresolved work means. Before affirming readiness, leadership should understand the statement it is making and the evidence supporting it.",
           "Keep customer responses consistent with the assessment file. A questionnaire should not say the environment is fully implemented when the remediation record still shows relevant deficiencies. Seek clarification if the customer’s answer choices cannot represent the actual state truthfully.",
           "Retain the review record and the authorized submission confirmation where applicable. An assessment number is useful only when the shop can connect it to the boundary, date, method and supporting evidence."
         ]
@@ -1200,12 +1200,12 @@ export const refreshedArticles: Article[] = [
         "h": "Make maintenance part of production changes",
         "ps": [
           "Add a security-scope review to new systems, providers, locations and information workflows. Identify whether the change affects the SSP, evidence or assessment record. The person approving the change should know who performs that review.",
-          "Check recurring assessment and affirmation dates through the current applicable instructions. Keep a named owner and backup for the record. Do not rely on a calendar reminder controlled by an employee whose departure would leave the obligation unassigned.",
+          "Assign an owner and backup to maintain assessment and affirmation dates under the current applicable instructions. Keep the record accessible to them so an employee's departure does not leave the obligation attached to an unattended calendar.",
           "Helm can support a scoped readiness discussion alongside the existing IT provider. The firm retains its final attestations and business decisions. Readiness work helps organize and improve the evidence; it does not provide a certification or guarantee an award."
         ]
       }
     ],
-    "takeaway": "Confirm what the current contract requires before changing course. Keep the system boundary, assessment, score, and supporting evidence current while DoD reviews the next phase of the program.",
+    "takeaway": "Use the current contract to decide what applies. Keep the system boundary, assessment, score and evidence current while DoD reviews the next phase.",
     "lead": [],
     "readingLayout": true,
     "organizationByline": true,
@@ -1222,7 +1222,7 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "Manufacturing & Defense",
     "laneTo": "/manufacturing",
-    "intro": "Choosing the wrong CMMC level can send a shop down two expensive paths: building controls it was never asked to maintain, or affirming readiness for a contract while important requirements remain unmet. The answer comes from the contract clauses and the information the shop handles, not from its headcount.",
+    "intro": "Your contract and the information your shop handles determine the CMMC level to review. Headcount does not. Choosing the wrong scope can mean paying for controls you were never asked to maintain, or affirming readiness while required controls remain unmet.",
     "sections": [
       {
         "h": "The question that decides everything: FCI or CUI?",
@@ -1260,16 +1260,16 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "The jump from Level 1 to Level 2 is not a small increment. Level 2 requires a defined system boundary, a current System Security Plan, control-level evidence, a score, and ongoing ownership of the requirements that apply to the CUI environment."
+          "Level 2 preparation reaches beyond Level 1’s basic safeguards. The shop needs a defined system boundary, a current System Security Plan, requirement-level evidence and a score. Each applicable requirement also needs someone responsible for maintaining it in the CUI environment."
         ]
       },
       {
         "h": "How to tell which one applies to you",
         "ps": [
           "The clauses in your contract tell you directly: look for DFARS 252.204-7012, 7019, 7020, and 7021. Their presence, and how they are flowed down, points to whether you are being asked to handle CUI or only FCI.",
-          "When the contract language is ambiguous, ask your prime in writing which category your work falls into and keep the answer on file. Do not guess, and do not assume.",
+          "If the contract language is ambiguous, ask the prime in writing which information category applies to your work. Keep the answer with the contract to support later readiness decisions.",
           {
-            "text": "Do not assume Level 1 just because you are a small shop. Company size has no bearing on the requirement: a ten-person shop processing confirmed CUI has safeguarding responsibilities despite its small headcount. A gap assessment against the full control set tells you where you actually stand before an assessor does.",
+            "text": "A small shop can still handle CUI. For example, a ten-person shop processing confirmed CUI has safeguarding responsibilities determined by that work, regardless of headcount. A gap assessment against the full control set establishes which requirements are implemented and which still need work.",
             "links": [
               {
                 "phrase": "small shop",
@@ -1286,16 +1286,16 @@ export const refreshedArticles: Article[] = [
       {
         "h": "What to collect before a readiness review",
         "ps": [
-          "Bring the relevant solicitation and contract clauses, every cybersecurity flowdown received from a prime, representative files or markings, a list of systems that store or transmit the information, and any current SPRS assessment or System Security Plan. That is enough to start a boundary and applicability discussion without pretending the answer comes from a generic checklist.",
+          "Bring the solicitation, relevant contract clauses and all cybersecurity flowdowns from the prime. Add representative file descriptions or markings, the systems that store or transmit the information, and any current SPRS assessment or System Security Plan. These records help the reviewer discuss applicability and the system boundary using the shop’s actual work.",
           "Record the conclusion and the person or contract source that supports it. If the prime clarifies the information category or required level, keep that written answer with the contract file so the same question does not have to be reconstructed at the next bid or renewal."
         ]
       },
       {
         "h": "Separate the information category from the assessment route",
         "ps": [
-          "First determine which information the work involves. Then establish the contract’s safeguarding and assessment instructions. These decisions are related, but one does not replace the other. A prime’s statement that a project includes CUI does not by itself give you every detail needed to choose an assessment route.",
+          "Once you know the information category, check the contract’s safeguarding and assessment instructions. A prime’s confirmation that the project includes CUI helps establish what must be protected; you still need the instructions that determine the assessment route.",
           "Keep the solicitation, award, modifications and flowdowns together. Note the required level, affected environment, relevant dates and responsible contact. If a newer instruction changes the requirement, retain the earlier record and explain what supersedes it. The shop should be able to show why it followed a particular route at the time.",
-          "Ask for clarification when the contract and customer questionnaire appear inconsistent. Do not resolve the discrepancy by choosing the less expensive answer or the answer a tool recommends. The contracting relationship and current official guidance should inform the decision, with appropriate expert advice where needed."
+          "If the contract and customer questionnaire seem inconsistent, seek clarification using the contracting relationship and current official guidance, with expert advice where needed. A cheaper assessment route or a tool’s recommendation cannot resolve what the contract requires."
         ]
       },
       {
@@ -1321,13 +1321,13 @@ export const refreshedArticles: Article[] = [
             ]
           },
           "Do not assume a small shop has no physical or administrative evidence to maintain. Identify who controls visitor access, how employees receive permissions and how information is handled on devices and media. The scope should follow the actual environment.",
-          "Self-assessment means the organization owns the conclusion. External assistance can help gather and evaluate evidence, but leadership should understand what it is affirming and the basis for that representation. A consultant’s worksheet does not transfer the organization’s responsibility."
+          "Leadership owns the self-assessment conclusion even when a consultant helps gather and evaluate the evidence. Before making an affirmation, leadership should understand what is being affirmed and which records support it. The consultant’s worksheet helps with that review; responsibility remains with the organization."
         ]
       },
       {
         "h": "What Level 2 preparation adds",
         "ps": [
-          "A Level 2 review needs a clear CUI environment and evidence against the applicable requirements. The SSP should describe how the environment operates, including connections and provider dependencies. The assessment record should explain the conclusions rather than merely collect screenshots.",
+          "The System Security Plan should describe the CUI environment, its connections and provider dependencies. Use it to organize evidence against the applicable requirements. For each conclusion, explain how the evidence supports it, so a later reviewer can follow the assessment without interpreting a folder of screenshots alone.",
           "Identify where business decisions are needed. Some corrections may involve access, training, service selection or workflow changes. Others may require technical implementation by the existing IT owner. Funding and scheduling should account for those dependencies before anyone promises a completion date.",
           "Maintain a remediation record for unmet requirements. Do not treat an open item as automatically permitted for the required assessment status. The applicable rules limit how deficiencies may be handled. Obtain a qualified review of those conditions before leadership makes an affirmation.",
           "Avoid counting products as requirements. An endpoint tool, backup service or awareness platform supplies a capability. The requirement may also depend on coverage, configuration, operation and evidence. The reviewer needs to evaluate that implementation in the assessed environment."
@@ -1338,7 +1338,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Consider a manufacturer that plans to receive confirmed CUI in a restricted environment. This is an illustrative scenario, not a Helm customer design. The shop wants employees outside that environment to handle ordinary business administration without accessing the controlled files.",
           "The decision requires more than creating a restricted folder. The team must inspect the people, devices, email paths, connections and services involved. If a drawing is routinely copied to an ordinary workstation for production, the claimed separation needs review. A qualified scoping exercise should determine what actually belongs in the assessed boundary.",
-          "The scenario does not prescribe a particular enclave architecture. It shows why scope follows real information movement and dependencies. A design can reduce unnecessary exposure only when its operational rules are supported and maintained."
+          "Information movement and system dependencies affect scope, while the enclave architecture still needs qualified review. Any separation intended to reduce exposure needs operational rules that staff can follow and the shop can maintain."
         ]
       },
       {
@@ -1346,7 +1346,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Ask a provider to identify the scope it will evaluate, the standard and version it will use, the evidence it needs and the deliverable you receive. Require it to distinguish readiness assistance from an authorized assessment or certification service.",
           "Clarify implementation duties. Who changes account policies, manages the devices, maintains physical controls and updates procedures? A report of gaps does not establish that the provider will remediate them. Get the boundary of its service in writing.",
-          "Also clarify maintenance after the initial project. The business needs someone to update the SSP, review changes, retain evidence and track the appropriate assessment and affirmation dates. A one-time policy set does not supply ongoing ownership."
+          "Agree who maintains the SSP after the project, reviews changes, retains evidence and tracks assessment and affirmation dates. These duties continue as the shop operates. A one-time set of policies will become stale unless someone owns that maintenance."
         ],
         "table": {
           "caption": "Compare proposals by responsibility and evidence",
@@ -1386,7 +1386,7 @@ export const refreshedArticles: Article[] = [
         ]
       }
     ],
-    "takeaway": "Review the clauses and determine whether the work involves FCI or CUI. If the contract is unclear, get the prime contractor’s answer in writing before deciding which requirements to assess.",
+    "takeaway": "Check the clauses and establish whether the work involves FCI or CUI. Resolve uncertainty with the prime in writing before choosing the assessment scope.",
     "lead": [],
     "readingLayout": true,
     "organizationByline": true,
@@ -1403,7 +1403,7 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "Manufacturing & Defense",
     "laneTo": "/manufacturing",
-    "intro": "A machinist can undo a carefully written CUI program by taking one phone photo of a drawing, emailing a file home, or leaving a marked print where a visitor can see it. That usually happens because the shop explained the policy without explaining what employees should do during the workday. Floor rules need to be short, specific, and easy to follow when production is moving.",
+    "intro": "A written CUI policy needs instructions people can use on the shop floor. An employee taking a drawing photo, emailing a file home or leaving a print on a workbench may expose controlled information. Explain the approved way to do those everyday tasks, including where to ask when the instructions are unclear.",
     "sections": [
       {
         "h": "FCI and CUI, in terms that make sense on the floor",
@@ -1423,7 +1423,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "The floor rules that keep it safe",
         "ps": [
-          "No photos of drawings or parts on personal phones, ever, even for a quick reference or to text a coworker. Never email specs to a personal email account to work on at home. Access is need-to-know: if a print is not for your job, it is not for you to look at.",
+          "Personal phones and personal email accounts must stay out of the controlled-information workflow. Do not photograph drawings or parts on a personal phone, including for a quick reference or a text to a coworker. Use the approved route to access specs from another location. Access remains need-to-know: staff should view a print only when their job requires it.",
           "Keep marked documents in controlled storage instead of leaving them on a workbench or board where a visitor can see them. Employees also need to know whom to tell when a print is left out or a file goes to the wrong place. Prompt internal reporting gives the company time to meet its contract-driven response duties."
         ]
       },
@@ -1481,8 +1481,8 @@ export const refreshedArticles: Article[] = [
         "h": "Explain the approved route for every ordinary task",
         "ps": [
           "Staff need more than prohibitions. Show how to obtain an approved print, display a drawing at the workstation, transfer a required file and return or dispose of the material. A rule against personal phones is more usable when there is a supported way to record the business information the employee actually needs.",
-          "Name the contact for an uncertain task. An employee should be able to pause a transfer or photo request and obtain an answer without improvising a new channel. Supervisors need to support that pause when production pressure makes the shortcut attractive.",
-          "Review the procedure with employees doing the work. Ask where the instructions are slow, ambiguous or impossible to follow with the available equipment. Correct the workflow instead of relying on a signed training form to establish that every task can be performed safely.",
+          "When the approved instructions do not cover a task, employees need a named contact who can answer. They should be able to pause a transfer or photo request while they check, without inventing another channel. Supervisors need to support that pause, especially when production pressure makes a shortcut attractive.",
+          "Test the procedure with the employees who use it. Ask which instructions are slow, ambiguous or impossible to follow with the available equipment, then correct the workflow. A signed training form records completion; it cannot establish that every production task can be performed safely.",
           "Keep the approved process consistent with the assessed boundary. A transfer method that moves controlled information into an unreviewed account can undermine the separation the program depends on. The information owner and IT provider should approve changes together."
         ]
       },
@@ -1491,7 +1491,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Identify where prints are issued, used, stored and returned. Make the authorized storage location accessible to the staff who need it, while preventing unnecessary access. Do not rely on employees remembering to hide a print only when a visitor arrives.",
           "Review walkways, visitor routes and work areas where drawings or screens may be visible. The relevant manager should understand the access rules and escort procedure. A visitor’s familiarity with the shop does not establish authorization to view controlled information.",
-          "Set a supported disposal process. Employees should know which material must be returned, retained or destroyed through an approved method. Avoid using an ordinary bin for sensitive prints just because the job has finished. Confirm the handling rule with the information owner rather than deciding from the paper’s age.",
+          "Before a job finishes, make sure employees know which prints to return, retain or destroy through an approved method. An ordinary bin is not a disposal process for sensitive material. If the instruction is unclear, ask the information owner; the paper’s age does not determine its handling rule.",
           "Check copies as well as originals. A marked master drawing can be controlled while an untracked copy remains on a clipboard. Teach employees to recognize the information and handling instruction, not merely a particular folder color or cover sheet."
         ]
       },
@@ -1500,7 +1500,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Determine who is authorized to use each workstation and which information it may handle. Follow the approved sign-in and screen-lock procedure. Do not leave an administrator’s session open for convenience or share credentials when the system supports named access.",
           "Record how program files or technical information reach equipment. If removable media is part of the approved workflow, identify the permitted media, handling procedure and owner. Personal or unknown drives should not become the default when a supported transfer path is unavailable.",
-          "Some shop equipment has different technical capabilities from an office laptop. Have qualified staff evaluate those constraints and document the approved arrangement. Do not instruct a machinist to install an unfamiliar tool or alter a machine controller simply to satisfy a generic checklist.",
+          "Shop equipment may have different technical capabilities from an office laptop. Qualified staff should evaluate those constraints and document an approved arrangement. A generic checklist alone does not justify asking a machinist to install an unfamiliar tool or alter a machine controller.",
           "Include support providers in the review. A vendor with remote access or maintenance access may affect the information boundary. Confirm the permitted work, access route and responsibilities before a technician begins, rather than treating maintenance as automatically outside the program."
         ]
       },
@@ -1518,13 +1518,13 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Teach what to do while waiting. Staff should know the approved storage location and whether production may continue with the available information. That prevents a scope question from being silently resolved through an improvised copy or personal email."
+          "Tell staff what to do while they wait for clarification: where to store the material and whether production may continue with the information available. Without those instructions, an unanswered handling question may lead to an improvised copy or personal email."
         ]
       },
       {
         "h": "An illustrative request for a photo",
         "ps": [
-          "Imagine a supervisor asking an employee to text a drawing photo to a colleague at another location. This is an illustrative exercise, not a Helm incident. The employee recognizes that the drawing has controlled handling instructions and pauses the request.",
+          "Imagine a supervisor asking an employee to text a drawing photo to a colleague at another location. In this hypothetical training exercise, the employee recognizes the controlled handling instructions and pauses the request. The scenario is not a Helm incident.",
           "The employee uses the approved internal contact to ask how the information may be transferred. The authorized owner checks the recipient, destination and supported transfer method. If the request is legitimate, it can proceed through that method; urgency alone does not authorize a personal account or device.",
           "Use this exercise to test whether staff can identify both the restriction and the useful alternative. A training session that ends only with “do not take photos” may leave the underlying business task unresolved."
         ]
@@ -1534,7 +1534,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Document the audience, subjects, approved examples and completion date. Include the reporting route, physical handling and relevant device or media practices. The record should show what staff were taught, while the supervisor’s review checks whether the process works in practice.",
           "Revisit training when the shop changes equipment, receives a new kind of controlled information or adopts a new transfer route. A generic annual course can supplement those instructions, but it does not establish that employees understand a site-specific production procedure.",
-          "Invite questions and track recurring confusion. If several employees cannot identify where a print belongs, fix the storage instruction and signage. If a vendor repeatedly asks for an unapproved transfer, address the vendor process with the responsible manager."
+          "Use recurring questions to find procedures that need repair. If several employees cannot identify where a print belongs, clarify the storage instruction and signage. If a vendor repeatedly requests an unapproved transfer, have the responsible manager address that vendor’s process."
         ]
       },
       {
@@ -1580,7 +1580,7 @@ export const refreshedArticles: Article[] = [
         }
       }
     ],
-    "takeaway": "Teach employees how to recognize marked information, where it may be stored, who may access it, and whom to call when something goes wrong. Make the rules part of normal shop work, including phones, paper drawings, email, shared stations, and visitors.",
+    "takeaway": "Show staff how to recognize controlled information, store it, limit access and report a problem. Apply those instructions to the phones, paper, email, shared stations and visitors they encounter during ordinary work.",
     "lead": [],
     "readingLayout": true,
     "organizationByline": true,
@@ -1597,20 +1597,20 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "Professional Services",
     "laneTo": "/professional-services",
-    "intro": "An insurance application asks the firm to describe its business and controls. The difficult part is often gathering reliable facts across finance, IT, security and leadership. A rushed answer can confuse a purchased feature with a deployed control, or an intended improvement with the state of the business today.",
+    "intro": "Completing a cyber insurance application takes facts from finance, IT, security and leadership. A software invoice tells you what the firm bought; a configuration record tells you what is deployed. Keep those facts separate from planned improvements so the signed answers describe the business today.",
     "sections": [
       {
         "h": "Step 1: Obtain the complete current request",
         "ps": [
-          "Ask the broker for the application, supplements, instructions, due date and any requested evidence. Confirm which entity and operations the submission covers. A form for one company may not adequately describe related entities, locations or acquired operations. Establish the intended scope before asking technical staff to answer.",
-          "Save a controlled working copy. Preserve the original question wording and any definitions. Rephrasing a question in a task list can lose qualifiers such as every account, remote access or the previous reporting period. Link each assigned task to the exact question so the respondent can see what is being asked.",
+          "Get the application, supplements, instructions, deadline and evidence request from the broker. Then confirm the entity and operations covered. Related companies, locations or acquisitions may need information a single-company form does not capture. Settle that scope before assigning technical questions.",
+          "Keep a controlled working copy with the original questions and definitions intact. When assigning a question, link back to that wording. A shortened task description can lose a qualifier such as every account, remote access or the previous reporting period and send the respondent looking for the wrong evidence.",
           "Name a coordinator, the business approver and technical respondents. The coordinator tracks missing answers and evidence. Technical owners establish the actual settings and population. Leadership approves business representations and the submission. The broker handles underwriting clarification and the coverage discussion."
         ]
       },
       {
         "h": "Step 2: Define the business population",
         "ps": [
-          "Confirm employee and contractor counts using the requested definition and date. Identify seasonal staff, remote workers and locations where relevant. Keep user counts separate from device counts. One person may use several devices, and a shared workstation may serve several people.",
+          "Use the definition and date requested by the form to count employees and contractors. Include seasonal staff, remote workers and locations where the question calls for them. Count devices separately: one person may have several, while a shared workstation may serve several people.",
           "List important systems and providers. Include business email, identity, remote access, devices, client portals, backup and critical applications. Identify which systems are operated by outside suppliers and who can request evidence from them. The internal IT provider may not administer every application used by the firm.",
           "If the form asks about revenue, records or business activities, route those questions to the appropriate business owner. Technical staff should not estimate financial information from a user list. Similarly, finance should not infer authentication coverage because a software subscription appears on an invoice."
         ]
@@ -1619,7 +1619,7 @@ export const refreshedArticles: Article[] = [
         "h": "Step 3: Assign each question to evidence",
         "ps": [
           "These are illustrative categories, not a claim that every insurer asks the same questions. Follow the current form. Where several owners contribute, have the coordinator reconcile the answer rather than combine conflicting statements in the final submission.",
-          "For each response, capture the source, date, reviewer and relevant scope. If the answer relies on a provider's report, retain the report or approved reference. Keep restricted evidence in its authorized location and use a controlled link in the working record. Avoid copying sensitive account lists into broadly shared documents."
+          "For each answer, note the source, its date, the reviewer and the systems or people it covers. Retain any provider report or approved reference used to support it. Restricted account lists and other sensitive evidence should stay in their authorized location, with a controlled link from the working record."
         ],
         "table": {
           "caption": "Step 3: Assign each question to evidence",
@@ -1665,15 +1665,15 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Step 4: Verify authentication qualifiers",
         "ps": [
-          "Read whether the question concerns email, remote access, privileged accounts, all users or a named system. Those populations differ. Ask the responsible administrator to identify where MFA is required, the methods allowed and any exceptions. Enrollment in an authentication method is not always evidence of enforcement on the access path being asked about.",
+          "Check which access the question names: email, remote access, privileged accounts, all users or a specific system. Ask the administrator where MFA is required, which methods are allowed and what exceptions remain. Someone can enroll an authentication method without the relevant access path actually requiring its use.",
           "Review independent applications as well as the main tenant where the question requires it. A firm may enforce MFA for email yet have a separately administered business application. Record what was checked and what remains unknown. Ask the broker how a qualified answer should be represented when the form offers only a yes-or-no box.",
-          "Do not change an answer to yes because a rollout is scheduled. If the work finishes before submission, verify the completed state and date the evidence. If it does not, describe the current limitation through the approved submission route. A plan and an implemented control are different facts."
+          "Do not change an answer to yes because a rollout is scheduled. If the work finishes before submission, verify the completed state and date the evidence. If it does not, describe the current limitation through the approved submission route."
         ]
       },
       {
         "h": "Step 5: Verify devices and recovery",
         "ps": [
-          "For endpoint questions, compare the relevant inventory with the service's reporting population. Identify excluded devices, unsupported platforms and stale reporting. A device purchased this week may not yet meet acceptance criteria. A retired device may still appear in a console. Resolve those differences before using a coverage percentage.",
+          "Compare the device inventory relevant to the question with the devices reporting to the protection service. Resolve unsupported platforms, exclusions and stale entries before calculating coverage. A newly purchased computer may not yet meet acceptance criteria, and a retired one may still appear in the console.",
           "For backup questions, distinguish a successful capture from a successful restore. Identify the covered workload, recovery point and test result. If the form asks about isolation or immutability, have the operator explain the configured mechanism and its limits. Do not treat encryption, isolation and immutability as interchangeable terms.",
           {
             "text": "Use the backup-testing resource to prepare evidence. Check whether the requested test frequency or scope comes from the actual application or policy. Avoid applying an invented universal insurer schedule to a firm whose requirement is different.",
@@ -1690,8 +1690,8 @@ export const refreshedArticles: Article[] = [
         "h": "Step 6: Resolve incomplete and ambiguous answers",
         "ps": [
           "Create a short exception list. Each entry should identify the question, confirmed limitation, owner, proposed action and target date. Decide whether the firm can complete and verify the work before submission. Some changes require testing or a planned interruption and cannot responsibly be promised for the following day.",
-          "For wording uncertainty, send the exact question and a factual description to the broker through the approved route. Ask for written clarification where the interpretation matters. A salesperson's informal assurance about what a carrier usually means is weaker than a specific recorded answer to the current question.",
-          "Do not hide an exception in an attachment that the final answer contradicts. Ensure the form, supplements and supporting explanation are consistent. The authorized signer should know what is incomplete and how it is represented. Keep the broker's response with the package."
+          "When the wording is ambiguous, send the broker the exact question and the confirmed facts through the approved route. Request written clarification where the interpretation affects the answer. Keep that response with the package; a general sales assurance about what carriers usually mean cannot resolve the current question as clearly.",
+          "Do not hide an exception in an attachment that the final answer contradicts. Ensure the form, supplements and supporting explanation are consistent. The authorized signer should know what is incomplete and how it is represented."
         ]
       },
       {
@@ -1699,14 +1699,14 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Read the complete application after individual contributors finish. Check dates, entity names, counts and repeated questions. The same control may appear in several sections with different wording. Confirm that the responses consistently describe the actual environment without dropping a meaningful qualifier.",
           "Separate statements about current operation from commitments about future work. If a commitment is included, identify who approved it and what evidence will demonstrate completion. Review any related requirements with the broker and appropriate adviser before treating a technical task date as a contractual promise.",
-          "Save the exact signed version, supplements, evidence references and submission record. A later review should not have to reconstruct what was sent from a folder of drafts. Use access controls suitable for the business and technical information in the package."
+          "Save the exact signed application, supplements, evidence references and submission record together. That gives a later reviewer the version that was actually sent, without reconstructing it from drafts. Restrict access to match the business and technical information the package contains."
         ]
       },
       {
         "h": "Step 8: Review the resulting offer and policy",
         "ps": [
           {
-            "text": "The application process does not end with submission. Ask the broker to explain the offer, coverage, limits, retentions, endorsements and significant conditions. The FTC recommends discussing cyber-insurance coverage needs with the insurance agent. Apply that discussion to the firm's actual scenarios and proposed wording.",
+            "text": "Ask the broker to explain the offer, coverage, limits, retentions, endorsements and significant conditions. The FTC recommends discussing cyber-insurance coverage needs with the insurance agent. Apply that discussion to the firm's actual scenarios and proposed wording.",
             "links": [
               {
                 "phrase": "FTC recommends discussing cyber-insurance coverage needs with the insurance agent",
@@ -1714,7 +1714,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Confirm the incident reporting route and authorized contacts. Ask how urgent response, provider engagement and consent requirements operate under the proposed policy. Record those instructions in the response plan once the policy is bound. Do not rely solely on the brochure supplied at the start of the sale.",
+          "Ask how incident reporting, urgent response, provider engagement and consent requirements work under the proposed policy. Identify the authorized contacts and put the instructions into the response plan once the policy is bound. The brochure from the start of the sale may not contain the procedure the firm must follow.",
           "If the issued documents differ from what the firm expected, resolve the difference promptly through the broker. Keep the final policy and endorsements with the submission record. Coverage interpretation belongs with the appropriate adviser, supported by the facts the firm has gathered."
         ]
       },
@@ -1722,7 +1722,7 @@ export const refreshedArticles: Article[] = [
         "h": "Step 9: Keep the evidence current after renewal",
         "ps": [
           "Assign the unresolved control tasks and follow their completion. Record meaningful changes to the environment, including new applications, acquisitions, provider changes and changes in authentication or backup coverage. Ask the broker how such changes should be handled under the particular arrangement.",
-          "Keep previous submissions and dated evidence. Do not overwrite last year's record with this year's settings. A historical answer may need historical support. Retain the records under the firm's approved policy and keep restricted operational details in their authorized system.",
+          "Keep each previous submission with the evidence that supported it at the time. Replacing last year’s settings with today’s records can remove the basis for a historical answer. Follow the firm’s retention policy and keep restricted operational details in the authorized system.",
           {
             "text": "Helm Command can support evidence upkeep, a risk register, roadmap and bounded questionnaire responses within its written service. Existing IT maintains technical administration and remediation. The broker and authorized business signer retain insurance decisions. A separate assessment or specialist engagement needs its own agreed scope. Start the review with enough time to gather facts, resolve uncertainty and verify completed changes before signing.",
             "links": [
@@ -1738,7 +1738,7 @@ export const refreshedArticles: Article[] = [
         "h": "Check an illustrative partial answer",
         "ps": [
           "Suppose a hypothetical firm has 45 email users and has verified enforcement for 43. Two accounts remain outside the policy because their workflow needs investigation. That is a partial deployment, even if all 45 people received enrollment instructions. The coordinator should record the actual population, exceptions and technical owner's next action.",
-          "If those accounts are brought into scope before signing, retain the verification date and final state. If they remain excluded, ask the broker how to represent the limitation in this form. Do not replace the factual answer with a promise to finish later. Keep the written clarification and the authorized signer's decision with the submission so another reviewer can understand how the final answer was reached."
+          "If the two excluded accounts enter scope before signing, verify the final state and save dated evidence. If they remain outside the policy, ask the broker how to represent that limitation. Retain the clarification and signer’s decision alongside the answer; promising a later fix does not change today’s deployment."
         ]
       }
     ],
@@ -1761,13 +1761,13 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "Professional Services",
     "laneTo": "/professional-services",
-    "intro": "A cyber incident creates urgent operational decisions. A coverage dispute adds another task: establishing what the policy says, what happened and what records support the claim. Good security records can help explain the facts, but they cannot guarantee payment or replace a review of the actual contract.",
+    "intro": "During a cyber incident, the firm has to restore operations and respond to urgent requests. If coverage is questioned, it also needs to establish what the policy says and what records support the claim. Security records help explain the facts. Payment still depends on the actual contract and its review.",
     "sections": [
       {
         "h": "Begin with the policy and the asserted reason",
         "ps": [
-          "If an insurer raises a concern, obtain the relevant correspondence and policy documents. Distinguish a request for information, a reservation about coverage and a formal denial. Ask the broker and appropriate counsel to identify the issue and the deadline for responding. Do not infer the legal effect of a letter from its subject line alone.",
-          "Collect the policy in force, endorsements, declarations, application, supplements and any relevant written clarification. Keep the final submitted versions, not merely an early draft held by an employee. An endorsement or definition can change how a general coverage description applies. The team reviewing the matter needs the complete contract.",
+          "Start with the correspondence and policy documents. An information request, a reservation about coverage and a formal denial need different responses. Ask the broker and appropriate counsel to identify the asserted issue and response deadline. The letter's subject line alone cannot establish its legal effect.",
+          "Give the reviewing team the complete contract: the policy in force, endorsements, declarations, application, supplements and relevant written clarifications. Use the final submitted versions. An employee's early application draft may differ from the submitted answer, and an endorsement or definition may change how a general coverage description applies.",
           "Create a chronology using confirmed dates. Record discovery, initial response, notice to the insurer, provider engagements and material communications. Separate the time an event occurred from the time the firm learned about it. If a date remains uncertain, mark it as uncertain and identify the source being checked."
         ]
       },
@@ -1824,7 +1824,7 @@ export const refreshedArticles: Article[] = [
         "h": "Check the event against the purchased coverage",
         "ps": [
           "A fraudulent transfer, a ransomware interruption and a claim from an affected client may raise different coverage questions. Ask the adviser to map the actual event to the relevant provisions. Do not assume every loss involving email falls under the same cyber policy section or that another business policy automatically fills a gap.",
-          "Review amounts and categories separately. A policy can have an overall limit while particular coverage has a sublimit or other condition. Identify the provision supporting each part of the requested claim. Keep financial documentation linked to the event and avoid combining unrelated business costs without explanation.",
+          "Break the requested claim into amounts and categories, and identify the policy provision relevant to each. The overall limit may not be the limit for a particular type of loss; a sublimit or another condition may apply. Keep financial records connected to the event and explain any costs that might otherwise appear unrelated.",
           "Before renewal, use representative scenarios in the broker discussion. Ask how the proposed policy would address a vendor banking change, interruption of a critical application or a third-party demand. These are questions for the broker and insurer, not statements that the scenarios are covered. Record any written clarification with the final policy."
         ]
       },
@@ -1833,21 +1833,21 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "If an application answer is questioned, collect records that describe the environment when the answer was given and when the event occurred. A screenshot taken after remediation may demonstrate the current state but not the earlier one. Label dates and sources accurately so the reviewing team can distinguish them.",
           "For authentication, identify the account population, policy scope and recorded exceptions. For device protection, identify eligible and reporting devices. For backups, identify covered workloads and actual restore evidence. The relevant facts depend on the disputed question; avoid sending an unorganized archive of every security document.",
-          "A technical owner should state what the record shows and what it does not. For example, an enrollment report may establish which devices were registered but not whether every device was reporting during the incident. A planned rollout does not establish completed deployment. Precise facts help the adviser assess the issue without an exaggerated assurance."
+          "Ask the technical owner to explain the limits of each record. An enrollment report may show which devices were registered without showing that every device was reporting during the incident. A rollout plan shows intended work, not completed deployment. Explain these limits so the coverage adviser can use the records without overstating what they establish."
         ]
       },
       {
         "h": "Keep response obligations available before an event",
         "ps": [
           "Review the policy's notice, cooperation, consent and provider provisions with the broker before an incident. Record the breach hotline, reporting route and people authorized to engage help. Ask how urgent containment and separately retained services should be handled under the particular wording. Do not assume the same procedure applies to every insurer.",
-          "The operational plan should also identify urgent actions outside insurance. For a suspected fraudulent transfer, bank contact can be time-sensitive. For active spread, authorized technical containment may be urgent. Assign parallel work where appropriate, while the responsible person follows the policy's reporting process. A coverage question should not become a reason to leave those duties unassigned.",
+          "Assign urgent operational work alongside insurance reporting. Bank contact may be time-sensitive after a suspected fraudulent transfer, and authorized technical containment may be urgent when an attack is spreading. While others carry out their assigned duties, the person responsible for insurance reporting can follow the policy's process. Decide these handoffs in advance so a coverage question does not leave the work unassigned.",
           "Keep contacts available outside the systems likely to be affected. A hotline stored only in an inaccessible mailbox may delay the response. Test the contact list in a planned exercise using the agreed route, without creating a false claim or emergency."
         ]
       },
       {
         "h": "Document costs and decisions as work occurs",
         "ps": [
-          "Maintain an incident expense record with invoices, engagement scope, authorization and the relationship to the event. Keep business interruption records according to the advice received, including the source of any estimate. Separate confirmed amounts from forecasts and avoid presenting a preliminary estimate as a settled loss.",
+          "Keep an incident expense record as the work happens. For each invoice, retain the scope, authorization and connection to the event. Follow the advice received on documenting business interruption, including how estimates were produced. Label forecasts separately from confirmed amounts so a preliminary estimate is not presented as a settled loss.",
           "Record why a provider was engaged and who approved the work. If consent or a panel arrangement matters under the policy, retain the relevant communication. A later reviewer should be able to follow the decision without reconstructing it from scattered messages.",
           "For technical recovery, retain the action timeline and results in the approved restricted system. Logs, customer details and security findings should not be copied into ordinary marketing or broadly shared operating documents. The claim team needs controlled access to appropriate evidence, not unrestricted redistribution."
         ]
@@ -1856,7 +1856,7 @@ export const refreshedArticles: Article[] = [
         "h": "Respond to a concern with a factual package",
         "ps": [
           "Ask the reviewing adviser to specify the requested information. Organize the response around that issue: the relevant question or provision, the submitted answer, supporting records and unresolved facts. Avoid argumentative speculation about the attacker's intent or the insurer's motives.",
-          "If a record is missing, state that limitation and the next fact-finding step. Do not recreate a historical test log as though it existed at the time. A retrospective explanation can be labeled as such and supported by available records. Preserving that distinction protects the usefulness of the evidence.",
+          "If a record is missing, explain the gap and what you will check next. A test log recreated after the incident cannot be presented as a log made at the time. You can provide a retrospective explanation based on available records, but label it clearly so the reviewer knows when and how it was produced.",
           "Keep one controlled version of the response package and record what was submitted, when and by whom. Route material legal or coverage conclusions through the appropriate adviser. Different employees independently answering the same question can create inconsistencies that complicate an otherwise straightforward review."
         ]
       },
@@ -1865,7 +1865,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "An incident may reveal incomplete authentication, missing devices, weak payment verification or an untested recovery process. Fixing the gap can improve the current operating position, but it does not alter the historical record. Date the change and retain the before-and-after evidence as appropriate.",
           "Assign corrective work to the responsible IT or business owner. A security coordinator can track the work and collect evidence, while the authorized administrator makes technical changes. If specialist recovery or forensic services are needed, establish their scope and authority separately.",
-          "Review whether the findings affect statements in customer questionnaires, policies or future applications. Obtain advice on any required update rather than assuming the firm can leave old statements unchanged. The goal is a current, supportable representation of the environment."
+          "Check whether the findings also affect statements in customer questionnaires, policies or future applications. Ask the appropriate adviser which updates are required. Until that review is done, do not assume old statements still describe the environment accurately."
         ]
       },
       {
@@ -1873,7 +1873,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Before the next renewal, compare the actual business with the policy and application. Include new services, changed workflows, acquisitions and material changes in the protected population. Ask the broker how those facts should be reflected. Accurate information does not guarantee a lower premium or an available policy; it supports a clearer underwriting discussion.",
           {
-            "text": "Use the application walkthrough for the submission process and the questionnaire guide for technical answer evidence. Review the incident-response plan for bank, insurer and provider handoffs. Each answers a different operational question.",
+            "text": "Use the application walkthrough for the submission process and the questionnaire guide for technical answer evidence. Review the incident-response plan for bank, insurer and provider handoffs.",
             "links": [
               {
                 "phrase": "application walkthrough",
@@ -1903,8 +1903,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Separate a control problem from a coverage conclusion",
         "ps": [
-          "Consider a hypothetical firm that discovers an excluded administrator account after an incident. The technical review should identify the account, its access, the applicable policy and the time the exception existed. It should also establish what role, if any, that account played in the event. Those are factual questions requiring evidence.",
-          "The coverage review then considers the actual application, policy terms and applicable law. The technical exception alone does not answer every legal question, and a statement that the event used another account does not automatically resolve the dispute. Keep the analyses connected without conflating them. Give the adviser the dated facts and relevant documents, then follow the agreed response process and deadlines."
+          "Consider a hypothetical firm that discovers an excluded administrator account after an incident. The technical review should identify the account, its access, the applicable policy and the time the exception existed. It should also establish what role, if any, that account played in the event.",
+          "Give the coverage adviser the dated technical facts together with the application and policy, then follow the response process and deadlines. Finding an excluded account does not by itself settle coverage. Evidence that a different account was used may also leave questions unresolved. The adviser needs to assess the technical record against the contract and applicable law."
         ]
       }
     ],
@@ -1927,12 +1927,12 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "Professional Services",
     "laneTo": "/professional-services",
-    "intro": "A cyber-insurance questionnaire should describe the controls your business actually operates. The useful answer is not the most reassuring one. It is the answer supported by the relevant population, configuration, records and date. If the control is incomplete, explain that limitation through the route approved by your broker.",
+    "intro": "An insurer may ask whether MFA covers every account while your evidence covers only email. Before answering, establish which accounts or systems the question includes and check their current settings against dated records. If some remain outside the control, work with your broker on how to explain that gap in the insurer's form.",
     "sections": [
       {
         "h": "1. Multi-factor authentication",
         "ps": [
-          "Identify which accounts and access paths the question covers. Email, remote access, administrators and independent business applications may require separate checks. Ask the authorized administrator to show enforcement and exceptions for that population. A user who registered a second factor may still have an access path where it is not required.",
+          "Start with the accounts and access paths named in the question. Email, remote access, administrators and independent applications may use different MFA policies. Ask the authorized administrator for enforcement settings and exceptions. A registered authenticator shows that a method is available; the policy evidence shows which sign-ins require it.",
           {
             "text": "Record the allowed methods if the form asks. SMS, app codes, push approval and phishing-resistant credentials have different properties. Avoid calling every method phishing resistant. Use the MFA comparison to prepare questions for IT, then answer for the method and policy actually operating.",
             "links": [
@@ -1948,15 +1948,15 @@ export const refreshedArticles: Article[] = [
       {
         "h": "2. Endpoint detection and response",
         "ps": [
-          "Confirm the eligible population, installed protection and current reporting health. A console with old device entries may not represent active coverage. Compare it with the current inventory and resolve devices that are missing, duplicated or stale.",
-          "Ask what investigation and response service operates around the product. If the question asks about continuous monitoring, identify the function and covered devices. Continuous collection, analyst review and authorized containment are different claims. Keep the written service boundary with the evidence.",
+          "Compare the protection console with the current device inventory. Check the eligible population, installed protection and reporting health, then resolve missing, duplicated and stale entries. Old console records can make active coverage look broader than it is.",
+          "Next, identify the investigation and response service around the product. For a continuous-monitoring question, establish the function and covered devices. Continuous collection, analyst review and authorized containment are separate activities; retain the written service boundary showing which apply.",
           "Phones, tablets, servers and specialist systems need their own coverage decisions. Do not answer for every endpoint based on employee laptop protection when the relevant population is broader. State supported and excluded systems as the form requires."
         ]
       },
       {
         "h": "3. Backup coverage",
         "ps": [
-          "List the important workloads and the recovery method for each. Email, file storage, business applications and local systems may have different products and operators. A user count or subscription invoice does not establish that every workload is protected.",
+          "Map each important workload to its recovery method and operator. Email, file storage, business applications and local systems may be protected differently. Check that mapping against the covered population instead of inferring coverage from a user count or subscription invoice.",
           "Check enrollment of new users and shared data. Identify exclusions and unsuccessful captures. Ask the operator to show the actual protected population and relevant recovery points. Do not claim all data is backed up when the inventory includes an unsupported application.",
           {
             "text": "Keep preservation and restoration separate. Retention or legal holds can serve important purposes while differing from operational backup. Review the Microsoft 365 comparison or Google Workspace comparison when those platforms are relevant.",
@@ -1976,15 +1976,15 @@ export const refreshedArticles: Article[] = [
       {
         "h": "4. Isolation, immutability and encryption",
         "ps": [
-          "Read which mechanism the question requests. Encryption concerns protection under a cryptographic arrangement. Isolation concerns separation or access. Immutability concerns restrictions on alteration or deletion under a particular configuration. One does not automatically establish the others.",
+          "Read the requested mechanism carefully. Encryption protects information using cryptography; isolation separates systems or access; immutability restricts alteration or deletion under a particular configuration. Verify the mechanism the insurer asks about, even if another is already in place.",
           "Ask the backup operator for the configured mechanism, administrator access and relevant retention behavior. If a proposed answer depends on a provider capability, confirm it is enabled for your covered data. Avoid treating a product's available feature as proof of your deployment.",
-          "Record any exceptions and the evidence source. Have the broker clarify ambiguous wording rather than choosing the interpretation that produces the easiest yes. The actual form and any policy requirement need the specific answer."
+          "Record any exceptions and the evidence source. Have the broker clarify ambiguous wording rather than choosing the interpretation that produces the easiest yes. Answer according to the form's wording and any policy requirement."
         ]
       },
       {
         "h": "5. Restore testing",
         "ps": [
-          "A successful backup job is evidence of a capture process, not proof that the business can recover usable work. Identify the scenario tested, recovery point, operator, destination and result. Have the data owner confirm the returned information can be used.",
+          "For a restore test, record the scenario, recovery point, operator, destination and result, then ask the data owner whether the returned information is usable. A successful backup job supports a claim that data was captured. The restore test checks whether the business can use what was captured.",
           {
             "text": "State the actual test date and scope. If only one workload was tested, do not describe it as a full-business recovery exercise. Failed steps and manual repairs belong in the record. Use the restore-testing guide to define a bounded test.",
             "links": [
@@ -2001,7 +2001,7 @@ export const refreshedArticles: Article[] = [
         "h": "6. Patching and vulnerability management",
         "ps": [
           "Ask IT which systems are maintained, how important findings are prioritized and how completed updates are verified. Include unsupported products and externally operated systems. An automated update setting does not establish that every applicable update completed successfully.",
-          "For a vulnerability-management question, retain the assessed scope and finding-to-action record. A public website scan does not cover all internal devices. A closed ticket needs evidence relevant to the finding, such as a version check or appropriate reassessment.",
+          "A vulnerability-management answer needs the assessed scope and a record connecting findings to action. Internal devices remain outside a public website scan. For closed findings, retain relevant verification, such as a version check or appropriate reassessment, with the ticket.",
           {
             "text": "Use the vulnerability-management guide to assign validation, action and exceptions. The questionnaire answer should describe the maintained process and its population, with any limitations disclosed through the agreed route.",
             "links": [
@@ -2017,7 +2017,7 @@ export const refreshedArticles: Article[] = [
         "h": "7. Email security",
         "ps": [
           "Identify the platform, protection configuration and covered mail flow. Filtering, impersonation protection, link inspection and attachment handling may have different scope. Ask who investigates employee reports and how a suspicious account is handled.",
-          "Do not treat SPF, DKIM or DMARC as protection against every fraudulent message. These controls concern authentication and policy under their configured rules. A compromised legitimate mailbox can still send a fraudulent request. Payment authorization needs its own independent process.",
+          "SPF, DKIM and DMARC concern email authentication and policy under configured rules. They do not establish that a request is honest: a compromised legitimate mailbox can send fraudulent instructions. Keep independent payment authorization in place alongside those controls.",
           {
             "text": "If the form asks about encryption or secure exchange, check that specific workflow. Inbound threat filtering does not establish encrypted delivery of confidential files. Use the email-service evaluation to separate the capabilities.",
             "links": [
@@ -2032,15 +2032,15 @@ export const refreshedArticles: Article[] = [
       {
         "h": "8. Security awareness training",
         "ps": [
-          "Identify who is assigned training, when it occurs and what records exist. Include seasonal workers and new starters where the question requires them. A license purchased for the staff is different from completed learning.",
+          "Check the assigned population, training dates and completion records. Include seasonal workers and new starters where the question requires them. A purchased staff license shows availability; completion records show who actually took the training.",
           "Keep overdue assignments and documented exceptions visible. If the form asks about simulations, describe the actual program rather than assuming any training counts. A simulation result is one measure of participation and behavior, not a guarantee that employees will recognize every attack.",
-          "Ask the program owner for the relevant period and population. Avoid applying a categorical rule that one past presentation always means no or that any recent session always means yes. The question's wording and the firm's actual practice determine the response."
+          "Answer for the period and population the form requests. A past presentation may or may not satisfy that question, just as a recent session may cover only part of the staff. Use the firm's records to establish the response instead of applying a blanket rule."
         ]
       },
       {
         "h": "9. Incident response",
         "ps": [
-          "Find the approved plan and confirm its contacts, authority and business handoffs. A document written for a prior provider arrangement may not describe the current response. Check how staff report a concern and how the primary and backup contacts reach authorized help.",
+          "Check the approved incident plan against the current provider arrangement. Verify contacts, authority and business handoffs, including how staff report a concern and how primary and backup contacts reach authorized help. An older plan may point people to a response the firm no longer uses.",
           "If an exercise is requested, retain the scenario, date, participants, observed decisions and corrective actions. Attendance alone does not show that every response duty was tested. State the actual scope and result.",
           {
             "text": "Include urgent financial and continuity decisions where relevant. The incident-response guide connects technical containment with bank, insurer and adviser contacts. Policy-specific notice and engagement requirements should be reviewed with the broker.",
@@ -2057,7 +2057,7 @@ export const refreshedArticles: Article[] = [
         "h": "10. Payment verification",
         "ps": [
           "Ask the business owner how new or changed banking instructions are independently verified. A callback should use a trusted number established outside the suspicious request, with an authorized person confirming the relevant instruction. Email appearance alone is weak authorization evidence.",
-          "Identify the required approvers, exception process and record connecting verification to the transfer executed. A prior verification of a different account should not silently authorize a later change. Test the process with harmless scenarios that include deadline pressure.",
+          "Identify the required approvers, exception process and record connecting verification to the transfer executed. Do not treat verification of a different account as authorization for a later change. Test the process with harmless scenarios that include deadline pressure.",
           "Keep the evidence limited to the appropriate controlled records. A general training completion log does not establish that a particular financial instruction was verified. Describe the actual business procedure rather than a security-product feature."
         ]
       },
@@ -2074,7 +2074,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Answer for completed operation, not the existence of a template. If the firm has a procedure but cannot establish whether recent departures followed it, record that uncertainty and assign the review before making a broad claim."
+          "If recent departures cannot be traced to completed access-removal records, note that uncertainty and assign a review before making a broad claim. The template explains the intended procedure; the records establish what happened."
         ]
       },
       {
@@ -2096,7 +2096,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Keep the answer and evidence connected",
         "ps": [
-          "For each question, retain the exact wording, response, population, date, evidence reference and reviewer. Resolve contradictory statements before the authorized signer approves the package. Keep the final submitted version and written broker clarifications, with restricted supporting records in their approved location.",
+          "Keep the exact question with its response, population, date, evidence reference and reviewer. Resolve contradictory statements before the authorized signer approves the package. Save the submitted version and written broker clarifications; retain restricted supporting records in their approved location.",
           {
             "text": "Helm Command supports evidence upkeep and bounded questionnaire assistance under its written scope. Existing IT supplies and maintains technical controls; the broker and signer retain insurance decisions. A supported submission improves the factual record, without guaranteeing pricing, issuance or claim payment.",
             "links": [
@@ -2137,17 +2137,17 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "Your accounting firm has an email filter, endpoint protection and a backup subscription. A customer then asks who investigates suspicious activity and whether every laptop is covered. The invoices show what you bought. Answering the customer requires coverage records and named responsibilities.",
+    "intro": "Suppose your accounting firm has an email filter, endpoint protection and a backup subscription. A customer asks who investigates suspicious activity and whether every laptop is covered. The invoices establish what you bought. To answer the customer, you need coverage records and someone responsible for the work.",
     "lead": [
-      "That is the buying decision behind cybersecurity point solutions versus managed security: which protections do you need, and who will operate them and keep the evidence current? For a New Jersey business with existing IT, start with the work falling between contracts."
+      "When choosing between cybersecurity point solutions and managed security, decide which protections you need and who will operate them and keep the evidence current. For a New Jersey business with existing IT, start with the work falling between contracts."
     ],
     "takeaway": "Keep a point solution when it addresses a defined gap and has an operating owner. Consider a standardized managed stack when protection needs consistent coverage. Add program ownership when recurring risk, evidence and leadership decisions need coordination.",
     "sections": [
       {
         "h": "What a cybersecurity point solution does",
         "ps": [
-          "A point solution addresses a particular security job, such as filtering email, detecting threats on endpoints or backing up cloud data. You can buy it directly or through a provider. Its operating model matters: the subscription may supply software, managed investigation or a combination, depending on the agreement.",
-          "Separate tools can be a sensible choice when your IT team has the expertise and time to maintain them. Check compatibility, overlapping licenses and the handoff between products. An email alert that suggests a compromised account may also require an identity review and a decision about access.",
+          "A point solution handles a particular job, such as email filtering, endpoint threat detection or cloud backup. It can be purchased directly or through a provider. Check the operating agreement: the same category can mean software your team runs, managed investigation or a combination.",
+          "Separate tools can fit an IT team with the expertise and time to maintain them. Review compatibility and overlapping licenses, then trace how the products hand work to one another. An email alert suggesting account compromise, for instance, may need an identity review and an access decision beyond the email tool's own response.",
           {
             "text": "NIST's guidance on building a cybersecurity team includes resources for discussing internal and outsourced security roles. For procurement, we recommend a written responsibility map: the outcomes you need, provider commitments and work retained by your team. Use it to compare proposals before comparing product names.",
             "links": [
@@ -2171,7 +2171,7 @@ export const refreshedArticles: Article[] = [
             ],
             "ordered": false
           },
-          "Fewer notifications alone do not establish better protection. Ask a managed provider to show how an alert becomes an investigation, an authorized response and a record of the outcome. Confirm what appears in reporting and which decisions still reach your business."
+          "Ask the managed provider to follow an alert through investigation, authorized response and the record of what happened. That sequence shows which work the provider handles and which decisions still reach your business. A reduction in notifications, on its own, cannot establish better protection."
         ]
       },
       {
@@ -2234,7 +2234,7 @@ export const refreshedArticles: Article[] = [
         "h": "Test the evidence before signing a questionnaire",
         "ps": [
           "For a question about endpoint protection, start with the population the question covers. Compare a current device inventory with protection deployment records and list any exceptions. A report covering eligible workstations cannot support an answer about every server and mobile device.",
-          "Keep the question, evidence reference, date, technical reviewer and approved answer together. For a backup question, check covered data and the relevant restore-test record. A written policy needs operating evidence behind its claims.",
+          "Keep the questionnaire, evidence reference, date, technical reviewer and approved answer together. For a backup question, include the covered data and relevant restore-test record. This lets the reviewer check that the written claim describes what operates in the firm, rather than relying on the policy alone.",
           "A quarterly review can track unresolved gaps, owners and deadlines so the same unanswered question does not return at renewal. Command supports that cadence and bounded response work. The client approves every final attestation; customers and insurers decide whether the evidence meets their requirements."
         ]
       },
@@ -2275,16 +2275,16 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Price the operating work alongside the subscription",
         "ps": [
-          "Build one comparison worksheet for the same users, systems and coverage period. Separate recurring fees from implementation, transition and work retained by IT. A cheaper license can be a reasonable purchase if your team has capacity to operate it. A managed proposal can be reasonable if its included work replaces a task you would otherwise need to fund. Neither conclusion follows from the monthly price alone.",
-          "Use a hypothetical email-protection evaluation. Proposal A supplies filtering and a dashboard. Proposal B also includes investigation of supported alerts and a defined escalation route. Before comparing cost, ask who reviews employee reports in each model, who makes allow-list changes and who handles an account suspected of sending fraudulent messages. Those are different jobs. Confirm the provider's actual commitments instead of assigning value to a marketing label.",
-          "Keep retained labor visible without pretending every saved hour becomes cash. If IT spends fewer hours reviewing routine notifications, that may free time for patching or recovery tests. It does not automatically reduce the IT invoice. Ask the IT owner which work would change, then use that answer in the business case."
+          "Compare proposals for the same users, systems and coverage period. List recurring fees, implementation, transition and the work retained by IT. A lower license price may fit a team that can operate the tool; a managed proposal may include work the firm would otherwise have to fund. The worksheet should make those duties visible alongside the monthly price.",
+          "Suppose one email proposal includes filtering and a dashboard, while another adds investigation of supported alerts and a defined escalation route. For both, ask who reviews employee reports, changes allow-lists and handles suspected account misuse. Comparing those duties explains what the additional managed fee would buy. This is a hypothetical comparison, not a description of specific vendor contracts.",
+          "If IT spends fewer hours reviewing routine notifications, it may have more time for patching or recovery tests. The IT invoice may remain the same. Ask the IT owner which duties would change and use that answer in the business case, distinguishing available capacity from a reduction in cost."
         ]
       },
       {
         "h": "Make onboarding and replacement part of the purchase",
         "ps": [
           "A replacement service needs a transition plan. Inventory the current agents, mail-routing settings, licenses and administrators before scheduling removal. Confirm whether the new tool can coexist during a limited transition and who will approve changes. Avoid creating a protection gap merely to meet a preferred billing date.",
-          "Ask for acceptance evidence. For endpoints, that could mean reconciling eligible devices against active deployment records and investigating missing entries. For email, it could mean confirming routing and testing the approved reporting path with harmless messages. For backup, identify the workload and perform an authorized restore check. The checks depend on the service; a single onboarding-complete email does not answer all three questions.",
+          "Define acceptance checks for each service. Endpoint onboarding may need a comparison of eligible devices with active deployment records and investigation of missing entries. For email, confirm routing and test the reporting path with harmless messages. For backup, identify the workload and perform an authorized restore check. Each test answers a different coverage question that an onboarding-complete email leaves open.",
           "Agree on an exit process while both parties have time to discuss it. Name who can export reports, transfer administrative access, remove agents and document outstanding incidents. Identify records that the business must retain and any charges for transition help. Your firm should be able to understand its coverage after a provider changes."
         ]
       },
@@ -2292,7 +2292,7 @@ export const refreshedArticles: Article[] = [
         "h": "Reassess when the business changes",
         "ps": [
           "Set review triggers as well as a calendar date. An acquisition, new client requirement, cloud-platform migration or large increase in contractors can change the population a service needs to cover. A stack that fits today may leave new identities or applications outside its scope tomorrow.",
-          "Bring the responsibility map back to each review. Close a gap by assigning the task, funding it where needed and checking completion. Buying another dashboard is useful only when its information reaches someone authorized to act. The result you want is a clear operating record: covered population, assigned work, current exceptions and the next decision the business must make.",
+          "At each review, use the responsibility map to assign unresolved work, fund it where needed and verify completion. A dashboard helps only if its findings reach someone who can act. Keep the covered population, assigned duties, exceptions and next business decision in the operating record so the review can pick up where the last one ended.",
           "Ask who owns an alert that crosses products. The email provider may identify the message while another team investigates account access. Record the transfer, acceptance and next action so both sides can tell whether the handoff succeeded."
         ]
       }
@@ -2311,10 +2311,10 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "A risk assessment tool should help your firm explain what could go wrong, why the business would care and who will act. A vulnerability scanner contributes technical findings, but it cannot decide the business impact of losing access to a tax application during filing season or exposing a client's matter files.",
+    "intro": "A vulnerability scanner can identify technical weaknesses. Your firm still has to decide what they mean for the business: losing a tax application during filing season differs from exposing a client's matter files. Choose a risk assessment tool that helps connect the findings to those consequences and assigns the next action.",
     "lead": [
       {
-        "text": "NIST's risk-assessment guidance considers threats, vulnerabilities, likelihood and impact, with preparation, assessment and maintenance over time. It provides a method rather than a claim that one automated score establishes risk. NIST SP 800-30 Revision 1.",
+        "text": "NIST's risk-assessment guidance considers threats, vulnerabilities, likelihood and impact, with preparation, assessment and maintenance over time. It provides a method for assessing risk; a single automated score does not establish it. NIST SP 800-30 Revision 1.",
         "links": [
           {
             "phrase": "NIST SP 800-30 Revision 1",
@@ -2328,7 +2328,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Check what the tool observes",
         "ps": [
-          "Ask which inputs come from live systems, which are uploaded documents and which are self-reported answers. A tool may combine several methods, but the reviewer needs to distinguish them. Record the assessed population and the date of each input.",
+          "Check where the tool gets its information. Live system observations, uploaded documents and self-reported answers have different limits, even when one dashboard combines them. Record the population assessed and the date of each input so a reviewer can tell what supports the finding.",
           "A hypothetical 80-person New Jersey consulting firm might use a tool that checks public configuration and collects staff answers about backups. The public checks may be observable; the backup answer still needs evidence from the responsible IT owner. A single score should not hide that difference.",
           "Asset discovery, scanning, questionnaire collection and evidence storage can all be useful, but no tool needs every feature to fit every assessment. Choose the capabilities that support your defined scope and protect the information being collected."
         ]
@@ -2348,7 +2348,7 @@ export const refreshedArticles: Article[] = [
             ],
             "ordered": false
           },
-          "Review access controls, data location, retention and integration permissions before uploading confidential documents. An evidence-management tool itself needs a scope and access decision."
+          "Before uploading confidential documents, review who can access them, where they are stored, how long they remain and what permissions any integration receives. Because the tool will hold evidence about your firm, decide what access and scope to approve."
         ]
       },
       {
@@ -2390,9 +2390,9 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Define the assessment before selecting software",
         "ps": [
-          "Write the decision the assessment needs to support. A firm deciding which recovery improvements to fund needs different evidence from a firm preparing a customer response. Both can use a risk tool, but the assessment scope should explain the business process, affected systems, intended reviewers and limits.",
+          "Start with the decision your firm needs to make. Funding recovery improvements calls for different evidence from preparing a customer response. Either task may use a risk tool; specify the business process, affected systems, intended reviewers and limits before choosing the software.",
           "Include the time period and population. If an assessment covers the main office and email tenant, identify a newly acquired office or specialist application that remains outside it. Record exclusions in the report where a decision-maker will see them. A narrow assessment can be useful when its conclusions remain narrow.",
-          "Agree on access and testing authority. A questionnaire, a document review and authenticated technical testing expose different information and can affect systems differently. Obtain approval for the actual work rather than treating acceptance of a sales demonstration as permission to inspect production accounts.",
+          "Authorize the work the assessment will actually involve. A questionnaire, document review and authenticated technical test reveal different information and may affect systems differently. Agreeing to a sales demonstration does not authorize inspection of production accounts.",
           "Set a delivery requirement that survives the software purchase. Your firm should receive findings, evidence references, limitations and decisions in a form it can retain. If the only output is a dashboard that disappears when the subscription ends, the tool may not support the record you need."
         ]
       },
@@ -2400,7 +2400,7 @@ export const refreshedArticles: Article[] = [
         "h": "Distinguish a technical finding from a business risk",
         "ps": [
           "A scanner might identify outdated software on a device. The reviewer still needs to confirm whether the finding is accurate, whether the device is exposed and what work it supports. A business consequence could be interruption of a client-facing workflow, unauthorized access to records or loss of an important dependency.",
-          "The assessment should show the reasoning between the technical observation and that consequence. Existing controls may change the analysis, while missing information may leave uncertainty. Ask whether the tool allows a reviewer to record both. A ranking that hides these judgments can make dissimilar findings appear equivalent.",
+          "The report should explain how the observation could lead to the business consequence. Existing controls may reduce the risk, and missing information may leave it uncertain. A reviewer needs room to record both; a ranking that conceals these judgments can make quite different findings look equivalent.",
           "For a hypothetical firm, a confirmed weakness on an internet-facing service used for client exchange may warrant faster attention than an uncertain finding on an isolated test device. That comparison depends on the actual facts. Do not turn the example into a universal scoring rule or an excuse to ignore internal systems.",
           "Keep risk treatment separate from finding validation. IT may establish that a scanner result was inaccurate; leadership may decide to accept a real exposure for a limited period. Those are different outcomes and should produce different records. The tool should preserve why a finding was closed or deferred."
         ]
@@ -2408,10 +2408,10 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Test the scoring method with two contrasting scenarios",
         "ps": [
-          "Ask the vendor to explain what produces a high score. Is it a count of missing questionnaire answers, severity of technical findings, a framework mapping or a calculated model? Identify which inputs are estimates and who supplies them. A precise-looking number can still depend on uncertain assumptions.",
+          "Find out what drives a high score: unanswered questions, technical severity, framework mapping or a calculated model. Ask which inputs are estimates and who supplies them. The number can look precise even when its assumptions are uncertain.",
           "Try a fictional case with good documentation but a confirmed operational gap, then one with working controls but missing evidence. Check whether the output distinguishes the two. Both require action, but the first may need a control improvement while the second may need verification and recordkeeping.",
           "If the tool uses categories such as high, medium and low, ask for their definitions. Review whether different assessors would apply them consistently enough for your decisions. Preserve the method used at the time of the assessment so a later rating can be interpreted properly.",
-          "Avoid comparing scores across products as though they share a scale. Even within one product, a scope change can affect the result. When reporting progress, explain whether a real finding was resolved, evidence was supplied or the scoring method changed. Those explanations are more useful than an unexplained rise in a dashboard number."
+          "Scores from different products may use different scales. Within one product, changing the assessment scope can also change the result. Explain why the score changed: a finding was resolved, evidence was supplied or the method changed. Leadership needs that explanation to interpret the dashboard number."
         ]
       },
       {
@@ -2419,7 +2419,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "An assessment platform can become a collection point for system details, policies and sensitive screenshots. Determine which records must be uploaded and which can remain in an approved repository with a reference. Redact unnecessary names and details where that still supports the review.",
           "Inspect permissions using a harmless sample workspace. Confirm which users can read evidence, edit findings, approve decisions and export records. Separate the ability to submit an answer from the authority to approve it. Ask how the platform records changes and handles a departing reviewer.",
-          "Review integration requests with IT. A connector may need broader access than a manual evidence upload. Ask what it reads, whether it can change systems and how access is removed at the end of the engagement. Confirm supported platforms and required licensing before treating automated collection as included coverage.",
+          "Have IT review connector permissions before enabling automated collection. Ask what the connector reads, whether it can change systems and how its access will be removed when the engagement ends. A connector may have broader access than a manual upload, and supported platforms or licensing may limit what it can collect.",
           "Discuss data retention, vendor access and exit arrangements. Establish what happens to uploaded material, backups and shared links when a workspace is closed. Use the firm's own contractual and information-handling requirements to review the vendor's terms; do not assume a compliance badge settles every data decision."
         ]
       },
@@ -2429,13 +2429,13 @@ export const refreshedArticles: Article[] = [
           "For each material item, the report should name the finding, affected business process, supporting evidence and uncertainty. Add the proposed action, owner, dependencies and the person who can approve spending or accept residual risk. A recommendation without an implementation owner remains unfinished work.",
           "Define what closes the item. If the recommendation is to improve recovery, purchase of a backup subscription is not the same as a successful restore check. If the recommendation is stronger access control, a written policy is not proof of enforcement. Match completion evidence to the claim.",
           "Set review triggers. Changes in applications, suppliers, staff access or customer requirements may invalidate an earlier assumption. A new incident or confirmed technical finding can also justify reassessment. Review scope and evidence dates before reusing last year's report.",
-          "At the purchasing decision, choose the tool that supports your review process and available owners. A smaller tool with transparent inputs and usable exports may fit better than a larger platform nobody can maintain. The assessment's value lies in the decisions and verified work it supports, not the number of automated checks advertised."
+          "Choose a tool the assigned owners can maintain and use during reviews. Transparent inputs and usable exports may be more useful to them than a longer feature list. Judge how well the tool supports decisions and verified work before considering its advertised number of checks."
         ]
       },
       {
         "h": "Keep findings usable when the tool changes",
         "ps": [
-          "Ask for a sample export before purchase and open it with the intended reviewer. Check that evidence references, owners, decisions and limitations remain understandable outside the dashboard. A spreadsheet of unexplained scores may be technically exportable without preserving a useful assessment.",
+          "Open a sample export with the person who will review the assessment. Check whether evidence references, owners, decisions and limitations make sense outside the dashboard. Exporting a spreadsheet of unexplained scores meets a technical export requirement but may lose the assessment record the firm needs.",
           "Test how a corrected input appears in the record. Retain the original observation, correction and reviewer where needed to explain the change. That history helps distinguish a resolved exposure from a reporting error when leadership revisits the assessment.",
           "Confirm that a new assessment can reference earlier decisions without silently replacing their evidence dates."
         ]
@@ -2455,7 +2455,7 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "A cybersecurity roadmap should show which work comes next, who will perform it and how the firm will know it is complete. A list of recommended tools leaves those decisions open.",
+    "intro": "A list of recommended security tools leaves the firm to decide which work comes first and who will do it. A roadmap carries those decisions forward: each action needs an owner and evidence that shows when it is complete. Without those details, leadership may approve a recommendation while the actual work remains unassigned.",
     "lead": [
       {
         "text": "For a New Jersey professional-services firm with existing IT, connect the roadmap to client information, business continuity and the evidence customers request. NIST's small-business guidance offers a structure for organizing cybersecurity work; use it to identify gaps without treating the framework as a certification. NIST Small Business Quick-Start Guide.",
@@ -2472,7 +2472,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Establish a baseline with known limits",
         "ps": [
-          "The first milestone is an agreed description of systems, responsibilities and existing controls. Record what has been checked, what is self-reported and what remains unknown. Identify contractual or regulatory requirements with the responsible adviser before labeling a gap as a compliance failure.",
+          "Agree on a baseline of systems, responsibilities and controls. Mark what was checked, what someone reported and what remains unknown. Confirm contractual or regulatory requirements with the responsible adviser before calling a gap a compliance failure. That baseline gives later milestones something specific to improve.",
           "A public-domain scan can contribute observable configuration findings. It cannot establish internal access, device coverage or restore capability. Deeper discovery should have a signed scope, authorized access and defined deliverables."
         ]
       },
@@ -2480,7 +2480,7 @@ export const refreshedArticles: Article[] = [
         "h": "Sequence work around dependencies",
         "ps": [
           "Choose priorities by business impact, exposure and the ability to act. An access-policy change may require new licensing, enrollment or a recovery procedure before rollout. A backup improvement needs a clear workload inventory and an authorized restore operator.",
-          "For a hypothetical 85-person New Jersey consulting firm, a roadmap could begin by confirming client-file access owners, then assign the relevant permission changes to IT and arrange a controlled restore test for an important shared workspace. This is a planning example, not a Helm client outcome or a universal sequence.",
+          "For example, a hypothetical 85-person New Jersey consulting firm could first confirm who approves client-file access. IT could then make the agreed permission changes, followed by a controlled restore test of an important shared workspace. That sequence is a planning example; the firm’s actual risks and dependencies determine the order.",
           "Each milestone should identify the responsible person, expected cost or budget decision, dependencies, target date and acceptance evidence. If implementation depends on IT or another vendor, obtain that owner's agreement before presenting the date as committed."
         ]
       },
@@ -2488,7 +2488,7 @@ export const refreshedArticles: Article[] = [
         "h": "Add evidence and leadership decisions",
         "ps": [
           "A milestone closes when the agreed acceptance check passes. Installation records, configuration exports, training records and restore-test results support different claims; choose the evidence that matches the change and store sensitive records appropriately.",
-          "At a leadership review, address completed work, missed dates and decisions requiring approval. Keep deferred risks visible with a reason and reconsideration date. Update the roadmap when systems, staff or client obligations change instead of repeatedly circulating the original plan."
+          "Use the leadership review to resolve missed dates and decisions awaiting approval as well as report completed work. Give a deferred risk a reason and a date to reconsider it. When systems, staff or client obligations change, revise the plan so the next review addresses the current business."
         ]
       },
       {
@@ -2531,9 +2531,9 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Write milestones with acceptance checks",
         "ps": [
-          "A milestone should describe a result that can be checked. Compare deploy endpoint protection with reconcile all eligible workstations against active protection records and resolve documented exceptions. The second description identifies the population and gives the owner a way to demonstrate completion.",
+          "Write the milestone so its owner can show that the result was achieved. “Deploy endpoint protection” leaves completion vague. “Reconcile all eligible workstations against active protection records and resolve documented exceptions” defines the population and the check needed to close the work.",
           "For each milestone, record the business reason, accountable owner, implementing party, dependencies, target date and acceptance evidence. Include the approver for spending or disruption. Keep a short description of what remains outside scope so closure does not imply a broader claim.",
-          "Ask the implementing owner to review the plan before leadership approves the date. A security adviser can recommend work but cannot commit another vendor's resources without agreement. If a dependency has no confirmed date, label the target as provisional and record the decision needed.",
+          "Have the implementing owner review the plan before leadership approves its date. An adviser can recommend work, but another vendor must agree to commit its resources. If a dependency has no confirmed date, keep the target provisional and name the decision needed to settle it.",
           "Store evidence references with the milestone rather than copying sensitive exports into a widely shared roadmap. Leadership needs enough information to understand completion; detailed technical records can remain in an approved restricted system with access for the responsible reviewer."
         ]
       },
@@ -2542,25 +2542,25 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "The first stage establishes facts and immediate decisions. Confirm important systems, owners, supported protection and known exceptions. Address urgent confirmed exposure through the appropriate operating route instead of waiting for a quarterly planning meeting. Record unknowns that require further authorized discovery.",
           "The next stage implements agreed priorities with dependencies checked. An access change may need enrollment and recovery preparation. A device rollout may need compatibility testing and an approved installation window. A backup improvement may require workload mapping before a meaningful restore test can occur.",
-          "A later stage verifies results and maintains them. Reconcile coverage, review acceptance evidence and check whether the original business consequence has changed. Decide which records need periodic review and which changes trigger an earlier check. The roadmap becomes a maintained operating record rather than a one-time project list.",
+          "After implementation, reconcile coverage and review the acceptance evidence. Check whether the business consequence that prompted the work has changed, and decide which records need scheduled review or an earlier check after a change. Those checks keep the roadmap useful after the initial project finishes.",
           "These stages do not prescribe a 30-, 60- or 90-day deadline for every firm. Sequence and dates depend on exposure, business constraints and available owners. When using an illustrative schedule, label it as a planning assumption until the implementing parties commit to it."
         ]
       },
       {
         "h": "Keep urgent work and long-term improvements connected",
         "ps": [
-          "A new confirmed finding can require work outside the planned sequence. Route it to the appropriate owner, assess its business consequence and document the decision. Update the roadmap if resources or dependencies shift. Do not preserve an attractive timeline at the expense of a more urgent operating need.",
-          "At the same time, avoid treating every notification as grounds to abandon the program. The responsible reviewer should distinguish confirmed urgent work from uncertain signals and routine maintenance. Record why a priority changed so leadership can understand the tradeoff.",
+          "A new confirmed finding can require work outside the planned sequence. Route it to the appropriate owner, assess its business consequence and document the decision. Update the roadmap if resources or dependencies shift, and revise the timeline when more urgent work takes priority.",
+          "Review new notifications before changing the program’s priorities. The responsible reviewer should separate confirmed urgent work from uncertain signals and routine maintenance. If the priority changes, record the reason so leadership can see what other work has been delayed.",
           "Keep incident response separate from roadmap governance. A suspected active compromise requires the agreed notification, containment and investigation route. The planning record can capture resulting improvements later. A milestone discussion is not a substitute for authorized response.",
-          "Coordinate with IT's maintenance schedule. Routine patching and administration remain with their operating owner, but material exceptions may require leadership decisions. The roadmap should highlight those decisions without pretending to replace every technical task queue."
+          "Coordinate with IT's maintenance schedule. Routine patching and administration remain with their operating owner, but material exceptions may require leadership decisions. Use the roadmap to identify those decisions while IT continues to manage its technical task queue."
         ]
       },
       {
         "h": "Plan a recovery milestone around usable work",
         "ps": [
           "Choose an important workflow and identify the data and systems it depends on. Define what a successful authorized recovery check would demonstrate and who can perform it. Obtain the business owner's acceptance criteria before the test, especially where timing or data currency matters.",
-          "A hypothetical firm might test recovery of a defined shared workspace into a controlled location, then verify that selected files can be opened and used by an authorized reviewer. That result supports a limited claim about the tested workload and conditions. It does not establish that every application can be recovered in the same time.",
-          "Record the test date, workload, result, limitations and actions arising. If the result fails an acceptance check, keep the milestone open or create a clearly linked corrective item. Purchasing a backup product cannot substitute for the verification the milestone requires.",
+          "Suppose a firm restores a defined shared workspace into a controlled location. An authorized reviewer opens and uses selected files. That hypothetical test supports a claim about that workload under those conditions. It cannot establish the recovery time for every other application.",
+          "Record the recovery test’s date, workload, result and limits, along with any follow-up work. A failed acceptance check leaves the milestone open or needs a clearly linked corrective item. Buying the backup product does not complete a milestone that requires a usable restore.",
           "Check which recovery duties sit outside the security service. IT may need to restore applications or rebuild systems, while specialist response and business notification have other owners. Include those dependencies in the plan before presenting recovery improvement as completed coverage."
         ]
       },
@@ -2569,7 +2569,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Build a record of the claims the firm regularly makes to customers and insurers. Identify the control owner, evidence location, date and covered population. Schedule a review of unsupported or stale claims before the next submission rather than treating questionnaire drafting as an isolated task.",
           "An exception review should produce decisions. For each material gap, leadership can approve treatment, request more information or accept a defined risk with conditions and a review date. Record the rationale and responsible person. Acceptance is not the same as technical resolution.",
-          "Set triggers for reconsideration. A new client requirement, platform change or failed control check may invalidate the original decision. The owner should know when to bring it back to leadership. An exception without a trigger can remain open unnoticed long after its justification changes.",
+          "Tell the exception owner what should bring the decision back to leadership. A new client requirement, platform change or failed control check may make the original justification obsolete. Without a reconsideration trigger, the exception can stay open long after the reason for it has changed.",
           "Use summaries for governance and controlled references for supporting records. The roadmap should be readable by decision-makers without circulating credentials, incident details or unnecessary personal information. Evidence quality includes handling the record appropriately."
         ]
       },
@@ -2578,8 +2578,8 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Report completed milestones against their acceptance checks, not only tasks moved to a finished column. Explain outstanding dependencies, missed dates and decisions awaiting approval. If scope changes, show the new population or requirement so comparisons remain meaningful.",
           "Use numbers only when they describe something measured. For example, a fictional coverage check could record 48 of 50 eligible devices reconciled, with two exceptions assigned to IT. That is 96 percent of the stated population at the check date. It is not a security score or a claim about excluded systems.",
-          "Avoid treating planned spending, meeting attendance or document count as proof of risk reduction. They may describe activity, but the report should connect work to verified changes and remaining uncertainty. Leadership can then decide whether the investment addresses the business problem.",
-          "At the next review, carry forward unresolved decisions with current owners and dates. Retire superseded work with a reason rather than deleting its history. A useful roadmap makes the next action clear and preserves enough context to explain why the firm chose it."
+          "Spending, attendance and document counts describe activity. To assess the investment, leadership also needs to see the verified changes and remaining uncertainty. Connect the report to the business problem that the work was intended to address.",
+          "At the next review, carry forward unresolved decisions with current owners and dates. Retire superseded work with a reason and keep its history. Make the next action clear and preserve enough context to explain why the firm chose it."
         ]
       }
     ],
@@ -2595,7 +2595,7 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "A payment request can sound like a familiar executive and still be unauthorized. Synthetic or manipulated audio and video can make an impersonation more convincing, but the underlying business problem is familiar: someone asks an employee to move money or disclose information outside the approved process.",
+    "intro": "A familiar voice or face cannot authorize a payment. Synthetic or manipulated audio and video can make an executive impersonation convincing, while the requested action still needs verification. Keep the firm's approval process in place when someone asks for money or information through an unusual route.",
     "sections": [
       {
         "h": "What the reported cases establish",
@@ -2610,15 +2610,15 @@ export const refreshedArticles: Article[] = [
             ]
           },
           "The same official reply described a separate May 20, 2024 report involving an apparent chief financial officer, a roughly thirty-minute conference and a transfer of nearly HK$4 million. It said publicly available video material had been altered. Both matters were described as under investigation at the time of the reply. These are dated official reports, not a prediction of losses at small New Jersey firms.",
-          "The cases illustrate a limitation of familiar appearance as an authorization check. They do not establish that every executive impersonation uses AI, that every video call is fake or that a particular number of seconds of audio will reliably produce a convincing clone. Avoid importing those unsupported claims into staff training."
+          "These cases show why familiar appearance cannot serve as payment approval. Keep training tied to what the reports establish. They do not show that every executive impersonation uses AI, that every video call is fake or that a set number of seconds of audio will reliably produce a convincing clone."
         ]
       },
       {
         "h": "Separate identity confidence from approval",
         "ps": [
-          "Seeing a face or hearing a voice can increase a person's confidence about identity. It does not establish that the requested payment has the required business authorization. The firm needs a process connecting a verified person, an approved purpose, the actual beneficiary and the person permitted to release funds.",
+          "A face or voice can make staff more confident about who is speaking, but payment approval also depends on the instruction. Confirm the authorized person, business purpose and actual beneficiary, then identify who is permitted to release the funds. Recognizing the caller does not complete those checks.",
           "A real executive can also make a mistaken request or use an account that has been compromised. Apply the financial rule consistently rather than creating a special exception for apparently authentic senior requests. The control should survive both impersonation and ordinary errors.",
-          "Document the instruction being approved. If the beneficiary changes after approval, the prior decision should not silently authorize the replacement. A callback about one account and a later payment to another account are different events. Keep the verification record connected to the instruction actually executed."
+          "Record the instruction that was approved and connect it to the payment that is released. If the beneficiary changes afterward, the replacement needs its own review. A callback confirming one account cannot verify a later payment to a different account."
         ]
       },
       {
@@ -2680,16 +2680,16 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Plan for executive pressure",
         "ps": [
-          "A fraud attempt may use urgency, confidentiality or status to discourage a check. A legitimate urgent request can create the same pressure. The process therefore needs a rule for the situation, not a prediction about whether the requester sounds suspicious.",
+          "Set a verification rule that works under pressure. Fraudsters may invoke urgency, confidentiality or seniority to discourage a check, and a legitimate urgent request can create the same pressure. Staff need a process they can follow in either case, without first deciding whether the voice sounds suspicious.",
           "Leadership should tell staff that pausing for the approved verification is expected. If an executive asks for an exception, identify the authorized exception route and evidence. Staff should not have to decide alone whether a senior person's apparent instruction overrides a financial control.",
-          "Plan for an unavailable executive near a payment cutoff. Use the established alternate route or hold the release until authorized verification is complete. Decide that approach before the deadline. A procedure with no workable alternative can become an undocumented bypass at the moment it matters."
+          "Agree what happens when the executive is unavailable near a payment cutoff: use the established alternate route or hold release until authorized verification is complete. If that choice is left until the deadline, staff may bypass a procedure they cannot complete. Make the alternative workable before an urgent request arrives."
         ]
       },
       {
         "h": "Avoid making visual clues the primary control",
         "ps": [
           "Audio artifacts, unnatural movement or an inconsistent background may justify caution, but their absence does not verify a request. Product capabilities and attack methods change. Staff should not be expected to perform media forensics while answering a client call or processing a payment.",
-          "Likewise, a polished message does not prove AI involvement. Ordinary account compromise and conventional impersonation can produce convincing requests. Report the suspicious action and available evidence, rather than requiring the employee to identify the generation technology.",
+          "Ask staff to report the suspicious request and preserve what they received. A polished message can come from ordinary account compromise or conventional impersonation, so it does not prove that AI was involved. Reporting should not depend on an employee identifying how the message was generated.",
           "If the firm evaluates a media-detection product, ask about its tested conditions, limitations and false results. Keep it separate from the authorization procedure. A confidence score from a detector should not become permission to release funds without the required verification."
         ]
       },
@@ -2705,23 +2705,23 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Review access to shared financial records and trusted contact lists. An attacker who can alter those records may affect the verification route. Assign the owner who approves changes and the administrator who implements permissions. Record meaningful changes and review departures.",
+          "Review access to shared financial records and trusted contact lists. An attacker who can alter those records may affect the verification route. Assign the owner who approves changes and the administrator who implements permissions. Record meaningful changes and review access when staff leave.",
           "External exposure review may also identify impersonation using the firm's name. A report can support investigation and platform reporting, but it does not guarantee rapid removal of every fake account. Confirm the relevant service's monitored assets and response scope before relying on it."
         ]
       },
       {
         "h": "Test a transaction rather than a fake-video contest",
         "ps": [
-          "Use a harmless exercise in which an apparent senior request introduces a new beneficiary and a tight deadline. Ask staff to show the trusted contact, verification, approvals and decision. Include the payment operator and alternate approver so the exercise reaches execution authority.",
+          "Use a harmless exercise in which an apparent senior request introduces a new beneficiary and a tight deadline. Ask staff to show the trusted contact, verification, approvals and decision. Include the payment operator and alternate approver so the exercise tests the staff who can release the funds.",
           "Do not use real client banking details or send an unannounced synthetic executive recording outside the agreed exercise scope. The purpose is to test the financial process and reporting route, with approved participants and materials. Record the actual steps and any missing authority.",
-          "Correct the specific gap afterward. An unavailable trusted number needs a maintained contact. An ambiguous approval rule needs a leadership decision. A person who lacks access to the approved record needs an appropriate access arrangement. Repeat the affected step once the correction is implemented."
+          "Use the exercise record to fix the step that failed. Replace an unavailable trusted number with a maintained contact. Have leadership resolve an ambiguous approval rule, or arrange appropriate access when a staff member cannot reach the approved record. Then repeat that step to check the correction."
         ]
       },
       {
         "h": "Act promptly if money has moved",
         "ps": [
           {
-            "text": "The FBI's business email compromise guidance advises immediate financial-institution contact and reporting to IC3. Record the transfer details, contact times and reference numbers. Do not wait for a final determination that AI was used before taking the financial response step.",
+            "text": "The FBI's business email compromise guidance advises immediate financial-institution contact and reporting to IC3. Record the transfer details, contact times and reference numbers. Contact the bank and report the fraud without waiting for confirmation that AI was used.",
             "links": [
               {
                 "phrase": "FBI's business email compromise guidance",
@@ -2750,11 +2750,11 @@ export const refreshedArticles: Article[] = [
         "h": "Protect the trusted contact record",
         "ps": [
           "Assign an owner for executive and supplier contact details used in verification. A change to that record should follow an approved process with independent confirmation, rather than an edit prompted by the same unusual payment request. Record who approved the change and its effective date.",
-          "Review the record when a person changes roles or leaves. Test the alternate contact during a planned exercise. A verification rule can fail when the stored number is stale or the alternate person has no authority. Maintaining the trusted route is an operating duty in its own right, with an owner and evidence, rather than a one-time setup task."
+          "Keep the verification record current when people change roles or leave, and test the alternate contact during a planned exercise. A stale number or an alternate who lacks authority can make a sound rule unusable. Assign someone to maintain the route and keep evidence of the checks after the initial setup."
         ]
       }
     ],
-    "takeaway": "Use a trusted route, verify the actual instruction and apply the required approvals. A familiar face, voice or account should support context without replacing the firm's authorization process.",
+    "takeaway": "Verify the instruction through a trusted route and complete the required approvals. A familiar face, voice or account provides context; it cannot authorize the transaction on its own.",
     "lead": [
       "The firm should not depend on staff proving that a voice or video is artificial. Give them an independent verification route and authority to pause an unusual request. Apply that route to the transaction, even when the request arrives through a recognizable account or appears to involve senior leadership."
     ],
@@ -2774,18 +2774,18 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "Digital risk protection services look for defined external exposures, such as impersonation of a business or exposed credentials. Coverage varies by provider, monitored assets and data sources. Ask what the service can observe and what action follows a finding before treating the label as coverage of everything outside your network.",
+    "intro": "A lookalike website or an exposed credential gives the firm something to investigate. Digital risk protection looks for defined external exposures like these, but providers monitor different assets and sources. Before relying on a service, check whether it can observe the identities you care about and who will confirm and act on a finding.",
     "lead": [
-      "For a New Jersey professional-services firm, begin with the domains, public identities and online services clients use to recognize you."
+      "For a New Jersey professional-services firm, begin with the domains, public identities and online services clients use to recognize you. Those are the identities a possible impersonation report needs to be checked against."
     ],
     "takeaway": "Scope the public assets and sources a service monitors, then confirm who reviews findings and what response assistance is included.",
     "sections": [
       {
         "h": "Choose the assets that matter",
         "ps": [
-          "List the firm's approved domains and client-facing accounts. Identify who can confirm whether a reported page, account or message is authorized. Keep the initial scope small enough that someone can review and act on findings.",
+          "Start with the approved domains and client-facing accounts the firm can review. For each, identify someone who can confirm whether a reported page, account or message is authorized. The initial monitoring scope needs to fit the team's capacity to act on findings.",
           {
-            "text": "The FTC describes how impersonation scams use trusted identities and pressure to obtain payment or information. External monitoring can contribute signals, but staff still need a way to verify requests independently. FTC business-impersonation guidance.",
+            "text": "Impersonation scams use trusted identities and pressure to obtain payment or information, as described in the FTC business-impersonation guidance. External monitoring may flag a possible impersonation, while staff still need an independent way to verify the request.",
             "links": [
               {
                 "phrase": "FTC business-impersonation guidance",
@@ -2800,7 +2800,7 @@ export const refreshedArticles: Article[] = [
         "h": "Ask what happens after detection",
         "ps": [
           "Some services send notifications; others help prepare abuse reports or coordinate defined response actions. Takedown depends on the relevant platform and evidence, so a provider should not promise that every impersonation will disappear on demand.",
-          "For an exposed-credential alert, have IT verify the affected account and take the approved access actions. The alert alone does not prove a current account compromise or establish the completeness of the exposed information. Keep the investigation proportionate and involve the authorized responder when evidence suggests a wider incident.",
+          "Have IT verify the affected account when an exposed-credential alert arrives, then take approved access actions. The finding may be incomplete or concern an older exposure; it does not by itself establish a current compromise. Involve the authorized responder if the evidence points to a wider incident.",
           "Ask prospective vendors:",
           {
             "list": [
@@ -2863,23 +2863,23 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Define the external problem you want to observe",
         "ps": [
-          "Separate business impersonation, lookalike domains, exposed credentials and other proposed monitoring categories. Ask which of them the service actually supports. A broad product label can hide a narrow source list or a response process that consists only of sending notifications.",
+          "Ask vendors to separate the categories they support: business impersonation, lookalike domains, exposed credentials and any other proposed monitoring. Then compare the source list and response process for each. A broad service label may cover only a few sources and notification-only response.",
           "Identify the assets clients use to recognize the firm: approved domains, public accounts, brand names and relevant contact points. Keep a record of legitimate assets and their owners. The reviewer needs that record to distinguish an impersonation from an authorized campaign or a newly created provider page.",
-          "Start with the highest-consequence client interactions. If customers receive payment instructions by email, impersonation affecting that route may require a financial-verification review as well as an external report. If the firm relies on a public account for announcements, identify who can confirm a fake account and approve communication about it."
+          "Prioritize the client interactions with the largest consequences. A fraudulent payment instruction may require financial verification alongside an external report. For impersonation of a public announcement account, someone needs authority to confirm the misuse and approve a response. Assign the route that fits how clients encounter the firm."
         ]
       },
       {
         "h": "Examine source coverage and freshness",
         "ps": [
           "Ask where the service obtains observations and what sources remain outside its coverage. Determine how often observations are collected, when the customer is notified and what information accompanies a possible match. Do not assume a service searches the entire internet, every private forum or every credential collection.",
-          "For a reported exposure, distinguish the observation date from the date the underlying information may have originated. An old credential finding can still warrant an access review, while not proving that the password is current. Have IT assess the affected account and existing safeguards through the approved process.",
-          "Request a representative report with fictional or appropriately sanitized data. Check whether it gives the reviewer enough information to identify the asset, source, time and proposed next step. An alert containing only a frightening category and no context for a decision can create work without a clear decision."
+          "Separate the observation date from the age of the information reported. An old credential finding can warrant an access review without proving that the password still works. IT should assess the affected account and safeguards through the approved process.",
+          "Request a representative report with fictional or appropriately sanitized data. Could your reviewer identify the asset, source, time and proposed next step from it? A category alone gives the reviewer little basis for deciding what to do."
         ]
       },
       {
         "h": "Keep validation separate from detection",
         "ps": [
-          "A possible match needs an authorized reviewer. The firm may use a similar domain legitimately, have an approved third-party campaign or share a name with another organization. Establish the facts before making an accusation or submitting a takedown request.",
+          "Validate a possible match against the firm's legitimate assets before making an accusation or requesting removal. A similar domain may belong to an approved campaign, authorized provider or unrelated organization sharing the name. The designated reviewer needs business context to distinguish those cases.",
           "For a suspected malicious site, preserve relevant observations without entering credentials, downloading unknown files or interacting unnecessarily. Use authorized specialists where technical investigation is needed. The business owner can confirm branding and authorization while the specialist handles the appropriate technical assessment.",
           "For credentials, do not test a reported password by trying to log in as the employee. Have the authorized administrator assess the account, use the approved access actions and determine whether incident investigation is warranted. A finding can prompt protection without proving a current compromise."
         ]
@@ -2888,7 +2888,7 @@ export const refreshedArticles: Article[] = [
         "h": "Compare response assistance in detail",
         "ps": [
           "A takedown request depends on the relevant platform, evidence and process. Confirm whether the service submits requests, supplies templates or only identifies the reporting route. Avoid treating assistance as a guarantee that every site or account will be removed within a fixed period.",
-          "Ask how rejected or unanswered reports are handled. Identify the business escalation owner and any legal or specialist work that requires separate engagement. A subscription should not conceal the remaining duty in an undefined instruction to contact support."
+          "Find out what happens if a platform rejects or ignores a report. Name the business escalation owner and identify legal or specialist work requiring a separate engagement. An instruction to contact support should explain who takes the case and what help remains in scope."
         ],
         "table": {
           "caption": "Compare response assistance in detail",
@@ -2929,7 +2929,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "An exposed-credential notification may require a password reset, authentication review, session action or an investigation depending on the facts. Have IT apply the actual platform procedure and record the result. Do not assume changing one password invalidates every copied secret or independent application session.",
           {
-            "text": "Use the password-manager guide and MFA comparison to review the relevant operating controls. Keep the account population and enforcement evidence current. The external finding does not replace that internal work.",
+            "text": "Use the password-manager guide and MFA comparison to review the relevant operating controls. Keep both the list of accounts and the evidence that these controls are enforced up to date. The external finding does not replace that internal work.",
             "links": [
               {
                 "phrase": "password-manager guide",
@@ -2947,15 +2947,15 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Estimate the work, not only the subscription",
         "ps": [
-          "Count the assets and monitoring categories proposed. Ask how price changes with new domains or public identities. Include validation, reporting assistance, follow-up and records access in the comparison. A lower fee can leave more work with the customer.",
+          "Compare the fee against the proposed assets, monitoring categories and work after an alert. Ask how new domains or public identities change the price, and include validation, reporting assistance, follow-up and records access. A lower subscription fee may leave more of that work with your team.",
           "Estimate the internal time using a representative report or pilot. Treat the estimate as an assumption, not a promised saving. Identify who reviews findings and who performs related IT or business changes. An affordable service still needs enough operating capacity to act on meaningful results.",
-          "Avoid measuring value by notification volume alone. More notifications can reflect broader scope, duplicate observations or false matches. Track the dispositions that matter: confirmed issue, legitimate asset, unresolved finding or completed supported action. State the counting rules so leadership understands the report."
+          "Notification volume alone is a poor value measure: broader scope, duplicates and false matches can all raise the count. Track review outcomes instead, such as confirmed issues, legitimate assets, unresolved findings and completed supported actions. State the counting rules in the leadership report."
         ]
       },
       {
         "h": "Run a bounded onboarding check",
         "ps": [
-          "Provide the approved asset list and confirm enrollment with the provider. Check ownership and naming variations carefully. A missing important domain can leave a coverage gap even when other assets are monitored successfully.",
+          "Confirm that the provider enrolled the approved asset list, including the correct ownership and naming variations. If an important domain is missing, successful monitoring of other domains does not fill that gap.",
           "Use harmless examples or provider-supplied sample findings to test routing and review. Identify who confirms the business context, prepares the response and tracks the result. Do not register a confusing live lookalike or publish fake customer-facing material merely to create a test without a separately approved plan.",
           "Record acceptance criteria and unresolved exclusions. The initial check should establish that the agreed assets, reporting and response route are set up. It does not prove that every possible external misuse will be found."
         ]
@@ -2965,7 +2965,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Update the list after a rebrand, acquisition, new public account or campaign domain. Identify legitimate temporary assets and their end date. The monitoring reviewer should not have to guess whether a newly observed page belongs to the firm.",
           "Keep findings and sensitive account information in an approved restricted location. General operating records can identify the process and responsible owner without copying exposed credentials or live incident details. Confirm export and retention arrangements if the service ends.",
-          "For leadership, report significant unresolved issues, response status and coverage changes. State limitations clearly. A quiet reporting period means no relevant findings were reported under the configured service; it does not establish that the firm's name or credentials have never been misused."
+          "Report significant unresolved issues, response status and coverage changes to leadership. Explain a quiet period in terms of the configured service: no relevant findings were reported. It cannot establish that the firm's name or credentials were never misused."
         ]
       }
     ],
@@ -2983,7 +2983,7 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "An email security gateway checks messages before they reach your staff. A managed gateway service adds people and operating responsibilities around that technology. For a New Jersey firm with an existing IT provider, the buying decision depends on who will maintain the filters, review reports and handle messages that need a judgment call.",
+    "intro": "An email security gateway checks messages before they reach staff. Someone also has to maintain the filters, review reports and handle messages that need a judgment call. A managed gateway service can take on agreed parts of that work. Compare those responsibilities with what your existing IT provider already does.",
     "lead": [
       "A blocked attachment and a delayed client email can arrive in the same quarantine queue. Someone needs to distinguish them and respond within the firm's agreed working hours."
     ],
@@ -2992,9 +2992,9 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Compare the deployment before the service contract",
         "ps": [
-          "A gateway can run on infrastructure your IT team maintains or as a cloud service through which your mail is routed. Other email-security products connect to a cloud mailbox platform instead of sitting in front of it. Ask the provider to draw the proposed mail flow and identify which traffic it can inspect, including internal messages and mail from business applications.",
+          "Ask the provider to draw the mail flow before discussing who manages it. A gateway may run on infrastructure maintained by IT or in a cloud service that routes your mail. Other products connect to the mailbox platform. The arrangement determines which traffic they can inspect, including internal messages and mail from business applications.",
           {
-            "text": "Features need the same scrutiny. Microsoft describes Safe Links as URL scanning and rewriting with checks when a user clicks, while Safe Attachments examines attachments for threats. Those are examples of specific protections, with licensing and policy requirements. They do not establish what another vendor includes. Microsoft Safe Links, Microsoft Safe Attachments.",
+            "text": "Microsoft describes Safe Links as URL scanning and rewriting with checks when a user clicks. Safe Attachments examines attachments for threats. Both have licensing and policy requirements, so check what is configured in the proposed service before relying on the feature name. Another vendor's inclusions need their own review. Microsoft Safe Links, Microsoft Safe Attachments.",
             "links": [
               {
                 "phrase": "Microsoft Safe Links",
@@ -3072,9 +3072,9 @@ export const refreshedArticles: Article[] = [
         "h": "Map every relevant mail route",
         "ps": [
           "Begin with the main email platform, domains and accounts, including shared mailboxes. Add the services that send on behalf of the business, such as invoicing, appointment reminders and marketing tools. The provider should explain which routes its product inspects and which remain outside that inspection.",
-          "Ask what happens to messages exchanged inside the organization. A gateway placed on an external mail route may have a different view from a product integrated with the mailbox platform. Do not assume either deployment is universally better. Compare the visibility and actions available in the actual proposed configuration.",
+          "Check whether the proposed deployment inspects messages exchanged inside the organization. An external-route gateway and a mailbox-integrated product can have different visibility. Compare the traffic and actions supported by the actual configuration before choosing between them.",
           {
-            "text": "Review the connection with the existing IT provider. Identify who owns routing, authentication records and recovery from a delivery problem. Microsoft documents configuration considerations for its own email protection stack; another product needs its own supported design and review.",
+            "text": "Agree how the service will work with the existing IT provider. Identify who owns routing, authentication records and recovery from a delivery problem. Microsoft documents configuration considerations for its own email protection stack; another product needs its own supported design and review.",
             "links": [
               {
                 "phrase": "email protection stack",
@@ -3082,16 +3082,16 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Keep a dated coverage record. A service added after onboarding should trigger a review of routing and protection instead of relying on the original inventory. This is especially useful when a department buys a tool without involving the email administrator."
+          "Date the coverage record and review it whenever the business adds a sending service. A department may buy an application without involving the email administrator; its messages can then follow a route missing from the original inventory. Updating the record gives IT and the provider a chance to check that route."
         ]
       },
       {
         "h": "Demonstrate the handling of an ordinary false positive",
         "ps": [
           "Ask the provider to show how a staff member requests review of a legitimate message that has been held. Use approved harmless test content. The demonstration should cover the request, the reviewer’s decision, the release and the record left behind.",
-          "Confirm whether users can release particular messages themselves and which items require an administrator or security review. The answer should reflect the configured policy, not a product’s maximum possible capabilities. A business needs a usable way to receive legitimate documents without making every employee responsible for judging unfamiliar attachments.",
+          "Confirm which quarantined messages users may release themselves and which require an administrator or security reviewer. Base the answer on the configured policy. Staff need a usable route for legitimate documents, but they should not have to judge every unfamiliar attachment just because the product permits self-release.",
           "Discuss the approved exception process. A temporary adjustment for one message is different from permanently trusting a sender or domain. Record who may approve each type, how its scope is limited and when it is revisited. Broad exceptions can change the protection well beyond the delivery problem that prompted them.",
-          "Define a response expectation for business-critical messages within the actual service hours. A label such as managed or continuous monitoring does not itself establish how quickly a held invoice or client document will be reviewed. Ask how staff escalate a delay and what happens outside the normal queue."
+          "Agree how quickly business-critical messages should be reviewed within the actual service hours. Explain how staff escalate a delayed invoice or client document and what happens outside the normal queue. 'Managed' and 'continuous monitoring' do not, by themselves, set that response expectation."
         ]
       },
       {
@@ -3100,7 +3100,7 @@ export const refreshedArticles: Article[] = [
           "Filtering and account response require different decisions. If an employee reports entering credentials through a suspicious link, ask who receives the report and who investigates the account. Identify which containment actions are authorized and which must be performed by the tenant administrator or another responder.",
           "Keep the incident handoff concrete. The provider should identify the business contact, alternate communication route and information needed for escalation. An email-security service may remove messages without supplying full forensic investigation or recovery. Those boundaries should be clear before the incident.",
           "Review payment-related reports separately. A provider’s technical analysis cannot authorize a vendor bank change. Finance should use its established verification and approval process regardless of whether the message was quarantined, released or authenticated successfully.",
-          "Use one agreed fictional scenario in the proposal review so vendors explain comparable responsibilities. Record unanswered questions and resolve them in the service scope. A product demonstration is weaker evidence than a written assignment of the work your staff will otherwise inherit."
+          "Give each vendor the same fictional scenario and ask it to describe the assigned work. Resolve unanswered questions in the written scope before purchase. The demonstration can show a product's behavior; the scope establishes which responsibilities the provider accepts."
         ]
       },
       {
@@ -3108,8 +3108,8 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Agree an onboarding sequence with IT and the service provider. Identify test mailboxes, senders, expected behavior and acceptance criteria. Keep the previous configuration and the authorized recovery procedure available to the people carrying out the change.",
           "Test normal correspondence and business-generated messages. Include shared mailboxes and the external recipients involved in important workflows. The pilot should identify delivery effects as well as threat-handling capabilities. Do not test with live harmful files or unapproved phishing activity.",
-          "Give employees the reporting and quarantine-review instructions before the change. Identify whom they contact if expected mail is missing. A short notice stating that protection has improved does not help them recover an urgently needed client attachment.",
-          "Confirm who checks the first results and signs off the rollout. If the initial test exposes a coverage or compatibility issue, correct it before expanding. An unfinished onboarding task should remain visible rather than being absorbed into an assumption that the managed provider handles everything."
+          "Before rollout, tell employees how to report suspicious mail, request a quarantine review and obtain help when expected mail is missing. Include those procedures in the rollout notice so staff know how to recover an urgently needed client attachment. Announcing improved protection alone leaves that question unanswered.",
+          "Name the people who check the pilot results and approve the rollout. Correct coverage or compatibility issues before expanding, and keep unfinished onboarding tasks assigned and visible. If those assignments remain unclear, the firm may start using the service while each team assumes the other owns the unfinished work."
         ]
       },
       {
@@ -3123,7 +3123,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "A responsibility comparison",
         "ps": [
-          "Use the comparison to identify work rather than assume a vendor performs a task because its proposal says managed. Obtain the specific responsibilities in writing and revisit them when your mail platform or business workflows change."
+          "Obtain the responsibilities in writing, then revisit them when the mail platform or business workflows change. Confirm which duties the vendor includes instead of relying on the 'managed' label."
         ],
         "table": {
           "caption": "A responsibility comparison",
@@ -3164,8 +3164,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Check the release procedure during a pilot",
         "ps": [
-          "Use harmless test messages to examine what happens when a legitimate message is quarantined. Ask who can request a release, who can approve it and how the decision is recorded. A rule that lets every user release every suspicious attachment deserves a specific review; an overly restrictive rule also needs a workable route for time-sensitive client mail.",
-          "Confirm how the provider explains a release decision and handles repeated false positives. A broad allow-list added to solve one delivery problem may weaken protection for later messages. Require an owner, reason and review date for material exceptions. Test the user support path as well as message detection, because an inaccessible quarantine can interrupt business even when the filtering engine is operating as configured."
+          "During a pilot, repeat the false-positive demonstration with harmless messages and actual staff roles. Confirm that the proposed release rules and escalation route work in the configured environment, rather than relying only on a sales demonstration. Staff need a usable route for time-sensitive client mail without blanket permission to release suspicious attachments.",
+          "Keep a record of recurring false positives during the pilot and review why they happen. Compare any proposed allow-list change with the exception limits agreed earlier; record its owner, reason and review date. Include ordinary help requests in the trial, even when filtering works as configured."
         ]
       }
     ],
@@ -3183,7 +3183,7 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "An email security proposal should explain what happens after a suspicious message reaches an employee. Filtering matters, but the service also needs a route for reports, a person or team authorized to act and a handoff when the problem extends into an account or payment.",
+    "intro": "Ask an email security vendor what happens when an employee reports a suspicious message. Who reviews it? Who can act if the employee entered a password or changed a payment? Filtering is one part of the service; reports and handoffs show how it works when a message gets through.",
     "lead": [
       "For a firm with existing IT, review those responsibilities before comparing the monthly price. Two offers can list similar tools while leaving very different amounts of work with your staff."
     ],
@@ -3192,8 +3192,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Walk through one incident before signing",
         "ps": [
-          "Give each vendor the same hypothetical scenario: an employee at a New Jersey professional-services firm reports a message requesting a bank-detail change, then says they entered their password on the linked page. Ask the vendor to explain who receives the report, checks the message, investigates the account and informs your business contact.",
-          "Request the boundaries around containment. A provider may be authorized to take particular actions on a covered account, while restoration, payment recovery, forensic investigation or legal advice require other parties. Agree on the handoff and contact method before an incident occurs.",
+          "Use the same hypothetical incident with every bidder. An employee reports a bank-detail change and says they entered their password on the linked page. Ask the vendor how it would review the message and investigate the account, including who receives the report, who acts and who informs your business contact.",
+          "Agree on the containment handoff before an incident occurs. A provider may be authorized to act on a covered account while other parties handle restoration, payment recovery, forensic investigation or legal advice. Identify those parties and the contact method so the report reaches whoever owns the next action.",
           {
             "text": "The FTC advises businesses to train staff to recognize impersonation and verify requests rather than act under pressure. Pair technical filtering with a business approval procedure for payments. FTC small-business scam guidance, Helm's callback procedure.",
             "links": [
@@ -3270,9 +3270,9 @@ export const refreshedArticles: Article[] = [
         "h": "Build a coverage schedule you can verify",
         "ps": [
           "List active domains, mailboxes and shared accounts with the existing IT provider. Identify which are licensed, enrolled and protected under the proposed service. Include third-party sending services and important external mail routes. The provider should describe exclusions in a form leadership can understand.",
-          "Separate the purchased capability from its configured coverage. A firm may hold licenses while leaving a mailbox outside a policy or a supported integration unfinished. Ask what evidence will show that onboarding is complete for the population in scope.",
-          "Review changes after onboarding. Who adds new users, checks shared mailboxes and reviews a new sending application? A responsibility table should identify the owner of each event. Otherwise, coverage can drift while the service report continues to describe the original population.",
-          "Keep a date on the schedule. For a customer or insurer response, the firm needs to establish what was covered when the answer was prepared, including unresolved exceptions. An undated statement that email security is enabled is too broad to answer a detailed coverage question."
+          "Separate the purchased capability from its configured coverage. A firm may hold licenses while leaving a mailbox outside a policy or a supported integration unfinished. Ask what evidence will show that onboarding is complete for the mailboxes and accounts in scope.",
+          "Once onboarding is complete, establish who adds new users, checks shared mailboxes and reviews new sending applications. Record an owner for each event. Otherwise the coverage can drift while a service report continues to describe the original mailbox population.",
+          "Date the coverage schedule and record unresolved exceptions. That allows the firm to show what was covered when it prepared a customer or insurer response. A general, undated statement that email security is enabled cannot answer a detailed question about which mailboxes were protected."
         ]
       },
       {
@@ -3293,16 +3293,16 @@ export const refreshedArticles: Article[] = [
             ]
           },
           "Ask which inspection routes the service supports and which actions it can take after delivery. If a proposal mentions identity or device response, establish whether those capabilities are included in the same written scope. Do not infer them from a general claim about an integrated platform.",
-          "Evaluate the result against the business’s actual workflows. A professional-services firm needs to receive legitimate documents, report uncertainty and escalate suspected account compromise. The useful vendor comparison explains how those jobs are performed, including the limits."
+          "Compare the services against ordinary work: receiving legitimate documents, reporting uncertain messages and escalating suspected account compromise. Ask how the vendor supports each task and where that support ends."
         ]
       },
       {
         "h": "Inspect the user-reporting route",
         "ps": [
           "Ask for a demonstration using approved harmless messages. A staff member should be able to report a concern through the configured process, and the assigned reviewer should receive the information needed to assess it. Confirm what feedback the employee gets and where further questions go.",
-          "Test a report made after the employee clicked or entered credentials. The service should explain its escalation boundary rather than treating every report as a message-classification exercise. Someone must own the account investigation and authorized containment work.",
+          "Include a report made after an employee clicked a link or entered credentials in the demonstration. That report may require account investigation and authorized containment as well as message classification. Confirm who owns those steps and how the service escalates beyond its own scope.",
           "Check the alternate route when the main account is unavailable or suspected to be compromised. An employee locked out of email still needs a trusted way to report what happened. Record that contact before relying exclusively on an in-mailbox button.",
-          "Measure report handling through records and unresolved cases. A fast acknowledgement is not the same as a completed investigation. Ask what the monthly report will show about decisions, escalation and work still waiting on the firm or its IT provider."
+          "Use records of decisions, escalations and unresolved cases to evaluate report handling. An acknowledgement can arrive quickly while the investigation remains unfinished. Ask how the monthly report identifies work still waiting on the firm or its IT provider."
         ]
       },
       {
@@ -3310,7 +3310,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Filtering can interrupt legitimate work, and exceptions can weaken protection if they are broader than necessary. Ask who reviews requests, who approves changes and how the change is limited. Staff should not need to guess whether to release an unfamiliar file simply because a deadline is approaching.",
           "Request an example of the record kept for an exception. It should show the reason, scope, approver and review date where applicable. A permanent whole-domain exception created for one delayed message deserves more scrutiny than a narrowly approved release.",
-          "Clarify whether the business can change policy directly and how the provider is informed. If several administrators operate independently, the service needs a way to identify changes that affect coverage. An agreed process avoids a dispute later about who disabled a relevant protection.",
+          "If business administrators can change policy directly, agree on how they will inform the provider. When several administrators work independently, the provider may miss changes that affect coverage. Recording this process also helps resolve a later dispute about who disabled a protection.",
           "Include removal of outdated exceptions in maintenance. A review should distinguish justified ongoing arrangements from changes that no longer serve a business purpose. Leave unresolved limitations visible in the report rather than hiding them behind a general protected status."
         ]
       },
@@ -3318,7 +3318,7 @@ export const refreshedArticles: Article[] = [
         "h": "Compare service scope with the people available",
         "ps": [
           "Ask which team provides monitoring, review and containment. Confirm hours, escalation routes and supported actions through the written agreement. A vendor-operated continuous service and a locally staffed provider are different delivery arrangements; the firm should know the model without assuming one from the branding.",
-          "Review the existing IT contract alongside the security proposal. Identify tenant administration, routine remediation, licensing and recovery duties. If both providers assume the other owns a task, resolve the gap before onboarding rather than during an incident.",
+          "Compare the existing IT contract with the security proposal, including tenant administration, routine remediation, licensing and recovery. Assign any task that both providers expect the other to perform before onboarding. Discovering the gap during an incident leaves the business waiting for an owner.",
           "Ask how the business authorizes actions that can interrupt work. Some containment may be pre-authorized within a defined scope. Other decisions need leadership or the administrator. Record both the authority and the backup contact so the service is usable outside an ordinary working day.",
           "Distinguish full incident response from the covered security service. Specialized forensics, legal advice, bank recovery and broader restoration may require other parties and approvals. A clear handoff is part of a credible proposal."
         ]
@@ -3328,7 +3328,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Request a sample of the information the firm can retain for its own governance and questionnaires. Coverage dates, relevant configuration evidence and a record of response decisions are more useful than a marketing statement that the tools are enterprise-grade.",
           "Agree who prepares evidence and who approves external answers. The provider can help organize support, but the client owns final attestations. Sensitive technical records and live findings should be shared only through the approved route with the appropriate audience.",
-          "At contract end, confirm how routing, access and relevant records are handed over. Identify who removes provider integrations and checks that mail delivery remains functional. The organization should retain control of its tenant and public domain records throughout the change."
+          "Plan the exit as well as onboarding. Identify who hands over routing, access and relevant records, removes provider integrations and checks that mail delivery still works. The firm should retain control of its tenant and public domain records throughout the change."
         ]
       },
       {
@@ -3383,14 +3383,14 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "When an employee leaves, the company needs to end their access while preserving the work it is entitled and required to keep. Those are separate tasks. Deleting an account too early can disrupt records and handover; disabling only the main email account can leave other applications accessible.",
+    "intro": "Ending an employee's access requires decisions about both accounts and records. Deleting an account too soon can remove information needed for handover or retention. Disabling email alone may leave access to other applications. Plan those steps together, with an authorized departure time and a record of what each owner completed.",
     "sections": [
       {
         "h": "Start with an authorized request and a precise time",
         "ps": [
-          "HR or the responsible manager should identify the person, employment status, departure time and approved access changes. Confirm the request through your established process. IT should not act on an unverified email that could itself be an impersonation attempt.",
+          "HR or the responsible manager should authorize the access changes and specify the employee, status and departure time. Confirm that request through the established process. An unverified departure email could itself be an impersonation attempt; IT needs a trusted instruction before changing access.",
           "Specify whether access ends immediately or at an agreed time after handover. A scheduled departure gives the business an opportunity to transfer responsibilities before access closes. An urgent departure may require containment first and a more careful evidence review. The coordinator should know which process applies without distributing the reason to unnecessary recipients.",
-          "Name a backup coordinator. An offboarding request should not wait until the one person who normally handles it returns from leave. Record where the checklist and approved contact details are held so the process can begin when the main collaboration system is unavailable."
+          "Name a backup coordinator and record where the checklist and approved contacts are held. A departure should not wait for the usual coordinator to return from leave. The backup also needs a way to start when the main collaboration system is unavailable."
         ]
       },
       {
@@ -3399,14 +3399,14 @@ export const refreshedArticles: Article[] = [
           "Begin with the identity provider, email and cloud documents, then check payroll, finance, customer systems, remote access and specialist applications. Include systems purchased by a department and accounts that do not use single sign-on. The departing person’s manager and application owners can help identify those services.",
           "Review administrator accounts separately from everyday accounts. Include secondary accounts, vendor portals, password-manager access and remote support tools. Do not assume that blocking the person’s ordinary sign-in covers every identity they used.",
           "Also identify physical and operational access: keys, badges, company phones, security keys and any equipment in their possession. Your checklist should state who records each item, who collects it and how an unreturned device is escalated. Avoid marking everything complete because a laptop was handed back.",
-          "Keep the inventory useful after the departure. A gap discovered during offboarding is often a reason to improve onboarding and account ownership records. The next checklist should begin from a maintained inventory rather than another search through receipts and message history."
+          "Use gaps found during this departure to improve onboarding and account ownership records. Maintaining that inventory means the next coordinator can begin with known systems instead of searching receipts and message history again."
         ]
       },
       {
         "h": "Block sign-in and address existing sessions",
         "ps": [
           {
-            "text": "Have the authorized administrator follow the platform’s documented access-removal process. Microsoft’s former-employee guidance separates access blocking, data preservation, device handling and mailbox continuity. It is a sequence of responsibilities, not a single delete button.",
+            "text": "Blocking a new sign-in and addressing an existing session are different actions. Have the authorized administrator follow the platform's documented removal process and verify what remains active. Microsoft's former-employee guidance covers access blocking, data preservation, devices and mailbox continuity. Coordinate those steps before deleting the account.",
             "links": [
               {
                 "phrase": "former-employee guidance",
@@ -3424,14 +3424,14 @@ export const refreshedArticles: Article[] = [
             ]
           },
           "Record the blocking and session-revocation actions with their completion times. Review registered authentication methods, recovery routes and application access as appropriate. Verify that the former user cannot obtain a reset through the ordinary help desk without the required authorization.",
-          "For a hybrid environment, identify where account administration is authoritative. An action in the cloud may not be the complete procedure for a synchronized identity. The administrator should confirm the supported steps and any propagation limits rather than promising that every session ends instantly."
+          "In a hybrid environment, IT should identify which system controls account administration and follow its supported removal steps. A cloud action may be only part of the procedure for a synchronized identity. Confirm propagation limits before saying that every session has ended."
         ]
       },
       {
         "h": "Preserve records before deleting accounts or licenses",
         "ps": [
-          "Ask the responsible business owner which records need to remain available and whether a legal or regulatory retention requirement applies. Get appropriate advice for holds or disputed departures. Do not let a license-saving exercise decide the fate of records the firm must preserve.",
-          "Transfer ownership of work that would otherwise depend on the departing person. Examples include shared documents, scheduled reports, service subscriptions and approval queues. Check whether a business process uses that person’s account to run an integration. Reassign it through a supported arrangement instead of leaving the former employee’s identity active indefinitely.",
+          "Ask the responsible business owner which records need to remain available and whether a legal or regulatory retention requirement applies. Get appropriate advice for holds or disputed departures. Decide which records the firm must preserve before removing a license to save costs.",
+          "Transfer the work that depends on the departing person, including shared documents, scheduled reports, subscriptions and approval queues. Check integrations for the same dependency. Reassign them through a supported arrangement so the business can continue without keeping the former employee’s identity active indefinitely.",
           "Limit access to preserved mail and files. A successor may need particular business records without needing unrestricted access to every message. Use approved permissions and document the purpose. Access to a former employee’s mailbox deserves the same care as access to other sensitive company information.",
           "Do not treat retention and backup as interchangeable. Confirm what your actual retention settings, holds and backup service cover before deleting information. If the administrator cannot establish the consequences, keep the deletion decision open while resolving that uncertainty."
         ]
@@ -3441,7 +3441,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Decide who handles new messages, which address remains available and how external contacts will be informed. A shared mailbox or approved forwarding arrangement may support continuity, depending on the platform and license requirements. The original user’s sign-in should not remain the business’s long-term handover mechanism.",
           "Review existing forwarding rules and delegates. Remove unauthorized external destinations and unnecessary access through the approved process. Preserve relevant evidence if a suspicious rule may be part of an incident, rather than erasing it without a record.",
-          "Set a review date for any continuity arrangement. Mailbox access that was useful during handover can become unnecessary months later. Record the person who will reassess it, including whether the address should continue receiving mail or be retired.",
+          "Give the continuity arrangement a review date and a person responsible for reassessing it. They should decide whether successor mailbox access is still needed and whether the address should keep receiving mail. Otherwise, permissions granted for a brief handover can persist for months.",
           "Explain the new contact route to staff and customers as appropriate. Clear ownership reduces the pressure to reactivate a departed person’s login because a client sent an urgent request to the old address."
         ]
       },
@@ -3449,9 +3449,9 @@ export const refreshedArticles: Article[] = [
         "h": "Remove shared credentials and other access paths",
         "ps": [
           "Removing a person from a password vault does not erase credentials they already knew or copied. Rotate shared secrets that remain usable, particularly for important accounts. Where a service supports individual users, replace shared access with named accounts and appropriate permissions.",
-          "Check API keys, tokens and other access grants with the application owner. Some belong to a business integration and should be reassigned or replaced safely rather than revoked without understanding the dependency. Others may be personal grants that no longer have a business purpose.",
+          "Review API keys, tokens and other access grants with the application owner before changing them. A business integration may need a safe replacement or reassignment to continue operating. A personal grant with no remaining business purpose can follow the removal procedure.",
           "Review remote access, trusted devices and third-party applications. Ask each owner to confirm completion in their own system. A central identity action is useful evidence but does not automatically cover independently administered services.",
-          "Document exceptions with an owner and a deadline. If a credential cannot be changed immediately because it supports a critical process, leadership needs to understand the exposure and approve the interim arrangement. An unresolved dependency should remain visible rather than disappearing into a checked box."
+          "Document exceptions with an owner and a deadline. If a credential cannot be changed immediately because it supports a critical process, leadership needs to understand the exposure and approve the interim arrangement. Keep an unresolved dependency listed as an open exception."
         ]
       },
       {
@@ -3459,13 +3459,13 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Record company-owned devices, accessories and security keys against the asset inventory. Have IT verify their condition and follow the organization’s reissue procedure. Preserve information or evidence when an investigation or hold requires it before wiping the device.",
           "For personal devices, use only the authorized work-data removal procedure supported by your management setup and applicable agreements. Do not promise that the company can selectively erase every unmanaged copy. Confirm what is actually enrolled and which controls are available.",
-          "If equipment is not returned, escalate through the established personnel and asset process. Ask IT about supported access blocking or management actions. Keep the technical response coordinated with the business owner rather than assuming a remote command resolves possession, data and employment issues together."
+          "Escalate unreturned equipment through the established personnel and asset process. IT can assess supported access-blocking or device-management actions, while the business owner handles the wider issue. A remote command alone cannot settle device possession, data handling and employment questions."
         ]
       },
       {
         "h": "A checklist with evidence fields",
         "ps": [
-          "Adapt these fields to your existing ticketing or personnel process. The record should show what was done, by whom and when. It does not need to repeat private employment details to prove that an account action occurred."
+          "Use your existing ticketing or personnel process to show what each owner did and when. The completion record can establish an account action without repeating private details about the departure."
         ],
         "table": {
           "caption": "A checklist with evidence fields",
@@ -3512,21 +3512,21 @@ export const refreshedArticles: Article[] = [
         "h": "Rehearse a departure without changing real access",
         "ps": [
           "Use an approved tabletop exercise with a fictional employee and a representative list of systems. Ask the coordinator to locate the request process, contact each owner and explain what completion evidence would be retained. Do not disable a real account simply to make the exercise realistic.",
-          "Include one dependency, such as an automated report owned by the employee, and one separate application outside single sign-on. Check whether the team identifies the handover and access-removal work without prompting. Record any missing owner, unclear timing or unsupported recovery claim, then update the checklist. This tests the process before a real departure creates time pressure."
+          "Include an automated report owned by the fictional employee and an application outside single sign-on. Ask whether the team can find the handover and removal tasks without prompting. Use missing owners, unclear timing or unsupported recovery claims to revise the checklist before a real departure makes them urgent."
         ]
       },
       {
         "h": "Verify completion and improve the inventory",
         "ps": [
           "The coordinator should reconcile the checklist with the original access inventory. Ask owners to identify anything incomplete, including records awaiting retention advice or integrations awaiting reassignment. Keep each exception assigned until it is resolved.",
-          "Review offboarding as a process, not as evidence that every departure is suspicious. Look for recurring gaps: late requests, unknown SaaS accounts, missing device records or unclear ownership. Fix those upstream so the next departure is easier to handle correctly.",
+          "Look for recurring process gaps after departures: late requests, unknown SaaS accounts, missing devices or unclear ownership. Use the review to improve those records and handoffs. A departure does not itself imply suspicious activity.",
           "Helm can discuss account-protection responsibilities alongside your existing IT provider. Routine administration and employee account changes remain with the named IT owner unless a separate written scope states otherwise. A public domain scan cannot verify that an employee has been offboarded."
         ]
       }
     ],
     "takeaway": "Authorize the departure time, inventory access, block sign-in and address sessions. Preserve required records, transfer business ownership, remove remaining access paths and verify the evidence. Keep unresolved exceptions assigned rather than declaring completion from one account change.",
     "lead": [
-      "Use a written checklist with an authorized departure time, a named coordinator and owners for the technical actions. The process should cover normal resignations, urgent departures, contractors and role changes. Keep sensitive personnel information within the people who need it to carry out the work."
+      "Use a written checklist with an authorized departure time, a named coordinator and owners for the technical actions. The process should cover normal resignations, urgent departures, contractors and role changes. Share sensitive personnel information only with the people who need it to carry out the work."
     ],
     "readingLayout": true,
     "organizationByline": true,
@@ -3544,7 +3544,7 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "Google Workspace provides retention and recovery features, but each has a particular scope. Your firm needs to know whether it can recover the information required for client work and who will perform the restore.",
+    "intro": "If a client folder disappears, your firm needs a way to restore it and someone authorized to do the work. Google Workspace has retention and recovery features, each with its own scope. Compare those capabilities with the information and working access your team needs back.",
     "lead": [
       {
         "text": "Google explicitly states that Vault is not designed as a backup or archive tool. Its exports support legal discovery, with limits that differ from an operational backup workflow. Treating Vault as a substitute for every restore requirement can leave gaps. Google Vault FAQ.",
@@ -3562,7 +3562,7 @@ export const refreshedArticles: Article[] = [
         "h": "Review native recovery before adding a service",
         "ps": [
           {
-            "text": "Ask your Workspace administrator to document the current edition, retention rules and recovery methods for the data the business uses. Google documents a limited administrator recovery window for deleted Drive data and describes restrictions on the recovery process. Check the current documentation and the specific loss event instead of assuming every deleted item can be restored indefinitely. Google Drive administrator recovery.",
+            "text": "Have your Workspace administrator document the edition, retention rules and recovery methods for the data your firm uses. Deleted Drive data has a limited administrator recovery window and process restrictions. Compare the actual loss event with current guidance before relying on recovery. Google Drive administrator recovery.",
             "links": [
               {
                 "phrase": "Google Drive administrator recovery",
@@ -3589,7 +3589,7 @@ export const refreshedArticles: Article[] = [
             ],
             "ordered": false
           },
-          "A recovery-time objective is a target for an agreed scenario. Confirm the assumptions behind it and the charges for work outside the standard process. Record failed tests and excluded data alongside successful results."
+          "When a provider offers a recovery-time objective, ask which agreed scenario it covers and what assumptions the target depends on. Confirm charges for work outside the standard process. Keep failed tests and excluded data in the record, because successful results alone will not describe the firm's ability to recover."
         ]
       },
       {
@@ -3636,9 +3636,9 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Inventory the information that keeps client work moving",
         "ps": [
-          "List business information by workload and owner. Gmail correspondence, files in individual Drive accounts and documents in shared drives can have different access and recovery arrangements. Also identify Calendar, Contacts, Chat and any applications using Workspace information. The inventory should state the recovery method for each important workload rather than treating a user license as proof of complete coverage.",
+          "Build the recovery inventory by workload and owner. Gmail, individual Drive accounts and shared drives may have different access and recovery arrangements. Include Calendar, Contacts, Chat and applications that use Workspace information, then record how each important workload would be recovered. A user license alone cannot show that all of this information is covered.",
           "Ask business owners where the authoritative copy lives. A project document may be shared through Drive while its signed final version belongs in a different records system. A spreadsheet may feed an accounting application that has its own recovery needs. Mapping that relationship prevents a firm from restoring the visible file while overlooking the system required to use it.",
-          "Include external ownership. A file visible in a user's Drive may belong to another organization. Visibility alone does not establish that your backup service can capture or restore it. Confirm product capabilities for the actual ownership and sharing arrangement. If the information is essential, agree with the data owner on an appropriate authoritative copy and recovery responsibility."
+          "Check who owns externally shared files. A file may appear in a user's Drive while belonging to another organization, and that visibility does not establish that your backup can capture or restore it. Confirm the provider's capabilities for that ownership and sharing arrangement. For essential information, agree with the data owner where the authoritative copy belongs and who is responsible for recovery."
         ]
       },
       {
@@ -3657,7 +3657,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Have the responsible records adviser determine preservation requirements and the authorized administrator implement them. Keep a hold decision separate from a service cancellation or ordinary departure task. A person completing an offboarding checklist should not have to infer whether records may be deleted. The decision and its owner need to be recorded before the account changes."
+          "Before an account changes, have the responsible records adviser decide whether information must be preserved and have the authorized administrator implement that decision. Record the owner and the required action. Someone following an offboarding checklist should not have to infer whether a hold can end or records can be deleted during an ordinary departure or service cancellation."
         ],
         "table": {
           "caption": "Use retention, holds and backup for their stated purposes",
@@ -3703,29 +3703,29 @@ export const refreshedArticles: Article[] = [
             ]
           },
           "Apply the same review to employee departures. Before deleting an account, determine who needs business records, who should receive ownership and whether a preservation obligation applies. Confirm what happens to backup coverage and access after the source account is changed. Record the approved sequence so the people responsible for account administration and records handling work from the same plan.",
-          "These are change-management decisions, not reasons to retain every account indefinitely. Keeping accounts active without an owner can create other access and cost problems. Choose a documented disposition supported by the current product capabilities and the firm's requirements. Verify it using non-sensitive test records when a new procedure is introduced."
+          "Choose a documented way to handle the account using current product capabilities and the firm's requirements. Keeping every account active indefinitely can create access and cost problems of its own. When introducing a new procedure, check it with non-sensitive test records before relying on it for a departure."
         ]
       },
       {
         "h": "Compare providers using a representative restore",
         "ps": [
-          "A useful pilot starts with a realistic request. Suppose a consulting team needs a deleted client folder containing several documents and a spreadsheet. The operator should locate the relevant recovery point, restore to the approved destination and ask the business owner to check the result. That example is hypothetical; its purpose is to define what must be demonstrated.",
+          "Use a hypothetical request from a consulting team to define what a pilot must demonstrate: recovery of a deleted client folder containing several documents and a spreadsheet. The operator should locate the relevant recovery point, restore to the approved destination and ask the business owner to check the result.",
           "Check the folder structure, usable content, ownership and intended access. If the service restores content but requires separate permission repair, record that work and its owner. Ask how a restore affects documents edited after the selected recovery point. Decide how the team will reconcile current work before allowing a broad restore over an active workspace.",
-          "Also evaluate the request process. Who can authorize a restore containing sensitive client information? Can an ordinary user restore their own covered data, or is an administrator required? Where is the activity recorded? A provider's feature list does not answer whether the firm can carry out this process safely during a busy period."
+          "Walk through how the restore request is approved. A request involving sensitive client information needs an authorized person, and the provider should explain whether a user can restore covered data or an administrator must do it. Confirm where the activity is recorded. Those steps determine whether the firm can use the advertised features safely during a busy period."
         ]
       },
       {
         "h": "Examine coverage changes and missed captures",
         "ps": [
           "Ask how the service identifies new users, shared drives and other covered objects. Determine whether enrollment is automatic, whether an administrator approves additions and what an excluded object looks like in reporting. A new shared drive created for a client should trigger a coverage decision when the work begins.",
-          "Review unsuccessful captures and unresolved exclusions. A green status for currently enrolled objects may say nothing about an important object that was never enrolled. Compare the protection inventory with the business inventory. Give each exception an owner and a decision date. Do not let a reporting dashboard replace that comparison.",
+          "Compare the backup inventory with the business inventory, including objects that were never enrolled. A green status for enrolled objects cannot describe an important shared drive that is absent from the service. Review failed captures and exclusions, then give each exception an owner and a decision date.",
           "Ask the provider how the firm is notified when access permissions expire or a connection fails. Confirm the support route and the evidence available to establish the last usable recovery point. Coverage reporting should identify what was protected and what needs action, rather than offering a percentage without a clear denominator."
         ]
       },
       {
         "h": "Protect the ability to recover",
         "ps": [
-          "Document who administers production Workspace and who administers the backup service. Review whether the same identity controls both and what additional protections apply. Ask how recovery access is retained if the main administrator is unavailable or the production tenant cannot be used. These questions identify dependencies; they do not establish that one architecture eliminates every attack path.",
+          "Identify who administers production Workspace and who administers the backup. If the same identity controls both, review the additional protections and recovery dependencies with IT. Ask how someone will reach the backup when the main administrator is unavailable or the production tenant cannot be used. The answers describe dependencies to manage, not an architecture guaranteed to eliminate every attack path.",
           "Store the recovery contact list and approved procedure somewhere the response team can reach during the scenario it covers. Include provider escalation, business authorization and any specialist support that must be separately engaged. Test the contact route during a planned exercise, with harmless sample data and agreed boundaries."
         ]
       },
@@ -3733,7 +3733,7 @@ export const refreshedArticles: Article[] = [
         "h": "Measure evidence rather than reassurance",
         "ps": [
           "For each test, retain the workload, requested item, recovery point, destination, authorization, operator and result. State whether the business owner confirmed usability. Record the elapsed time and any manual repairs. An incomplete restore provides useful evidence about a gap when the gap is assigned and followed up.",
-          "Leadership can then distinguish a purchased capability from demonstrated recovery. Report the important covered workloads, the most recent meaningful test and the unresolved exceptions. For a customer or insurer answer, respond to the exact wording and state the scope. A broad assertion that all Google data is backed up is difficult to defend when the inventory includes unsupported workloads or externally owned files."
+          "Tell leadership which workloads are covered, when the last meaningful restore test occurred and which exceptions remain. That record shows what the firm has demonstrated through recovery testing. Answer client or insurer questions to the same scope: unsupported workloads and externally owned files can make an assertion that all Google data is backed up difficult to support."
         ]
       }
     ],
@@ -3751,7 +3751,7 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "Google Workspace security involves more than Gmail filtering. Administrator access, file sharing, connected applications and recovery arrangements all affect how client information is handled. A firm can manage these responsibilities through existing IT or add a security provider for defined protection and program work.",
+    "intro": "A Gmail filter does not decide who may share a client file or which connected application can read it. Google Workspace security includes those permissions, administrator access and recovery as well as email protection. Review which duties your existing IT provider can maintain, then compare the defined protection or program work a security provider would add.",
     "lead": [
       "Start by identifying your Workspace edition and current settings. Features available in one edition or configuration should not be assumed to exist in another."
     ],
@@ -3761,7 +3761,7 @@ export const refreshedArticles: Article[] = [
         "h": "Review the Google-specific controls",
         "ps": [
           {
-            "text": "Google's small-business checklist covers two-step verification, administrator safeguards, Gmail protections and file-sharing controls. Firms with more demanding requirements may need the larger-business guidance even when their employee count is small. Google Workspace security checklist.",
+            "text": "Use the Google Workspace security checklist to review two-step verification, administrator safeguards, Gmail protections and file sharing. The small-business guidance is a starting point; a small firm with more demanding requirements may need Google's larger-business guidance as well.",
             "links": [
               {
                 "phrase": "Google Workspace security checklist",
@@ -3769,8 +3769,8 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Have your IT owner review the administrator population, authentication enforcement and recovery arrangements. Check who can share client files outside the firm, whether guests still need their access and which applications have permission to use Workspace data.",
-          "If a proposal includes contextual access policies, data-loss prevention or expanded audit capabilities, ask for the exact edition and license requirements. Confirm the proposed feature in your environment before including it in a customer answer. Device administration is a separate responsibility from detecting threats on supported workstations."
+          "Have your IT owner review who has administrator access, how authentication is enforced and how account recovery works. Check who can share client files outside the firm, whether guests still need their access and which applications have permission to use Workspace data.",
+          "If a proposal includes contextual access policies, data-loss prevention or expanded audit capabilities, ask for the exact edition and license requirements. Confirm the proposed feature in your environment before telling a customer that you have it. Device administration is a separate responsibility from detecting threats on supported workstations."
         ]
       },
       {
@@ -3778,7 +3778,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "DIY can fit a firm whose IT team maintains the tenant and has time to review security events and evidence. Budget for that work, including roster changes, permissions and policy exceptions.",
           "A managed provider should identify supported Workspace capabilities and the response actions it is authorized to perform. Ask who maintains tenant settings, who investigates a suspicious account and who handles recovery or an unavailable device. Do not assume a service labeled Workspace security includes all administration or all Google products.",
-          "A hypothetical 55-person New Jersey consulting firm could start with a client-sharing workflow. IT verifies the current Drive permissions, the business manager approves the intended recipients and the security owner records any exceptions. This connects a technical setting to a business decision without claiming that a configuration alone proves compliance."
+          "Consider a hypothetical 55-person New Jersey consulting firm reviewing client sharing. IT checks the Drive permissions, the business manager approves the intended recipients and the security owner records exceptions. Each has a different part of the decision; the technical configuration alone cannot establish compliance."
         ]
       },
       {
@@ -3825,15 +3825,15 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Turn a broad security label into assigned work",
         "ps": [
-          "The choice is not simply whether to buy another tool. The firm needs several kinds of work: administration, business approval of access, monitoring of supported threats, investigation, response and evidence upkeep. Some can remain with existing IT while a managed security provider performs a defined subset. Start by assigning those duties before comparing prices.",
-          "Tenant administration includes creating accounts, managing groups, changing settings and supporting users. A security investigation may require reviewing an account event and coordinating an authorized containment step. The business owner decides whether an employee or outside collaborator should have access to a client's information. A provider cannot infer that business decision from a technical log alone.",
-          "Write a responsibility map for the scenarios that recur. A suspicious sign-in, an accidentally public file, a departing employee and a failed backup each need a named first contact and next action. Ask prospective providers to explain which of these scenarios their service covers, which they coordinate and which remain with IT. A shared map is more useful than a statement that everyone works together."
+          "Assign the work before comparing prices. Administration, approval of business access, monitoring, investigation, response and evidence upkeep all need owners. Existing IT may handle some duties while a managed security provider takes a defined subset. A new tool does not assign the remaining work.",
+          "For example, IT creates accounts, manages groups, changes settings and supports users. A security investigator reviews an account event and coordinates authorized containment. The business owner decides whether an employee or collaborator should have access to client information. A technical log can inform that decision without supplying the business approval.",
+          "Give recurring events a first contact and next action: a suspicious sign-in, public file, departing employee or failed backup. Ask bidders which events they handle, which they coordinate and which stay with IT. Staff can then use the written handoff when an event occurs."
         ]
       },
       {
         "h": "Examine privileged access first",
         "ps": [
-          "List administrative roles and their assigned accounts. Confirm why each person needs the role and whether the account is still in use. Separate ordinary daily work from privileged administration where the approved operating model supports it. Review authentication and recovery for those accounts, including how the firm maintains access if the usual administrator is unavailable.",
+          "List administrative roles and the accounts assigned to them. Confirm why each person needs the role and whether the account remains in use. Where the approved operating model supports it, separate privileged administration from ordinary work. Include authentication and recovery in the review so the firm can retain access when the usual administrator is unavailable.",
           {
             "text": "Google's security checklist provides a starting point for administrator and authentication safeguards. Apply it to the current edition and environment. A checked box in an assessment is weaker evidence than the setting, account population and exception record supporting it.",
             "links": [
@@ -3850,7 +3850,7 @@ export const refreshedArticles: Article[] = [
         "h": "Review sharing through actual client workflows",
         "ps": [
           "Begin with one representative engagement. Identify the folder or shared drive, its owner, the internal team and the external recipients. Check whether access comes through individual invitations, groups, links or inherited permissions. Ask the business owner whether those recipients still need access and whether the current arrangement matches the client agreement.",
-          "Some externally shared information is necessary for the service the firm provides. The goal is a controlled decision about that sharing. If the firm requires a restricted exchange, give staff an approved way to complete it. A rule that interrupts client work without a usable alternative often creates an exception outside the documented process.",
+          "Client work sometimes requires external sharing. The business owner should approve that sharing and give staff a usable exchange method if the firm requires restrictions. Without an approved way to finish the task, a restrictive rule can push client work into undocumented exceptions.",
           "Set an owner for reviewing guest access when the engagement closes or changes. Test what happens when an external person changes roles or an internal employee leaves. Confirm which permissions the administrator can revoke and which information has already been downloaded or otherwise copied. Access removal limits future access; it does not retrieve every copy previously obtained."
         ]
       },
@@ -3858,15 +3858,15 @@ export const refreshedArticles: Article[] = [
         "h": "Inventory connected applications",
         "ps": [
           "Workspace information may be accessible through applications that users or administrators have connected. Ask IT to inventory the permitted integrations and the data they can access. Identify the business owner, approved purpose and current need for each. An application name that sounds familiar is not enough to justify broad access.",
-          "Review how an integration is approved, changed and removed. Include the handling of shared service identities or tokens, if present in the particular setup. Determine whether removing an employee also ends the integration's access or whether a separate action is required. Product behavior varies, so test the actual arrangement rather than relying on a generic departure checklist.",
+          "Define how each integration is approved, changed and removed, including shared service identities or tokens where present. Test whether removing an employee also ends the integration's access or whether IT needs to take a separate action. Use the result from your setup to update the departure procedure.",
           "An AI tool connected to mail or documents needs the same business review, with additional attention to the proposed use and data handling. Give employees a route to request a useful tool and supply an approved alternative when possible. Prohibiting an application without addressing the underlying task leaves the reason for its use unresolved."
         ]
       },
       {
         "h": "Compare DIY and managed operation fairly",
         "ps": [
-          "DIY should include the time spent carrying out the work. Managed service comparisons should include the duties that stay with IT. Avoid comparing a provider fee with a zero-cost internal model that assumes an employee investigates events, maintains settings and prepares evidence in spare time. Record the assumptions without inventing a market rate or guaranteed savings.",
-          "A firm with capable internal IT may need specialist detection and escalation rather than replacement administration. Another may need a clearer program owner because work crosses several vendors. The appropriate arrangement depends on the missing duty. Buying overlapping tools will not fix an unassigned approval or an unclear response authority."
+          "Include internal labor in the DIY estimate and retained IT duties in the managed estimate. Someone still needs time to investigate events, maintain settings and prepare evidence. Record those assumptions so you can compare the arrangements without inventing a market rate or guaranteed saving.",
+          "Choose the arrangement based on the duties that need an owner. Capable internal IT may need specialist detection and escalation; work involving several vendors may need a clearer program owner. Even where tools overlap, someone must have authority to approve access and authorize a response."
         ],
         "table": {
           "caption": "Compare DIY and managed operation fairly",
@@ -3908,7 +3908,7 @@ export const refreshedArticles: Article[] = [
         "h": "Test the handoff before an incident",
         "ps": [
           "Use a harmless scenario: an employee reports an unexpected account prompt, or a client folder appears to have broader sharing than intended. Ask the relevant teams to explain the first action, required evidence and authorized change. Record the handoff from the reporting employee to IT, security and the business owner.",
-          "The exercise should reveal where an approval is needed and who can provide it. A provider may identify a suspicious event yet lack permission to suspend an account. IT may be able to change a permission but need the business owner to decide whether the collaborator belongs in the engagement. Resolve those boundaries in advance.",
+          "Use the exercise to locate approvals. A provider may detect a suspicious event but lack authority to suspend the account. IT may be able to change permissions but need the business owner to approve the collaborator's removal. Resolve those handoffs before staff need them during an incident.",
           "For continuous monitoring claims, ask what data is monitored, what hours the investigating service operates and what happens when no customer contact answers. Do not interpret a service name as proof that every Workspace event is collected or that every response is automatic. Coverage and authority belong in the service description."
         ]
       },
@@ -3916,7 +3916,7 @@ export const refreshedArticles: Article[] = [
         "h": "Give leadership a short, useful report",
         "ps": [
           "Summarize privileged access, significant sharing exceptions, unresolved application approvals and the status of important recovery tests. State what changed, what remains open and who owns the next action. Include dates and supporting records where available. A long dashboard without an assigned decision can obscure the work that matters.",
-          "Review the operating map when licensing, providers or client requirements change. A control that was unavailable in one edition may become available later; a new feature may also require a deliberate configuration decision. Keep the evaluation current and specific. The purpose of a managed arrangement is to complete agreed work with clear accountability, not to substitute a security label for that work."
+          "Revisit the responsibility map when licensing, providers or client requirements change. A feature newly available in your edition still needs a configuration decision and an owner. Keep the managed arrangement tied to the work it must complete and the people accountable for it."
         ]
       }
     ],
@@ -3933,7 +3933,7 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "Professional Services",
     "laneTo": "/professional-services",
-    "intro": "A small medical practice needs an approved way to send electronic protected health information, or ePHI. Choosing an email platform is only part of the decision. The practice also needs to know who may send information, which recipient and purpose are appropriate, how the exchange is protected and what happens when a message is misdirected.",
+    "intro": "Before a medical practice emails electronic protected health information, or ePHI, it needs to know who should receive it and which safeguards suit the exchange. The procedure also needs to cover a message sent to the wrong person. Choosing the email platform helps with part of that work; the recipient, purpose and response decisions still belong in the practice's approved workflow.",
     "sections": [
       {
         "h": "Read addressable as a documented assessment",
@@ -3947,7 +3947,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "That explanation is more precise than saying encryption is optional or that every alternative automatically satisfies the rule. The practice needs a decision supported by its circumstances. A staff member's preference for a familiar app is not a documented assessment of the workflow.",
+          "The decision depends on the practice's risk assessment and circumstances. Calling encryption optional leaves out those conditions; treating any alternative as sufficient does too. A familiar app is suitable only when the documented assessment supports its use for that exchange.",
           "Have the responsible security owner and adviser record the chosen method and reasoning. IT confirms its technical behavior. The record should explain the population, information and exchange being assessed. Avoid a general statement that all practice email is compliant without identifying the configuration and use it describes."
         ]
       },
@@ -3955,7 +3955,7 @@ export const refreshedArticles: Article[] = [
         "h": "Map the exchange before selecting protection",
         "ps": [
           "List the common exchanges: messages to patients, referrals, billing, internal coordination and transfers to service providers. Identify the sender, recipient, information, purpose and authoritative record for each. A patient access request and an internal staff message can need different procedures.",
-          "Ask where attachments originate and where copies remain. A scan can be held on a workstation before being attached; the sent message can remain in a mailbox; the recipient may save a separate copy. The transmission control does not settle every storage and access decision along that path.",
+          "Follow the attachment through the exchange. A scanned document may sit on a workstation, remain in a sent mailbox and be saved again by the recipient. Protecting transmission covers one part of that path. The practice still needs to address access and storage for the copies that remain.",
           "Reduce unnecessary information through the approved business process. If a scheduling message does not need a detailed clinical attachment, do not add one because the workflow makes it convenient. Have the responsible adviser determine what may be shared for the actual purpose, rather than expecting staff to improvise a legal judgment."
         ]
       },
@@ -3986,7 +3986,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Distinguish protection layers",
         "ps": [
-          "Inbound phishing protection can reduce some malicious mail while doing a different job from protected outbound delivery. MFA helps control account access while doing a different job from confirming the intended recipient. Treat each as part of the workflow rather than assuming one product answers every question.",
+          "Inbound phishing protection checks for malicious mail. Protected outbound delivery addresses how sensitive information reaches a recipient. MFA controls account access, while recipient verification checks whom staff are sending to. These layers support different steps in the exchange and need to be assessed together.",
           {
             "text": "For platform-specific choices, use the Outlook encryption comparison with IT. Ask the administrator to demonstrate the actual method available in the practice's subscription. A feature name on a product page is not evidence that staff are using the configured workflow.",
             "links": [
@@ -4036,7 +4036,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Before using a new exchange for patient information, pilot it with non-sensitive samples and approved test recipients. Include common mail clients and mobile access where relevant. Test opening, replying, attachment handling and failed access. Record what staff and recipients need to do.",
           "Give the front desk a support route that does not require a patient to disclose a password or send screenshots containing health information. If access fails, provide an approved alternative. A difficult exchange should lead to a support decision rather than an unrecorded switch to a personal account.",
-          "Check protection claims that matter to the selected workflow. If the practice relies on restrictions or access withdrawal, test their supported behavior and limits. Withdrawing supported access does not retrieve information already read or copied. The business process should account for authorized recipients and appropriate use."
+          "If the workflow relies on restrictions or withdrawing access, test what the selected method supports and where its limits lie. Supported withdrawal cannot retrieve information a recipient has already read or copied. Account for that limit when approving recipients and deciding how they may use the information."
         ]
       },
       {
@@ -4052,7 +4052,7 @@ export const refreshedArticles: Article[] = [
             ]
           },
           "Have the privacy owner define how staff recognize and record that request. Confirm the recipient and follow the approved warning and confirmation procedure. Do not treat the patient's preference as general permission for all unrelated internal or provider exchanges. The context and purpose remain important.",
-          "Keep staff instructions short and specific. They should know who reviews an unusual request, how the patient's decision is recorded and what approved route is used. Employees should not have to interpret an access-rights dispute at the front desk without support."
+          "Give staff short instructions for recognizing the request, recording the patient's decision and using the approved route. Name the person who reviews unusual requests or an access-rights dispute. Front-desk staff then have a supported process instead of having to interpret the dispute themselves."
         ]
       },
       {
@@ -4068,14 +4068,14 @@ export const refreshedArticles: Article[] = [
             ]
           },
           "For a new recipient, use the approved trusted record and confirmation process. Be careful with autocomplete, similar names and forwarded threads. Check the attachment as well as the address: the correct recipient with another patient's file is still an error needing assessment.",
-          "Use harmless training examples that match the practice's work. Test whether employees pause and obtain help when a request conflicts with the procedure. The aim is a repeatable action, not a promise that training eliminates every mistake."
+          "Use harmless examples from the practice's work to test whether employees pause and seek help when a request conflicts with the procedure. Review the action they took and any instruction they could not follow. Training can make that action repeatable without guaranteeing that every mistake will be avoided."
         ]
       },
       {
         "h": "Respond to a misdirected message promptly",
         "ps": [
           "Tell staff whom to contact and what information to preserve. Record the intended recipient, actual recipient, message time, information involved and any supported containment action. Use an approved reporting route instead of forwarding the sensitive content to a broad group for opinions.",
-          "The responsible team assesses the facts and any notification obligations. Avoid declaring that an accidental message is automatically a reportable breach, or automatically harmless because access was withdrawn. The determination needs the applicable rules and evidence, with appropriate professional advice.",
+          "The responsible team should assess the evidence and applicable notification rules with appropriate professional advice. Accidental delivery is not automatically harmless because access was withdrawn, nor is every misdirected message automatically a reportable breach. The determination depends on the facts of the event.",
           "For a suspected compromised mailbox, involve authorized IT and security teams. They may need to examine account access and relevant settings while the practice manages communications through trusted channels. Containment, evidence and patient-facing decisions require coordinated owners."
         ]
       },
@@ -4083,14 +4083,14 @@ export const refreshedArticles: Article[] = [
         "h": "Keep evidence that matches the chosen workflow",
         "ps": [
           "Retain the approved procedure, configuration reference, pilot result and staff instructions in the practice's controlled records. Identify the reviewer and date. If the procedure permits several exchanges, state the purpose and population for each rather than combining them under one broad claim.",
-          "Review exceptions separately. A patient-request record, an unavailable recipient and a technical failure are different situations with different decisions. Give each a responsible owner and a supported disposition. An exception should not silently become the default method for later messages.",
-          "For a customer or partner question, answer with the relevant workflow and evidence. Using a business email platform is a starting fact, not a complete explanation of recipient verification, protection and incident handling. The useful answer shows what the practice approved and what was actually tested."
+          "Review exceptions separately. A patient-request record, an unavailable recipient and a technical failure are different situations with different decisions. Give each a responsible owner and a justified decision about how to handle it. An exception should not silently become the default method for later messages.",
+          "When a customer or partner asks about email safeguards, identify the approved workflow and its evidence. The business email platform alone does not explain recipient checks, protection or incident handling. Include what the practice approved and tested so the answer has a defined scope."
         ]
       },
       {
         "h": "Maintain the decision as the practice changes",
         "ps": [
-          "Revisit the workflow after changing mail platforms, protection policies, providers, licensing or common recipient groups. Keep the prior decision and record the change. A test performed before a material configuration change may not describe the current exchange.",
+          "Revisit the decision when the practice changes mail platforms, protection policies, providers, licensing or common recipient groups. Preserve the earlier record and explain what changed. A test from before a material configuration change may need to be repeated before it can support the current workflow.",
           {
             "text": "This article follows the HHS guidance checked on October 7, 2026. HHS's Security Rule proposal page describes proposed changes; proposed provisions should not be presented as established requirements merely because they appear in a draft. Have the responsible adviser confirm the applicable rule and effective dates during review.",
             "links": [
@@ -4116,7 +4116,7 @@ export const refreshedArticles: Article[] = [
         ]
       }
     ],
-    "takeaway": "Map the exchange, document the safeguard decision and test the approved recipient experience. Keep provider arrangements, patient-request procedures and misdirected-message handling aligned with the practice's actual workflow.",
+    "takeaway": "Map the actual email exchange, document the safeguard decision and test it with the recipient. Keep provider arrangements, patient-request procedures and misdirected-message handling consistent with that workflow.",
     "lead": [
       {
         "text": "HHS explains that the Security Rule does not expressly prohibit email, while access, integrity and transmission safeguards still apply. Use its email guidance and the practice's risk analysis to assess the workflow. This article supplies an operating checklist; the responsible privacy, security and legal advisers determine the practice's specific obligations.",
@@ -4140,7 +4140,7 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "Medical Practices",
     "laneTo": "/medical-practices",
-    "intro": "A practice that reviews only the EHR can miss patient information in email, billing, imaging, backups, phones, and vendor accounts. Those blind spots matter when a device is lost or an account is compromised because the practice may not know what information was accessible. A HIPAA risk analysis should follow electronic patient information through the systems and workflows the practice actually uses.",
+    "intro": "Patient information can sit in email, billing, imaging, backups, phones and vendor accounts as well as the EHR. If a device is lost or an account compromised, the practice needs to know which information was accessible. Follow that information through the actual systems and workflows when preparing the HIPAA risk analysis.",
     "ctaMode": "book",
     "sections": [
       {
@@ -4178,7 +4178,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "A tool can organize the work, but the evidence still has to describe the practice. Record each system, the information involved, who can access it, where it is used, the threats and vulnerabilities, existing safeguards, likelihood, impact, and the decision made about remediation."
+          "Use the tool to organize evidence that explains the practice's environment. For each system, record the information involved, who can access it and where it is used. Then describe the threats and vulnerabilities, existing safeguards, likelihood and impact, and the remediation decision."
         ]
       },
       {
@@ -4216,7 +4216,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "HHS describes risk analysis as an ongoing process. Review it when the practice changes an EHR or billing vendor, opens a location, adopts telehealth, adds remote work, changes email systems, brings in a new device class, or experiences an incident. Keep the previous analysis and document what changed.",
           {
-            "text": "Helm Command provides a fixed-fee HIPAA Security Rule gap assessment for an agreed scope, with documented findings and a prioritized roadmap. It supports readiness and remediation planning, but Helm does not certify that a practice is HIPAA compliant.",
+            "text": "A HIPAA Security Rule gap assessment can be separately scoped in writing, with documented findings and a prioritized roadmap. Helm Command can coordinate readiness and remediation planning within its agreed program scope. Helm does not certify that a practice is HIPAA compliant.",
             "links": [
               {
                 "phrase": "Helm Command",
@@ -4229,8 +4229,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Follow a patient-information workflow",
         "ps": [
-          "Choose a representative workflow and trace the information through it. A referral can pass through a fax service, a mailbox, a downloaded file, the EHR and a billing process. Identify the people and providers at each point. Do not stop at the system the practice considers most important if other steps handle the same information.",
-          "Ask staff to describe what they actually do when the approved route is unavailable. A workaround may create a temporary copy or send information to a different service. Use that account to identify a gap and an approved alternative, rather than writing a procedure that assumes the workaround never occurs.",
+          "Follow one representative workflow from beginning to end. A referral, for example, can pass through a fax service, mailbox, downloaded file, EHR and billing process. Identify the people and providers at each step, including those outside the system the practice considers most important. They may handle the same patient information.",
+          "Ask staff what they do when the approved route is unavailable. Their workaround may create a temporary copy or send information to a different service. Use that account to find the gap and provide an approved alternative, so the written procedure reflects how the work happens.",
           "Include access without permanent local storage. A device used to view patient information can still be lost, shared or accessed by an unauthorized person. Record the actual access arrangement, authentication and relevant session behavior. Have IT verify the technical facts supporting the review."
         ]
       },
@@ -4238,14 +4238,14 @@ export const refreshedArticles: Article[] = [
         "h": "Describe threats and vulnerabilities separately",
         "ps": [
           "A threat describes a potential cause of harm; a vulnerability describes a weakness that could make harm possible. For example, theft of a laptop is a threat scenario, while an inadequate access or data-protection arrangement may be a relevant weakness. Keep those ideas separate enough to identify an appropriate safeguard.",
-          "Evaluate confidentiality, integrity and availability. A practice can lose access to a critical application without confirmed disclosure of patient information. Incorrect or unavailable records can affect the work needed to provide care. The analysis should consider those consequences rather than reduce every scenario to a stolen-data narrative.",
-          "State the evidence and uncertainty. If the team has not verified a device setting, record that as an open fact-finding task. Do not give the control credit merely because the platform can support it. Likewise, do not assume a weakness exists solely because one reviewer has not yet seen the evidence."
+          "Evaluate confidentiality, integrity and availability. A practice can lose access to a critical application without confirmed disclosure of patient information. Incorrect or unavailable records can affect the work needed to provide care. Include those consequences alongside the risk of stolen data.",
+          "Distinguish an unverified setting from a confirmed weakness. If nobody has checked a device setting, assign a fact-finding task rather than crediting the control because the platform supports it. The lack of evidence also does not, by itself, establish that the setting is wrong. Record what is known and what still needs checking."
         ]
       },
       {
         "h": "Use a consistent decision record",
         "ps": [
-          "This is an illustrative format rather than a required scoring method. Use an approach appropriate to the practice and consistent enough to compare findings. A numerical rating without reasoning can hide the important differences between two scenarios.",
+          "Choose a method appropriate to the practice and apply it consistently enough to compare findings. Record the reasoning as well as any numerical rating; two scenarios with the same score may have important differences. The format below is illustrative, not a required scoring method.",
           "For a hypothetical practice, an unavailable imaging workflow might create a different operational consequence from a temporarily inaccessible administrative spreadsheet. Establish the actual dependency with the business owner. Avoid copying another organization's ratings without checking whether its workflow and safeguards resemble yours."
         ],
         "table": {
@@ -4290,23 +4290,23 @@ export const refreshedArticles: Article[] = [
         "h": "Evaluate vendors without outsourcing the decision",
         "ps": [
           "The EHR provider can supply product and service information, but the practice needs its own analysis of the environment and use. Review other providers with relevant information or access, including billing, cloud storage, remote support and messaging. Identify the service owner and the applicable agreement or assurance evidence.",
-          "Ask what the vendor operates and what configuration remains with the practice or IT. A shared responsibility should be described in concrete tasks. Who creates users, reviews privileges, removes departed staff and handles an urgent incident? A general statement that the provider is secure does not allocate those duties.",
+          "Ask which tasks the vendor performs and which remain with the practice or IT. Assign user creation, privilege reviews, removal of departed staff and urgent incident handling explicitly. A general statement that the provider is secure gives the practice no way to tell who owns those duties.",
           "When the service changes, review the information path and access arrangements before the change is complete. Keep the incident contact and data-handling responsibilities current. Preserve restricted agreements and evidence in their approved systems, with controlled references in the analysis."
         ]
       },
       {
         "h": "Move findings into risk management",
         "ps": [
-          "The analysis identifies and evaluates concerns; risk management assigns and follows decisions about them. For a technical gap, name the authorized IT owner and expected completion evidence. For a workflow gap, name the business decision-maker. Some findings need both.",
+          "The analysis identifies and evaluates concerns; risk management records and tracks decisions about them. For a technical gap, name the authorized IT owner and expected completion evidence. For a workflow gap, name the business decision-maker. Some findings need both.",
           "Record temporary safeguards and review dates when work cannot finish immediately. Have the appropriate adviser assess any related obligation. An internal acceptance of a risk does not automatically satisfy an external requirement or make an unsupported statement accurate.",
-          "Verify the action before closing the finding. A backup task needs evidence relevant to usable recovery, while an access task needs evidence of the approved permissions or enforcement. A purchase order or completed ticket may support the record but does not always establish the intended result."
+          "Before closing a finding, check evidence of the intended result. A recovery action needs evidence that recovery is usable; an access action needs evidence of the approved permissions or enforcement. A purchase order or completed ticket can support the record without establishing that either result was achieved."
         ]
       },
       {
         "h": "Keep clinical and business continuity connected",
         "ps": [
-          "Ask what staff do when the EHR, messaging or another important service is unavailable. Identify approved downtime procedures and the people authorized to invoke them. Keep the information and contacts accessible during the scenario they address. A plan available only through the unavailable system creates a dependency worth recording.",
-          "Use a tabletop with harmless records to examine the handoff. Who reports the issue, who assesses it, who coordinates with the provider and who approves the operational workaround? Involve the people responsible for patient-facing work so the exercise reflects actual use.",
+          "Identify the approved downtime procedure for an unavailable EHR, messaging system or other important service, and name who can invoke it. Keep the instructions and contacts accessible during that outage. If the only copy of the plan sits in the unavailable system, record that dependency and address it.",
+          "Use harmless records in a tabletop exercise to follow the handoff from reporting through assessment, provider coordination and approval of an operational workaround. Include the people responsible for patient-facing work. They can show whether the procedure supports the way the practice uses the affected service.",
           "Record missing authority, unclear contacts and unavailable information. Assign corrections and check the affected step afterward. A tabletop does not certify compliance; it supplies evidence about how the selected procedure worked under the tested conditions."
         ]
       },
@@ -4323,11 +4323,11 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Track new services, locations, device classes and remote workflows. Review after incidents and relevant test failures. A new control may reduce one exposure while creating another dependency. Update the analysis to reflect the implemented state, and make the next business decision clear to leadership."
+          "Update the analysis as services, locations, device classes and remote workflows change, and after incidents or relevant test failures. A new control may reduce an exposure while adding a dependency. Record the implemented state so leadership can see what remains to be decided."
         ]
       }
     ],
-    "takeaway": "Map every place electronic patient information is stored or accessible, record the current safeguards and unresolved risks, and give each corrective action an owner and date. Revisit the analysis when the practice changes systems, vendors, locations, devices, or workflows.",
+    "takeaway": "Find every place electronic patient information is stored or accessible. Record safeguards and unresolved risks, then assign corrective actions with dates. Update the analysis after changes to systems, vendors, locations, devices or workflows.",
     "lead": [],
     "updated": "2026-10-07",
     "readingLayout": true,
@@ -4346,10 +4346,10 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "Identity and access management, or IAM, determines who can use your systems and what they can do after signing in. For a growing firm, that includes employees, outside advisers, application integrations and administrator accounts.",
+    "intro": "Identity and access management, or IAM, controls who can enter your systems and what they can do there. The review needs to include outside advisers, application integrations and administrators alongside employees. An account can remain technically valid after the work requiring it changes, so the firm must approve and maintain those permissions as it grows.",
     "lead": [
       {
-        "text": "Microsoft distinguishes authentication, which verifies identity, from authorization, which grants access. Multifactor authentication helps with the first task. A permission review addresses the second. A firm needs both. Microsoft IAM concepts.",
+        "text": "Microsoft distinguishes authentication, which verifies identity, from authorization, which grants access. A firm needs both: multifactor authentication helps verify identity, while a permission review addresses access. Microsoft IAM concepts.",
         "links": [
           {
             "phrase": "Microsoft IAM concepts",
@@ -4363,7 +4363,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Review access by business role",
         "ps": [
-          "Begin with the systems holding client information or allowing money to move. Ask your IT owner for the account list, administrator roles, guest access and connected applications. Have the responsible business manager confirm who needs access and at what level.",
+          "Begin with systems that hold client information or authorize payments. IT can provide the accounts, administrator roles, guests and connected applications; the business manager confirms which access the work requires. With those records and business approval, reviewers can identify permissions that are technically valid but no longer needed.",
           "A hypothetical 60-person consulting firm might find that an employee who changed departments still has access to a former client's shared workspace. The correction starts with the business owner confirming the required access. IT then changes the permissions and records completion. An identity-alert service alone would not settle that decision.",
           "Single sign-on can simplify access across supported applications, but it does not automatically remove unnecessary permissions. Privileged access also needs separate attention: define who can administer systems, why they need that power and how their actions are reviewed."
         ]
@@ -4430,8 +4430,8 @@ export const refreshedArticles: Article[] = [
         "h": "Build an access record that managers can review",
         "ps": [
           "Start with the business application, not a generic list of names. Record its purpose, the information it holds, the owner who can approve access and the administrator who can change it. Include shared workspaces, client portals and specialist applications alongside the primary email platform. Some systems may not use your central identity provider.",
-          "For each role, describe the work that requires access. A billing employee may need invoice records without needing every client document. A project lead may need a specific engagement workspace without permanent access to all matters. The business manager makes that distinction; IT can explain how the application represents it through groups and permissions.",
-          "Ask the reviewer to resolve exceptions rather than sign a long export without guidance. Highlight privileged roles, former staff, accounts without a known owner and access that differs from the approved role. Keep the original evidence date and record the review decision separately. An access review is not complete merely because someone opened the file.",
+          "Describe the work each role needs to perform. Billing staff may need invoice records without every client document, and a project lead may need one engagement workspace without permanent access to all matters. Managers approve that distinction. IT explains how to apply it through the application’s groups and permissions.",
+          "Give reviewers specific exceptions to resolve: privileged roles, former staff, ownerless accounts and permissions that differ from the approved role. Retain the dated export and record each decision separately. Simply opening or signing the export does not show that those exceptions were addressed.",
           "Use account identifiers and system records where necessary, but limit who receives the detailed export. The working record may expose sensitive organizational information. Leadership can review unresolved decisions without receiving every account and permission detail in an ordinary meeting attachment."
         ]
       },
@@ -4439,8 +4439,8 @@ export const refreshedArticles: Article[] = [
         "h": "Follow a role change through all affected systems",
         "ps": [
           "An employee moving teams needs an access decision even when their account stays active. HR or the manager should identify the effective date and new responsibilities. The application owners determine which existing permissions should remain, which should end and which new access should begin.",
-          "IT then implements the approved changes in the relevant systems. A central group update may reach some applications automatically, while others need a separate action. Check the actual integration rather than assuming that single sign-on means all permissions follow the employee's role. Record systems that could not be changed on time and the temporary control, if any.",
-          "Verify the result using the application's own view of access where possible. A completed ticket supports the workflow, but it should point to what changed. If a manager approves a temporary overlap during a handover, record its purpose and expiry. Someone must revisit the exception when the handover ends.",
+          "IT implements the approved role change across the affected systems. Some applications may inherit a central group change; others need separate work. Check the integration in use, because single sign-on alone does not establish that permissions follow the employee’s role. Record any late change and its temporary control, if one is in place.",
+          "Verify access in the application where possible and link the ticket to the change made. If the manager approves a temporary overlap for handover, record why it is needed and when it expires. Assign the follow-up now so someone removes or reviews the permission when handover ends.",
           "For departures, include sessions, credentials, devices and applications outside the central directory. Follow the dedicated offboarding procedure with IT because access removal has platform-specific limits. Do not treat a disabled primary account as a universal claim about every independent application or copied document."
         ]
       },
@@ -4448,8 +4448,8 @@ export const refreshedArticles: Article[] = [
         "h": "Treat administrator and application access separately",
         "ps": [
           "An administrator can make changes that ordinary users cannot. Identify which tasks require that power and which accounts possess it. Ask IT how routine work is separated from privileged work, how recovery is handled and what records support review of important changes. Confirm platform support before buying a privileged-access product.",
-          "Keep emergency access deliberate. Define when it can be used, who authorizes it and how its use is reviewed. Store any recovery material through an approved process. A recovery account that is never checked can fail when needed; an exception left open without review can undermine the intended access policy.",
-          "Connected applications create another form of access. An integration may read files, send mail or act through permissions granted by a user or administrator. Review who authorized it, why the business needs it and which data it can reach. Removing a user's ordinary group membership may not resolve every application permission.",
+          "Agree when emergency access may be used, who authorizes it and how its use is reviewed. Keep recovery material in the approved location and check that the arrangement works. An unchecked recovery account can fail when needed, while an exception left open can weaken the normal access policy.",
+          "Review integrations as well as employee accounts. A connected application may read files, send mail or use permissions granted by a user or administrator. Establish who approved it, what the business needs it for and which data it can reach. Removing a user from a group may leave those application permissions intact.",
           "For non-human identities, name a business and technical owner. Explain how credentials or permissions are reviewed and what happens if the integration is replaced. Confirm whether these identities are included in the purchased protection service. Coverage of employee sign-ins does not establish coverage of every application identity."
         ]
       },
@@ -4457,7 +4457,7 @@ export const refreshedArticles: Article[] = [
         "h": "Prepare for a protective action that interrupts work",
         "ps": [
           "Identity protection can require a prompt decision about suspicious access. Before an incident, agree on who can restrict an account, how the employee will be contacted and who restores access. The communication route should still work if email or the main account is unavailable.",
-          "Discuss the business consequence of a restriction without using it as a reason to leave every account active. A partner may be preparing for a hearing or a controller may be completing payroll. The response owner needs a way to reach leadership and provide an approved alternative while the event is assessed.",
+          "A restriction can interrupt payroll or a partner’s preparation for a hearing. Agree in advance how the response owner reaches leadership and arranges an approved alternative while the event is assessed. That business handoff helps the team act promptly without leaving an account active solely because its work is urgent.",
           "Separate containment from recovery. Restricting an account may reduce ongoing access, but it does not determine what happened, repair every affected application or complete any required notification. Existing IT handles assigned administrative work; specialist investigation and legal decisions need explicit owners and scope.",
           "Use a fictional account event in the vendor evaluation. Ask the provider to explain the evidence available, permitted action, escalation record and handoff. A clear answer is more useful than a promise to stop all account takeover. The demonstration should make unsupported platforms and authority limits visible."
         ]
@@ -4467,14 +4467,14 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Core may suit a firm that already has managers approving access, IT maintaining account lifecycles and a business owner tracking exceptions. Confirm the supported protection population and monthly reporting before onboarding. Keep the work outside that stack in the firm's own operating plan.",
           "Command may suit a firm whose access problems recur because priorities, evidence and follow-up have no consistent owner. Program coordination can maintain the decision record and bring unresolved issues to leadership. It still depends on managers making access decisions and IT implementing the changes it owns.",
-          "At the fit meeting, bring a redacted example of one access change, one exception and one question you cannot currently answer. Use them to test the scope. Finish with a responsibility map covering approvals, administration, protective actions, evidence and recovery. That map should remain useful whichever provider or service tier the firm chooses."
+          "Bring redacted examples to the fit meeting: an access change, an exception and a question the firm cannot answer. Use them to establish responsibility for approval, administration, protective actions, evidence and recovery. The resulting map should work whichever provider or tier the firm chooses."
         ]
       },
       {
         "h": "Review access exceptions before they become defaults",
         "ps": [
           "Give a temporary permission an owner, purpose and review date. Ask the manager to confirm whether the original need still exists. If it does, approve the continued access explicitly; if it does not, assign removal to IT and verify the relevant system.",
-          "Include inherited permissions in the review. An application may grant access through a group or shared workspace rather than a direct user setting. The reviewer needs the effective access picture before concluding that a change removed the permission."
+          "Check how the permission is granted before verifying its removal. Access may come through a group or shared workspace rather than a direct user setting. Review the resulting effective access in the relevant application, not just the setting that IT changed."
         ]
       }
     ],
@@ -4490,13 +4490,13 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "The first person to notice a suspicious transfer or encrypted files needs a clear way to report it. They should not have to decide alone whether to wipe a device, notify every customer or negotiate with an attacker. A useful incident response plan assigns those decisions before the business is under pressure.",
+    "intro": "When someone notices a suspicious transfer or encrypted files, they need to know whom to contact. Decisions about wiping a device, notifying customers or negotiating with an attacker need assigned authority. Write those responsibilities into the incident response plan before people have to act under pressure.",
     "sections": [
       {
         "h": "Prepare the contact list before you need it",
         "ps": [
-          "Name the internal incident coordinator and their backup. Record the existing IT provider, security response contact, insurer or broker reporting route, appropriate legal adviser and the bank’s fraud contact. Include service hours and the escalation route when the first contact does not answer.",
-          "Store an approved copy where the team can reach it without relying entirely on company email or the affected device. Verify the phone numbers through established sources. A contact list full of names without a way to reach them outside the normal system will fail precisely when the system is unavailable.",
+          "Name an incident coordinator and a backup, then record the contacts they will need: existing IT, security response, the insurer or broker reporting route, an appropriate legal adviser and the bank's fraud team. Include service hours and an escalation route for an unanswered call.",
+          "Keep an approved contact list somewhere the team can reach without company email or the affected device. Verify its numbers through established sources and include a way to reach each person outside the normal system. Otherwise, the list may become inaccessible during the disruption it is meant to help resolve.",
           {
             "text": "For insured businesses, review the actual policy and response arrangements with the broker before an incident. Identify notice requirements and any approval needed for vendors or expenses. The FTC’s cyber insurance guidance highlights response support and breach hotlines as matters to discuss when evaluating coverage. Your policy’s terms govern your situation.",
             "links": [
@@ -4513,8 +4513,8 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Tell staff how to report a suspected incident and what basic facts to provide: the time, affected account or device, what they observed and whether money or sensitive information may be involved. Use a reporting route that still works if email is suspected to be compromised.",
           "Avoid asking ordinary users to investigate unfamiliar files, run cleanup tools or forward sensitive evidence to a broad group. Their task is to raise the concern and follow the approved opening instructions. The response team decides which additional information to collect.",
-          "Do not require employees to prove that an incident has occurred before reporting. Uncertainty is expected at the beginning. The coordinator can triage a suspicious event while preserving the distinction between what is known, what is suspected and what remains unconfirmed.",
-          "Record the initial report and create a timeline. A simple chronology helps responders reconcile actions later, especially when several people are making calls or changing access. Use an approved incident record with appropriate access restrictions."
+          "Let employees report a concern while the facts are still uncertain. The coordinator can then triage the event and separate confirmed observations from suspicions. Requiring proof before reporting puts an investigation task on the employee and can delay that handoff.",
+          "Record the initial report and create a timeline. This chronology helps responders work out who did what and when, especially when several people are making calls or changing access. Use an approved incident record with appropriate access restrictions."
         ]
       },
       {
@@ -4530,7 +4530,7 @@ export const refreshedArticles: Article[] = [
             ]
           },
           {
-            "text": "Suspected ransomware needs containment coordinated with the authorized technical responder. CISA advises isolating affected systems and notes that powering down may be necessary if they cannot be disconnected, while also affecting volatile evidence. The older blanket instruction never to power off is too absolute. Use the CISA StopRansomware guide and your responder’s instructions for the actual situation.",
+            "text": "Coordinate suspected ransomware containment with the authorized technical responder. CISA advises isolating affected systems. If disconnection is impossible, powering down may be necessary, although it affects volatile evidence. Follow the CISA StopRansomware guide and your responder's instructions for the actual situation.",
             "links": [
               {
                 "phrase": "CISA StopRansomware guide",
@@ -4539,14 +4539,14 @@ export const refreshedArticles: Article[] = [
             ]
           },
           "An account compromise may require access revocation, investigation of rules and permissions, and review of affected messages or files. The authorized administrator should use the platform-specific procedure. Changing a password does not by itself establish that every application session or other access grant is gone.",
-          "These workstreams can proceed in parallel. Notify the insurer through the required route while urgent containment or bank reporting is underway. Avoid delaying an immediate harm-reduction action solely because the plan lists another contact first."
+          "Assign these workstreams so they can proceed in parallel. While the insurer is notified through the required route, others may need to contain active harm or contact the bank. The contact list’s order should not delay an urgent action suited to the event."
         ]
       },
       {
         "h": "Preserve evidence without improvising forensics",
         "ps": [
           "Keep the original suspicious message, transaction information and the reported timeline. Record technical actions taken, by whom and at what time. The responder should direct collection of logs, device evidence and other material appropriate to the incident.",
-          "Do not wipe, reimage or restore an affected system casually. Those changes can remove information needed to understand the incident. Equally, do not let an instruction to preserve evidence become a reason to leave active harm uncontained. The response team must balance containment, evidence and business safety.",
+          "Have the response team direct decisions about wiping, reimaging or restoring an affected system. Those actions can remove information needed to understand the incident. Responders must weigh that evidence against active harm and decide how to contain the incident while protecting useful evidence and business safety.",
           "Keep evidence in an approved location with controlled access. Avoid uploading live incident details, customer records or credentials to an unapproved collaboration tool. If the usual system is compromised, use the alternate arrangement established in the plan.",
           "Ask the responder what evidence the organization should retain and who is authorized to receive it. Counsel can advise on legal considerations and reporting duties. Technical staff should not make unsupported promises about privilege, confidentiality or notification outcomes."
         ]
@@ -4554,10 +4554,10 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Assign decision authority",
         "ps": [
-          "Identify who can authorize system isolation, engage a vendor, approve response expenditure and accept business downtime. Name backups for those people. A responder who knows what needs to happen still needs an authorized route to obtain the decision.",
+          "Identify who can authorize system isolation, engage a vendor, approve response expenditure and accept business downtime. Name backups for those people. Responders need to know how to reach someone authorized to approve the action, even when the technical next step is clear.",
           "Separate technical findings from business decisions. The response team may establish which systems are affected and which recovery options are available. Leadership decides priorities with the relevant technical, legal and insurance advice. Keep the rationale in the incident record.",
           "Requests involving ransom, negotiation or other payments need specialist review and appropriate authority. An employee should not respond independently to an attacker’s demand. The plan should direct those requests to the designated leadership and advisers without promising that any payment or recovery route is available or acceptable.",
-          "Make the approval process usable outside ordinary hours. Record how the responder reaches the backup decision-maker and which bounded actions are already authorized. Waiting for a person whose contact details exist only inside an inaccessible mailbox is an avoidable planning gap."
+          "Make approvals possible outside ordinary hours. Record how responders reach a backup decision-maker and which bounded actions they can take under existing authorization. If the only contact details are in an inaccessible mailbox, an otherwise ready responder may be left waiting for a decision."
         ]
       },
       {
@@ -4566,14 +4566,14 @@ export const refreshedArticles: Article[] = [
           "Use the alternate communication route if the normal channel may be compromised. Assume that an attacker with access to a mailbox could read messages sent through it until the responders establish otherwise. Confirm participants and access before discussing sensitive details.",
           "Assign one person to coordinate staff updates. Explain what employees should do, which systems are unavailable and where to report new observations. Avoid speculative statements about the cause, scope or safety of information before the investigation supports them.",
           "Customer, regulator and contractual notices require a separate review of applicable duties and known facts. Do not issue a blanket statement that no data was accessed merely because encryption was the first visible symptom. The investigation may need to evaluate access, copying and other activity.",
-          "Keep a record of communications and approvals. An incident response plan should help the organization speak accurately as its understanding changes, not force an early conclusion that later evidence contradicts."
+          "Record communications and who approved them. As the investigation develops, the organization may need to update earlier statements. This record helps it explain what was known at each point and avoid committing to a conclusion that later evidence contradicts."
         ]
       },
       {
         "h": "Recover a business process, not just a file",
         "ps": [
-          "Define the essential processes and their dependencies before an incident. Restoring a document is not enough if staff cannot sign in, the application is unavailable or the restored environment still contains the entry point used by the attacker.",
-          "Agree the sequence with the responders and system owners. Validate restored information, access and application behavior before returning a process to normal use. Preserve the evidence and work through the required technical checks rather than restoring every backup into the affected environment immediately.",
+          "Before an incident, identify the dependencies of each essential business process. Staff may have the restored document and still be unable to work because they cannot sign in or the application is unavailable. Recovery also needs to address the entry point used by the attacker before that process returns to use.",
+          "Agree the recovery sequence with responders and system owners. Validate the restored information, access and application behavior, and complete the required technical checks before returning the process to normal use. Restoring every backup immediately into the affected environment may bypass those checks and disturb evidence.",
           {
             "text": "NIST’s current incident response publication, SP 800-61 Revision 3, places preparation, response and recovery within broader cybersecurity risk management. For a small business, the practical implication is to connect the incident plan to account administration, backup testing, vendor responsibilities and leadership decisions.",
             "links": [
@@ -4626,8 +4626,8 @@ export const refreshedArticles: Article[] = [
         "h": "Rehearse the opening decisions",
         "ps": [
           "Run a tabletop using a clearly labeled fictional scenario. Ask staff to locate the contact list, report the event and identify the decision-maker. Have the team explain how it would communicate if email were unavailable and how bank or insurer reporting would proceed.",
-          "Record missing contacts, ambiguous authority and unsupported assumptions. Assign each correction and update the plan. A useful exercise produces practical changes, not just attendance evidence. Helm Command includes an annual tabletop within its agreed security-program scope; response and recovery responsibilities still need to be documented with your existing IT provider and other responders.",
-          "After a real incident, conduct an appropriate lessons review with the people who owned the response. Compare the plan with the actions actually taken, identify delays and assign changes. Preserve relevant incident records under the approved retention process. Recheck contact details and responsibilities after a provider change rather than waiting for another emergency."
+          "Use the exercise record to repair missing contacts, unclear authority and unsupported assumptions. Assign each correction and update the plan; an attendance record alone will not resolve those gaps. Helm Command includes an annual tabletop within its agreed security-program scope. Document response and recovery responsibilities with existing IT and other responders as part of that preparation.",
+          "After a real incident, conduct an appropriate review of lessons learned with the people who owned the response. Compare the plan with the actions actually taken, identify delays and assign changes. Preserve relevant incident records under the approved retention process. Recheck contact details and responsibilities after a provider change, before another emergency."
         ]
       }
     ],
@@ -4652,7 +4652,7 @@ export const refreshedArticles: Article[] = [
     "hideVisual": true,
     "readingLayout": true,
     "intro": {
-      "text": "An insider can have legitimate access and still use it in a way the firm has not authorized. Intentional misuse can involve deliberately sharing confidential files, changing records or bypassing an approval process. CISA also distinguishes intentional actions from malicious intent: a deliberate action is not automatically an attempt to harm the organization. CISA Insider Threat Mitigation Guide.",
+      "text": "Legitimate access can be used for an unauthorized purpose, such as sharing confidential files, changing records or bypassing an approval. CISA distinguishes intentional actions from malicious intent: someone acting deliberately is not necessarily trying to harm the firm. That distinction should guide how unusual activity is reviewed. CISA Insider Threat Mitigation Guide.",
       "links": [
         {
           "phrase": "CISA Insider Threat Mitigation Guide",
@@ -4661,16 +4661,16 @@ export const refreshedArticles: Article[] = [
       ]
     },
     "lead": [
-      "For a small business, the practical focus is access and process evidence. An unusual download or failed sign-in needs context; it is not proof that an employee is malicious."
+      "Start with what the account could access and what the records show happened. An unusual download or failed sign-in needs that context before the firm draws a conclusion about the employee's intentions."
     ],
     "takeaway": "Limit access, document sensitive approvals and review events through an authorized process. Unusual activity alone does not prove malicious intent.",
     "sections": [
       {
         "h": "Limit what an account can do",
         "ps": [
-          "Have business managers approve access based on the work people perform. Existing IT should implement the permissions, restrict administrator access and remove access when roles change. Review guest accounts and application access as well as employees.",
+          "Business managers approve access according to each person's work; existing IT implements it, limits administrative privileges and changes permissions when roles change. Include guests and applications so the review covers access beyond the employee list.",
           {
-            "text": "Payment changes and sensitive exports need a documented approval route. Where the business can support it, separate the person requesting a change from the person approving it. Use the existing offboarding checklist to coordinate HR, managers and IT rather than rebuilding that workflow here.",
+            "text": "Payment changes and sensitive exports need a documented approval route. Where the business can support it, separate the person requesting a change from the person approving it. Use the existing offboarding checklist to coordinate HR, managers and IT through the same departure workflow.",
             "links": [
               {
                 "phrase": "offboarding checklist",
@@ -4685,7 +4685,7 @@ export const refreshedArticles: Article[] = [
         "h": "Review events through an authorized process",
         "ps": [
           "Decide in advance which records the firm may collect, who may review them and how long they should be retained. Keep access proportionate and obtain legal advice on employment, privacy and notice requirements that apply to your circumstances.",
-          "If an event raises concern, have the authorized reviewer establish the account, action, system and business context. Preserve relevant records and document the source and time. Limit circulation to people who need the information. Avoid employee suspicion scores, psychological profiles or informal accusations.",
+          "When an event raises concern, the authorized reviewer should establish the account, action, system and business context. Preserve the relevant records with their source and time, and limit circulation to people who need them. Base the review on those facts rather than employee suspicion scores, psychological profiles or informal accusations.",
           "Containment may be necessary to protect data, but the firm should distinguish a protective access restriction from a conclusion about misconduct. Counsel, HR and any separately retained investigator should direct their respective decisions. A security-alert vendor should not be treated as the firm's employment-law adviser."
         ]
       },
@@ -4730,7 +4730,7 @@ export const refreshedArticles: Article[] = [
         "h": "Start with the sensitive process",
         "ps": [
           "Choose a process where an unauthorized action would matter: client-file export, payment approval, account administration or changes to an authoritative record. Identify who can perform the action and why. Include employees, contractors, provider accounts and integrations. The relevant access may extend beyond the staff roster.",
-          "Have the business owner approve the purpose and population. Existing IT verifies the technical permission and implements changes. A security reviewer can help identify a gap without deciding every business relationship. Keeping those roles distinct prevents a technical team from having to infer whether someone belongs on a client matter.",
+          "The business owner approves who needs access and for what purpose; IT verifies the permissions and implements changes. A security reviewer can identify a gap, but the business owner still needs to decide who belongs on a client matter. Make that handoff explicit so a technical team is not left to infer the relationship.",
           "Record normal changes in responsibility. A person moving to a new role may no longer need old permissions even while remaining employed. Review inherited groups, guests and independent applications. An ordinary role-change procedure reduces unnecessary access without suggesting misconduct."
         ]
       },
@@ -4738,7 +4738,7 @@ export const refreshedArticles: Article[] = [
         "h": "Make high-consequence actions reviewable",
         "ps": [
           "For a sensitive export or financial change, identify the requester, approver and operator. Where appropriate, separate those duties and retain the record connecting the approval to the actual action. A request approved for one purpose should not silently authorize a broader export or a different beneficiary.",
-          "Plan the exception process. Staff need a route when a legitimate deadline conflicts with the ordinary procedure. The authorized owner should decide the exception and required evidence. An informal instruction from a senior person should not leave a junior employee responsible for inventing a control under pressure.",
+          "Agree on an exception route before a legitimate deadline conflicts with the ordinary procedure. Name the owner who can authorize the exception and specify the evidence required. A junior employee should not have to invent a control under pressure because a senior person gave an informal instruction.",
           "Check integrations that can perform the same action. A workflow or service identity may have access unavailable to ordinary users. Review its owner, approved purpose and removal process. An employee access review that ignores automation can miss part of the authority over the information."
         ]
       },
@@ -4746,7 +4746,7 @@ export const refreshedArticles: Article[] = [
         "h": "Use records proportionately",
         "ps": [
           "Obtain advice about monitoring, employment, privacy and notice requirements before introducing a collection process. The lawful and proportionate arrangement depends on the circumstances. Do not turn a general security recommendation into permission to monitor every employee action or collect information unrelated to a defined purpose.",
-          "Keep access to the records restricted. A broad discussion of an employee's activity can harm the person and compromise the investigation. The response team should know who may view, preserve and share the information. A restricted fact-finding record should not become an informal office narrative."
+          "Restrict the records to the authorized response team and define who may view, preserve and share them. Wider discussion can harm the employee and compromise the investigation. Keep fact-finding in its controlled record, rather than letting it become office speculation."
         ],
         "table": {
           "caption": "Use records proportionately",
@@ -4785,17 +4785,17 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Interpret an event in context",
         "ps": [
-          "An unusually large download may support a question, but it can also reflect an approved project, migration or backup task. Establish the system, account, time and information before drawing a conclusion. Compare the event with the relevant business approval and obtain the necessary context through the authorized route.",
+          "A large download could be an approved project, migration or backup task. Establish the system, account, time and information, then compare the event with business approvals and obtain context through the authorized route. The volume alone cannot determine intent.",
           "A deliberate action is not automatically proof of malicious intent. An employee may misunderstand a rule or choose a shortcut that creates harm. The response should still address unauthorized access or handling, while the appropriate people assess intent and employment consequences. Technical logs alone may not settle that distinction.",
-          "Avoid personality-based profiles or unsupported suspicion scores. Describe the observed action and relevant evidence. If facts are missing, record the uncertainty and the next investigation step. A precise statement that an export occurred without a located approval is stronger than a speculative claim about why a person did it."
+          "Describe the observed action, evidence and missing facts without personality profiles or unsupported suspicion scores. For example, an export for which no approval has been found is a specific fact to investigate. The review should establish the explanation before asserting why the person acted."
         ]
       },
       {
         "h": "Preserve the facts before routine cleanup",
         "ps": [
-          "If the event needs investigation, obtain the authorized preservation instructions before deleting accounts, resetting systems or clearing relevant records. Ordinary remediation can alter evidence. The responsible responder and advisers should determine what must be retained and how.",
+          "Before routine cleanup of an event that needs investigation, obtain authorized preservation instructions. Deleting accounts, resetting systems or clearing records can alter evidence. The responsible responder and advisers should decide what to retain and how.",
           "Record source, collection time, reviewer and the action taken. Keep original information where the approved process requires it, with controlled access. Do not copy live findings, employee information or client data into general operating documents simply to make them easier to find.",
-          "A protective restriction may be necessary before all facts are known. Record its purpose and authority separately from any conclusion about misconduct. This distinction supports a controlled response: limiting possible harm while the authorized review continues."
+          "If data needs protection before the facts are settled, record the access restriction's purpose and authority. Keep that protective decision separate from any misconduct finding while the authorized review continues."
         ]
       },
       {
@@ -4811,7 +4811,7 @@ export const refreshedArticles: Article[] = [
             ]
           },
           "Review accounts outside the main tenant, provider relationships and integrations. Blocking one account may not end every session or revoke every credential. Have IT verify the actual platform behavior and record unresolved access. Retain business continuity tasks such as reassignment of client matters alongside the access work.",
-          "Do not delete information merely to make a departure appear complete. Counsel or the records owner should determine relevant preservation and disposition. The person carrying out account administration needs a clear instruction, not an assumption that all former-worker data can immediately be removed."
+          "Ask counsel or the records owner for preservation and disposition instructions before removing former-worker information. Account administrators need that decision to finish the departure correctly; apparent completion is not a reason to delete records still required."
         ]
       },
       {
@@ -4819,14 +4819,14 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Use a hypothetical scenario involving an unexpected client-file export from an approved account. Ask the team to show the authorization record, relevant logs, reviewer and protective decision route. Keep the exercise materials harmless and the scope agreed in advance.",
           "Include IT, the business owner and the appropriate response roles. A security service may supply an event while HR or counsel handles another part of the decision. Test whether information reaches those roles through the approved channel, with access limited to the people who need it.",
-          "Record unclear authority and missing evidence. Assign a correction such as a better approval record, a maintained access inventory or a known preservation contact. Repeat the affected step after the correction. The exercise tests the procedure; it does not demonstrate that the firm can infer every insider's intent."
+          "After the exercise, assign corrections for missing evidence and unclear authority. That might mean a better approval record, current access inventory or known preservation contact. Repeat the affected step to check the correction. The result concerns the procedure, not the firm's ability to infer every insider's intent."
         ]
       },
       {
         "h": "Report the program gap to leadership",
         "ps": [
           "Leadership needs to know about unassigned approvals, excessive access and unresolved exceptions. Provide the business consequence and the decision required, with restricted individual details shared only when authorized and necessary. A general program report can describe the gap without circulating investigation material.",
-          "Review changes in systems and workflows. A new export feature or automated integration can expand authority even when the employee count stays the same. Update the responsibility map and test the relevant approval route. The useful program is maintained access and a lawful, evidence-led response, rather than a broad promise to detect every intentional act."
+          "Review new export features and integrations along with staff changes. They may expand an account's authority without changing headcount, so update the responsibility map and test the approvals. Maintain access controls and a lawful evidence-review process while acknowledging that they cannot detect every intentional act."
         ]
       }
     ],
@@ -4842,7 +4842,7 @@ export const refreshedArticles: Article[] = [
     "readMin": 9,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "A fraudulent invoice can contain the correct project, amount and contact name. A payment-change request can arrive inside a familiar email conversation. Accuracy in those details does not prove that the bank account belongs to your vendor.",
+    "intro": "An invoice may show the correct job, amount and contact name while directing payment to the wrong account. A banking change may even arrive in a familiar email thread. Verify the destination independently; accurate details about the work do not establish who owns the account.",
     "sections": [
       {
         "h": "What the reported losses tell us",
@@ -4856,14 +4856,14 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Use the figures to justify reviewing your workflow, not to create an unsupported estimate of your own exposure. Your business has more useful local evidence: how many banking changes occur, how often staff bypass verification, which payment routes can be recalled and whether anyone checks exceptions."
+          "The complaint figures give you a reason to review payment verification, but they cannot estimate your firm's exposure. Examine the records you have: banking changes, bypassed checks, payment routes that can be recalled and exception reviews. Those records show where your own process needs attention."
         ]
       },
       {
         "h": "The request is the first red flag",
         "ps": [
           "Any change to an existing vendor’s bank account should trigger verification, even if the message has no spelling errors or suspicious attachment. A change may be legitimate. It still alters where your money will go and should not be approved only because it arrived from an apparently familiar sender.",
-          "Other warning signs include an unexpected contact, a different reply-to address, a slightly altered domain, pressure to pay before a deadline or a request to keep the transaction confidential. These observations help staff decide what to investigate. They are not a ranked list of indicators proven to appear in a particular order.",
+          "An unexpected contact, different reply-to address or slightly altered domain can justify investigation. Pressure to meet a deadline or keep the payment confidential can do the same. Use these observations to prompt checks; they are not indicators known to appear in a fixed or ranked order.",
           "Also look for changes in the workflow. A vendor who usually submits invoices through a portal suddenly asks for a direct wire. A manager requests approval through a personal email address. A caller insists the ordinary approver is unavailable. Pause the exception and use the process your business established before the request arrived."
         ]
       },
@@ -4879,26 +4879,26 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "For the payment reviewer, the consequence is practical: do not treat the conversation history as independent confirmation. Replying to the same email asks the same channel to vouch for itself. Calling a number newly supplied in that message creates a similar problem.",
+          "Verify outside the thread. Replying to the same email relies on the channel carrying the disputed instruction, while calling a number newly supplied in that message relies on another detail from the same source. Neither provides the independence your payment check needs.",
           "Your verification route should come from records already held by the business or a separately validated vendor-onboarding process. If the existing contact information is outdated, resolve that gap through an approved procedure. Do not substitute the new email’s phone number simply to clear the payment queue."
         ]
       },
       {
         "h": "Verify the bank change separately from the invoice",
         "ps": [
-          "Keep two decisions distinct. One is whether your business owes the vendor the amount billed. The other is whether the new destination is authorized. Purchase orders, delivery records and contract terms help establish the first. They do not establish the second.",
+          "Check both the payable and the destination. Purchase orders, delivery records and contract terms help establish whether the business owes the billed amount. Confirming a new bank account requires a separate verification step, even when the underlying invoice is correct.",
           "Call an established vendor contact through a known number. Explain that your company received a change request and ask the contact to confirm the intended change through your approved process. Avoid volunteering every new detail first; ask the contact to describe the request so the conversation supplies independent information.",
           "Record who was reached, which established number was used, the date, the result and the reviewer. Keep the evidence in the normal finance system with suitable access restrictions. Do not scatter banking details into broad chat channels or an unprotected shared spreadsheet.",
-          "A callback reduces risk but cannot guarantee success. Contact records can be wrong, someone can be deceived and a real vendor can have a compromised process. Support the callback with approval separation, restricted access to vendor records and a review of unusual transactions. The objective is several checks that can catch different failures."
+          "A callback is one check in the process. Contact records can be wrong, the person answering can be deceived and a vendor's own process can be compromised. Combine the callback with separate approval, restricted access to vendor records and review of unusual transactions so the process can catch different failures."
         ]
       },
       {
         "h": "Separate record changes from payment approval",
         "ps": [
           "If one person can amend a vendor record and release the payment without review, a convincing request has only one decision point to pass. Establish a second review for banking changes and apply your business’s approval rules to payment release.",
-          "The second reviewer should see the verification record and the proposed destination, not merely a forwarded statement that the first reviewer checked it. Decide which changes always require independent approval. Banking amendments may deserve that treatment even when the next payment is below the usual spending threshold.",
+          "Give the second reviewer the verification record and proposed destination. A forwarded statement that someone checked the change is too little to evaluate. Decide which banking amendments always need independent approval, including those below the usual spending threshold.",
           "Review permissions in the payment and accounting systems with their owners. Identify who can add vendors, edit bank details, approve changes and release payments. A written procedure is weaker if the system allows a busy employee to complete all steps with no review or audit trail.",
-          "For a small finance team, document how an owner or another authorized person supplies the second check. Avoid pretending a two-person process exists when holidays, sickness or month-end pressure routinely reduce it to one. Define how a payment waits when the required reviewer is unavailable."
+          "For a small finance team, document how an owner or another authorized person supplies the second check. Account for holidays, sickness and month-end pressure that routinely leave only one person available to handle payments. Define how a payment waits when the required reviewer is unavailable."
         ]
       },
       {
@@ -4946,15 +4946,15 @@ export const refreshedArticles: Article[] = [
         "h": "An illustrative month-end example",
         "ps": [
           "Consider a company with a regular supplier and an invoice due at month end. This is an illustrative scenario, not a Helm customer incident. The reviewer receives a message in the usual thread saying the supplier has changed banks and payment must arrive that afternoon.",
-          "The amount matches the purchase order. The invoice layout looks right. Those details support the underlying payable, but the new account remains unverified. The reviewer holds the banking change and contacts the supplier using the established record. The reviewer then records the outcome and requests the required second approval.",
-          "If the supplier cannot be reached, the deadline does not convert an unknown destination into an authorized one. Escalate to the business owner using the written exception procedure. That person can address the commercial consequence of a delay without quietly discarding the verification requirement."
+          "In this example, the amount matches the purchase order and the invoice looks familiar. The underlying payable may be valid, but the new account remains unverified. The reviewer holds the banking change, uses the established supplier contact and records the response before seeking the required second approval.",
+          "If the supplier cannot be reached, keep the new destination unverified regardless of the deadline. Escalate to the business owner using the written exception procedure. That person can address the commercial consequence of a delay while keeping the verification requirement in place."
         ]
       },
       {
         "h": "Prepare staff for pressure, including from leadership",
         "ps": [
           "Give employees explicit permission to stop a payment when verification is incomplete. A policy signed by leadership is useful only if leadership follows it during urgent transactions. A request from an owner should not automatically bypass the checks imposed on a vendor.",
-          "Practice the actual steps with finance staff. Use a clearly labeled exercise, approved test details and no real transfer. Test whether staff can locate the established contact record, reach the second approver and document a held payment. Review the difficulty they encounter rather than measuring only whether they identified a suspicious phrase.",
+          "Practice the payment procedure with a clearly labeled exercise, approved fictional details and no transfer of real money. Ask staff to locate the trusted contact record, reach the second approver and document a held payment. Review where those steps were difficult; spotting a suspicious phrase does not establish that staff can complete the checks.",
           "Teach the reporting route alongside the red flags. Employees need to know who takes over an uncertain request and how to preserve the message. Avoid punishing someone for raising a concern that turns out to be legitimate. That would discourage the next report, including one with stronger evidence."
         ]
       },
@@ -4971,7 +4971,7 @@ export const refreshedArticles: Article[] = [
             ]
           },
           "Preserve the original messages, transaction reference, beneficiary details and a timeline of what happened. Notify the appropriate internal owner and follow your incident plan. If there is reason to suspect mailbox compromise, bring the authorized IT and security responders into the investigation.",
-          "Keep the banking response and technical response coordinated. Recalling a payment does not resolve a compromised account. Resetting a password does not address an already completed transfer. Record who owns each workstream so neither is assumed to be handled by the other team."
+          "Assign an owner to both the banking response and the technical investigation. A payment recall addresses the transfer; it cannot resolve mailbox compromise. A password reset addresses account access; it cannot recover transferred money. Keep the teams coordinated so both duties continue."
         ]
       },
       {
@@ -5001,12 +5001,12 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Measure whether the process is actually followed",
         "ps": [
-          "Track the number of banking changes, the number with completed independent verification and unresolved exceptions. Review a sample of records to confirm the evidence exists. A checklist marked complete without a contact route or approval record tells you little about whether the control operated.",
+          "Review a sample of banking-change records for the trusted contact route and independent approval. Track how many changes received completed verification and which exceptions remain unresolved. A completed checkbox without the supporting record cannot tell the reviewer whether the control was followed.",
           "Ask finance staff which step causes delays. Fix inaccessible contact records, unclear approvers or missing backup coverage. Those operational details often decide whether a sound policy survives a busy payment run."
         ]
       }
     ],
-    "takeaway": "Verify every vendor banking change through an established contact route before updating records or releasing money. Retain the evidence, separate approval responsibilities and escalate incomplete checks. If a fraudulent transfer occurs, contact the bank immediately and follow the incident process.",
+    "takeaway": "Before updating banking records or releasing funds, verify the change through an established contact route and keep the evidence. Separate verification from approval and escalate missing checks. For a suspected fraudulent transfer, contact the bank immediately and follow the incident process.",
     "lead": [
       "Treat changes to payment instructions as a separate verification event. The person reviewing the invoice should be able to confirm the change through an established contact route, obtain the required approval and leave a record before money moves. Email protection helps reduce exposure, but the payment process must still work when a convincing message gets through."
     ],
@@ -5024,13 +5024,13 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "Contractors & Trades",
     "laneTo": "/contractors",
-    "intro": "Job-site work can involve public networks, lost devices, shared tablets and accounts that remain signed in. Any of those can expose job details, payment messages, and the accounts used to run the business.",
+    "intro": "A contractor's field devices carry job information, supplier messages and sometimes access to payment accounts. Public networks are one concern. Lost phones, shared tablets and sessions left signed in also need attention. Review the connection, the device and the access it provides together.",
     "sections": [
       {
         "h": "Treat the connection and the destination separately",
         "ps": [
           {
-            "text": "The FTC explains that widespread encryption has changed public-Wi-Fi risk, while an encrypted connection to a scam site still sends information to the scammer. HTTPS protects the connection; it does not verify the business purpose of a request.",
+            "text": "The FTC explains that widespread encryption has changed public-Wi-Fi risk. HTTPS protects a connection, including a connection to a scam site. That site still receives what you send it. Check the destination and the requested action as well as the network.",
             "links": [
               {
                 "phrase": "FTC explains",
@@ -5045,9 +5045,9 @@ export const refreshedArticles: Article[] = [
         "h": "The device itself is the real exposure",
         "ps": [
           "A lost device with an accessible mail session can expose business messages and related account access. The actual consequences depend on the device, session state and safeguards; assess the facts rather than automatically declaring a full takeover.",
-          "Microsoft 365 and Google Workspace business plans can include basic mobile device management features such as requiring a screen lock, encrypting the device, and remotely wiping a lost device. Those controls are part of your productivity tenant, not Helm Core itself, and the available features depend on your license.",
+          "Microsoft 365 and Google Workspace offer mobile device-management controls, including screen-lock requirements and options to remove work data or wipe a device. The available actions depend on the license, platform, enrollment and management mode. Removing a work account is not the same as wiping the whole device. These tenant controls are not part of Helm Core itself.",
           {
-            "text": "A shared job-site tablet signed straight into the owner's mailbox is a standing risk for any contractor, because everyone who touches that tablet effectively has the owner's access. Give it its own limited account instead of the owner's login.",
+            "text": "Imagine a shared job-site tablet signed into the owner's mailbox. A crew member needs a drawing, but the same session may also expose supplier mail and payment messages. For any contractor, the approved account should limit access to the work. Have IT configure it. Test the handover so the next person does not inherit access they were never meant to have.",
             "links": [
               {
                 "phrase": "any contractor",
@@ -5062,7 +5062,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Do not release a new or changed payment instruction without the firm's independent verification and required approval. Use a trusted number already in the approved record. Field staff should route the request to the authorized payment owner rather than improvising a change under pressure.",
           {
-            "text": "None of this replaces basic email security either. A free scan reports how your domain's public authentication records are configured, which is worth knowing before a crew member is troubleshooting it from a truck.",
+            "text": "Email protection remains part of the review. Helm's free scan reports on public domain authentication records. It cannot tell you whether a field tablet has appropriate access or whether its signed-in account is protected; those checks belong with the device and account owners.",
             "links": [
               {
                 "phrase": "free scan",
@@ -5077,22 +5077,22 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "List crew phones, shared tablets, office laptops used in the field and any loaner devices. Identify the owner, operating system, business accounts and the person responsible for maintenance. Include personally owned equipment if it is permitted to access company information. A device list limited to office computers will miss part of the work.",
           "Record which systems each device can reach. A tablet used only to display an approved job drawing differs from a phone with the owner's email, supplier messages and payment authority. Keep the access decision tied to the role. Convenience should not give every crew member access to every business account.",
-          "Decide who verifies the setup before a device is issued. Check the approved account, screen lock, supported software and reporting or management arrangement. A device handed out during a busy morning still needs an acceptance check. Record the exceptions rather than assuming field equipment is outside the security process."
+          "Before issuing a device, assign someone to check the approved account, screen lock, supported software and reporting or management setup. This check still matters when equipment is handed out during a busy morning. Record any exceptions so field devices remain part of the same security process as office equipment."
         ]
       },
       {
         "h": "Give shared devices a defined access model",
         "ps": [
           "Avoid signing a shared tablet into a senior person's ordinary account. Establish an approved model with IT that supports the work and limits access. Depending on the platform and application, that may involve individual users, a managed shared-device arrangement or another supported configuration. A generic shared account is not appropriate for every application.",
-          "Check what happens at a handover. Can the next user see previous messages, downloaded files or saved sessions? Does the application support the intended separation? Test with harmless records before the tablet is used across jobs. Include the process for clearing or transferring the work under the approved records procedure.",
-          "Assign an owner for charging, updates and return. A device that never reaches the maintenance process can remain in use with old software or missing protection. Schedule the work around actual field use, with an approved fallback when the device is unavailable."
+          "Test a handover with harmless records. Check whether the next user can see previous messages, downloads or saved sessions, and whether the application supports the separation the firm intends. Include clearing or transferring the work through the approved records procedure before using the tablet across jobs.",
+          "Assign a named owner responsibility for charging, updates and device return. A device that misses maintenance can keep circulating with old software or missing protection. Plan that maintenance around field use and provide an approved fallback for the time the device is unavailable."
         ]
       },
       {
         "h": "Treat captive portals as an unfamiliar request",
         "ps": [
           "A public connection may open a page requesting agreement or other information. Staff should know that the company does not authorize entering business account passwords into an arbitrary network page. If a prompt is unexpected, use the approved connection or ask for help through the known support route.",
-          "Opening the business application directly can avoid following a link from an unverified message. It does not remove the need to use the right account and protect access. Give staff the approved application and saved address during provisioning so they are not searching under deadline pressure.",
+          "Provide staff with the approved application and saved address when setting up the device. They can then open it directly instead of searching under deadline pressure or following an unverified message link. Direct access still requires the correct account and appropriate safeguards.",
           "Do not disable browser certificate warnings to make a site load. Ask the authorized owner to investigate. A field workaround that changes a security setting can outlast the immediate connection problem and affect later work."
         ]
       },
@@ -5139,9 +5139,9 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Write a lost-device procedure staff can use",
         "ps": [
-          "Give the crew one contact and an alternate for reporting loss promptly. Ask for the device identity, last known location, time and business use. Tell staff how to report when the missing phone was their normal communication device. Keep a contact route available outside the affected account.",
+          "Give the crew a reporting contact and an alternate, and explain what to do if the missing phone was their usual way to communicate. The report should identify the device, last known location, time and business use. Keep a trusted contact route available outside the affected account.",
           "Authorized IT should assess supported locking, access restriction and session actions. The business owner identifies important job information and client dependencies. Preserve the timeline and relevant facts before making unsupported statements about disclosure or recovery.",
-          "If client information or payment access may be affected, use the incident plan and appropriate advisers. A device found later may still need a review before returning to ordinary use. Record the disposition rather than closing the report solely because the hardware reappeared."
+          "If client information or payment access may be affected, use the incident plan and appropriate advisers. A device found later may still need a review before returning to ordinary use. Record how the case was resolved; finding the hardware alone is not enough to close the report."
         ]
       },
       {
@@ -5149,7 +5149,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "A crew member may confirm that materials arrived or work was completed. That does not automatically authorize a new supplier bank account. Keep the operational confirmation and financial instruction in their assigned workflows.",
           {
-            "text": "Route changed banking details to the person maintaining trusted supplier records. Use independent verification and the required approval before release. The vendor-email resource explains the supplier handoff. A familiar job number and accurate invoice amount should not replace it.",
+            "text": "Route changed banking details to the person maintaining trusted supplier records. Use independent verification and the required approval before release. The vendor-email resource explains the supplier handoff. A familiar job number and accurate invoice amount should not replace that verification and approval.",
             "links": [
               {
                 "phrase": "vendor-email resource",
@@ -5157,7 +5157,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Prepare for a request claiming that payment must change immediately to prevent a delay. The firm needs a leadership-supported pause and alternate route. Staff should not have to trade off the job deadline against a financial rule without the authorized decision-maker."
+          "Plan for a supplier request claiming that an immediate payment change is needed to prevent a delay. Staff need leadership’s support to pause it and reach the authorized decision-maker through an alternate route. They should be able to follow the financial rule without having to resolve the deadline conflict themselves."
         ]
       },
       {
@@ -5181,7 +5181,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Start with one shared-device handover and one lost-device exercise using harmless data. Test whether staff can reach the right contact, IT can perform the supported action and the business can continue essential work. Those results give a more useful picture than an unverified statement that public Wi-Fi is safe or that every mobile device is protected."
+          "Use harmless data to try a shared-device handover and a lost-device exercise. Observe whether staff reach the right contact, IT can perform the supported action and essential work continues. Those results identify gaps to fix; a general claim about Wi-Fi safety or mobile protection does not test the workflow."
         ]
       },
       {
@@ -5189,8 +5189,8 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Identify which job information must be available when the approved connection fails. A drawing, schedule or safety document may have an authorized offline process, while payment changes still belong with the financial owner. Decide that distinction before a crew loses connectivity.",
           "If approved documents are downloaded for field use, record where they may be stored and how current versions are identified. A local copy can become outdated when the office revises the job record. Give staff a way to confirm the current version and return completed information through the approved route.",
-          "Avoid making a borrowed personal device the automatic substitute. Ask the authorized owner whether it meets the required access arrangement, and use a defined fallback if it does not. The need to keep work moving is real, but the substitute should have a business decision behind it.",
-          "Include the offline process in the device handover test. Staff should show what remains available, where new information is recorded and how it returns to the authoritative system. Record any manual reconciliation needed so the firm does not mistake a working field copy for a complete central record."
+          "Before using a borrowed personal device as a substitute, ask the authorized owner whether it meets the required access arrangement. If it does not, use the defined fallback. Even under pressure to keep a job moving, the business should make an explicit access decision before staff switch to unreviewed equipment.",
+          "Test the offline process during a device handover. Have staff show what stays available, where they record new information and how they return it to the authoritative system. Record any manual reconciliation still needed: a usable field copy may not yet be a complete central record."
         ]
       }
     ],
@@ -5209,7 +5209,7 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "Law Firms",
     "laneTo": "/law-firms",
-    "intro": "A lost laptop can give someone access to client email, case files, billing, trust-accounting systems, and saved browser sessions. Law-firm devices leave the office every day for court, travel, and remote work, so office-network security alone does not protect the information on them.",
+    "intro": "Law-firm laptops travel to court, client meetings and home offices. A lost device may expose email, matter files, billing, trust-accounting access or saved sessions, depending on its safeguards. Include that travel and remote work in the device review instead of limiting security to the office network.",
     "sections": [
       {
         "h": "Why the device belongs in the confidentiality conversation",
@@ -5229,7 +5229,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Start with a device inventory that names an owner",
         "ps": [
-          "List every firm-owned Windows and Mac computer, who uses it, what operating system it runs, whether storage encryption is enabled, whether security updates install automatically, and whether the firm can see when its security software stops checking in. Include shared reception computers and seldom-used loaners, not only partner laptops.",
+          "Inventory firm-owned Windows and Mac computers, including shared reception machines and seldom-used loaners. For each, record its user, operating system, encryption state and update settings. Also check whether the firm can identify a device whose security software has stopped reporting.",
           "Record which systems each device can reach. If a laptop can open email, document management, billing, trust accounting, and cloud storage, losing it may require immediate session revocation and a review of client information that could have been accessible. A kiosk with no saved credentials creates a different level of exposure."
         ]
       },
@@ -5238,7 +5238,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Require a screen lock, full-disk encryption, supported operating systems, automatic security updates, separate administrator access, multi-factor authentication, and a managed security service that can investigate suspicious behavior. Match protection to the supported platform and the firm’s requirements.",
           {
-            "text": "Helm Core provides round-the-clock monitoring, human investigation, and containment for covered Windows and Mac devices. That does not replace patching, backups, identity controls, or a written incident plan, but it closes the gap between an alert appearing and someone qualified acting on it.",
+            "text": "Helm Core provides round-the-clock monitoring, human investigation, and containment for covered Windows and Mac devices. This connects an alert with qualified investigation and permitted action. The firm still needs patching, backups, identity controls and a written incident plan alongside that coverage.",
             "links": [
               {
                 "phrase": "Helm Core",
@@ -5251,7 +5251,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Write the lost-device procedure before a laptop disappears",
         "ps": [
-          "The procedure should name one person to call, how to disable the user account and revoke active sessions, how to determine what client information may have been accessible, and when counsel, the insurer, affected clients, or other parties must be consulted. Preserve facts and timestamps instead of guessing whether exposure occurred.",
+          "Before a device goes missing, name the contact and the owners of account blocking, session handling and the review of potentially accessible client information. Define when to consult counsel, the insurer, affected clients or other parties. During the event, preserve facts and timestamps so those advisers can assess exposure instead of relying on guesses.",
           "Phones and tablets need their own identity, email, and device-management controls. Standard Helm Core coverage does not install the same security agent on iOS or Android, so a complete firm plan must address those devices separately."
         ]
       },
@@ -5273,16 +5273,16 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Map devices to matter access",
         "ps": [
-          "Identify the systems each device uses, including email, document management, billing, trust accounting and client exchange. Record whether information is downloaded locally or viewed through a controlled application. Both can create access considerations, but the relevant safeguards and response actions can differ.",
+          "Identify the systems each device uses, including email, document management, billing, trust accounting and client exchange. Record whether information is downloaded locally or viewed through a controlled application. Either way, the device may provide access to that information, but the safeguards and response actions can differ.",
           "Have the matter owner approve the business need for access. IT verifies the technical permission and device state. A person who handles one engagement should not inherit access to every matter solely because the device is firm owned. Review role changes and outside collaborators through the appropriate access process.",
-          "Include temporary and loaner equipment. A laptop issued for court or travel can retain files or sessions after return. Define the approved handover, cleanup and preservation process with IT and the records owner. Test it using harmless matter-like files rather than exposing real client records in a demonstration."
+          "Include temporary and loaner equipment in the handover process. A laptop returned after court or travel can still hold files or sessions. Agree cleanup and any required preservation with IT and the records owner, then test the process with harmless matter-like files instead of real client records."
         ]
       },
       {
         "h": "Verify encryption and recovery access",
         "ps": [
           {
-            "text": "Microsoft documents BitLocker and Apple documents FileVault for supported device arrangements. Have IT confirm the actual encryption state and recovery-key handling. The product's availability is different from verified protection on the particular device.",
+            "text": "Microsoft documents BitLocker and Apple documents FileVault for supported device arrangements. Have IT confirm the actual encryption state and recovery-key handling. An available encryption feature does not establish that a particular device is protected.",
             "links": [
               {
                 "phrase": "BitLocker",
@@ -5294,23 +5294,23 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Keep recovery information in the approved restricted location. An encrypted laptop can become an availability problem when nobody authorized can recover access. Define who can obtain a recovery key, how access is recorded and how the arrangement is transferred when providers change.",
+          "Store recovery information in the approved restricted location and decide who may retrieve it. Record that access and plan how it transfers when providers change. Encryption can otherwise create an availability problem: the firm may have the laptop but nobody authorized to recover access.",
           "Encryption addresses stored information under its operating conditions. It does not by itself prevent an authorized session from viewing data or eliminate every consequence of a lost unlocked device. The incident assessment needs the actual state, access and information involved."
         ]
       },
       {
         "h": "Review supported software and local privileges",
         "ps": [
-          "Ask IT to identify unsupported operating systems and important applications. Record who handles updates and how failed installations are found. A device set to update automatically may still need verification after a failure or restart dependency. Keep exceptions assigned rather than assuming the setting proves completion.",
+          "Ask IT to identify unsupported operating systems and important applications. Record who handles updates and how failed installations are found. Even with automatic updates enabled, verify updates that fail or require a restart. Assign an owner to each exception; the setting alone does not prove that an update completed.",
           "Review local administrator access according to the approved operating model. Staff may need specialist software, but the firm should establish a supported installation route instead of distributing unnecessary privileges. Record the reason and owner for an exception.",
-          "Coordinate protection changes with business applications. A representative pilot should include the firm's document and practice-management tools. If an exclusion is needed, have the authorized team evaluate its scope and consequences. A broad exception added during a deadline can remain after the original issue has disappeared."
+          "Pilot protection changes with the firm’s document and practice-management tools. If a conflict requires an exclusion, have the authorized team assess its scope and consequences. Give it an owner for review so an exception made during a deadline does not remain after the problem is gone."
         ]
       },
       {
         "h": "Make remote work a defined arrangement",
         "ps": [
-          "Identify approved devices, connection methods and document exchange. Staff should know where matter files belong and what to do if the intended service is unavailable. An unreviewed personal account should not become the fallback for a failed business workflow.",
-          "Review screen exposure and physical handling during travel or shared-space work. These are practical operating decisions, not claims that one accessory establishes confidentiality. Give employees instructions appropriate to the environments where they work and a reporting route for an unexpected situation.",
+          "Identify approved devices, connection methods and ways to exchange documents. Staff should know where matter files belong and what to do if the intended service is unavailable. An unreviewed personal account should not become the fallback for a failed business workflow.",
+          "Give staff practical instructions for screen exposure and physical handling during travel or shared-space work. Match them to the places staff use the devices and include a route to report unexpected situations. One accessory cannot establish confidentiality by itself.",
           "For home or mobile access, ask IT which device and identity controls apply. A workstation agent does not establish management of every phone or tablet. Record the separate mobile arrangement and its supported lost-device actions."
         ]
       },
@@ -5318,7 +5318,7 @@ export const refreshedArticles: Article[] = [
         "h": "Prepare the first lost-device decisions",
         "ps": [
           "Record the last known location, time, device state and relevant user actions. If some facts are unknown, state them as unknown. Do not automatically declare a disclosure or dismiss the event because the device was encrypted. The applicable assessment needs the facts and professional judgment.",
-          "Supported remote actions can have limitations. A device may be offline, an application may retain a separate session or a personal device may not be enrolled. Ask IT to record the action requested and the result actually observed. A submitted wipe request is not always proof of completed wiping."
+          "Record the requested remote action and the result IT actually observes. An offline device may not receive a wipe, a separate application may retain a session, and an unenrolled personal device may lack the needed controls. Submitting a command therefore does not always establish that the action completed."
         ],
         "table": {
           "caption": "Prepare the first lost-device decisions",
@@ -5358,14 +5358,14 @@ export const refreshedArticles: Article[] = [
         "h": "Test the handoff using harmless records",
         "ps": [
           "Run a short tabletop around a missing travel laptop. Ask staff to find the inventory, identify matter access, reach the authorized team and show the decision route. Include the business continuity owner so the exercise covers the work that must continue after containment.",
-          "Record missing information and ambiguous authority. A device without an owner needs an inventory correction. An unavailable contact needs an alternate. An unclear client communication decision needs the responsible adviser's involvement. Assign the correction and verify the affected step afterward.",
+          "Turn each exercise gap into an assigned correction. Update an ownerless device record, provide an alternate for an unavailable contact, or ask the responsible adviser to resolve unclear client communications. Then verify the step that failed in the exercise.",
           "Keep exercise records separate from actual incident findings. A hypothetical scenario should not appear in a client response as a real event or as proof that every loss has been tested. State the exercise date, scope and observed result."
         ]
       },
       {
         "h": "Keep coverage claims bounded",
         "ps": [
-          "Compare the current inventory with reporting protection and device-management records. Explain stale or excluded devices and name the next action. Retired entries should not inflate a coverage percentage. New equipment should receive the acceptance check before ordinary use.",
+          "Reconcile the current device inventory with protection and management records. Remove retired entries from the coverage calculation and explain devices that are stale or excluded, with a next action for each. New equipment needs its acceptance check before ordinary use.",
           "For a client or insurer question, answer for the relevant population and control. Encryption, endpoint detection, mobile management and recovery are separate facts. Keep the supporting date and evidence reference with the response.",
           {
             "text": "Helm Core covers up to two eligible Windows or Mac workstations per covered user under its standard device scope. Phones, tablets, servers and network equipment need separate written scope. Helm Command adds evidence and program coordination; existing IT retains administration and routine remediation. Specialist forensic work and hands-on recovery require a separately agreed engagement. Use the endpoint rollout guide to plan acceptance and the incident plan for the wider handoff.",
@@ -5386,11 +5386,11 @@ export const refreshedArticles: Article[] = [
         "h": "Give staff a support path after containment",
         "ps": [
           "A partner whose laptop is isolated needs to know whom to call and which approved alternative is available. Existing IT should coordinate the replacement or recovery arrangement with the response team. Avoid reconnecting a device solely to meet a deadline while its status remains unresolved.",
-          "Record the business handoff and the conditions for returning the device to ordinary use. Security containment, matter continuity and hardware repair are related tasks with different owners. A clear route lets staff continue approved work while the authorized teams resolve the technical situation."
+          "Record who takes over business continuity and what must be checked before a contained device returns to ordinary use. Containment, matter continuity and hardware repair involve different owners. Staff need an approved route to continue work while those teams resolve the technical issue."
         ]
       }
     ],
-    "takeaway": "Keep a current device inventory, require encryption and screen locks, monitor covered computers, and write down what happens when a device is lost. Address phones and tablets separately instead of assuming laptop protection covers them.",
+    "takeaway": "Inventory work devices, require encryption and screen locks, and monitor the computers in scope. Write the lost-device procedure before it is needed. Give phones and tablets their own coverage decisions.",
     "lead": [],
     "updated": "2026-10-07",
     "readingLayout": true,
@@ -5409,7 +5409,7 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "A law firm can keep its existing IT provider and add security expertise without outsourcing every technology decision. The choice is how to cover security operations and program leadership while preserving clear responsibility for client information.",
+    "intro": "You can keep your law firm's IT provider while adding security expertise. Compare the work involved: operating protections, reviewing incidents and leading the security program. Assign those responsibilities clearly while the firm retains decisions about client information and its professional duties.",
     "lead": [
       {
         "text": "New Jersey RPC 1.6(f) requires reasonable efforts to prevent inadvertent or unauthorized disclosure of, or access to, information relating to client representation. It does not prescribe a particular vendor or certify a service package as sufficient. Have the firm's responsible lawyer assess the applicable duties and circumstances. New Jersey Rules of Professional Conduct.",
@@ -5426,7 +5426,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Compare responsibilities before staffing models",
         "ps": [
-          "In-house security can give a firm direct knowledge of its systems and priorities. It also requires enough time, specialist capability and coverage for the work assigned. If one administrator handles both routine tickets and incident review, confirm how those responsibilities compete during a busy period or absence.",
+          "An in-house security team can know the firm's systems and priorities directly. It also needs time, specialist capability and coverage for its assigned work. If an administrator handles routine tickets and incident review, ask what happens when both need attention or the administrator is away.",
           "A managed provider can supply defined protection and specialist coverage. The firm still needs an internal decision-maker, an IT owner and a written route for incidents, exceptions and spending approvals. Outsourcing a service does not transfer the firm's professional responsibilities.",
           {
             "text": "For a hypothetical 45-person New Jersey practice, begin with the business processes that expose client files or move money. Review email reports, laptop coverage, access to matter files and payment-change approvals. Use the existing device checklist and callback protocol for the detailed procedures.",
@@ -5446,7 +5446,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Budget for the uncovered work",
         "ps": [
-          "Compare proposals against the same account and device population. Include existing subscriptions, onboarding work, IT time, training and specialist response exclusions. Avoid comparing a software license with a managed-service price as though both buy the same responsibilities.",
+          "Put each proposal against the same account and device list, then include subscriptions, onboarding, IT time, training and excluded specialist response work. A software license and a managed service assign different responsibilities. Comparing their headline prices alone can hide work the firm still has to do.",
           {
             "text": "Helm Core is a standardized service for a typical 20 to 75-person fit, at $125 per covered user per month with a $2,500 minimum. It includes email, device, supported identity, cloud productivity backup, awareness and digital-risk protection, with monthly reporting. Core scope and terms.",
             "links": [
@@ -5500,9 +5500,9 @@ export const refreshedArticles: Article[] = [
         "h": "Identify the work the firm actually needs covered",
         "ps": [
           "Begin with a few important workflows: receiving client documents, sharing matter files, approving payments and working away from the office. For each, identify the systems, people and records involved. Include document-management and practice-management platforms that sit outside the main email tenant.",
-          "Then separate security operations from technology administration. Reviewing a suspicious endpoint alert is different from applying a routine update. Coordinating evidence for a client review is different from investigating an active compromise. A staff member or provider may perform more than one role, but each assignment needs enough time, authority and skill.",
+          "Separate the work by responsibility. A suspicious endpoint alert needs security review; a routine update needs technology administration. Preparing client-review evidence is different again from investigating an active compromise. A person or provider can hold several roles, provided each has enough time, authority and skill for the assigned work.",
           "Ask the firm's responsible lawyer to identify the duties and client commitments relevant to the practice. A client may require safeguards or evidence beyond your standard operating approach. Record what the firm agreed to provide and who checks the requirement before accepting new work. A vendor brochure is not the firm's analysis of those commitments.",
-          "Use the resulting list as the procurement scope. The objective is to find an operating arrangement for the work, not to select a staffing model first and hope it covers everything. Keep unknown applications and unresolved responsibilities visible until they are checked."
+          "Use that list to define what you are buying. Keep unknown applications and unresolved handoffs visible while they are checked. Selecting a staffing model first can leave the firm trying to fit uncovered work into an arrangement that was never scoped for it."
         ]
       },
       {
@@ -5510,23 +5510,23 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "An internal security role can bring context: how the firm handles urgent filings, which systems contain sensitive matters and who can approve disruptive changes. That context helps prioritize work and explain consequences. It still requires access to appropriate tools, training and outside specialist help when the task exceeds the person's role.",
           "Write a role description with recurring responsibilities and an escalation route. Include evidence maintenance and coordination with existing IT if those duties belong to the role. Avoid assigning a complete security program to someone whose available time only covers a few hours of review each month.",
-          "Discuss holidays, illness and simultaneous demands. If the same person handles a system outage and a suspicious account event, who provides the second response? Compare the actual after-hours arrangement with the protection the firm needs. An internal employee is not automatically continuously available, and a managed contract is not automatically comprehensive.",
-          "For costing, use the firm's own compensation assumptions and recruitment information. Include benefits, coverage, tools, training and any external support the internal role still needs. There is no universal staffing figure that establishes which option is cheaper for every practice."
+          "Plan for holidays, illness and competing demands. If one person is handling an outage when a suspicious account event arrives, identify who responds to the second issue. Check the actual after-hours arrangement against the firm's needs. Neither an internal job title nor a managed contract establishes that every required task has continuous coverage.",
+          "Use the firm's own compensation assumptions and recruitment information to estimate staffing costs. Include benefits, coverage, tools, training and any external support the internal role still needs. No single staffing figure can establish which option is cheaper for every practice."
         ]
       },
       {
         "h": "Evaluate a provider through a fictional incident",
         "ps": [
           "Give each prospective provider the same harmless scenario. An employee reports an unexpected sign-in and a message sent from their account. Ask which covered signals the provider can inspect, what it can restrict and how it contacts the firm. Do not send actual client material as part of a sales exercise.",
-          "Ask what happens next. Who investigates connected applications and mailbox changes? Who preserves the relevant records? Who coordinates with the firm's IT administrator, insurer and counsel? Which steps are included and which require a separately engaged responder? Keep the explanation consistent with the service order.",
-          "Clarify response authority before signing. A provider may be authorized to isolate a covered workstation or restrict a supported account under defined conditions. Leadership needs to understand the effect on work and the route for restoration. A broad phrase such as proactive response should not substitute for that discussion.",
+          "Ask the provider to explain the next steps: who investigates connected applications and mailbox changes, who preserves the relevant records and who coordinates with the firm's IT administrator, insurer and counsel. Identify which steps are included and which require a separately engaged responder. Check that the explanation matches the service order.",
+          "Ask what response actions the provider can take before you sign. It may have authority to isolate a covered workstation or restrict a supported account under defined conditions. Explain those conditions to leadership, including the effect on work and the restoration route. A phrase such as proactive response leaves that authority unclear.",
           "Request a fictional report showing the event, evidence, action, escalation and remaining uncertainty. It should support a useful handoff without exposing unnecessary client content. Confirm who receives reports and how sensitive records are transferred and retained."
         ]
       },
       {
         "h": "Compare a common budget population",
         "ps": [
-          "A proposal priced by user and a proposal priced by device need a shared worksheet. List covered staff, eligible workstations, outside advisers, servers, phones and specialist systems. Mark excluded items and ask who protects or administers them. Compare the same period, contract term and expected work.",
+          "Make a shared worksheet if one proposal is priced by user and another by device. Include staff, eligible workstations, outside advisers, servers, phones and specialist systems. Mark exclusions and name who will protect or administer them. Use the same period, contract term and expected work to compare costs.",
           "Using Core's published rate, a hypothetical 30-covered-user firm would calculate 30 multiplied by $125, or $3,750 per month before any separately scoped work or applicable charges. The example is arithmetic, not a quote or an assertion that the firm qualifies. Fit, platform support and written terms still need review.",
           "Put one-time transition work and retained IT work beside recurring fees. Identify overlapping subscriptions that could be removed only after coverage is confirmed. Do not count a license saving while the old service is still required, and do not assume every hour freed from alert review reduces the existing IT bill.",
           "Compare exit costs and access transfer as well. The firm should be able to recover its own reports and maintain continuity if the arrangement ends. Ask who removes agents, changes routing, transfers administrative rights and records open issues during the transition."
@@ -5535,17 +5535,17 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Use a combined model when responsibilities are clear",
         "ps": [
-          "Some firms retain internal program leadership and use a managed provider for defined operational coverage. Others keep their existing IT provider for administration and add security-program coordination. These combinations can fit when the contracts and internal assignments join up.",
-          "Name a firm contact with authority to make decisions and a backup contact who can act during an absence. Keep an operating responsibility map with the security provider, IT owner and business leadership. Resolve ambiguous handoffs before an event, especially account containment, recovery, evidence preparation and client communication.",
+          "A combined arrangement can leave program leadership inside the firm while a managed provider covers defined operations. Another firm may retain IT for administration and add security-program coordination. In either arrangement, the contracts and internal assignments need to make clear who hands work to whom.",
+          "Name a firm contact with authority to make decisions and a backup contact who can act during an absence. Keep a record of who handles each responsibility across the security provider, IT owner and business leadership. Resolve ambiguous handoffs before an event, especially account containment, recovery, evidence preparation and client communication.",
           "Review the arrangement after a material change in the practice. A merger, a new office or a client with different requirements can change the covered population. Reconcile account and device records rather than relying on the original onboarding count. Confirm new applications against the scope.",
-          "The first review should test completion of specific work: verified eligible-device coverage, an exercised reporting route, a current contact list and approved handling of unresolved exceptions. Later reviews should show what changed and which decisions remain. That gives the partners a basis for evaluating the service beyond the number of tools in its stack."
+          "At the first review, check specific work: eligible-device coverage, a reporting route the team has exercised, current contacts and approved handling of exceptions. Later reviews should explain changes and outstanding decisions. These records give partners a way to assess the service beyond counting the tools included."
         ]
       },
       {
         "h": "Check the arrangement against a new matter",
         "ps": [
           "Before accepting a client's security commitment, identify whether the current arrangement can support it. Ask the responsible lawyer and IT owner to review the requested population, evidence and deadline. A contractual promise may require work beyond the managed stack or internal role.",
-          "Record any additional work with its cost and implementing owner. Confirm it before the firm represents that the requirement is met. This prevents a service-selection decision from becoming an unsupported promise in a later client agreement."
+          "Record any additional work with its cost and the person or provider responsible for implementing it. Confirm it before the firm represents that the requirement is met. This prevents a service-selection decision from becoming an unsupported promise in a later client agreement."
         ]
       }
     ],
@@ -5560,12 +5560,12 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "A stolen Microsoft 365 password can expose years of email, give an attacker a convincing way to impersonate your staff, and let them quietly forward future messages outside the company. Available controls depend on licensing and configuration. Have the authorized IT owner review the current tenant and plan changes around actual business dependencies.",
+    "intro": "An attacker with access to a Microsoft 365 account may read old email, impersonate staff or forward future messages outside the company. Reducing that exposure requires the right licenses and configuration. Have the authorized IT owner review your tenant and its business dependencies before making changes.",
     "sections": [
       {
         "h": "Lock the front door first",
         "ps": [
-          "Start with multi-factor authentication for the people who can access your mail. Review the owner’s account, administrator accounts, vendor accounts, and the users with delegated access to shared mailboxes. Keep direct sign-in blocked for shared mailbox accounts; people should access them through their own authorized accounts.",
+          "Review MFA on the accounts that can access mail, including owners, administrators, vendors and people with delegated mailbox access. Shared mailboxes should be accessed through each person's authorized account, with direct sign-in to the shared account blocked. That keeps the mailbox workflow tied to the people permitted to use it.",
           {
             "text": "Legacy authentication does not support MFA. Have your IT owner verify that legacy authentication is blocked in your tenant and check for any applications or devices that still depend on it before changing settings. Microsoft security defaults provide preconfigured protections. More complex environments may use licensed Conditional Access policies instead. Review the current configuration rather than assuming your tenant is unprotected. This complements the managed email protection in Helm Core.",
             "links": [
@@ -5579,15 +5579,15 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Separate your admin accounts from the mailbox someone checks every day. Review whether administrative work and ordinary mail use have appropriately separated access. A compromised privileged account can affect far more than its own mailbox."
+          "Use separate access for privileged administration and everyday mail, and have IT check that the arrangement fits the work. A compromised administrator account can affect more than its own mailbox."
         ]
       },
       {
         "h": "Close what attackers do after they get in",
         "ps": [
-          "Turn on external-sender tagging so every message from outside the company carries a visible warning. Treat the label as context about the configured sender boundary, not proof that an external message is malicious or an internal message is safe.",
+          "Use external-sender tagging as a visible indication that a message came from outside the configured company boundary. It gives staff context for review. The label does not establish that the external message is malicious or that an internal one is safe.",
           {
-            "text": "Review mail-forwarding rules on a schedule, not just after something goes wrong. Review configured forwarding and relevant mailbox rules with IT. Microsoft documents external-forwarding controls; verify the actual settings and authorized exceptions.",
+            "text": "Review configured forwarding and relevant mailbox rules with IT on a schedule, as well as after suspected account misuse. Microsoft documents external-forwarding controls; check the actual settings and authorized exceptions against that guidance.",
             "links": [
               {
                 "phrase": "Microsoft documents external-forwarding controls",
@@ -5623,7 +5623,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Establish the current state before changing it",
         "ps": [
-          "Ask IT for the actual tenant, subscriptions, user population, administrator roles and significant integrations. Include independently administered business applications where they affect the workflow. A license list tells you what may be available; configuration evidence tells you what the organization uses.",
+          "With IT, inventory the current tenant, subscriptions, users, administrative roles and significant integrations. Include independently administered business applications that affect the workflow. The licenses show which features may be available; the configuration evidence shows what the firm is using.",
           "Record whether security defaults, Conditional Access or another supported arrangement supplies the relevant protection. Do not assume a per-user MFA status alone describes enforcement. Ask the administrator to explain how the policy applies to the account and access path being reviewed.",
           "Preserve a dated baseline and an approved change plan. Identify the business owner who can authorize interruption and the IT owner who implements the change. Avoid asking a non-technical employee to toggle settings from an article while the firm has unreviewed application dependencies."
         ]
@@ -5633,15 +5633,15 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "List administrative roles and the accounts holding them. Confirm why each privilege is needed, who owns the account and how it is protected. Review provider access alongside employee access. A supplier account may have substantial authority even if it does not appear on the staff roster.",
           "Establish an approved recovery arrangement for administrative access. The firm needs a way to regain control when the usual administrator is unavailable, with appropriate protection and restricted records. Test the supported process through authorized IT, without exposing emergency credentials in an ordinary document.",
-          "When a provider changes, include its identities and integrations in the handover. Removing a former contact from the support list does not remove technical access. Record the actual revocation and the owner responsible for verifying it."
+          "A provider handover should include its identities and integrations. Remove the technical access under the approved process and record who verified the revocation. Updating a support-contact list alone leaves those access paths unaddressed."
         ]
       },
       {
         "h": "Plan authentication around dependencies",
         "ps": [
-          "Review applications, devices and services that rely on existing sign-in behavior. A multifunction device, older client or integration may need a supported migration before a policy change. Identify the dependency, current guidance and approved alternative with IT. Keep any temporary exception visible and time bounded.",
-          "Pilot significant changes with representative users and harmless work. Confirm the sign-in, recovery and business application experience. Staff should know which prompts are legitimate and how to obtain help. An unexplained authentication rollout can create confusion with the suspicious prompts training asks them to report.",
-          "Do not disable one protection while assuming the replacement automatically applies. Have the administrator verify the actual policy state and relevant population. Record the acceptance evidence after the change, including unresolved exceptions and supported fallback arrangements."
+          "Before changing sign-in policies, identify dependencies such as a multifunction device, older client or integration. IT may need to migrate one to a supported alternative first. Follow current guidance and keep any temporary exception visible, with an end date.",
+          "Pilot a significant change with representative users doing harmless work. Check sign-in, recovery and business applications, then explain expected prompts and the support route to staff. Otherwise an authentication rollout can resemble the unexpected prompts they have been taught to report.",
+          "Do not disable one protection while assuming the replacement automatically applies. Have the administrator verify which policy is in effect and which accounts it covers. After the change, record the evidence that it works, including unresolved exceptions and supported fallback arrangements."
         ]
       },
       {
@@ -5649,7 +5649,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Review who can access shared and delegated mailboxes. Business managers approve the need; IT implements the permissions. Include accounts created for old projects and outside support. Confirm the current owner and purpose rather than carrying access forward indefinitely.",
           "For external forwarding, identify the destination, purpose and approving owner. A blanket allow-list should not be the first response to one delivery problem. Check the supported controls and test the legitimate workflow using harmless messages. Preserve the exception and next review date if it remains necessary.",
-          "If an unexpected rule or forwarding destination is discovered, have the authorized team investigate rather than simply deleting the symptom. It may be an old approved configuration, an error or evidence relevant to an account incident. Preserve the facts and use the incident process when the evidence warrants it."
+          "Investigate an unexpected rule or forwarding destination before treating its removal as the whole fix. It could be an old approved setting, an error or account-incident evidence. Preserve the relevant facts and use the incident process if the evidence warrants it."
         ]
       },
       {
@@ -5672,7 +5672,7 @@ export const refreshedArticles: Article[] = [
         "h": "Connect the baseline to recovery and response",
         "ps": [
           {
-            "text": "Check recovery for the data the business depends on. Microsoft offers retention, recovery and a native backup product with distinct purposes and scope. The Microsoft 365 backup comparison helps define the decision. Do not rely on the outdated claim that Microsoft offers no backup.",
+            "text": "Review recovery for the data the business depends on. Microsoft offers retention, recovery features and a native backup product, each with different purposes and scope. Use the Microsoft 365 backup comparison to decide which recovery tasks the configured arrangement supports.",
             "links": [
               {
                 "phrase": "Microsoft 365 backup comparison",
@@ -5719,7 +5719,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Make the first review produce assigned work",
         "ps": [
-          "Start with the important accounts and workflows, then document any broader scope still pending. A review of administrators and email does not establish that every application is covered. Give unknowns and exceptions owners rather than burying them under an overall security score.",
+          "Review important accounts and workflows first, then record what still needs review. If administrators and email are the initial focus, list the remaining applications and assign owners to investigate unknowns and review exceptions. An overall score should not obscure that unfinished work.",
           "Prioritize changes using actual exposure, business consequence and applicable requirements. Some can be completed through routine administration; others need licensing, testing or a separate engagement. Record those dependencies so leadership can make the required decision.",
           {
             "text": "Helm Core supplies defined protection for compatible email, devices and supported identity capabilities. Command adds program ownership, evidence upkeep and IT coordination within written scope. Existing IT retains tenant administration, patching and routine remediation. A tenant-hardening or specialist recovery project requires a separate scope decision. Bring the current baseline and unresolved duties to a fit review rather than assuming a service label includes every Microsoft setting.",
@@ -5741,18 +5741,18 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Choose a harmless sample from an important covered workload and define the requested recovery point and destination. Have the authorized operator carry out the restore and the business owner confirm usability. Record the source, time, action and result. If manual permission repair or reconciliation is required, include that work in the record.",
           "The test should reflect the recovery method actually purchased and configured. A mailbox retention rule, a native recovery feature and a separate backup service can support different tasks. Do not present an export obtained for records discovery as proof that a complete working environment can be restored.",
-          "Keep failed steps assigned. If the operator cannot find the needed point, the firm has learned about a specific limitation. Determine whether the issue is coverage, configuration, retention, authorization or the requested scenario. A red result with an owner provides more useful evidence than an unexplained green dashboard."
+          "Assign an owner to each failed step after the restore test. If the operator cannot locate the needed recovery point, investigate whether coverage, configuration, retention, authorization or the requested scenario caused the problem. Record the limitation and who will address it so the firm can act on the result."
         ]
       },
       {
         "h": "Record what the public review cannot see",
         "ps": [
-          "Public DNS and website checks can supply limited observations, but they cannot inspect internal administrator roles, application grants, sharing decisions or restore tests. Keep the public result separate from the tenant baseline. A missing record may need IT attention; a clean public result should not close the internal review.",
+          "Keep public DNS and website findings separate from the internal tenant baseline. Those checks cannot inspect administrative roles, application grants, sharing decisions or restore tests. A public finding may need IT attention, but the internal review still needs its own evidence even when public results are clear.",
           "For leadership, state the assessed tenant areas and remaining scope. Date the evidence and identify next actions. This makes a staged review understandable without implying that the first week's work established complete coverage of the business."
         ]
       }
     ],
-    "takeaway": "Start with MFA, disable legacy authentication, separate everyday and administrator accounts, and check for forwarding rules. Then review the public records that help stop people from impersonating your domain.",
+    "takeaway": "Have IT review MFA enforcement, legacy-authentication dependencies, privileged accounts and forwarding rules before changing tenant settings. Then check the public sender-authentication records separately. Public configuration does not establish internal protection or verify the honesty of every message.",
     "lead": [],
     "readingLayout": true,
     "organizationByline": true,
@@ -5771,7 +5771,7 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "A training subscription gives employees access to lessons. Your firm still needs to decide what they should learn, when they should learn it and how to respond when someone reports a suspicious message. That work determines whether a DIY program is manageable or a managed service would help.",
+    "intro": "Buying training makes lessons available. Someone still has to choose what employees should practice, schedule the work and respond to reports of suspicious messages. Compare that ongoing workload with your team's capacity when choosing between DIY training and a managed service.",
     "lead": [
       "For a professional-services firm, training should follow the work. Staff who approve payments need to practice verifying bank-detail changes. People handling client records need to know which sharing methods are approved and where to report an accidental disclosure."
     ],
@@ -5797,7 +5797,7 @@ export const refreshedArticles: Article[] = [
         "h": "Compare the work each model leaves with you",
         "ps": [
           "DIY can fit a firm with a named owner who can maintain the employee roster, assign material, follow up on missed lessons and discuss results with IT. Budget for that person's time as well as the subscription.",
-          "A managed provider may supply learning content, simulations and reporting. Ask whether it also handles enrollment changes, adapts material for different roles and reviews recurring mistakes. Confirm those responsibilities in the service order rather than assuming that the word managed includes them.",
+          "Ask the managed provider which duties it takes on beyond content, simulations and reporting. Enrollment changes, role-specific material and follow-up on recurring mistakes may still need your team. Put the division of work in the service order so the firm can budget for the responsibilities it retains.",
           "Measure more than clicks on a simulated message. Review whether employees report suspicious requests, how quickly reports reach the right person and whether a payment or sharing procedure is followed. Completion records show that a lesson was assigned and finished; they do not establish that every employee will respond correctly under pressure."
         ]
       },
@@ -5837,28 +5837,28 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Design an exercise around a real procedure",
         "ps": [
-          "Choose one action before choosing the training format. If staff regularly receive bank-detail changes, define what must happen before anyone edits the payment record. An exercise should let the employee practice that route, including finding the approved contact and recording verification. If the contact list is missing, a reminder to be vigilant cannot repair the process.",
+          "For bank-detail training, start with the payment procedure. The employee should practice finding the approved contact, checking the change and recording verification before editing the payment record. If there is no contact list, fix it as part of the process; a reminder to be vigilant cannot give staff the missing verification route.",
           "Use fictional suppliers, clients and documents. Set boundaries with the business owner and IT so a simulation does not invite employees to upload confidential files, enter working credentials or contact actual customers. A controlled exercise should create a learning opportunity without introducing an avoidable operational problem.",
           "Make the reporting step usable. Staff should know where to send a suspicious message and what to include. The receiver needs a procedure for sorting training messages from real reports. If a participant encounters a genuine threat during the campaign, pause the exercise for that person and route the report through the incident process.",
-          "Discuss the result in practical terms. Ask which step was confusing, whether the employee had access to the approved procedure and what the firm will change. The discussion can reveal an unclear instruction or a missing approval route. Treat those findings as process work instead of assuming that a failed exercise proves an employee was careless."
+          "Discuss which step was confusing and whether the employee could find and follow the procedure. An unclear instruction or missing approval route needs a process change. Assign someone to make that change; a failed exercise alone is not sufficient evidence that the employee was careless."
         ]
       },
       {
         "h": "Assign learning by role without creating a maintenance burden",
         "ps": [
           "Keep a common foundation for all staff, then add material for work with different consequences. Finance needs payment verification. IT needs privileged-account and response procedures. Managers need access approvals and escalation responsibilities. Client-facing teams need approved sharing methods and a way to report a mistake quickly.",
-          "Begin with a few role groups your firm can maintain. A complicated assignment scheme will drift if nobody updates it when roles change. Record who receives the starter material, who gets additional lessons and who maintains the mapping. Ask a managed vendor how the roster is reconciled and which changes still require the firm's approval.",
+          "Start with a few role groups the firm can maintain. Record who gets the foundation lessons and additional material, then assign someone to update that mapping as roles change. A managed vendor should explain how it reconciles the roster and which changes need the firm's approval. More detailed assignments help only if that maintenance happens.",
           "Include temporary staff and contractors deliberately. Some may use your accounts and handle client records; others may only need a short briefing on a specific process. Determine what access and work they actually have. Do not mark every external person trained because a policy says contractors are included.",
-          "Check accessibility and working conditions. A lesson that assumes desktop access may be awkward for staff working from a job site. Allow an approved alternative when someone needs it, and record completion consistently. Translate a technical instruction into the actual screen or contact the employee should use, with IT checking that the instruction remains current."
+          "Check accessibility and working conditions. A lesson that assumes desktop access may be awkward for staff working from a job site. Allow an approved alternative when someone needs it, and record completion consistently. In technical instructions, name the screen or contact the employee should use, and have IT check that the instructions remain current."
         ]
       },
       {
         "h": "Read training metrics without overstating the result",
         "ps": [
-          "A completion percentage needs a denominator and a date. Suppose a fictional firm assigns a lesson to 40 active employees and 36 finish by the deadline. Completion is 90 percent for that assignment. If five contractors were never assigned, the number does not describe those contractors. Keep exclusions visible so a customer can understand what the record supports.",
-          "Simulation results also need context. Compare campaigns cautiously when the message difficulty, audience or reporting method changes. A lower click rate on an easier campaign is not proof that the program improved. A high reporting rate is useful only if reports arrive where they can be reviewed and acted on.",
+          "A completion percentage needs to show how many people were assigned the lesson and when completion was measured. Suppose a fictional firm assigns a lesson to 40 active employees and 36 finish by the deadline. Completion is 90 percent for that assignment. If five contractors were never assigned, the number does not describe those contractors. Keep exclusions visible so a customer can understand what the record supports.",
+          "Keep the scenario, audience and reporting method with the simulation result before comparing campaigns. An easier message can lower the click rate without showing improvement. Check where reports arrived and whether someone handled them; a high reporting rate is useful when the response route works.",
           "Use a small set of measures your team can explain: assigned population, completion by due date, unresolved follow-up, reports reaching the right route and practice of the chosen procedure. Define what each measure means before presenting it to leadership. Avoid collecting individual results that nobody needs to make a decision.",
-          "Separate learning metrics from business outcomes. Training can support better decisions, but the exercise does not establish how many real attacks were prevented or how much financial loss was avoided. Report what was observed and what changed. If evidence is incomplete, keep that limitation in the report rather than filling the gap with a success claim."
+          "Report what the exercise showed and what the firm changed afterward. Those findings may support better decisions, but they cannot establish a count of real attacks prevented or financial losses avoided. Include any missing evidence so leadership knows what the result can support."
         ]
       },
       {
@@ -5866,15 +5866,15 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "For DIY, list the subscription cost alongside the time needed for roster updates, assignments, support, follow-up and evidence preparation. Ask the named owner whether that work fits their ordinary workload. Cover absences and decide who approves material when the owner leaves the role.",
           "For a managed service, request a written division of work. The provider might operate the platform while your firm still owns role assignments, policy changes and employee discussions. Check whether custom material is included, how many campaigns are covered and how overdue work is escalated. A sample monthly report should show actions as well as percentages.",
-          "Review data handling before signing. Training records can contain employee names, email addresses and individual results. Confirm access permissions, exports, retention and the process for removing former staff. Ask how the vendor uses that data and what remains available when the subscription ends. This review is part of buying the service, not a reason to circulate individual scores widely.",
-          "Compare proposals over the same population and period. Include onboarding, recurring fees and any separately scoped customization. Do not count all staff time saved as a budget reduction unless the firm can demonstrate that the cost actually changes. Capacity freed for client work can still be useful; describe it as capacity."
+          "Before signing, review access, exports, retention and removal of former staff. The platform may hold names, email addresses and individual results, so ask how the vendor uses those records and what the firm can obtain after the subscription ends. Keep individual scores limited to the people who need them.",
+          "Compare the same employee population and service period, including onboarding, recurring charges and separately scoped customization. Saved administration time may free capacity for client work. Count it as a cost reduction only when the firm can show that its spending changes."
         ]
       },
       {
         "h": "Start with one cycle and a review decision",
         "ps": [
           "Before rollout, verify the roster and test the reporting route with IT. Assign one relevant lesson and one harmless practice scenario. Tell participants how to report a concern, who receives the result and where they can get help. The firm should be able to explain the exercise without surprising employees about the use of their data.",
-          "After the cycle, review overdue assignments, confusing steps and unresolved reports. Give each process improvement an owner and a completion check. Decide whether your internal owner can maintain the next cycle or whether a defined managed scope would solve a demonstrated workload gap. That decision is more useful than buying a larger library of lessons that nobody has time to administer.",
+          "After the cycle, review late assignments, confusing instructions and unresolved reports. Assign the improvements and verify completion, then assess whether the internal owner can maintain the next cycle. If that workload exceeds the owner's capacity, use it to evaluate a managed service. A larger lesson library will not relieve the administration work by itself.",
           "Keep the procedure available after the lesson. An employee should be able to find the reporting contact or payment-verification steps during ordinary work, without reopening an entire course."
         ]
       }
@@ -5893,7 +5893,7 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "Endpoint protection starts with knowing which devices employees use. A provider cannot establish coverage from the employee count alone: one person may use two laptops, a temporary worker may use a personal device and a shared workstation may have no clear owner.",
+    "intro": "Count devices before planning endpoint protection. One employee may use two laptops, a temporary worker may bring a personal device and a shared workstation may have no clear owner. Those differences affect coverage, so employee count alone cannot define the rollout.",
     "lead": [
       "Before choosing a managed service, reconcile the device inventory with your IT provider. Record the operating system, owner, business use and whether the device can run the proposed protection."
     ],
@@ -5903,7 +5903,7 @@ export const refreshedArticles: Article[] = [
         "h": "Agree on the device population",
         "ps": [
           {
-            "text": "Endpoint detection and response, or EDR, helps detect activity on supported devices and gives responders investigation and response capabilities. Product availability differs by operating system, licensing and configuration. Microsoft's endpoint documentation illustrates why deployment planning must include platform requirements and a pilot. Microsoft Defender for Endpoint.",
+            "text": "Endpoint detection and response, or EDR, helps detect activity on supported devices and gives responders investigation and response capabilities. Product availability differs by operating system, licensing and configuration. Microsoft Defender for Endpoint documentation shows why deployment planning must include platform requirements and a pilot.",
             "links": [
               {
                 "phrase": "Microsoft Defender for Endpoint",
@@ -5918,7 +5918,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Roll out with a measurable acceptance check",
         "ps": [
-          "A hypothetical 50-person New Jersey consulting firm could pilot protection with staff who use different applications and work locations. The purpose is to discover deployment problems before extending the rollout, not to claim that a small pilot proves protection against every attack.",
+          "A hypothetical 50-person New Jersey consulting firm could pilot protection with staff who use different applications and work locations. Use the pilot to discover deployment problems before extending the rollout. A small pilot does not prove protection against every attack.",
           "Agree on these acceptance checks:",
           {
             "list": [
@@ -5980,14 +5980,14 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Use more than one inventory source. IT may have a procurement list, a device-management report and an endpoint console with different populations. Compare them by a stable device identifier where possible. Device names can change or be reused, so a name alone may cause a retired laptop and its replacement to appear interchangeable.",
           "Record the device owner, business role, operating system, support status and last reporting time. Identify shared workstations and spare laptops separately. Ask how personal devices are handled when they access company information. If they are outside the managed service, record the approved access arrangement and the business owner accepting that boundary.",
-          "Resolve ambiguous entries before declaring a percentage covered. A total of 60 installed agents means little if the inventory contains 70 eligible devices and several agents belong to retired equipment. Define the numerator as the eligible devices currently meeting the agreed acceptance criteria, and the denominator as the agreed eligible population. Report unknown and excluded devices separately."
+          "Before reporting coverage, reconcile the installed agents with eligible devices. Sixty agents would not mean 60 covered devices if some belong to retired equipment. An inventory of 70 eligible devices would still have a coverage gap. Count eligible devices currently meeting the acceptance criteria against the agreed eligible population, and report unknowns and exclusions separately."
         ]
       },
       {
         "h": "Make the pilot representative",
         "ps": [
           "Choose devices that reflect the work the firm performs. Include different supported operating systems, remote workers and employees using important specialist applications. A tax practice may need a sample using its preparation software; a law firm may need one using its document system. Use ordinary business tasks and harmless sample files to check compatibility.",
-          "Ask IT and the security provider to agree on existing protection before installation. Two security products may have a supported coexistence arrangement, or one may need to be removed under a planned migration. Do not instruct employees to uninstall protection themselves. Have the authorized administrator review vendor guidance, confirm deployment prerequisites and prepare a rollback path.",
+          "Before installation, IT and the security provider should decide how to handle the existing protection. The products may support coexistence, or a planned migration may require removal of one. Have the authorized administrator check vendor guidance, deployment prerequisites and a rollback path. Employees should not uninstall protection themselves.",
           {
             "text": "Microsoft publishes minimum endpoint requirements and platform guidance. Use the documentation for the product being deployed rather than assuming every operating system receives identical capabilities. The provider should identify the functions it will actually use on each eligible platform.",
             "links": [
@@ -5997,13 +5997,13 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "During the pilot, ask users about application failures, excessive prompts and performance changes. Have IT investigate the specific cause before adding an exception. An exclusion applied to a whole folder or application can affect future detection, so record the rationale and scope. A functioning business application and a functioning security agent are both acceptance requirements."
+          "Ask pilot users about application failures, excessive prompts and performance changes, then have IT investigate the cause. An exception may fix a business problem while affecting future detection, especially if it excludes an entire folder or application. Record its rationale and scope, and confirm both the application and security agent meet acceptance requirements."
         ]
       },
       {
         "h": "Define the response boundary in advance",
         "ps": [
-          "A provider should explain which actions it can take without waiting for a new approval. Isolation may interrupt an employee's access but limit an incident's spread. Leadership must understand that tradeoff when agreeing to the service. Define any special treatment for devices supporting critical work and document the escalation route for an unavailable contact.",
+          "Agree in advance which response actions the provider can take without another approval. Device isolation may interrupt an employee’s work while limiting an incident’s spread; leadership needs to understand that tradeoff. Record any special treatment for devices supporting critical work and the escalation route when the usual contact is unavailable.",
           "Keep business recovery distinct from containment. A security team that isolates a laptop may not be responsible for supplying a replacement, reinstalling applications or restoring all data. Ask who performs those tasks and whether the cost is included. Employees need one clear instruction for reporting trouble, even when several providers perform the underlying work."
         ],
         "table": {
@@ -6046,14 +6046,14 @@ export const refreshedArticles: Article[] = [
         "h": "Test the alert route safely",
         "ps": [
           "Arrange a vendor-supported, non-destructive test with authorization from the relevant teams. The purpose is to show that a covered signal reaches the appropriate service, the service handles it and the agreed contact receives the escalation. Do not improvise a malware experiment on a production device or treat one test as proof of every detection rule.",
-          "Record the test device, expected behavior, observed event, handling and contact result. If the provider's system treats the sample automatically, distinguish that from an analyst investigation. If a human review is part of the contracted service, ask how the exercise demonstrates that part of the workflow or request the appropriate supporting process evidence.",
-          "Check what happens when the first contact does not answer. Test the backup route during the planned exercise, without creating a false emergency. Confirm that contact information is available to the provider and that the firm knows how to reach the service outside office hours. Resolve missing authority before moving the wider population into production."
+          "Record the device, expected behavior, observed event, service handling and contact result. If the sample is handled automatically, label that result accurately. Where analyst review is contracted, ask how the exercise demonstrates it or request supporting process evidence; automatic handling alone does not show a human investigation.",
+          "Include an unanswered first contact in the planned exercise and test the backup route without creating a false emergency. Confirm the provider has current contact information and the firm knows how to reach the service outside office hours. Resolve any missing authority before extending the rollout."
         ]
       },
       {
         "h": "Expand in controlled groups",
         "ps": [
-          "After the pilot meets acceptance criteria, deploy in groups that IT can support. Record which group is scheduled, which users need assistance and which devices remain unresolved. Coordinate changes that affect business applications with their owners. A rushed company-wide installation can leave a large backlog of unhealthy devices even when the deployment system reports that the package was delivered.",
+          "Once the pilot passes, expand in groups IT can support. Record the schedule, users needing assistance and unresolved devices, and coordinate application changes with their owners. Delivering the installer company-wide can still leave a backlog of unhealthy devices; package delivery alone is insufficient evidence of coverage.",
           "At each stage, compare the current inventory with the protection console. Investigate duplicate entries, devices that have not checked in and unexpected exclusions. Require a completed acceptance record for each group. The completion date should reflect the agreed coverage check rather than the date the installer was first pushed.",
           "Prepare staff communication before rollout. Explain what employees may notice, whom to contact and what to do if a device becomes isolated. Avoid overwhelming users with console terminology. They need to know how to keep client work moving through approved support, and how to preserve the situation for investigation when a security event occurs."
         ]
@@ -6061,9 +6061,9 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Maintain the enrollment and departure process",
         "ps": [
-          "Make protection acceptance part of provisioning a new eligible device. Decide who checks enrollment before the device is handed to the employee. Include replacement devices, loaners and new acquisitions. A rollout project ends; the inventory process continues as the business changes.",
+          "Carry the acceptance check into ordinary device provisioning. Assign someone to confirm enrollment before handing over a new eligible device, including replacements, loaners and new acquisitions. That keeps the inventory and protection aligned after the rollout project ends.",
           "For a retired device, coordinate endpoint removal with the approved retirement and records process. Do not remove protection merely to clear a stale dashboard entry while the device remains in use. Confirm its disposition and any data-handling requirements. Retain the needed historical evidence in the approved location rather than relying on an active console entry forever.",
-          "For periodic reporting, explain uncovered eligible devices and aging exceptions. Show who owns each next action and when it will be reviewed. A useful report helps leadership resolve a specific gap, such as an unsupported device that needs replacement, rather than presenting an unexplained score. For customer answers, preserve the report date and the population behind any coverage statement."
+          "Report uncovered eligible devices and aging exceptions to leadership with an owner, next action and review date. A leader can act on an unsupported device that needs replacement; an unexplained score leaves the underlying decision unclear. Retain the reporting date and device population so customer answers reflect that same scope."
         ]
       }
     ],
@@ -6081,7 +6081,7 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "Identity threat detection and response looks for signs that an account or sign-in may be compromised and supports defined action. It is different from the routine work of creating accounts, approving permissions and removing access when staff leave.",
+    "intro": "When an account shows signs of compromise, an identity threat detection and response service can review the available signals and take agreed actions. Creating accounts, changing permissions and offboarding are separate administrative jobs. Establish who handles both kinds of work when comparing a managed provider, so an investigation does not leave a necessary account change unassigned.",
     "lead": [
       "A firm buying the service should ask which identity platforms are supported, what signals are available and what the provider can do when it finds a suspicious event."
     ],
@@ -6091,7 +6091,7 @@ export const refreshedArticles: Article[] = [
         "h": "Check the signals and their limits",
         "ps": [
           {
-            "text": "Microsoft Entra ID Protection is one example of a product that detects identity risks and supports investigation and policy-based actions. Available detections, reporting and policies depend on licensing and configuration. A product's capabilities do not establish what a particular managed provider has deployed or is authorized to operate. Microsoft Entra ID Protection.",
+            "text": "Microsoft Entra ID Protection is one example of a product that detects identity risks and supports investigation and policy-based actions. Available detections, reporting and policies depend on licensing and configuration. A product's capabilities do not establish what a particular managed provider has deployed or is authorized to operate.",
             "links": [
               {
                 "phrase": "Microsoft Entra ID Protection",
@@ -6099,7 +6099,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Ask for the covered account population and data sources. Include administrator accounts, guests and any application identities relevant to your service. Identify where logs are missing or where a system sits outside the supported platform.",
+          "Ask which accounts and data sources the service covers. Include the administrators, guests and application identities relevant to the proposed scope. Mark systems outside the supported platform and gaps in logs so the firm can assign the work the provider cannot observe.",
           "A suspicious sign-in is a signal for review, not automatic proof of compromise. A hypothetical New Jersey consultant traveling to a client site could generate unusual activity. The provider needs enough context to assess the event without ignoring a genuine account takeover."
         ]
       },
@@ -6166,17 +6166,17 @@ export const refreshedArticles: Article[] = [
         "h": "Ask what the provider can actually observe",
         "ps": [
           "Start with an identity inventory: primary directory, independent applications, privileged accounts, guests and relevant application identities. Confirm which of these the service supports. A proposal describing protection for your main email platform may leave specialist applications outside the monitored population.",
-          "Request a data-source map. Ask which sign-in records, risk signals or application events reach the provider, how quickly they become available and which require additional licensing. Mark unavailable data rather than implying that a single integration provides a complete account history.",
-          "Ask how coverage is checked after onboarding. An enabled connector does not establish that every intended account is included or that the necessary records are arriving. The provider should explain how it detects a collection problem and which contact receives the resulting exception.",
+          "Ask the provider to map the data it receives: sign-in records, risk signals and application events. Establish how quickly records arrive and which need additional licensing. Record gaps explicitly. One working integration may still leave parts of the account history unavailable.",
+          "After onboarding, ask how the provider confirms that intended accounts are included and required records are arriving. A connector can be enabled while collection or coverage is incomplete. Agree who detects that problem and who is notified when it occurs.",
           "Keep technical and business context separate. The provider can review a suspicious event, while the firm may need to confirm whether travel, a new integration or an approved role change explains it. Establish a trusted route for that context that does not rely entirely on a potentially compromised account."
         ]
       },
       {
         "h": "Distinguish detection, investigation and action",
         "ps": [
-          "A detection can identify unusual or risky activity. Investigation evaluates the available evidence and uncertainty. Action uses permitted controls to reduce exposure or support recovery. Ask the provider to show where each step occurs and which are automated versus reviewed by an analyst.",
+          "Ask the provider to follow one event through detection, investigation and action. Detection flags unusual or risky activity; investigation assesses the evidence and uncertainty; action applies the controls the service is permitted to use. Establish which steps are automated and where an analyst reviews the event.",
           "Use a fictional account event in the demonstration. Ask what triggered it, what additional records are available and how the provider determines the next step. If the evidence is inconclusive, ask how that uncertainty is recorded and escalated rather than forcing the event into a confirmed-compromise category.",
-          "Clarify response commitments. Monitoring coverage, acknowledgment, investigation and containment are different measures. The contract should say what a stated response time refers to and which conditions affect it. A fast acknowledgment is not the same as resolution of the account event.",
+          "Check what a quoted response time measures. It might refer to acknowledgment, investigation or containment, under specified conditions. A quick acknowledgment leaves the account event unresolved, so the contract should state the commitment for each covered step.",
           "Ask who receives an escalation when the primary contact is unavailable. Leadership should know when it must decide and what authority the provider already has. Keep emergency contacts current and test a harmless notification route before relying on it during an event."
         ]
       },
@@ -6184,17 +6184,17 @@ export const refreshedArticles: Article[] = [
         "h": "Define containment authority and its limits",
         "ps": [
           "Write the actions the provider may take on supported accounts and the conditions for taking them. Depending on platform and agreement, a service might restrict access, require additional verification or hand the action to IT. Avoid assuming that a product capability is automatically an authorized managed-service action.",
-          "Discuss session handling explicitly. Different applications and authentication arrangements may react differently to an account restriction or credential change. Ask what is checked, what may persist and who addresses independent applications. A password reset alone should not support a claim that every session and permission has ended.",
-          "Include business continuity in the route. A restricted account can interrupt urgent work. Identify who approves an alternative working method and who confirms that access can safely return. Do not weaken a response rule ad hoc because the affected employee is senior or handling an important deadline.",
-          "Ask how the service avoids restoring access without resolving the identified concern. Recovery may require IT changes, verification of credentials or specialist work outside the contract. The response record should state what was done and what remains open, with ownership assigned."
+          "Ask how each relevant application handles an account restriction or credential change. Establish what the provider checks, what access may persist and who handles independent applications. A password reset by itself cannot demonstrate that every session and permission has ended.",
+          "Plan for work to continue while an account is restricted, since the restriction can interrupt urgent work. Identify who approves an alternative working method and who confirms that access can safely return. Do not weaken a response rule ad hoc because the affected employee is senior or handling an important deadline.",
+          "Agree what must happen before access returns. IT may need to change settings or verify credentials, and specialist work may require a separate engagement. The response record should show the completed actions and assign whatever remains unresolved, rather than treating restoration as proof that the concern was addressed."
         ]
       },
       {
         "h": "Evaluate privileged, guest and application identities",
         "ps": [
           "Privileged accounts deserve a separate coverage question because they can make broader changes. Confirm whether their signals are included, how important events are escalated and which recovery procedures exist. Do not assume ordinary-user coverage automatically includes every administrator or emergency account.",
-          "Guests can hold access to shared workspaces without belonging to the employee roster. Ask who reviews their permissions and who removes them when collaboration ends. That is an access-governance responsibility even when the threat service can observe some of their activity.",
-          "Application identities and integrations need technical owners. They may use permissions or credentials that differ from employee sign-ins. Ask whether the service supports the relevant identity type and signals. Where it does not, record the retained review and response task with IT.",
+          "A guest may retain shared-workspace access after collaboration ends, even though they never appeared on the employee roster. Name the owner who reviews and removes that permission. Observing some guest activity through a threat service does not complete this access-governance work.",
+          "Application identities and integrations need technical owners. They may use permissions or credentials that differ from employee sign-ins. Ask whether the service supports the relevant identity type and signals. Where it does not, record which review and response tasks remain with IT.",
           "Keep these distinctions in questionnaire answers. A supported account-protection service cannot justify a universal claim about all identities unless the population and evidence support it. Describe exclusions rather than treating them as a minor detail hidden in a contract attachment."
         ]
       },
@@ -6202,7 +6202,7 @@ export const refreshedArticles: Article[] = [
         "h": "Read a sample report as an operating record",
         "ps": [
           "A useful event record identifies the affected account, observed signal, reviewer, time, permitted action and escalation. It distinguishes confirmed facts from unresolved questions. Ask for a fictional example so the firm can assess the record without exposing another customer's information.",
-          "Monthly reporting should also help reveal coverage problems and outstanding work. Ask whether it shows unsupported accounts, collection failures or administrative actions awaiting IT. A count of alerts alone does not establish whether the service population remains correct.",
+          "Use monthly reports to check coverage and follow-up as well as event counts. Ask for unsupported accounts, collection failures and administrative tasks waiting for IT. Alert volume alone cannot tell the firm whether the intended population remains protected.",
           "Confirm access and retention for detailed records. Identity events can contain personal and organizational information. Limit distribution to people who need it, with summaries for broader leadership review. Agree on secure transfer when another responder or counsel requires relevant records.",
           "Check exit arrangements. Your firm should know how to obtain its permitted reports, transfer integrations and revoke provider access at the end of the engagement. Preserve records needed under the firm's own policy without keeping an old provider connected indefinitely."
         ]
@@ -6211,9 +6211,9 @@ export const refreshedArticles: Article[] = [
         "h": "Test the handoff and maintain it",
         "ps": [
           "Before relying on the service, run a harmless tabletop with the firm contact, provider and IT. Walk through notification, authorized restriction, evidence handling and restoration. Identify steps that depend on a separately engaged incident responder or legal adviser.",
-          "Give each uncovered step an owner. If the test reveals that nobody can administer an independent application after hours, resolve that responsibility directly. More identity alerts will not supply the missing authority. Record a realistic route and any remaining limitation.",
+          "Assign uncovered steps directly. If the tabletop finds that nobody can administer an independent application after hours, agree who has the authority and how they can be reached. Additional identity alerts cannot fill that responsibility. Record the route and any remaining limit.",
           "Review the map when the firm changes platforms, acquires accounts or adds integrations. A well-defined service still needs an accurate population and current contacts. Choose a provider that can explain those boundaries and demonstrate a usable response path for the coverage it actually offers.",
-          "For recurring false positives, ask how the provider reviews an exception and limits its scope. A broad suppression can hide a later event with different facts. Record who approves the change, what activity it affects and when it will be reconsidered. Keep ordinary troubleshooting separate from authority to disable an important detection."
+          "Review recurring false positives before approving an exception. A broad suppression could hide a later event with different facts. Record what activity it affects, who approved it and when to reconsider it. Troubleshooting an alert does not itself authorize disabling its detection."
         ]
       }
     ],
@@ -6236,13 +6236,13 @@ export const refreshedArticles: Article[] = [
       "label": "Discuss an AI workflow",
       "to": "/contact/?service=secure-ai-adoption"
     },
-    "intro": "A draft produced in seconds can still take twenty minutes to check. Before renewing AI licenses or expanding a pilot, measure the time required to produce usable work. For a firm with an existing IT provider, the comparison should include staff review, software fees, and the effort needed to keep the workflow working.",
+    "intro": "A fast AI draft may take twenty minutes to check. Measure the time needed to produce accepted work before renewing licenses or expanding a pilot. Include staff review, software fees and the effort needed to maintain the workflow alongside the time spent generating the output.",
     "takeaway": "Compare complete, accepted outputs at the same quality standard. Record preparation, checking, corrections, fees, and maintenance. Time freed for other work is useful capacity; it becomes cash savings or revenue only when a separate business change produces that result.",
     "sections": [
       {
         "h": "Measure the existing task first",
         "ps": [
-          "Choose one recurring internal task and define when it is finished. Record several examples without AI, including difficult cases. Count time spent finding source material, doing the work, checking it, correcting it, and handing it over. Use the same acceptance criteria during the pilot.",
+          "Define what counts as a finished task, then record several examples completed without AI, including difficult cases. Count finding the material, producing the work, checking it, making corrections and handing it over. Use those same acceptance criteria in the pilot so the time comparison measures equivalent work.",
           {
             "text": "NIST’s AI RMF Playbook calls for comparing expected benefits and costs with appropriate benchmarks. Your own completed work provides a more relevant starting point than a vendor’s demonstration.",
             "links": [
@@ -6273,7 +6273,7 @@ export const refreshedArticles: Article[] = [
         "h": "Check what the numbers leave out",
         "ps": [
           "Record failed attempts and drafts that staff abandon. Otherwise, measuring only the successful outputs overstates the benefit. Check whether review shifted from an administrator to a more expensive partner, whether usage charges vary, and whether maintenance takes longer as source documents change.",
-          "The example’s $63.33 is not automatically money back in the bank. Salaried staff may cost the same after the change. Cash savings require a reduction in an actual expense, such as overtime. Additional revenue requires demand, available billable work, and work that is completed and paid for. Identify how the freed time will be used before assigning revenue to it."
+          "The example releases two hours and twenty minutes of staff capacity, valued at $93.33 under its $40 hourly assumption. After the $30 software allocation, the modeled recurring process-cost difference is $63.33. Neither figure automatically reduces spending: salaries may remain unchanged. Cash savings require an expense to fall, such as overtime; revenue requires suitable demand and billable work that is completed and paid for. Decide how the time will be used before claiming either result."
         ]
       },
       {
@@ -6309,7 +6309,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Use a complete-task measurement sheet",
         "ps": [
-          "Record an identifier for each task, the input type, the person doing the work and whether the result was accepted. Avoid storing confidential task content in a measurement sheet when an identifier and approved category are sufficient. Record the timing fields consistently so different employees do not count different parts of the job.",
+          "Use the same timing fields for every task so employees count the same work. Record a task identifier, input type, worker and acceptance result. If an identifier and approved category are enough, keep confidential task content out of the measurement sheet.",
           "Use active staff minutes for labor calculations. Track elapsed turnaround separately if response speed matters to the business. If a task takes two days because it waits for approval but uses twenty minutes of staff time, those are different measures with different possible improvements."
         ],
         "table": {
@@ -6357,34 +6357,34 @@ export const refreshedArticles: Article[] = [
         "h": "Compare like work and include failures",
         "ps": [
           "Choose tasks with comparable scope and difficulty. Comparing an easy AI-assisted example with the hardest manual case will exaggerate the benefit. If the task varies substantially, group routine and exception cases before reporting their results.",
-          "Keep failed attempts in the sample. If a generated draft is abandoned and the employee completes the task manually, count both the attempted AI work and the manual completion. The accepted output still consumed that time. Mark the reason for rejection so the team can see whether the problem is correctable.",
+          "Count the full effort when a draft fails. If an employee abandons the AI output and completes the task manually, the accepted result consumed both the attempted AI work and the manual work. Record why the draft was rejected so the team can judge whether that problem is correctable.",
           "Record changes made during testing. Staff may improve a template, clean a source folder or remove an unnecessary approval. Those changes can reduce time independently of AI. Keep them visible and, where practical, compare the improved manual process as well.",
-          "Avoid presenting a small pilot as a universal productivity finding. State the number and type of examples, the people involved and the observation period. Explain which work was not tested. Readers should be able to see the limits before deciding whether the result applies to their team."
+          "Report the pilot’s limits alongside its results: the number and type of examples, who completed them, the observation period and work left untested. That lets another team decide how relevant the result is without mistaking a small pilot for a general productivity finding."
         ]
       },
       {
         "h": "Calculate the full recurring cost",
         "ps": [
           "The basic comparison is baseline task volume multiplied by baseline staff time, versus the assisted task volume multiplied by assisted staff time, plus maintenance. Convert minutes to hours before applying labor-cost assumptions. Include each role separately when their costs differ.",
-          "Add the software cost attributable to the workflow. If a license supports several tasks, use a stated allocation method instead of quietly assigning the full fee or none of it. Include usage-based charges and any incremental storage or integration costs that actually apply.",
+          "Add the software cost attributable to this workflow and explain how you allocate a license used for several tasks. Assigning all of the fee, or none, without explanation can distort the comparison. Include usage charges and incremental storage or integration costs where they apply.",
           "Keep one-time setup separate from recurring operation. Training, configuration, initial source cleanup and external assistance may make the first month more expensive even when the later process is cheaper. Show that distinction so leadership can decide whether the expected duration of use justifies the setup cost.",
-          "Do not call an assumption a measured result. In the checklist illustration above, the time, labor rate, software allocation and setup amount are hypothetical. In a real pilot, label which fields were observed and which were estimated. A useful spreadsheet makes those differences visible rather than burying them in a single return percentage."
+          "Label assumptions separately from observations. The checklist example uses hypothetical time, labor, software and setup figures. A real pilot should show which fields were measured and which were estimated, so leadership can inspect the basis of the calculation instead of receiving only a return percentage."
         ]
       },
       {
         "h": "Test how sensitive the decision is",
         "ps": [
-          "Change the assumptions that are most uncertain. What if monthly volume is lower, review takes longer or maintenance increases after a procedure update? Recalculate the result using those alternatives. If a modest change removes the expected benefit, the decision needs more evidence before expansion.",
+          "Recalculate the result using alternatives for the least certain assumptions, such as lower monthly volume, longer review or more maintenance after a procedure update. If a modest change removes the expected benefit, collect more evidence before expanding the workflow.",
           "Consider the reviewer’s availability. A process may save an administrator time while consuming a partner’s scarce attention. Even if the modeled labor cost appears acceptable, the firm may prefer to preserve the partner’s capacity for work that cannot be delegated.",
           "Check whether the tool reduces errors or creates a new review burden. Use a defined error category and a consistent acceptance standard. Do not assign a financial value to every prevented mistake unless the firm has a defensible basis for that estimate. Reporting fewer corrections can be useful without pretending to know the cost of an avoided incident.",
-          "Look at the distribution as well as the average. A workflow with several easy successes and one long failure can have acceptable average time while being unreliable for a deadline-sensitive task. Explain those exceptions in the decision record."
+          "Show exceptions alongside the average. Several easy successes can offset one long failure in the calculation while leaving the workflow unreliable for a deadline-sensitive task. Describe that failure in the decision record so leadership can assess the timing risk."
         ]
       },
       {
         "h": "Decide what to do with the freed capacity",
         "ps": [
           "Name the work that will use any time released. It might be responding to clients sooner, reducing a backlog or completing a recurring administrative task that currently slips. Measure that second outcome separately from the drafting improvement.",
-          "Cash savings require an actual expense change. Revenue requires suitable demand, completed work and collection. A firm should not count the same freed hour as both avoided payroll and new billable income. Keep the business mechanism explicit before assigning a dollar benefit.",
+          "Tie each dollar benefit to the business change that would produce it. Cash savings need an expense reduction; revenue needs suitable demand, completed work and collection. Count a freed hour once, rather than treating it as both avoided payroll and new billable income.",
           "Set the next review date if the workflow continues. Compare results after staff training settles and after relevant tool or source changes. Preserve the manual procedure so a failed update does not force the team to accept poor output merely because the old process has been lost."
         ]
       }
@@ -6403,7 +6403,7 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "An authenticator app can generate a code, request approval or hold a passkey. Those are different sign-in methods with different protections. When reviewing multifactor authentication with your IT provider, ask which method is enforced on each account, how people recover access and whether weaker alternatives remain available.",
+    "intro": "An authenticator app can give you a code, ask you to approve a sign-in or hold a passkey. Those actions offer different protection: a code can be entered on a phishing page, while a passkey checks the service it belongs to. When you review MFA with IT, find out which method each account actually requires. Having the app installed does not tell you whether a stronger method is enforced or a weaker route remains available.",
     "takeaway": "Prioritize high-impact accounts, distinguish the actual authentication methods and test recovery before enforcement. Passkeys and FIDO2 keys provide phishing-resistant sign-in where supported. Remove or document weaker paths so the rollout’s protection matches the policy.",
     "consultation": {
       "title": "Review your account protection.",
@@ -6415,8 +6415,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Start with the accounts and the work they permit",
         "ps": [
-          "List the systems that matter to the business: email, cloud documents, payroll, finance, remote access and administrator portals. Identify the account owner and the effect of unauthorized access. Prioritize administrators and people who can approve payments, alter customer instructions or access sensitive records.",
-          "Ask IT to distinguish enrollment from enforcement. Someone registering an authenticator does not prove that every sign-in path requires it. Review the policies, exclusions and applications that accept other methods. Confirm whether an account can choose a weaker alternative after a stronger method has been registered.",
+          "List email, cloud documents, payroll, finance, remote access and administrator portals, with the owner and consequence of unauthorized access for each. Use that consequence to prioritize administrators and people who approve payments, change customer instructions or open sensitive records.",
+          "Ask IT which sign-in paths require the method, not only who has registered it. Check enforcement policies, exclusions and applications accepting alternatives. An account may still be able to choose a weaker method after a stronger one is enrolled.",
           "Record shared accounts and service identities separately. A human MFA rollout does not automatically solve applications that connect without an interactive person. Those access paths need an appropriate technical review. Do not remove a working integration blindly, but do assign an owner and a plan for any unsupported arrangement."
         ]
       },
@@ -6424,7 +6424,7 @@ export const refreshedArticles: Article[] = [
         "h": "SMS codes",
         "ps": [
           {
-            "text": "SMS sends a code to a phone number. It is familiar, but control of that number becomes part of account security. Microsoft classifies SMS as a phishable authentication method: an attacker can collect or relay the code through a fraudulent interaction. Microsoft authentication overview.",
+            "text": "An SMS sign-in uses a code sent to the registered phone number, so control of that number is part of account security. A fraudulent interaction can collect or relay the code. The Microsoft authentication overview classifies SMS as phishable.",
             "links": [
               {
                 "phrase": "Microsoft authentication overview",
@@ -6432,7 +6432,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Consider the operational dependencies before using it. Employees change numbers, travel where service is unreliable and replace phones. A number may be personal rather than company-managed. Ask how the organization removes an old number, verifies a new one and avoids sending recovery information to a departed employee.",
+          "Plan for changes to the number before relying on it. Employees replace phones, change numbers and travel where service is unreliable; the number may also be personal. Define how the firm verifies a replacement number, removes the old one and prevents recovery messages reaching a departed employee.",
           "SMS may remain a supported option in a particular application while a stronger method is introduced. Record why that exception exists and when it will be reviewed. Avoid describing it as equivalent to phishing-resistant authentication simply because both satisfy an MFA prompt.",
           "For high-impact accounts, ask the platform owner which stronger supported method is available. The answer may require a license, policy or application change. Get that information before committing leadership to a rollout date."
         ]
@@ -6441,7 +6441,7 @@ export const refreshedArticles: Article[] = [
         "h": "Authenticator-generated TOTP codes",
         "ps": [
           {
-            "text": "Time-based one-time passwords, or TOTP codes, are generated from a registered secret and the time. They are different from push notifications. A user opens the app and enters the displayed code. Microsoft’s OATH token documentation describes the mechanism and supported options.",
+            "text": "A TOTP app displays a time-based one-time password generated from a registered secret and the time. You open the app and type the code into the sign-in page. A push request instead asks you to approve the sign-in. Microsoft's OATH token documentation describes TOTP and its supported options.",
             "links": [
               {
                 "phrase": "OATH token documentation",
@@ -6450,16 +6450,16 @@ export const refreshedArticles: Article[] = [
             ]
           },
           "A generated code does not depend on receiving a text message, but it can still be entered into a fraudulent sign-in page. TOTP is not phishing-resistant. Staff should begin sign-in through a known application or established address rather than trusting a login request because it asks for an authenticator code.",
-          "The enrollment secret and recovery codes need careful handling. Do not place them in a broadly accessible document or email them around the team. Agree where authorized recovery information belongs and who can access it. Copying a secret into several places may make recovery convenient while creating uncontrolled credentials.",
+          "Protect the enrollment secret and recovery codes in the approved recovery system, with defined authorized access. Broadly shared documents and team email create extra copies of credentials. Agree on where recovery information belongs before convenience produces uncontrolled copies.",
           "Before replacing a phone, follow the app and account provider’s supported transfer procedure. Test access on the replacement device before wiping the old one. If a phone is lost, use the documented recovery process rather than asking a colleague to share access to their own account."
         ]
       },
       {
         "h": "Push approvals and number matching",
         "ps": [
-          "Push authentication asks the user to approve a request on a registered device. Unsolicited prompts should be rejected and reported. A person who did not initiate the sign-in should not approve a notification simply to make repeated requests stop.",
+          "A push request arrives on a registered device for approval. If you did not start the sign-in, reject it and report it. Repeated prompts do not make the request legitimate; approving one simply to stop the notifications can authorize access you did not intend.",
           {
-            "text": "Number matching asks the person to connect the approval to the initiating sign-in. It reduces accidental approval, but it is not phishing-resistant. The actual experience can vary by application and device. Microsoft documents specific same-device behavior for mobile apps, so test the applications your staff use. Microsoft number-matching guidance.",
+            "text": "Number matching asks the person to connect the approval to the initiating sign-in. It reduces accidental approval, but it is not phishing-resistant. The experience can vary by application and device. Microsoft number-matching guidance describes specific same-device behavior for mobile apps, so test the applications your staff use.",
             "links": [
               {
                 "phrase": "Microsoft number-matching guidance",
@@ -6467,15 +6467,15 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Give staff a clear response to an unexpected prompt: deny it, avoid interacting with the accompanying message and report the time and account involved. Your support team should know who investigates repeated requests. Do not leave employees deciding whether a notification was legitimate based only on the caller’s claimed identity.",
-          "Also test availability. A person may have a working laptop but a phone without connectivity. A mobile restriction or replacement device can interrupt approval. Build the approved recovery route into the rollout rather than creating an informal fallback after the first lockout."
+          "Tell staff how to handle an unexpected prompt: deny it, leave the accompanying message alone and report the time and account. Name the support contact who investigates repeated requests. A caller's claimed identity should not be the employee's only basis for deciding whether to approve.",
+          "Test approval when the phone is unavailable as well. A working laptop does not help if the registered phone lacks connectivity, is restricted or has been replaced. Put the approved recovery route in the rollout plan before the first lockout creates pressure for an informal fallback."
         ]
       },
       {
         "h": "Passkeys and FIDO2 security keys",
         "ps": [
           {
-            "text": "Passkeys use public-key cryptography bound to the legitimate service. That provides phishing-resistant sign-in because a lookalike site cannot collect a reusable credential for the real service. Microsoft documents device-bound and synced passkey options, subject to provider support and organizational policy. Microsoft passkey documentation.",
+            "text": "A passkey binds a public-key credential to the legitimate service. A lookalike site cannot collect a reusable credential for that service, providing phishing-resistant sign-in. Device-bound and synced passkeys have different support and policy requirements, covered in the Microsoft passkey documentation.",
             "links": [
               {
                 "phrase": "Microsoft passkey documentation",
@@ -6483,16 +6483,16 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "A user normally unlocks a passkey with a PIN or biometric check. A separate security key can work across compatible devices. Test the relevant browsers, workstations and mobile devices, including physical connector or NFC requirements. A supported method in one application does not establish support across every application the employee uses.",
+          "A PIN or biometric check normally unlocks the user's passkey. A separate security key can work across compatible devices, but browsers, workstations, phones, connectors and NFC support need testing. A successful sign-in to one application does not establish support for the others staff use; test those before planning the rollout.",
           "Choose the storage arrangement deliberately. A device-bound credential and a credential synced through a provider account have different recovery dependencies. Ask who controls the provider account, which devices may hold credentials and what happens when employment ends. Keep personal convenience and business access governance in the same discussion.",
-          "Register acceptable backup methods before an employee needs them. If a security key is lost, the support team should follow a verified process and remove the lost credential as appropriate. A spare key sitting in an uncontrolled drawer is an asset-management problem as well as a recovery arrangement.",
+          "Register approved backup methods before they are needed. When a security key is lost, support should verify the requester, follow the recovery process and remove the lost credential as appropriate. Track any spare key too; leaving it in an uncontrolled drawer weakens the recovery arrangement.",
           "Phishing resistance protects the authentication step. It does not make a compromised endpoint trustworthy, prevent every session theft or validate a payment request after sign-in. Continue the other controls around devices, permissions and business approvals."
         ]
       },
       {
         "h": "A practical comparison",
         "ps": [
-          "Use the table to start a deployment conversation. It is not a product ranking detached from your environment. Your IT provider should confirm support, policy enforcement and recovery for the actual accounts in scope."
+          "Confirm the table's methods against the actual accounts in scope with IT. Check application support, enforced policy and recovery so the comparison informs a workable deployment."
         ],
         "table": {
           "caption": "A practical comparison",
@@ -6533,10 +6533,10 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Treat recovery as a security decision",
         "ps": [
-          "Document how support verifies a locked-out employee. An incoming caller’s knowledge of a name, job title or manager is not sufficient by itself. Use an approved process that can establish identity through trusted records and the appropriate authorization.",
-          "Limit who can reset methods and review those actions. A reset can change the person who controls future sign-ins. Retain enough evidence to investigate an unexpected change without collecting unnecessary sensitive information in the ticket.",
-          "Emergency administrator access needs its own plan. Identify the accounts, permitted use, protection and review process with your IT provider. Test the arrangement safely. An account created for emergencies should not become the everyday workaround for policies that users find inconvenient.",
-          "Practice a lost-phone or lost-key scenario before broad enforcement. Confirm the authorized person can regain access and that an unauthorized requester cannot obtain a reset by applying pressure. Record gaps, correct them and repeat only the affected part of the test."
+          "Resetting an employee's authentication methods can transfer control of their future sign-ins. Support therefore needs more than a caller's knowledge of a name, job title or manager before making the change. Write down how the approved recovery process establishes identity through trusted records and obtains the necessary authorization.",
+          "Limit who can make those resets and review their actions. Keep enough evidence to investigate an unexpected change, while avoiding unnecessary sensitive information in the ticket.",
+          "Emergency administrator access needs a separate arrangement with your IT provider. Agree which accounts may be used, how they are protected and how their use is reviewed, then test the arrangement safely. Keep those accounts for the agreed emergency use instead of allowing them to become a routine exception to ordinary sign-in policies.",
+          "Before broad enforcement, practice a lost-phone or lost-key scenario. Have support show how the authorized person regains access and how it handles an unauthorized requester applying pressure. Use the results to correct gaps, then repeat the affected part of the test."
         ]
       },
       {
@@ -6553,14 +6553,14 @@ export const refreshedArticles: Article[] = [
             ]
           },
           "Test enrollment, ordinary sign-in, replacement devices, supported backup methods and offboarding. Log the exceptions with their business impact. If a critical application cannot use the planned method, identify the alternative protection and the person accepting that exception before the wider rollout.",
-          "Communicate the expected prompts and support route in plain language. Staff need to know what they will do differently and where to get help. Avoid issuing a policy change without enrollment time or help-desk coverage, then allowing informal exceptions to compensate for the disruption."
+          "Before enforcement, explain the expected prompts, give staff enrollment time and identify the support route. They need to know what changes in daily use and where to get help. A rollout without help-desk coverage can create disruption and pressure for informal exceptions."
         ]
       },
       {
         "h": "Measure enforcement and exceptions",
         "ps": [
           "Track the accounts in scope, those with the required method enforced and those with documented exceptions. Separate administrators from ordinary users so high-impact gaps are visible. State the measurement date and the systems included.",
-          "Review method resets, unexplained prompts and applications that still accept weaker authentication. An enrollment percentage alone hides those details. The useful leadership report explains what remains exposed, who owns the next action and when the exception will be reconsidered.",
+          "Include method resets, unexplained prompts and applications accepting weaker authentication in the review. An enrollment percentage misses those gaps. Leadership needs the remaining exposure, owner and date for reconsidering each exception.",
           "Revisit the inventory after staff changes, acquisitions, new applications or changes in device policy. MFA is maintained through account lifecycle work. Your existing IT provider should remain involved in administration and policy changes; agree the security review responsibilities with Helm if managed identity protection is in scope."
         ]
       },
@@ -6580,7 +6580,7 @@ export const refreshedArticles: Article[] = [
       }
     ],
     "lead": [
-      "For a business owner, the decision includes everyday use and recovery as well as security. A method that staff cannot enroll or use on supported devices will produce exceptions. A strong method with an easy-to-abuse reset procedure leaves a different opening. Plan both before enforcing a change across the company."
+      "Recovery belongs in that review too. Suppose an employee loses the phone they use to sign in. The firm needs a way to restore their access, but support must also be able to reject someone pretending to be that employee. Check that staff can enroll and use the chosen method on their supported devices, then test the recovery route before enforcing the change across the company."
     ],
     "readingLayout": true,
     "organizationByline": true,
@@ -6598,10 +6598,10 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "Microsoft 365 has retention, recovery and native backup capabilities. Choosing a backup approach starts with the data you need to recover and the recovery process your business can operate. A claim that Microsoft has no backup is an inadequate basis for a purchase.",
+    "intro": "If a client file disappears, the useful question is how your firm can restore the information it needs and resume work. Microsoft 365 offers retention, recovery and native backup capabilities, each with its own scope. Start with your restore requirements and the process your team can operate, then compare the products against them. A sales claim that Microsoft has no backup will not answer those questions.",
     "lead": [
       {
-        "text": "Retention and backup serve related but different purposes. Retention policies can preserve or delete content according to configured rules. Microsoft 365 Backup is a separate recovery product, covering supported SharePoint sites, OneDrive accounts and Exchange mailboxes. Licensing, billing and configuration need their own review. Microsoft Purview retention, Microsoft 365 Backup overview.",
+        "text": "Retention and backup serve related but different purposes. Retention policies can preserve or delete content according to configured rules. Microsoft 365 Backup is a separate recovery product, covering supported SharePoint sites, OneDrive accounts and Exchange mailboxes. Review licensing, billing and configuration separately. See Microsoft Purview retention and Microsoft 365 Backup overview.",
         "links": [
           {
             "phrase": "Microsoft Purview retention",
@@ -6619,7 +6619,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Compare recovery requirements by workload",
         "ps": [
-          "Ask your IT owner to list the mailboxes, accounts, sites and other business data the firm depends on. Include shared data and departing employees. Then identify which native or third-party product covers each item and where coverage stops.",
+          "Have IT map the mailboxes, accounts, sites and other data the firm needs to a native or third-party recovery product. Include shared information and records of departing employees, and list exclusions. That workload map gives you a basis for comparing vendors against the same recovery needs.",
           "Do not assume a product that covers mailbox data also restores every Teams conversation, application configuration or connected service. Read the current workload and restore documentation for the particular product. Check whether permissions, versions and other needed information return with the content.",
           "A hypothetical 40-person New Jersey accounting firm could define one recovery requirement for a deleted client file and another for widespread damage to a shared document site. The firm should evaluate both, including how a restore might affect legitimate changes made after the chosen recovery point."
         ]
@@ -6640,7 +6640,7 @@ export const refreshedArticles: Article[] = [
             ],
             "ordered": false
           },
-          "Separate a provider's recovery objective from a guarantee. Actual restoration depends on the supported workload, amount of data, scenario and configured service. Keep exceptions and failed tests visible rather than recording only successful jobs."
+          "Treat the recovery objective as a target whose conditions need review. Restoration depends on the supported workload, amount of data, event and configured service. Keep failed tests and exceptions alongside successful jobs so the firm can see where recovery remains unverified."
         ]
       },
       {
@@ -6665,7 +6665,7 @@ export const refreshedArticles: Article[] = [
             ]
           },
           {
-            "text": "Use the backup-testing guide to prepare support for questionnaire answers. Start by documenting one important restore scenario and its responsible operator. Helm's free public-domain scan cannot inspect your tenant, backup policies or restore history.",
+            "text": "Use the backup-testing guide to gather evidence for questionnaire answers. Start by documenting one important restore scenario and its responsible operator. Helm's free public-domain scan cannot inspect your tenant, backup policies or restore history.",
             "links": [
               {
                 "phrase": "backup-testing guide",
@@ -6684,13 +6684,13 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "A deleted email, an overwritten spreadsheet and widespread changes to a document site are different recovery problems. Write down the event you need to handle before comparing products. Identify the affected business process, the data owner and how much disruption the firm could tolerate. Ask what usable recovery would look like to the person who must resume client work.",
           "For a deleted client file, that may mean finding a particular earlier version and returning it with the right access. For a damaged site, it may mean coordinating a broader recovery and reconciling work completed after the selected point. For an employee departure, it may mean retaining the required business records while transferring ownership. One successful file recovery does not establish that all three scenarios are covered.",
-          "Create a workload map using actual tenant records. Include active and shared mailboxes, OneDrive accounts, SharePoint sites and the applications that rely on them. Identify other information separately: business application databases, local files, identity configuration and records held in external services. Where a product does not cover a workload, name the alternative recovery method or record the gap. A count of licensed users is not a complete data inventory."
+          "Use tenant records to map active and shared mailboxes, OneDrive accounts and SharePoint sites, along with dependent applications. List local files, application databases, identity settings and external records separately. Each uncovered workload needs a recovery method or a named owner for the gap. The licensed-user total cannot show whether those systems and records are included."
         ]
       },
       {
         "h": "Separate preservation from restoring operations",
         "ps": [
-          "Retention may serve legal, records-management or business requirements. Restoration serves the immediate question of getting usable work back. Those purposes overlap, but they are not interchangeable. A preserved copy may require a particular search or export process; a restored operational copy may not satisfy a preservation requirement. The responsible records adviser and IT owner should approve their respective requirements.",
+          "Retention may meet legal, records-management or business requirements by preserving information. Recovery returns usable work after an interruption. A preserved copy may need a specific search or export process; a restored copy may not meet the preservation obligation. Have the records adviser approve the retention requirements and IT approve the recovery design, then check where the two depend on each other.",
           {
             "text": "Microsoft's retention documentation describes preservation and deletion behavior. Use it to verify the configured feature, then check the tenant's actual settings. Do not infer that an unconfigured policy protects your data merely because the subscription offers it. Similarly, a recovery feature needs the required setup, permissions and covered data before an operator can rely on it.",
             "links": [
@@ -6736,7 +6736,7 @@ export const refreshedArticles: Article[] = [
         "h": "Evaluate native and third-party backup on the same basis",
         "ps": [
           {
-            "text": "Microsoft documents a dedicated Microsoft 365 Backup service. Evaluate it alongside third-party options using the same scenarios. Avoid a comparison in which one product is judged on its best supported workload and the other is judged on an unrelated edge case. Request current documentation for the proposed configuration and capture the assumptions in the decision record.",
+            "text": "Evaluate the Microsoft 365 Backup service and third-party options using the same recovery scenarios. Compare the documentation for each proposed configuration and record its assumptions. Judging one product on its strongest workload and another on an unrelated edge case will not tell you which fits the firm's needs.",
             "links": [
               {
                 "phrase": "Microsoft 365 Backup service",
@@ -6752,8 +6752,8 @@ export const refreshedArticles: Article[] = [
         "h": "Design a restore test that demonstrates usability",
         "ps": [
           "Select non-sensitive sample data from a representative covered workload. Give the operator a clear recovery request: the item, approximate time, requested destination and business approver. Record how the operator finds the available recovery point and confirms that the request is authorized. Avoid using a privileged administrator's own sample as the only test if ordinary business requests follow a different process.",
-          "After restoration, the business owner should open the returned content and verify what matters. Does the file contain the expected information? Can the intended users access it? Are important versions or metadata present where required? Does the chosen destination avoid overwriting good current work? Record a failed step as a finding rather than declaring success because the console reports completion.",
-          "Measure elapsed recovery time separately from hands-on labor. Waiting for authorization, locating the right point, restoring data and checking the result are different components. This distinction helps identify whether the bottleneck is a product limitation, an operating decision or missing information. An advertised restoration speed cannot tell the firm how quickly its own request will be authorized and verified."
+          "After restoration, have the business owner open the content and check the expected information, user access and any required versions or metadata. Confirm that the destination has not overwritten good current work. If one of these checks fails, record it as a finding even when the console says the restore completed.",
+          "Record elapsed recovery time as well as hands-on effort. Authorization, finding the recovery point, transferring data and checking usability can each delay the return to work. Measuring them separately helps the firm distinguish a product limit from an operating delay. Advertised restore speed cannot establish how long the business will need to approve and verify its own request."
         ]
       },
       {
@@ -6766,9 +6766,9 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Make the purchasing record specific",
         "ps": [
-          "The decision record should name the covered workloads, recovery scenarios, selected service, responsible operator and outstanding exceptions. Attach the actual test evidence and current commercial terms. Record any difference between the firm's target and the capability demonstrated in the pilot. A known limitation with an owner is more useful than a blanket statement that the firm is fully backed up.",
+          "Keep the covered workloads, recovery scenarios, chosen service, operator and exceptions in the purchase record, with the test evidence and current commercial terms. Where the pilot fell short of a target, describe that difference and give it an owner. This provides a usable account of recoverability instead of a blanket statement that the firm is fully backed up.",
           "Review that record after a new application, acquisition, substantial site change or provider transition. Confirm that the service order still matches the environment. Before cancelling a service, agree on data access, any required export, administrative handover and the date at which recovery access ends. A smooth move requires those decisions while the current service is still available.",
-          "For leadership, report coverage and restore evidence in plain language. State which important workloads are covered, which scenario was tested and what remains unresolved. Do not turn a successful job count into a claim that every business recovery will succeed. The evidence should support a bounded answer about the configured service and the scenarios you have actually examined."
+          "Tell leadership which important workloads are covered, which recovery scenario was tested and what remains unresolved. Successful job counts describe completed activity; they do not establish that every business recovery will succeed. Keep the report tied to the configured service and the scenarios examined."
         ]
       }
     ],
@@ -6786,10 +6786,10 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "Before choosing Outlook encryption, identify who needs to read the message and what protection should remain after delivery. Sending a tax document to an individual client creates different requirements from exchanging files with a business that mandates certificates.",
+    "intro": "A client receiving a tax document needs to be able to open it safely. A business partner requiring certificates may need a different exchange. Choose Outlook encryption around the recipient and the protection required after delivery, then test that exchange.",
     "lead": [
       {
-        "text": "Microsoft now uses the name Microsoft Purview Message Encryption for its message-encryption service. The selected title retains the older Office 365 wording that buyers may recognize. Availability depends on your subscription, configuration and client support. Microsoft email-encryption comparison.",
+        "text": "Microsoft now calls its message-encryption service Microsoft Purview Message Encryption. You may still encounter the older Office 365 wording. Availability depends on your subscription, configuration and client support; see the Microsoft email-encryption comparison.",
         "links": [
           {
             "phrase": "Microsoft email-encryption comparison",
@@ -6803,9 +6803,9 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Match the method to the exchange",
         "ps": [
-          "TLS protects the connection used to carry mail between servers. It does not give the sender persistent control over a recipient's copy after delivery. Ask IT whether a particular partner connection requires enforced TLS and how a failed connection is handled.",
+          "TLS protects mail while it travels between servers. It does not give a sender continuing control over the recipient's copy. Ask IT whether your partner exchange needs enforced TLS and what happens if the connection fails. Those answers determine whether the proposed transport arrangement meets the exchange's requirements.",
           {
-            "text": "Purview Message Encryption provides a way to send protected messages to external recipients, with recipient access handled through supported sign-in or passcode experiences. S/MIME uses certificates and keys for message encryption and digital signatures. Both parties' setup matters when choosing S/MIME. These methods serve different operational requirements; combining several on one message can create compatibility problems. Microsoft's comparison and cautions.",
+            "text": "Purview Message Encryption lets you send protected messages to external recipients, who gain access through supported sign-in or passcode experiences. S/MIME uses certificates and keys for message encryption and digital signatures. Both parties' setup matters when choosing S/MIME. The methods meet different operational requirements, and combining several on one message can create compatibility problems. See Microsoft's comparison and cautions.",
             "links": [
               {
                 "phrase": "Microsoft's comparison and cautions",
@@ -6819,7 +6819,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Test the full exchange with harmless files",
         "ps": [
-          "Ask your existing IT provider to prepare a test using non-sensitive sample data. Send from the Outlook versions employees use and receive on the clients and devices your recipients are likely to use. Include the reply, attachment access and the handling of an incorrectly addressed message.",
+          "Ask your existing IT provider to prepare a test using non-sensitive sample data. Send from the Outlook versions employees use, then open the message in the email clients and on the devices your recipients are likely to use. Include the reply, attachment access and the handling of an incorrectly addressed message.",
           "During the pilot:",
           {
             "list": [
@@ -6869,15 +6869,15 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Define what you are trying to protect",
         "ps": [
-          "Start with the business exchange, not the setting in Outlook. Who is the sender? Who is the intended recipient? Is the attachment a routine invoice, a tax return, a health record or information subject to a contractual restriction? Does the recipient need to edit it, forward it to a colleague or retain it in a matter file? These questions identify the access and handling requirements that a technical control must support.",
+          "Define the exchange before choosing an Outlook setting. Identify the sender and recipient, the information involved and any contractual restrictions. A routine invoice, tax return and health record can have different handling needs. Establish whether the recipient must edit, forward or retain the attachment in a matter file, so the control supports the required work.",
           "Encryption cannot correct a recipient selected from the wrong autocomplete entry. A well-protected message sent to the wrong authorized address still creates a business problem. Use a recipient confirmation step for sensitive exchanges, especially the first message to a new client or a thread involving several outside parties. Agree on the approved address through a trusted channel before sending the actual document.",
-          "Likewise, a password written in the same email as an attached protected file should not be treated as a separate verification channel. Decide how the recipient receives any access information, who can help when access fails and what records the firm needs to retain. Give employees a specific procedure they can follow during a deadline, rather than telling them simply to encrypt sensitive mail."
+          "Decide how the recipient will obtain access information and help when access fails, and what records the firm must retain. A password in the same email as the protected attachment does not provide a separate verification channel. Give staff a procedure they can use during a deadline, including how to share that information through the agreed route."
         ]
       },
       {
         "h": "Compare the operational burden",
         "ps": [
-          "This is an operating comparison, not a ranking of cryptographic strength. The appropriate choice depends on the required protection and a workflow the firm can maintain. A method that staff repeatedly bypass because external recipients cannot open it needs investigation. Making access easier should mean fixing the approved workflow, not quietly dropping the protection.",
+          "Compare what the firm must operate and maintain for each method as well as the protection required. If staff repeatedly bypass a method because recipients cannot open messages, investigate the approved workflow and fix the access problem. The comparison below concerns those operating duties; it does not rank cryptographic strength.",
           {
             "text": "Microsoft distinguishes these encryption methods in its email encryption guidance. Keep that product description separate from your own conclusions about client obligations. The person responsible for the engagement should document why the chosen exchange is appropriate, while IT confirms that the proposed technical behavior actually occurs.",
             "links": [
@@ -6922,9 +6922,9 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Build a realistic recipient pilot",
         "ps": [
-          "A hypothetical accounting practice might send test messages to three outside recipients: someone using a personal webmail account, a client using Outlook at another company and a client who opens mail primarily on a phone. Give each a harmless sample attachment and ask them to complete the actual task. Opening the message is only the first part of the test. They also need to locate the file, read it, reply and understand where the completed document should go.",
-          "Record what each recipient sees. An employee should be able to explain the sign-in or passcode step without asking the client to send a password or a screenshot containing confidential information. Provide a support route for failed access. Confirm whether the recipient needs an account, whether the invitation can expire and whether the chosen device supports the workflow. The results should guide the instructions given to staff and clients.",
-          "Include a forwarding test only with approved test accounts. If a proposed restriction matters to the business, test that specific restriction on the selected message type. Do not infer that every attachment remains under the sender's control because the original message carried a protection label. A recipient can also take notes or photograph visible information. Plan the exchange around an authorized recipient and an appropriate use of the information."
+          "For example, an accounting practice could test an exchange with recipients using personal webmail, Outlook at another company and a phone. Send harmless sample attachments. Ask them to find and read the file, reply and return the completed document through the intended route. Opening the encrypted message verifies only the first step.",
+          "Record what recipients see during the pilot and use it to write staff and client instructions. Check whether an account is needed, invitations can expire and the selected device supports the exchange. Staff need to explain the sign-in or passcode step and provide help without asking a client to send a password or confidential screenshot.",
+          "If a forwarding restriction matters, test it on the selected message type using approved test accounts. A protection label on the original message does not establish continuing control over every attachment. Recipients may also take notes or photograph what they can see, so the exchange still depends on an authorized recipient and appropriate use of the information."
         ]
       },
       {
@@ -6939,22 +6939,22 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Document the difference between withdrawing supported access and recovering information already read, copied or downloaded. If a message goes to an unintended recipient, follow the firm's incident process even when an access control is available. Preserve the delivery information, attempt the supported containment action and have the responsible adviser assess the disclosure. A successful technical action does not settle every business or notification question.",
-          "The same discipline applies to expired certificates and lost keys. Ask who owns certificate renewal, who receives advance warnings and what happens to old protected messages when an employee leaves. Test access to a retained sample under the approved succession arrangement. Keep recovery duties with the authorized administrator, with access limited to the people who need them."
+          "Withdrawing supported access cannot recover information someone has already read, copied or downloaded. If a message reaches an unintended recipient, preserve the delivery details, attempt the supported containment action and follow the firm’s incident process. Have the responsible adviser assess the disclosure and any notification questions, even if the technical action succeeds.",
+          "Assign ownership of certificate renewal and advance warnings, and decide how retained protected messages will remain accessible when an employee leaves. Test a retained sample using the approved succession arrangement. Lost keys and expired certificates need a recovery procedure owned by the authorized administrator, with access limited to those who need it."
         ]
       },
       {
         "h": "Give staff a short operating rule",
         "ps": [
-          "Translate the configuration into a decision employees can use. For example: client tax documents go through the approved exchange; the recipient address is confirmed before the first send; a failed protection step goes to the named support contact; and staff use the approved alternative while the issue is resolved. This is an illustrative rule, not a universal legal requirement. Your actual rule should reflect the firm's data, clients and engagement terms.",
+          "Turn the configuration into a short staff procedure. An illustrative rule for client tax documents could require the approved exchange, confirmation of the recipient address before the first send and referral to a named support contact if protection fails. Staff would then use the approved alternative while IT resolves the issue. Set the actual rule from the firm’s data, clients and engagement terms; this example is not a universal legal requirement.",
           "Separate routine support from a suspected disclosure. A client who cannot open a test file needs assistance. A confidential attachment sent to the wrong person needs an incident decision. Employees should know which contact handles each situation and what information to provide. Avoid requiring them to diagnose encryption technology before asking for help."
         ]
       },
       {
         "h": "Keep evidence that answers the real question",
         "ps": [
-          "A useful record contains the selected method, licensed population, policy scope, pilot date and tested recipient scenarios. Include the business approval and any unresolved exceptions. Recheck the workflow after a meaningful change, such as a different mail client, licensing change, new recipient population or new protection policy. Review frequency should follow the business requirement and the rate of change rather than an unsupported claim that every organization must test on one schedule.",
-          "If a client questionnaire asks whether sensitive messages are encrypted, explain the relevant scope and exceptions. Saying that the firm uses Microsoft 365 does not answer that question. A supported answer describes which exchanges receive which protection, how employees select the workflow and who verifies its operation. This makes the answer useful to the client and defensible for the firm."
+          "Retain the selected method, licensed population, policy scope, pilot date and tested recipient scenarios, together with business approval and unresolved exceptions. Recheck when the mail client, licensing, recipient population or protection policy changes meaningfully. Set the review frequency from business requirements and the rate of change instead of assuming one schedule fits every organization.",
+          "If a client questionnaire asks whether sensitive messages are encrypted, explain the relevant scope and exceptions. Saying that the firm uses Microsoft 365 does not answer that question. A supported answer describes which exchanges receive which protection, how employees select the workflow and who verifies its operation."
         ]
       }
     ],
@@ -6970,20 +6970,20 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "A small team may store shared passwords in a browser, spreadsheet or message thread because someone needs quick access to a vendor portal. The arrangement becomes difficult to control when that person leaves, the password is reused or nobody knows who owns the account.",
+    "intro": "Sharing a vendor password through a browser, spreadsheet or message can solve an immediate access problem. It leaves harder questions when someone departs, reuses the password or cannot identify the account owner. A business vault should help the team manage that access and its recovery.",
     "sections": [
       {
         "h": "Start by identifying where passwords still matter",
         "ps": [
-          "Inventory important accounts and their owners. Include email administration, finance, payroll, website management, social accounts and specialist vendor portals. Separate individual accounts, shared logins and credentials used by applications. Each needs an appropriate access arrangement.",
-          "Prefer individual users where the service supports them. A vault should not become a reason to share a powerful administrator account among several people. Named access usually makes permissions and activity easier to attribute. Use shared credentials only where there is a justified business need and the service permits the arrangement.",
+          "Inventory email administration, finance, payroll, website management, social accounts and important vendor portals. Give each an owner. Keep individual logins, shared passwords and application credentials separate because they need different access arrangements.",
+          "Use individual accounts where the service supports them, with permissions appropriate to each person. Named access makes activity easier to attribute. Keep shared credentials for justified needs that the service permits; a vault should not encourage the team to share a powerful administrator login.",
           "Record accounts that already support stronger sign-in methods. A password manager can be part of the access system without being the answer to every account. Ask your existing IT provider how single sign-on, passkeys, MFA and the vault fit together before buying overlapping capabilities."
         ]
       },
       {
         "h": "Why unique passwords are useful",
         "ps": [
-          "If the same password is used in several services, its exposure in one place creates a risk elsewhere. Attackers can try known username-and-password combinations against other accounts. Avoiding reuse limits that particular connection between unrelated services.",
+          "If the same password is used in several services, its exposure in one place creates a risk elsewhere. Attackers can try known username-and-password combinations against other accounts. Using a unique password for each service limits that risk.",
           {
             "text": "CISA recommends long, random, unique passwords and a password manager protected by MFA. Its guidance explains why remembering a large collection of strong passwords manually is impractical. CISA password-manager guidance.",
             "links": [
@@ -6993,16 +6993,16 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Apply that principle to actual company accounts. Replacing the password in one portal while leaving the same value in several others does not resolve reuse. Establish which accounts were affected, change them through their supported procedures and confirm that the updated credentials are stored in the approved place.",
-          "Do not describe a password manager as preventing every account compromise. A phishing interaction, compromised device, weak recovery route or excessive permission can create a separate problem. Unique passwords reduce one exposure while other access controls address the rest."
+          "Apply unique passwords to each affected company account. Changing one portal leaves reuse unresolved if the old password remains in other services. Identify those accounts, change each through its supported procedure and store the current credentials in the approved place.",
+          "A password manager cannot prevent every account compromise. A phishing interaction, compromised device, weak recovery route or excessive permission can create a separate problem. Unique passwords reduce one exposure while other access controls address the rest."
         ]
       },
       {
         "h": "Browser storage and business vaults answer different needs",
         "ps": [
-          "Browser password storage can make unique passwords easier for an individual to use. Its suitability for the company depends on management features, account ownership and the browser environment. Avoid a blanket claim that browser storage is always insecure or always sufficient.",
-          "For a team, inspect how the proposed system handles shared items, permissions, administrative recovery and removal of users. Ask whether the business can retain access when the employee who created an item leaves. Confirm what the chosen plan actually includes and which features require additional configuration.",
-          "This is a selection checklist, not a promise that any particular product supports every row. Require a demonstration using a test account before relying on a feature for production credentials."
+          "Browser password storage can make unique passwords easier for an individual to use. Its suitability for the company depends on management features, account ownership and the browser environment. Browser storage is not always insecure or always sufficient; judge it by those details.",
+          "Test the functions the team needs: shared items, permissions, administrative recovery and user removal. In particular, show how the business retains access when an item’s creator leaves. Check the exact plan and configuration, since features available elsewhere in the product may not be included in the purchase.",
+          "A particular product may not support every control in this checklist. Require a demonstration using a test account before relying on a feature for production credentials."
         ],
         "table": {
           "caption": "Browser storage and business vaults answer different needs",
@@ -7042,9 +7042,9 @@ export const refreshedArticles: Article[] = [
         "h": "Protect the vault’s own access",
         "ps": [
           "The vault becomes an important business account because it contains access to other systems. Configure its authentication according to the provider’s supported controls and your organization’s requirements. Use a strong, unique master credential where the product requires one, and enable the supported MFA method.",
-          "Review recovery with IT. Identify who can reset or recover an employee’s vault access, how that requester’s identity is verified and which actions are recorded. A helpful support process should not allow someone to obtain access simply by claiming urgency or knowledge of a colleague’s job title.",
+          "Work through recovery with IT before a user needs it. Identify who can reset or recover vault access, how the requester is verified and which actions are logged. Urgency or knowledge of a colleague’s title should not be enough to obtain their access.",
           "Manage administrator privileges separately from ordinary vault use. Give only the necessary people administrative roles, document why they need them and review those assignments. Ensure an authorized backup administrator exists so the company is not dependent on one employee’s availability.",
-          "Test recovery with approved dummy credentials before storing critical access. Record what the business would do if the main administrator lost their device or became unavailable. Keep recovery materials in an appropriate protected location rather than placing them in the same broadly shared folder the vault was meant to replace."
+          "Test recovery with dummy credentials before relying on the vault for critical accounts. Include the main administrator losing a device or being unavailable. Record the procedure and protect the recovery material; putting it in a broadly shared folder would recreate the handling problem the vault was meant to address."
         ]
       },
       {
@@ -7052,7 +7052,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Organize items by business responsibility. Finance may need billing portals without needing website administration. Marketing may need social accounts without needing payroll. Grant access according to the work people perform instead of putting every credential in one company-wide collection.",
           "Give each shared item an owner. That person maintains the account details, confirms authorized users and coordinates changes. Include a brief description of the service and its purpose, but avoid putting unnecessary sensitive information into item notes.",
-          "Do not assume a user who can use a credential cannot retain it. Product restrictions may limit viewing or copying, but your security decision needs to account for the credential’s actual exposure. If a shared password was known or could have been copied, removal from the vault does not make that old password stop working at the service.",
+          "Check whether someone granted vault access could retain the password, even if the tool restricts viewing or copying. Removing that person from the vault leaves the service’s password unchanged. If they knew or could have copied it, change the credential as part of removing access.",
           "Plan rotation after a relevant departure or suspected exposure. Test the updated credential and any dependent integration. A changed password that silently breaks a scheduled business process creates pressure to restore the old value, so include the service owner in the work."
         ]
       },
@@ -7060,7 +7060,7 @@ export const refreshedArticles: Article[] = [
         "h": "Migrate in a controlled order",
         "ps": [
           "Start with a small set of important accounts and representative users. Confirm the browser or application integration works on supported devices. Teach staff how to save, retrieve and update credentials without sending them through chat.",
-          "Check imported records before broad use. An old spreadsheet may contain duplicate items, wrong URLs, abandoned accounts or credentials that nobody has tested. Importing it into a vault improves storage but does not establish that its contents are current or authorized.",
+          "Review imported items before relying on them. The old spreadsheet may contain duplicates, wrong URLs, abandoned accounts or untested passwords. Moving it into a vault changes its storage; the team still needs to establish which items are current and authorized.",
           "Generate new unique passwords through the service’s supported change process. Confirm the account still works, the vault contains the current value and unnecessary old copies are handled under your records policy. Avoid keeping a second unprotected spreadsheet indefinitely as a convenience backup.",
           "Move the remaining accounts in manageable groups. Staff should know where to report a missing item and who approves new shared access. Give the help desk a practical recovery procedure before enforcing a tool change across the team."
         ]
@@ -7078,14 +7078,14 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Also examine whether storing a second-factor secret alongside the password fits the account’s risk and your policy. Convenience and factor separation need a deliberate decision, especially for administrative and financial access. Do not assume every item should be stored in the same arrangement merely because the tool offers that option."
+          "Decide with IT whether storing a second-factor secret beside the password meets the account’s risk and the firm’s policy. Administrative and financial accounts deserve particular attention to convenience and factor separation. The tool’s ability to store both does not determine whether that arrangement is suitable."
         ]
       },
       {
         "h": "An illustrative offboarding example",
         "ps": [
-          "Imagine that two staff members share a vendor portal because it does not support separate users. This is an illustrative example, not a Helm customer result. The departing employee has been removed from the company vault, but the vendor portal password remains unchanged.",
-          "The company has removed future access to the vault item. It has not invalidated a password the employee previously saw or copied. The service owner needs to change the portal credential, test it and confirm that the remaining authorized employee can use it. If separate users become available, review whether the shared arrangement can be retired.",
+          "Consider two staff members sharing a vendor portal that does not support separate users. In this hypothetical example, the departing employee has been removed from the company vault, but the portal password is unchanged. That leaves a credential they may still know.",
+          "Removing the employee from the vault blocks future access to the item, but a password they previously saw or copied still works. The service owner needs to change the portal credential, test it and confirm that the remaining authorized employee can use it. If separate users become available, review whether the shared arrangement can be retired.",
           "The same review should cover recovery email addresses and phone numbers. A company-controlled password is insufficient if the account can still be recovered through the departed employee’s personal address. Ownership includes the reset route as well as the secret."
         ]
       },
@@ -7094,14 +7094,14 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Check administrator assignments, shared-item membership and unresolved account owners on a schedule appropriate to the business. Revisit them after departures, role changes and new service purchases. Use available logs where supported to investigate unexpected changes.",
           "Measure progress through the accounts brought under an approved process, not just the number of vault licenses issued. Useful evidence includes identified owners, unique credentials, tested recovery and completed rotation when required. Record gaps rather than treating an installed extension as completion.",
-          "Ask staff whether they still use an informal backup store because something is missing from the approved system. Resolve that friction directly. Otherwise, the visible vault can look well maintained while the passwords people actually use remain elsewhere.",
+          "Ask whether staff keep another password store because the approved system is missing something they need. Resolve the missing item or workflow directly. Otherwise, the vault can appear well maintained while the credentials people actually use remain elsewhere.",
           "Helm can discuss account-protection priorities alongside your existing IT provider. Routine account administration and vault configuration remain with the agreed IT owner unless separately scoped. Choose and maintain the access system as part of your broader identity work."
         ]
       }
     ],
     "takeaway": "Use unique credentials, prefer named accounts and inspect the business controls in the chosen vault. Protect vault access, test recovery and rotate shared secrets when required. Removing a user from a vault does not invalidate passwords they already knew.",
     "lead": [
-      "A business password manager can help staff create unique credentials and govern shared access. The useful comparison with browser-saved passwords is about the organization’s needs: account ownership, permissions, recovery, offboarding and evidence. Evaluate those capabilities in the exact product and plan rather than assuming every vault provides the same controls."
+      "A business password manager can help staff create unique credentials and govern shared access. When comparing it with browser-saved passwords, check how each handles account ownership, permissions, recovery, offboarding and evidence. Evaluate those capabilities in the exact product and plan, since vaults differ in the controls they provide."
     ],
     "readingLayout": true,
     "organizationByline": true,
@@ -7119,7 +7119,7 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "A client questionnaire can ask for broad assurances while your evidence covers only part of the business. The response process needs someone to notice that mismatch before an answer is approved.",
+    "intro": "A client may ask whether a control covers the whole business when your report covers only employee laptops. Someone needs to compare the question with the evidence before approving an answer. That review is the starting point for choosing a questionnaire response service or managing the work yourself.",
     "lead": [
       "DIY can work when the firm has an owner who understands its controls, can obtain evidence from IT and has time to manage reviews. A response service can help organize that work, but the customer still owns every final representation."
     ],
@@ -7128,8 +7128,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Start with the question's scope",
         "ps": [
-          "Record who is asking, which service or business unit they are assessing, the deadline and the expected approval process. Different questionnaires can use similar language to ask about different populations. A question about all production systems should not be answered using a report covering only employee laptops.",
-          "For each question, identify the responsible control owner and supporting record. Mark an answer as unsupported when evidence is missing. If a control is planned or partially deployed, say so and explain the relevant scope rather than converting a roadmap item into a present-tense claim.",
+          "A requester may use the same wording for one service, one business unit or all production systems. Record that scope, the deadline and the approval route before drafting. If your evidence covers employee laptops, it cannot support an answer about every production system.",
+          "For each question, name the control owner and identify the supporting record. Missing evidence means the answer is not yet supported. If the control is planned or only partially deployed, describe that status and its scope. Putting an item on a roadmap does not make it a current safeguard.",
           {
             "text": "The FTC's guidance for covered financial institutions includes evaluating service providers and overseeing safeguards. That is one reason a customer may request evidence; it does not mean every questionnaire has the same legal basis or response requirements. FTC Safeguards Rule guidance.",
             "links": [
@@ -7199,26 +7199,26 @@ export const refreshedArticles: Article[] = [
         "h": "Build a response record before drafting answers",
         "ps": [
           "Give the questionnaire an owner who can manage the deadline and approval route. Record the requesting organization, intended service, business unit, questionnaire version and due date. Confirm whether the request includes attachments, a portal submission or follow-up calls. These details affect the work required.",
-          "Route legal and commercial commitments to the responsible reviewer. Some questions ask about an existing control; others ask the firm to agree to a future obligation. An answer about current practice should not accidentally accept a new service level or notification deadline. A response writer needs a way to escalate that distinction.",
+          "Make sure the response writer knows how to contact the legal and commercial reviewers. A question about an existing control may sit beside a request to accept a future obligation. For example, describing current practice should not silently commit the firm to a new service level or notification deadline. The reviewer needs to decide what the firm can agree to.",
           "Break the request into control areas and assign reviewers. IT may validate access and device records. A business owner may confirm payment procedures or staff training. Counsel may need to review an obligation or disclosure. Keep one coordinator so the final answers do not contradict each other.",
-          "Store the working version in an approved location with access limited to the reviewers. Agree on naming and version control before emailing copies around. If the requester changes a question, preserve the change and recheck the answer. The approved final response should be identifiable later."
+          "Keep one working version in an approved location, with access limited to the reviewers. Agree how it will be named and updated before copies start circulating by email. Preserve any changed question and recheck its answer, so the final approved response can be identified later."
         ]
       },
       {
         "h": "Match evidence to the wording of the question",
         "ps": [
-          "Read the subject, population and time period. A question asking whether all staff receive annual training differs from one asking whether training is available. A question about recovery tests differs from one about backup deployment. Identify the claim the answer would make before selecting a supporting record.",
+          "Identify what the question asks you to claim, including its subject, population and period. Offering training differs from confirming that all staff complete it annually. Deploying backups differs from testing recovery. Read those distinctions before choosing the supporting record.",
           "Use a fictional endpoint question to test the process. If the report shows 70 eligible workstations but the firm has additional servers and phones, it may support an answer about those workstations. It cannot alone support a claim that every company device receives the same protection. Ask the control owner to explain the uncovered population.",
-          "For a yes-or-no form, review whether a qualified answer or comment is permitted. Do not choose yes merely because there is no comfortable option for partial coverage. Ask the requester to clarify the expected treatment of exceptions, and have the authorized firm reviewer approve the resulting answer.",
-          "Treat unavailable evidence as an unresolved question. The firm may have a working control whose record has not yet been collected, or it may lack the control entirely. Investigate before writing a definitive answer. These situations require different next steps and should not be merged into a generic pending status."
+          "For a yes-or-no form, review whether a qualified answer or comment is permitted. Do not choose yes merely because the form has no option that reflects partial coverage. Ask the requester to clarify the expected treatment of exceptions, and have the authorized firm reviewer approve the resulting answer.",
+          "Investigate missing evidence before deciding what the answer is. A control may be operating while its record has not been collected, or the control itself may be absent. Those cases need different next steps, so a generic pending status should not conceal which problem the owner is checking."
         ]
       },
       {
         "h": "Keep the answer library reusable and accountable",
         "ps": [
           "Store each approved answer with the question it addresses, covered systems, evidence reference, date, control owner and approver. Add limitations that affect reuse. If an answer describes a particular provider's service, identify the service and population rather than presenting it as universal protection.",
-          "Set review triggers. A platform migration, acquisition, licensing change or revised policy can make a previously accurate answer stale. The owner should retire or revise affected entries. A library that only grows can accumulate inconsistent statements across questionnaires.",
-          "Do not preserve an unsupported answer just because a customer previously accepted it. Acceptance does not validate the control. When an earlier response appears inaccurate, bring it to the authorized business and legal reviewers to determine the appropriate action. The response service should flag the issue rather than improvise a correction to an external party.",
+          "Set triggers for reviewing library answers, including platform migrations, acquisitions, licensing changes and revised policies. Have the owner revise or retire affected entries. If old answers only accumulate, later questionnaires may contain statements that conflict with each other or with current practice.",
+          "A customer's acceptance of an answer does not verify the control behind it. If an earlier response looks inaccurate, take it to the authorized business and legal reviewers. The response service should flag the discrepancy; those owners decide how it should be addressed with the external party.",
           "Use automation cautiously. A tool can suggest a relevant library entry, but a reviewer must check the wording, scope and current evidence. Do not upload restricted records to an unapproved AI tool to speed drafting. The firm's data-handling rules apply to the response workflow itself."
         ]
       },
@@ -7227,7 +7227,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Ask what the requester needs to establish. A dated summary may answer a question without requiring a full configuration export. Where detailed evidence is necessary, confirm the recipient's authority and approved transfer method. Use redaction when it preserves the relevant claim.",
           "Keep credentials, working tokens and unrelated client records out of evidence packages. Screenshots can reveal more than their author intended, including names, account identifiers and infrastructure details. Have the responsible reviewer inspect the material before sharing it.",
-          "Record what was sent, to whom, when and for which purpose. If access is provided through a controlled link, confirm its permissions and review or expiry arrangements. Do not assume a confidentiality agreement makes every disclosure proportionate or eliminates the need for access controls.",
+          "Record what was shared, the recipient, date and purpose. For a controlled link, check permissions and any review or expiry arrangements. A confidentiality agreement does not remove the need to limit the disclosure or control access to it.",
           "Retain the approved response and the evidence references under the firm's policy. Supporting records may remain in a separate restricted system. The response coordinator should know where they are without making unnecessary copies in a general marketing or sales folder."
         ]
       },
@@ -7236,7 +7236,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "For DIY, identify available reviewer time and a backup coordinator. Ask whether IT can deliver evidence before the deadline and whether leadership can approve exceptions. A response library reduces repeated drafting, but it does not remove technical validation or business approval.",
           "For a service, ask the provider to work through a harmless sample question. Check what it drafts, what it verifies and what it sends back to your team for confirmation. Ask how it handles conflicting evidence and an answer that requires a legal decision. The provider should make uncertainty visible.",
-          "Agree on included volume and turnaround before an urgent request arrives. Define how long questionnaires are counted, what follow-up is covered and whether portal entry is included. A per-question allowance may differ from a per-questionnaire allowance. Confirm the actual measure in the service order.",
+          "Agree what the service allowance counts before an urgent request arrives. A per-question allowance differs from a per-questionnaire allowance, particularly for a long request. Confirm turnaround, follow-up coverage and portal entry in the service order so both teams know which work is included.",
           "Keep emergency incident work distinct from questionnaire deadlines. A suspected active compromise belongs in the incident route, even if the customer also asks for a written update. The response coordinator should not treat drafting an answer as a substitute for authorized containment and investigation."
         ]
       },
@@ -7244,7 +7244,7 @@ export const refreshedArticles: Article[] = [
         "h": "Close the process with approval and improvement",
         "ps": [
           "Before submission, check consistency across answers and attachments. Confirm evidence dates, qualification wording and the authorized signer. Retain the exact approved version so later follow-up can refer to what was represented. Any submission through the customer's portal should match that version.",
-          "After submission, record unanswered follow-ups and control gaps that surfaced. Assign operational work separately from editorial work. A response service can improve the record, but a missing restore test or incomplete deployment still needs its operating owner.",
+          "After submission, record outstanding follow-ups and any control gaps discovered. Assign the operating fix to its owner separately from corrections to the wording. Improving the answer record cannot complete a missing restore test or finish an incomplete deployment.",
           "At the next review, measure the process you can observe: requests completed, evidence still missing, review delays and corrections required. Do not claim that faster drafting proves stronger security or guarantees a contract award. Use the record to decide whether your internal process is sustainable or a bounded service would help."
         ]
       }
@@ -7261,20 +7261,20 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "An employee who wants help summarizing a contract or cleaning up a client email may paste it into a public chatbot without realizing the information has now left the company’s approved systems. The employee may be trying to complete a useful task without a reviewed tool. If the company has never explained what is safe to share, people will make that decision on their own.",
+    "intro": "An employee may paste a contract or client email into a public chatbot to finish a useful task. The information then leaves the firm's approved systems. If the firm has offered neither a reviewed tool nor clear sharing rules, employees are left to decide what they can use.",
     "sections": [
       {
         "h": "What shadow AI actually is",
         "ps": [
-          "Shadow AI is a chatbot or AI tool used on company information without approval or review. Employees reach for these tools because they can draft an email, summarize a document, or clean up code quickly. Without an approved option, convenience often decides which tool gets used.",
+          "Shadow AI means using an unapproved or unreviewed AI tool on company information. Staff may choose one because it drafts emails, summarizes documents or cleans up code quickly. If the firm offers no approved route, convenience can end up deciding where that information goes.",
           "A restriction needs a defined purpose, an approved alternative where appropriate and a route for requesting a useful tool. Network blocking alone does not establish whether company information is being used through personal accounts or other devices."
         ]
       },
       {
         "h": "What can leave the company through a prompt",
         "ps": [
-          "The obvious risk is client data and contract terms typed straight into a prompt: names, numbers, terms that were never meant to leave the building, now sitting inside a third party's system.",
-          "Less obvious is what happens to that data afterward. Some tools retain inputs or use them to improve their models, depending on the account type and settings, often without the employee ever checking which applies to them. Add a personal account with weak or no additional protections holding company information, and the exposure compounds.",
+          "A prompt may contain client names, financial details or contract terms the firm has not approved for sharing. Pasting them into a chatbot provides that information to a third-party system, with handling that depends on the service and account.",
+          "Check what happens after the upload. Retention and model-training use depend on the account type and settings, which the employee may never have reviewed. Company information in a personal account with weak protections adds another access problem. Review both the service's handling and the account holding the data.",
           "The output creates another problem when it is copied into a client deliverable or used for a decision without review. A confident answer can still be wrong."
         ]
       },
@@ -7283,7 +7283,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "A short acceptable-use policy should explain the approved purposes, permitted information, review duty and reporting route. Support it with a maintained tool inventory and practical instructions, then check whether use matches the decision.",
           {
-            "text": "Give employees a short list of approved tools so they have a practical alternative. A periodic audit can then show whether the tools used in daily work still match the policy.",
+            "text": "Give employees a short list of approved tools so they have a practical alternative. A periodic audit can then show whether the tools used in daily work still match the policy. Assign that review to a responsible business or IT owner. Any Helm support for AI-tool auditing needs a separate written scope.",
             "links": [
               {
                 "phrase": "periodic audit",
@@ -7296,10 +7296,10 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Ask what task the employee is trying to complete",
         "ps": [
-          "Begin with the work: summarizing a file, drafting correspondence, comparing documents or preparing an internal checklist. Ask what information the task requires and what output is expected. A tool review is easier to conduct when it concerns one defined use rather than a vague request to approve AI for the entire business.",
-          "Collect examples using synthetic or otherwise approved information. Do not ask an employee to demonstrate an unreviewed tool by uploading a real client document. A review should establish the data boundary before the pilot. If a confidential input is unnecessary for the task, remove that dependency through the workflow design.",
+          "Ask which task the tool is meant to help with: summarizing a file, drafting correspondence, comparing documents or preparing a checklist. Identify the required inputs and output. Those details let the firm review one use instead of trying to approve AI in the abstract.",
+          "Use synthetic or otherwise approved examples to clarify the task before a pilot. A real client document should not be the demonstration material for an unreviewed tool. If the task can work without confidential input, design the workflow around that smaller information set.",
           {
-            "text": "Use the first-workflow guide to compare candidate tasks. The shadow-AI review has a different purpose: finding and governing actual use, including tools the business has not yet examined. Connect the review to a workable approval route so useful demand is not left unresolved.",
+            "text": "Use the first-workflow guide to compare candidate tasks. The shadow-AI review finds and governs tools already in use, including those the business has not yet examined. Give employees a workable route to request approval so useful tasks do not remain unresolved.",
             "links": [
               {
                 "phrase": "first-workflow guide",
@@ -7312,17 +7312,17 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Build a tool inventory with a business owner",
         "ps": [
-          "Record the tool, account type, intended use, users, information permitted and connected systems. Identify the business owner and the person reviewing technical access. Include browser extensions, embedded application features and integrations, not only standalone chatbots. Staff may describe a familiar business application without realizing a new AI feature changes the information path.",
+          "Record the tool, account type, intended use, users, permitted information and connected systems, with business and technical owners. Include extensions, embedded features and integrations alongside chatbots. A familiar application can add an AI feature that changes where information goes, even if staff keep using the same product name.",
           "Ask employees about use in a straightforward way. Explain that the inventory is intended to clarify approved work and resolve gaps. Avoid claiming that a particular percentage of staff must be using unapproved tools without evidence. Use the firm's own records and interviews, with lawful and proportionate technical review where authorized.",
-          "Separate an approved tool from an approved use. A business subscription may be suitable for one internal task while a client-data use requires another decision. Record the purpose and boundary so employees do not extend a narrow pilot into broad document access without review."
+          "Approve the use as well as the tool. A business subscription suitable for one internal task may still require a separate decision about client data. Write down the permitted purpose and information so staff understand where a narrow pilot ends."
         ]
       },
       {
         "h": "Review the information path and terms",
         "ps": [
-          "Check what the selected service receives, stores and returns under the actual subscription and settings. Identify retention, training use, access, deletion and relevant contractual terms. A statement that prompts are not used for model training does not mean they are never stored or processed by another service.",
+          "Check the selected service under the actual subscription and settings: what it receives, stores and returns, who can access it, how deletion works and which terms apply. Review model-training use separately from retention. Information excluded from training may still be stored or processed by another service.",
           {
-            "text": "For connected documents, review existing permissions and the integration's scope. The AI document-access guide explains that part of the assessment. A connector that respects user access can still surface information shared too broadly in the underlying system. The permission problem needs its own owner.",
+            "text": "For connected documents, review existing permissions and the integration's scope. The AI document-access guide explains that part of the assessment. A connector that respects user access can still surface information shared too broadly in the underlying system. Assign someone to address those permissions.",
             "links": [
               {
                 "phrase": "AI document-access guide",
@@ -7344,7 +7344,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Make the policy useful during a deadline",
         "ps": [
-          "Use concrete examples from the firm. An internal outline based on approved public text differs from uploading a client's confidential contract. Removing a name does not necessarily make a document non-identifying. Ask the responsible information owner to approve the actual input, especially where context can identify a client.",
+          "Use examples staff can apply during a deadline. An outline based on approved public text involves different information from a client's confidential contract. Removing the client's name may leave identifying context, so have the information owner approve the actual input.",
           "Give staff an approved fallback when the tool is unavailable. That may be the existing manual process rather than another chatbot. The procedure should prevent a technical failure from silently changing the service receiving company information."
         ],
         "table": {
@@ -7384,8 +7384,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Assign output review before use",
         "ps": [
-          "Decide who is accountable for the finished work. An AI draft can contain incorrect facts, unsupported conclusions or missing context. Review should fit the task: a source check for factual claims, a calculation check for numbers or a qualified professional's review for specialist work.",
-          "Keep the draft and approval stages distinct. Do not allow generated correspondence to be sent or a financial decision to be executed automatically merely because the initial summarization task was approved. A broader action capability requires a separate assessment of authority and consequences.",
+          "Name the person accountable for the finished work and decide what they must check. A factual draft needs source verification, numbers need calculation checks and specialist work needs qualified review. AI output can contain incorrect facts, unsupported conclusions or missing context even when the task was approved.",
+          "Keep approval of a draft separate from authority to act on it. Permission to summarize does not authorize automatic correspondence or financial decisions. Sending or execution capabilities need their own review of authority and consequences.",
           {
             "text": "Measure the work actually needed for review and corrections. The time-savings resource includes those costs in a hypothetical model. Avoid calling a faster first draft a measured business saving when someone else spends additional time repairing it.",
             "links": [
@@ -7401,14 +7401,14 @@ export const refreshedArticles: Article[] = [
         "h": "Respond when information may have been uploaded",
         "ps": [
           "Ask for the tool, account, date, input type and action taken. Preserve the relevant facts through the approved process without asking the employee to reproduce the disclosure. Do not upload the same material again to help a reviewer understand it.",
-          "Have the responsible information owner, IT and appropriate advisers assess what happened. Check the actual service's retention and deletion options and their limitations. Deleting a visible chat may not remove every retained copy under the product's terms or other applicable preservation requirements. Obtain the provider information relevant to the actual event.",
+          "Have the information owner, IT and appropriate advisers establish what happened, then examine that service's retention and deletion options. A visible chat can disappear while copies remain under product terms or preservation requirements. Obtain provider information for the actual account and event before describing deletion as complete.",
           "Record any supported access or deletion action with its date and observed result. Keep conclusions about client, regulatory or contractual duties with the authorized advisers. A technical action can help contain a situation without settling every notification decision."
         ]
       },
       {
         "h": "Maintain approval after the pilot",
         "ps": [
-          "Revisit the decision when the subscription, integration, data category or action changes. A new connector or automated sending capability can change the workflow even if the product name remains the same. Require the owner to identify the change and obtain the appropriate review.",
+          "Reopen approval when the subscription, integration, data category or permitted action changes. A new connector or automatic-sending feature changes the workflow even if the product name stays the same. The owner should identify that change and obtain review before extending the use.",
           "Review the inventory at a cadence the firm can sustain. Retire unused tools and remove approved access through the authorized administrator. For departures, include relevant AI accounts and integrations in the offboarding process. Company work should not remain dependent on a former employee's personal subscription.",
           {
             "text": "Helm's Secure AI Adoption consulting is a separate scoped service focused on an agreed workflow. Core and Command do not automatically approve every AI tool or include unrestricted integration work. Start with the task, information boundary and reviewer, then decide whether a pilot can demonstrate a useful result within those limits.",
@@ -7429,9 +7429,9 @@ export const refreshedArticles: Article[] = [
         "h": "Give a new-tool request a clear disposition",
         "ps": [
           "Use a short request record containing the task, proposed account, intended users, input information and desired output. Ask for a harmless sample where it helps clarify the work. The reviewer then checks the business need, information handling, technical access and human approval needed for the finished result.",
-          "Assign one of several explicit outcomes: approved for the defined use, approved for a bounded pilot, awaiting information or declined with an explanation. Record the owner and any review date. Avoid a vague approval that employees interpret as permission to connect the whole document library.",
+          "Give the request a recorded outcome: approved for the defined use, approved for a bounded pilot, awaiting information or declined with an explanation. Include the owner and review date where needed. Staff should be able to tell which information and connections that decision permits.",
           "If the request is declined, explain the actual unresolved condition and the approved way to complete the work. That may be a different tool, synthetic data for a test or the existing manual process. A clear disposition helps the employee act without guessing whether silence means approval.",
-          "Track outstanding requests alongside actual use. An approval route that never produces a decision can leave the underlying demand unresolved. Leadership can then decide whether the bottleneck is missing information, review capacity or a business requirement the proposed tool cannot meet."
+          "Track outstanding requests alongside actual use so leadership can see where the approval process stalls. The cause might be missing information, limited review capacity or a requirement the tool cannot meet. Assign someone to resolve the request so it does not sit without an answer."
         ]
       }
     ],
@@ -7453,10 +7453,10 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "Security information and event management software, or SIEM, collects and analyzes security events across connected systems. It can help a team connect activity that would be harder to understand in separate consoles. The firm still needs people, permissions and procedures to investigate the resulting alerts.",
+    "intro": "Security information and event management software, or SIEM, collects and analyzes events from connected systems. It can help investigators follow activity across separate consoles. The business still needs people authorized to investigate the alerts and procedures for acting on them.",
     "lead": [
       {
-        "text": "Microsoft Sentinel illustrates that separation with data connectors, analytics, investigation features and response automation. The available platform capabilities do not establish that a particular buyer has connected the right data or staffed the response workflow. Microsoft Sentinel overview.",
+        "text": "Microsoft Sentinel has data connectors, analytics, investigation features and response automation. Buyers still need to connect the data their investigations require and staff the response workflow. Microsoft Sentinel overview.",
         "links": [
           {
             "phrase": "Microsoft Sentinel overview",
@@ -7470,8 +7470,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Begin with a detection question",
         "ps": [
-          "Ask what your firm needs to detect that its current services cannot adequately address. For example, a hypothetical New Jersey consulting firm might need to investigate a suspicious cloud sign-in alongside activity on a covered laptop. Determine whether existing tools can already support that investigation before buying a separate log platform.",
-          "Map the data required for the proposed use case. Identify who owns each source, whether collection needs additional licensing and whether the provider can detect a failed connector. Keeping logs from one system does not establish visibility across the business."
+          "Start with the activity your current services cannot adequately investigate. A hypothetical New Jersey consulting firm might need to connect a suspicious cloud sign-in with activity on a covered laptop. Ask whether existing tools already support that investigation before adding a separate log platform.",
+          "For that use case, identify each required data source and its owner. Check any additional collection license and how the provider notices a failed connector. The investigation depends on those specific events arriving; logs from one unrelated system cannot supply visibility across the business."
         ]
       },
       {
@@ -7538,15 +7538,15 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Define one investigation you need to perform",
         "ps": [
-          "A detection question should describe the event and the decision. For example, the firm may need to assess an unusual account sign-in and determine whether related activity occurred on a covered device. Identify the data required, the investigator and the response action that would follow a confirmed finding. That is more useful than a general request for visibility into everything.",
+          "Describe the activity to detect and what the investigator would need to decide. For an unusual sign-in, that might include related device activity. Name the required data, who will investigate and what action follows a confirmed finding. That gives the firm a use case it can test before asking a platform for broad visibility.",
           "Map the sources to their owners. The identity administrator, endpoint provider and application owner may have different access arrangements. Ask whether the current services can already supply the required investigation. A separate SIEM may be appropriate, but duplication adds cost when it does not close a defined gap.",
-          "Document what remains outside the use case. If the service only ingests identity and endpoint events, it should not be described as monitoring every business application. Additional sources can be considered later under a deliberate scope decision. Begin with a use case the firm can operate and verify."
+          "Begin with a use case the firm can operate and verify, and document what it excludes. If the service only ingests identity and endpoint events, it should not be described as monitoring every business application. Consider additional sources later through a deliberate scope decision."
         ]
       },
       {
         "h": "Evaluate the collection pipeline",
         "ps": [
-          "A data connector needs permission, configuration and ongoing health checks. Ask the proposed operator how it confirms that expected events arrive. A connector shown as configured does not establish that the required event types are current and complete enough for the detection.",
+          "Ask the operator to show how it checks that expected event types are arriving and are recent enough for the detection. A connector needs permission and setup, followed by ongoing health checks so investigators continue receiving the data they need. Assign responsibility for those checks.",
           "Check how the operator handles a missing source, expired access or a changed log format. Assign the provider contact responsible for repairing the connection. A detection rule can continue to exist while the data needed to trigger it has stopped arriving.",
           {
             "text": "CISA's small-business logging guidance recommends establishing logging and monitoring with IT. For procurement, turn that general guidance into specific source, retention and ownership questions. Keeping logs and investigating them are related duties with separate acceptance criteria.",
@@ -7562,7 +7562,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Separate logs, detections and incidents",
         "ps": [
-          "An alert count can increase because more data is collected, a rule changes or activity increases. It is not automatically a count of attacks. Ask how the operator classifies outcomes and documents significant decisions. Leadership reporting should state what required action and what remains unresolved.",
+          "When alert counts change, check whether data collection, rules or activity changed too. Ask the operator to classify the outcomes and document significant decisions. Leadership needs to know which findings required action and which remain unresolved, rather than interpreting the total as a count of attacks.",
           "A dashboard may contain many events that do not require a business response. The operating model needs a way to distinguish noise from a meaningful escalation. Ask who tunes rules, how that tuning is reviewed and how the provider avoids hiding important activity while reducing unnecessary alerts."
         ],
         "table": {
@@ -7604,15 +7604,15 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Review the investigation service",
         "ps": [
-          "Have the provider describe a representative covered investigation. What information is available to the analyst? What contextual questions go to the customer? Which actions can the service perform directly? Does the service end at notification, or include supported containment under agreed authority?",
+          "Have the provider walk through a covered investigation, identifying what the analyst can inspect and what context it needs from the customer. Establish which actions it can perform directly and whether agreed authority includes supported containment. That discussion should make clear where the service ends and another responder takes over.",
           "Do not treat every product integration as a promise that the provider will use it for your account. Ask for the sources and capabilities included in the written service. If a response requires an IT change, establish the handoff and the information IT receives.",
-          "For a proposed round-the-clock service, confirm the team and function operating continuously. A platform that receives events at all hours differs from a staffed investigation service. Clarify the escalation route when the customer contact is unavailable and the authority for urgent action. These distinctions should be understandable before the contract is signed."
+          "For round-the-clock coverage, name the team and function that operate continuously. Event collection at all hours does not establish that investigators are staffed at all hours. Agree how urgent action is authorized and how escalation works when the customer contact is unavailable, before signing the contract."
         ]
       },
       {
         "h": "Make retention a business decision",
         "ps": [
-          "Identify why particular logs need to be retained: operational investigation, a client requirement or an applicable records obligation. Then check which data, storage tier and retrieval process the proposal supplies. A general statement that logs are kept does not identify whether an investigator can access the necessary history when needed.",
+          "Set log-retention requirements around the investigation, client term or records obligation the firm needs to meet. Check the data, storage tier and retrieval process against that purpose. Retained logs help only when the investigator can obtain the relevant history when needed.",
           "Ask how exports work and who can authorize them. Logs can contain sensitive identifiers and activity details, so access and sharing need an approved process. Do not send unrestricted event exports to an ordinary sales inbox to obtain a product opinion.",
           "Clarify data access when the service ends. Determine what can be exported, in what form, at what cost and before what deadline. Include the removal of connector access in the transition plan. A new service should not inherit unexplained privileges from an old arrangement."
         ]
@@ -7622,22 +7622,22 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "A SIEM evaluation should include the expected sources and volume assumptions, ingestion, storage, retention and any investigation fees. Ask how cost changes with a new application, more devices or increased event volume. Avoid a quote based on a small demonstration source when the intended deployment is much broader.",
           "Include connector setup, tuning and ongoing maintenance. Identify work retained by IT, such as granting approved access or repairing a source integration. Record the estimated effort as a planning assumption, not a guaranteed financial result.",
-          "Ask for a process to detect unexpected volume or charge changes. A budget review should happen before a new source is enabled when it materially affects the service. The firm needs a person who can approve the change and understand its operating value."
+          "Agree how the operator reports unexpected volume or charge changes. Before enabling a materially expensive new source, have someone authorized to approve the cost assess its operating value. Make the budget and data-collection decisions together."
         ]
       },
       {
         "h": "Run a bounded demonstration",
         "ps": [
           "Use fictional or approved harmless data. Follow one event from collection through detection, investigation and the agreed action. Verify the source, rule and handling evidence. The demonstration should have a stated expected result and should not interfere with production business systems.",
-          "Include a false-positive scenario and a missing-source scenario. Ask what the operator records, who adjusts the rule and who repairs the data path. These tests examine whether the service can maintain useful operation after onboarding, rather than merely display an alert.",
-          "A demonstration has limits. It does not prove detection of every attacker or the quality of every future investigation. Keep the tested scenario and observed result with the decision record. Ask for the relevant service documentation where a capability cannot be meaningfully demonstrated in the pilot."
+          "Add harmless false-positive and missing-source scenarios. Follow the records the operator keeps, the rule adjustment and the repair of the data path. These checks reveal how the service maintains useful detections after onboarding, beyond displaying the initial alert.",
+          "A demonstration cannot prove detection of every attacker or the quality of every future investigation. Keep the tested scenario and observed result with the decision record. Ask for the relevant service documentation where a capability cannot be meaningfully demonstrated in the pilot."
         ]
       },
       {
         "h": "Confirm whether SIEM is the necessary purchase",
         "ps": [
           "A firm may need better endpoint and identity response, a clearer incident contact or a specific log source for an investigation. Those needs can lead to different service choices. Compare a managed SIEM proposal with the actual capabilities and boundaries of the current detection service.",
-          "If a new platform is selected, assign its operation and maintenance before purchase. If existing coverage is sufficient for the defined use case, record that determination and the remaining gaps. The useful outcome is a supported investigation and response process, with cost and coverage understood, rather than another alert queue with no owner."
+          "Assign operation and maintenance before purchasing a new platform. If current services meet the defined use case, record that conclusion and the gaps still outstanding. In either case, the firm needs an assigned investigation and response process with understood costs and coverage."
         ]
       }
     ],
@@ -7654,7 +7654,7 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "Manufacturing & Defense",
     "laneTo": "/manufacturing",
-    "intro": "An SPRS score can affect whether a defense contractor is eligible for covered work. If the number cannot be traced back to the systems assessed and the evidence reviewed, the company may struggle to support it when a contracting officer, customer, or government reviewer asks. A defensible score starts with a clear boundary and a calculation another qualified person can reproduce.",
+    "intro": "A contracting officer, customer or government reviewer may ask how your defense business arrived at its SPRS score. To answer, you need to show which systems were assessed, the evidence used and a calculation another qualified person can reproduce. An unsupported number can put eligibility for covered work in question.",
     "sections": [
       {
         "h": "What the score actually measures",
@@ -7668,7 +7668,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "The score is a summary of implementation against the assessment methodology. It is not a general security grade and it does not prove that every system in the company was included. The system boundary and the System Security Plan determine what the number actually describes."
+          "The score summarizes implementation against the assessment methodology. It is not a general security grade and it does not prove that every system in the company was included. The system boundary and the System Security Plan determine what the number describes."
         ]
       },
       {
@@ -7681,7 +7681,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Why an honest number matters more than a high one",
         "ps": [
-          "A low, well-supported score gives the company an accurate starting point and an owned remediation plan. An inflated score creates a mismatch between the representation and the evidence.",
+          "A low, well-supported score gives the company an accurate starting point and a remediation plan with an assigned owner. An inflated score creates a mismatch between the representation and the evidence.",
           {
             "text": "In a 2025 settlement, the Department of Justice said MORSECORP had submitted a score of 104 before a later third-party review calculated negative 142. The company agreed to pay $4.6 million to resolve False Claims Act allegations tied to cybersecurity requirements. These were allegations resolved by settlement, not a trial finding. Document the actual boundary and calculation rather than treating a target score as the answer to reach on paper. DOJ settlement announcement.",
             "links": [
@@ -7696,7 +7696,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "What should be in the assessment file",
         "ps": [
-          "Keep the current System Security Plan, a diagram or inventory defining the assessed boundary, control-by-control working papers, links to evidence, the calculation worksheet, the completion date, and the expected date for implementing unmet requirements. If more than one SSP exists, keep the score tied to the correct system and CAGE codes.",
+          "Keep the score with the file that explains it: the current System Security Plan, boundary diagram or inventory, control-by-control working papers, evidence links and calculation worksheet. Include the assessment completion date and expected dates for implementing unmet requirements. Where several SSPs exist, tie each score to the correct system and CAGE codes.",
           "The file should let another qualified reviewer follow the same methodology and understand why each requirement was marked met or not met. A screenshot without context or a policy without operating evidence is rarely enough by itself."
         ]
       },
@@ -7712,7 +7712,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Use the methodology to understand which unmet requirements subtract the most points, but do not optimize the number while ignoring the system boundary or lower-weight requirements. Remediate, collect the new evidence, recalculate, and update the score through the authorized process when the assessment record changes."
+          "The deduction weights help identify requirements with a larger effect on the score, but every requirement and the correct system boundary still need review. After remediation, collect evidence, recalculate and update the score through the authorized process. The reported change should follow a change in the assessment record."
         ]
       },
       {
@@ -7728,14 +7728,14 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "If the customer asks for a particular assessment or affirmation, clarify what it needs in writing. A request for an SPRS result, a request for a CMMC status and a request for supporting control evidence are related but different. Your response should identify the exact record and its scope."
+          "Clarify a customer’s requested assessment or affirmation in writing. An SPRS result, CMMC status and supporting control evidence are related records with different purposes. Identify which one the customer needs, then respond with that record and its scope."
         ]
       },
       {
         "h": "Establish the boundary before calculating",
         "ps": [
           "List the people, systems, locations and external services involved in the covered information. Include the actual workflow: receipt from a prime, quoting, engineering, production, storage and transmission. An assessment of a narrow environment needs a credible explanation of how information stays within that environment.",
-          "Ask which systems were excluded and why. A CAD workstation, quoting mailbox or remote access service may affect the boundary even if it was omitted from an initial inventory. The assessor needs to inspect the role of each dependency rather than deciding scope from its business label alone.",
+          "Review exclusions as well as included systems. A CAD workstation, quoting mailbox or remote-access service may affect the boundary even if the first inventory missed it. Establish the role of each dependency before deciding scope; a business label alone does not determine whether it belongs in the assessment.",
           "Keep the inventory and SSP aligned. If the SSP describes one environment while the worksheet assesses another, the final number cannot be interpreted reliably. Resolve the mismatch before submitting a summary result or using it in a customer response.",
           "The system boundary itself can be sensitive. Store diagrams, findings and detailed evidence in the approved repository with controlled access. A marketing or general operating document can describe the process without exposing live security weaknesses or customer information."
         ]
@@ -7745,30 +7745,30 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "For each applicable requirement, document what is implemented, where it applies and what evidence supports the conclusion. Separate a policy statement from evidence that the procedure operates. The appropriate evidence varies with the requirement and should be evaluated by a qualified reviewer.",
           "For access management, the working record might include current permissions and the relevant approval procedure. For a recurring review, it should explain when the activity occurred and what was checked. These are illustrative evidence types, not a declaration that one screenshot or document satisfies the requirement.",
-          "Record uncertainty. If the team cannot establish whether a requirement is implemented, resolve that gap rather than marking it met to finish the worksheet. An unsupported positive conclusion makes the number look stronger while making the assessment harder to defend.",
+          "When implementation cannot be established, record the uncertainty and resolve the evidence gap before marking the requirement met. Otherwise, the worksheet produces a higher score from an unsupported conclusion, making the assessment harder to defend.",
           "Check the methodology version and scoring rules used. Have the reviewer explain how deductions were applied, including any requirement-specific treatment. Keep the underlying worksheet so another qualified person can reproduce the arithmetic and examine the conclusions behind it."
         ]
       },
       {
         "h": "An illustrative score mismatch",
         "ps": [
-          "Imagine a shop whose worksheet marks an access requirement implemented because a policy says managers approve users. This is an illustrative scenario, not a Helm finding. The operating records show accounts created without approval, and the reviewer cannot establish that the documented procedure was followed.",
-          "The issue is not solved by rewriting the policy or deleting the exception from the evidence set. The shop needs to examine the real control, correct the process and collect appropriate evidence. Its assessment conclusion should reflect the implementation state until the requirement is supported.",
+          "Imagine a shop marking an access requirement implemented because its policy says managers approve users. Its operating records instead show accounts created without approval, and the reviewer cannot establish that the procedure was followed. This is a hypothetical scenario, not a Helm finding.",
+          "The shop needs to examine how the control operates, correct the process and collect appropriate evidence. Rewriting the policy or removing the exception from the evidence set cannot establish implementation. Keep the assessment conclusion aligned with the current state until the requirement is supported.",
           "The same principle applies after a technical purchase. A tool can provide a capability while the required coverage, configuration or operating procedure remains incomplete. Do not add points solely because the invoice shows a product was bought."
         ]
       },
       {
         "h": "Connect remediation to verified changes",
         "ps": [
-          "Give each gap an owner, target date, dependency and evidence needed for closure. Identify whether work belongs to IT, security, leadership or a process owner. A security provider cannot independently close a requirement that depends on a business decision it has no authority to make.",
-          "Reassess the affected requirement after the correction. Keep the previous evidence and the new result so the reason for a changed score is traceable. If the work alters the boundary, review the wider assessment implications rather than adjusting one line mechanically.",
+          "Give each gap an owner, target date and dependency, and specify the evidence needed to close it. Identify whether work belongs to IT, security, leadership or a process owner. A security provider cannot independently close a requirement that depends on a business decision it has no authority to make.",
+          "Reassess a requirement after its correction and keep both the earlier evidence and the new result. Another reviewer should be able to follow the reason for the score change. If the correction changes the boundary, review its effect on the wider assessment before adjusting the calculation.",
           "Use scoring weight as one input to prioritization. Also consider business exposure, implementation dependencies and contractual needs. A requirement with a small deduction can still matter operationally. Avoid a plan that improves the number while leaving the underlying environment poorly understood."
         ]
       },
       {
         "h": "A defensible assessment record",
         "ps": [
-          "Keep this record proportionate but complete enough to explain the assessment. Do not send the entire evidence repository to a customer simply because it asks for a score. Share through the approved route and only to the extent authorized and necessary."
+          "Keep enough detail to explain the assessment while controlling how it is shared. A customer asking for a score may not need or be authorized to receive the full evidence repository. Use the approved route and provide only the information necessary and authorized for the request."
         ],
         "table": {
           "caption": "A defensible assessment record",
@@ -7812,13 +7812,13 @@ export const refreshedArticles: Article[] = [
         "h": "Maintain the record after submission",
         "ps": [
           "Review the assessment when systems, providers, information flows or control implementation change. A valid historical submission date does not establish that the environment still matches the assessment. Record changes and obtain a qualified review where they affect the conclusion.",
-          "Verify that the entered result matches the approved assessment file. Keep the submission confirmation and resolve discrepancies through the authorized process. A typographical correction and a changed assessment conclusion should each have a traceable explanation.",
+          "Compare the entered result with the approved assessment file and retain the submission confirmation. Resolve discrepancies through the authorized process with an explanation, whether the change corrects a typo or reflects a new assessment conclusion.",
           "Assign a backup owner for the submission record. The firm should retain authorized access and the assessment history when an employee or outside adviser changes roles.",
           "Helm can discuss an evidence-based readiness scope with the shop and its existing IT provider. Leadership remains responsible for representations and final attestations. A gap review supports preparation; it does not issue a government assessment result, certification or contractual approval."
         ]
       }
     ],
-    "takeaway": "Calculate the score from a documented system boundary and keep the working papers that support every deduction. When a control or the environment changes, update the evidence and the assessment record instead of leaving an old number in place.",
+    "takeaway": "Keep the system boundary and working papers behind every score deduction. When a control or the environment changes, update the assessment record and evidence so the reported number remains supportable.",
     "lead": [],
     "readingLayout": true,
     "organizationByline": true,
@@ -7835,7 +7835,7 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "Manufacturing & Defense",
     "laneTo": "/manufacturing",
-    "intro": "A shop can have policies, screenshots, and a high SPRS score and still be unable to show which systems were assessed or who is fixing an unmet requirement. The System Security Plan describes the environment and safeguards as they exist today. The Plan of Action and Milestones records the work that remains, who owns it, and when it is expected to be complete.",
+    "intro": "The System Security Plan explains the environment and safeguards in place today. When a review of those safeguards identifies a weakness, the Plan of Action and Milestones records the remaining work, its owner and expected completion. Connect both documents to the systems assessed: policies, screenshots and an SPRS score cannot show the current implementation or next action on their own.",
     "sections": [
       {
         "h": "What each document actually is",
@@ -7849,9 +7849,9 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "The Plan of Action and Milestones, addressed by requirement 3.12.2, tracks security weaknesses or deficiencies, the work required to correct them, the responsible owner, resources, milestones, and completion dates. A POA&M with no owner, evidence target, or date is a list, not an operating plan.",
+          "The Plan of Action and Milestones, addressed by requirement 3.12.2, records weaknesses or deficiencies and the work needed to correct them. Give each item a responsible owner, resources, milestones and completion dates, plus the evidence needed to close it. Those fields let the team act on the deficiency and check progress.",
           {
-            "text": "Together they are the paper trail behind your gap assessment: the SSP shows where you stand today, and the POA&M shows the work still ahead, scored against the same 110 controls.",
+            "text": "Together they support your gap assessment against the applicable 110 security requirements. The SSP describes the current implementation; the POA&M records the weaknesses and work still needed.",
             "links": [
               {
                 "phrase": "gap assessment",
@@ -7864,8 +7864,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Why a reviewer starts with the SSP",
         "ps": [
-          "A reviewer needs to know which people, systems, facilities, and connections are in scope before a control can be tested. A generic SSP cannot answer that question. If the document describes tools the shop does not use or leaves out the quoting mailbox and CAD workstations that hold CUI, the assessment starts from the wrong boundary.",
-          "A useful SSP connects each requirement to the people, technology, procedure, and evidence behind it. It also records dependencies and exceptions so a reviewer can compare the document with the way the shop actually works."
+          "Testing a control requires knowing which people, systems, facilities and connections it covers. The SSP should supply that boundary. Describing tools the shop does not use, or omitting CUI in a quoting mailbox or CAD workstation, sends the assessment toward the wrong environment.",
+          "Connect each requirement to its responsible people, technology, procedure and evidence. Include dependencies and exceptions. A reviewer can then compare the SSP’s account of implementation with the way the shop operates."
         ]
       },
       {
@@ -7909,9 +7909,9 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Write the SSP from the actual workflow",
         "ps": [
-          "Start with how information reaches the shop and moves through its work. Identify receipt, review, quoting, engineering, production, storage, transmission and disposal. Link those stages to the people, devices and external services involved. A diagram can support the explanation, but the written scope must be understandable without guessing what each box means.",
+          "Trace how information reaches the shop and moves through receipt, review, quoting, engineering, production, storage, transmission and disposal. Identify the people, devices and outside services at each stage. A diagram can help, but explain the written scope clearly enough that a reviewer does not have to guess what a box represents.",
           "For each requirement, describe the implementation in the assessed environment. Identify the responsible role and the relevant procedure or configuration. If a provider supplies part of the safeguard, describe the dependency and the evidence the shop obtains. A provider’s broad marketing statement is not an implementation description.",
-          "Be specific about exclusions. Explain why an excluded system is outside the scope and how the business prevents covered information from reaching it. If staff routinely move files there, the written boundary needs review. Do not declare a separation solely because a folder has been given a special name.",
+          "Explain why each excluded system is outside scope and how the shop keeps covered information out of it. If staff routinely move files there, review the boundary. A specially named folder cannot by itself establish that separation.",
           "Avoid copying a template’s product names, staff roles or network design into your SSP. A template can prompt useful questions. Its example answer becomes misleading when it describes a control the shop does not operate."
         ]
       },
@@ -7920,23 +7920,23 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Use references that let an authorized reviewer find the relevant record in its approved location. Identify the evidence owner, date and the requirement it supports. Keep live findings, diagrams and configuration details restricted to the people who need them.",
           "Do not paste credentials or sensitive technical records into a general document to make it appear comprehensive. The SSP can describe how a control is implemented while the detailed evidence remains in a governed repository. Confirm which material may be shared with a customer or reviewer before distributing it.",
-          "Check that links remain usable for authorized reviewers. A reference to an employee’s private drive is fragile if nobody else can access it after that employee leaves. Business ownership and appropriate permissions belong in the evidence process.",
-          "Keep historical versions when needed to explain an assessment. A current SSP and the version used for a prior result serve different purposes. Record which version supports each assessment instead of overwriting the only copy and losing the basis for the earlier conclusion."
+          "Check that an authorized reviewer can actually open each reference. An employee’s private drive may become inaccessible after they leave. Give the evidence a business owner and appropriate permissions so it remains usable independently of that employee.",
+          "Preserve the version used for an assessment where the history is needed. The current SSP describes today’s environment, while the earlier version explains the earlier result. Record which version supports each assessment rather than overwriting its basis with later changes."
         ]
       },
       {
         "h": "Give every POA&M item a closure test",
         "ps": [
-          "A useful item identifies the unmet requirement, current deficiency and intended correction. Add the responsible owner, resources, dependencies, milestones and expected completion date. Most importantly, state what evidence will demonstrate that the correction is complete.",
+          "A useful item identifies the unmet requirement, current deficiency and intended correction. Add the responsible owner, resources, dependencies, milestones and expected completion date. State what evidence will demonstrate that the correction is complete.",
           "For an illustrative access-management gap, the item might require a revised approval process, a review of current accounts and evidence that the corrected process operates. Those are example work components, not a finding that applies to every shop. The exact closure criteria should follow the requirement and assessment method.",
-          "Do not close an item because a purchase order was issued or a policy draft was written. Verify the implementation and retain the review result. If the correction affects several requirements, show those relationships so one project update is not mistaken for complete closure everywhere.",
+          "Close the item after the implementation is verified and its review result retained. A purchase order or policy draft may be a step toward completion, but neither establishes that the correction works. If one project affects several requirements, track those relationships and the evidence needed for each.",
           "Separate an expected date from a firm commitment supported by resources. A date repeatedly moved without explanation is weak planning evidence. When work is delayed, record why, the interim safeguard if applicable and the person authorized to accept the remaining risk or contractual consequence."
         ]
       },
       {
         "h": "Distinguish a remediation plan from permission to defer",
         "ps": [
-          "An organization can use a POA&M to manage work without every open item being acceptable for a particular assessment status. The permitted requirements, thresholds and closeout conditions depend on the applicable regime. Have a qualified reviewer confirm those limits before leadership makes an affirmation.",
+          "A POA&M can organize corrective work even where an open item is unacceptable for the assessment status sought. Have a qualified reviewer confirm the permitted requirements, thresholds and closeout conditions under the applicable regime before leadership makes an affirmation.",
           "Do not tell a customer that the shop meets a requirement merely because it has a scheduled fix. State the actual implementation and the planned action through the approved response process. If the customer’s form does not permit a truthful qualification, seek clarification rather than changing the answer to fit the form.",
           "Track different obligations separately when necessary. A general improvement project, an assessment-related deficiency and a contract-specific corrective action may have different approval and timing rules. Combining them into one undifferentiated list can hide the decision that matters."
         ]
@@ -7985,7 +7985,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "An illustrative inconsistency to resolve",
         "ps": [
-          "Suppose the SSP says all relevant accounts follow an approved access process, while the POA&M records a gap in reviewing those accounts. This is an illustrative example, not a Helm assessment result. A reviewer needs to understand whether the SSP describes the current state accurately or presents the intended correction as already implemented.",
+          "Suppose the SSP says relevant accounts follow an approved access process, but the POA&M lists a gap in reviewing them. The reviewer must establish whether the SSP describes current operation or presents the planned correction as already implemented.",
           "Revise the implementation description to reflect the actual state, retain the relevant evidence and keep the correction assigned. When the review process is implemented and verified, update both records with the supporting date and evidence. Do not close the item by making the wording of the two documents agree while leaving the operating gap unresolved."
         ]
       },
@@ -7993,7 +7993,7 @@ export const refreshedArticles: Article[] = [
         "h": "Build maintenance into ordinary changes",
         "ps": [
           "Review document impact when the shop adds a platform, changes a provider, opens a location or changes information handling. The person approving the change should identify which SSP descriptions, evidence references and POA&M items need an update.",
-          "Reconcile the documents before the next assessment or customer response. Look for controls marked implemented while a related deficiency remains open, links to retired tools and evidence from the wrong environment. Resolve the inconsistency rather than hoping the reviewer will interpret it favorably.",
+          "Before an assessment or customer response, look for an implemented control with a related open deficiency, references to retired tools and evidence from another environment. Resolve each inconsistency so the reviewer can trace the claim without guessing which record is current.",
           "Leadership should receive a concise view of open decisions and overdue work. It does not need every screenshot to understand where funding, ownership or a contract clarification is required. The detailed records should remain available to authorized reviewers.",
           "Helm supports a scoped readiness discussion with the business and its existing IT provider. The organization owns its final representations and affirmations for the assessed environment and date. Maintained documents support a defensible review; they do not provide certification or replace a government or authorized assessment."
         ]
@@ -8015,13 +8015,13 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "Contractors & Trades",
     "laneTo": "/contractors",
-    "intro": "A fake supplier invoice may include the correct job number, amount, letterhead, and contact name because the attacker has been reading a real email thread. Only the bank account has changed. If the office pays it without calling the supplier, the job can be complete while the legitimate invoice is still unpaid.",
+    "intro": "Suppose a supplier invoice has the correct job number, amount, letterhead and contact name, but a new bank account. An attacker reading the real email thread may have changed only that detail. If you pay the substituted account, the supplier can still be waiting for the money you owe.",
     "sections": [
       {
         "h": "How the scam actually runs",
         "ps": [
           {
-            "text": "A fraudster compromises or convincingly spoofs the email of a supplier or a general contractor somewhere in your job, then waits for the moment an invoice or a payment is naturally due. Mid-job is the ideal window: enough trust has built up between the parties that an \"updated banking details\" email does not raise an eyebrow.",
+            "text": "A fraudster may compromise a supplier's or general contractor's email, or imitate it convincingly, and send changed banking details when a payment is due. The request arrives at a plausible moment in a working relationship. Staff therefore need to verify the banking instruction even when the timing seems ordinary.",
             "links": [
               {
                 "phrase": "general contractor",
@@ -8029,21 +8029,21 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "The email itself usually is not sloppy. It references the actual job, the actual amount owed, sometimes an actual person's name pulled from a real thread the attacker has been reading. The only change is a routing number and an account number, and that change is the entire scam."
+          "Keep delivery confirmation separate from permission to change the payment destination. Send the banking change to the firm's authorized verifier before the payment approver releases funds."
         ]
       },
       {
         "h": "Verify the financial instruction independently",
         "ps": [
-          "Any new or changed banking instruction, on any invoice, from any supplier or GC, gets verified with a phone call to a number you already had on file, never a number provided in the email making the change. The verifier needs to reach an authorized person and confirm the actual instruction. A callback is a business control, not a guarantee against every compromise or an incomplete verification.",
-          "The rule has to survive urgency to be worth having. A scam that arrives with a tight deadline, a threat to hold up the job, or pressure from someone posing as a decision-maker is testing whether the rule bends. Write it down as a rule with no exceptions, not a habit, so nobody on your crew has to make that judgment call alone under pressure."
+          "Call a number already held in your supplier records whenever an invoice introduces new or changed banking instructions. Use the same rule for a general contractor. A number supplied in the email making the change comes from the same request you are trying to verify, so it cannot provide an independent check. Reach someone authorized to confirm the banking instruction itself, then record what was confirmed. An incomplete call or a further compromise can still leave the payment unverified.",
+          "The procedure also needs to work when a payment deadline is close. Decide in advance how staff should escalate a threat to delay the job or pressure from someone claiming authority. Leadership must support the pause while the payment remains unverified; otherwise one crew member is left deciding whether urgency overrides the rule. Write down the escalation route so that decision reaches the person authorized to make it."
         ]
       },
       {
         "h": "Protect your own domain and verification process",
         "ps": [
           {
-            "text": "The same scam runs in the other direction: someone spoofs your company's domain and sends a fake invoice to one of your own customers. DMARC on your domain, set up correctly, is what stops your business name from being used to defraud the people who trust you.",
+            "text": "A criminal may also send customers an invoice using your company's visible domain. Correctly configured DMARC on your domain helps receiving systems evaluate unauthorized use of that exact domain. It does not protect every use of your business name, stop a lookalike domain or prevent fraud from a compromised legitimate mailbox. Keep the independent verification process in place.",
             "links": [
               {
                 "phrase": "DMARC on your domain",
@@ -8052,7 +8052,7 @@ export const refreshedArticles: Article[] = [
             ]
           },
           {
-            "text": "Lookalike domains are the other half of this: a supplier name spelled with a swapped letter or a different ending, close enough to pass a fast read on a phone screen. The free scan does not search for lookalike registrations, but it does report how your own public email authentication is configured.",
+            "text": "Lookalike domains can also deceive staff: a supplier name spelled with a swapped letter or a different ending may pass a fast read on a phone screen. The free scan does not search for lookalike registrations, but it does report how your own public email authentication is configured.",
             "links": [
               {
                 "phrase": "free scan",
@@ -8066,7 +8066,7 @@ export const refreshedArticles: Article[] = [
         "h": "Separate job confirmation from banking changes",
         "ps": [
           "A foreman can confirm that materials arrived or a subcontractor completed work. The office may then approve an invoice against the job record. A changed beneficiary or account number is a separate financial instruction that needs the firm's verification and release authority.",
-          "Keep those decisions connected but distinct. An accurate job number, amount and delivery detail can establish context while leaving the banking change unverified. A fraudulent request can be attached to a real debt. Staff should not assume the entire invoice is false or that the payment destination is trustworthy because the work occurred.",
+          "Keep the job confirmation and banking decision distinct in the record. A correct job number, amount and delivery detail can support paying a real debt while leaving its new destination unverified. Staff can question the banking change without declaring the whole invoice false, and confirm the completed work without approving that change.",
           {
             "text": "The FBI business email compromise guidance describes requests appearing to come from known sources. For a contractor, convert that guidance into a specific supplier-change procedure. The procedure should identify the trusted contact, authorized verifier, required approver and record of execution.",
             "links": [
@@ -8083,14 +8083,14 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "At onboarding, obtain the approved contact and payment information through the firm's established process. Record the source and the person authorizing it. Do not wait until an urgent change arrives to decide which phone number is trustworthy.",
           "Restrict changes to the supplier master record. An employee receiving a request should know where to route it and who can approve it. The verifier should use the existing trusted record or the established independent route, rather than a replacement number supplied in the same request.",
-          "Review contacts when a supplier relationship changes. A former project contact may lack authority over banking information. Establish an approved alternate for an unavailable primary contact. Maintaining that route is a recurring duty, not a one-time entry at the start of a job."
+          "Review trusted contacts as supplier relationships change. A former project contact may no longer have authority over banking details. Maintain an approved alternate for times when the primary contact is unavailable, so the route remains usable after the job's initial setup."
         ]
       },
       {
         "h": "Record the instruction that was verified",
         "ps": [
           "Keep bank details in the controlled record. A status message can reference the instruction without copying full account information to everyone involved in the job. Limit access to the people who need it and follow the firm's records requirements.",
-          "If another change arrives after verification, repeat the required process for the new instruction. The approval of one beneficiary does not silently authorize another. A screenshot of an old callback log is not evidence that today's changed account was confirmed."
+          "Run the required verification again if the banking instruction changes after approval. Approval applies to the beneficiary that was checked, not whichever account appears next. A callback log for an earlier instruction does not confirm today's replacement account."
         ],
         "table": {
           "caption": "Record the instruction that was verified",
@@ -8130,7 +8130,7 @@ export const refreshedArticles: Article[] = [
         "h": "Plan for payment cutoffs and crew pressure",
         "ps": [
           "A request may claim that materials will be withheld or work delayed unless money goes to a new account immediately. The firm needs an escalation route supported by leadership. Staff should be able to pause an unverified release and reach the person authorized to resolve the business consequence.",
-          "Decide what happens when the trusted contact is unavailable. Use the established alternate or delay until the required verification is complete. Do not invent a new route from a search result or message link while the requester is applying pressure. The purpose of preparing the record is to avoid that improvisation.",
+          "Agree in advance whether to use the established alternate or wait when the trusted contact is unavailable. A search result or a new message link should not become an improvised verification route under deadline pressure. Preparing the trusted record gives staff a route they can use without relying on the requester.",
           "Set approval thresholds around actual operations and applicable terms. This article does not prescribe a universal dollar amount or interpret contract payment obligations. Have the financial owner and appropriate adviser approve the rule that fits the firm's transactions."
         ]
       },
@@ -8147,7 +8147,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "A person confirming work completion should state what they confirmed, such as delivery or completion. Avoid a broad message that says the invoice is approved when the intended statement concerns only job progress. Clear wording prevents the payment operator from treating one decision as authorization for another."
+          "Have the person checking job progress say exactly what was confirmed, such as delivery or completed work. Calling the invoice approved may suggest that banking details were approved too. Precise wording helps the payment operator distinguish the job decision from authority to release money."
         ]
       },
       {
@@ -8171,14 +8171,14 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Contact the sending financial institution promptly, supply the transaction details and follow its instructions. The FBI guidance recommends immediate institution contact and an IC3 report. Keep the bank contact times and reference numbers. Do not delay financial response until the mailbox investigation is finished.",
           "Assign parallel work through the incident plan. The payment owner contacts the bank, authorized teams assess account activity, and leadership engages the insurer and advisers. Preserve the original messages, relevant logs and timeline in the approved restricted location.",
-          "Verify communications with the real supplier through the trusted route. Determine the status of the legitimate invoice and appropriate next steps with the financial and legal owners. A suspected fraudulent transfer can create both an incident and a business dispute; neither should be resolved through speculation in the affected email thread."
+          "Reach the real supplier through the trusted route to establish the status of the legitimate invoice. Have the financial and legal owners decide the next steps. A suspected fraudulent transfer may leave both a security incident and a business dispute to resolve, so keep speculation out of the affected email thread."
         ]
       },
       {
         "h": "Test the rule with a harmless job scenario",
         "ps": [
           "Use a fictional supplier, job number and banking change. Include a payment cutoff and an unavailable primary contact. Ask the team to show the trusted record, verification, approval and decision. Include field staff and the payment operator so the exercise covers the whole handoff.",
-          "Record what actually worked and what was missing. Correct a stale contact, unclear approval or unavailable alternate. Repeat the affected step after the correction. A training session is evidence of participation; the exercised process gives more specific evidence about the transaction workflow.",
+          "Record which parts of the exercise worked and which did not. Fix a stale contact, unclear approval or unavailable alternate, then repeat the affected step. Attendance records who took part; observing the steps shows whether staff could complete the transaction checks.",
           {
             "text": "Helm Core provides defined email and other covered protection. Command adds program and evidence coordination within written scope. Finance retains payment authority, existing IT administers systems and specialist recovery or legal work needs separate scope. Start with one supplier-change exercise and use its findings to improve the documented rule.",
             "links": [
@@ -8197,7 +8197,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Reconcile the accounting record afterward",
         "ps": [
-          "Check that the supplier record and transaction record contain the approved beneficiary. If the request was rejected, make sure an earlier draft change was not saved accidentally. The accounting owner should verify the final state rather than assume that declining an email also reversed every edit made while it was being reviewed."
+          "Have the accounting owner check the final supplier and transaction records against the approved beneficiary. If the request was rejected, look for any draft change saved during the review and correct it through the approved process. Declining the email does not establish that those earlier edits were reversed."
         ]
       }
     ],
@@ -8219,7 +8219,7 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "A virtual chief information security officer service supplies security-leadership work without a full-time executive appointment. Providers use the label for different scopes, so compare deliverables and decision rights before comparing the title.",
+    "intro": "A virtual chief information security officer, or vCISO, takes on agreed security-leadership work without a full-time executive appointment. The title alone leaves you with questions: what will the adviser deliver each month, and which decisions stay with your firm? Providers attach different duties to the role, so compare those commitments and decision rights in the proposed engagement.",
     "lead": [
       "For a professional-services firm with existing IT, the engagement should explain who maintains the risk view, recommends priorities, tracks evidence and brings unresolved decisions to leadership."
     ],
@@ -8228,9 +8228,9 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Buy a defined leadership role",
         "ps": [
-          "Ask the provider to describe the work it performs each month and what happens at a leadership review. Request a sample risk register and roadmap with fictional data. Look for business consequences, accountable owners and decisions that need approval rather than a list of recommended tools.",
+          "Ask what the provider does each month and which decisions come to the leadership review. A sample risk register and roadmap using fictional data should connect business consequences to owners and required approvals. A list of tools does not demonstrate those responsibilities.",
           {
-            "text": "NIST's Small Business Quick-Start Guide provides a way to organize cybersecurity across governance and operational activities. Use it as a discussion structure, not as certification that a vCISO service meets every obligation. NIST SP 1300.",
+            "text": "Use NIST SP 1300, the Small Business Quick-Start Guide, to organize the discussion across governance and operational activities. It provides a review structure; it does not certify a vCISO service or establish that every obligation is met.",
             "links": [
               {
                 "phrase": "NIST SP 1300",
@@ -8246,7 +8246,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Agree on how many meetings, questionnaires and hours of coordination the service covers. Define what counts as an urgent escalation and who covers a provider absence. Specialist incident response, legal advice and independent assessments need explicit treatment in the contract.",
           "For evidence, ask who requests records from IT, checks their dates and coverage, and follows up when a claim lacks support. The firm should approve every external representation. An adviser can help prepare an answer without becoming the authority that certifies it.",
-          "The roadmap should identify dependencies and costs beyond the advisory fee. A recommendation to change access policies may need licenses and implementation time; a recovery improvement may need a separate backup or response engagement."
+          "Ask the provider to include costs and dependencies beyond the advisory fee in the roadmap. Stronger access policies may require licenses and implementation time. A recovery improvement may require a separate backup or response engagement. Leadership needs those dependencies before it approves the recommendation."
         ]
       },
       {
@@ -8262,7 +8262,7 @@ export const refreshedArticles: Article[] = [
             ]
           },
           {
-            "text": "Helm Command provides managed security-program ownership: the covered Core stack, a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance responses, quarterly leadership reviews, an annual tabletop and IT coordination. Its published range is $8,000 to $15,000 per month after fit and complexity review. Compare that written scope with a prospective vCISO engagement rather than assuming the services are interchangeable.",
+            "text": "Helm Command combines the covered Core stack with vCISO leadership and managed security-program ownership. Its scope includes a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance responses, quarterly leadership reviews, an annual tabletop and IT coordination. The published range is $8,000 to $15,000 per month after fit and complexity review. Compare those written duties with each prospective vCISO engagement to establish which work is included.",
             "links": [
               {
                 "phrase": "Helm Command",
@@ -8289,18 +8289,18 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Start with the decisions leadership cannot currently make",
         "ps": [
-          "List two or three unfinished security decisions before requesting proposals. Examples might include who owns access reviews, which recovery gap should receive funding or how to answer a customer asking for evidence. Identify why each decision is stalled: missing facts, unclear authority, limited implementation time or an unresolved business tradeoff.",
-          "A leadership adviser can help organize the evidence and recommend a path. It cannot resolve every constraint through a meeting. If the proposed fix requires IT implementation, a new license or legal interpretation, the engagement should make those dependencies visible. Otherwise the firm may buy advice while the original work remains blocked.",
-          "Name an executive sponsor who can approve priorities and bring the right owners into the discussion. The adviser needs access to decision-makers, not just a mailbox for recommendations. Establish what the sponsor can approve and which decisions require partners or another governing group.",
+          "Before requesting proposals, list two or three unfinished decisions, such as access-review ownership, funding a recovery fix or answering a customer's evidence request. For each, identify what is missing: facts, authority, implementation time or an agreed business tradeoff. That gives the provider a defined problem to address.",
+          "Ask how the adviser would move each decision forward. It can organize evidence and recommend a path, while IT implementation, licensing or legal interpretation may still need another owner. Keep those dependencies in the engagement so the original work does not remain blocked after the advice is delivered.",
+          "Choose an executive sponsor who can approve priorities and bring the relevant owners into the discussion. Define which decisions the sponsor can make and which need partners or another governing group. Recommendations need a route to those decision-makers.",
           "Use that list to evaluate a fictional sample engagement. Ask what the provider would deliver after the first review, what information it would request and how it would track an unresolved decision. Look for a practical record your team can use between meetings."
         ]
       },
       {
         "h": "Separate leadership, monitoring and implementation",
         "ps": [
-          "The vCISO label does not establish whether the service monitors alerts, administers systems or performs technical remediation. Ask for a responsibility map covering those tasks alongside risk advice, policy work and evidence coordination. Mark separately purchased services rather than assuming they come with the advisory fee.",
-          "Monitoring requires a defined population and response path. Advisory work requires a cadence, deliverables and business access. Implementation requires the relevant technical authority and time. One provider can supply more than one service, but the scope must explain which work is included and who handles the rest.",
-          "For incidents, ask how the adviser participates. It might help leadership coordinate decisions while an authorized responder investigates and IT restores systems. Confirm availability, escalation limits and any separate incident fee. A scheduled quarterly adviser should not be presented as an unlimited emergency response resource.",
+          "Ask for a responsibility map covering risk advice, policy work, evidence coordination, monitoring, administration and remediation. Mark separate purchases and retained duties. The vCISO title alone does not tell you which of those services the fee includes.",
+          "Monitoring requires a defined scope of coverage and response path. Advisory work requires a cadence, deliverables and business access. Implementation requires the relevant technical authority and time. One provider can supply more than one service, but the scope must explain which work is included and who handles the rest.",
+          "Define the adviser's incident role and availability before signing. It may coordinate leadership decisions while an authorized responder investigates and IT restores systems. Record escalation limits and any separate incident fee, especially if the ordinary advisory service meets quarterly.",
           "For policy work, determine whether the provider drafts, reviews or maintains documents. Ask who verifies that written procedures match actual operations. The firm must review obligations and approve the policy; an attractive document cannot establish that its controls are implemented."
         ]
       },
@@ -8308,35 +8308,35 @@ export const refreshedArticles: Article[] = [
         "h": "Examine the risk register and roadmap together",
         "ps": [
           "A useful risk record describes the business consequence, evidence, uncertainty and owner. It also records the proposed treatment and the decision needed from leadership. Ask the provider to show a fictional example with an unresolved dependency rather than only completed success items.",
-          "The roadmap should translate approved priorities into work that an owner can perform. Look for dependencies, realistic dates, expected costs and acceptance checks. A recommendation to enforce a new access policy may require licensing, user enrollment and a tested recovery route before rollout.",
+          "Follow a roadmap recommendation through to the work needed to implement it. A new access policy may require licenses, enrollment and tested recovery before rollout. The plan should show those dependencies, realistic dates, expected costs and acceptance checks for the assigned owner.",
           "Check how the provider handles deferral. A risk accepted for a limited period should retain its rationale, approver, conditions and review date. It should not disappear from the register because the implementation budget was unavailable. Leadership needs to see when the original assumptions change.",
-          "Ask how the two records remain consistent. A roadmap milestone should point to the risk or business requirement it addresses. Closing the milestone should update the evidence and remaining risk rather than merely changing a task to green. This connection helps explain why the firm funded the work."
+          "Connect each roadmap milestone to the risk or business requirement it addresses. When the work closes, update the supporting evidence and remaining risk too. Leadership can then trace the funded work to its intended effect, rather than seeing only a completed task."
         ]
       },
       {
         "h": "Make leadership meetings produce decisions",
         "ps": [
-          "Request a sample agenda and decision log. The meeting should identify material changes, completed work, unresolved gaps and approvals required. Give leadership information early enough to understand the options. Reading a dashboard aloud for most of the meeting is unlikely to resolve a blocked decision.",
+          "Request a sample agenda and decision log showing changes, completed work, unresolved gaps and approvals needed. Give leadership the options early enough to consider them. The meeting time can then go toward decisions instead of a dashboard readout that leaves the same work blocked.",
           "For each approval, show the proposed action, responsible owner, cost assumption and consequence of waiting. Where facts remain uncertain, state what discovery would resolve them. Avoid presenting an estimate as a committed project price when another vendor must quote implementation.",
-          "At the end, record decisions and next actions with dates. Confirm who tells IT about an approved change and who verifies completion. If leadership declines a recommendation, preserve the decision and reconsideration trigger. The adviser should not silently convert a rejected item into completed work.",
+          "Close the meeting with decisions, dated next actions and an owner for telling IT about approved changes. Name who verifies completion. If leadership rejects a recommendation, retain that decision and its reconsideration trigger; rejection does not complete the proposed work.",
           "Between meetings, define how urgent questions are handled. Set an agreed communication route and turnaround expectations appropriate to the contracted service. Distinguish an urgent business question from a suspected active compromise that belongs in the incident route."
         ]
       },
       {
         "h": "Review evidence and independence claims carefully",
         "ps": [
-          "Ask which evidence the provider can obtain directly and which requires your IT owner. A service can coordinate collection without having authority to inspect every system. Define who validates coverage, dates and exceptions before using a record in an external response.",
+          "Find out which records the provider can obtain directly and which require IT. Evidence coordination does not necessarily grant system access. Name who checks coverage, dates and exceptions before a record supports an external response.",
           "For questionnaires, identify included volumes, formats, deadlines and follow-up limits. Ask how conflicting or unsupported answers are escalated. The client should retain the final submission and approval record, with sensitive supporting material shared only through an approved process.",
           "An adviser that recommends and operates controls is not automatically an independent assessor of those controls. When a customer or requirement calls for independent assurance, confirm the required assessor and form of evidence. Keep advisory reviews, technical testing and formal attestations distinct.",
-          "Before signing, review access transfer and exit deliverables. Your firm needs its current register, roadmap, decision history and evidence references when an adviser changes. Establish the format and transition support in advance. That makes the engagement usable as an operating function rather than a dependency on one person's private notes."
+          "Agree on exit deliverables before signing: the current register, roadmap, decision history and evidence references, in a usable format. Specify transition support so the next adviser can continue the work. The firm's operating records should remain available when the engagement ends."
         ]
       },
       {
         "h": "Choose fit over the title",
         "ps": [
           "Compare proposals using the same recurring duties, meeting cadence and retained responsibilities. Ask how the provider learns your business without requiring unnecessary disclosure of client records. Confirm who covers absence and whether a change of assigned adviser affects the commitments.",
-          "Select the engagement that addresses the demonstrated coordination gap and fits your capacity to implement approved work. Set a first review date and specific acceptance deliverables. A named adviser, an agreed register structure and an executable first set of actions give leadership a firmer basis for judging value than the job title alone.",
-          "Review conflicting incentives as part of procurement. Ask whether the adviser receives compensation for recommended products or also sells implementation. That arrangement can be workable, but leadership should understand it and compare alternatives where appropriate. Keep the reasoning for a recommendation in the decision record rather than relying on the adviser's title."
+          "Choose the engagement that fills the coordination gap you have identified and fits your capacity to implement approved work. Agree on a first review date and what you will use to judge the start: a named adviser, an agreed risk-register structure and an initial set of actions the responsible teams can carry out. Those deliverables let leadership assess the work instead of relying on the title.",
+          "During procurement, ask whether the adviser is compensated for recommended products or sells the implementation. Leadership should understand those incentives and compare alternatives where appropriate. Preserve the recommendation's reasoning in the decision record so the choice can be reviewed on its merits."
         ]
       }
     ],
@@ -8354,7 +8354,7 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "A vulnerability program needs a way to move a finding from discovery to verified action. A scanner report can identify a possible weakness, but it leaves several business decisions open: whether the finding is accurate, who owns the affected system and how quickly the firm should act.",
+    "intro": "A scanner finding still needs someone to check whether the weakness is real, identify the system owner and decide how soon to act. Vulnerability management keeps that work moving through repair and verification. Agree on the handoffs needed to take a finding from the report to a completed, checked repair.",
     "lead": [
       "Start with those responsibilities before buying another scan subscription. For a firm with existing IT, the program should make that provider's work visible and give leadership a route to resolve exceptions."
     ],
@@ -8363,7 +8363,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Establish the scope and permission to scan",
         "ps": [
-          "List devices, applications, cloud services and public-facing systems with an owner for each. Identify which assets the proposed scanner can examine and which require another method. Obtain authorization before scanning and agree on the timing, particularly for systems whose availability affects client work.",
+          "Build the scan scope from devices, applications, cloud services and public-facing systems, each with an owner. Identify what the scanner can examine and where another method is needed. Obtain authorization and agree timing before scanning, especially when availability affects client work.",
           {
             "text": "A public scan, an authenticated internal scan and a penetration test answer different questions. Use the existing penetration-test and vulnerability-scan comparison when defining the engagement.",
             "links": [
@@ -8379,7 +8379,7 @@ export const refreshedArticles: Article[] = [
         "h": "Prioritize applicable findings",
         "ps": [
           {
-            "text": "Ask IT to validate the affected version and exposure before assigning a task. Consider exploitation evidence, internet access, business importance and available mitigations alongside the scanner's severity rating. CISA recommends using its Known Exploited Vulnerabilities catalog as an input to vulnerability prioritization. Its federal deadlines should not be presented as a universal deadline for private New Jersey firms. CISA KEV catalog.",
+            "text": "Ask IT to validate the affected version and exposure before assigning a task. Consider exploitation evidence, internet access, business importance and available mitigations alongside the scanner's severity rating. Use the CISA KEV catalog, which lists known exploited vulnerabilities, as one input to prioritization. Its federal deadlines do not create a universal deadline for private New Jersey firms.",
             "links": [
               {
                 "phrase": "CISA KEV catalog",
@@ -8394,7 +8394,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Close findings with a check",
         "ps": [
-          "A completed patch ticket is useful evidence, but verify the result through the appropriate version check, rescan or configuration review. Keep any failed deployment or remaining exposure open. Set a regular review cadence that matches your environment and add checks after meaningful system changes.",
+          "After a patch ticket is completed, check the version, rescan or review the configuration as appropriate to the finding. Leave failed deployments and remaining exposure open. Schedule routine reviews around the environment and repeat relevant checks after meaningful system changes so closure remains tied to evidence.",
           "Report unresolved high-priority findings and aging exceptions, not just the number of scans run. For questionnaires, identify the scanned population and dates. A clean report on one public website does not support a claim about all internal devices.",
           {
             "text": "Helm's Core provides a defined protection stack and monthly reporting. It is not a standalone vulnerability-scanning or patch-management service. Command adds a risk register, roadmap, evidence upkeep and coordination with the named IT owner. IT performs patching and routine remediation; scanning engagements and work outside covered services need written scope.",
@@ -8410,7 +8410,7 @@ export const refreshedArticles: Article[] = [
             ]
           },
           {
-            "text": "Begin with a meeting between the business owner and IT to agree on the asset list and finding-to-ticket workflow. Helm's free public-domain scan can contribute limited public configuration findings. It does not replace the authorized assessment needed to establish a vulnerability-management baseline.",
+            "text": "Begin with a meeting between the business owner and IT to agree on the asset list and finding-to-ticket workflow. Helm's free public-domain scan can contribute limited public configuration findings. It does not replace the authorized assessment needed to establish a vulnerability-management baseline. The remaining sections explain how to set up that baseline, starting with an asset register.",
             "links": [
               {
                 "phrase": "free public-domain scan",
@@ -8424,14 +8424,14 @@ export const refreshedArticles: Article[] = [
         "h": "Build an asset register that supports action",
         "ps": [
           "The inventory should connect an asset to someone who can change it. Record a business owner, technical owner, location or service, product version where relevant and the reason the firm uses it. Include public applications, remote-access systems, endpoints and important cloud services. Keep unsupported or externally operated assets visible even when a chosen scanner cannot assess them.",
-          "Distinguish an unknown asset from an accepted exclusion. If a public service appears in a scan but nobody recognizes it, investigate ownership before adding it to a change queue. If a supplier operates an application, establish the approved contact and the evidence it can provide. A finding without an owner cannot become a reliable remediation task.",
+          "If nobody recognizes a public service found in the scan, investigate its ownership before assigning a change. That is different from deliberately excluding a known asset. For a supplier-operated application, establish the approved contact and available evidence so the finding has a route to a responsible technical owner.",
           "Update the register when new services are introduced and old ones are retired. Compare it with procurement, hosting and device-management records. The purpose is to identify important gaps in the assessed population, not to create an inventory that becomes too detailed for anyone to maintain."
         ]
       },
       {
         "h": "Choose assessment methods deliberately",
         "ps": [
-          "An external scan observes a public-facing surface. An authenticated assessment can inspect information available through authorized access. A configuration review can examine settings that a scanner may not evaluate well. A penetration test is a separately scoped exercise intended to examine exploitable paths. These methods are complementary when matched to the question being asked.",
+          "Choose the method for the question. An external scan observes a public surface; an authenticated assessment inspects information accessible with permission. Configuration review examines settings a scanner may not assess well, while a separately scoped penetration test investigates exploitable paths. Combine methods where the assessment needs those different views.",
           "For an engagement, define the systems, authorization, timing, permitted actions and emergency stop contact. Discuss operational sensitivity before assessing a fragile or specialist system. A vendor's usual scanning profile should not silently become permission for every test against every asset. Third-party infrastructure may need separate approval.",
           "Ask how credentials are handled if the assessment needs them. Use an approved access arrangement and limit privileges to the required purpose. Record how access is removed afterward. Do not send administrative credentials through an ordinary sales form to receive a generic assessment."
         ]
@@ -8440,16 +8440,16 @@ export const refreshedArticles: Article[] = [
         "h": "Validate a finding before assigning the fix",
         "ps": [
           "Review the detected product, affected version and evidence. Determine whether the finding accurately describes the deployed system. A scanner may rely on a banner, incomplete information or a test with limitations. If IT disputes a finding, retain the evidence and the reason for the determination rather than deleting it without explanation.",
-          "Avoid equating false positive with no work required. A disputed finding needs a clear disposition: confirmed, not applicable, unresolved or requiring another check. The disposition should state who reviewed it and when. This prevents the same unresolved question from returning with every scan.",
+          "Give disputed findings a documented disposition: confirmed, not applicable, unresolved or needing another check. Name the reviewer and review date. A 'false positive' label alone can hide an unanswered question that will return with the next scan.",
           "For confirmed findings, identify the corrective action and its prerequisites. A patch may require a restart, application test or vendor assistance. A configuration change may need business approval. Route those dependencies with the task so the technical owner knows what completion requires."
         ]
       },
       {
         "h": "Make the priority understandable",
         "ps": [
-          "This table is an operating aid, not a universal scoring formula. Use the firm's applicable obligations and current technical guidance when setting dates. Explain the reasoning in the record. Leadership should be able to see why a particular issue is urgent without interpreting a scanner's entire scoring system.",
+          "Set dates using the firm's applicable obligations and current technical guidance, then explain the priority in the finding record. The table offers operating questions to support that discussion; it is not a universal scoring formula. Leadership should be able to understand the urgency without interpreting the scanner's whole scoring system.",
           {
-            "text": "NIST's patch-management guide connects patching with preventive maintenance and verification. The practical business implication is that update work needs planned ownership and resources. A vulnerability program that identifies problems but gives IT no time or approval to repair them remains incomplete.",
+            "text": "NIST's patch-management guide connects patching with preventive maintenance and verification. Plan who will perform updates and what time and resources they need. A vulnerability program that identifies problems but gives IT no time or approval to repair them remains incomplete.",
             "links": [
               {
                 "phrase": "patch-management guide",
@@ -8492,14 +8492,14 @@ export const refreshedArticles: Article[] = [
         "h": "Make exceptions expire or return for review",
         "ps": [
           "Sometimes a change cannot be completed on the requested date. Record the affected asset, business reason, temporary safeguards, responsible owner and next review date. If a client or insurer requirement applies, obtain the relevant advice before treating an internal acceptance as sufficient. An internal risk decision does not automatically amend an outside obligation.",
-          "Keep exceptions in a visible register. Review whether the reason still applies and whether a supported fix or replacement has become available. Longstanding exceptions deserve a business decision rather than automatic renewal. Repeatedly postponing an unsupported application should lead to a replacement discussion.",
+          "Review each exception's reason, temporary safeguards and next decision date. Check whether a supported fix or replacement has become available. If an unsupported application is repeatedly postponed, bring the replacement decision to the business owner instead of automatically renewing the exception.",
           "Avoid using a blanket exception for all systems managed by another provider. Ask that provider for the action it can take and the evidence available. If the firm lacks the authority to make the change directly, it still needs an owner for the supplier escalation and contractual review."
         ]
       },
       {
         "h": "Close with evidence matched to the finding",
         "ps": [
-          "For a version-related finding, a verified version and appropriate reassessment may support closure. For a configuration finding, retain the setting and the test relevant to the change. For retirement, confirm the service is no longer accessible in the applicable scope. The evidence should answer the original finding rather than simply show that a ticket changed status.",
+          "Use evidence that answers the original finding. A version issue may need a verified version and reassessment; a configuration issue needs the relevant setting and test. For a retired service, confirm it is no longer accessible within the assessed scope. A ticket status change records administration without demonstrating those results.",
           "Check for failed deployment and partial completion. If nine devices receive an update and one does not, keep the remaining device assigned. Do not close the whole population because most of it is complete. Preserve the assessed population and dates so later reviewers understand the limits.",
           "A rescan can provide useful confirmation, but it also has scope and detection limitations. If a finding disappears because the scanner can no longer reach the system, determine why. Loss of visibility is not the same as verified repair."
         ]
@@ -8508,8 +8508,8 @@ export const refreshedArticles: Article[] = [
         "h": "Report the work that remains",
         "ps": [
           "Useful leadership reporting includes important unresolved findings, aging exceptions, owner decisions and coverage gaps. Scan counts describe activity; they do not show whether the firm acted. A backlog trend is meaningful only if the scope and counting rules remain understandable.",
-          "For example, separate newly discovered findings from overdue confirmed findings. Otherwise a better assessment may appear to make the program worse simply because it found more issues. Explain major scope changes alongside the figures. Avoid converting a lower count into a claim that overall risk fell by the same percentage.",
-          "Track the stages where work stalls: validation, business approval, installation or verification. Assign a correction to the bottleneck. The useful measure is whether the process moves important findings to a supported disposition, with accountable exceptions where work remains."
+          "Separate newly discovered findings from overdue confirmed findings and explain changes in assessment scope. A broader or better assessment can increase the count because it reveals more issues. Conversely, a falling count cannot establish that overall risk fell by the same percentage.",
+          "Track the stages where work stalls: validation, business approval, installation or verification. Assign a correction to the bottleneck. Measure whether important findings reach a documented decision or verified repair, and whether exceptions have an accountable owner."
         ]
       },
       {
@@ -8517,7 +8517,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "A small firm can begin with its important public-facing systems and a representative device population, then expand under an agreed plan. The initial scope should be explicit. Do not present that starting point as a full-business assessment.",
           "Choose a review cadence the team can sustain and add reviews after significant changes. Include new hosting, an acquisition, a new remote-access service or a material software change. Meet with the technical owner to review open work and with leadership when an approval or exception needs a business decision.",
-          "The program is functioning when a finding has a route to validation, action and evidence. More frequent scanning helps only when that route can handle the results. Build the route first, then purchase assessment capacity that answers the firm's remaining questions."
+          "Make sure important findings can reach validation, corrective work and closure evidence, with reviewed exceptions where work remains. Then decide whether more assessment capacity would answer the firm's remaining questions. Increasing scan frequency will add findings without resolving them if that operating process cannot keep up."
         ]
       }
     ],
@@ -8533,15 +8533,15 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "A security operations center, or SOC, is a team that performs security monitoring and investigation under an assigned operating scope. Buying access to that team can help a smaller business obtain coverage it cannot comfortably staff itself. The value depends on what the team monitors, what it investigates and what action it is authorized to take.",
+    "intro": "A security operations center, or SOC, monitors and investigates activity within an agreed scope. A smaller business can buy that coverage instead of staffing it itself. To evaluate the service, follow an alert from the signals collected through investigation, authorized action and escalation.",
     "sections": [
       {
         "h": "Start with the covered environment",
         "ps": [
-          "List the devices, identities and other sources the proposed service accepts. Confirm the supported platforms and the required setup. A service focused on employee workstations should not be described as monitoring every server, network appliance and business application. A broader service also needs evidence that the intended sources are connected.",
+          "Confirm the devices, identities and other sources the service accepts, along with platform support and required setup. Workstation monitoring does not imply server, network-appliance or application coverage. Even a broader service needs evidence that its intended sources are connected.",
           "Compare the coverage list with the business inventory. Identify devices that are excluded, identities not supported and applications whose activity needs a different approach. Record those boundaries so leadership understands what it is buying. A service can perform its contracted work well while leaving another part of the environment outside scope.",
           {
-            "text": "CISA's logging guidance for small businesses recommends working with IT to establish logging and monitoring. The practical procurement question is who turns available records into a maintained investigation process. A configured data source and a staffed operating service have different acceptance checks.",
+            "text": "CISA's logging guidance for small businesses recommends working with IT to establish logging and monitoring. When buying a service, ask who will use those records to investigate events and keep that process running. Check separately that the data source is configured and that a staffed service uses it.",
             "links": [
               {
                 "phrase": "logging guidance for small businesses",
@@ -8555,8 +8555,8 @@ export const refreshedArticles: Article[] = [
         "h": "Distinguish automatic protection from analyst work",
         "ps": [
           "Security products may block activity or perform a configured response automatically. Analysts can assess available evidence, decide whether an event needs further action and carry out supported steps under the service. Ask the provider which of these functions apply to the proposed account.",
-          "Avoid describing every event as waiting in a dashboard until a person opens it. Some controls act automatically; other signals need investigation or contextual information from the customer. The important question is whether the relevant event receives the handling promised in the agreement. Ask how the provider records both automatic actions and analyst decisions.",
-          "The customer supplies context that a technical event may not contain. An unfamiliar sign-in may coincide with approved travel, or an unexpected application may have a legitimate owner. Give the service a route to obtain that information without asking employees to reveal passwords or sensitive client content. The investigator should know which customer role can confirm a business fact."
+          "Record automatic actions alongside analyst decisions. Some controls act as soon as activity is detected; other signals require investigation or customer context. Ask how the provider shows that each relevant event receives the handling promised in the agreement.",
+          "An unfamiliar sign-in may be approved travel. An unexpected application may have a legitimate business owner. Give investigators a route to the customer role that can confirm those facts without asking for passwords or sensitive client content. Technical events and business context need to be reviewed together."
         ]
       },
       {
@@ -8564,15 +8564,15 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Triage determines how an event should be handled under the service. Investigation examines the available evidence and relevant context. Depending on the product and scope, that may include device activity, account events or related signals. The provider should explain what evidence it can access and where visibility ends.",
           "Ask how the service classifies outcomes. An event may be expected activity, unresolved activity needing information or a confirmed situation requiring action. A raw alert count does not tell leadership how many incidents occurred. Request reporting that explains significant decisions and outstanding work.",
-          "If the provider needs more information, establish who supplies it and how urgently. A question sent to an unmonitored shared inbox can stall an investigation. Use a primary and backup contact appropriate to the service's coverage, and keep that information current as staff change."
+          "Name a primary and backup contact who can provide information during an investigation, and agree how urgently they should respond. A question left in an unmonitored shared inbox can stall the work. Keep the contacts aligned with coverage hours and update them when staff change."
         ]
       },
       {
         "h": "Define containment authority before it is needed",
         "ps": [
           "A response service may be authorized to isolate a covered device or perform a supported account action. Ask exactly which actions are available and which require customer approval. Do not assume an investigation license gives the provider permission to make any change across the business.",
-          "Leadership should understand the possible interruption from containment. An isolated laptop may be unavailable during a client deadline. The tradeoff needs to be agreed before an incident, including any special handling for critical systems. The service should have a defined escalation route when the relevant customer contact cannot be reached.",
-          "Containment does not automatically include full recovery. Restoring a workstation, reinstalling applications, supplying replacement hardware and investigating wider consequences may involve different teams. Give each duty an owner. The employee needs a clear support route even when several providers perform the work."
+          "Leadership should understand the possible interruption from containment. An isolated laptop may be unavailable during a client deadline. Agree how to handle that tradeoff before an incident, including any special handling for critical systems. The service should have a defined escalation route when the relevant customer contact cannot be reached.",
+          "Assign recovery duties separately from containment. A team isolating a laptop may leave restoration, application installation, replacement hardware and investigation of wider consequences to other teams. The employee needs a clear support route through that handoff, even when several providers perform the work."
         ],
         "table": {
           "caption": "Define containment authority before it is needed",
@@ -8611,8 +8611,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Evaluate coverage hours precisely",
         "ps": [
-          "A product can collect events continuously while the contracted analyst service operates only during stated hours. A provider can also offer continuous investigation for a defined population. Ask which function the phrase 24/7 describes: collection, notification, analyst investigation or supported response.",
-          "For continuous human coverage, ask who operates the team and how customer events reach it. You do not need a fictional estimate of how many analysts a small business would have to hire. You need the proposed service's written coverage, responsibility and escalation arrangements. Those are verifiable procurement facts.",
+          "A product can collect events continuously while the contracted analyst service operates only during stated hours. A provider can also offer continuous investigation for a defined set of covered devices, identities or other sources. Ask which function the phrase 24/7 describes: collection, notification, analyst investigation or supported response.",
+          "If analyst coverage is continuous, confirm who operates that team and how your events reach it. Examine the written coverage, responsibilities and escalation arrangements. Those details establish what service the firm is buying and how it will be delivered.",
           "Check what happens during holidays and provider transitions. Identify the support route outside the customer's office hours and the method used for urgent contact. An overnight event should not depend on the one employee who happens to remember a vendor's phone number."
         ]
       },
@@ -8621,7 +8621,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Arrange a vendor-supported, authorized test using harmless sample activity. State the expected result and the boundaries. Follow the event into the service and record the observed handling. The purpose is to examine the route and authority, not to prove that every possible attack will be detected.",
           "If the demonstration triggers an automatic action, identify it as automatic. If analyst review is part of the contracted service, ask for the appropriate evidence that this function is operating. A demonstration of a console feature should not silently become proof of continuous human investigation.",
-          "Include the customer's side of the handoff. Can the primary contact identify the event and reach IT? Does the backup contact have the authority needed? Does IT know whether a device remains isolated before attempting repair? Resolve confusion while the exercise is controlled."
+          "Test the customer's handoff too. Have the primary contact identify the event and reach IT, then confirm the backup contact has the required authority. Check that IT understands whether the device is still isolated before repair. Resolve those questions while the exercise is controlled."
         ]
       },
       {
@@ -8637,7 +8637,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "A suspected fraudulent transfer, for example, may require immediate contact with the bank while authorized teams investigate the account activity. Technical investigation should not delay that financial action. The actual response depends on the event; assign parallel duties where appropriate and record confirmed facts without premature conclusions."
+          "A suspected fraudulent transfer may require immediate contact with the bank alongside investigation of account activity. Give those parallel duties to the appropriate owners so technical work does not delay financial action. Follow the event’s facts and record what is confirmed without drawing premature conclusions."
         ]
       },
       {
@@ -8645,14 +8645,14 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Ask what evidence the customer can obtain about a significant event: time, affected asset, classification, action, escalation and unresolved questions. Logs and investigation records may contain sensitive information. Keep them in an approved restricted location with access appropriate to the response.",
           "Clarify retention and export arrangements. If a client requirement calls for particular records, determine whether the service can supply them before answering the questionnaire. A monthly summary and a complete forensic record are different deliverables. Do not assume one includes the other.",
-          "At contract end, agree on removal of access, records the firm needs to retain and the date the new service takes over. A gap between cancellation and accepted replacement can leave coverage unclear. Confirm the handover using the covered population and service acceptance criteria."
+          "Before ending the contract, agree which access will be removed, which records the firm will retain and when the replacement service takes over. Check the handover against the covered population and acceptance criteria. Cancelling before the replacement is accepted can leave coverage unclear."
         ]
       },
       {
         "h": "Use reports to resolve a decision",
         "ps": [
-          "Ask the service report to identify missing coverage, significant investigations and customer actions still open. If ten devices stopped reporting, leadership needs to know which owner is checking them and when the result is due. If an investigation needs a business explanation, name the contact supplying it.",
-          "A response-time measure needs a defined starting event and completion event. Time to acknowledge an alert differs from time to investigate or contain the situation. Ask how the provider measures each figure before comparing services. Keep exclusions and assumptions beside the measure so an attractive average does not conceal an unresolved event or an uncovered source."
+          "Ask the provider to report missing coverage, significant investigations and customer actions still open. If ten devices stopped reporting, leadership needs to know which owner is checking them and when the result is due. If an investigation needs a business explanation, name the contact supplying it.",
+          "Define the start and completion event for each response-time measure. Acknowledging an alert, investigating it and containing the situation are different results. Keep the method, exclusions and assumptions beside each figure when comparing providers; an attractive average may conceal an unresolved event or uncovered source."
         ]
       },
       {
@@ -8668,7 +8668,7 @@ export const refreshedArticles: Article[] = [
             ]
           },
           {
-            "text": "Helm Command adds risk and roadmap ownership, evidence upkeep, leadership reviews and coordination with the named IT owner. Existing IT retains administration, patching and routine remediation. Specialist forensic response and hands-on recovery require separate written scope. Program coordination should make those boundaries clear rather than suggest that every task is included.",
+            "text": "Helm Command adds risk and roadmap ownership, evidence upkeep, leadership reviews and coordination with the named IT owner. Existing IT retains administration, patching and routine remediation. Specialist forensic response and hands-on recovery require separate written scope. Program coordination should explain those boundaries without implying that every task is included.",
             "links": [
               {
                 "phrase": "Helm Command",
@@ -8694,7 +8694,7 @@ export const refreshedArticles: Article[] = [
     ],
     "takeaway": "Evaluate a SOC by its covered signals, investigation duties, authorized actions and escalation route. Assign recovery and wider business decisions before relying on the service during an incident.",
     "lead": [
-      "An alert arriving at any hour does not by itself establish that an analyst reviewed it or that a response occurred. Ask about the full route from a covered event to a business decision. That route should identify the service's authority, the customer's contacts and the work retained by existing IT."
+      "A notification arriving at any hour tells you little about the response. Ask whether an analyst reviews the covered event, which actions are authorized and when the customer needs to decide. Follow the alert through the service's contacts and the work retained by existing IT before relying on a claim of around-the-clock coverage."
     ],
     "readingLayout": true,
     "organizationByline": true,
@@ -8709,13 +8709,13 @@ export const refreshedArticles: Article[] = [
     "readMin": 8,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "An email can display your company’s name without being sent by your company. That creates a specific business problem: a customer may receive a convincing invoice or payment-change request that appears to come from you. Email authentication helps receiving systems evaluate whether a message is authorized to use your domain.",
+    "intro": "A customer can receive a convincing invoice displaying your company name even though you did not send it. Email authentication helps receiving systems check authorized use of your domain. Understanding those checks helps you decide what DMARC can address and which fraud controls you still need.",
     "sections": [
       {
         "h": "What SPF, DKIM and DMARC each check",
         "ps": [
           {
-            "text": "SPF checks whether a sending server is authorized for the domain used in the message’s envelope sender. DKIM verifies a domain’s cryptographic signature over selected message content. DMARC checks whether a passing SPF or DKIM result aligns with the visible From domain. One aligned, passing method can satisfy DMARC; both are not required to pass. These distinctions are defined in the current IETF DMARC standard.",
+            "text": "SPF checks whether a server is authorized to send for the envelope-sender domain. DKIM checks a domain's cryptographic signature over selected message content. DMARC compares a passing SPF or DKIM result with the domain people see in the From address. One passing, aligned method is enough; both need not pass. The current IETF DMARC standard defines these distinctions.",
             "links": [
               {
                 "phrase": "current IETF DMARC standard",
@@ -8723,8 +8723,8 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Alignment explains why a message can pass an authentication check and still fail DMARC. A billing platform might authenticate its own domain successfully while displaying your company’s domain in the From address. Your administrator needs to configure the supported sending arrangement so the relevant domains align.",
-          "Ask for a test message from each business service, with the receiver’s authentication results inspected by your IT provider. A screenshot showing a DNS record exists is useful configuration evidence. It does not establish that an invoice sent through a particular platform passes DMARC at its destination."
+          "A message can pass an authentication check while still failing DMARC because the domains do not align. For example, a billing platform could authenticate its own domain while showing your company’s domain in the From address. Your administrator should follow the platform’s supported configuration so the relevant domains align.",
+          "Ask each business service to send a test message, and have your IT provider inspect the receiver’s authentication results. A screenshot showing a DNS record exists is useful configuration evidence. It does not establish that an invoice sent through a particular platform passes DMARC at its destination."
         ]
       },
       {
@@ -8773,7 +8773,7 @@ export const refreshedArticles: Article[] = [
           "Your main email platform is only one part of the inventory. Accounting software, appointment tools, payroll systems, website forms, customer support platforms and marketing services may all send messages in the company’s name. Some are owned by IT. Others were bought directly by department managers.",
           "Have each department identify its sending services and the business process each supports. Record the visible From address, platform owner, administrator, expected recipients and sending frequency. Include low-volume tools: a quarterly statement or annual renewal notice may not appear during a short observation window.",
           "Separate active senders from retired accounts. A service that no longer has a business purpose should not retain unnecessary sending authority. Check whether website forms use a supported mail service rather than a forgotten server arrangement. Ask the website provider who owns that configuration and how changes are tested.",
-          "This inventory also prevents a common ownership gap. The person who controls DNS may not know which invoicing system finance uses. Finance may assume its vendor handles everything. Put both people in the change review so a technical update does not break a business process that nobody included in the test plan."
+          "Put the DNS administrator and the relevant business owner into the change review. The administrator may not know which invoicing system finance uses, while finance may assume its vendor handles authentication. Including both brings that sending process into the inventory and test plan before a DNS change can interrupt it."
         ]
       },
       {
@@ -8788,27 +8788,27 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Ask the reviewer to distinguish approved senders, approved senders that need repair, unexplained sources and known unauthorized activity. Do not authorize an unfamiliar source simply because it sends many messages. First identify the service, confirm its owner and establish whether the business actually uses it.",
+          "Sort observed sources into approved senders, approved senders needing repair, unexplained sources and known unauthorized activity. Volume alone cannot justify approving an unfamiliar source. Identify the service, its owner and whether the business uses it before granting authority.",
           "For a legitimate failure, record the cause and fix. Possibilities to investigate include a platform configuration change, a newly added sending domain, an outdated integration or a forwarding path. Your IT provider should test the explanation against actual messages rather than making repeated DNS changes until a dashboard looks better.",
-          "Keep a decision log with the date, source, business owner, evidence reviewed and action taken. That becomes useful when the same service changes its infrastructure later. It also lets a new administrator understand why a particular sender was approved without reconstructing the entire history from email."
+          "For each decision, record the date, source, business owner, evidence and action. If the service later changes infrastructure, the administrator can revisit the original approval. A successor can also follow the decision without reconstructing it from email."
         ]
       },
       {
         "h": "Move toward enforcement with a business test plan",
         "ps": [
           "Treat enforcement as an operational change. Define the sending processes that must work, the people who will test them and the way staff will report delivery problems. Include invoices, password-reset messages, appointment reminders and other messages whose failure could delay work or confuse customers.",
-          "Choose test recipients outside your organization. Internal delivery alone does not show how another provider handles your mail. Ask the reviewer to check both delivery and authentication results. A message reaching an inbox once is weaker evidence than a documented result from the intended sending configuration.",
+          "Test with recipients outside the organization and inspect authentication results as well as delivery. Internal delivery only shows the internal path. One message arriving in an inbox is less informative than a recorded result tied to the sending configuration being tested.",
           "Schedule the change when the responsible staff can investigate problems. Avoid making the first enforcement change immediately before a major billing run if nobody can monitor the outcome. Record the previous configuration, the approved update and the recovery procedure with the person authorized to carry it out.",
-          "The observation period should cover relevant business activity. There is no universal number of days that proves every sender is ready. A company with an annual notification service needs to test that service directly rather than assuming two quiet weeks represent a complete inventory.",
+          "Observe or directly test the business activity relevant to the sender inventory. An annual notification service may not send anything during two quiet weeks, so test it separately. No universal observation period can demonstrate that every company’s senders are ready.",
           "After enforcement, keep the sender approval process. Adding a new platform should trigger an authentication review before it sends customer-facing messages. DNS access, service ownership and change records remain part of the control. DMARC is easier to maintain when it is connected to ordinary purchasing and onboarding decisions."
         ]
       },
       {
         "h": "An illustrative billing-platform example",
         "ps": [
-          "Suppose a firm sends routine mail through its productivity suite, invoices through an accounting platform and appointment reminders through a separate service. This is an illustrative example, not a Helm customer case. The productivity suite passes DMARC, but the accounting platform uses an unaligned sending arrangement.",
+          "Consider a firm using a productivity suite for routine mail, an accounting platform for invoices and another service for appointment reminders. In this hypothetical example, the suite passes DMARC but the invoice sender uses an unaligned arrangement.",
           "If the firm changes to rejection without testing invoices, customers may stop receiving legitimate bills. The right sequence is to identify the invoice sender, follow that vendor’s supported authentication procedure, send test invoices and review the receiver’s results. The same review should cover reminders even if they account for few messages.",
-          "Once those senders are verified, the firm can assess enforcement with much better evidence. Its inventory should state who approves future platform changes. Otherwise, a new marketing tool added several months later can recreate the problem while the original project is still recorded as complete."
+          "After verifying those senders, the firm can use the results to assess enforcement. Assign responsibility for approving future sending-platform changes as part of the inventory. Otherwise, a marketing tool added months later can recreate the alignment problem after the original project has closed."
         ]
       },
       {
@@ -8830,7 +8830,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Questions to ask your provider",
         "ps": [
-          "Ask who maintains the sending inventory, who reviews reports and how often business owners receive an explanation of unresolved failures. The answers should identify people and records, not just a software product.",
+          "Name the people who maintain the inventory and review reports. Agree how often they explain unresolved failures to business owners and where decisions are recorded. A software subscription does not settle those responsibilities.",
           "Request evidence for your important senders: an actual test, the authentication outcome and the date checked. Ask how a new billing or marketing platform gets approved. If the provider only manages the main email suite, identify who owns the other services before assuming they are included.",
           {
             "text": "Also clarify the boundary of any public scan. Helm’s free public domain scan checks published email and web configuration, including DMARC. It does not sign in to your tenant, read your messages or prove that every approved sending service is configured correctly. An authorized review with your IT provider is needed to answer those internal questions.",
@@ -8848,7 +8848,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Before treating the work as complete, confirm that the sender inventory covers the services the business actually uses. Each approved service should have an owner, a supported authentication arrangement and a recorded test. Reports should reach a monitored destination, with unexplained sources assigned for investigation.",
           "Confirm that enforcement has a documented business test and a recovery procedure. Staff should know where to report missing mail. Future purchases should include a sending review, and departed administrators should not retain DNS or platform access.",
-          "The decision to make now is small: name the person who owns the inventory and ask for the current state of your important sending services. That creates a concrete path from a public DNS record to a maintained business control."
+          "Name the inventory owner and request the current authentication results for important sending services. Use those results to connect the firm’s public DNS configuration to the mail it actually sends."
         ]
       }
     ],
@@ -8872,7 +8872,7 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
-    "intro": "Microsoft Defender Antivirus is built into Windows. Whether it is enough for your business depends on the controls around it and the work your firm needs someone to perform. A working antivirus engine does not answer who reviews an alert, checks missing devices or authorizes containment after hours.",
+    "intro": "Windows includes Microsoft Defender Antivirus. Whether your firm needs additional protection depends on the configured controls and who operates them. Check who investigates an alert, identifies missing devices and authorizes containment after hours before comparing a managed service.",
     "lead": [
       "First clarify the product name. Defender Antivirus, Defender for Business and Defender for Endpoint are different parts of Microsoft's product family. A proposal that says only Defender leaves licensing, management and response responsibilities unclear."
     ],
@@ -8882,7 +8882,7 @@ export const refreshedArticles: Article[] = [
         "h": "Check the existing protection before replacing it",
         "ps": [
           {
-            "text": "Microsoft documents Defender Antivirus as built into Windows and as a component that works with Defender for Endpoint. Its business endpoint products add capabilities under their respective licenses and configurations. This makes a blanket claim that Defender has no centralized management or EDR misleading. Microsoft Defender Antivirus, Microsoft Defender for Endpoint.",
+            "text": "Microsoft documents Defender Antivirus as built into Windows and as a component that works with Defender for Endpoint. Its business endpoint products add capabilities under their respective licenses and configurations. This makes a blanket claim that Defender has no centralized management or endpoint detection and response (EDR) misleading. Microsoft Defender Antivirus, Microsoft Defender for Endpoint.",
             "links": [
               {
                 "phrase": "Microsoft Defender Antivirus",
@@ -8894,15 +8894,15 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Ask your IT provider which subscriptions are active, which devices are enrolled and which settings are applied. Confirm the population against the device inventory. If a device stopped reporting last month, a dashboard showing its old enrollment is insufficient evidence of current coverage."
+          "Ask your IT provider which subscriptions are active, which devices are enrolled and which settings are applied. Compare the enrolled devices with your device inventory. If a device stopped reporting last month, its old enrollment record does not show that it is still covered."
         ]
       },
       {
         "h": "Compare the operating models",
         "ps": [
           "An internally operated business endpoint platform can fit a firm whose IT team has the time, skills and authority to maintain it and handle incidents. Budget for that work and confirm who covers absences and out-of-hours events.",
-          "A managed detection service adds defined investigation and response responsibilities. Ask which activities are included, which are automated and which require approval. Product quality and service coverage are separate questions, so request evidence for both rather than accepting a vendor's claim that one brand is always enough or never enough.",
-          "Consider a hypothetical 35-person New Jersey law firm. A partner's laptop raises an alert during a client deadline. The firm needs to know who assesses the alert, whether that team can isolate the device and who helps the partner continue work. Adding another antivirus product without deciding those responsibilities leaves the incident handoff unresolved.",
+          "Ask a managed detection service to specify its investigation and response duties: which activities are included, which are automated and which require approval. Evaluate the product's capabilities and the service's coverage separately, requesting evidence for both. A claim that one brand is always enough or never enough skips those operating questions.",
+          "Imagine a 35-person New Jersey law firm whose partner's laptop raises an alert during a client deadline. Someone must assess the alert, determine whether they can isolate the device and arrange for the partner's work to continue. Another antivirus purchase does not assign those duties. Use the hypothetical incident to compare the operating handoff.",
           "Before signing, confirm supported operating systems, device exclusions, monitoring coverage, containment authority and the escalation route. Ask for a sample report and a safe demonstration of the response workflow."
         ]
       },
@@ -8919,7 +8919,7 @@ export const refreshedArticles: Article[] = [
             ]
           },
           {
-            "text": "Specialist vendor teams provide continuous monitoring and containment behind covered capabilities; Helm does not staff its own 24/7 SOC. Existing IT retains patching, administration and routine remediation. Command adds evidence upkeep, risk and roadmap ownership, leadership reviews and IT coordination rather than unlimited incident recovery.",
+            "text": "Specialist vendor teams provide continuous monitoring and containment behind covered capabilities; Helm does not staff its own 24/7 security operations center (SOC). Existing IT retains patching, administration and routine remediation. Command adds evidence upkeep, risk and roadmap ownership, leadership reviews and IT coordination rather than unlimited incident recovery.",
             "links": [
               {
                 "phrase": "Command",
@@ -8949,7 +8949,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Ask which Defender the proposal means",
         "ps": [
-          "Defender Antivirus, Defender for Endpoint and Defender for Business should not be used interchangeably in an evaluation. Ask for the exact product, plan and tenant configuration. Then ask which capabilities are enabled for the proposed devices. An included license does not establish that the service has been deployed or that someone operates it.",
+          "Get the exact Defender product, plan and tenant configuration in the proposal. Defender Antivirus, Defender for Endpoint and Defender for Business have different roles, so their names cannot be substituted for one another. Check which capabilities are enabled on the proposed devices and who operates them. Having the license does not establish deployment.",
           {
             "text": "Microsoft's endpoint overview describes different licensing and platform capabilities. Confirm requirements against the current documentation. Do not assume a Windows configuration can be applied unchanged to a Mac, mobile device or server. The commercial and technical scope should identify those differences.",
             "links": [
@@ -8959,14 +8959,14 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Before paying to replace an existing product, ask IT to show its current state. Is the intended protection active? Are relevant updates current? Which devices report? What evidence is available about policy application and significant exceptions? This review can reveal a configuration or operating gap that a brand comparison would miss."
+          "Before replacing a product, ask IT to show whether its intended protection is active, relevant updates are current and devices are reporting. Review evidence of policy application and significant exceptions. That current-state review may reveal a configuration or operating gap hidden by a comparison of brand names."
         ]
       },
       {
         "h": "Compare the duties around detection",
         "ps": [
-          "Use the same duties in both proposals. An internally managed platform is not free simply because the license is already purchased. A managed service is not comprehensive simply because it includes a security product. Document the time, authority and expertise supplied in each arrangement.",
-          "If a proposal leaves a duty with the firm, name the person who will perform it. A statement that the customer handles alerts needs a practical answer about staff availability and escalation. If the provider handles investigation, define which connected systems and signals are part of that coverage."
+          "Compare the time, authority and expertise assigned to the same duties under both proposals. An existing license still requires people to operate it. Likewise, including a security product in a managed contract does not show that every needed duty is covered. Write down what each arrangement supplies and what it leaves with the firm.",
+          "If a proposal leaves a duty with the firm, name the person who will perform it. When a proposal says the customer handles alerts, confirm when staff are available and how they escalate an incident. If the provider handles investigation, define which connected systems and signals are covered."
         ],
         "table": {
           "caption": "Compare the duties around detection",
@@ -9012,8 +9012,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Look at device health, not only installation",
         "ps": [
-          "An agent delivered to a device may still fail to report or operate as intended. Review the current reporting population and the acceptance criteria used by IT. Compare that with the eligible inventory. Retired devices and duplicate entries should not inflate the coverage figure.",
-          "Investigate stale reporting rather than assuming it means the employee is on leave. The device may be powered off, replaced, unavailable or experiencing a deployment problem. Assign the determination to the appropriate owner. Record the status before removing an entry from the console.",
+          "Compare currently reporting devices with the eligible inventory and IT's acceptance criteria. Delivering an agent does not establish that it reports or works as intended. Remove retired devices and duplicate entries from the coverage calculation so they cannot inflate it.",
+          "Investigate stale reporting rather than assuming it means the employee is on leave. The device may be powered off, replaced, unavailable or experiencing a deployment problem. Assign someone to find out why it stopped reporting and record the status before removing an entry from the console.",
           "Exceptions need the same attention. Ask why an exclusion exists, what it covers and who approved it. A broad exclusion added to resolve an application issue can remain after the original reason has disappeared. Give material exceptions a review date and a responsible owner."
         ]
       },
@@ -9021,7 +9021,7 @@ export const refreshedArticles: Article[] = [
         "h": "Understand what response includes",
         "ps": [
           "A detection product may block some activity automatically under its configuration. An investigation service may review an alert and decide on a supported action. These are different capabilities. Ask the provider to explain what is automatic, what receives analyst review and what requires customer approval.",
-          "For device isolation, establish what happens to the employee's work and who handles restoration. A protected laptop used for a client deadline can be an appropriate containment target while creating an immediate business interruption. Leadership should understand that decision when agreeing to standing authority.",
+          "Before granting standing authority to isolate a device, explain to leadership how the firm will handle the interruption. Containing a laptop during a client deadline may be appropriate while also interrupting urgent work. Agree on who informs the employee and who restores working use when you agree on containment authority.",
           "Do not assume that isolating a device includes forensic examination, rebuilding, replacing hardware or restoring every application. Those duties may belong to IT or a separately engaged specialist. Get the boundary in writing and give employees one reporting route that reaches the relevant teams."
         ]
       },
@@ -9030,15 +9030,15 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Use a vendor-approved harmless exercise to follow a covered event through the process. Confirm the test is authorized and record the expected result. The test should demonstrate the agreed routing and escalation, with the limits of the exercise stated clearly.",
           "Ask who receives the event, how it is classified and how the firm is contacted. Check the backup contact when the primary person is unavailable. If the demonstration shows an automated action, do not present it as evidence that a human investigated that particular event. Request the relevant evidence for the contracted service.",
-          "Also test the business handoff. An employee whose laptop is unavailable needs support instructions. IT may need the containment status before attempting repair. The business owner may need to approve a replacement arrangement. A working security console does not by itself demonstrate those steps."
+          "Follow the test through to the employee and IT team. If the laptop becomes unavailable, the employee needs support instructions; IT needs to know its containment status before repair. A business owner may need to approve an alternative way to work. Check those handoffs alongside the console action."
         ]
       },
       {
         "h": "Estimate costs from your environment",
         "ps": [
           "Use the actual device and user population. Include additional devices, unsupported systems, deployment effort and work retained by IT. Ask whether license costs, investigation and routine reporting are included. Clarify the fees for separately scoped recovery or specialist work.",
-          "For an internal arrangement, estimate the recurring work without inventing a guaranteed labor saving. Record the people maintaining enrollment, policies, investigations and evidence. If they already perform those duties, identify whether the proposed change would replace work or add another overlapping process.",
-          "For managed operation, ask what happens when device counts or business requirements change. Compare the service order with the inventory and intended response authority. The cheapest quoted total can be misleading when it excludes an important population or leaves an essential duty unresolved."
+          "For an internal arrangement, estimate the recurring work without assuming a guaranteed labor saving. Identify who maintains enrollment, policies, investigations and evidence. If those people already perform these duties, check whether the proposed change would replace work or add an overlapping process.",
+          "Ask how the managed service handles a change in device counts or business requirements, then compare the service order with your inventory and intended response authority. A low total may exclude an important population or leave an essential duty with nobody assigned to it."
         ]
       },
       {
@@ -9046,14 +9046,14 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Coordinate installation, coexistence and removal with existing IT and the product vendors' current guidance. Avoid an unsupported period with conflicting products or an unnecessary gap in protection. Use a representative pilot before expanding to the eligible population.",
           "Preserve the reporting and incident records the firm needs from the old service. Agree on who removes prior access, who validates the new state and who supports employees during the move. Cancellation and technical handover should be coordinated so the firm knows which service is active at each stage.",
-          "After transition, confirm the accepted device population, policy state, exclusions and escalation contacts. Keep the dated acceptance record. A service agreement proves what was purchased; that record helps establish what was actually deployed and assigned."
+          "After transition, keep a dated acceptance record of the device population, policies, exclusions and escalation contacts. Use it to check what was deployed and assigned against the service agreement's purchased scope."
         ]
       },
       {
         "h": "Choose around the missing responsibility",
         "ps": [
           "If existing IT operates the platform effectively and supplies the required coverage, evidence and response, the firm may need a narrower improvement rather than a wholesale replacement. If nobody owns investigation or urgent containment, address that duty directly. The product name alone cannot settle the choice.",
-          "Leadership should leave the evaluation knowing which devices are covered, which service investigates, what action it can take and who restores business use. Those are practical, verifiable commitments. They support a stronger decision than a claim that a familiar antivirus brand is always sufficient or inherently inadequate."
+          "Leadership should leave the evaluation knowing which devices are covered, which service investigates, what action it can take and who restores business use. Checking those commitments gives the firm a stronger basis for deciding than a claim that a familiar antivirus brand is always sufficient or inherently inadequate."
         ]
       }
     ],
@@ -9069,12 +9069,12 @@ export const refreshedArticles: Article[] = [
     "readMin": 9,
     "lane": "Law Firms",
     "laneTo": "/law-firms",
-    "intro": "A closing or settlement can put a large transfer, several parties, and a hard deadline into one email thread. If a criminal compromises that thread and changes the account number, staff may release the funds before the real client or title company knows anything changed. A known-number callback gives the firm a way to verify the instruction outside the email conversation.",
+    "intro": "A closing or settlement can bring a large transfer and a hard deadline into the same email thread. An attacker who compromises the thread may insert a different account number before the transfer. Calling a trusted number gives the firm a way to verify the actual instruction outside that conversation.",
     "sections": [
       {
         "h": "Why the email can look completely legitimate",
         "ps": [
-          "The FBI describes business email compromise as a request that appears to come from a known source. In a legal payment workflow, the attacker can wait for a real transaction and then introduce a changed account number, a new beneficiary, or pressure to release funds before a deadline.",
+          "The FBI describes business email compromise as a request appearing to come from a known source. In a legal transaction, a criminal may wait until payment is expected, then introduce a new account number or beneficiary. Deadline pressure can make that change easier to accept unless the firm has a verification step outside the thread.",
           "Grammar, logos, signatures, and reply history are weak evidence. A message sent from a compromised real mailbox may pass normal email-authentication checks. The control therefore cannot depend on a staff member noticing a visual clue that may not exist."
         ]
       },
@@ -9082,7 +9082,7 @@ export const refreshedArticles: Article[] = [
         "h": "Write the payment rule before the matter becomes urgent",
         "ps": [
           "At intake or the start of the payment process, record a known-good phone number for every party authorized to give or change instructions. Store it in the matter file or another controlled record. Do not wait for a change request to decide which number is trustworthy.",
-          "Name the roles that can receive instructions, perform the callback, approve a release, and resolve an exception. Set a dual-approval threshold based on the firm's transaction profile and insurer or client requirements. The rule should also state that urgency, seniority, and a familiar voice do not waive verification."
+          "Name who receives instructions, performs the callback, approves release and resolves exceptions. Set a dual-approval threshold using the firm's transactions and insurer or client requirements. Make clear that urgency, seniority and a familiar voice do not waive verification."
         ]
       },
       {
@@ -9097,14 +9097,14 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Test the procedure with an authorized simulation and include the awkward cases: a partner asks to skip the rule, the usual contact is unavailable, or the change arrives minutes before a cutoff. The drill should test whether the process survives pressure, not whether one person can spot a fake email."
+          "Rehearse an authorized simulation with cases that create pressure: a partner asks to skip verification, the usual contact is unavailable or a change arrives near cutoff. Check whether staff can follow the payment process in those circumstances. Spotting a fake email is only part of the exercise."
         ]
       },
       {
         "h": "What email controls can and cannot do",
         "ps": [
           {
-            "text": "SPF, DKIM, and DMARC can make unauthorized use of the firm's exact domain harder. Managed filtering, threat protection, reporting, and triage can reduce the malicious messages that reach staff. Neither control can make a payment change trustworthy, and neither stops every request sent from a compromised real account or a convincing lookalike domain.",
+            "text": "SPF, DKIM, and DMARC can make unauthorized use of the firm's exact domain harder. Managed filtering, threat protection, reporting, and triage can reduce the malicious messages that reach staff. These controls cannot make a payment change trustworthy, and they do not stop every request sent from a compromised real account or a convincing lookalike domain.",
             "links": [
               {
                 "phrase": "Managed filtering",
@@ -9112,7 +9112,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Use technical controls to reduce exposure and the callback to authorize the money. Keeping those jobs separate prevents the firm from treating an email-security pass as approval of a financial instruction."
+          "Use technical controls to reduce exposure and the callback to authorize the payment. Keeping those jobs separate prevents the firm from treating an email-security pass as approval of a financial instruction."
         ]
       },
       {
@@ -9125,9 +9125,9 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Treat the instruction as a financial decision",
         "ps": [
-          "The payment control begins before the suspicious message. Identify the matters in which the firm receives, verifies or releases money, and map the people involved. A lawyer, assistant, accounting employee, client and outside closing party may each see a different part of the transaction. The process needs to identify which person has authority to change instructions and which person has authority to release funds.",
-          "Do not let an email thread become the sole record of that authority. At intake, document the approved contacts and the agreed verification route. Tell the client how the firm handles payment instructions and changes. The objective is to make an unexpected change a defined exception requiring verification, rather than a routine edit someone makes under deadline pressure.",
-          "A callback also needs an appropriate human process. Calling a known number is useful only if the person reached can authorize the instruction and the verifier confirms the relevant details. A rushed call that asks only whether the recipient sent an email leaves room for misunderstanding. Use the agreed record and read back the details necessary to approve the actual transfer."
+          "Map who receives instructions, verifies them and releases funds across the firm's matters. Lawyers, assistants, accounting staff, clients and closing parties may each see only part of the transaction. Distinguish authority to change instructions from authority to release money so one confirmation does not stand in for both.",
+          "At intake, keep approved contacts and the verification route in a controlled record beyond the email thread. Explain to clients how the firm handles instructions and changes. A changed instruction then has a defined verification step even when the matter is close to its deadline.",
+          "On the callback, confirm that the person reached is authorized and read back the details needed to approve the actual transfer. Asking only whether they sent an email leaves the instruction itself uncertain. Use the agreed record to verify the beneficiary and payment details."
         ]
       },
       {
@@ -9142,14 +9142,14 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "For your own practice, useful operating data may be much simpler: how many changes were independently verified, how many exceptions occurred and how many releases lacked the required approval record. These measures identify whether the procedure is being followed. They are not a claim about how many attacks were prevented, because the firm may not know which unverified requests would have been fraudulent."
+          "Track how many instruction changes were independently verified, how many exceptions occurred and which releases lacked approval records. Those measures show whether the procedure is followed. They cannot count prevented attacks when the firm does not know which unverified requests would have been fraudulent."
         ]
       },
       {
         "h": "Record a verification trail without spreading sensitive details",
         "ps": [
           "Limit access to bank details and verification records to the people who need them. The audit trail can reference the controlled instruction rather than copying full account information into every status email. Follow the firm's records and confidentiality requirements for storage. This article supplies an operating pattern, not a determination of trust-account rules for a jurisdiction.",
-          "Make sure the record connects the approval to the version actually executed. If someone verifies one account and a later message supplies another, the earlier verification should not silently authorize the replacement. Treat the new instruction as a new decision. Similarly, a successful callback from a prior matter is not evidence that a changed instruction in this matter has been approved."
+          "Connect the approval record to the instruction actually executed. A later account-number change needs new verification; approval of the earlier account does not transfer to it. The same applies across matters: a callback for a prior matter cannot approve changed instructions in this one."
         ],
         "table": {
           "caption": "Record a verification trail without spreading sensitive details",
@@ -9190,9 +9190,9 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Plan for the cases that break the routine",
         "ps": [
-          "The usual contact may be unavailable near a payment cutoff. The approved response is to use the established alternate verification route or delay the release until authorized verification is complete. Create that route before a deadline. Staff should not have to invent a trustworthy phone number by searching an urgent email or following a link from the same request.",
+          "Establish an alternate verification route before a payment deadline. If the usual contact is unavailable, use that route or delay release until authorized verification is complete. Staff should not have to find a trustworthy number in the urgent request or a link it supplies.",
           "A senior partner may ask to skip the step for an important client. Decide who can approve an exception and what independent evidence is required. An exception should be a recorded business decision, not an undocumented shortcut. Where the firm's rule prohibits bypassing verification, leadership needs to support staff who pause the transaction.",
-          "A familiar voice or video call can add confidence without establishing authority. If the request initiates an unusual payment or changes the beneficiary, follow the independently established process. Staff should not be expected to diagnose synthetic audio under pressure. The business control is the approved route, authorized person and recorded instruction."
+          "Follow the independently established process even when a voice or video call sounds familiar. For an unusual payment or beneficiary change, the firm needs an authorized person and verified instruction through the approved route. Staff should not have to diagnose synthetic audio to decide whether to release funds."
         ]
       },
       {
@@ -9215,7 +9215,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Assign parallel work under the incident plan. The payment owner handles the bank contact, authorized IT and security personnel investigate account access, and leadership engages the appropriate insurer and advisers. Preserve messages, relevant logs and the sequence of decisions. Avoid making unsupported statements about responsibility or recoverability while the facts are still developing.",
+          "Use the incident plan to assign work in parallel. The payment owner contacts the bank, authorized IT and security personnel investigate access, and leadership engages the insurer and appropriate advisers. Preserve messages, relevant logs and decisions while the facts develop; responsibility and recoverability may still be uncertain.",
           "Notify affected parties through trusted channels following the approved advice. If a compromised account is still under investigation, do not use it as the only route for sensitive instructions about the incident. Explain confirmed facts and required actions clearly. Record what was communicated and by whom."
         ]
       },
@@ -9223,7 +9223,7 @@ export const refreshedArticles: Article[] = [
         "h": "Test the protocol with a short exercise",
         "ps": [
           "Choose a harmless scenario with a last-minute beneficiary change and an unavailable primary contact. Ask staff to show the trusted record, verification route, approval and decision to pause or release. Include the payment operator so the exercise tests the full chain rather than stopping when someone spots the problem.",
-          "Review missing records and ambiguous authority afterward. Assign a specific correction, such as an alternate verified contact or a clearer approval threshold. Repeat the affected step once the correction is implemented. A completed training session is evidence of participation; a tested payment process provides more useful evidence of how the firm would handle the request."
+          "After the exercise, correct missing records and unclear authority, such as an absent alternate contact or ambiguous approval threshold. Repeat the affected step once the fix is in place. The exercise record should show how the payment process worked, as well as who attended training."
         ]
       }
     ],
@@ -9242,7 +9242,7 @@ export const refreshedArticles: Article[] = [
     "lane": "Accounting Firms",
     "laneTo": "/accounting-firms",
     "intro": {
-      "text": "A generic Written Information Security Plan can create a second problem during a breach or review: it may claim safeguards that the firm never implemented and omit the systems that actually hold client tax data. The IRS says tax professionals must maintain a WISP, and FTC guidance identifies tax-preparation firms among covered financial institutions. IRS WISP guidance, FTC Safeguards Rule guidance. The document needs to describe the practice as it operates today.",
+      "text": "A generic Written Information Security Plan can promise safeguards your firm has not implemented while missing systems that hold client tax data. Build the plan around the practice today so its instructions match its records. The IRS says tax professionals must maintain a WISP, and FTC guidance identifies tax-preparation firms among covered financial institutions. The IRS WISP guidance and FTC Safeguards Rule guidance provide the starting requirements; your own systems and procedures supply the details.",
       "links": [
         {
           "phrase": "IRS WISP guidance",
@@ -9260,7 +9260,7 @@ export const refreshedArticles: Article[] = [
         "h": "Why the plan needs current facts",
         "ps": [
           {
-            "text": "IRS Publication 5708 supplies a starting outline and sample material. It expressly describes the material as a starting aid rather than a substitute for developing a plan around the firm’s own needs. Treat the template as a set of questions to resolve, not as evidence that the listed safeguards operate.",
+            "text": "IRS Publication 5708 offers an outline and sample material as a starting aid. The firm still needs a plan built around its own needs. Work through the template's questions and check whether each listed safeguard actually operates before putting it into your WISP.",
             "links": [
               {
                 "phrase": "IRS Publication 5708",
@@ -9268,7 +9268,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "A WISP should be appropriate to the size and complexity of the firm and the sensitivity of the customer information it handles. A five-person tax practice does not need the bureaucracy of a national firm, but it does need a plan that accurately describes its own safeguards."
+          "Match the WISP to the firm's size, complexity and the sensitivity of its customer information. A five-person tax practice can use a simpler process than a national firm, but both need an accurate description of the safeguards they operate."
         ]
       },
       {
@@ -9297,7 +9297,7 @@ export const refreshedArticles: Article[] = [
         "h": "Document service providers, testing, and response",
         "ps": [
           "The IRS checklist includes selecting service providers that maintain safeguards for customer information. Record what each provider handles, the relevant contract or assurance evidence, the responsible internal owner, and how the relationship is reviewed.",
-          "State how the firm checks whether safeguards still work. That can include account reviews, device-coverage checks, training records, backup restoration tests, phishing reporting, and an annual tabletop. Add a response path for a suspected breach that names the insurer, legal contacts and technology providers. Have the appropriate adviser determine applicable IRS, FTC, state and other reporting duties from the actual event."
+          "Describe how the firm checks account access, device coverage, staff training and backup restoration, as relevant to its safeguards. Include phishing reporting and an annual tabletop where those are part of the program. For a suspected breach, name the insurer, legal contacts and technology providers in the response path. The appropriate adviser should determine IRS, FTC, state and other reporting duties from the event's facts."
         ]
       },
       {
@@ -9318,7 +9318,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Check the applicability and scope",
         "ps": [
-          "Have the responsible adviser confirm which requirements apply to the firm's activities and information. Tax preparation, bookkeeping and other advisory work should not be collapsed into one assumed legal category without review. The plan should identify the actual activities it describes, including seasonal services and work performed through outside providers.",
+          "Ask the responsible adviser to confirm requirements for the firm's actual activities and information. Tax preparation, bookkeeping and advisory work can raise different applicability questions. Identify seasonal services and work handled by outside providers too, so the plan's legal scope follows the practice it describes.",
           "The FTC guidance also discusses limited exemptions from certain provisions for institutions maintaining customer information concerning fewer than 5,000 consumers. That is a specific applicability question, not a general exemption from maintaining a security program. Ask the adviser to identify the provisions relevant to your firm and record the determination. Do not infer an exemption from the number of employees.",
           "Keep requirements separate from the firm's additional operating practices. A quarterly meeting or a particular product may be useful without being a universal legal mandate. Label the source of each material requirement so future reviewers can distinguish law, client terms, insurer questions and a management decision."
         ]
@@ -9326,16 +9326,16 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Build a map of client information",
         "ps": [
-          "Start with a representative client engagement. Follow intake through document exchange, tax preparation, review, filing, storage and eventual disposition. Identify the systems, people and providers involved. Include paper and temporary files where they contain relevant information. Include intake files, working papers and filing records in the map.",
+          "Trace a representative engagement through intake, document exchange, preparation, review, filing, storage and disposition. Identify the people, systems and providers involved, including paper and temporary files. Map intake files, working papers and filing records so the review accounts for information held at each stage.",
           "For each location, name the business owner and technical administrator. Record the approved users and the purpose of access. Separate the authoritative record from working copies, email attachments and downloads. A clear map makes it easier to review both security and retention without assuming that deleting one copy disposes of all copies.",
-          "Review remote and seasonal work explicitly. A temporary employee may use a different device or have access created shortly before a deadline. Confirm the approved provisioning and departure process. The WISP should describe the safeguards that apply during the busiest period, not only the quieter permanent-staff arrangement."
+          "Review provisioning and departures for seasonal and remote staff. A temporary employee may use a different device or receive access shortly before a deadline. Confirm how the approved safeguards apply to that arrangement and describe it in the WISP, rather than relying on permanent-staff procedures that do not cover the busy period."
         ]
       },
       {
         "h": "Connect a risk to a decision and evidence",
         "ps": [
-          "These are example operating questions. The actual risk assessment should reflect the firm's information and circumstances. Avoid claiming every risk is low because the firm purchased a security stack. A control can address a particular exposure while leaving another workflow unresolved.",
-          "Give each finding a current disposition. It may require corrective work, further investigation or an approved temporary decision. State the action, owner and verification method. If the implementation is planned, describe it as planned. The WISP should not present a future safeguard as already operating."
+          "Use these operating questions as examples when assessing the firm's circumstances. Identify which exposure each safeguard addresses and which workflows still need work. Buying a security stack cannot establish that every risk is low.",
+          "Record the current decision for each finding. It may require corrective work, further investigation or an approved temporary decision. State the action, owner and verification method. If the implementation is planned, describe it as planned. The WISP should not present a future safeguard as already operating."
         ],
         "table": {
           "caption": "Connect a risk to a decision and evidence",
@@ -9378,7 +9378,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Employees need clear actions for receiving documents, reporting suspicious messages, requesting new tools and handling an unavailable approved service. Put the detailed administrative settings in the authorized technical records, while the staff procedure explains the decisions they make during work.",
           "Train using harmless examples from the firm's workflows. A changed payment instruction, an unexpected document link or a request to upload client files to a new AI tool can each test a different decision. Explain the reporting route and reinforce that asking for help is part of the process.",
-          "Record the assigned population and completion. Include new and seasonal staff where relevant. A signed acknowledgment can support the record of instruction, but it does not by itself establish that every technical safeguard operates or that every employee will follow it under pressure."
+          "Keep the training population and completion records, including new and seasonal staff where relevant. A signed acknowledgment helps show that instruction was given. Technical safeguards still need their own operating evidence, and the acknowledgment cannot establish how every employee will respond under pressure."
         ]
       },
       {
@@ -9393,7 +9393,7 @@ export const refreshedArticles: Article[] = [
         "h": "Test the plan against one incident",
         "ps": [
           "Use a tabletop exercise with a defined harmless scenario. Ask staff to show whom they contact, who can authorize containment, who reaches the insurer and who handles the relevant tax or legal reporting advice. Keep contacts available outside an affected mailbox or tenant.",
-          "Record the decisions actually tested and the missing information. If the backup contact lacks authority or the bank number is unavailable, assign a correction. An exercise is useful because it reveals the operating gap, not because attendance establishes comprehensive readiness.",
+          "Record the decisions tested and the information staff could not find. If a backup contact lacks authority or the bank number is unavailable, assign the correction. The exercise identifies those gaps so the firm can address them; attendance alone cannot establish readiness.",
           "Follow up on the corrections and retain the revised contact or procedure. Review related parts of the WISP so the document and operating process agree. A completed change needs evidence appropriate to its purpose."
         ]
       },
@@ -9401,7 +9401,7 @@ export const refreshedArticles: Article[] = [
         "h": "Approve and maintain a supported version",
         "ps": [
           "Give the final plan a version, owner, approval date and next review decision. Preserve prior versions under the firm's records procedure. A future reviewer should be able to see what changed and why, without confusing a current statement with one made in a prior period.",
-          "Review after material changes in staff, platforms, vendors or workflows, as well as at the firm's planned cadence. Use the actual risk findings and test results to update the plan. Avoid expanding the document with generic policies the firm cannot operate. A concise, accurate procedure with supporting evidence is more useful than a broad promise with no assigned owner."
+          "Update the plan using risk findings and test results, both at the planned review cadence and after material staff, platform, vendor or workflow changes. Keep procedures the firm can operate and evidence it can maintain. Generic policies that nobody owns can expand the document while leaving the underlying work unresolved."
         ]
       }
     ],
@@ -9425,7 +9425,7 @@ export const refreshedArticles: Article[] = [
     "hideVisual": true,
     "readingLayout": true,
     "intro": {
-      "text": "A zero-day vulnerability commonly describes a weakness unknown to its vendor or exploited before a fix is available. Terminology can vary, so read the advisory for the actual repair status. A known vulnerability has already been identified, though the affected system may still be unpatched. The terms describe the state of knowledge and repair, not a guarantee about how damaging an attack will be. CISA vulnerability-reporting definitions.",
+      "text": "A known vulnerability has been identified, though an affected system may still need a patch. A zero-day commonly means a weakness unknown to its vendor or exploited before a fix is available; usage varies. Check the advisory's repair status before deciding what to do. The labels describe what is known and whether a repair is available, not how damaging an attack will be. Refer to the CISA vulnerability-reporting definitions when discussing a report with your IT provider.",
       "links": [
         {
           "phrase": "CISA vulnerability-reporting definitions",
@@ -9442,7 +9442,7 @@ export const refreshedArticles: Article[] = [
         "h": "Respond to the advisory with an inventory",
         "ps": [
           {
-            "text": "Microsoft's March 2021 report on HAFNIUM described exploitation of on-premises Exchange Server vulnerabilities and released security updates. That public example shows why identifying the exact product and deployment matters: an advisory about one environment should not be treated as proof that every similarly named cloud service is affected. Microsoft's Exchange report.",
+            "text": "Microsoft's Exchange report from March 2021 described HAFNIUM's exploitation of on-premises Exchange Server vulnerabilities. Microsoft also released security updates. The exact product and deployment matter: an advisory about one environment should not be treated as proof that every similarly named cloud service is affected.",
             "links": [
               {
                 "phrase": "Microsoft's Exchange report",
@@ -9450,7 +9450,7 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Have your IT provider maintain a list of internet-facing systems and their owners. When an advisory appears, IT should establish which versions are affected, read the vendor's instructions and document the immediate action. If a patch is unavailable, use the vendor's supported mitigation where appropriate. Restricting access or disabling an affected feature may interrupt work, so leadership needs to approve the business consequence.",
+          "Keep an inventory of internet-facing systems and their owners with IT. When an advisory arrives, identify affected versions and document the action recommended by the vendor. If there is no patch, evaluate its supported mitigation. Leadership needs to approve any interruption caused by restricting access or disabling a feature.",
           "A temporary filtering rule, sometimes described as virtual patching, only addresses the traffic or exploit path it covers. Ask the responsible specialist what it blocks, what remains exposed and when it should be removed. Do not assume it repairs the software."
         ]
       },
@@ -9459,7 +9459,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Patching closes an identified weakness. It does not prove that a system was never compromised. If the advisory or your monitoring indicates possible exploitation, follow the incident plan and involve the authorized responder before destroying logs or rebuilding affected systems.",
           {
-            "text": "Use threat information as an input to prioritization. CISA's Known Exploited Vulnerabilities catalog identifies vulnerabilities with observed exploitation; it can help IT prioritize applicable findings. Absence from the catalog does not establish safety. CISA KEV catalog.",
+            "text": "Use threat information to help prioritize work. CISA's Known Exploited Vulnerabilities catalog identifies vulnerabilities with observed exploitation. Consult the CISA KEV catalog to help IT prioritize applicable findings; absence from it does not establish safety.",
             "links": [
               {
                 "phrase": "CISA KEV catalog",
@@ -9509,23 +9509,23 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Keep the definitions tied to the advisory",
         "ps": [
-          "Security reporting sometimes uses zero-day to mean a flaw exploited before a fix is available, and sometimes emphasizes that the vendor was previously unaware of it. That vocabulary should not be the basis of your response decision. Read the vendor's current advisory for the affected versions, available fixes, mitigations and any reported exploitation. Record the facts that apply to your own system.",
+          "Check the advisory’s current facts before deciding how to respond. Security reporting uses zero-day both for exploitation before a fix is available and for a flaw previously unknown to the vendor. Whichever usage a headline adopts, your technical owner needs the affected versions, fixes, mitigations and reported exploitation relevant to your system.",
           "A known flaw can still create urgent risk when the affected system is exposed and unpatched. Conversely, a widely reported flaw may not apply to the product version or deployment your firm uses. Avoid asking employees to decide applicability from a headline. The authorized technical owner should establish the exact product and configuration.",
-          "The business owner needs a clear answer: are we affected, what action is underway and what interruption may be required? If applicability is not yet known, report that uncertainty and assign the check. Silence until every detail is resolved can leave leadership unaware of a decision it needs to make."
+          "Give the business owner the facts needed for a decision: whether the firm is affected, what work is underway and what interruption may be required. If applicability is still uncertain, say so and assign the check. Waiting for every detail can leave leadership unaware that its approval is needed."
         ]
       },
       {
         "h": "Read an advisory in a consistent order",
         "ps": [
           "First identify the product and supported versions. Then check prerequisites for exploitation, the systems or features involved and the vendor's prescribed action. Look for updated revisions to the advisory. Early guidance may change as the vendor provides patches, clarifies affected versions or improves detection instructions.",
-          "Next map the affected product to your inventory. Include managed appliances, hosted applications and services operated by outside providers. If a supplier operates the system, ask it to confirm applicability and action through the approved account contact. A supplier's general statement that it takes security seriously does not answer whether your service is affected.",
+          "Map the affected product to the inventory, including managed appliances, hosted applications and services operated by others. For a supplier-operated system, use the approved account contact to request confirmation of applicability and action. A general security assurance cannot tell you whether this particular service is affected.",
           "Finally, determine whether the advisory calls for investigation as well as updating. A patch can prevent a particular future exploit while leaving consequences of an earlier compromise unresolved. Keep the version update, exposure reduction and incident investigation as separate entries when the facts require them. Each should have its own completion evidence."
         ]
       },
       {
         "h": "Prioritize using more than a numerical score",
         "ps": [
-          "Use these factors with the technical severity score, rather than replacing them with a single label. A score describes aspects of a weakness; it does not know how your firm deployed the product or what business process depends on it. Record enough reasoning for another reviewer to understand the priority.",
+          "Use the factors below alongside the technical severity score. The score describes aspects of the weakness; your inventory and business owners establish how the product is deployed and which process depends on it. Record that reasoning so another reviewer can understand the chosen priority.",
           {
             "text": "The CISA KEV catalog supplies evidence of known exploitation. It is one input, not an exhaustive list of every threat relevant to the firm. Federal directive deadlines have their own applicability; do not present them as a universal contractual deadline for private businesses. Your obligations may instead come from the service agreement, client terms or another applicable requirement.",
             "links": [
@@ -9574,15 +9574,15 @@ export const refreshedArticles: Article[] = [
         "h": "Plan temporary mitigation as a temporary decision",
         "ps": [
           "If no patch is available, read the vendor's supported mitigation carefully. It may require disabling a feature, restricting access or changing a configuration. Ask what attack path the measure addresses and what work it interrupts. Document the reason, implementation evidence and remaining exposure.",
-          "Set an owner to watch for the permanent fix. A temporary measure can become an unnoticed permanent configuration when nobody revisits it. When the vendor releases a patch, review whether the measure should remain, change or be removed. Test business behavior afterward and retain the final configuration record.",
-          "If a mitigation cannot be used because the system supports essential work, escalate the decision to leadership with concrete options. Those may include an outage, restricted access, a supported replacement or another vendor-approved approach. A vague acceptance of cyber risk is less useful than a decision naming the affected service, consequence and review date."
+          "Assign someone to watch for the permanent fix and revisit the temporary measure when it arrives. Decide whether the measure should stay, change or be removed, then test business behavior and retain the final configuration record. Without that follow-up, a temporary mitigation may remain indefinitely unnoticed.",
+          "If essential work prevents use of the mitigation, give leadership concrete options for the affected service. These may include an outage, restricted access, a supported replacement or another vendor-approved approach. Record the selected option, consequence and review date so the decision goes beyond a general acceptance of cyber risk."
         ]
       },
       {
         "h": "Treat patching as maintained business infrastructure",
         "ps": [
           {
-            "text": "NIST frames enterprise patching as preventive maintenance, including identification, prioritization, installation and verification. For a small firm, a workable process begins with an owner and a path to an approved change. Emergency advisories should use that process with the required urgency, rather than starting from an unknown inventory.",
+            "text": "NIST frames enterprise patching as preventive maintenance, including identification, prioritization, installation and verification. For a small firm, a workable process begins with an owner and a path to an approved change. Use that process for emergency advisories with the required urgency. The inventory should already be known when an advisory arrives.",
             "links": [
               {
                 "phrase": "preventive maintenance",
@@ -9590,14 +9590,14 @@ export const refreshedArticles: Article[] = [
               }
             ]
           },
-          "Agree on how IT tests important applications, schedules interruption and handles failed installations. Routine maintenance windows help with ordinary updates, but an actively exploited exposed system may need a separate urgent decision. The decision should state the business consequence of acting and of delaying.",
+          "Agree with IT on application tests, interruption scheduling and failed-installation handling. Ordinary updates can use routine maintenance windows; an exposed system under active exploitation may need an urgent decision outside that schedule. Explain the business consequences of both acting and delaying.",
           "Keep unsupported systems visible. A product outside its support period may not receive the required repair. Repeatedly documenting that no patch exists does not resolve the underlying dependency. Put replacement or retirement on the business roadmap, with an owner and a date."
         ]
       },
       {
         "h": "Verify both the change and the remaining situation",
         "ps": [
-          "Ask the technical owner to confirm the installed version or other appropriate configuration evidence after action. Record failures and devices that did not receive the update. A deployment command marked complete can differ from the state of the affected system.",
+          "After the change, have the technical owner verify the installed version or other relevant configuration evidence. Record failed updates and systems that missed the change. A completed deployment command shows that the command ran, not necessarily that the affected system reached the intended state.",
           "If suspected exploitation prompted an incident response, follow the responder's guidance about logs, evidence and recovery. Do not close the incident merely because the current version is patched. The team may still need to assess access, affected information and persistence, based on the product and observed activity.",
           "Give leadership a concise update separating confirmed facts from open questions. State the affected population, completed actions, exceptions and next decision. Avoid promises that the patch makes the entire environment safe. It addresses a specified weakness under the conditions documented by the vendor."
         ]
@@ -9605,8 +9605,8 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Make threat intelligence useful to a small team",
         "ps": [
-          "Assign a person or provider to review advisories for the products the firm actually uses. An unrestricted feed of headlines can create more work than the team can act on. Start with the important internet-facing systems and business platforms, then connect relevant advisories to the inventory and change process.",
-          "Keep the contact route current for outside operators. A remote-access appliance managed by one provider and laptops monitored by another may require coordinated work. The provider seeing an alert does not automatically own the appliance's patching. Confirm the handoff and retain the service response when the affected asset belongs to a supplier's operating scope."
+          "Assign an advisory reviewer for products the firm uses, starting with important internet-facing systems and business platforms. Connect relevant notices to the inventory and change process. An unrestricted headline feed may overwhelm a small team without helping it identify which systems need attention.",
+          "Keep trusted contacts for outside operators current. When one provider manages a remote-access appliance and another monitors laptops, an alert may require a handoff between them. Establish who patches the affected asset and retain the supplier’s service response; the team seeing the alert does not automatically own that work."
         ]
       }
     ],

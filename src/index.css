@@ -2619,7 +2619,7 @@ html[data-theme='light'] .legal-beam {
   padding: 40px 0;
 }
 
-.contact-done h3 {
+.contact-done h2 {
   font-size: 28px;
   color: light-dark(#0c7a44, #7ee0a3);
   margin: 0 0 10px;
@@ -5213,5 +5213,74 @@ a.nav-cta-mobile.action-link:hover {
 @media (min-width: 768px) {
   .article-read-body p.article-table-hint {
     display: none;
+  }
+}
+
+/* Copy-review accessibility: preserve keyboard access on every pointer type. */
+:focus-visible {
+  outline: 2px solid var(--helm-text-strong);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  inset-block-start: 12px;
+  inset-inline-start: 16px;
+  z-index: 10000;
+  padding: 12px 18px;
+  background: var(--helm-surface);
+  color: var(--helm-text-strong);
+  transform: translateY(-180%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.article-checklist {
+  list-style: disc;
+}
+
+ol.article-checklist,
+.article-on-page ol {
+  list-style: decimal;
+}
+
+/* Keep explanatory copy readable; the hero may extend below a short screen. */
+@media (max-width: 700px) {
+  .hero.lane .sub,
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) .sub {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .hero.lane .lead-form-disclosure :is(.lead-form-consent, .lead-form-next),
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) .lead-form-disclosure :is(.lead-form-consent, .lead-form-next) {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .hero.lane .hero-note,
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) .hero-note {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .hero.lane,
+  .hero.lane.hero-fit-dense:not(.lane-hero-decision) {
+    padding-block: 28px 72px;
+  }
+}
+
+/* Stack founder details before long surnames constrain the reading column. */
+@media (max-width: 420px) {
+  .founder-card { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .japandi-home-copy > p { font-size: 16px; line-height: 1.5; }
+  .japandi-home-copy .lead-form-disclosure .lead-form-next,
+  .japandi-home-copy .lead-form-disclosure .lead-form-consent {
+    font-size: 14px; line-height: 1.45;
   }
 }

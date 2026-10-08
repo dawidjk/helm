@@ -137,7 +137,7 @@ export default function ArticlePage() {
               <ol>
                 {a.sections.map((section, index) => (
                   <li key={section.h}>
-                    <a href={`#${sectionId(section.h, index)}`}>{section.h}</a>
+                    <a href={`#${sectionId(section.h, index)}`}>{section.h.replace(/^\d+[.)]\s*/, '')}</a>
                   </li>
                 ))}
               </ol>
@@ -177,13 +177,13 @@ export default function ArticlePage() {
             ))}
           </div>
           <section className="article-trust observe d1" aria-labelledby="article-trust-heading">
-            <h2 id="article-trust-heading">How this guide was checked</h2>
+            <h2 id="article-trust-heading">About this guide</h2>
             <p>
               By <Link to={authorPath}>{authorName}</Link>, first published{' '}
               <time dateTime={a.date}>{displayedDate}</time>
               {displayedUpdatedDate && (
                 <> and materially reviewed on <time dateTime={a.updated}>{displayedUpdatedDate}</time></>
-              )}. We checked the factual guidance against the {support.sources.length} primary or authoritative sources listed below.
+              )}. The references below support this guide’s factual guidance.
             </p>
           </section>
           <section className="article-sources observe d2" aria-labelledby="article-sources-heading">
