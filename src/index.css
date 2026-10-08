@@ -155,6 +155,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   margin: 0;
   background: var(--helm-bg);
@@ -3973,9 +3979,9 @@ a.nav-cta-mobile.action-link:hover {
 
 .japandi-home-hero {
   position: relative;
-  height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
+  height: auto;
   min-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
-  max-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
+  max-height: none;
   display: grid;
   grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
   align-items: center;
