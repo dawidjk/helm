@@ -1,4 +1,4 @@
-import HeroBackdrop from '../components/HeroBackdrop';
+import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Fragment} from 'react';
 import {useLoaderData, Link} from 'react-router-dom';
 import {ActionLink, Band, CtaBand, ScrollCue} from '../components/Site';
@@ -97,7 +97,7 @@ export default function ArticlePage() {
         }}
       />
       <header className={`hero lane brand-hero${isBuyingGuide ? ' article-read-hero' : ''}`}>
-        <HeroBackdrop kind="brand-static" />
+        <BrandHeroBackdrop />
         <div className="wrap article-head">
           <h1 className="reveal d1">{a.title}</h1>
           <div className="article-meta reveal d2">

@@ -1,4 +1,4 @@
-import HeroBackdrop from '../components/HeroBackdrop';
+import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Link} from 'react-router-dom';
 import {Band, CtaBand, DirectionIcon, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
@@ -32,7 +32,7 @@ export default function Pricing() {
         }}
       />
       <header className="hero lane brand-hero pricing-hero">
-        <HeroBackdrop kind="brand-static" />
+        <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">
             Managed protection, with leadership when you need it.

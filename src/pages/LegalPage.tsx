@@ -1,4 +1,4 @@
-import HeroBackdrop from '../components/HeroBackdrop';
+import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import type {LegalDoc} from './legal';
@@ -12,7 +12,7 @@ export default function LegalPage({doc}: {doc: LegalDoc}) {
         path={`/${doc.slug}`}
       />
       <header className="hero lane brand-hero">
-        <HeroBackdrop kind="brand-static" />
+        <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1">{doc.heading}</h1>
           <p className="sub reveal d2">{doc.sub}</p>

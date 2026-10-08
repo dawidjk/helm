@@ -1,4 +1,4 @@
-import HeroBackdrop from '../components/HeroBackdrop';
+import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Band, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import QuizWidget from '../components/QuizWidget';
@@ -12,7 +12,7 @@ export default function Quiz() {
         path="/quiz"
       />
       <header className="hero lane brand-hero">
-        <HeroBackdrop kind="brand-static" />
+        <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">
             How exposed is your business to AI-powered scams?

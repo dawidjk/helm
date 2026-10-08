@@ -38,12 +38,16 @@ function keepOnlyCriticalPreloads(html: string) {
     const pictureHtml = pictureStart >= 0 && pictureEnd >= 0
       ? optimized.slice(pictureStart, pictureEnd)
       : ''
-    const mobileSource = pictureHtml.match(
-      /<source\b(?=[^>]*\bmedia="\(max-width: 700px\)")(?=[^>]*\bsrcset="([^"]+)")[^>]*>/i,
-    )?.[1]
-    const imagePreloads = mobileSource
-      ? `<link rel="preload" as="image" href="${mobileSource}" media="(max-width: 700px)" fetchpriority="high">\n` +
-        `<link rel="preload" as="image" href="${criticalImage}" media="(min-width: 701px)" fetchpriority="high">`
+    const sourceTag = pictureHtml.match(/<source\b[^>]*>/i)?.[0]
+    const sourceMedia = sourceTag?.match(/\bmedia="([^"]+)"/i)?.[1]
+    const sourceSet = sourceTag?.match(/\bsrcset="([^"]+)"/i)?.[1]
+    const sourceSizes = sourceTag?.match(/\bsizes="([^"]+)"/i)?.[1]
+    // Match the picture's width/density selection rather than preloading a
+    // smaller fallback alongside the image selected by a high-DPR browser.
+    const sourceHref = sourceSet?.split(',')[0].trim().split(/\s+/)[0]
+    const imagePreloads = sourceMedia && sourceSet && sourceHref
+      ? `<link rel="preload" as="image" href="${sourceHref}" imagesrcset="${sourceSet}"${sourceSizes ? ` imagesizes="${sourceSizes}"` : ''} media="${sourceMedia}" fetchpriority="high">\n` +
+        `<link rel="preload" as="image" href="${criticalImage}" media="not all and ${sourceMedia}" fetchpriority="high">`
       : `<link rel="preload" as="image" href="${criticalImage}" fetchpriority="high">`
 
     optimized = optimized.replace(

@@ -1,4 +1,4 @@
-import HeroBackdrop from '../components/HeroBackdrop';
+import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {useParams, Link} from 'react-router-dom';
 import {ActionLink, Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
@@ -51,7 +51,7 @@ export default function ProductPage() {
         }}
       />
       <header className="hero lane brand-hero product-hero hero-fit-dense">
-        <HeroBackdrop kind="brand-static" />
+        <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">
             {p.name}: {p.tagline}

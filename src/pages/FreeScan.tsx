@@ -2,7 +2,7 @@ import {Band, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import LeadForm from '../components/LeadForm';
 import PanelVisual from '../components/PanelVisual';
-import HeroBackdrop from '../components/HeroBackdrop';
+import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 
 export default function FreeScan() {
   return (
@@ -13,7 +13,7 @@ export default function FreeScan() {
         path="/free-scan"
       />
       <header className="hero lane brand-hero free-scan-hero hero-fit-dense">
-        <HeroBackdrop kind="brand-static" />
+        <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">
             See whether your public email controls make impersonation easier.

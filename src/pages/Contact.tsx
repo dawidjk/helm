@@ -1,4 +1,4 @@
-import HeroBackdrop from '../components/HeroBackdrop';
+import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {useEffect, useRef, useState} from 'react';
 import {useSearchParams} from 'react-router-dom';
 import {Button} from '@astryxdesign/core/Button';
@@ -125,7 +125,7 @@ export default function Contact() {
         path="/contact"
       />
       <header className="hero lane brand-hero">
-        <HeroBackdrop kind="brand-static" />
+        <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal hero-h1-sm">
             Talk with Helm.

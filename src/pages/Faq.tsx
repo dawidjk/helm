@@ -1,4 +1,4 @@
-import HeroBackdrop from '../components/HeroBackdrop';
+import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {renderParagraph, paragraphText, type Paragraph} from '../lib/richText';
@@ -68,7 +68,7 @@ export default function Faq() {
         }}
       />
       <header className="hero lane brand-hero">
-        <HeroBackdrop kind="brand-static" />
+        <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1">Straight answers.</h1>
           <p className="sub reveal d2">

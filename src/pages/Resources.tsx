@@ -1,4 +1,4 @@
-import HeroBackdrop from '../components/HeroBackdrop';
+import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Link} from 'react-router-dom';
 import {canonicalPath} from '../lib/urls';
 import {Band, CtaBand, DirectionIcon, ScrollCue} from '../components/Site';
@@ -193,7 +193,7 @@ export default function Resources() {
         path="/resources"
       />
       <header className="hero lane brand-hero resources-hero">
-        <HeroBackdrop kind="brand-static" />
+        <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">
             Start with the problem you need to solve.

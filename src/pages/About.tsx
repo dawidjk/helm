@@ -1,4 +1,4 @@
-import HeroBackdrop from '../components/HeroBackdrop';
+import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {siteUrl} from '../lib/urls';
@@ -43,7 +43,7 @@ export default function About() {
         }}
       />
       <header className="hero lane brand-hero">
-        <HeroBackdrop kind="brand-static" />
+        <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-readable">
             Clear security help for businesses without a security department.

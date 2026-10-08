@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom';
-import HeroBackdrop from '../components/HeroBackdrop';
+import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import Meta from '../components/Meta';
 import {ActionLink, Band, ScrollCue} from '../components/Site';
 import './SecureAiAdoption.css';
@@ -15,7 +15,7 @@ export default function SecureAiAdoption() {
         path="/secure-ai-adoption/"
       />
       <header className="hero lane brand-hero hero-fit-dense">
-        <HeroBackdrop kind="brand-static" />
+        <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal hero-h1-sm">Secure AI Adoption</h1>
           <p className="sub reveal d1">

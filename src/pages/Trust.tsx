@@ -1,4 +1,4 @@
-import HeroBackdrop from '../components/HeroBackdrop';
+import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {BOOK_CTA} from './ctaCopy';
@@ -62,7 +62,7 @@ export default function Trust() {
         }}
       />
       <header className="hero lane brand-hero trust-hero">
-        <HeroBackdrop kind="brand-static" />
+        <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-readable">
             Trust and security, answered directly.
