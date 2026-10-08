@@ -45,7 +45,7 @@ walkDir(DIST_DIR, (filePath) => {
         route = route.slice(0, -1);
     }
 
-    if (relativePath === '404.html') return;
+    if (relativePath === '404.html' || relativePath.startsWith('measurement/')) return;
 
     // Only publish lastmod when the page carries a real editorial date. A
     // deploy date is not evidence that the page content changed.
