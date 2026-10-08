@@ -1372,6 +1372,13 @@ body {
 
 .ad-consent a {
   color: var(--helm-accent-text);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.ad-consent a:focus-visible {
+  outline: 2px solid var(--helm-accent-text);
+  outline-offset: 3px;
 }
 
 .ad-consent-actions {
