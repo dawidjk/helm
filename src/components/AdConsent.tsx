@@ -41,9 +41,8 @@ export default function AdConsent() {
       <div>
         <div className="ad-consent-title">Your privacy choice</div>
         <p>
-          Helm can use Meta&apos;s advertising tool to measure visits and show
-          useful follow-up ads. It stays off unless you allow it. We never send
-          your form entries or scanned domain to Meta. <Link to="/privacy/">Details</Link>
+          We use optional cookies to measure visits and show relevant ads.
+          These cookies stay off unless you allow them. <Link to="/privacy/">Details</Link>
         </p>
       </div>
       <div className="ad-consent-actions">
