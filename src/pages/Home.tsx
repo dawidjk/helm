@@ -93,7 +93,7 @@ export default function Home() {
       <section id="services" className="home-service-section" aria-labelledby="home-services-title">
         <div className="home-section-intro">
           <h2 id="home-services-title">Managed protection and security leadership.</h2>
-          <p>Core manages the security layer alongside your IT team. Command adds an ongoing security-program owner. We agree on scope and responsibilities in writing.</p>
+          <p>Core manages the security layer alongside your IT team. With Command, you also have an ongoing owner for your security program. We agree on scope and responsibilities in writing.</p>
         </div>
         <div className="home-comparison">
           <div className="home-service-list">
@@ -102,9 +102,9 @@ export default function Home() {
                 <h3><Link to={canonicalPath(`/${service.slug}`)}>{service.name} <DirectionIcon /></Link></h3>
                 <p className="home-service-fit">{service.slug === 'helm-core'
                   ? 'For businesses that need managed protection while their IT team handles daily operations.'
-                  : 'For firms that need someone to maintain the security roadmap, evidence and leadership reviews.'}</p>
+                  : "For firms that need someone to keep the security roadmap and evidence current and hold leadership reviews."}</p>
                 <p>{service.slug === 'helm-core'
-                  ? 'Managed email, device and identity protection, supported cloud backup, awareness training and digital risk monitoring, with one monthly security report.'
+                  ? "Core includes managed email, device and identity protection, supported cloud backup, awareness training and digital risk monitoring. You receive one monthly security report."
                   : 'Everything in Core, plus virtual chief information security officer (vCISO) leadership, a risk register and a 12-month roadmap. Includes questionnaire responses within agreed limits, quarterly reviews and an annual tabletop exercise.'}</p>
                 <p className="home-service-price">{service.price}</p>
                 <p className="home-service-terms">{service.slug === 'helm-core'
@@ -122,7 +122,7 @@ export default function Home() {
           <section className="home-onboarding" aria-labelledby="home-onboarding-title">
             <h3 id="home-onboarding-title">How work starts</h3>
             <ol>
-              <li><strong>Confirm the fit.</strong> Review your platforms, covered users and devices, business needs, and who handles your IT.</li>
+              <li><strong>Confirm the fit.</strong> Review the platforms you use, the users and devices to be covered, your business needs, and who handles your IT.</li>
               <li><strong>Agree on the scope.</strong> Document deliverables, pricing and responsibilities before work begins.</li>
               <li><strong>Deploy and establish the baseline.</strong> Set up the covered protections and start monthly reporting. Command also includes quarterly leadership reviews.</li>
             </ol>
@@ -133,10 +133,7 @@ export default function Home() {
       <section className="home-ai-section" aria-labelledby="home-ai-title">
         <h2 id="home-ai-title">Secure AI Adoption</h2>
         <div>
-          <p>A separate consulting engagement for New Jersey professional-services firms.
-            Evaluate one recurring internal workflow, review the tools and data it needs,
-            and decide whether a pilot is appropriate. Compare staff effort, checking time,
-            and software costs before deciding what to keep.</p>
+          <p>Secure AI Adoption is a separate consulting engagement for New Jersey professional-services firms. We evaluate one recurring internal workflow and review the tools and data it needs to decide whether a pilot is appropriate. Staff effort, time spent checking the work, and software costs help you decide what to keep.</p>
           <p>Pricing quoted after scoping. Any pilot has a separate scope.</p>
           <div className="home-ai-links">
             <Link to="/secure-ai-adoption/">Explore Secure AI Adoption <DirectionIcon /></Link>
@@ -146,7 +143,7 @@ export default function Home() {
       </section>
 
       <section className="home-proof-section">
-        <blockquote>When a customer or insurer asks what is protected, you should not have to guess.</blockquote>
+        <blockquote>You should be able to explain what is protected when a customer or insurer asks.</blockquote>
         <div className="home-proof-list">
           <span>Cyber-insurance questionnaires</span>
           <span>Payment-verification protocols</span>
@@ -171,7 +168,7 @@ export default function Home() {
       <section className="home-close-section home-scan-preview">
         <div>
           <h2>See what your public domain shows.</h2>
-          <p>The free scan checks public email and web configuration. Confirm your domain in the portal, then read the findings and next steps.</p>
+          <p>The free scan checks public email and web configuration. Confirm your domain in the portal to see the findings and next steps.</p>
           <Scan source="home close" />
           <Link className="home-detail-link" to="/free-scan/">What the scan checks <DirectionIcon /></Link>
         </div>

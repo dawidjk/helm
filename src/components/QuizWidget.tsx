@@ -130,7 +130,7 @@ function getTier(score: number): Tier {
       key: 'risk',
       label: 'At Risk',
       headline: 'Several basic fraud controls are missing',
-      copy: 'A convincing payment request could reach one employee with no required callback, second approval, or written first step. Start with those process gaps before adding more tools.',
+      copy: "A convincing payment request could reach one employee without a required callback or second approval, and without a written first step to follow. Address those process gaps before adding more tools.",
     };
   }
   if (score <= 70) {
@@ -138,14 +138,14 @@ function getTier(score: number): Tier {
       key: 'exposed',
       label: 'Exposed',
       headline: 'Some controls are in place, but important exceptions remain',
-      copy: 'A payment, account, or employee that falls outside the current process may still rely on someone noticing a convincing fake. Review the partial answers first and make the rule consistent.',
+      copy: "Where a payment, account, or employee falls outside your current process, stopping a convincing fake may depend on someone spotting it. Start with the answers marked Partial and apply the rule consistently.",
     };
   }
   return {
     key: 'prepared',
     label: 'Prepared',
     headline: 'Your answers suggest stronger overall readiness',
-    copy: 'Review any answers marked Gap or Partial, and keep your controls current as payment processes, employees, vendors, and AI tools change. Make sure insurance and customer-security answers continue to match the controls the business is using.',
+    copy: "Start with any answers marked Gap or Partial. Keep controls current as your payment processes, employees, vendors, and AI tools change, and check that insurance and customer-security answers still describe the controls your business uses.",
   };
 }
 

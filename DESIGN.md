@@ -270,3 +270,7 @@ The footer is a fixed dark-pine conclusion with a clear Helm identity block, dir
 - **Don't** reuse the homepage sculpture as a generic background for every page.
 - **Don't** turn every section into a rounded card grid or every label into a pill.
 - **Don't** weaken primary lead-form buttons into low-contrast flat fills on elevated or pine backgrounds.
+
+## Copy voice
+
+Read [docs/VOICE.md](docs/VOICE.md) when reviewing or editing Helm copy with Impeccable. Preserve connected explanation and restrained, concrete language while keeping navigation and form states concise. The reference does not change this visual system or any accessibility, responsive, usability, or technical requirements.

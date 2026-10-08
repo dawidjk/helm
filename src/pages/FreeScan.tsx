@@ -56,12 +56,12 @@ export default function FreeScan() {
           <li className="observe d1">
             <div className="step-dot">1</div>
             <h3>Confirm your domain</h3>
-            <p>Our secure portal opens with your company domain filled in from your email. Confirm the domain to start the scan.</p>
+            <p>Our secure portal fills in your company domain from your email. Confirm the domain there to start the scan.</p>
           </li>
           <li className="observe d2">
             <div className="step-dot">2</div>
             <h3>Your report appears</h3>
-            <p>The report usually appears in about a minute. It explains the findings and next steps for a business owner.</p>
+            <p>The report usually appears in about a minute. It explains what the findings mean and what a business owner can do next.</p>
           </li>
           <li className="observe d3">
             <div className="step-dot">3</div>

@@ -82,9 +82,7 @@ export default function Trust() {
             <div className="trust-summary-intro">
               <h2 id="trust-summary-title">Helm at a glance</h2>
               <p>
-                Before choosing a security provider, consider who delivers
-                the service, what data is stored, and which limitations affect
-                your requirements.
+                Choosing a security provider means checking who delivers the service, what data it stores, and whether its limitations affect your requirements.
               </p>
             </div>
             <div className="trust-summary-grid">
@@ -99,9 +97,7 @@ export default function Trust() {
               <section>
                 <h3>Who delivers it</h3>
                 <p>
-                  Helm is a two-operator team. Platform vendors supply the
-                  detection and response capability; Helm reviews and acts on
-                  alerts during published weekday business hours.
+                  Two people operate Helm. Platform vendors supply the detection and response capability, and Helm reviews and acts on alerts during published weekday business hours.
                 </p>
               </section>
               <section>
@@ -128,17 +124,12 @@ export default function Trust() {
             <section>
               <h2>Who we are</h2>
               <p>
-                Helm Security is a New Jersey LLC with an EIN and business bank
-                account. Kelly and Dawid Kluszczynski are the entire operating
-                team today. Dawid is
-                VP, Product &amp; Delivery. Kelly Kluszczynski is VP, Growth
-                &amp; Partnerships. Material pricing, scope, legal, and service
-                commitments require both of them to agree.
+                Helm Security is a New Jersey LLC with an EIN and business bank account. Kelly and Dawid Kluszczynski are the entire operating team today: Dawid is VP, Product &amp; Delivery, and Kelly is VP, Growth &amp; Partnerships. Both must agree to material pricing, scope, legal, and service commitments.
               </p>
             </section>
 
             <section>
-              <h2>How we deliver, and who actually does the monitoring</h2>
+              <h2>How we deliver the service and who does the monitoring</h2>
               <p>
                 Helm configures and manages technology supplied by specialist
                 vendors. We do not claim to have built the underlying detection
@@ -158,11 +149,7 @@ export default function Trust() {
             <section>
               <h2>What you can verify before buying</h2>
               <p>
-                We will show you a sample scan report, the relevant statement
-                of work, and a redacted example of the deliverable before you
-                sign. We publish our starting prices and our known control
-                gaps. We do not publish invented testimonials, customer
-                counts, or certifications we have not earned.
+                Before you sign, we will show you a sample scan report, the relevant statement of work, and a redacted example of the deliverable. Our starting prices and known control gaps are public. We do not publish invented testimonials, customer counts, or certifications we have not earned.
               </p>
               <p>
                 Vendor platform names describe who supplies the underlying
@@ -194,7 +181,7 @@ export default function Trust() {
 
             <section>
               <h2>Our subprocessors</h2>
-              <p>Who else touches your data, and what each one actually sees.</p>
+              <p>These providers handle your data as part of the service. Each has a different role and sees different information.</p>
               <div className="subproc-scroll">
                 <table className="subproc-table">
                   <thead>
@@ -218,7 +205,7 @@ export default function Trust() {
             </section>
 
             <section>
-              <h2>Access control on our side</h2>
+              <h2>How portal access works</h2>
               <p>
                 Portal users sign in through a one-time link sent by email, so
                 there is no portal password to reuse or expose. Sessions are

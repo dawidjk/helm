@@ -35,24 +35,24 @@ export const productList: Product[] = [
     features: [
       {
         title: 'Email and human-risk protection',
-        body: 'Managed filtering, phishing and impersonation detection, employee reporting, triage, simulations, and awareness learning protect both the inbox and the person making the decision.',
+        body: "Email protection includes managed filtering, phishing and impersonation detection, employee reporting, and triage. Simulations and awareness learning help protect the person making the decision as well as the inbox.",
       },
       {
         title: 'Device and identity monitoring',
-        body: 'A vendor-operated 24/7 security operations center monitors covered Windows and Mac workstations and supported identity activity, investigates real threats, and can contain covered devices when required.',
+        body: "A vendor-operated 24/7 security operations center monitors covered Windows and Mac workstations and supported identity activity. The team investigates real threats and can contain covered devices when required.",
       },
       {
         title: 'Cloud backup and digital risk protection',
-        body: 'Supported Microsoft 365 or Google Workspace data is backed up, while external monitoring looks for impersonation, lookalike domains, and other public risks tied to your organization.',
+        body: "Supported Microsoft 365 or Google Workspace data is backed up. External monitoring looks for impersonation, lookalike domains, and other public risks tied to your organization.",
       },
       {
         title: 'One monthly security report',
-        body: "Helm combines the available security signals in one automated monthly report. Leaders can see what is covered, what changed, and which actions the business or its IT provider needs to take.",
+        body: "Helm brings the available security signals together in one automated monthly report. It shows leaders what is covered, what changed, and which actions the business or its IT provider needs to take.",
       },
     ],
     how: [
-      {num: '1', title: 'Confirm the standard fit', body: "We confirm user count, supported email and identity platforms, covered workstations, who handles your IT, and any exclusions before an order is signed."},
-      {num: '2', title: 'Deploy the protection', body: "Helm follows a standard onboarding process across the security platforms, records the covered scope, and provides the first evidence baseline."},
+      {num: '1', title: 'Confirm the standard fit', body: "Before you sign an order, we confirm the user count, supported email and identity platforms, covered workstations, who handles your IT, and any exclusions."},
+      {num: '2', title: 'Deploy the protection', body: "Helm follows a standard onboarding process across the security platforms. We record what is covered and provide the first evidence baseline."},
       {num: '3', title: 'Monitor and report', body: 'The platforms operate continuously within their stated scope. Helm reviews exceptions and sends one monthly report. Quarterly leadership reviews and open-ended advisory work are not included.'},
     ],
     faqs: [
@@ -60,7 +60,7 @@ export const productList: Product[] = [
       {q: 'What is included?', a: 'Core includes managed email protection, device detection and response, supported identity protection, cloud productivity backup, security-awareness learning and simulations, digital risk protection, and an automated monthly security report.'},
       {q: 'How many devices are included?', a: 'Core includes up to two eligible Windows or Mac workstations per covered user. Additional eligible workstations are $12 each per month. Servers, phones, tablets, network equipment, and specialized systems require separate written scope.'},
       {q: 'Does Helm staff the 24/7 security operations center?', a: 'No. Specialist vendor security operations teams provide the continuous monitoring and containment behind the covered services. Helm owns deployment, account management, coordination, and the reporting relationship.'},
-      {q: 'Does Core include quarterly reviews or a vCISO?', a: 'No. Core is intentionally standardized and low touch. Choose Helm Command when the organization needs a maintained risk register, leadership cadence, roadmap, questionnaire response, or ongoing security-program ownership.'},
+      {q: 'Does Core include quarterly reviews or a vCISO?', a: "No. Core is a standardized, low-touch service. Choose Helm Command when your organization needs a maintained risk register, leadership cadence, roadmap, questionnaire response, or ongoing security-program ownership."},
     ],
   },
   {
@@ -71,43 +71,43 @@ export const productList: Product[] = [
     metaTitle: 'Helm Command: vCISO Leadership and Managed Security',
     tagline: 'vCISO leadership and managed security.',
     desc: 'Helm Command combines virtual chief information security officer (vCISO) leadership with the complete Helm Core protection stack. Helm maintains your risk register, roadmap, evidence, questionnaire responses, and quarterly leadership reviews while your existing IT provider or internal team runs general IT and completes assigned remediation.',
-    bestFor: 'organizations with 75 to 250 people that need an accountable security-program owner, executive cadence, and evidence that stays ready',
+    bestFor: "organizations with 75 to 250 people that need an accountable security-program owner, regular leadership reviews, and evidence kept up to date",
     metaDesc:
       'Helm Command combines vCISO leadership with managed security, risk planning and evidence upkeep for $8,000 to $15,000 per month. Covered Core protection is included.',
     price: '$8,000 to $15,000 / month',
     term: '36-month initial term',
-    priceDetail: 'All-in monthly pricing is confirmed after a fit and complexity review. The price includes the covered Helm Core stack and adjusts 6% on each service anniversary. Implementation scope and any separately authorized remediation are written before work starts.',
+    priceDetail: "We confirm the all-in monthly price after reviewing fit and complexity. It includes the covered Helm Core stack and adjusts 6% on each service anniversary. Before work starts, we write down the implementation scope and any remediation you have authorized separately.",
     features: [
       {
         title: 'Everything in Helm Core',
-        body: 'Email, device, identity, backup, awareness, and digital risk protection are managed as the operating foundation, with the exact covered users, devices, platforms, and exclusions documented in the order.',
+        body: "Command includes managed email, device, identity, backup, awareness, and digital risk protection through Helm Core. The order documents exactly which users, devices, and platforms are covered, along with the exclusions.",
       },
       {
         title: 'A maintained risk register and 12-month roadmap',
-        body: 'Each important security issue has an owner, due date, business reason, and evidence status. Helm keeps the working plan current so unresolved work does not disappear into an old assessment or crowded IT queue.',
+        body: "Each important security issue has an owner and a due date, along with its business reason and evidence status. Helm keeps that working plan current so unresolved work stays visible instead of getting lost in an old assessment or a crowded IT queue.",
       },
       {
         title: 'Questionnaire and insurance response with evidence',
         body: 'Helm drafts bounded client security questionnaires and annual insurance responses from verified program evidence. Your organization reviews and owns every final representation. Turnaround and volume are defined in the service order.',
       },
       {
-        title: 'Quarterly leadership cadence and incident readiness',
-        body: 'Quarterly reviews, an annual tabletop, and a written incident path keep leaders, internal IT, and outside providers working from the same priorities before a serious event forces coordination under pressure.',
+        title: "Quarterly leadership reviews and incident readiness",
+        body: "Quarterly reviews give leaders, internal IT, and outside providers shared priorities. An annual tabletop and a written incident path help them prepare to coordinate before a serious event puts them under pressure.",
       },
       {
-        title: 'Coordination without an IT takeover',
+        title: "Coordination with your existing IT team or provider",
         body: "Helm follows up on security actions with the responsible teams. Your existing provider or internal staff still owns help desk, administration, patching, procurement, and routine remediation unless a separate written scope says otherwise.",
       },
     ],
     how: [
-      {num: '1', title: 'Confirm the fit', body: 'We review the business pressure, leadership sponsor, current IT owner, required frameworks, systems in scope, and coordination load. Both sides agree on boundaries before detailed design.'},
-      {num: '2', title: 'Build the program baseline', body: "Helm deploys the covered Core stack, documents responsibilities and evidence, establishes the risk register, and sets the order of work for the first 12-month roadmap."},
-      {num: '3', title: 'Run the cadence', body: 'Helm maintains the evidence and roadmap, prepares the agreed questionnaire responses, leads quarterly leadership reviews, and tracks assigned remediation to a named owner.'},
+      {num: '1', title: 'Confirm the fit', body: "We review the business pressure and identify the leadership sponsor and current IT owner. We also review the required frameworks, systems in scope, and coordination load. Both sides agree on the boundaries before detailed design starts."},
+      {num: '2', title: 'Build the program baseline', body: "Helm deploys the covered Core stack and documents responsibilities and evidence. We establish the risk register and put the work in priority order for the first 12-month roadmap."},
+      {num: '3', title: 'Run the cadence', body: "Helm keeps the evidence and roadmap current and prepares the agreed questionnaire responses. We lead quarterly leadership reviews and track assigned remediation to a named owner."},
     ],
     faqs: [
       {q: 'Does Helm Command replace our MSP or internal IT team?', a: 'No. Command is the accountable security-program layer. Your MSP or internal IT team keeps responsibility for help desk, administration, patching, procurement, backup operations outside the covered service, and other routine IT work.'},
-      {q: 'Does Command include vCISO leadership?', a: 'Yes. Command includes virtual chief information security officer (vCISO) leadership, the covered Helm Core stack, a maintained risk and decision register, a prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance response, quarterly leadership reviews, an annual tabletop, and coordination with the named IT owner.'},
-      {q: 'Why is Command priced as a range?', a: 'The work depends on operating complexity, required control coverage, locations, systems, and coordination load rather than headcount alone. Helm confirms one all-in monthly price after the fit review.'},
+      {q: 'Does Command include vCISO leadership?', a: "Yes. Command includes virtual chief information security officer (vCISO) leadership and the covered Helm Core stack. It also includes a maintained risk and decision register, a prioritized 12-month roadmap, evidence upkeep, and bounded questionnaire and insurance response. Quarterly leadership reviews, an annual tabletop, and coordination with the named IT owner are included."},
+      {q: 'Why is Command priced as a range?', a: "Headcount is one part of the work. Operating complexity, required control coverage, locations, systems, and coordination load also affect the price. Helm confirms one all-in monthly price after the fit review."},
       {q: 'Does Helm certify compliance or guarantee an insurance outcome?', a: 'No. Helm helps document the current program, evidence, and gaps. Independent assessors, regulators, insurers, and customers make their own decisions, and your organization owns every final attestation.'},
       {q: 'Does Command include unlimited support or remediation?', a: 'No. Command includes the written program cadence and coordination scope. Help desk, forensic response, breach counsel, routine IT work, and hands-on remediation remain with the responsible provider or require a separate written authorization.'},
     ],

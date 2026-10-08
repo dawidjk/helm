@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-19T02:08:08Z",
+  "generatedAt": "2026-10-08T18:02:54.419891Z",
   "title": "Design System: Helm Security Marketing Site",
   "extensions": {
     "colorMeta": {
@@ -110,7 +110,7 @@
         ]
       },
       "pine-field": {
-        "role": "primary",
+        "role": "secondary",
         "displayName": "Pine Field",
         "canonical": "light-dark(#214b3b, #cfc1a7)",
         "tonalRamp": [
@@ -254,6 +254,16 @@
         "name": "industry-context",
         "value": "0.9s–48s coordinated loops",
         "purpose": "Code-native Aero, Skyline, law, accounting, medical and dental, and Construction scenes on matching industry heroes only; paused off-screen and static under reduced motion."
+      },
+      {
+        "name": "scroll-cue",
+        "value": "2.4s ease-in-out",
+        "purpose": "6px scroll-cue bob only under prefers-reduced-motion: no-preference (src/index.css)."
+      },
+      {
+        "name": "reduced-scroll",
+        "value": "auto",
+        "purpose": "Root scrolling is auto under prefers-reduced-motion: reduce in the isolated accessibility baseline; retain this preference when integrating."
       }
     ],
     "breakpoints": [
@@ -272,6 +282,18 @@
       {
         "name": "wide-stack",
         "value": "980px"
+      },
+      {
+        "name": "lane-fit-stack",
+        "value": "820px"
+      },
+      {
+        "name": "compact-content",
+        "value": "420px"
+      },
+      {
+        "name": "small-phone",
+        "value": "390px"
       }
     ]
   },
@@ -282,7 +304,7 @@
       "refersTo": "button-primary",
       "description": "The calm, high-contrast action used for scans, founder contact, and form submission.",
       "html": "<button class=\"ds-btn-primary\">Get my free scan</button>",
-      "css": ".ds-btn-primary { min-height: 52px; padding: 0 22px; border: 1px solid light-dark(#17382c,#ead9bc); border-radius: 12px; background: light-dark(#214b3b,#d2b993); color: light-dark(#fffdf7,#132019); font: 650 16px/1 Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; box-shadow: 0 12px 28px -14px light-dark(rgba(20,48,37,.9),rgba(0,0,0,.92)); cursor: pointer; transition: transform 180ms ease,box-shadow 180ms ease; } .ds-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 16px 34px -14px light-dark(rgba(20,48,37,.95),rgba(0,0,0,.96)); } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 4px light-dark(rgba(156,127,91,.25),rgba(210,185,147,.22)),0 16px 34px -14px light-dark(rgba(20,48,37,.95),rgba(0,0,0,.96)); } .ds-btn-primary:active { transform: translateY(0); }"
+      "css": ".ds-btn-primary { min-height: 52px; padding: 0 22px; border: 1px solid light-dark(#17382c,#ead9bc); border-radius: 12px; background: light-dark(#214b3b,#d2b993); color: light-dark(#fffdf7,#132019); font: 650 16px/1 Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; box-shadow: 0 12px 28px -14px light-dark(rgba(20,48,37,.9),rgba(0,0,0,.92)); cursor: pointer; transition: transform 180ms ease,box-shadow 180ms ease; } .ds-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 16px 34px -14px light-dark(rgba(20,48,37,.95),rgba(0,0,0,.96)); } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 4px light-dark(rgba(156,127,91,.25),rgba(210,185,147,.22)),0 16px 34px -14px light-dark(rgba(20,48,37,.95),rgba(0,0,0,.96)); } .ds-btn-primary:active { transform: translateY(0); } .ds-btn-primary:focus-visible { outline:2px solid light-dark(#16211a,#f7f3ea); outline-offset:4px; }"
     },
     {
       "name": "Text Field",
@@ -290,15 +312,15 @@
       "refersTo": "input",
       "description": "A quiet paper-surface field with warm-oak focus feedback.",
       "html": "<label class=\"ds-field\"><span>Work email</span><input type=\"email\" placeholder=\"you@company.com\"></label>",
-      "css": ".ds-field { display:grid; gap:8px; color:light-dark(#263129,#e7e9e2); font:600 14px/1.4 Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; } .ds-field input { width:100%; min-height:52px; box-sizing:border-box; padding:13px 16px; border:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); border-radius:12px; background:light-dark(#f7f3eb,#18221b); color:light-dark(#16211a,#f7f3ea); font:400 16px/1.4 Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; outline:none; transition:border-color 180ms ease,box-shadow 180ms ease; } .ds-field input::placeholder { color:light-dark(#6a756c,#99a59c); } .ds-field input:hover { border-color:light-dark(rgba(156,127,91,.55),rgba(210,185,147,.48)); } .ds-field input:focus-visible { border-color:light-dark(#9c7f5b,#d2b993); box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.17),rgba(210,185,147,.15)); }"
+      "css": ".ds-field { display:grid; gap:8px; color:light-dark(#263129,#e7e9e2); font:600 14px/1.4 Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; } .ds-field input { width:100%; min-height:52px; box-sizing:border-box; padding:13px 16px; border:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); border-radius:12px; background:light-dark(#f7f3eb,#18221b); color:light-dark(#16211a,#f7f3ea); font:400 16px/1.4 Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; outline:none; transition:border-color 180ms ease,box-shadow 180ms ease; } .ds-field input::placeholder { color:light-dark(#263129,#e7e9e2); } .ds-field input:hover { border-color:light-dark(rgba(156,127,91,.55),rgba(210,185,147,.48)); } .ds-field input:focus-visible { border-color:light-dark(#9c7f5b,#d2b993); box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.17),rgba(210,185,147,.15)); } .ds-field input:focus-visible { outline:2px solid light-dark(#16211a,#f7f3ea); outline-offset:4px; }"
     },
     {
       "name": "Elevated Lead Form",
       "kind": "custom",
       "refersTo": "button-primary",
-      "description": "The first-viewport conversion unit: one work-email field and a visibly elevated action.",
-      "html": "<form class=\"ds-lead-form\"><input aria-label=\"Work email\" type=\"email\" placeholder=\"Work email\"><button type=\"button\">Get my free scan</button><small>Plain-English report in about a minute.</small></form>",
-      "css": ".ds-lead-form { display:flex; flex-wrap:wrap; gap:10px; max-width:620px; font-family:Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; } .ds-lead-form input { width:min(340px,100%); min-height:52px; box-sizing:border-box; padding:0 22px; border:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); border-radius:12px; background:light-dark(#f7f3eb,#18221b); color:light-dark(#16211a,#f7f3ea); font-size:16px; outline:none; transition:border-color 180ms ease,box-shadow 180ms ease; } .ds-lead-form input:focus-visible { border-color:light-dark(#9c7f5b,#d2b993); box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.17),rgba(210,185,147,.15)); } .ds-lead-form button { min-height:52px; padding:0 22px; border:1px solid light-dark(#17382c,#ead9bc); border-radius:12px; background:light-dark(#214b3b,#d2b993); color:light-dark(#fffdf7,#132019); font:650 16px/1 Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; box-shadow:0 12px 28px -14px light-dark(rgba(20,48,37,.9),rgba(0,0,0,.92)); cursor:pointer; transition:transform 180ms ease,box-shadow 180ms ease; } .ds-lead-form button:hover { transform:translateY(-1px); box-shadow:0 16px 34px -14px light-dark(rgba(20,48,37,.95),rgba(0,0,0,.96)); } .ds-lead-form button:focus-visible { outline:none; box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.25),rgba(210,185,147,.22)); } .ds-lead-form small { flex-basis:100%; color:light-dark(#4d5a50,#b7c1b9); font-size:12px; line-height:1.45; }"
+      "description": "Current labelled work-email entry before the protected portal; documentation preview only, no submit behavior.",
+      "html": "<form class=\"ds-lead-form\"><label for=\"ds-work-email\">Work email</label><input id=\"ds-work-email\" name=\"email\" type=\"email\" required autocomplete=\"email\" placeholder=\"Work email\"><button type=\"button\">Get my free scan</button></form>",
+      "css": ".ds-lead-form { display:flex; flex-wrap:wrap; gap:10px; max-width:620px; font-family:Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; } .ds-lead-form input { width:min(340px,100%); min-height:52px; box-sizing:border-box; padding:0 22px; border:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); border-radius:12px; background:light-dark(#f7f3eb,#18221b); color:light-dark(#16211a,#f7f3ea); font-size:16px; outline:none; transition:border-color 180ms ease,box-shadow 180ms ease; } .ds-lead-form input:focus-visible { border-color:light-dark(#9c7f5b,#d2b993); box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.17),rgba(210,185,147,.15)); } .ds-lead-form button { min-height:52px; padding:0 22px; border:1px solid light-dark(#17382c,#ead9bc); border-radius:12px; background:light-dark(#214b3b,#d2b993); color:light-dark(#fffdf7,#132019); font:650 16px/1 Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; box-shadow:0 12px 28px -14px light-dark(rgba(20,48,37,.9),rgba(0,0,0,.92)); cursor:pointer; transition:transform 180ms ease,box-shadow 180ms ease; } .ds-lead-form button:hover { transform:translateY(-1px); box-shadow:0 16px 34px -14px light-dark(rgba(20,48,37,.95),rgba(0,0,0,.96)); } .ds-lead-form button:focus-visible { outline:none; box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.25),rgba(210,185,147,.22)); } .ds-lead-form small { flex-basis:100%; color:light-dark(#4d5a50,#b7c1b9); font-size:12px; line-height:1.45; } .ds-lead-form label { flex-basis:100%; text-align:left; font-size:14px; font-weight:600; line-height:1.4; } .ds-lead-form input::placeholder { color:light-dark(#263129,#e7e9e2); opacity:1; } .ds-lead-form input:focus-visible,.ds-lead-form button:focus-visible { outline:2px solid light-dark(#16211a,#f7f3ea); outline-offset:4px; }"
     },
     {
       "name": "Site Navigation",
@@ -306,7 +328,7 @@
       "refersTo": "nav",
       "description": "A quiet 72px brand bar with a persistent conversion action and compact secondary links.",
       "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-brand\" href=\"#\"><svg viewBox=\"0 0 32 32\" aria-hidden=\"true\"><circle cx=\"16\" cy=\"16\" r=\"13\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"/><circle cx=\"16\" cy=\"16\" r=\"5\" fill=\"currentColor\"/><path d=\"M16 1v6M16 25v6M1 16h6M25 16h6M5.4 5.4l4.2 4.2M22.4 22.4l4.2 4.2M26.6 5.4l-4.2 4.2M9.6 22.4l-4.2 4.2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\"/></svg>Helm</a><div class=\"ds-nav-links\"><a href=\"#\">Industries</a><a href=\"#\">Pricing</a><a class=\"ds-nav-action\" href=\"#\">Free scan</a></div></nav>",
-      "css": ".ds-nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:0 24px; border-bottom:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); background:light-dark(rgba(238,233,223,.96),rgba(15,23,18,.96)); font-family:Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; } .ds-nav a { text-decoration:none; } .ds-nav-brand { display:inline-flex; align-items:center; gap:10px; color:light-dark(#214b3b,#d5c6aa); font:400 20px/1 \"Tenor Sans\",\"Helvetica Neue\",sans-serif; } .ds-nav-brand svg { width:30px; height:30px; } .ds-nav-links { display:flex; align-items:center; gap:24px; } .ds-nav-links>a { color:light-dark(#4d5a50,#b7c1b9); font-size:13px; font-weight:600; } .ds-nav-links>a:hover,.ds-nav-links>a:focus-visible { color:light-dark(#214b3b,#d5c6aa); } .ds-nav-action { display:inline-flex; align-items:center; min-height:44px; padding:0 18px; border-radius:12px; background:light-dark(#214b3b,#d2b993); color:light-dark(#fffdf7,#132019)!important; } .ds-nav-action:focus-visible { outline:none; box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.17),rgba(210,185,147,.15)); }"
+      "css": ".ds-nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:0 24px; border-bottom:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); background:light-dark(rgba(238,233,223,.96),rgba(15,23,18,.96)); font-family:Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; } .ds-nav a { text-decoration:none; } .ds-nav-brand { display:inline-flex; align-items:center; gap:10px; color:light-dark(#214b3b,#d5c6aa); font:400 20px/1 \"Tenor Sans\",\"Helvetica Neue\",sans-serif; } .ds-nav-brand svg { width:30px; height:30px; } .ds-nav-links { display:flex; align-items:center; gap:24px; } .ds-nav-links>a { color:light-dark(#4d5a50,#b7c1b9); font-size:13px; font-weight:600; } .ds-nav-links>a:hover,.ds-nav-links>a:focus-visible { color:light-dark(#214b3b,#d5c6aa); } .ds-nav-action { display:inline-flex; align-items:center; min-height:44px; padding:0 18px; border-radius:12px; background:light-dark(#214b3b,#d2b993); color:light-dark(#fffdf7,#132019)!important; } .ds-nav-action:focus-visible { outline:none; box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.17),rgba(210,185,147,.15)); } .ds-nav-action { border-color:light-dark(#214b3b,rgba(210,185,147,.38)); background:light-dark(#214b3b,rgba(210,185,147,.08)); color:light-dark(#fffdf7,#f2e5cf)!important; box-shadow:none; } .ds-nav-action:hover { background:light-dark(#17382c,rgba(210,185,147,.14)); color:light-dark(#fffdf7,#fff8ec)!important; } .ds-nav a:focus-visible { outline:2px solid light-dark(#16211a,#f7f3ea); outline-offset:4px; }"
     },
     {
       "name": "Status Chip",
@@ -320,22 +342,22 @@
       "kind": "card",
       "refersTo": "card",
       "description": "A restrained paper surface for product and pricing summaries, with lift only when interactive.",
-      "html": "<article class=\"ds-product-card\"><span>Helm Mail</span><h3>Managed email security</h3><p>Clear scope, direct delivery, and published pricing.</p><a href=\"#\">Learn more <svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h12M11 5l5 5-5 5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></article>",
-      "css": ".ds-product-card { display:grid; gap:14px; max-width:360px; box-sizing:border-box; padding:32px; border:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); border-radius:16px; background:light-dark(#f7f3eb,#18221b); color:light-dark(#263129,#e7e9e2); box-shadow:0 18px 42px -36px light-dark(rgba(20,35,27,.38),rgba(0,0,0,.74)); font-family:Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; transition:transform 320ms cubic-bezier(.2,.65,.25,1),border-color 320ms ease,box-shadow 320ms ease; } .ds-product-card>span { color:light-dark(#214b3b,#d5c6aa); font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; } .ds-product-card h3 { margin:0; color:light-dark(#16211a,#f7f3ea); font-size:22px; line-height:1.2; } .ds-product-card p { margin:0; color:light-dark(#4d5a50,#b7c1b9); line-height:1.6; } .ds-product-card a { display:inline-flex; align-items:center; gap:6px; color:light-dark(#214b3b,#d5c6aa); font-size:14px; font-weight:700; text-decoration:none; } .ds-product-card a svg { width:1em; height:1em; transition:transform 220ms cubic-bezier(.16,1,.3,1); } .ds-product-card:hover { transform:translateY(-4px); border-color:light-dark(#9c7f5b,#d2b993); box-shadow:0 28px 64px -42px light-dark(rgba(33,75,59,.65),rgba(0,0,0,.9)); } .ds-product-card:hover a svg { transform:translateX(4px); } .ds-product-card:focus-within { border-color:light-dark(#9c7f5b,#d2b993); box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.17),rgba(210,185,147,.15)); }"
+      "html": "<article class=\"ds-product-card\"><span>Helm Core</span><h3>Managed protection</h3><p>Managed protection alongside your IT team.</p><a href=\"#\">Learn more <svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h12M11 5l5 5-5 5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></article>",
+      "css": ".ds-product-card { display:grid; gap:14px; max-width:360px; box-sizing:border-box; padding:32px; border:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); border-radius:16px; background:light-dark(#f7f3eb,#18221b); color:light-dark(#263129,#e7e9e2); box-shadow:0 18px 42px -36px light-dark(rgba(20,35,27,.38),rgba(0,0,0,.74)); font-family:Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; transition:transform 320ms cubic-bezier(.2,.65,.25,1),border-color 320ms ease,box-shadow 320ms ease; } .ds-product-card>span { color:light-dark(#214b3b,#d5c6aa); font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; } .ds-product-card h3 { margin:0; color:light-dark(#16211a,#f7f3ea); font-size:22px; line-height:1.2; } .ds-product-card p { margin:0; color:light-dark(#4d5a50,#b7c1b9); line-height:1.6; } .ds-product-card a { display:inline-flex; align-items:center; gap:6px; color:light-dark(#214b3b,#d5c6aa); font-size:14px; font-weight:700; text-decoration:none; } .ds-product-card a svg { width:1em; height:1em; transition:transform 220ms cubic-bezier(.16,1,.3,1); } .ds-product-card:hover { transform:translateY(-4px); border-color:light-dark(#9c7f5b,#d2b993); box-shadow:0 28px 64px -42px light-dark(rgba(33,75,59,.65),rgba(0,0,0,.9)); } .ds-product-card:hover a svg { transform:translateX(4px); } .ds-product-card:focus-within { border-color:light-dark(#9c7f5b,#d2b993); box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.17),rgba(210,185,147,.15)); } .ds-product-card a:focus-visible { outline:2px solid light-dark(#16211a,#f7f3ea); outline-offset:4px; }"
     },
     {
       "name": "Ruled Directional Row",
       "kind": "custom",
       "description": "The preferred pattern for services, industries, resources, FAQs, and unnumbered risks.",
-      "html": "<a class=\"ds-ruled-row\" href=\"#\"><span><small>Helm Ready</small><strong>Know the gap before you fund the fix.</strong></span><svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h12M11 5l5 5-5 5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
-      "css": ".ds-ruled-row { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:28px 8px; border-top:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); border-bottom:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); color:light-dark(#16211a,#f7f3ea); font-family:Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; text-decoration:none; transition:background 260ms ease; } .ds-ruled-row>span { display:grid; gap:8px; } .ds-ruled-row small { color:light-dark(#214b3b,#d5c6aa); font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; } .ds-ruled-row strong { font-size:18px; } .ds-ruled-row>svg { width:20px; height:20px; color:light-dark(#214b3b,#d5c6aa); transition:transform 220ms cubic-bezier(.16,1,.3,1); } .ds-ruled-row:hover { background:light-dark(rgba(255,255,255,.34),rgba(255,255,255,.045)); } .ds-ruled-row:hover>svg { transform:translateX(4px); } .ds-ruled-row:focus-visible { outline:none; box-shadow:inset 0 0 0 2px light-dark(#9c7f5b,#d2b993); }"
+      "html": "<a class=\"ds-ruled-row\" href=\"#\"><span><small>Helm Command</small><strong>Security-program ownership</strong></span><svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h12M11 5l5 5-5 5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-ruled-row { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:28px 8px; border-top:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); border-bottom:1px solid light-dark(rgba(31,41,34,.18),rgba(231,236,229,.17)); color:light-dark(#16211a,#f7f3ea); font-family:Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; text-decoration:none; transition:background 260ms ease; } .ds-ruled-row>span { display:grid; gap:8px; } .ds-ruled-row small { color:light-dark(#214b3b,#d5c6aa); font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; } .ds-ruled-row strong { font-size:18px; } .ds-ruled-row>svg { width:20px; height:20px; color:light-dark(#214b3b,#d5c6aa); transition:transform 220ms cubic-bezier(.16,1,.3,1); } .ds-ruled-row:hover { background:light-dark(rgba(255,255,255,.34),rgba(255,255,255,.045)); } .ds-ruled-row:hover>svg { transform:translateX(4px); } .ds-ruled-row:focus-visible { outline:none; box-shadow:inset 0 0 0 2px light-dark(#9c7f5b,#d2b993); } .ds-ruled-row:focus-visible { outline:2px solid light-dark(#16211a,#f7f3ea); outline-offset:4px; }"
     },
     {
       "name": "Asymmetric Closing Panel",
       "kind": "custom",
       "description": "The signature curved paper panel reserved for a major closing action.",
       "html": "<section class=\"ds-closing-panel\"><h2>Find out where you stand.</h2><p>The first look is free. No meeting required.</p><button type=\"button\">Get my free scan</button></section>",
-      "css": ".ds-closing-panel { max-width:900px; box-sizing:border-box; padding:clamp(72px,8vw,106px) 7vw; border-radius:112px 16px 112px 16px; background:light-dark(#ddd5c8,#243028); color:light-dark(#263129,#e7e9e2); text-align:center; font-family:Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; } .ds-closing-panel h2 { margin:0; color:light-dark(#16211a,#f7f3ea); font:400 clamp(38px,5vw,64px)/1 \"Tenor Sans\",\"Helvetica Neue\",sans-serif; letter-spacing:-.025em; } .ds-closing-panel p { color:light-dark(#4d5a50,#b7c1b9); line-height:1.65; } .ds-closing-panel button { min-height:52px; padding:0 22px; border:1px solid light-dark(#17382c,#ead9bc); border-radius:12px; background:light-dark(#214b3b,#d2b993); color:light-dark(#fffdf7,#132019); font:650 16px/1 Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; box-shadow:0 12px 28px -14px light-dark(rgba(20,48,37,.9),rgba(0,0,0,.92)); cursor:pointer; transition:transform 180ms ease,box-shadow 180ms ease; } .ds-closing-panel button:hover { transform:translateY(-1px); box-shadow:0 16px 34px -14px light-dark(rgba(20,48,37,.95),rgba(0,0,0,.96)); } .ds-closing-panel button:focus-visible { outline:none; box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.25),rgba(210,185,147,.22)); }"
+      "css": ".ds-closing-panel { max-width:900px; box-sizing:border-box; padding:clamp(72px,8vw,106px) 7vw; border-radius:112px 16px 112px 16px; background:light-dark(#ddd5c8,#243028); color:light-dark(#263129,#e7e9e2); text-align:center; font-family:Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; } .ds-closing-panel h2 { margin:0; color:light-dark(#16211a,#f7f3ea); font:400 clamp(38px,5vw,64px)/1 \"Tenor Sans\",\"Helvetica Neue\",sans-serif; letter-spacing:-.025em; } .ds-closing-panel p { color:light-dark(#4d5a50,#b7c1b9); line-height:1.65; } .ds-closing-panel button { min-height:52px; padding:0 22px; border:1px solid light-dark(#17382c,#ead9bc); border-radius:12px; background:light-dark(#214b3b,#d2b993); color:light-dark(#fffdf7,#132019); font:650 16px/1 Manrope,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif; box-shadow:0 12px 28px -14px light-dark(rgba(20,48,37,.9),rgba(0,0,0,.92)); cursor:pointer; transition:transform 180ms ease,box-shadow 180ms ease; } .ds-closing-panel button:hover { transform:translateY(-1px); box-shadow:0 16px 34px -14px light-dark(rgba(20,48,37,.95),rgba(0,0,0,.96)); } .ds-closing-panel button:focus-visible { outline:none; box-shadow:0 0 0 4px light-dark(rgba(156,127,91,.25),rgba(210,185,147,.22)); } .ds-closing-panel button:focus-visible { outline:2px solid light-dark(#16211a,#f7f3ea); outline-offset:4px; }"
     }
   ],
   "narrative": {
@@ -405,6 +427,11 @@
         "name": "The Honest Edge Rule",
         "body": "Default surfaces use 12–16px rounding; pills belong only to genuinely compact labels and controls.",
         "section": "shapes"
+      },
+      {
+        "name": "Helm copy voice reference",
+        "body": "Read [docs/VOICE.md](docs/VOICE.md) when reviewing or editing Helm copy with Impeccable. Preserve connected explanation and restrained, concrete language while keeping navigation and form states concise. The reference does not change this visual system or any accessibility, responsive, usability, or technical requirements.",
+        "section": "copy"
       }
     ],
     "dos": [

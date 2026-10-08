@@ -52,8 +52,7 @@ export default function Pricing() {
           <div className="pricing-ledger-head">
             <h2 id="pricing-ledger-title" className="observe">Compare the two offers</h2>
             <p className="observe d1">
-              Choose an offer based on the covered work, your organization&apos;s
-              size and its need for ongoing leadership.
+              Compare the work each offer covers, then consider your organization's size and how much ongoing security leadership it needs.
             </p>
           </div>
           <div className="pricing-ledger-scroll observe d2">
@@ -122,9 +121,7 @@ export default function Pricing() {
         <div className="band-head">
           <h2 className="observe">What the price looks like in practice</h2>
           <p className="observe d1">
-            Core is priced by covered user. Command is one all-in monthly price
-            based on the systems, evidence, and coordination load confirmed in
-            the fit review.
+            Core is priced by covered user. Command has one all-in monthly price. We confirm it in the fit review, based on the systems involved, the evidence work, and the amount of coordination required.
           </p>
         </div>
         <div className="price-math">
@@ -136,7 +133,7 @@ export default function Pricing() {
           <article className="price-math-tile observe d1">
             <div className="price-math-eq">75 to 250 people</div>
             <div className="price-math-result">$8,000 to $15,000 / month</div>
-            <p>Helm Command includes the covered Core stack plus hands-on security-program ownership and quarterly leadership cadence.</p>
+            <p>Helm Command includes the covered Core stack plus hands-on security-program ownership and quarterly leadership reviews.</p>
           </article>
         </div>
         <div className="pricing-terms">
@@ -157,7 +154,7 @@ export default function Pricing() {
 
       <CtaBand
         title="Which service model fits?"
-        sub="Tell us how many people you protect, who owns IT today, and what is creating pressure. We will confirm whether Core or Command is the right fit."
+        sub="Tell us how many people you protect, who owns IT today, and what has prompted you to seek security help. We will confirm whether Core or Command is the right fit."
         cta="Talk to us"
         source="pricing cta"
         mode="book"

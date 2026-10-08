@@ -111,7 +111,7 @@ const guideGroups: GuideGroup[] = [
   {
     id: 'prove-readiness',
     title: 'Prepare evidence for an insurer or customer',
-    description: 'Prepare accurate answers and evidence for applications, renewals, questionnaires, and backup reviews.',
+    description: "Prepare accurate answers for applications, renewals, questionnaires, and backup reviews, with evidence to support them.",
     slugs: [
       'cyber-insurance-claim-denied',
       'cyber-insurance-application-walkthrough',
@@ -128,7 +128,7 @@ const guideGroups: GuideGroup[] = [
   {
     id: 'evaluate-ai-workflows',
     title: 'Evaluate an internal AI workflow',
-    description: 'Choose a task, check document access, and measure the work needed to produce an acceptable result.',
+    description: "Choose a task, check document access, and measure how much work it takes to produce an acceptable result.",
     slugs: [
       'choose-first-ai-workflow',
       'ai-access-business-documents',
@@ -239,7 +239,7 @@ export default function Resources() {
           <aside className="resource-feature" aria-labelledby="resources-quiz-title">
             <div>
               <h2 id="resources-quiz-title">AI scam readiness quiz</h2>
-              <p>Answer 10 questions and get a score and a list of gaps to address. No email address is required to see the result.</p>
+              <p>Answer 10 questions to see your score and the gaps to address. No email address is required to see the result.</p>
             </div>
             <Link to="/quiz/" className="resource-feature-link">
               Take the 3-minute quiz <DirectionIcon />

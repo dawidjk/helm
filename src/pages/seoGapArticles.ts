@@ -11,24 +11,24 @@ export const gapArticles: Article[] = [
     "readMin": 9,
     "lane": "Small business",
     "laneTo": "/professional-services/",
-    "intro": "A vulnerability scan and a penetration test answer different questions. Scanning helps identify recognized weaknesses that need review and repair. A scoped penetration test examines how an attacker could move through a defined part of the business. Decide which question you need answered before comparing proposals and reports.",
+    "intro": "A vulnerability scan helps you find recognized weaknesses to review and repair. A penetration test investigates how an attacker could use weaknesses within an agreed part of your business. That difference affects what you should buy: recurring checks of known issues, an investigation of particular attack paths, or both.",
     "lead": [
-      "Your business may need both approaches. Before signing, compare the systems the engagement covers, the work the tester may perform and the evidence you will receive. Those boundaries determine whether the report can answer your question; buying one kind of test does not establish that you received the other."
+      "Start with the question you need answered, then compare proposals. The systems covered, the work a tester is allowed to perform and the evidence you receive determine whether an engagement can answer it. Buying a scan does not establish that you received a penetration test."
     ],
     "sections": [
       {
         "h": "What a vulnerability scan tells you",
         "ps": [
-          "A scanner tests accessible systems for weaknesses it recognizes. Its configuration affects whether it finds exposed services, software vulnerabilities or particular configuration problems. Approved credentials let an authenticated scan inspect information unavailable to an outside observer. An unauthenticated scan checks only what is visible without signing in.",
-          "An external scan of public systems cannot establish that office laptops have current software. An internal authenticated scan can inspect more of those devices, provided they are reachable, the credentials work and the scanner supports them. Compare those conditions before treating the two reports as equivalent.",
-          "Ask the provider for a report stating which systems were scanned, when, which checks succeeded and which were missed. A report with no findings may mean the environment is well maintained, or that authentication failed and coverage was incomplete. Have IT explain that difference before using the result as evidence.",
-          "Scanning becomes useful through repetition and follow-up. Give each confirmed finding an owner, a target date and a verification method. Track exceptions separately. If the same issue appears in several reports, review the reason it remains open rather than buying another report that repeats it."
+          "A scanner tests systems it can reach for weaknesses it recognizes. What it finds depends on its configuration: it may check exposed services, software vulnerabilities or particular configuration problems. An authenticated scan uses approved credentials to inspect information an outside observer cannot see. An unauthenticated scan checks only what is visible without signing in.",
+          "This affects how you use the results. An external scan of public systems cannot tell you whether office laptops have current software. An internal authenticated scan can inspect more of those devices, but only if they are reachable, the credentials work and the scanner supports them. Before treating two reports as equivalent, check that they had equivalent access and coverage.",
+          "A report should tell you which systems were scanned, when the scan ran, which checks succeeded and which were missed. No findings can mean the environment is well maintained. It can also mean authentication failed and coverage was incomplete. Ask your IT provider to explain which applies before using the result as evidence.",
+          "Repeated scans help you track whether confirmed problems get fixed. Give each finding an owner, a target date and a way to verify the repair, and track exceptions separately. When the same issue appears in several reports, find out why it remains open. Another report alone will not resolve it."
         ]
       },
       {
         "h": "What a penetration test adds",
         "ps": [
-          "A penetration test uses authorized testing to explore how weaknesses could affect the systems in scope. Testers may use automated tools, manual investigation and controlled exploitation. The work can include chaining several weaknesses together, such as exposed access followed by excessive permissions. The exact techniques depend on the agreement and the environment.",
+          "In a penetration test, authorized testers investigate how weaknesses could affect the systems in scope. They may use automated tools, manual investigation and controlled exploitation. For example, they might examine whether exposed access combined with excessive permissions creates an attack path. The agreement and the environment determine which techniques they can use.",
           {
             "text": "NIST's technical testing guide describes vulnerability scanning and penetration testing as related assessment techniques with different strengths and limitations. A penetration test can use scanning as part of its discovery work. The question is what investigation follows and what the final report demonstrates.",
             "links": [
@@ -38,15 +38,15 @@ export const gapArticles: Article[] = [
               }
             ]
           },
-          "The report should show what testers attempted and what they reached. For example, an ordinary account might reach information outside its intended role, or a public application might expose a sensitive function. These are possible findings to understand when evaluating a report, not conclusions about your business.",
+          "Look for a report that explains what testers attempted and what they reached. Possible findings include an ordinary account accessing information outside its intended role, or a public application exposing a sensitive function. These examples describe the kind of evidence to look for; they are not findings about your business.",
           "A short engagement cannot prove that an organization has no weaknesses. An external network test does not automatically cover your web application, employees, cloud permissions or internal network. The report should state exclusions and explain where timing, access or operational restrictions limited the investigation."
         ]
       },
       {
         "h": "Compare the deliverables before comparing the price",
         "ps": [
-          "The service name on a quote provides little detail. Ask each provider to show a sanitized sample report and explain how it would answer your business question. Compare proposals using the same systems and testing boundaries. A narrow external test and an internal assessment with several applications are different purchases.",
-          "Pricing depends on the systems, access, testing depth and deliverables agreed. Compare those details instead of judging the service by the quote alone. A low price does not establish that the provider is selling a rebranded scan, and a high price does not establish quality. Request the method, named responsibilities and expected evidence.",
+          "A service name on a quote tells you little about the work. Ask for a sanitized sample report and have the provider explain how that engagement would answer your business question. Then compare proposals covering the same systems and testing boundaries. A narrow external test and an internal assessment covering several applications are different purchases.",
+          "The agreed systems, access, testing depth and deliverables also affect price. A low quote alone does not show that you are buying a rebranded scan; a high quote alone does not establish quality. Compare the proposed method, who is responsible for the work and what evidence you will receive.",
           "Check whether the proposal includes a findings discussion, remediation guidance and retesting. A report may identify a serious weakness while leaving implementation to your existing IT provider or software developer. Knowing that before purchase helps you reserve budget for the fix."
         ],
         "table": {
@@ -88,18 +88,18 @@ export const gapArticles: Article[] = [
       {
         "h": "Decide which question to answer first",
         "ps": [
-          "Write down why you are commissioning the work before seeking quotes. A customer request, new application, recurring exposure or major infrastructure change can call for different scopes. A useful trigger is specific: for example, a customer wants an independent test of the portal holding its documents.",
+          "Write down why you need the work before seeking quotes. A customer request, new application, recurring exposure or major infrastructure change may each call for a different scope. Make the reason specific. A customer asking for an independent test of the portal holding its documents gives the tester a clearer starting point than a general request to check security.",
           "If you are establishing a maintenance baseline, scanning can help organize known issues. If you are asking whether a signed-in user can reach another client's files, a focused application test may be more suitable. If a contract specifically requests penetration testing, a scan should not be presented as an equivalent without written acceptance from the requesting party.",
-          "Read the exact insurer, customer or regulatory requirement that applies to you. Frequency, independence, scope and evidence can differ. Avoid relying on a generic statement that small businesses only need scanning or that an annual penetration test satisfies every obligation. Confirm ambiguous wording with the party evaluating the result.",
+          "When the work is required by an insurer, customer or regulator, read the exact requirement. The frequency, independence, scope and evidence they expect can differ. Neither “small businesses only need scanning” nor “an annual penetration test covers every obligation” is a reliable substitute for that wording. Ask the party evaluating the result to clarify anything ambiguous.",
           "Where timing allows, repair known basic weaknesses before deeper testing. Testers can then spend more of the engagement examining the questions that remain. Keep material exceptions visible; the testing team needs to know which systems and risks the business has deliberately left unresolved."
         ]
       },
       {
         "h": "Build a scope your IT provider can review",
         "ps": [
-          "Prepare an inventory of the intended targets. Include public addresses, domains, application names, cloud environments and internal systems where relevant. Identify who owns each system. A provider's authorization to test your company does not automatically authorize testing a third-party platform that hosts part of your work.",
+          "Your IT provider needs an inventory of the proposed targets to review the scope. Include public addresses, domains, application names, cloud environments and internal systems where relevant, with an owner for each. Pay particular attention to third-party platforms: permission to test your company does not automatically authorize testing a platform that hosts part of your work.",
           "Agree on testing windows, emergency contacts and stop conditions. Discuss how the team will avoid unnecessary disruption and what it must do if it finds an urgent weakness. Production testing needs an escalation route that reaches a decision-maker while the work is happening.",
-          "List the access testers will receive. No credentials, an ordinary employee account and an administrator account provide different starting points. Proposals may call these black box, gray box or white box testing; the actual access list tells your IT provider more than the label.",
+          "List the access testers will receive. Working without credentials gives them a different starting point from using an ordinary employee account or an administrator account. You may see the terms black box, gray box or white box in a proposal. Give your IT provider the actual access list so it can review what those labels mean for this engagement.",
           "The agreement should also address sensitive information. State how evidence will be collected, how much data may be accessed, where the report will be stored and when testing data will be removed. Use redacted examples where full records are unnecessary. Share the report only with people who need it to fix or evaluate the findings."
         ]
       },
@@ -108,15 +108,15 @@ export const gapArticles: Article[] = [
         "ps": [
           "Consider a hypothetical accounting firm with a client portal, cloud email and office workstations. Its IT provider already runs recurring scans and applies updates. A larger client asks whether the portal prevents one customer from accessing another customer's documents.",
           "A network scan can help confirm exposed services, but the customer's question concerns access between portal accounts. The firm could commission a portal test with approved test accounts and defined document boundaries. Its developer would then prepare a safe test environment or agree controlled production testing that meets the requirement.",
-          "Suppose the test finds a permission problem. The developer owns the application fix, the IT provider checks any related configuration and the firm decides how to handle business consequences. Retesting should confirm the specific repair and consider whether similar functions have the same weakness. A clean rescan of the network would not establish that the application permission issue was resolved.",
-          "Assign the developer, IT provider and business approver before scheduling the test so the firm knows who will authorize, implement and verify any repair the report calls for."
+          "Suppose the test finds a permission problem. The developer would own the application fix, while the IT provider would check related configuration and the firm would decide how to handle business consequences. A retest should confirm the specific repair and consider whether similar functions have the same weakness. A clean network rescan would not establish that the application permission issue was resolved.",
+          "The firm should assign those responsibilities before scheduling the test, including who approves the work. That way, a finding reaches someone who can authorize, implement and verify the repair."
         ]
       },
       {
         "h": "Use a findings worksheet to prevent stalled remediation",
         "ps": [
           "Create a record for each confirmed finding with its affected system, business consequence, responsible owner, target date and evidence needed for closure. Add a field for dependencies, such as a developer release or a vendor update. A manager should approve any accepted risk rather than allowing it to disappear from the list.",
-          "Use severity ratings together with the affected system’s exposure and information. A weakness on a public client-document system may warrant a different priority from a similar issue on an isolated test device. Give leadership that context when seeking an urgent repair or an accepted-risk decision.",
+          "A severity rating needs context. A weakness on a public system holding client documents may warrant a different priority from a similar issue on an isolated test device. Explain the affected system’s exposure and information to leadership when asking for an urgent repair or a decision to accept the risk.",
           {
             "list": [
               "Record the finding and the systems affected.",
@@ -144,7 +144,7 @@ export const gapArticles: Article[] = [
               }
             ]
           },
-          "Request the coverage statement, sample report and remediation handoff before approving a proposal. Together they show what will be examined, what evidence the firm will receive and who follows through on findings."
+          "Before approving a testing proposal, ask for its coverage statement and sample report, then confirm who will handle findings. You need to know whether the engagement answers your question and whether the people responsible for repairs are ready to act on the results."
         ]
       }
     ],
@@ -163,16 +163,16 @@ export const gapArticles: Article[] = [
     "readMin": 9,
     "lane": "Small business",
     "laneTo": "/professional-services/",
-    "intro": "If an employee follows a message that appears to come from a client to a document sign-in page, a DNS filter may block the connection if its policy recognizes the destination as unsafe. The result depends on the device, network and DNS path, so those details belong in the coverage review.",
+    "intro": "Will a DNS filter protect the team when they work away from the office? That's one of the first questions to settle before choosing a product. An office configuration can leave traveling laptops outside its coverage. A roaming device tool can close some of that gap, but somebody still needs to maintain the policy and review exceptions so employees can reach the services they need.",
     "lead": [
-      "When choosing a filter, ask how consistently its policy covers the places your team works. A filter configured at the office can leave traveling laptops outside its coverage. A roaming device tool can close some of that gap, but somebody still needs to maintain the policy, review exceptions and check that employees can reach the services they need."
+      "Consider an employee who follows a message that appears to come from a client to a document sign-in page. The filter may block the connection if its policy recognizes the destination as unsafe. Whether that happens depends on the device, network and DNS path. Reviewing those details tells you where the filter can help and where it leaves a gap."
     ],
     "sections": [
       {
         "h": "What DNS filtering does",
         "ps": [
-          "DNS, the Domain Name System, helps devices find the network address for a domain. A resolver answers that lookup when a browser requests a website. A filtering resolver first checks the domain against its policies, which can change whether it returns the normal answer.",
-          "Those policies can block domains associated with malicious activity, such as phishing or malware infrastructure. Providers can also offer category rules for content the business chooses to restrict. The security policy and the acceptable-use policy are separate decisions, even when the same product enforces both.",
+          "When a browser requests a website, it needs the network address for that domain. DNS, the Domain Name System, helps it find the address through a lookup. The service that answers is called a resolver. A filtering resolver checks the domain against its policies before deciding whether to return the normal answer.",
+          "The policies can block domains associated with phishing, malware infrastructure or other malicious activity. Some providers also offer category rules for content the business chooses to restrict. Those restrictions need a separate business decision: a product may enforce both policies, but deciding which sites are unsafe is different from deciding which sites employees may use at work.",
           {
             "text": "Cloudflare's DNS filtering documentation illustrates two deployment approaches: directing network DNS requests to the service and using a device client. Other providers use their own methods. Read the chosen provider's documentation rather than assuming every DNS filtering product behaves the same way.",
             "links": [
@@ -182,15 +182,15 @@ export const gapArticles: Article[] = [
               }
             ]
           },
-          "Treat a block as evidence that a policy stopped a particular request, then review what generated it. A browser, background application or mistyped address may be responsible. The block alone cannot establish device infection or employee misconduct."
+          "When the filter blocks a request, you still need to find out what generated it. It could come from a browser, a background application or a mistyped address. The block shows that a policy stopped that request; it does not, by itself, establish device infection or employee misconduct."
         ]
       },
       {
         "h": "Separate DNS filtering from other protections",
         "ps": [
-          "DNS filtering usually works at the domain level. It is different from examining every page, downloaded file or action inside a website. A useful comparison asks which layer sees the activity and what it can do about it. Several controls can be relevant to the same employee workflow.",
-          "Evaluate each control against the task it can perform. A DNS filter cannot verify account permissions or test recovery, and email filtering cannot cover every destination opened outside email. Keeping those questions separate makes the coverage easier to check.",
-          "For an accounting firm, that means reviewing the whole document-sharing workflow. The message arrives, the employee follows a link and a sign-in screen appears. Ask who handles a reported message, what protects the destination and how the account is protected if the employee submits credentials."
+          "A DNS filter usually makes its decision about a domain. That gives it a different view from controls that examine individual pages, downloaded files or actions inside a website. When comparing protections, ask what each one can see and what it can do with that information.",
+          "For an accounting firm, a document-sharing workflow makes the distinction easier to follow. A message arrives, an employee follows its link and a sign-in screen appears. Who handles the message if the employee reports it? What protects the destination? If the employee submits credentials, how is the account protected? Several controls can apply to that same sequence.",
+          "Each has limits. Email filtering cannot cover every destination opened outside email, while a DNS filter cannot verify account permissions or test recovery. Evaluate those tasks separately so one product's coverage does not stand in for the whole workflow."
         ],
         "table": {
           "caption": "Separate DNS filtering from other protections",
@@ -231,10 +231,10 @@ export const gapArticles: Article[] = [
       {
         "h": "Know the limits before setting expectations",
         "ps": [
-          "A newly created malicious domain may not yet be recognized. A legitimate domain can also host a harmful page, and blocking the entire domain may interrupt useful work. Domain-level filtering has less detail than a control that can inspect the specific web request under an approved configuration.",
-          "A filter's policy applies to traffic passing through its configured resolver. A device using another resolver, a browser's encrypted DNS setting or an application's lookup method may bypass that path. Ask IT to test the actual device controls and network design so remote and office coverage are supported by results.",
-          "DNS encryption protects a lookup in transit to the resolver; filtering depends on the resolver's policy. A connection can therefore be encrypted while the requested domain is allowed without a security check. Ask about both properties when reviewing the configuration.",
-          "The filter also needs a failure policy. If the service or network connection fails, some configurations permit an alternate path while others block access. Confirm the chosen behavior, its effect on business operations and how employees will get help. Do not accept an undocumented default for an office that depends on cloud applications."
+          "A filter may allow a newly created malicious domain because it has not yet been recognized. A harmful page can also sit on a legitimate domain. Blocking that whole domain may interrupt useful work, which is one reason to understand the filter's level of detail: a control that can inspect the specific web request under an approved configuration has more detail than a domain-level filter.",
+          "The policy only applies to traffic passing through its configured resolver. Another resolver, a browser's encrypted DNS setting or an application's lookup method may take requests around it. Ask IT to test the device controls and network design in use, both at the office and remotely. Those results establish the coverage you can rely on.",
+          "For encrypted DNS, encryption protects the lookup while it travels to the resolver. Filtering depends on what that resolver's policy does with the request, so an encrypted connection can still allow a domain without a security check. Ask about both when reviewing the configuration.",
+          "What happens if the filtering service or network connection fails? Some configurations permit an alternate path; others block access. For an office that depends on cloud applications, that choice can affect whether people can work. Have the provider document the chosen behavior and explain how employees will get help during a failure."
         ]
       },
       {
@@ -242,8 +242,8 @@ export const gapArticles: Article[] = [
         "ps": [
           "List the places your team works: the office, home, client premises and travel. Then list the device types used in those places. Include managed workstations, approved personal devices, phones and office equipment. Distinguish devices you can configure from devices controlled by clients or other organizations.",
           "For every category, ask how its DNS requests reach the policy. Office network configuration can cover devices while they use that network. A supported device client may follow a laptop onto other networks. A guest device might receive a network policy without being enrolled as an employee device. Check the product's supported platforms and limitations.",
-          "Verify representative devices in each work location and keep the results in a small coverage matrix. Pointing the office router at a filtering service establishes a configuration step, but some devices may still use another path. The tests need to show which requests actually reach the policy.",
-          "For a hypothetical tax firm, the owner may discover that office desktops are covered but seasonal staff laptops are not. That finding gives the IT provider a concrete task: agree on an approved device model and test the missing coverage before those laptops access client information."
+          "Next, test representative devices in each work location and keep the results in a small coverage matrix. Configuring the office router to use the filtering service is a step toward coverage. Some devices may still use another path, so the tests need to show which requests actually reach the policy.",
+          "Suppose a tax firm finds that the filter covers its office desktops but misses the laptops used by seasonal staff. The owner and IT provider then have a specific gap to resolve: agree on an approved device model and test that missing coverage before the laptops access client information."
         ],
         "figure": {
           "src": "/images/resources/dns-filtering-small-business.svg",
@@ -254,9 +254,9 @@ export const gapArticles: Article[] = [
       {
         "h": "Start with security policies and controlled exceptions",
         "ps": [
-          "Begin with the threats you want to reduce and the applications staff need. Your IT provider can help select the security categories appropriate to your work. Test them with a representative group before extending the policy to everybody. Keep an approved rollback method in case essential work is blocked.",
+          "Start with the threats you want to reduce and the applications staff need to use. Your IT provider can help choose appropriate security categories, which a representative group should test before the policy reaches everybody. Agree on a rollback method too, in case the rollout blocks essential work.",
           "Have the business decide content restrictions separately from security categories. Blocking social media, for example, can interrupt recruiting or client communication. Explain the reason for the restriction and identify who can approve an exception before the technical rollout changes what employees can access.",
-          "An exception should have a business reason, an approver and a review date. Allowing a whole category because one useful site was blocked can create unnecessary exposure. Where the product supports it, scope the exception to the needed destination and the people who use it.",
+          "When somebody needs an exception, record the business reason, who approved it and when it should be reviewed. Allowing an entire category because one useful site was blocked can create unnecessary exposure. Where the product supports it, limit the exception to that destination and the people who need it.",
           "Review urgent requests without telling employees to disable protection. Give them a clear reporting route and a way to explain the blocked task. The person reviewing the request should check the destination through an approved method before releasing it. A familiar logo or a message saying the site is essential is not enough evidence."
         ]
       },
@@ -276,23 +276,23 @@ export const gapArticles: Article[] = [
               "Expand coverage after the pilot findings have owners and resolutions."
             ]
           },
-          "Keep a dated device list and the test results, including excluded device types. Those records show what was checked; a subscription-page screenshot shows only the purchased service. The business can then decide whether to add coverage for excluded devices or restrict the work done on them."
+          "Keep the dated device list with the test results, including any device types the rollout excludes. A subscription-page screenshot tells you which service was purchased. The list and tests tell you what was checked, giving the business a basis for deciding whether to cover the excluded devices or restrict the work done on them."
         ]
       },
       {
         "h": "Make reporting useful without collecting unnecessary detail",
         "ps": [
           "DNS logs can reveal information about work patterns and services accessed. Decide who can view them, how long they are retained and what the business needs them for. Review the provider's data handling and administrative access before enabling broad reporting.",
-          "Explain changes in blocked-request counts before using them in leadership reports. A higher total may reflect more enrolled devices, a policy change or repeated background requests. Show the covered population and policy context, and flag events that need investigation. The count alone is not a reliable measure of attacks prevented.",
-          "Your operational report can record the covered device categories, last successful check, open exceptions and service interruptions. Add confirmed security incidents separately. This distinguishes routine blocked requests from breaches while keeping a reporting route for serious events.",
+          "A rise in blocked requests needs an explanation before it goes into a leadership report. Did more devices join the service? Did a policy change, or did an application repeatedly make the same background request? Show the covered population and policy context, and flag events that need investigation. The total alone cannot reliably tell you how many attacks were prevented.",
+          "An operational report can track covered device categories and the last successful coverage check, along with open exceptions and service interruptions. Record confirmed security incidents separately so routine blocks are not reported as breaches and serious events still have a reporting route.",
           "Review the policy when you change IT providers, add a location or introduce a device platform. Those changes can alter which requests reach the filter. Include the review when reconciling employee accounts and devices so coverage is checked against how the business now works."
         ]
       },
       {
         "h": "Questions to bring to a provider conversation",
         "ps": [
-          "Ask how coverage works for home and traveling staff, which platforms are supported and how the provider verifies that the client remains active. Request an explanation of alternate DNS paths and encrypted DNS behavior in your intended configuration. The answer should identify what your IT team must maintain.",
-          "Discuss response responsibilities as well as licensing. Find out who reviews suspicious repeated lookups, how they distinguish background application activity from an incident and who can isolate a device if needed. A DNS filtering subscription does not automatically include managed investigation.",
+          "When discussing a proposal, ask the provider to explain how it covers staff at home and while traveling. Which platforms does it support, and how does it verify that the device client stays active? Have the provider explain alternate DNS paths and encrypted DNS behavior in your intended configuration, including what your IT team must maintain.",
+          "Then ask who acts on suspicious repeated lookups. Someone needs to distinguish background application activity from an incident and know who can isolate a device if necessary. Confirm those response responsibilities alongside licensing, because a DNS filtering subscription does not automatically include managed investigation.",
           "Ask how a wrongly blocked client portal is reported and restored to use, who approves exceptions and when they expire. Check whether reports distinguish a device excluded from coverage from one that has stopped checking in. These details show how each proposal handles interrupted work and missing coverage."
         ]
       },
@@ -313,7 +313,7 @@ export const gapArticles: Article[] = [
         ]
       }
     ],
-    "takeaway": "DNS filtering checks domain lookups against security or content policies and can block requests to disallowed destinations. It adds a useful layer when it covers the devices and networks your team uses. Confirm remote coverage, approved DNS paths, exception handling and reporting before treating it as an operating security control.",
+    "takeaway": "DNS filtering checks domain lookups against security or content policies and can block requests to disallowed destinations. Its usefulness depends on whether the devices and networks your team uses actually send their requests through the filter. Before relying on it, confirm remote coverage and approved DNS paths, then agree on exception handling and reporting.",
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
@@ -333,26 +333,26 @@ export const gapArticles: Article[] = [
     "readMin": 9,
     "lane": "Small business",
     "laneTo": "/professional-services/",
-    "intro": "A firewall and separate Wi-Fi names do not establish which systems can reach each other. Ask whether a visitor can reach the file server, who can change the firewall and whether a vendor's remote access ends after the job. Those questions give your IT provider specific boundaries to check.",
+    "intro": "A guest Wi-Fi network needs rules that keep visitors away from internal systems. A separate Wi-Fi name alone does not establish that boundary. The same applies to other access: your IT provider should be able to show who can change the firewall and how a vendor's remote access ends when the job is finished.",
     "lead": [
-      "Network hardening is the work of reducing unnecessary access and maintaining safer configurations. For a small business, it starts with an accurate inventory and an IT owner who can make and verify changes. You do not need to choose every technical setting yourself. You do need a clear account of what your provider protects, what remains exposed and which exceptions you approved."
+      "Reducing unnecessary access and maintaining safer configurations is called network hardening. For a small business, the starting point is an accurate inventory and an IT owner who can make changes and check that they work. As the business owner, you can leave the individual settings to that provider while asking for a clear account of what they protect, what remains exposed and which exceptions you approved."
     ],
     "sections": [
       {
         "h": "Start with a map of business work",
         "ps": [
           "Have IT inventory routers, firewalls, switches, access points and the systems connected to them. Include printers, cameras and equipment supplied by a building or communications vendor. Record ownership and support status so each category has someone responsible for the hardening work.",
-          "Use business work to explain the connections each device needs. An accounting firm might require tax software, a document server, printers and client portals; a conference-room display needs fewer paths. IT can use those requirements to permit needed traffic and restrict unrelated connections.",
+          "The inventory becomes useful when it explains the work each connection supports. An accounting firm might need tax software, a document server, printers and client portals. A conference-room display needs fewer paths. Those requirements give IT a basis for permitting traffic and restricting connections that serve no business purpose.",
           "List remote connections separately. Identify the people and vendors who can use them, the systems they can reach and how their access is approved. An old remote-support arrangement can outlast both the employee who requested it and the business reason for keeping it.",
-          "Keep that map current as devices, support arrangements and access responsibilities change. During a change or investigation, IT needs to know who owns a device and which connections still have a business purpose. Keep the diagram simple and its records current so IT can use it during that work."
+          "Keep the map simple enough to use during a change or investigation, and update its records as devices, support arrangements and access responsibilities change. IT needs to be able to identify the device's owner and the business purpose of its connections without reconstructing that history first."
         ]
       },
       {
         "h": "Reduce unnecessary exposure first",
         "ps": [
           "Review which services are reachable from the internet and why. Include remote access, administrative interfaces and any systems intentionally published for customers. Your IT provider should compare the intended exposure with what an authorized external check finds.",
-          "Check application dependencies before IT removes obsolete services or forwarding rules through change control. Record the proposed change, its expected effect and how IT will test that required business functions still work. That check reduces the chance of closing a connection a business application still needs.",
-          "For remote access, confirm support, authentication and the permissions granted, then identify its current owner. Record how access ends with the engagement. An arrangement with a familiar vendor still needs those checks.",
+          "An apparently obsolete forwarding rule may still support a business application. Before removing it, IT should check those dependencies through change control. The change record should explain what IT proposes to remove, the expected effect and the test that will confirm required business functions still work.",
+          "For each remote-access arrangement, identify its current owner and confirm that the service is supported. Review how people authenticate, what permissions they receive and how access ends with the engagement. Familiarity with the vendor does not answer those access questions.",
           {
             "text": "CISA's infrastructure hardening guidance covers management access, segmentation and device security. Use it as technical reference material for your IT provider. The exact configuration still needs to reflect your equipment and the work your business must perform.",
             "links": [
@@ -367,7 +367,7 @@ export const gapArticles: Article[] = [
       {
         "h": "Protect the people who can change the network",
         "ps": [
-          "Administrative access can change the protections for everyone using the network. Ask which accounts can manage the firewall, wireless system and remote-access service. Where the equipment supports it, prefer individual access that can be traced to a named person, with permissions limited to that person's responsibilities.",
+          "Someone with administrative access can change the protections for everyone using the network. Start by identifying the accounts that manage the firewall, wireless system and remote-access service. Where the equipment supports individual access, use accounts attributable to a named person and limit their permissions to that person's responsibilities.",
           {
             "text": "Use multifactor authentication for supported management services. CISA recommends phishing-resistant MFA for businesses. Ask IT which administrative accounts support that method and which need a documented interim control because the platform cannot support it.",
             "links": [
@@ -377,7 +377,7 @@ export const gapArticles: Article[] = [
               }
             ]
           },
-          "Plan recovery access without turning it into routine shared access. Define who may retrieve emergency credentials, how use is logged and when credentials must change. Keep them in the approved credential system, outside articles, shared planning documents and ordinary email.",
+          "Emergency credentials need a recovery process of their own. Decide who may retrieve them, how their use is logged and when they must change, so recovery access does not become routine shared access. Store them in the approved credential system, outside articles, shared planning documents and ordinary email.",
           "When a provider or employee leaves, review administrative accounts and remote connections together. Removing an email account does not necessarily remove access to a separately managed firewall portal. Offboarding should cover those systems explicitly and leave a dated record of the checks."
         ]
       },
@@ -385,9 +385,9 @@ export const gapArticles: Article[] = [
         "h": "Separate devices by the access they need",
         "ps": [
           "Network segmentation divides systems into groups and controls traffic between them. A small office might separate employee devices, guests and equipment such as cameras or building controls. The goal is to limit unnecessary reach if a device is misconfigured or compromised.",
-          "Ask the provider to test guest isolation, not merely show a separate Wi-Fi name. The underlying rules must let the guest reach the internet while blocking the internal systems you intend to protect.",
-          "This is an illustrative model, not a configuration to copy into a production network. Your IT provider needs to account for device discovery, printing, voice systems and application dependencies. Keep allowed connections specific enough to understand and test.",
-          "If segmentation interrupts a needed workflow, have IT identify its required connection. Keep any temporary broader rule documented with the approving owner and review date, rather than leaving unrestricted access as the permanent fix."
+          "For guest Wi-Fi, ask the provider to demonstrate the boundary with a connection test. The rules should allow internet access while blocking the internal systems you intend to protect. A separate network name cannot show whether those rules work.",
+          "The model below is illustrative and should not be copied into a production network. Your IT provider needs to account for device discovery, printing, voice systems and application dependencies when defining the groups. Each allowed connection should be specific enough to understand and test.",
+          "If segmentation interrupts a needed workflow, IT should identify the connection that workflow requires. A temporary broader rule needs an approving owner and a review date. Without that record, unrestricted access can remain after the immediate problem is resolved."
         ],
         "table": {
           "caption": "Separate devices by the access they need",
@@ -428,25 +428,25 @@ export const gapArticles: Article[] = [
       {
         "h": "Keep network devices supported and maintained",
         "ps": [
-          "Network equipment needs software maintenance just as workstations do. Ask your provider how it tracks firmware versions, security updates and vendor support dates. A device that still passes traffic can be beyond its supported life and no longer receive the fixes your business expects.",
-          "Plan an update around the work a restart affects. A firewall restart may interrupt cloud software, remote staff and phones together. Record the maintenance window and rollback method, and confirm that the provider can restore the previous configuration if behavior changes unexpectedly.",
+          "A device can still pass traffic after its vendor stops supporting it. That makes support status part of the maintenance decision, alongside firmware versions and security updates. Ask your provider how it tracks each of these for network equipment, which needs software maintenance just as workstations do.",
+          "A firewall restart may interrupt cloud software, remote staff and phones at the same time. Plan the update around that disruption, with a recorded maintenance window and rollback method. Confirm that the provider can restore the previous configuration if behavior changes unexpectedly.",
           "Remove unused management services and replace default credentials under the approved setup process. Check which interfaces are enabled and whether management is restricted to the intended administrators and network paths. The list will differ by equipment, so keep manufacturer documentation with the change record.",
-          "For a replacement decision, consider support, compatibility and recovery requirements. The fastest advertised throughput is only one factor. Your provider should explain whether the device can enforce the intended policies, retain useful logs and restore its configuration without depending on an unavailable administrator."
+          "When deciding whether to replace a device, ask about support, compatibility and recovery as well as advertised throughput. The provider should explain whether the replacement can enforce your intended policies and retain useful logs. It also needs a way to restore its configuration without depending on an administrator who may be unavailable."
         ]
       },
       {
         "h": "Plan changes so security and daily work improve together",
         "ps": [
-          "Start with the finding and the proposed fix. For example, guest devices can reach an internal printer management interface, and IT proposes a rule that blocks that path. Identify who may be affected and what the test will demonstrate.",
+          "A change record should connect the finding to a proposed fix. For example, suppose guest devices can reach an internal printer management interface. IT proposes a rule to block that path, identifies who may be affected and defines the test that will demonstrate the result.",
           "Save the configuration using the provider's approved process before making the change. Agree on when to roll back and who can authorize it. A backup of settings is useful only if someone can access it and knows how to restore it on the equipment you use.",
-          "Test both outcomes after the change: the prohibited path should fail and the required business function should still work. Keep the results with the change record. Saving a configuration stores the rule; the connection tests show how the network behaves.",
+          "After the change, test the prohibited path and the required business function. The first should fail; the second should still work. Keep those results with the change record so there is evidence of how the network behaves, alongside the saved configuration that stores the rule.",
           "Do not test network boundaries through unauthorized scanning or experimentation on somebody else's systems. Define the devices, accounts and connections included in the check. Your IT provider should choose methods appropriate to the equipment and the operational risk."
         ]
       },
       {
         "h": "Use a checklist with owners and evidence",
         "ps": [
-          "The business owner and IT provider can work through the following items together. Record who will perform each check, the date and any unresolved issue. A finding without an owner is likely to remain open until the next review repeats it.",
+          "Work through these checks with your IT provider and record who will perform each one, the date and any unresolved issue. Naming an owner gives an open finding someone responsible for taking it forward before the next review.",
           {
             "list": [
               "Maintain an inventory of network devices and their support status.",
@@ -461,15 +461,15 @@ export const gapArticles: Article[] = [
               "Review logs and escalation responsibilities for events that need investigation."
             ]
           },
-          "Describe why an exception remains open. A replacement might depend on application compatibility, budget or an office move. That dependency gives leadership a basis for deciding timing and temporary safeguards, beyond a note that the device is old or the rule is required."
+          "For an exception that remains open, explain what is preventing the change. A replacement might depend on application compatibility, budget or an office move. Leadership needs that dependency to decide on timing and temporary safeguards; a note that the device is old or the rule is required leaves the decision unexplained."
         ]
       },
       {
         "h": "A workable review cadence",
         "ps": [
-          "Choose a review cadence around network changes and written requirements. For planning, maintain inventory and support information during normal IT work, review access after staff or vendor changes and check boundaries after material network changes. This is not a universal compliance schedule.",
+          "Network changes and written requirements should guide the review schedule. Maintain inventory and support information during normal IT work. Review access after staff or vendor changes, and check boundaries after material network changes. These are planning guidelines, not a universal compliance schedule.",
           "Use a periodic leadership review to discuss unresolved exposure and replacement decisions. Bring the list of exceptions, the business reasons and the choices that need approval. Leadership does not need every rule entry, but it needs enough information to understand the consequence of postponing work.",
-          "A hypothetical accounting firm might put disruptive maintenance outside filing deadlines while removing obsolete remote access sooner. That choice reflects its workflow and exposure. An urgent fix still needs a risk review and, where appropriate, a temporary safeguard before it is postponed.",
+          "A hypothetical accounting firm might schedule disruptive maintenance outside filing deadlines while removing obsolete remote access sooner. Its workflow and exposure inform that choice, but postponing an urgent fix still requires a risk review and, where appropriate, a temporary safeguard.",
           "When you add a location, move offices or change IT providers, treat the transition as a review trigger. Confirm that the new environment preserves the intended boundaries. Retain enough documentation for the incoming provider to identify equipment and dependencies without relying on the memory of someone who has left."
         ]
       },
@@ -479,7 +479,7 @@ export const gapArticles: Article[] = [
           "Network hardening involves configuration, maintenance and recovery work normally owned by your internal IT team or existing IT provider. Helm is a security provider that works alongside that team. Its recurring service scope does not transfer routine network administration or patching to Helm.",
           "If a relevant risk falls within Command's agreed program work, Helm can track its priority, owner and evidence. The authorized IT owner still changes the firewall. Specialist testing or a network project needs a separate scope decision before work begins.",
           {
-            "text": "Bring your current network questions to Helm with the inventory, existing provider responsibilities and any findings you can share securely. Begin with the unresolved access question that affects your business. The result should be a named next action and a way to verify that the intended boundary works.",
+            "text": "Bring your current network questions to Helm with your inventory, existing provider responsibilities and any findings you can share securely. Start with an unresolved access question that affects the business, then agree on who takes the next action and how the intended boundary will be verified.",
             "links": [
               {
                 "phrase": "Bring your current network questions to Helm",
@@ -510,24 +510,24 @@ export const gapArticles: Article[] = [
     "readMin": 10,
     "lane": "Small business",
     "laneTo": "/professional-services/",
-    "intro": "Imagine an accounting firm whose client files are unavailable on Monday. Backup jobs succeeded, but the restore operator is away and the tax application depends on a failed server. Staff can use email and still cannot complete the work. A disaster recovery plan needs to cover those dependencies as well as the backup.",
+    "intro": "If your systems went down on Monday, which work would you need to get running first? Consider a hypothetical accounting firm with successful backup jobs, an absent restore operator and a tax application that depends on a failed server. Staff can still use email, but they cannot finish the client work. The recovery plan has to account for the application and the people needed to restore it.",
     "lead": [
-      "Disaster recovery planning connects your data, systems and people to the work that must resume. For a small business, start with one critical workflow and test how you would restore it. Expand the plan as you learn which dependencies and decisions affect the recovery time."
+      "That gives you a practical starting point: choose one critical workflow and test how you would restore it. Disaster recovery planning connects the data, systems and people that workflow needs. As the test reveals dependencies or decisions that take time, use those findings to expand the plan."
     ],
     "sections": [
       {
         "h": "Define the work that needs to resume",
         "ps": [
-          "List the business work that must resume: receiving client documents, preparing returns, running payroll or communicating with clients. Each activity may depend on several systems and outside providers. Prioritize recovery by the consequence of interruption, then identify the servers and services it needs.",
-          "For each activity, identify the application, stored information, sign-in service, network connection and people it needs. Include practical dependencies such as access to a license portal or an approved replacement workstation. A restored database will not help staff if they cannot authenticate to the application that uses it.",
-          "Have the staff who perform the workflow check its dependencies. The IT inventory may identify the application but miss a spreadsheet or shared mailbox needed to complete a task before its deadline. Locate those records and confirm that the intended backup includes them before treating the inventory as complete.",
-          "Start with the activities that have the greatest business consequences. You can build a useful first plan around a small number of workflows instead of attempting to document every device at once. Record the excluded work so the initial scope remains clear."
+          "Begin with the work an interruption would stop: receiving client documents, preparing returns, running payroll or communicating with clients. Several systems and outside providers may support a single activity. Decide which interruption would have the greatest consequences for the business, then identify the servers and services needed to resume that work.",
+          "For each activity, trace what staff need to complete it. That includes the application and stored information, but also the sign-in service, network connection and people involved. Access to a license portal or an approved replacement workstation may be part of that chain. Even with a restored database, staff need a working way to sign into the application that uses it.",
+          "The staff who do the work can help check this list. An IT inventory may identify the application and still miss a spreadsheet or shared mailbox needed to finish a task before its deadline. Locate those records and check that the intended backup includes them before treating the inventory as complete.",
+          "A first plan can cover a small number of these priority workflows; you do not need to document every device at once. Record which work falls outside that initial scope so everyone knows what the plan covers."
         ]
       },
       {
         "h": "Set recovery time and data-loss targets",
         "ps": [
-          "A recovery time objective, often called RTO, expresses the target for restoring an affected service or workflow. A recovery point objective, or RPO, describes the acceptable loss of recent data measured in time. These targets help choose a recovery design and evaluate whether a test met the business need.",
+          "Once you know which work needs to resume, decide how long the business can wait and how much recent data it can afford to lose. The target for restoring an affected service or workflow is its recovery time objective, or RTO. The acceptable loss of recent data, measured in time, is its recovery point objective, or RPO. Together, these targets help IT choose a recovery design and give you a way to judge the test.",
           {
             "text": "NIST's contingency planning guide explains business impact analysis and recovery planning for federal information systems. A small business can adapt the planning concepts to its own operations. The guide's federal context does not automatically impose its requirements on your company.",
             "links": [
@@ -538,7 +538,7 @@ export const gapArticles: Article[] = [
             ]
           },
           "Suppose a hypothetical firm wants a document workflow restored within four hours and can tolerate losing up to one hour of recent changes. Those are illustrative targets, not results that Helm promises. The IT provider needs to evaluate whether the actual backup schedule, infrastructure and staffing can meet them.",
-          "Ask leadership to approve priorities for busy periods as well as ordinary work. Several hours without access near a filing deadline can have different consequences from an interruption in a quieter week. IT should check whether the targets are feasible before they become commitments in the plan."
+          "The business need can change through the year. Several hours without access near a filing deadline can have different consequences from an interruption in a quieter week, so leadership should approve priorities for both busy periods and ordinary work. IT then needs to check that the targets are feasible before the plan treats them as commitments."
         ],
         "figure": {
           "src": "/images/resources/disaster-recovery-small-business.svg",
@@ -551,7 +551,7 @@ export const gapArticles: Article[] = [
         "ps": [
           "A backup is a copy you can use for restoration under the product's supported conditions. A recovery plan covers the steps and dependencies needed to resume work. It may require rebuilding a device, restoring application data, verifying access and checking that the workflow produces the right result.",
           "File synchronization can spread a deletion or unwanted change to connected devices. Retention can preserve certain information for a defined period, while a backup product has its own restoration methods and coverage. Examine the actual service documentation rather than assuming that all copies of data serve the same purpose.",
-          "Ask the provider to demonstrate restoration for the systems in your workflow, using the comparison below to frame the discussion. A demonstration on a different application may explain the steps, but your team still needs evidence that its own workflow can be recovered."
+          "Ask the provider to demonstrate restoration of the systems your workflow actually uses. A demonstration on a different application can explain the steps, but it leaves your own recovery capability untested. The comparison below can help you identify what evidence is still missing."
         ],
         "table": {
           "caption": "Understand the difference between backup and recovery",
@@ -587,7 +587,7 @@ export const gapArticles: Article[] = [
       {
         "h": "Protect the recovery path",
         "ps": [
-          "An attacker who can change backup settings or delete recovery copies can affect your ability to recover. Review administrative access to the backup service separately from ordinary employee access. Confirm how authorized people reach the service if the primary sign-in system is unavailable or compromised.",
+          "Recovery depends on being able to reach and use the backup safely. An attacker who can change its settings or delete recovery copies can affect that ability. Review administrative access to the backup service separately from ordinary employee access, including how authorized people would reach it if the primary sign-in system were unavailable or compromised.",
           {
             "text": "CISA's ransomware guidance recommends protected backups and recovery testing. Ask your provider which protections apply to your chosen system, including isolation or immutability where supported. A product label is less useful than an explanation of what an administrator or attacker can change.",
             "links": [
@@ -605,7 +605,7 @@ export const gapArticles: Article[] = [
         "h": "Assign responsibilities before something breaks",
         "ps": [
           "Name the business leader who prioritizes workflows and authorizes recovery actions that disrupt normal operations. Identify the IT owner who diagnoses the system failure and performs restoration. Record who coordinates security containment when suspicious activity may be involved. Include alternates for the people whose absence would delay the work.",
-          "The cause of the interruption affects recovery. Equipment failure may allow a straightforward restore. Encrypted files or compromised accounts require the team to consider the cause, persistence and suitability of the recovery point before reconnecting systems. Keep those security decisions in the restoration path.",
+          "Those responsibilities also depend on what caused the interruption. Equipment failure may allow a straightforward restore. With encrypted files or compromised accounts, the team has to consider the cause, whether the compromise persists and whether the recovery point is suitable before reconnecting systems. The restoration process needs to include those security decisions.",
           "Define an escalation route when the cause is unclear. Staff should know whom to contact and what information to preserve. An employee should not be expected to decide independently whether to rebuild a device or delete evidence after seeing unusual activity.",
           "Review responsibilities with outside providers. Your application vendor may restore its hosted platform but leave your local data and employee access to another team. Document what the provider will do, how to contact it during an interruption and which tasks remain with your business."
         ]
@@ -613,7 +613,7 @@ export const gapArticles: Article[] = [
       {
         "h": "Build a runbook for one critical workflow",
         "ps": [
-          "Choose a workflow that staff can verify safely. Write the activation trigger, the systems involved and the approved restoration method. Include the decision about where to restore data and how the team will avoid overwriting current production work during a test.",
+          "With responsibilities agreed, choose a workflow that staff can verify safely and write its runbook: the steps the recovery operator will follow. Record what triggers the process, which systems are involved and the approved restoration method. Specify where to restore the data and how the team will avoid overwriting current production work during a test.",
           "Put dependencies in the order the operator needs them. For example, identity access may have to work before an employee can sign into the restored application and verify its records. Include that business verification alongside the technical restore, with the person who uses the recovered information checking the result.",
           {
             "list": [
@@ -634,8 +634,8 @@ export const gapArticles: Article[] = [
         "h": "Test more than whether a file opens",
         "ps": [
           "A useful restoration test has a defined scope, an expected result and a person who can judge that result. Choose a safe copy of representative information. Confirm that the recovery environment is appropriately protected and that the test will not expose client data unnecessarily.",
-          "Measure elapsed time from the agreed starting point, including authorization, access recovery, data transfer and application setup where the scenario requires them. List any steps excluded from the test. Otherwise leadership may read a partial technical measurement as the full time needed to resume work.",
-          "Ask a staff member to complete a representative task in the recovered workflow. Opening a file confirms less than retrieving the required documents with the right permissions and completing the expected application action. Check record dates and completeness against the approved recovery point.",
+          "Agree on when the clock starts. Where the scenario requires them, the measurement should include authorization, access recovery, data transfer and application setup. List any steps the test leaves out, so leadership can tell how much of the time needed to resume work you actually measured.",
+          "A staff member should then complete a representative task in the recovered workflow. A file-opening check leaves permissions and application behavior untested. Retrieving the required documents with the right permissions and completing the expected application action gives you more evidence that work can resume. Check record dates and completeness against the approved recovery point as well.",
           "Assign an owner and a corrective action to each failed step. An expired support contact, unavailable administrator or missing backup dependency can delay recovery even when restoration software works. Fix the issue, repeat the affected check and retain the result so the next review can distinguish tested capability from the original plan."
         ]
       },
@@ -644,7 +644,7 @@ export const gapArticles: Article[] = [
         "ps": [
           "For each critical workflow, record its business owner, technical owner, recovery-time target and acceptable data loss. Add the backup coverage, recovery location, last test date and test result. Keep unresolved dependencies visible rather than leaving the corresponding field blank.",
           "Suppose an accounting firm's worksheet shows tested cloud-document recovery but no restoration test for its local tax application. In this hypothetical example, the next decision is to ask IT for a scoped test of that application. More cloud storage would not establish whether that workflow can resume.",
-          "Review the worksheet after changing applications, providers or office infrastructure. New software can introduce a different database, sign-in dependency or backup requirement. Include recovery review in the change process so the plan does not drift behind the systems staff use.",
+          "Keep the worksheet in the change process. A new application may introduce a different database, sign-in dependency or backup requirement, and changes to providers or office infrastructure can also affect recovery. Reviewing the worksheet when those changes happen helps it reflect the systems staff now use.",
           "Choose testing frequency according to the importance of the workflow, rate of change and any written requirements that apply. This article does not prescribe a universal compliance schedule. Start with the highest consequence untested workflow and agree on the next review date with its owner."
         ]
       },
@@ -660,9 +660,9 @@ export const gapArticles: Article[] = [
         "h": "Where Helm fits in recovery planning",
         "ps": [
           "Helm Core includes supported cloud productivity backup within its covered scope. That does not establish backup or recovery coverage for every server, tax application, network device or workstation image. Confirm the actual systems and exclusions before making statements to a customer or insurer.",
-          "Command's agreed security-program work includes evidence upkeep, a risk register and an annual tabletop. Use the tabletop to examine decisions and coordination. A technical restoration test separately checks whether specified data and systems can be recovered. Both can support planning, with each supplying evidence for a different question.",
+          "Command's agreed security-program work includes evidence upkeep, a risk register and an annual tabletop. The tabletop lets you examine decisions and coordination. To check whether specified data and systems can actually be recovered, you need a separate technical restoration test. Both exercises can support the plan, and their results answer different questions.",
           {
-            "text": "Your existing IT provider retains routine administration and the work it has agreed to perform. Bring the recovery worksheet to a conversation with Helm so the covered security work and remaining IT tasks can be coordinated. Start with one workflow, one owner and one test that demonstrates staff can resume useful work.",
+            "text": "Your existing IT provider retains routine administration and the work it has agreed to perform. Bring the recovery worksheet to a conversation with Helm to coordinate the covered security work with the remaining IT tasks. The worksheet gives that conversation a specific workflow to discuss, a named owner and a test of whether staff can resume useful work.",
             "links": [
               {
                 "phrase": "conversation with Helm",

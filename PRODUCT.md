@@ -61,3 +61,7 @@ The product name is Helm Security, shortened to Helm in the interface. The voice
 ## Accessibility & Inclusion
 
 The site must remain responsive, keyboard accessible, screen-reader legible, motion-reduced when requested, and readable with sufficient contrast in every supported theme and variant.
+
+## Helm Copy Review Reference
+
+For every Impeccable copy audit, clarify, critique, or polish task, read [Helm's persistent voice reference](docs/VOICE.md) before reviewing prose. It preserves Dawid's approved conversational, evidence-led style, adapted to each page and interaction. This voice reference supplements the generic skill; all accessibility, contrast, responsive, usability, and technical checks still apply. Current source definitions govern exact service scope and terms.

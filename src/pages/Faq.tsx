@@ -6,19 +6,19 @@ import {renderParagraph, paragraphText, type Paragraph} from '../lib/richText';
 const faqs: {q: string; a: Paragraph}[] = [
   {
     q: 'We have an IT person. Why do we need Helm?',
-    a: 'Your IT person or MSP keeps systems running. Helm owns the defined security program in your agreement while that team keeps help desk, administration, patching, procurement, and routine remediation. Responsibilities are written down before work begins.',
+    a: "Your IT person or MSP keeps systems running, including help desk, administration, patching, procurement, and routine remediation. Helm owns the security program defined in your agreement. Before work begins, we write down who is responsible for what.",
   },
   {
     q: 'Are we really a target? We only have 15 employees.',
-    a: 'An attacker does not need to research the company for weeks. Public domain checks and impersonation attempts can be automated, and a smaller team may have fewer people available to notice or respond. The free scan shows the same public domain configuration that anyone on the internet can query.',
+    a: "Public domain checks and impersonation attempts can be automated, so an attacker does not need to spend weeks researching your company. A smaller team may also have fewer people available to notice or respond. The free scan shows the same public domain configuration that anyone on the internet can query.",
   },
   {
     q: 'What does the free scan actually check?',
-    a: 'The scan checks your domain\'s public security configuration: SPF, DKIM, DMARC, mail routing, DNSSEC, mail-transport policies, website certificate status, and a limited unauthenticated mail-server check. It does not search breach datasets or lookalike-domain registrations. It is automated, external, and touches nothing inside your systems.',
+    a: "The scan checks your domain's public security configuration: SPF, DKIM, DMARC, mail routing, DNSSEC, mail-transport policies, website certificate status, and a limited unauthenticated mail-server check. These automated checks run from outside your systems and touch nothing inside them. The scan does not search breach datasets or lookalike-domain registrations.",
   },
   {
     q: 'Do you do 24/7 monitoring yourselves?',
-    a: 'Specialist vendor security operations teams provide 24/7 monitoring and containment within the covered service scope. Helm manages deployment, coordination and reporting. Your agreement identifies the covered systems and the operating window for Helm follow-up.',
+    a: "Specialist vendor security operations teams provide 24/7 monitoring and containment within the covered service scope. Helm manages deployment, coordination and reporting. Your agreement sets out which systems are covered and when Helm provides follow-up.",
   },
   {
     q: 'How is pricing structured?',
@@ -41,7 +41,7 @@ const faqs: {q: string; a: Paragraph}[] = [
   {
     q: 'How fast can we start?',
     a: {
-      text: 'The free scan usually returns in about a minute. Core and Command start after we confirm the covered users, systems, provider responsibilities, deployment path, and rollback plan. The start date is written into the service order.',
+      text: "The free scan usually returns in about a minute. Core and Command start after we confirm the covered users, systems, provider responsibilities, deployment path, and rollback plan. Your service order sets out the start date.",
       links: [
         {phrase: 'free scan', to: '/free-scan'},
         {phrase: 'Core and Command', to: '/pricing'},

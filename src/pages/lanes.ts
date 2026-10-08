@@ -18,20 +18,20 @@ export const manufacturing: Lane = {
   regulatoryUpdate: {
     title: 'Phase II paused, but current contract duties still matter.',
     changed: 'The Department suspended CMMC Phase II requirements on July 13, 2026. That paused the planned expansion of third-party Level 2 certification requirements.',
-    unchanged: 'Phase I self-assessments remain in force. The Department says it will continue enforcing NIST SP 800-171 Revision 2 through self-assessments and selected government-led assessments. Existing DFARS duties, including applicable incident reporting, also remain contract driven.',
+    unchanged: "Phase I self-assessments remain in force. The Department says it will continue enforcing NIST SP 800-171 Revision 2 through self-assessments and selected government-led assessments. Your contract also determines which existing DFARS duties apply, including incident reporting.",
   },
   pains: [
     {
       title: 'Know what the contract requires',
-      body: 'A shop can bid on covered work and later discover that its systems or evidence do not support the required assessment. Review the solicitation, clauses, and information category before making the commitment.',
+      body: "Before committing to covered work, review the solicitation, clauses, and information category. A shop that bids first can later discover that its systems or evidence do not support the required assessment.",
     },
     {
       title: 'Your score and affirmation need support',
-      body: 'If the SPRS number cannot be reproduced from the assessment file, the company may struggle to support it when a contracting officer or customer asks. A gap assessment shows what is implemented, what still needs evidence, and what remains open.',
+      body: "A contracting officer or customer may ask how the company arrived at its SPRS number. If the assessment file cannot reproduce it, the company may struggle to support the answer. A gap assessment shows which requirements are implemented, which still need evidence, and which remain open.",
     },
     {
       title: 'Internal review still takes real time',
-      body: "The 110 requirements cover systems, policies, vendors, people, and daily shop workflows. A scoped assessment identifies the remaining work so the company can budget for it.",
+      body: "The 110 requirements reach into systems, policies, vendors, people, and daily shop workflows. A scoped assessment identifies what remains to be done, giving the company a basis for budgeting that work.",
     },
   ],
   evidence: [
@@ -70,22 +70,22 @@ export const manufacturing: Lane = {
   commonQuestions: [
     {
       question: 'How do we know whether Level 1 or Level 2 applies?',
-      answer: 'Start with the information and the contract. FCI generally points to Level 1. CUI, including controlled drawings, specifications, and technical data, points to Level 2. Company size does not decide the level. Confirm the clauses and the information category with the prime in writing.',
+      answer: "The level depends on the information you handle and the contract. FCI generally points to Level 1; CUI, including controlled drawings, specifications, and technical data, points to Level 2. Company size does not decide the level. Confirm the clauses and the information category with the prime in writing.",
       resource: {slug: 'cmmc-level-1-vs-level-2', label: 'Compare Level 1 and Level 2'},
     },
     {
       question: 'What should support an SPRS score?',
-      answer: 'Keep the system boundary, current SSP, working papers, evidence references, assessment date, score calculation, and plan for unmet requirements together. Another qualified reviewer should be able to follow that file and reach the same result.',
+      answer: "Another qualified reviewer should be able to follow the assessment file and reach the same result. Keep the system boundary, current SSP, working papers, evidence references, assessment date, score calculation, and plan for unmet requirements together so the reviewer can trace the score.",
       resource: {slug: 'sprs-score-explained', label: 'See how SPRS scoring works'},
     },
     {
       question: 'What changed when CMMC Phase II was paused?',
-      answer: 'The planned Phase II expansion was suspended. Phase I self-assessments remain, and the Department says Revision 2 will still be enforced through self-assessments and selected government-led assessments. Treat any new solicitation or contract as the controlling document.',
+      answer: "The planned Phase II expansion was suspended. Phase I self-assessments remain, and the Department says Revision 2 will still be enforced through self-assessments and selected government-led assessments. Use any new solicitation or contract as the controlling document.",
       resource: {slug: 'cmmc-deadline-checklist', label: 'Use the current readiness checklist'},
     },
     {
       question: 'What should a fixed-fee gap assessment deliver?',
-      answer: 'It should define the agreed boundary, test the applicable requirements, identify the evidence reviewed, score findings consistently, and separate immediate corrections from longer remediation. It should prepare the company to make an accurate representation, not certify the company.',
+      answer: "The assessment should define the agreed boundary and test the applicable requirements. Its findings should identify the evidence reviewed, use consistent scoring, and distinguish immediate corrections from longer remediation. That work prepares the company to make an accurate representation; it does not certify the company.",
       resource: {slug: 'ssp-poam-explained', label: 'Review the core evidence documents'},
     },
   ],
@@ -119,12 +119,12 @@ export const professionalServices: Lane = {
       body: 'An attacker can enter a real email thread and replace the account number on a closing, settlement, or tax payment. The message may look normal until the intended recipient says the money never arrived.',
     },
     {
-      title: 'Your carrier is asking harder questions',
-      body: 'Cyber-insurance forms ask about MFA, email protection, staff training, backups, and incident response. If the answer on the form is broader than the control in place, the difference may surface during a claim.',
+      title: "Insurance answers need to match your controls",
+      body: "Cyber-insurance forms ask about multi-factor authentication (MFA), email protection, staff training, backups, and incident response. An answer may describe more protection than the firm actually has. That mismatch may surface during a claim.",
     },
     {
       title: 'Client questionnaires need evidence',
-      body: "A client may ask how the firm protects email and access, verifies payments, or responds to incidents. Current inventories, settings, procedures, and test records give the firm an answer it can support.",
+      body: "A client may ask how the firm protects email and access, verifies payments, or responds to incidents. To support those answers, the firm needs current inventories, settings, procedures, and test records.",
     },
   ],
   evidence: [
@@ -147,8 +147,8 @@ export const professionalServices: Lane = {
       href: 'https://www.irs.gov/newsroom/security-summit-irs-reminds-tax-pros-to-guard-against-identity-theft-as-summer-series-wraps-up',
     },
   ],
-  planTitle: 'Protect the inbox, the work devices, and the answers the firm signs.',
-  planSub: "Helm Core provides managed protection. Helm Command adds vCISO leadership and evidence upkeep to support the firm’s security answers.",
+  planTitle: "Protect daily work and support the answers your firm signs.",
+  planSub: "Helm Core provides managed protection. Helm Command adds virtual chief information security officer (vCISO) leadership and evidence upkeep, helping the firm support the security answers it gives to clients and insurers.",
   proof: {
     title: 'What the firm can put in place and show.',
     points: [
@@ -185,15 +185,15 @@ export const lawFirms: Lane = {
   pains: [
     {
       title: 'A real thread can carry a fake payment change',
-      body: 'An attacker who compromises a mailbox can study the matter and insert new wire instructions when the transfer is expected. Staff may see the real participants and history around the fraudulent change.',
+      body: "An attacker who compromises a mailbox can study the matter, then insert new wire instructions when the transfer is expected. The real participants and earlier messages are still there, which can make the fraudulent change look like part of the conversation.",
     },
     {
       title: 'Client information travels with the lawyer',
-      body: 'Remote work and court appearances put confidential email and documents on laptops outside the office. If a device is lost without encryption or remains signed in, someone may be able to open client information before the firm can revoke access.',
+      body: "Confidential email and documents go with lawyers to court appearances and remote work. If a laptop is lost without encryption or remains signed in, someone may be able to open client information before the firm can revoke access.",
     },
     {
       title: 'Clients and carriers expect supportable answers',
-      body: 'Security questionnaires and insurance applications ask which devices, accounts, and procedures are protected, monitored, and tested. The firm needs records that match the answer it signs.',
+      body: "Security questionnaires and insurance applications ask which devices, accounts, and procedures are protected, monitored, and tested. Before signing an answer, the firm needs records that show those controls are in place.",
     },
   ],
   evidence: [
@@ -236,7 +236,7 @@ export const lawFirms: Lane = {
     },
     {
       question: 'Does DMARC stop mailbox compromise?',
-      answer: 'No. DMARC helps receiving systems reject unauthorized mail sent as your exact domain. It does not stop an attacker using a compromised real mailbox or a lookalike domain. Firms still need mailbox protection, MFA, reporting, and a payment-verification process.',
+      answer: "No. DMARC helps receiving systems reject unauthorized mail sent as your exact domain. A compromised real mailbox or a lookalike domain falls outside that protection, so firms still need mailbox protection, MFA, reporting, and a payment-verification process.",
       resource: {slug: 'what-is-dmarc', label: 'Understand what DMARC does'},
     },
     {
@@ -246,7 +246,7 @@ export const lawFirms: Lane = {
     },
     {
       question: 'What evidence will a client or carrier expect?',
-      answer: 'Keep current inventories, configuration records, deployment status, training records, test results, incident contacts, and written payment procedures. If the policy describes a control that is not operating, correct the control or the answer before submitting it.',
+      answer: "Keep current inventories, configuration records, deployment status, training records, test results, incident contacts, and written payment procedures. Before submitting an answer, check that each control described in the policy is operating. If it is not, correct the control or the answer.",
       resource: {slug: 'cyber-insurance-questionnaire', label: 'Prepare supportable answers'},
     },
   ],
@@ -276,15 +276,15 @@ export const accountingFirms: Lane = {
   pains: [
     {
       title: 'One account can expose hundreds of clients',
-      body: 'A compromised mailbox or work computer can expose tax documents, identity information, and client contacts. The same account can then be used to send believable requests to those clients.',
+      body: "A compromised mailbox or work computer can expose tax documents, identity information, and client contacts. An attacker may also use that account to send requests that look legitimate to those clients.",
     },
     {
-      title: 'Tax season compresses every decision',
-      body: 'During tax season, long hours, seasonal staff, urgent client messages, and document portals make a malicious attachment or sign-in request easier to mistake for routine work.',
+      title: "Tax season makes malicious requests harder to spot",
+      body: "During tax season, long hours and seasonal staff add to the pressure of urgent client messages and document portals. A malicious attachment or sign-in request can be easier to mistake for routine work in that setting.",
     },
     {
       title: 'A WISP must describe the real practice',
-      body: 'A downloaded WISP may omit seasonal access, current vendors, or the systems holding client data. If the document promises safeguards that are not operating, the mismatch can create a problem during a breach or review.',
+      body: "A downloaded WISP may leave out seasonal access, current vendors, or the systems holding client data. That mismatch can cause problems during a breach or review if the plan describes safeguards that are not actually operating.",
     },
   ],
   evidence: [
@@ -314,7 +314,7 @@ export const accountingFirms: Lane = {
     },
   ],
   planTitle: 'Protect the work, then make the WISP match it.',
-  planSub: 'The records behind each control help the firm answer clients, insurers, and regulators without guessing.',
+  planSub: "Records of the safeguards actually in place help the firm answer questions from clients, insurers, and regulators without guessing.",
   proof: {
     title: 'What the firm can protect and document.',
     points: [
@@ -351,8 +351,8 @@ export const medicalPractices: Lane = {
   ctaMode: 'book',
   pains: [
     {
-      title: 'The EHR is not the whole risk analysis',
-      body: 'A practice that reviews only the EHR can miss patient information in email, imaging, billing, backups, tablets, phones, copiers, and vendor systems. Those gaps become harder to reconstruct after an incident.',
+      title: "Patient information extends beyond the EHR",
+      body: "The electronic health record (EHR) is one place to look for patient information. Email, imaging, billing, backups, tablets, phones, copiers, and vendor systems can hold it too. A risk analysis limited to the EHR can miss those systems, leaving gaps that are harder to reconstruct after an incident.",
     },
     {
       title: 'A compromised device can stop the day',
@@ -360,7 +360,7 @@ export const medicalPractices: Lane = {
     },
     {
       title: 'HIPAA readiness needs evidence',
-      body: 'A risk analysis needs to show which systems were reviewed, what could go wrong, which safeguards exist, and who owns each unresolved issue. A completed checklist without those details leaves the practice unable to explain its decisions.',
+      body: "To explain its risk-analysis decisions, a practice needs a record of which systems were reviewed, what could go wrong, which safeguards exist, and who owns each unresolved issue. A completed checklist without those details leaves those decisions unexplained.",
     },
   ],
   evidence: [
@@ -378,7 +378,7 @@ export const medicalPractices: Lane = {
     },
     {
       value: '1 to 10 providers',
-      finding: 'The historical HHS definition used to design its small and medium practice Security Risk Assessment Tool. HHS cautions that the tool assists with risk analysis but does not itself establish compliance.',
+      finding: "HHS used this historical definition when designing its Security Risk Assessment Tool for small and medium practices. The tool helps with risk analysis, but HHS cautions that using it does not itself establish compliance.",
       source: 'HHS SRA Tool user guide',
       href: 'https://www.hhs.gov/guidance/sites/default/files/hhs-guidance-documents//attachmenta-security_risk_assessment_tool_user_guide_v6.pdf',
     },
@@ -421,15 +421,15 @@ export const contractors: Lane = {
   pains: [
     {
       title: 'Supplier invoice fraud',
-      body: 'An attacker can imitate a supplier or compromise a real email thread, then replace the bank details. By the time the supplier asks about the missing payment, recovery may depend on how quickly the bank is contacted.',
+      body: "An attacker can pose as a supplier or take over a real email thread to replace the bank details. The supplier may then ask why the payment has not arrived. Recovery can depend on how quickly the bank is contacted.",
     },
     {
-      title: 'Some GCs require security',
-      body: 'Some general contractors and insurers ask subcontractors to document email, payment, access, or incident controls. An unsupported answer can delay a bid, renewal, or claim.',
+      title: "Security questions from GCs and insurers",
+      body: "Some general contractors and insurers ask subcontractors to document their controls for email, payments, access, or incidents. If you cannot support the answer with evidence, a bid, renewal, or claim can be delayed.",
     },
     {
       title: 'Field teams, office risk',
-      body: "Estimators and office managers may review payment requests from phones and job sites. When several jobs are moving at once, a changed instruction can look like one more urgent item unless staff are required to verify the change by phone.",
+      body: "Estimators and office managers may review payment requests on phones while at job sites. With several jobs moving at once, changed instructions can look like another urgent task. Requiring staff to verify the change by phone gives it a separate check.",
     },
   ],
   evidence: [
@@ -452,16 +452,16 @@ export const contractors: Lane = {
       href: 'https://www.ic3.gov/PSA/2024/PSA240911',
     },
   ],
-  planTitle: 'Protect the payment request, the work device, and the answer on the form.',
-  planSub: 'Each service addresses a specific point where money, access, or a customer requirement can go wrong.',
+  planTitle: "Protect payment requests and covered devices. Document the controls customers ask about.",
+  planSub: "Each service addresses a specific risk to money or access, or helps you answer a customer’s security requirements.",
   proof: {
-    title: 'What the contractor can put in place.',
+    title: "Protection and readiness for your contracting business",
     points: [
       'Helm Core for compatible Microsoft 365 and Google Workspace environments',
       'Payment-verification protocol separately scoped to your approval process',
       'Device protection scoped to the actual covered fleet',
       'Published pricing and account minimums',
-      'Readiness evidence sized to the questionnaire in front of you',
+      "Readiness evidence scoped to the questionnaire you need to answer",
     ],
   },
   resources: [

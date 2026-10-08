@@ -69,11 +69,7 @@ export default function About() {
               communication, growth, and partnerships.
             </p>
             <p className="observe d2">
-              Small and medium-sized businesses already have plenty of tools
-              and alerts. The harder problem is knowing which issue matters,
-              who should fix it, and whether the work was completed. Helm is
-              designed to provide that accountability in plain language and
-              with the price and scope stated up front.
+              Small and medium-sized businesses already have plenty of tools and alerts. They still need to know which issues matter, who should fix them, and whether the work is complete. Helm is designed to make those responsibilities clear, with explanations in plain language and the price and scope stated up front.
             </p>
           </div>
           <div>
@@ -139,9 +135,7 @@ export default function About() {
           </article>
         </div>
         <p className="founder-note observe d2">
-          Helm is a two-person company today. Established security platforms
-          provide continuous monitoring where included in the service scope, and we are
-          clear about which work they perform and which work Helm performs.
+          Helm is a two-person company today. Where the service scope includes continuous monitoring, established security platforms provide it. We explain which work those platforms perform and which work Helm performs.
         </p>
       </Band>
 
@@ -149,10 +143,7 @@ export default function About() {
         <div className="band-head">
           <h2 className="observe">Why "Helm"</h2>
           <p className="observe d1">
-            A ship's helm gives the person steering a way to set direction.
-            The name reflects the work we want security reporting to support:
-            understanding the issue, deciding what needs attention and knowing
-            who is responsible for the next step.
+            A ship's helm lets the person steering set direction. The name reflects what we want security reporting to help you do: understand the issue and decide what needs attention, with a clear owner for the next step.
           </p>
         </div>
       </Band>

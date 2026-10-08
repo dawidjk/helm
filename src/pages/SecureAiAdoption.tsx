@@ -41,9 +41,7 @@ export default function SecureAiAdoption() {
               financial-services businesses.
             </p>
             <p>
-              Bring one recurring internal task you want to evaluate. Your existing
-              IT provider stays in place. We agree on responsibilities and any
-              access or configuration changes before work begins.
+              Bring one recurring internal task you want to evaluate. Your existing IT provider stays in place, and we agree on responsibilities and any access or configuration changes before work begins.
             </p>
             <p>
               Managed cybersecurity remains Helm’s primary service.
@@ -60,20 +58,15 @@ export default function SecureAiAdoption() {
           <ol className="ai-review-steps">
             <li>
               <h3>Document the current work</h3>
-              <p>Map one recurring internal workflow: who does it, how often it happens,
-                time spent completing and checking it, and its current labor and software costs.</p>
+              <p>We start by mapping one recurring internal workflow: who does it, how often it happens, and how much time they spend completing and checking it. We also document its current labor and software costs.</p>
             </li>
             <li>
               <h3>Review the proposed tools and data</h3>
-              <p>Check data handling, storage and retention, permissions, licensing,
-                software costs, and where human review is required. Agree on which
-                data and platform the firm would approve for testing.</p>
+              <p>Before testing, we review how the proposed tool handles, stores, and retains data, along with its permissions, licensing, software costs, and where human review is required. We agree on which data and platform the firm would approve for the test.</p>
             </li>
             <li>
               <h3>Decide whether to test</h3>
-              <p>Recommend whether a pilot is appropriate, what needs to change first,
-                or why the workflow should stay as it is. Define the quality checks
-                and cost comparison before a pilot starts.</p>
+              <p>Helm recommends whether a pilot is appropriate, what needs to change first, or why the workflow should stay as it is. If a pilot is appropriate, we define the quality checks and cost comparison before it starts.</p>
             </li>
           </ol>
         </div>
@@ -124,9 +117,7 @@ export default function SecureAiAdoption() {
           <div className="ai-prose">
             <p>Start with public, synthetic, or explicitly approved low-sensitivity
               data. Confidential client data is not uploaded by default.</p>
-            <p>Review storage, retention, access, and model-training terms separately.
-              A tool’s promise not to use data for model training does not mean it
-              does not store that data.</p>
+            <p>Review storage, retention, access, and model-training terms separately. A tool may promise not to use data for model training and still store it.</p>
             <p>People remain responsible for reviewing outputs and making decisions.
               This engagement does not include autonomous legal, financial, medical,
               or hiring decisions.</p>
