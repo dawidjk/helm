@@ -1,7 +1,8 @@
-.lead-form-label {
+.lead-form .lead-form-label {
   grid-column: 1 / -1;
   flex-basis: 100%;
   text-align: left;
+  color: var(--helm-text-strong);
   font-size: 14px;
   font-weight: 600;
   line-height: 1.4;
@@ -14,4 +15,13 @@
 
 @media (max-width: 700px) {
   .japandi-home-copy .lead-form-label { color: #f7f3ea; }
+}
+
+/* Labels follow the actual surface, including fixed dark photographic heroes. */
+.hero.lane.brand-hero .lead-form-label {
+  color: #f5f1e8;
+}
+
+.cta-band .lead-form-label {
+  color: var(--japandi-on-pine);
 }
