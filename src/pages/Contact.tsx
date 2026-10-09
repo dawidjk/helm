@@ -9,6 +9,7 @@ import {contactSubmissionId, trackContactSuccess} from '../lib/contactSubmission
 import Turnstile from '../components/Turnstile';
 import {contactInterests} from './products';
 import {businessPhone, serviceAreaText} from '../lib/business';
+import {useHydratedForm} from '../lib/useHydratedForm';
 
 const CONTACT_ENDPOINT =
   import.meta.env.VITE_CONTACT_URL ??
@@ -26,6 +27,8 @@ export default function Contact() {
   const [turnstileTimedOut, setTurnstileTimedOut] = useState(false);
   const sent = state === 'sent';
   const submitting = useRef(false);
+  const formRef = useHydratedForm();
+  const initialInterest = useRef(true);
 
   useEffect(() => {
     const services: Record<string, string> = {
@@ -33,8 +36,12 @@ export default function Contact() {
       'helm-command': 'Helm Command',
       'secure-ai-adoption': 'Secure AI Adoption',
     };
-    setInterest(services[requestedService ?? ''] ?? '');
-  }, [requestedService]);
+    // Keep an option chosen while the static form was visible. On subsequent
+    // service-link navigation, apply that link's requested service normally.
+    const selected = formRef.current?.querySelector<HTMLSelectElement>('select[name="interest"]');
+    setInterest((initialInterest.current && selected?.value) || services[requestedService ?? ''] || '');
+    initialInterest.current = false;
+  }, [requestedService, formRef]);
 
   // The Send button stays disabled until Turnstile hands over a token. While
   // that is pending, say so; if no token arrives in a reasonable window (slow
@@ -163,7 +170,7 @@ export default function Contact() {
             <p>A Helm executive will reply during business hours from hello@helmsecured.com.</p>
           </div>
         ) : (
-          <form className="contact-form observe in" onSubmit={onSubmit}>
+          <form ref={formRef} className="contact-form observe in" onSubmit={onSubmit}>
             <div className="cf-row">
               <label>
                 Name

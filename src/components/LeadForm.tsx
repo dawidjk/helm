@@ -1,7 +1,8 @@
-import {useId, useState} from 'react';
+import {useId, useRef, useState} from 'react';
 import {Button} from '@astryxdesign/core/Button';
 import {trackConversion, withAttribution} from '../lib/measurement';
 import './LeadForm.css';
+import {useHydratedForm} from '../lib/useHydratedForm';
 
 /** Portal origin the protected scan flow navigates to. Override in .env for local dev. */
 export const PORTAL_URL = import.meta.env.VITE_PORTAL_URL ?? 'https://app.helmsecured.com';
@@ -48,14 +49,17 @@ export default function LeadForm({
 }) {
   const inputId = useId();
   const errorId = `${inputId}-error`;
-  const [email, setEmail] = useState('');
   const [state, setState] = useState<'idle' | 'busy' | 'error' | 'personal'>('idle');
+  const formRef = useHydratedForm(true);
+  const submitting = useRef(false);
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (state === 'busy') return;
+    if (submitting.current) return;
 
-    const trimmed = email.trim();
+    // The browser owns this value, including typing/autofill before React
+    // loads. A controlled empty initial value would lose that early input.
+    const trimmed = String(new FormData(e.currentTarget).get('email') ?? '').trim();
     if (!EMAIL_RE.test(trimmed)) {
       setState('error');
       return;
@@ -67,6 +71,7 @@ export default function LeadForm({
       return;
     }
 
+    submitting.current = true;
     setState('busy');
     trackConversion('scan_started', source);
     const url = new URL('/scan/auto', PORTAL_URL);
@@ -78,7 +83,7 @@ export default function LeadForm({
   };
 
   return (
-    <form className={`lead-form${compact ? ' compact' : ''}`} onSubmit={onSubmit}>
+    <form ref={formRef} className={`lead-form${compact ? ' compact' : ''}`} onSubmit={onSubmit}>
       <label htmlFor={inputId} className="lead-form-label">Work email</label>
       <input
         id={inputId}
@@ -90,8 +95,7 @@ export default function LeadForm({
         aria-label="Work email"
         aria-invalid={state === 'error' || state === 'personal'}
         aria-describedby={state === 'error' || state === 'personal' ? errorId : undefined}
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        defaultValue=""
         disabled={state === 'busy'}
       />
       <Button

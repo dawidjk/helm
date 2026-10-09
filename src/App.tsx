@@ -1,4 +1,4 @@
-import {forwardRef, useEffect} from 'react';
+import {forwardRef, useEffect, useRef} from 'react';
 import {Outlet, Link as RouterLink, useLocation} from 'react-router-dom';
 import {Theme} from '@astryxdesign/core/theme';
 import {LinkProvider} from '@astryxdesign/core/Link';
@@ -7,6 +7,7 @@ import {SiteNav, SiteFooter, RevealManager} from './components/Site';
 import {ThemeModeProvider, useThemeMode} from './components/ThemeMode';
 import {canonicalPath} from './lib/urls';
 import AdConsent from './components/AdConsent';
+import {isDocumentHydrated, markDocumentHydrated} from './lib/hydrationState';
 import './theme.css';
 import './index.css';
 
@@ -30,7 +31,16 @@ const NavLink = forwardRef<HTMLAnchorElement, React.ComponentProps<'a'>>(
 
 function ScrollToTop() {
   const {pathname} = useLocation();
-  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  const previousPathname = useRef<string | null>(isDocumentHydrated() ? null : pathname);
+  useEffect(() => {
+    // Preserve scrolling or a fragment jump made before hydration finishes.
+    // Reset only when the visitor navigates to another page in the app.
+    if (previousPathname.current !== pathname) {
+      previousPathname.current = pathname;
+      window.scrollTo(0, 0);
+    }
+    markDocumentHydrated();
+  }, [pathname]);
   return null;
 }
 

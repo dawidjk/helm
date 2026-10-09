@@ -1,0 +1,24 @@
+import fs from 'node:fs';import vm from 'node:vm';import assert from 'node:assert/strict';
+const code=fs.readFileSync('src/lib/hydration-preload.js','utf8').replace("'__HELM_HYDRATION_URL__'",JSON.stringify('/assets/client-test.js'));
+function fixture(){const events=new Map(),frames=[],links=[];class Element{closest(){return this.control?this:null}}class Image extends Element{getAttribute(){return this.priority}decode(){return this.decoded??Promise.resolve()}}
+ const document={head:{appendChild:x=>links.push(x)},createElement:()=>({attrs:{},setAttribute(k,v){this.attrs[k]=v}}),addEventListener:(k,f)=>{const s=events.get(k)??new Set();s.add(f);events.set(k,s)},removeEventListener:(k,f)=>events.get(k)?.delete(f),querySelector:()=>document.image};
+ class Form extends Element {constructor(kind){super();this.kind=kind;this.dataset={}}matches(selector){return selector.includes(this.kind)}}
+ const context={document,Element,HTMLImageElement:Image,HTMLFormElement:Form,Promise,requestAnimationFrame:f=>frames.push(f)};vm.runInNewContext(code,context);return{document,events,frames,links,Element,Image,Form,emit:(k,target)=>{const event={target,prevented:false,preventDefault(){this.prevented=true}};[...(events.get(k)??[])].forEach(f=>f(event));return event},frame:()=>frames.shift()?.()}}
+const flush=()=>new Promise(r=>setImmediate(r));const tests=[];async function test(name,f){await f();tests.push(name)}
+await test('No module fetch at initial parsing or an unrelated image/scroll',async()=>{const f=fixture();assert.equal(f.links.length,0);const i=new f.Image();i.priority='low';f.emit('load',i);f.emit('pointerdown',new f.Element());await flush();assert.equal(f.links.length,0)});
+await test('Wait for decode and two paint opportunities before passive warming',async()=>{const f=fixture();const i=new f.Image();i.priority='high';let resolve;i.decoded=new Promise(r=>resolve=r);f.emit('load',i);await flush();assert.equal(f.frames.length,0);resolve();await flush();f.frame();assert.equal(f.links.length,0);f.frame();assert.equal(f.links.length,1)});
+await test('Attempted control warms immediately once and removes input hooks',async()=>{const f=fixture();const control=new f.Element();control.control=true;f.emit('pointerdown',control);f.emit('focusin',control);assert.equal(f.links.length,1);const l=f.links[0];assert.equal(l.rel,'modulepreload');assert.equal(l.href,'/assets/client-test.js');assert.equal(l.attrs.fetchpriority,'low');assert.equal(l.crossOrigin,'');assert.equal(f.events.get('pointerdown').size,0)});
+await test('Control during image decoding wins without a duplicate module request',async()=>{const f=fixture();const i=new f.Image();i.priority='high';let resolve;i.decoded=new Promise(r=>resolve=r);f.emit('load',i);const control=new f.Element();control.control=true;f.emit('keydown',control);resolve();await flush();f.frame();f.frame();assert.equal(f.links.length,1)});
+await test('Cached complete image at DOM readiness follows the same paint barrier',async()=>{const f=fixture();const i=new f.Image();i.priority='high';i.complete=true;i.naturalWidth=640;f.document.image=i;f.emit('DOMContentLoaded');await flush();f.frame();assert.equal(f.links.length,0);f.frame();assert.equal(f.links.length,1)});
+await test('Decode rejection does not block the existing hydration path',async()=>{const f=fixture();const i=new f.Image();i.priority='high';i.decoded=Promise.reject(Error('decode unavailable'));f.emit('load',i);await flush();f.frame();f.frame();assert.equal(f.links.length,1)});
+await test('Image decode API absence still keeps two paint opportunities',async()=>{const f=fixture();const i=new f.Image();i.priority='high';i.decode=undefined;f.emit('load',i);await flush();f.frame();assert.equal(f.links.length,0);f.frame();assert.equal(f.links.length,1)});
+
+
+await test('Early scan submits are blocked/coalesced until hydration',()=>{const f=fixture();const form=new f.Form('.lead-form');assert.equal(f.emit('submit',form).prevented,true);assert.equal(f.emit('submit',form).prevented,true);assert.equal(form.dataset.helmPendingSubmit,'true');assert.equal(f.links.length,1);form.dataset.helmHydrated='true';assert.equal(f.emit('submit',form).prevented,false)});
+await test('Early contact submit is blocked without replay; unrelated forms untouched',()=>{const f=fixture();const form=new f.Form('.contact-form');assert.equal(f.emit('submit',form).prevented,true);assert.equal(form.dataset.helmPendingSubmit,undefined);const other=new f.Form('.other');assert.equal(f.emit('submit',other).prevented,false)});
+
+
+await test('Early recovery-search submits are blocked and coalesced',()=>{const f=fixture();const form=new f.Form('.error-search');assert.equal(f.emit('submit',form).prevented,true);assert.equal(f.emit('submit',form).prevented,true);assert.equal(form.dataset.helmPendingSubmit,'true');assert.equal(f.links.length,1)});
+
+
+console.log('Passed',tests.length,'bootstrap tests');

@@ -45,7 +45,7 @@ walkDir(DIST_DIR, (filePath) => {
         route = route.slice(0, -1);
     }
 
-    if (relativePath === '404.html' || relativePath.startsWith('measurement/')) return;
+    if (relativePath === '404.html' || relativePath.startsWith('404/') || relativePath.startsWith('measurement/')) return;
 
     // Only publish lastmod when the page carries a real editorial date. A
     // deploy date is not evidence that the page content changed.
@@ -72,4 +72,7 @@ ${urls.map(({url, route, lastmod}) => `  <url>\n    <loc>${url}</loc>${lastmod ?
 </urlset>`;
 
 fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), sitemap);
+// Serve genuine missing-page HTML for unknown GitHub Pages URLs. Copying
+// Home here would hydrate Home's DOM as a different route and trigger recovery.
+fs.copyFileSync(path.join(DIST_DIR, '404/index.html'), path.join(DIST_DIR, '404.html'));
 console.log(`Sitemap generated successfully at ${path.join(DIST_DIR, 'sitemap.xml')}`);

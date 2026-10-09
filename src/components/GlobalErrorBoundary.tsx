@@ -1,4 +1,4 @@
-import {useMemo, useState} from 'react';
+import {useMemo, useRef, useState} from 'react';
 import {
   isRouteErrorResponse,
   Link,
@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import {Head} from 'vite-react-ssg';
 import errorStill from '../assets/brand/japandi-error-still-v1.webp';
+import {useHydratedForm} from '../lib/useHydratedForm';
 
 const VALID_PAGES = [
   {path: '/', label: 'Home'},
@@ -25,29 +26,37 @@ const VALID_PAGES = [
   {path: '/helm-command/', label: 'Helm Command'},
 ];
 
-export default function GlobalErrorBoundary() {
+function findPages(query: string) {
+  const normalized = query.trim().toLowerCase();
+  if (!normalized) return [];
+  return VALID_PAGES.filter(({path, label}) =>
+    path.toLowerCase().includes(normalized) || label.toLowerCase().includes(normalized),
+  ).slice(0, 4);
+}
+
+export default function GlobalErrorBoundary({missing = false}: {missing?: boolean}) {
   const error = useRouteError();
   const navigate = useNavigate();
   const [query, setQuery] = useState('');
   const [message, setMessage] = useState('');
-  const isMissing = isRouteErrorResponse(error) && error.status === 404;
+  const formRef = useHydratedForm(true);
+  const navigating = useRef(false);
+  const isMissing = missing ||
+    (isRouteErrorResponse(error) && error.status === 404) ||
+    (error instanceof Response && error.status === 404);
   const pageTitle = isMissing
     ? 'Page Not Found | Helm Security'
     : 'Something Went Wrong | Helm Security';
 
-  const suggestions = useMemo(() => {
-    const normalized = query.trim().toLowerCase();
-    if (!normalized) return [];
-    return VALID_PAGES.filter(({path, label}) =>
-      path.toLowerCase().includes(normalized) ||
-      label.toLowerCase().includes(normalized),
-    ).slice(0, 4);
-  }, [query]);
+  const suggestions = useMemo(() => findPages(query), [query]);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (suggestions[0]) {
-      navigate(suggestions[0].path);
+    if (navigating.current) return;
+    const matches = findPages(String(new FormData(event.currentTarget).get('q') ?? ''));
+    if (matches[0]) {
+      navigating.current = true;
+      navigate(matches[0].path);
       return;
     }
     setMessage('We could not match that page. Try Home, Pricing, Resources, or Contact.');
@@ -91,13 +100,13 @@ export default function GlobalErrorBoundary() {
             <Link to="/contact/" className="error-action-secondary">Contact Helm</Link>
           </div>
 
-          <form className="error-search" onSubmit={handleSubmit}>
+          <form ref={formRef} className="error-search" onSubmit={handleSubmit}>
             <label htmlFor="error-page-search">Find a page</label>
             <div className="error-search-row">
               <input
                 id="error-page-search"
                 name="q"
-                value={query}
+                defaultValue=""
                 onChange={(event) => {
                   setQuery(event.target.value);
                   setMessage('');

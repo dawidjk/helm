@@ -1,3 +1,5 @@
+import {readFileSync} from 'node:fs'
+import {resolve} from 'node:path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import 'vite-react-ssg' // module augmentation for ssgOptions
@@ -25,6 +27,21 @@ function keepOnlyCriticalPreloads(html: string) {
     /<script\b(?=[^>]*\btype="module")(?=[^>]*\bsrc="[^"]+")(?![^>]*\bfetchpriority=)[^>]*>/g,
     (tag) => tag.replace('<script', '<script fetchpriority="low"'),
   )
+
+  // React 19's hydration runtime is a separate dynamic import. Discover its
+  // built URL from the entry instead of waiting for route loading to finish
+  // before downloading it. Warm after hero paint or an attempted control,
+  // keeping passive image discovery and transfer ahead of this module.
+  const entryPath = optimized.match(/<script\b(?=[^>]*\btype="module")[^>]*\bsrc="([^"]+)"/)?.[1]
+  if (entryPath && /^\/assets\/[\w-]+\.js$/.test(entryPath)) {
+    const entryCode = readFileSync(resolve('dist', entryPath.slice(1)), 'utf8')
+    const clientChunk = entryCode.match(/import\(["']\.\/(client-[\w-]+\.js)["']\)/)?.[1]
+    if (clientChunk) {
+      const bootstrap = readFileSync(resolve('src/lib/hydration-preload.js'), 'utf8')
+        .replace("'__HELM_HYDRATION_URL__'", JSON.stringify(`/assets/${clientChunk}`))
+      optimized = optimized.replace('</head>', `<script>${bootstrap}</script>\n</head>`)
+    }
+  }
 
   // The SSG already places the hero <img> in the initial response. Mirror its
   // built URL into a preload. If a mobile <source> is present, give each asset
@@ -68,6 +85,9 @@ function keepOnlyCriticalPreloads(html: string) {
 
 // https://vite.dev/config/
 export default defineConfig({
+  // A cached page and its JS must agree across midnight/New Year. Update the
+  // displayed year only after hydration, never in the initial client render.
+  define: {'import.meta.env.HELM_BUILD_YEAR': JSON.stringify(new Date().getFullYear())},
   plugins: [react()],
   ssgOptions: {
     // /pricing -> /pricing/index.html — required for GitHub Pages & static hosts

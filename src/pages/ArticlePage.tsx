@@ -30,7 +30,11 @@ function sectionId(heading: string, index: number) {
 }
 
 export default function ArticlePage() {
-  const {article: a, support} = useLoaderData() as {article: Article; support: ArticleSupport};
+  const data = useLoaderData() as {article: Article; support: ArticleSupport} | null;
+  // Static-loader lookup returns null for an address without a generated
+  // article. Render the same missing-page boundary as the static fallback.
+  if (!data?.article) throw new Response('Resource not found', {status: 404});
+  const {article: a, support} = data;
   const isBuyingGuide = a.readingLayout || ['managed-service-providers-new-jersey', 'managed-service-provider-security-models', 'cyber-insurance-cybersecurity-vendors'].includes(a.slug);
   const relatedArticles = support.relatedSlugs
     .map((relatedSlug) => articleCatalog.find((article) => article.slug === relatedSlug))

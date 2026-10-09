@@ -511,6 +511,8 @@ export function MailingAddress() {
 
 export function SiteFooter() {
   const remarketingConfigured = isRemarketingConfigured();
+  const [year, setYear] = useState<number>(import.meta.env.HELM_BUILD_YEAR);
+  useEffect(() => { setYear(new Date().getFullYear()); }, []);
   return (
     <footer className="site-footer">
       <div className="wrap footer-layout">
@@ -548,7 +550,7 @@ export function SiteFooter() {
           ))}
         </nav>
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} Helm Security LLC · New Jersey</span>
+          <span>© {year} Helm Security LLC · New Jersey</span>
           <div className="footer-social" aria-label="Helm Security social media">
             <a href={linkedInUrl} aria-label="Helm Security on LinkedIn">LinkedIn</a>
             <a href={facebookUrl} aria-label="Helm Security on Facebook">Facebook</a>

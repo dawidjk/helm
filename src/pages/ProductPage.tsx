@@ -9,8 +9,9 @@ import {BOOK_CTA} from './ctaCopy';
 import {siteUrl} from '../lib/urls';
 import './ProductPage.css';
 
-export default function ProductPage() {
-  const {slug} = useParams();
+export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
+  const {slug: routeSlug} = useParams();
+  const slug = publishedSlug ?? routeSlug;
   const p = productList.find((x) => x.slug === slug);
   if (!p) throw new Response('Product not found', {status: 404, statusText: 'Not Found'});
 

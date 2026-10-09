@@ -11,8 +11,18 @@ import {
 export default function AdConsent() {
   const {pathname} = useLocation();
   const configured = isRemarketingConfigured();
-  const [choice, setChoice] = useState(getRemarketingConsent);
-  const [open, setOpen] = useState(configured && choice === null);
+  // Match static HTML on the first client render. Reading a saved choice in
+  // the initializer would remove the banner during hydration and force React
+  // to rebuild the root for returning visitors.
+  const [choice, setChoice] = useState<ReturnType<typeof getRemarketingConsent>>(null);
+  const [open, setOpen] = useState(configured);
+
+  useEffect(() => {
+    if (!configured) return;
+    const savedChoice = getRemarketingConsent();
+    setChoice(savedChoice);
+    setOpen(savedChoice === null);
+  }, [configured]);
 
   useEffect(() => {
     if (!configured) return;

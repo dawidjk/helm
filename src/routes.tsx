@@ -1,6 +1,6 @@
 import type {ComponentType} from 'react';
-import type {LoaderFunctionArgs} from 'react-router-dom';
 import {articleCatalog} from './pages/articleCatalog';
+import {productList} from './pages/products';
 import type {RouteRecord} from 'vite-react-ssg';
 import Layout from './App';
 import Home from './pages/Home';
@@ -76,6 +76,16 @@ const lazyPrivacy = async () => {
 
 export const routes: RouteRecord[] = [
   {
+    path: '404/',
+    element: <GlobalErrorBoundary missing />,
+    entry: 'src/components/GlobalErrorBoundary.tsx',
+  },
+  {
+    path: '*',
+    element: <GlobalErrorBoundary missing />,
+    entry: 'src/components/GlobalErrorBoundary.tsx',
+  },
+  {
     path: '/',
     element: <Layout />,
     errorElement: <GlobalErrorBoundary />,
@@ -90,11 +100,15 @@ export const routes: RouteRecord[] = [
       {path: 'contractors/', lazy: lazyContractors},
       {path: 'pricing/', lazy: lazyPage(() => import('./pages/Pricing'))},
       {path: 'secure-ai-adoption/', lazy: lazyPage(() => import('./pages/SecureAiAdoption'))},
-      {
-        path: ':slug/',
-        lazy: lazyPage(() => import('./pages/ProductPage')),
-        getStaticPaths: async () => (await import('./pages/products')).productList.map((p) => `${p.slug}/`),
-      },
+      // Match only published products. A greedy :slug route would try to
+      // render a product against the static 404 DOM at every unknown address.
+      ...productList.map((product) => ({
+        path: `${product.slug}/`,
+        lazy: async () => {
+          const {default: ProductPage} = await import('./pages/ProductPage');
+          return {Component: () => <ProductPage slug={product.slug} />};
+        },
+      })),
       {path: 'free-scan/', lazy: lazyPage(() => import('./pages/FreeScan'))},
       {path: 'quiz/', lazy: lazyPage(() => import('./pages/Quiz'))},
       {path: 'about/', lazy: lazyPage(() => import('./pages/About'))},
@@ -104,26 +118,21 @@ export const routes: RouteRecord[] = [
       {path: 'resources/', lazy: lazyPage(() => import('./pages/Resources'))},
       {path: 'terms/', lazy: lazyTerms},
       {path: 'privacy/', lazy: lazyPrivacy},
-      {
-        path: 'resources/:slug/',
+      ...articleCatalog.map(({slug}) => ({
+        path: `resources/${slug}/`,
         lazy: lazyPage(() => import('./pages/ArticlePage')),
-        loader: async ({params}: LoaderFunctionArgs) => {
-          const slug = params.slug;
-          if (!articleCatalog.some((article) => article.slug === slug)) {
-            throw new Response('Resource not found', {status: 404});
-          }
+        loader: async () => {
           if (import.meta.env.SSR) {
             const [{articles}, {articleSupport}] = await Promise.all([
               import('./pages/articles'), import('./pages/articleSupport'),
             ]);
-            return {article: articles.find((article) => article.slug === slug), support: articleSupport[slug!]};
+            return {article: articles.find((article) => article.slug === slug), support: articleSupport[slug]};
           }
           const response = await fetch(`/article-data/${slug}.json`);
           if (!response.ok) throw new Response('Resource unavailable', {status: response.status});
           return response.json();
         },
-        getStaticPaths: async () => articleCatalog.map((a) => `resources/${a.slug}/`),
-      },
+      })),
     ],
   },
 ];
