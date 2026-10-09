@@ -3,6 +3,8 @@ import {resolve} from 'node:path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import 'vite-react-ssg' // module augmentation for ssgOptions
+// @ts-expect-error Local PostCSS plugin is implemented as an ES module.
+import astryxUsedStyles from './scripts/astryx-used-styles.mjs'
 
 function keepOnlyCriticalPreloads(html: string) {
   // react-helmet places route metadata before the template's charset during
@@ -89,6 +91,7 @@ export default defineConfig({
   // displayed year only after hydration, never in the initial client render.
   define: {'import.meta.env.HELM_BUILD_YEAR': JSON.stringify(new Date().getFullYear())},
   plugins: [react()],
+  css: {postcss: {plugins: [astryxUsedStyles()]}},
   ssgOptions: {
     // /pricing -> /pricing/index.html — required for GitHub Pages & static hosts
     dirStyle: 'nested',

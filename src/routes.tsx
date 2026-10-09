@@ -1,9 +1,8 @@
 import type {ComponentType} from 'react';
-import {articleCatalog} from './pages/articleCatalog';
-import {productList} from './pages/products';
+import {articleSlugs} from './pages/articleSlugs';
+import {productSlugs} from './pages/productSlugs';
 import type {RouteRecord} from 'vite-react-ssg';
 import Layout from './App';
-import Home from './pages/Home';
 import GlobalErrorBoundary from './components/GlobalErrorBoundary';
 
 const lazyPage = (load: () => Promise<{default: ComponentType}>) => async () => ({
@@ -91,7 +90,7 @@ export const routes: RouteRecord[] = [
     errorElement: <GlobalErrorBoundary />,
     entry: 'src/App.tsx',
     children: [
-      {index: true, element: <Home />},
+      {index: true, lazy: lazyPage(() => import('./pages/Home'))},
       {path: 'manufacturing/', lazy: lazyManufacturing},
       {path: 'professional-services/', lazy: lazyProfessionalServices},
       {path: 'law-firms/', lazy: lazyLawFirms},
@@ -102,11 +101,11 @@ export const routes: RouteRecord[] = [
       {path: 'secure-ai-adoption/', lazy: lazyPage(() => import('./pages/SecureAiAdoption'))},
       // Match only published products. A greedy :slug route would try to
       // render a product against the static 404 DOM at every unknown address.
-      ...productList.map((product) => ({
-        path: `${product.slug}/`,
+      ...productSlugs.map((slug) => ({
+        path: `${slug}/`,
         lazy: async () => {
           const {default: ProductPage} = await import('./pages/ProductPage');
-          return {Component: () => <ProductPage slug={product.slug} />};
+          return {Component: () => <ProductPage slug={slug} />};
         },
       })),
       {path: 'free-scan/', lazy: lazyPage(() => import('./pages/FreeScan'))},
@@ -118,7 +117,7 @@ export const routes: RouteRecord[] = [
       {path: 'resources/', lazy: lazyPage(() => import('./pages/Resources'))},
       {path: 'terms/', lazy: lazyTerms},
       {path: 'privacy/', lazy: lazyPrivacy},
-      ...articleCatalog.map(({slug}) => ({
+      ...articleSlugs.map((slug) => ({
         path: `resources/${slug}/`,
         lazy: lazyPage(() => import('./pages/ArticlePage')),
         loader: async () => {
