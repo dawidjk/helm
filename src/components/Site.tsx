@@ -499,9 +499,9 @@ export function RevealManager() {
 export function MailingAddress() {
   return (
     <address className="mailing-address">
-      <a href="https://www.google.com/maps/search/?api=1&query=865%20NJ%2033%20Business%20Ste%203%20Unit%20%23256%2C%20Freehold%2C%20NJ%2007728">
+      <a href="https://www.google.com/maps/search/?api=1&query=865%20NJ%2033%20Ste%203%20Unit%20%23256%2C%20Freehold%2C%20NJ%2007728">
         Helm Security<br />
-        865 NJ 33 Business<br />
+        865 NJ 33<br />
         Ste 3, Unit #256<br />
         Freehold, NJ 07728
       </a>
