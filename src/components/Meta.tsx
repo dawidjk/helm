@@ -11,6 +11,7 @@ export default function Meta({
   ogType = 'website',
   publishedTime,
   modifiedTime,
+  author,
 }: {
   title: string;
   desc: string;
@@ -21,6 +22,7 @@ export default function Meta({
   ogType?: 'website' | 'article';
   publishedTime?: string;
   modifiedTime?: string;
+  author?: {name: string; url: string};
 }) {
   const canonicalUrl = siteUrl(path);
   const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${SITE_ORIGIN}${ogImage}`;
@@ -38,6 +40,8 @@ export default function Meta({
       <meta property="og:site_name" content="Helm Security" />
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+      {author && <meta name="author" content={author.name} />}
+      {author && <meta property="article:author" content={author.url} />}
       <meta property="og:image" content={absoluteOgImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />

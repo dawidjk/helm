@@ -14,7 +14,6 @@ export const newsArticles: Article[] = [
     "intro": "If your firm uses Meraki equipment, ask your IT provider for a device-by-device answer to the October advisory. You need the installed version, the applicable fix and evidence of what still needs work. A general assurance that updates are handled leaves those questions open.",
     "takeaway": "For a New Jersey law, accounting or other professional-services firm, the useful outcome is a short status record you can review with the provider. It should show which equipment has been checked, what the provider plans to change and where the firm needs to approve an interruption.",
     "readingLayout": true,
-    "organizationByline": true,
     "hideVisual": true,
     "ctaMode": "book",
     "sections": [

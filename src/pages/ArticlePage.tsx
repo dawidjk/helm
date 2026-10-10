@@ -10,6 +10,7 @@ import {renderParagraph} from '../lib/richText';
 import {bookCta} from './ctaCopy';
 import {canonicalPath, siteUrl} from '../lib/urls';
 import {articlePath} from '../lib/articlePaths';
+import {blogAuthor} from '../lib/blogAuthor';
 import ArticleVisual from '../components/ArticleVisual';
 import './Resources.css';
 
@@ -36,6 +37,7 @@ export default function ArticlePage() {
   // article. Render the same missing-page boundary as the static fallback.
   if (!data?.article) throw new Response('Resource not found', {status: 404});
   const {article: a, support} = data;
+  const isBlog = a.collection === 'blog';
   const collectionName = a.collection === 'blog' ? 'Blog' : 'Resources';
   const collectionPath = a.collection === 'blog' ? '/blog/' : '/resources/';
   const path = articlePath(a);
@@ -45,8 +47,9 @@ export default function ArticlePage() {
     .filter((article) => article !== undefined);
   const displayedDate = formatDate(a.date);
   const displayedUpdatedDate = a.updated ? formatDate(a.updated) : undefined;
-  const authorName = a.organizationByline ? 'Helm Security' : 'Dawid Kluszczynski';
-  const authorPath = a.organizationByline ? '/about/' : '/about/#dawid-kluszczynski';
+  const organizationByline = !isBlog && a.organizationByline;
+  const authorName = organizationByline ? 'Helm Security' : blogAuthor.name;
+  const authorPath = organizationByline ? '/about/' : blogAuthor.path;
   const wordCount = [
     typeof a.intro === 'string' ? a.intro : a.intro.text,
     ...(a.lead ?? []).map((paragraph) => typeof paragraph === 'string' ? paragraph : paragraph.text),
@@ -66,6 +69,7 @@ export default function ArticlePage() {
         ogType="article"
         publishedTime={a.date}
         modifiedTime={a.updated}
+        author={isBlog ? {name: authorName, url: siteUrl(authorPath)} : undefined}
         jsonLd={{
           '@context': 'https://schema.org',
           '@graph': [
@@ -83,7 +87,7 @@ export default function ArticlePage() {
               mainEntityOfPage: {'@type': 'WebPage', '@id': siteUrl(path)},
               image: 'https://helmsecured.com/og.png',
               author: {
-                '@type': a.organizationByline ? 'Organization' : 'Person',
+                '@type': organizationByline ? 'Organization' : 'Person',
                 name: authorName,
                 url: siteUrl(authorPath),
               },
@@ -133,12 +137,12 @@ export default function ArticlePage() {
           <div className="observe">
             <p className="article-intro">{renderParagraph(a.intro)}</p>
             {a.lead?.map((paragraph, index) => <p key={index}>{renderParagraph(paragraph)}</p>)}
-            <aside className="article-quick-answer" aria-labelledby="article-quick-answer-heading">
+            {isBlog ? <p>{a.takeaway}</p> : <aside className="article-quick-answer" aria-labelledby="article-quick-answer-heading">
               <h2 id="article-quick-answer-heading">Quick answer</h2>
               <p>{a.takeaway}</p>
-            </aside>
+            </aside>}
             {!a.hideVisual && <ArticleVisual slug={a.slug} />}
-            <nav className="article-on-page" aria-labelledby="article-on-page-heading">
+            {!isBlog && <nav className="article-on-page" aria-labelledby="article-on-page-heading">
               <h2 id="article-on-page-heading">On this page</h2>
               <ol>
                 {a.sections.map((section, index) => (
@@ -147,7 +151,7 @@ export default function ArticlePage() {
                   </li>
                 ))}
               </ol>
-            </nav>
+            </nav>}
             {a.sections.map((s, index) => (
               <section key={s.h} aria-labelledby={sectionId(s.h, index)}>
                 <h2 id={sectionId(s.h, index)}>{s.h}</h2>

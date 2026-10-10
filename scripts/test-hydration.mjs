@@ -208,6 +208,10 @@ try {
         await f.page.waitForFunction(()=>document.querySelector('.article-body'));
         assert.equal(await f.page.$eval('link[rel=canonical]',e=>e.href),'https://helmsecured.com/blog/meraki-october-2026-security-update/');
         assert.equal(await f.page.$eval('.article-meta a',e=>e.textContent),'Blog');
+        assert.equal(await f.page.$eval('.article-meta a[href="/about/#dawid-kluszczynski"]',e=>e.textContent),'Dawid Kluszczynski');
+        assert.equal(await f.page.$('.article-quick-answer'),null);
+        assert.equal(await f.page.$('.article-on-page'),null);
+        assert.equal(await f.page.$eval('meta[name="author"]',e=>e.content),'Dawid Kluszczynski');
         await f.page.goBack();await f.page.waitForFunction(()=>location.pathname==='/blog/');
         await f.page.waitForSelector('.blog-resources-link a');
         await f.page.focus('.blog-resources-link a');await f.page.keyboard.press('Enter');

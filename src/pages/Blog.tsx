@@ -4,6 +4,7 @@ import {Band, DirectionIcon, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {articleCatalog} from './articleCatalog';
 import {articlePath} from '../lib/articlePaths';
+import {blogAuthor} from '../lib/blogAuthor';
 import {siteUrl} from '../lib/urls';
 import './Resources.css';
 import './Blog.css';
@@ -29,7 +30,7 @@ export default function Blog() {
           '@type': 'Blog',
           name: 'Helm Security Blog',
           url: siteUrl('/blog'),
-          blogPost: posts.map((post) => ({'@type': 'BlogPosting', headline: post.title, url: siteUrl(articlePath(post)), datePublished: post.date})),
+          blogPost: posts.map((post) => ({'@type': 'BlogPosting', headline: post.title, url: siteUrl(articlePath(post)), datePublished: post.date, author: {'@type': 'Person', name: blogAuthor.name, url: siteUrl(blogAuthor.path)}})),
         }}
       />
       <header className="hero lane brand-hero resources-hero">
