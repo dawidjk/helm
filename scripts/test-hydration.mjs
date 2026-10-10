@@ -210,7 +210,8 @@ try {
         assert.equal(await f.page.$eval('.article-meta a',e=>e.textContent),'Blog');
         await f.page.goBack();await f.page.waitForFunction(()=>location.pathname==='/blog/');
         await f.page.waitForSelector('.blog-resources-link a');
-        await f.page.click('.blog-resources-link a');await f.page.waitForFunction(()=>location.pathname==='/resources/');
+        await f.page.focus('.blog-resources-link a');await f.page.keyboard.press('Enter');
+        await f.page.waitForFunction(()=>location.pathname==='/resources/');
         await f.page.waitForFunction(()=>document.querySelector('.resources-library'));
         assert.equal(await f.page.$('a[href="/resources/meraki-october-2026-security-update/"]'),null);
         await f.page.click('.nav-burger');await f.page.waitForFunction(()=>document.querySelector('.nav-drawer'));
