@@ -1,5 +1,6 @@
 import {useEffect, useRef, useState, type ReactNode, type SyntheticEvent} from 'react';
 import {NavLink as RouterNavLink, Link, useLocation} from 'react-router-dom';
+import NewsletterSignup from './NewsletterSignup';
 import LeadForm, {PORTAL_URL} from './LeadForm';
 import ThemePicker from './ThemePicker';
 import {canonicalPath} from '../lib/urls';
@@ -531,6 +532,7 @@ export function SiteFooter() {
             <span>Helm Security</span>
           </Link>
           <p>Security that answers to your business.</p>
+          <NewsletterSignup />
           <div className="footer-contact">
             <a href="mailto:hello@helmsecured.com">hello@helmsecured.com</a>
             <a href={`tel:${businessPhone.e164}`}>{businessPhone.display}</a>

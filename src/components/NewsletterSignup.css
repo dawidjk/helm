@@ -1,0 +1,11 @@
+.newsletter-signup { max-width: 36rem; margin-top: 2rem; }
+.newsletter-signup h2 { font-size: 1.25rem; margin: 0 0 .75rem; }
+.newsletter-signup form { display: grid; gap: .75rem; }
+.newsletter-signup input[type='email'] { width: 100%; min-height: 44px; padding: .75rem; border: 1px solid currentColor; border-radius: 6px; background: var(--background, transparent); color: inherit; }
+.newsletter-choice { display: flex; gap: .75rem; align-items: flex-start; }
+.newsletter-choice input { flex: 0 0 auto; width: 20px; height: 20px; margin-top: .2rem; }
+.newsletter-signup .newsletter-trap { display: none; }
+.newsletter-button { min-height: 44px; padding: .75rem 1rem; border: 1px solid currentColor; border-radius: 6px; background: transparent; color: inherit; cursor: pointer; }
+.newsletter-button:disabled { opacity: .6; cursor: default; }
+.newsletter-signup :focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.newsletter-signup [role='status'] { margin: 0; }
