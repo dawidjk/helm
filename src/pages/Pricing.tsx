@@ -134,7 +134,7 @@ export default function Pricing() {
           <article className="price-math-tile observe d1">
             <div className="price-math-eq">75 to 250 people</div>
             <div className="price-math-result">Starting at $10,000/month</div>
-            <p>Helm Command includes the covered Core stack plus hands-on security-program ownership and quarterly leadership reviews. Final quotes depend on covered users and agreed scope.</p>
+            <p>Helm Command includes the covered Core stack plus hands-on security-program ownership and quarterly leadership reviews.</p>
           </article>
         </div>
         <div className="pricing-terms">
