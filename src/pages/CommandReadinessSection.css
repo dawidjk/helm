@@ -1,3 +1,4 @@
+.command-readiness { scroll-margin-top: 96px; }
 .command-readiness .band-head { margin-bottom: 32px; }
 .command-readiness-copy { max-width: 70ch; margin-inline: auto; }
 .command-readiness-copy p { color: var(--helm-text-dim); line-height: 1.65; }
