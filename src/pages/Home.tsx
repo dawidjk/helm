@@ -1,3 +1,4 @@
+import {commandReadiness} from './commandReadiness';
 import {Link} from 'react-router-dom';
 import Meta from '../components/Meta';
 import LeadForm from '../components/LeadForm';
@@ -109,10 +110,17 @@ export default function Home() {
                 <p className="home-service-price">{service.price}</p>
                 <p className="home-service-terms">{service.slug === 'helm-core'
                   ? '$2,500 monthly minimum. 12-month term or 36-month price lock.'
-                  : '36-month initial term. Price adjusts 6% on each service anniversary.'}</p>
+                  : 'Final quotes depend on covered users and agreed scope. 36-month initial term. Price adjusts 6% on each service anniversary.'}</p>
                 <Link className="home-detail-link" to={canonicalPath(`/${service.slug}`)}>Explore {service.name} <DirectionIcon /></Link>
               </article>
             ))}
+            <article className="home-service-summary">
+              <h3><Link to="/helm-command/#soc-2-readiness">{commandReadiness.title} <DirectionIcon /></Link></h3>
+              <p className="home-service-fit">{commandReadiness.status}</p>
+              <p>{commandReadiness.description}</p>
+              <p className="home-service-terms">{commandReadiness.boundary}</p>
+              <Link className="home-detail-link" to="/helm-command/#soc-2-readiness">Read about SOC 2 readiness <DirectionIcon /></Link>
+            </article>
           </div>
           <p className="home-it-responsibility">Your IT provider remains responsible for help desk, administration, patching and routine remediation. Helm manages the security work included in your service order.</p>
           <div className="home-comparison-links">

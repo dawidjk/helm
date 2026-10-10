@@ -189,7 +189,7 @@ export const articles: Article[] = [
           ]
         },
         "Helm’s published prices provide another concrete reference. Core costs $125 per covered user per month with a $2,500 monthly minimum. For 35 covered users, the base recurring cost is $4,375 per month, or $52,500 over 12 months, before separately scoped work or additional workstations. Keep existing general-IT costs in the budget.",
-        "Command costs $8,000 to $15,000 per month after fit and complexity review, including its covered protection stack and program scope. The first 12 months therefore total $96,000 to $180,000 at the starting monthly price. Its initial term is 36 months, with a 6% adjustment on each service anniversary.",
+        "Command starts at $10,000/month, including its covered protection stack and program scope. Final quotes depend on covered users and agreed scope. At the starting monthly price, the first 12 months total $120,000; a higher quote increases that total. Its initial term is 36 months, with a 6% adjustment on each service anniversary.",
         "Get written quotes from IR firms and independent assessors. With an IR retainer, check whether you are paying for availability or prepaid hours, what after-hours work costs, and when unused hours expire. With evidence software, establish who will collect and verify the records. Compare each offer with insurer-provided services so you do not buy the same work twice."
       ]
     },
@@ -379,7 +379,7 @@ export const articles: Article[] = [
               }
             ]
           },
-          "Command costs $8,000 to $15,000 per month after fit and complexity review. Its initial term is 36 months, with a 6% adjustment on each service anniversary. At the overlapping 75-person boundary, the work required helps determine fit. Headcount is one input.",
+          "Command starts at $10,000/month. Final quotes depend on covered users and agreed scope. Its initial term is 36 months, with a 6% adjustment on each service anniversary. At the overlapping 75-person boundary, the work required helps determine fit. Headcount is one input.",
           "Specialist vendor teams provide continuous monitoring and containment for covered capabilities. Helm does not staff its own 24/7 security operations center. Servers, phones, tablets, network equipment, specialized systems, forensic response, breach counsel, and hands-on remediation require separate written scope unless expressly included. Helm does not issue certifications or guarantee customer, regulatory, or insurance decisions."
         ]
       },
@@ -556,7 +556,7 @@ export const articles: Article[] = [
               }
             ]
           },
-          "Command costs $8,000 to $15,000 per month after fit and complexity review, with a 36-month initial term and a 6% adjustment on each service anniversary. Scope and complexity determine fit, particularly at the overlapping 75-person boundary. Specialist vendor teams provide continuous monitoring and containment for covered capabilities; Helm does not staff its own 24/7 security operations center.",
+          "Command starts at $10,000/month. Final quotes depend on covered users and agreed scope. Command has a 36-month initial term and a 6% adjustment on each service anniversary. Scope and complexity determine fit, particularly at the overlapping 75-person boundary. Specialist vendor teams provide continuous monitoring and containment for covered capabilities; Helm does not staff its own 24/7 security operations center.",
           "Servers, phones, tablets, network equipment, specialized systems, forensic response, breach counsel, and hands-on remediation require separate written scope unless expressly included. In a hypothetical 45-person Princeton accounting firm, Core could provide standardized protection while its MSP runs IT. A hypothetical 120-person Newark professional-services firm with recurring questionnaires may need Command’s program cadence. Headcount alone does not settle either decision."
         ]
       },

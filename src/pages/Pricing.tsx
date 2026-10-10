@@ -1,3 +1,4 @@
+import {CommandReadinessSection} from './CommandReadinessSection';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Link} from 'react-router-dom';
 import {Band, CtaBand, DirectionIcon, ScrollCue} from '../components/Site';
@@ -12,7 +13,7 @@ const pricingTiles = [...productList].sort((a, b) =>
 
 const minimumBySlug: Record<string, string> = {
   'helm-core': '$2,500 / month account',
-  'helm-command': '$8,000 / month account',
+  'helm-command': '$10,000 / month account',
 };
 
 export default function Pricing() {
@@ -20,7 +21,7 @@ export default function Pricing() {
     <>
       <Meta
         title="Pricing: Helm Core and Helm Command | Helm"
-        desc="Two managed security offers: Helm Core at $125 per user each month with a $2,500 minimum, and Helm Command from $8,000 to $15,000 per month."
+        desc="Two managed security offers: Helm Core at $125 per user each month with a $2,500 minimum, and Helm Command starting at $10,000/month."
         path="/pricing"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -121,7 +122,7 @@ export default function Pricing() {
         <div className="band-head">
           <h2 className="observe">What the price looks like in practice</h2>
           <p className="observe d1">
-            Core is priced by covered user. Command has one all-in monthly price. We confirm it in the fit review, based on the systems involved, the evidence work, and the amount of coordination required.
+            Core is priced by covered user. Command starts at $10,000/month, including the covered Core stack. Final quotes depend on covered users and agreed scope, including the systems, evidence work and coordination required.
           </p>
         </div>
         <div className="price-math">
@@ -132,8 +133,8 @@ export default function Pricing() {
           </article>
           <article className="price-math-tile observe d1">
             <div className="price-math-eq">75 to 250 people</div>
-            <div className="price-math-result">$8,000 to $15,000 / month</div>
-            <p>Helm Command includes the covered Core stack plus hands-on security-program ownership and quarterly leadership reviews.</p>
+            <div className="price-math-result">Starting at $10,000/month</div>
+            <p>Helm Command includes the covered Core stack plus hands-on security-program ownership and quarterly leadership reviews. Final quotes depend on covered users and agreed scope.</p>
           </article>
         </div>
         <div className="pricing-terms">
@@ -151,6 +152,8 @@ export default function Pricing() {
           </article>
         </div>
       </Band>
+
+      <CommandReadinessSection />
 
       <CtaBand
         title="Which service model fits?"

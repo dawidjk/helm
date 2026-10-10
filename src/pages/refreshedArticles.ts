@@ -67,7 +67,7 @@ export const refreshedArticles: Article[] = [
         "h": "Choose program ownership when coordination is missing",
         "ps": [
           {
-            "text": "Helm Command includes the covered Core stack plus a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance responses, quarterly leadership reviews, an annual tabletop and IT coordination. Its $8,000 to $15,000 monthly range is confirmed after a fit and complexity review for a qualified 75 to 250-person organization.",
+            "text": "Helm Command includes the covered Core stack plus a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance responses, quarterly leadership reviews, an annual tabletop and IT coordination. Pricing starts at $10,000/month for a qualified 75 to 250-person organization. Final quotes depend on covered users and agreed scope.",
             "links": [
               {
                 "phrase": "Helm Command",
@@ -2504,7 +2504,7 @@ export const refreshedArticles: Article[] = [
             ]
           },
           {
-            "text": "Helm Command includes the covered Core stack, a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire responses, quarterly leadership reviews, an annual tabletop and coordination with the named IT owner. Its $8,000 to $15,000 monthly range is confirmed after fit and complexity review.",
+            "text": "Helm Command includes the covered Core stack, a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire responses, quarterly leadership reviews, an annual tabletop and coordination with the named IT owner. Pricing starts at $10,000/month. Final quotes depend on covered users and agreed scope.",
             "links": [
               {
                 "phrase": "Helm Command",
@@ -5457,7 +5457,7 @@ export const refreshedArticles: Article[] = [
             ]
           },
           {
-            "text": "Helm Command is intended for a qualified 75 to 250-person organization that needs program ownership. Its $8,000 to $15,000 monthly range is confirmed after a fit and complexity review. It adds a risk register, prioritized roadmap, evidence upkeep, bounded questionnaire responses, quarterly leadership reviews and an annual tabletop to the covered stack. Command scope and terms.",
+            "text": "Helm Command is intended for a qualified 75 to 250-person organization that needs program ownership. Pricing starts at $10,000/month. Final quotes depend on covered users and agreed scope. It adds a risk register, prioritized roadmap, evidence upkeep, bounded questionnaire responses, quarterly leadership reviews and an annual tabletop to the covered stack. Command scope and terms.",
             "links": [
               {
                 "phrase": "Command scope and terms",
@@ -8264,7 +8264,7 @@ export const refreshedArticles: Article[] = [
             ]
           },
           {
-            "text": "Helm Command combines the covered Core stack with vCISO leadership and managed security-program ownership. Its scope includes a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance responses, quarterly leadership reviews, an annual tabletop and IT coordination. The published range is $8,000 to $15,000 per month after fit and complexity review. Compare those written duties with each prospective vCISO engagement to establish which work is included.",
+            "text": "Helm Command combines the covered Core stack with vCISO leadership and managed security-program ownership. Its scope includes a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance responses, quarterly leadership reviews, an annual tabletop and IT coordination. Pricing starts at $10,000/month. Final quotes depend on covered users and agreed scope. Compare those written duties with each prospective vCISO engagement to establish which work is included.",
             "links": [
               {
                 "phrase": "Helm Command",

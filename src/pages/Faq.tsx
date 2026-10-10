@@ -1,3 +1,4 @@
+import {commandReadiness} from './commandReadiness';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
@@ -23,9 +24,13 @@ const faqs: {q: string; a: Paragraph}[] = [
   {
     q: 'How is pricing structured?',
     a: {
-      text: 'Helm Core is $125 per covered user per month with a $2,500 monthly account minimum. Choose a 12-month Core term at the current rate or a 36-month Core term that locks the starting price for all three years. Helm Command is $8,000 to $15,000 per month after a fit and complexity review, with a 36-month initial term and a 6% adjustment on each service anniversary. Work outside the written scope is priced separately. See the pricing page for details.',
+      text: 'Helm Core is $125 per covered user per month with a $2,500 monthly account minimum. Choose a 12-month Core term at the current rate or a 36-month Core term that locks the starting price for all three years. Helm Command starts at $10,000/month. Final quotes depend on covered users and agreed scope. Command has a 36-month initial term and a 6% adjustment on each service anniversary. Work outside the written scope is priced separately. See the pricing page for details.',
       links: [{phrase: 'pricing page', to: '/pricing'}],
     },
+  },
+  {
+    q: 'Does Command include SOC 2 readiness?',
+    a: {text: `${commandReadiness.status} ${commandReadiness.description} ${commandReadiness.boundary} Read about SOC 2 readiness.`, links: [{phrase: 'Read about SOC 2 readiness', to: '/helm-command/#soc-2-readiness'}]},
   },
   {
     q: 'Can you get us CMMC certified?',

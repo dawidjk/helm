@@ -1,3 +1,4 @@
+import {CommandReadinessSection} from './CommandReadinessSection';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {useParams, Link} from 'react-router-dom';
 import {ActionLink, Band, CtaBand, ScrollCue} from '../components/Site';
@@ -96,6 +97,8 @@ export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
           </div>
         </div>
       </Band>
+
+      {p.slug === 'helm-command' && <CommandReadinessSection />}
 
       <Band>
         <div className="band-head observe">
