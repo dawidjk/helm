@@ -1,3 +1,8 @@
+/* Keep the Meraki article's secondary contact focus visible on its green CTA. */
+a[href*="src=article%20meraki-october-2026-security-update"] + .cta-alt a:focus-visible {
+  outline-color: currentColor;
+}
+
 .hero.lane.resources-hero {
   min-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
   padding-block: clamp(56px, 8vw, 76px);
