@@ -128,7 +128,7 @@ try {
     });
   }
   if(['all','404'].includes(mode)) {
-    for(const route of ['/not-a-real-product/','/resources/not-a-real-resource/','/one/two/']) for(const consent of ['unknown','declined','accepted']) for(const theme of ['auto','light','dark']) await test(`404 fallback ${route} ${consent} ${theme}`,async()=>{
+    for(const route of ['/not-a-real-product/','/resources/not-a-real-resource/','/blog/not-a-real-post/','/resources/meraki-october-2026-security-update/','/one/two/']) for(const consent of ['unknown','declined','accepted']) for(const theme of ['auto','light','dark']) await test(`404 fallback ${route} ${consent} ${theme}`,async()=>{
       const f=await fixture(route,{consent,theme});
       try {
         await hydrated(f);noErrors(f);
@@ -197,6 +197,24 @@ try {
         assert.ok(Math.abs(state.scroll-before)<4);assert.equal(state.value,'probe@example.invalid');assert.equal(state.focus,true);
         await f.page.click('.nav-burger');await f.page.waitForFunction(()=>document.querySelector('main').inert);
         await f.page.keyboard.press('Escape');await f.page.waitForFunction(()=>!document.querySelector('main').inert&&getComputedStyle(document.body).overflow!=='hidden');return {state};
+      }finally{await f.close();}
+    });
+    await test('Blog post navigation keeps evergreen Resources separate',async()=>{
+      const f=await fixture('/blog/',{consent:'declined'});
+      try {
+        await hydrated(f);
+        await f.page.click('.blog-post');
+        await f.page.waitForFunction(()=>location.pathname==='/blog/meraki-october-2026-security-update/');
+        await f.page.waitForFunction(()=>document.querySelector('.article-body'));
+        assert.equal(await f.page.$eval('link[rel=canonical]',e=>e.href),'https://helmsecured.com/blog/meraki-october-2026-security-update/');
+        assert.equal(await f.page.$eval('.article-meta a',e=>e.textContent),'Blog');
+        await f.page.goBack();await f.page.waitForFunction(()=>location.pathname==='/blog/');
+        await f.page.click('.blog-resources-link a');await f.page.waitForFunction(()=>location.pathname==='/resources/');
+        await f.page.waitForFunction(()=>document.querySelector('.resources-library'));
+        assert.equal(await f.page.$('a[href="/resources/meraki-october-2026-security-update/"]'),null);
+        await f.page.click('.nav-burger');await f.page.waitForFunction(()=>document.querySelector('.nav-drawer'));
+        await f.page.click('.nav-drawer a[href="/blog/"]');await f.page.waitForFunction(()=>location.pathname==='/blog/'&&!document.querySelector('.nav-drawer'));
+        noErrors(f);return {};
       }finally{await f.close();}
     });
     await test('Client route navigation, lazy loader, history and scroll reset',async()=>{

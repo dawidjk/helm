@@ -220,6 +220,23 @@ body {
   gap: 28px;
 }
 
+/* The Blog link needs the same breathing room as the existing navigation. */
+@media (min-width: 761px) and (max-width: 980px) {
+  .nav-links,
+  .nav-right > .theme-picker-compact {
+    display: none;
+  }
+
+  .nav-right .nav-burger {
+    display: flex;
+  }
+
+  .nav-right .nav-cta-mobile.action-link {
+    display: inline-flex;
+    min-height: 44px;
+  }
+}
+
 .nav-links a {
   color: var(--helm-text-dim);
   text-decoration: none;

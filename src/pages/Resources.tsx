@@ -91,7 +91,6 @@ const guideGroups: GuideGroup[] = [
       'outlook-email-encryption-options',
       'managed-endpoint-protection-rollout',
       'zero-day-vs-known-vulnerabilities',
-      'meraki-october-2026-security-update',
       'vulnerability-management-new-jersey',
       'check-website-security',
       'windows-defender-vs-managed-security',
@@ -150,7 +149,8 @@ const guideGroups: GuideGroup[] = [
   },
 ];
 
-const articlesBySlug = new Map(articles.map((article) => [article.slug, article]));
+const resourceArticles = articles.filter((article) => article.collection !== 'blog');
+const articlesBySlug = new Map(resourceArticles.map((article) => [article.slug, article]));
 
 function articleFor(slug: string): Article {
   const article = articlesBySlug.get(slug);
@@ -165,7 +165,7 @@ const listedSlugs = [
 
 if (import.meta.env.DEV) {
   const uniqueSlugs = new Set(listedSlugs);
-  if (uniqueSlugs.size !== listedSlugs.length || uniqueSlugs.size !== articles.length) {
+  if (uniqueSlugs.size !== listedSlugs.length || uniqueSlugs.size !== resourceArticles.length) {
     throw new Error('Resources decision groups must include every article exactly once.');
   }
 }
@@ -274,6 +274,7 @@ export default function Resources() {
               ))}
             </div>
           </section>
+          <p className="blog-resources-link">For recent advisories and security updates, visit the <Link to="/blog/">Blog</Link>.</p>
         </div>
       </Band>
 

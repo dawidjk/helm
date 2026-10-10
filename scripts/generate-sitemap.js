@@ -27,8 +27,8 @@ function getPriority(route) {
   if (route === '') return '1.0';
   if (route === 'free-scan' || route === 'pricing') return '0.9';
   if (['helm-core', 'helm-command', 'manufacturing', 'professional-services', 'law-firms', 'accounting-firms', 'medical-practices', 'contractors'].includes(route)) return '0.8';
-  if (route === 'resources') return '0.7';
-  if (route.startsWith('resources/')) return '0.6';
+  if (route === 'resources' || route === 'blog') return '0.7';
+  if (route.startsWith('resources/') || route.startsWith('blog/')) return '0.6';
   if (['about', 'faq', 'contact'].includes(route)) return '0.5';
   return '0.5';
 }
@@ -50,7 +50,7 @@ walkDir(DIST_DIR, (filePath) => {
     // Only publish lastmod when the page carries a real editorial date. A
     // deploy date is not evidence that the page content changed.
     let lastmod;
-    if (route.startsWith('resources/')) {
+    if (route.startsWith('resources/') || route.startsWith('blog/')) {
       const html = fs.readFileSync(filePath, 'utf8');
       const modified = html.match(/"dateModified":"(\d{4}-\d{2}-\d{2})"/);
       const published = html.match(/"datePublished":"(\d{4}-\d{2}-\d{2})"/);

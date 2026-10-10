@@ -4,7 +4,10 @@ export const articleCatalog = [
     "slug": "meraki-october-2026-security-update",
     "title": "Cisco Meraki’s October security update: what to ask your IT provider to verify",
     "lane": "Professional services",
-    "readMin": 6
+    "readMin": 6,
+    "collection": "blog",
+    "date": "2026-10-09",
+    "metaDesc": "Ask your IT provider to match Meraki devices to the October advisory, track pending fixes and retain evidence of installed firmware and completed checks."
   },
   {
     "slug": "accounting-firms-core-vs-command",

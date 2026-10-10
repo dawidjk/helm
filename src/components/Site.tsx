@@ -128,6 +128,7 @@ const footerCols = [
     links: [
       {to: '/about', label: 'About'},
       {to: '/resources', label: 'Resources'},
+      {to: '/blog', label: 'Blog'},
       {to: '/quiz', label: 'AI scam quiz'},
       {to: '/faq', label: 'FAQ'},
       {to: '/trust', label: 'Trust & Security'},
@@ -169,6 +170,7 @@ export function SiteNav() {
   const productActive = services.some(({to}) => pathname.startsWith(to));
   const industryActive = lanes.some(({to}) => pathname.startsWith(to));
   const resourcesActive = pathname.startsWith('/resources');
+  const blogActive = pathname.startsWith('/blog');
   const pricingActive = pathname.startsWith('/pricing');
   const [open, setOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -301,6 +303,9 @@ export function SiteNav() {
               <RouterNavLink to="/resources/" className={resourcesActive ? 'active' : ''} aria-current={resourcesActive ? 'page' : undefined}>
                 Resources
               </RouterNavLink>
+              <RouterNavLink to="/blog/" className={blogActive ? 'active' : ''} aria-current={blogActive ? 'page' : undefined}>
+                Blog
+              </RouterNavLink>
               <RouterNavLink to="/pricing/" className={pricingActive ? 'active' : ''} aria-current={pricingActive ? 'page' : undefined}>
                 Pricing
               </RouterNavLink>
@@ -357,6 +362,10 @@ export function SiteNav() {
             </details>
             <Link className={`drawer-direct${resourcesActive ? ' active' : ''}`} to="/resources/" aria-current={resourcesActive ? 'page' : undefined}>
               <span>Resources</span>
+              <DirectionIcon />
+            </Link>
+            <Link className={`drawer-direct${blogActive ? ' active' : ''}`} to="/blog/" aria-current={blogActive ? 'page' : undefined}>
+              <span>Blog</span>
               <DirectionIcon />
             </Link>
             <Link className={`drawer-direct${pricingActive ? ' active' : ''}`} to="/pricing/" aria-current={pricingActive ? 'page' : undefined}>

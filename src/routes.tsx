@@ -1,5 +1,5 @@
 import type {ComponentType} from 'react';
-import {articleSlugs} from './pages/articleSlugs';
+import {articleSlugs, blogSlugs} from './pages/articleSlugs';
 import {productSlugs} from './pages/productSlugs';
 import type {RouteRecord} from 'vite-react-ssg';
 import Layout from './App';
@@ -115,10 +115,14 @@ export const routes: RouteRecord[] = [
       {path: 'trust/', lazy: lazyPage(() => import('./pages/Trust'))},
       {path: 'contact/', lazy: lazyPage(() => import('./pages/Contact'))},
       {path: 'resources/', lazy: lazyPage(() => import('./pages/Resources'))},
+      {path: 'blog/', lazy: lazyPage(() => import('./pages/Blog'))},
       {path: 'terms/', lazy: lazyTerms},
       {path: 'privacy/', lazy: lazyPrivacy},
-      ...articleSlugs.map((slug) => ({
-        path: `resources/${slug}/`,
+      ...[
+        ...articleSlugs.map((slug) => ({slug, collection: 'resources'})),
+        ...blogSlugs.map((slug) => ({slug, collection: 'blog'})),
+      ].map(({slug, collection}) => ({
+        path: `${collection}/${slug}/`,
         lazy: lazyPage(() => import('./pages/ArticlePage')),
         loader: async () => {
           if (import.meta.env.SSR) {

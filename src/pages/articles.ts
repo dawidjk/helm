@@ -6,6 +6,8 @@ export type {Paragraph, LinkedParagraph};
 
 export type Article = {
   slug: string;
+  /** Timely posts live in Blog; evergreen guides default to Resources. */
+  collection?: 'blog';
   title: string;
   metaTitle?: string;
   metaDesc: string;

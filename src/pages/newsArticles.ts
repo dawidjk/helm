@@ -3,6 +3,7 @@ import type {Article} from './articles';
 export const newsArticles: Article[] = [
   {
     "slug": "meraki-october-2026-security-update",
+    "collection": "blog",
     "title": "Cisco Meraki’s October security update: what to ask your IT provider to verify",
     "metaTitle": "Meraki October 2026 Update: Verify Firmware | Helm",
     "metaDesc": "Ask your IT provider to match Meraki devices to the October advisory, track pending fixes and retain evidence of installed firmware and completed checks.",

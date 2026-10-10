@@ -9,6 +9,7 @@ import type {ArticleSupport} from './articleSupport';
 import {renderParagraph} from '../lib/richText';
 import {bookCta} from './ctaCopy';
 import {canonicalPath, siteUrl} from '../lib/urls';
+import {articlePath} from '../lib/articlePaths';
 import ArticleVisual from '../components/ArticleVisual';
 import './Resources.css';
 
@@ -35,6 +36,9 @@ export default function ArticlePage() {
   // article. Render the same missing-page boundary as the static fallback.
   if (!data?.article) throw new Response('Resource not found', {status: 404});
   const {article: a, support} = data;
+  const collectionName = a.collection === 'blog' ? 'Blog' : 'Resources';
+  const collectionPath = a.collection === 'blog' ? '/blog/' : '/resources/';
+  const path = articlePath(a);
   const isBuyingGuide = a.readingLayout || ['managed-service-providers-new-jersey', 'managed-service-provider-security-models', 'cyber-insurance-cybersecurity-vendors'].includes(a.slug);
   const relatedArticles = support.relatedSlugs
     .map((relatedSlug) => articleCatalog.find((article) => article.slug === relatedSlug))
@@ -58,7 +62,7 @@ export default function ArticlePage() {
       <Meta
         title={a.metaTitle ?? `${a.title} | Helm`}
         desc={a.metaDesc}
-        path={`/resources/${a.slug}`}
+        path={path}
         ogType="article"
         publishedTime={a.date}
         modifiedTime={a.updated}
@@ -76,7 +80,7 @@ export default function ArticlePage() {
               wordCount,
               timeRequired: `PT${a.readMin}M`,
               citation: support.sources.map((source) => source.href),
-              mainEntityOfPage: {'@type': 'WebPage', '@id': siteUrl(`/resources/${a.slug}`)},
+              mainEntityOfPage: {'@type': 'WebPage', '@id': siteUrl(path)},
               image: 'https://helmsecured.com/og.png',
               author: {
                 '@type': a.organizationByline ? 'Organization' : 'Person',
@@ -93,8 +97,8 @@ export default function ArticlePage() {
             {
               '@type': 'BreadcrumbList',
               itemListElement: [
-                {'@type': 'ListItem', position: 1, name: 'Resources', item: siteUrl('/resources')},
-                {'@type': 'ListItem', position: 2, name: a.title, item: siteUrl(`/resources/${a.slug}`)},
+                {'@type': 'ListItem', position: 1, name: collectionName, item: siteUrl(collectionPath)},
+                {'@type': 'ListItem', position: 2, name: a.title, item: siteUrl(path)},
               ],
             },
           ],
@@ -106,7 +110,7 @@ export default function ArticlePage() {
           <h1 className="reveal d1">{a.title}</h1>
           <div className="article-meta reveal d2">
             <span>
-              <Link to="/resources/">Resources</Link> · {a.lane} · {a.readMin} min
+              <Link to={collectionPath}>{collectionName}</Link> · {a.lane} · {a.readMin} min
             </span>
             <span>
               By <Link to={authorPath}>{authorName}</Link>
@@ -179,7 +183,7 @@ export default function ArticlePage() {
             ))}
           </div>
           <section className="article-trust observe d1" aria-labelledby="article-trust-heading">
-            <h2 id="article-trust-heading">About this guide</h2>
+            <h2 id="article-trust-heading">About this {a.collection === 'blog' ? 'post' : 'guide'}</h2>
             <p>
               By <Link to={authorPath}>{authorName}</Link>, first published{' '}
               <time dateTime={a.date}>{displayedDate}</time>
@@ -202,7 +206,7 @@ export default function ArticlePage() {
           <nav className="article-related observe d2" aria-label="Related pages">
             <span>Read next:</span>
             {relatedArticles.map((article) => (
-              <Link key={article.slug} to={canonicalPath(`/resources/${article.slug}`)}>
+              <Link key={article.slug} to={articlePath(article)}>
                 {article.title}
               </Link>
             ))}

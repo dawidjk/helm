@@ -3,6 +3,16 @@ a[href*="src=article%20meraki-october-2026-security-update"] + .cta-alt a:focus-
   outline-color: currentColor;
 }
 
+.blog-resources-link {
+  margin-top: 40px;
+}
+
+.blog-resources-link a {
+  display: inline-block;
+  padding-block: 12px;
+  color: var(--helm-text-strong);
+}
+
 .hero.lane.resources-hero {
   min-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
   padding-block: clamp(56px, 8vw, 76px);
