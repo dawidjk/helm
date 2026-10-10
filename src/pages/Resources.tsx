@@ -91,6 +91,7 @@ const guideGroups: GuideGroup[] = [
       'outlook-email-encryption-options',
       'managed-endpoint-protection-rollout',
       'zero-day-vs-known-vulnerabilities',
+      'meraki-october-2026-security-update',
       'vulnerability-management-new-jersey',
       'check-website-security',
       'windows-defender-vs-managed-security',

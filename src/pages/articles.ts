@@ -1,4 +1,5 @@
 import {refreshedArticles} from './refreshedArticles';
+import {newsArticles} from './newsArticles';
 import type {Paragraph, LinkedParagraph} from '../lib/richText';
 import {gapArticles} from './seoGapArticles';
 export type {Paragraph, LinkedParagraph};
@@ -34,6 +35,7 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+...newsArticles,
 ...refreshedArticles,
 ...gapArticles,
 {

@@ -157,6 +157,31 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+  'meraki-october-2026-security-update': {
+  "relatedSlugs": [
+    "vulnerability-management-new-jersey",
+    "network-hardening-small-business",
+    "zero-day-vs-known-vulnerabilities"
+  ],
+  "sources": [
+    {
+      "title": "Cisco: Meraki Security Hardening Release, October 2026",
+      "href": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-meraki-os-drbEX9GH"
+    },
+    {
+      "title": "Cisco Meraki: Managing Firmware Upgrades",
+      "href": "https://documentation.meraki.com/Platform_Management/Product_Information/Compatibility_and_Firmware/Firmware_Upgrades/Managing_Firmware_Upgrades"
+    },
+    {
+      "title": "Cisco Meraki: Firmware Release Process",
+      "href": "https://documentation.meraki.com/Platform_Management/Product_Information/Compatibility_and_Firmware/Firmware_Upgrades/Meraki_Firmware_Release_Process"
+    },
+    {
+      "title": "Cisco Meraki: Switching Firmware Upgrades",
+      "href": "https://documentation.meraki.com/Platform_Management/Product_Information/Compatibility_and_Firmware/Firmware_Upgrades/Meraki_Switching_Firmware_Upgrades"
+    }
+  ]
+},
 "cybersecurity-point-solutions-vs-managed-security": {
   "relatedSlugs": [
     "managed-service-provider-security-models",
