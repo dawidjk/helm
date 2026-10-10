@@ -120,12 +120,15 @@ export default function ArticlePage() {
               By <Link to={authorPath}>{authorName}</Link>
             </span>
             <span aria-hidden="true">·</span>
-            {displayedUpdatedDate ? (
+            {displayedUpdatedDate && !isBlog ? (
               <span>
                 Updated <time dateTime={a.updated}>{displayedUpdatedDate}</time>
               </span>
             ) : (
               <time dateTime={a.date}>{displayedDate}</time>
+            )}
+            {isBlog && displayedUpdatedDate && (
+              <span>Updated <time dateTime={a.updated}>{displayedUpdatedDate}</time></span>
             )}
           </div>
         </div>
@@ -137,7 +140,7 @@ export default function ArticlePage() {
           <div className="observe">
             <p className="article-intro">{renderParagraph(a.intro)}</p>
             {a.lead?.map((paragraph, index) => <p key={index}>{renderParagraph(paragraph)}</p>)}
-            {isBlog ? <p>{a.takeaway}</p> : <aside className="article-quick-answer" aria-labelledby="article-quick-answer-heading">
+            {isBlog ? (a.takeaway ? <p>{a.takeaway}</p> : null) : <aside className="article-quick-answer" aria-labelledby="article-quick-answer-heading">
               <h2 id="article-quick-answer-heading">Quick answer</h2>
               <p>{a.takeaway}</p>
             </aside>}
@@ -193,7 +196,9 @@ export default function ArticlePage() {
               <time dateTime={a.date}>{displayedDate}</time>
               {displayedUpdatedDate && (
                 <> and materially reviewed on <time dateTime={a.updated}>{displayedUpdatedDate}</time></>
-              )}. The references below support this guide’s factual guidance.
+              )}{isBlog
+                ? '. The references below support this post’s factual guidance.'
+                : '. The references below support this guide’s factual guidance.'}
             </p>
           </section>
           <section className="article-sources observe d2" aria-labelledby="article-sources-heading">

@@ -4,139 +4,87 @@ export const newsArticles: Article[] = [
   {
     "slug": "meraki-october-2026-security-update",
     "collection": "blog",
-    "title": "Cisco Meraki’s October security update: what to ask your IT provider to verify",
-    "metaTitle": "Meraki October 2026 Update: Verify Firmware | Helm",
-    "metaDesc": "Ask your IT provider to match Meraki devices to the October advisory, track pending fixes and retain evidence of installed firmware and completed checks.",
+    "title": "Cisco’s October Meraki update: some fixes are still on the way",
+    "metaTitle": "Meraki October Update: Some Fixes Still Pending | Helm",
+    "metaDesc": "Cisco’s October Meraki fixes arrive on different schedules. Understand the device-specific caveats, status labels and interruptions to discuss with your IT provider.",
     "date": "2026-10-09",
-    "readMin": 6,
+    "updated": "2026-10-10",
+    "readMin": 3,
     "lane": "Professional services",
     "laneTo": "/professional-services/",
-    "intro": "If your firm uses Meraki equipment, ask your IT provider for a device-by-device answer to the October advisory. You need the installed version, the applicable fix and evidence of what still needs work. A general assurance that updates are handled leaves those questions open.",
-    "takeaway": "For a New Jersey law, accounting or other professional-services firm, the useful outcome is a short status record you can review with the provider. It should show which equipment has been checked, what the provider plans to change and where the firm needs to approve an interruption.",
+    "intro": "Some Meraki equipment can receive Cisco’s October security fixes now. Other devices are waiting for releases expected between mid-October and mid-November. If an outside IT provider looks after your firm’s network, that’s worth a conversation: equipment in the same office may need different updates on different schedules.",
+    "lead": [
+      {
+        "text": "Cisco published the advisory on October 7, 2026, and revised it on October 8. It covers Campus Gateways, MG cellular gateways, MR wireless access points, MS switches, MV cameras and MX security appliances. Cisco reports no known malicious exploitation and says there are no workarounds that address the vulnerabilities.",
+        "links": [
+          {
+            "phrase": "Cisco published the advisory",
+            "to": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-meraki-os-drbEX9GH"
+          }
+        ]
+      }
+    ],
+    "takeaway": "",
     "readingLayout": true,
     "hideVisual": true,
     "ctaMode": "book",
     "sections": [
       {
-        "h": "What Cisco reported",
+        "h": "The fix can depend on a footnote",
         "ps": [
-          "Cisco published its Meraki security advisory on October 7, 2026, and revised it October 8. It covers Campus Gateways, MG gateways, MR access points, MS switches, MV cameras and MX appliances. Cisco reports no known malicious exploitation and no workaround that addresses the flaws.",
+          "In the advisory’s MX section, Cisco lists release 19.2.9. The footnote says it’s available only for Z3 devices. That same note directs administrators to contact Meraki support if either 18.107.14 or 19.2.9 is missing from Dashboard, the service used to manage the equipment.",
+          "Those details explain why the provider needs to check the model and the software branch each device is running. Choosing a release from a headline, or assuming that a higher version number settles the question, could miss the qualification that applies to your equipment.",
           {
-            "text": "Fixes differ by product and firmware branch. Some entries remain planned for mid-October, late October or mid-November. The MX footnote limits 19.2.9 to Z3 devices; have IT contact Meraki support if 18.107.14 or 19.2.9 is unavailable in Dashboard. Use the current advisory’s product-specific release guidance for the exact match.",
+            "text": "There can also be an extra step between finding the right update and installing it. Meraki’s firmware-management documentation describes upgrade paths that require an intermediate release. Your provider needs to check that path and the release notes for compatibility with your network.",
             "links": [
               {
-                "phrase": "current advisory’s product-specific release guidance",
-                "to": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-meraki-os-drbEX9GH"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "h": "Ask which equipment was checked",
-        "ps": [
-          "Start with the provider’s current inventory. Ask it to include every location and any company equipment used by remote staff. A spare device that may return to service belongs in the review too.",
-          "For each device, request its model, location, current firmware and responsible administrator. Have the provider record when it checked those details. If another supplier manages equipment at a shared office, assign someone to obtain that supplier’s answer.",
-          "Keep an unresolved device visible. “We don’t have access to that network yet” tells you which problem to solve. Excluding it from the list would make the result appear more complete than the work performed."
-        ]
-      },
-      {
-        "h": "Get an exact release decision",
-        "ps": [
-          "Ask the provider to connect each device to the relevant advisory entry and explain the proposed version. If it recommends staying on a release, changing branches or contacting support, have it record the technical reason and any dependency.",
-          {
-            "text": "Meraki’s firmware management documentation describes the Dashboard “Good” status in terms of the firmware-maintenance timeline. It also describes upgrade barriers that can require an intermediate release. For this review, ask for more than a green status or a higher-looking version number. The provider needs to reconcile the advisory, supported upgrade path and device model.",
-            "links": [
-              {
-                "phrase": "firmware management documentation",
+                "phrase": "firmware-management documentation",
                 "to": "https://documentation.meraki.com/Platform_Management/Product_Information/Compatibility_and_Firmware/Firmware_Upgrades/Managing_Firmware_Upgrades"
               }
             ]
           },
-          "A useful question is: “Which documented release addresses this advisory for this device, and what has to happen before we can install it?” Keep the answer with the change ticket so a different technician can follow it later.",
-          "Avoid choosing firmware yourself from a news article. The provider should review compatibility and the release notes for your environment, including any known issues that affect the work your firm relies on."
+          "For releases still planned for mid-October, late October or mid-November, Cisco’s date is a reason to check availability again. It isn’t your firm’s installation date. The provider still has to confirm that the update is available for your equipment and work out how to install it. If it recommends a temporary restriction while you wait, you’ll also need to understand what that changes for staff and what remains unresolved."
         ]
       },
       {
-        "h": "Give pending releases an owner",
+        "h": "What Meraki’s status labels tell you",
         "ps": [
-          "For equipment waiting on a release or a support response, ask for a dated follow-up. The record should identify the affected device, what the provider is waiting for and who will check again.",
-          "Distinguish a vendor’s expected release date from your firm’s installation date. Before promising completion, the provider still needs to confirm availability and a supported path. If a date moves, ask it to update the work record and explain whether the recommended interim arrangement has changed.",
-          "You might use four practical states: verified on an applicable fix, change scheduled, waiting on the vendor, or applicability still under review. These are suggested reporting labels, not Meraki product statuses. Give every unfinished entry a next action.",
-          "Ask the provider to explain any proposed temporary restriction and its business impact. Record what it can reduce, what remains unresolved and who approves it. Do not close the firmware issue merely because a temporary measure was applied."
-        ]
-      },
-      {
-        "h": "Agree on the interruption before the change",
-        "ps": [
-          "Tell IT which work must remain available during the proposed window. For an accounting office, that might include a filing session or access to a hosted tax application. For a law firm, it could be a remote hearing. These are planning examples; the provider needs your actual schedule.",
           {
-            "text": "Meraki documents a reboot interruption during upgrades and notes that Dashboard information can take additional time to refresh. Its firmware release process also explains scheduled upgrades and administrator notifications. Check what is already scheduled so the firm and provider are working from the same plan.",
+            "text": "Meraki gives firmware, the software running on a device, a green “Good” status when no end-of-maintenance date has been set, or when that date is more than six months away. Those criteria concern maintenance timing; the installed version still needs to be checked against this advisory’s fixes.",
             "links": [
               {
-                "phrase": "firmware release process",
-                "to": "https://documentation.meraki.com/Platform_Management/Product_Information/Compatibility_and_Firmware/Firmware_Upgrades/Meraki_Firmware_Release_Process"
+                "phrase": "“Good” status",
+                "to": "https://documentation.meraki.com/Platform_Management/Product_Information/Compatibility_and_Firmware/Firmware_Upgrades/Managing_Firmware_Upgrades"
               }
             ]
           },
-          "Ask who will be available during the change, who can authorize recovery steps and how staff will report a problem. Have IT identify the business checks it will perform afterward. Agree on which failure would trigger a rollback and how the security issue would be tracked if that happened."
-        ]
-      },
-      {
-        "h": "Verify the running version afterward",
-        "ps": [
           {
-            "text": "Meraki’s switch-upgrade documentation says certain “Completed” statuses can appear after a timeout. A support-locked switch can also be skipped. Those details apply to the documented switching workflow; other device families need their own appropriate verification.",
+            "text": "There’s a similar distinction after an upgrade. In Meraki’s documented MS switch workflow, “Completed” can appear after a 30-minute timeout. A switch locked to a firmware version by Meraki support can also be skipped while the group’s upgrade is considered complete.",
             "links": [
               {
-                "phrase": "switch-upgrade documentation",
+                "phrase": "documented MS switch workflow",
                 "to": "https://documentation.meraki.com/Platform_Management/Product_Information/Compatibility_and_Firmware/Firmware_Upgrades/Meraki_Switching_Firmware_Upgrades"
               }
             ]
           },
-          "Request dated evidence of the installed firmware for the devices in scope, plus the agreed business-function checks. Ask the provider to identify anything offline, skipped, rolled back or still running the previous version.",
-          "Suppose a review covers eight devices and the provider verifies seven. The update to leadership should identify the eighth device and its next action. A single “complete” label for the office would hide the unfinished work.",
-          "Keep detailed exports in the firm’s approved records location. A leadership summary can refer to them without circulating network details more widely than necessary."
+          "So a completed upgrade job still needs a check of the software actually running on the devices. If something was skipped, stayed on the old version or had to be rolled back, the firm needs to know that work remains. The timeout behavior above belongs to the documented MS workflow; your provider will need appropriate checks for the other device families, too.",
+          "This is also why it’s worth agreeing beforehand on what the provider will test once the equipment comes back online. A successful change should include checking the business functions you rely on, as well as confirming the installed version."
         ]
       },
       {
-        "h": "A request you can send to your provider",
-        "ps": [
-          "Please review Cisco’s October Meraki advisory against the equipment you manage for us, including other offices and company equipment used remotely.",
-          "For each device, please record the model, installed firmware, applicable advisory entry and proposed action. Include the supported upgrade path and any support case or release dependency.",
-          "Please confirm the change window, expected interruption, recovery contact and post-change business checks. For completed work, retain dated installed-version evidence and identify any devices that were skipped, rolled back or could not be verified.",
-          "For everything still open, please name the owner and next review date. Let us know which decision or approval you need from us."
-        ]
-      },
-      {
-        "h": "Keep responsibility with the agreed owner",
+        "h": "Plan the interruption around the firm’s work",
         "ps": [
           {
-            "text": "Your retained IT provider should carry out the firmware work under your agreement. Helm Command can maintain risk and evidence records and coordinate assigned actions within its written program scope. Routine patching and hands-on remediation remain with the responsible IT team unless separately authorized.",
+            "text": "Meraki’s upgrade guidance describes a connectivity interruption during reboot and an additional delay before Dashboard information refreshes. It also explains how upgrades are scheduled and administrators are notified, so your provider should check whether a change is already booked.",
             "links": [
               {
-                "phrase": "Helm Command",
-                "to": "/helm-command/"
+                "phrase": "upgrade guidance",
+                "to": "https://documentation.meraki.com/Platform_Management/Product_Information/Compatibility_and_Firmware/Firmware_Upgrades/Meraki_Firmware_Release_Process"
               }
             ]
           },
-          {
-            "text": "For the broader process, use Helm’s vulnerability-management guide. The network-hardening checklist covers ongoing configuration work, and the guide to known vulnerabilities and zero-days explains how to assess a new advisory.",
-            "links": [
-              {
-                "phrase": "vulnerability-management guide",
-                "to": "/resources/vulnerability-management-new-jersey/"
-              },
-              {
-                "phrase": "network-hardening checklist",
-                "to": "/resources/network-hardening-small-business/"
-              },
-              {
-                "phrase": "guide to known vulnerabilities and zero-days",
-                "to": "/resources/zero-day-vs-known-vulnerabilities/"
-              }
-            ]
-          }
+          "A maintenance window that works for IT might overlap with a remote hearing or a tax filing. That’s information the firm needs to contribute. Agree on a time, who to contact if something fails and how the provider would recover from a problem.",
+          "With fixes arriving on different schedules, the first round of upgrades may leave some equipment waiting on Cisco. Agreeing on when your provider will check again keeps those devices in the plan after the available updates are installed."
         ]
       }
     ]

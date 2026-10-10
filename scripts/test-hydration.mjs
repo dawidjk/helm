@@ -97,8 +97,9 @@ async function routes(dir=dist) {
   return result;
 }
 try {
-  if(['all','routes'].includes(mode)) {
-    const tasks=(await routes()).flatMap(route=>['unknown','declined','accepted'].flatMap(consent=>['auto','light','dark'].map(theme=>({route,consent,theme}))));
+  if(['all','routes','blog'].includes(mode)) {
+    const selectedRoutes=(await routes()).filter(route=>mode!=='blog'||route.startsWith('/blog/'));
+    const tasks=selectedRoutes.flatMap(route=>['unknown','declined','accepted'].flatMap(consent=>['auto','light','dark'].map(theme=>({route,consent,theme}))));
     let next=0;
     await Promise.all(Array.from({length:3},async()=>{
       while(next<tasks.length) {
@@ -187,7 +188,7 @@ try {
       }finally{await f.close();}
     });
   }
-  if(['all','interactions'].includes(mode)) {
+  if(['all','interactions','blog'].includes(mode)) {
     for(const route of ['/','/helm-core/']) for(const consent of ['unknown','declined','accepted']) await test(`early scroll/input ${route} ${consent}`,async()=>{
       const f=await fixture(route,{consent,slow:true,hold:true});
       try {
