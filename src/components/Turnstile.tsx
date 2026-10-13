@@ -14,6 +14,7 @@ interface TurnstileApi {
       'expired-callback': () => void;
       'error-callback': () => void;
       theme: 'auto';
+      size: 'normal' | 'compact';
     },
   ): string;
   remove(widgetId: string): void;
@@ -75,6 +76,17 @@ export default function Turnstile({
   const callbackRef = useRef(onToken);
   const [unavailable, setUnavailable] = useState(false);
   callbackRef.current = onToken;
+  const [compact, setCompact] = useState(false);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const measure = () => setCompact(container.clientWidth < 300);
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
 
   const siteKey =
     import.meta.env.VITE_TURNSTILE_SITE_KEY ||
@@ -99,9 +111,10 @@ export default function Turnstile({
           sitekey: siteKey,
           action,
           theme: 'auto',
-          callback: (token) => callbackRef.current(token),
-          'expired-callback': () => callbackRef.current(''),
-          'error-callback': () => callbackRef.current(''),
+          size: compact ? 'compact' : 'normal',
+          callback: (token) => { if (active) callbackRef.current(token); },
+          'expired-callback': () => { if (active) callbackRef.current(''); },
+          'error-callback': () => { if (active) callbackRef.current(''); },
         });
       })
       .catch(() => {
@@ -115,10 +128,10 @@ export default function Turnstile({
       active = false;
       if (widgetId && window.turnstile) window.turnstile.remove(widgetId);
     };
-  }, [action, resetKey, siteKey]);
+  }, [action, resetKey, siteKey, compact]);
 
   return (
-    <div>
+    <div className="turnstile-check">
       <div ref={containerRef} />
       {unavailable && (
         <p className="lead-form-error" role="alert">

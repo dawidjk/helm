@@ -5320,3 +5320,101 @@ ol.article-checklist,
 }
 
 .japandi-home-hero > picture { position: absolute; inset: 0; z-index: -2; }
+
+/* Visibility audit corrections: fixed photographic and warm CTA surfaces. */
+.founder-card { grid-template-columns: 112px minmax(0, 1fr); }
+.founder-card > div { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 780px) {
+  .founder-card { grid-template-columns: 84px minmax(0, 1fr); }
+}
+@media (max-width: 420px) {
+  .founder-card { grid-template-columns: minmax(0, 1fr); }
+}
+
+.lead-form input[type='email'][name='email']::placeholder,
+.contact-form :is(input, textarea)::placeholder {
+  color: light-dark(#465c50, #bdcfc3);
+  opacity: 1;
+}
+.hero.lane.brand-hero .lead-form input[type='email'][name='email']::placeholder,
+.japandi-home-copy .lead-form input[type='email'][name='email']::placeholder {
+  color: #e4e4dd;
+  opacity: 1;
+}
+@media (min-width: 701px) {
+  .japandi-home-copy .lead-form input[type='email'][name='email']::placeholder {
+    color: light-dark(#465c50, #bdcfc3);
+  }
+}
+.hero.lane.brand-hero .lead-form button {
+  background: #f2e5cf !important;
+  border-color: #f5f1e8 !important;
+  color: #17382c !important;
+}
+.hero.lane.brand-hero .lead-form button:focus-visible {
+  outline: 2px solid #fffdf7;
+  outline-offset: 3px;
+}
+.cta-band .lead-form-error,
+.cta-band .lead-form-error a {
+  color: light-dark(#ffe2d9, #682519);
+}
+.cta-band a.action-link,
+.cta-band a.action-link:hover {
+  background: light-dark(#f2e5cf, #214b3b);
+  border-color: light-dark(#fffdf7, #17382c);
+  color: light-dark(#17382c, #fffdf7);
+}
+.cta-band a.action-link:focus-visible {
+  outline: 2px solid light-dark(#fffdf7, #214b3b);
+  outline-offset: 3px;
+}
+
+/* Fit the complete homepage decision group, not only its background image.
+   Keep natural reflow when zoom or validation text needs additional space. */
+.japandi-home-copy {
+  min-width: 0;
+  width: calc(100% - max(5vw, calc((100vw - 1200px) / 2)));
+  max-width: 640px;
+  padding-block: clamp(20px, 4svh, 48px) 72px;
+}
+.japandi-home-copy h1 {
+  font-size: clamp(40px, min(6.1vw, 9svh), 78px);
+  margin-bottom: 20px;
+}
+.japandi-home-copy > p { margin-bottom: 20px; }
+.japandi-home-copy .lead-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+.japandi-home-copy .lead-form-label,
+.japandi-home-copy .lead-form-error { grid-column: 1 / -1; }
+.japandi-home-copy .lead-form input[type='email'] { width: 100%; min-width: 0; }
+@media (min-width: 701px) and (max-width: 1050px) {
+  .japandi-home-hero { grid-template-columns: minmax(0, 1fr); }
+  .japandi-home-copy { max-width: 620px; }
+  .japandi-home-copy h1 { max-width: 15ch; }
+}
+@media (max-width: 700px) {
+  .japandi-home-copy {
+    width: 100%;
+    padding: 20px 24px 68px;
+  }
+  .japandi-home-copy h1 {
+    max-width: none;
+    font-size: clamp(36px, min(11vw, 7svh), 48px);
+    margin-bottom: 12px;
+  }
+  .japandi-home-copy > p { margin-bottom: 12px; }
+}
+
+/* Challenge widgets must not set the form's intrinsic minimum width. */
+.contact-form { min-width: 0; grid-template-columns: minmax(0, 1fr); }
+.contact-form label, .cf-row, .cf-actions { min-width: 0; }
+.turnstile-check { width: 300px; max-width: 100%; min-width: 0; }
+/* The viewport cue must be visible from first paint, including during reveal. */
+.japandi-home-hero .scroll-cue {
+  animation: none;
+  transform: none;
+  opacity: 1;
+}
