@@ -2305,7 +2305,7 @@ export const refreshedArticles: Article[] = [
     "metaTitle": "How to Evaluate Cybersecurity Assessment Tools | Helm",
     "metaDesc": "Choose an assessment tool that distinguishes evidence from assertions and connects findings to business impact, owners and decisions.",
     "date": "2026-10-06",
-    "readMin": 8,
+    "readMin": 9,
     "lane": "Professional services",
     "laneTo": "/professional-services/",
     "organizationByline": true,
@@ -2336,7 +2336,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Test the output before purchasing",
         "ps": [
-          "Before purchasing, ask for a sample assessment with fictional data. Follow one finding through the report: can you see its source, limitations, business impact and the action someone needs to take? Then try correcting an inaccurate input and check whether the review history survives.",
+          "Before purchasing, ask for a sample assessment with fictional data. Follow one finding through the report: can you see its source, limitations, business impact and the action someone needs to take? Then try correcting an inaccurate input and check whether the review history survives. Use the fictional backup record below for the demonstration and export check.",
           "Use these evaluation questions:",
           {
             "list": [
@@ -2439,9 +2439,27 @@ export const refreshedArticles: Article[] = [
           "Check how a corrected input appears in that record. Keep the original observation, correction and reviewer where needed to explain the change. When leadership revisits the assessment, that history helps distinguish a resolved exposure from a reporting error.",
           "Earlier decisions should remain usable too. Confirm that a new assessment can reference them without silently replacing their evidence dates."
         ]
+      },
+      {
+        "h": "A fictional backup decision record",
+        "ps": [
+          "The hypothetical consulting firm can complete a decision record while leaving the recovery finding open. This fictional sample separates a staff statement from the evidence available and assigns a test before a purchasing decision.",
+          {
+            "list": [
+              "Staff assertion: “Our client-delivery files are backed up every night.”",
+              "Available evidence: A recent backup-job log reports success; the configuration lists the shared site holding those files. There is no recorded usability check after restoration.",
+              "Still unverified: Whether the required document set and user access can be restored to a working location, and whether later valid work would be preserved or reconciled.",
+              "Business consequence: If those files become unavailable, staff may be unable to complete client deliveries. The job log alone does not establish how the firm would resume that work.",
+              "Decision and status: Open. Arrange one authorized restore test before deciding whether the existing method needs a configuration change or another service.",
+              "Action owner: The retained IT lead performs the test; the operations manager checks usability. The business sponsor approves any resulting spending or risk decision.",
+              "Evidence to close the item: A dated test record naming the sample, covered site, recovery point, destination and operator, with the operations manager’s content/access check and any exceptions. Close only when the stated recovery requirement is demonstrated."
+            ]
+          },
+          "Use this record in the vendor demonstration: attach a harmless sample restore-test reference and record the business reviewer’s decision. Export it and check that the assertion, evidence, unresolved requirement, owner and closing criteria remain understandable outside the dashboard."
+        ]
       }
     ],
-    "updated": "2026-10-07"
+    "updated": "2026-10-13"
   },
   {
     "slug": "cybersecurity-roadmap-milestones",
@@ -2977,7 +2995,7 @@ export const refreshedArticles: Article[] = [
     "metaTitle": "Email Security Gateway vs Managed Service | Helm",
     "metaDesc": "Compare gateway deployment, filtering features, quarantine ownership and managed service scope before choosing email protection.",
     "date": "2026-10-06",
-    "readMin": 8,
+    "readMin": 9,
     "lane": "Professional services",
     "laneTo": "/professional-services/",
     "organizationByline": true,
@@ -3033,6 +3051,7 @@ export const refreshedArticles: Article[] = [
             ],
             "ordered": false
           },
+          "In that fictional CPA firm, two offers could use similar filtering but leave different work behind. Offer A supplies the product while retained IT reviews releases and maintains exceptions. Offer B includes provider review during stated service hours, while the firm still approves policy exceptions and IT owns routing changes. If retained IT can cover the agreed queue, A may meet the need. If review requests currently sit unattended, B closes that gap only when its scope accepts the missing coverage and defines escalation. Neither offer guarantees that every client message will arrive without delay.",
           "A pilot should include normal client correspondence, automated billing messages and shared mailboxes. Agree on how to measure delivery delays and review workload before changing mail routing across the firm."
         ]
       },
@@ -3123,7 +3142,18 @@ export const refreshedArticles: Article[] = [
       {
         "h": "A responsibility comparison",
         "ps": [
-          "Obtain the responsibilities in writing, then revisit them when the mail platform or business workflows change. Confirm which duties the vendor includes instead of relying on the 'managed' label."
+          "Obtain the responsibilities in writing, then revisit them when the mail platform or business workflows change. Confirm which duties the vendor includes instead of relying on the 'managed' label.",
+          "A self-managed arrangement fits when retained IT can cover the agreed review queue and hours, maintain exceptions, and carry out the incident escalation process. Ask the IT owner to demonstrate that capacity and name a backup reviewer. A filtering product does not supply that operating capacity by itself.",
+          "A managed arrangement fits when a provider accepts a demonstrated operating gap in its written scope, such as an uncovered quarantine queue or incident handoff. Compare the remaining approvals, service hours and IT duties alongside the table. The firm still owns business decisions and must know which work remains with its retained IT provider.",
+          {
+            "text": "The email-security services evaluation guide covers vendor and procurement questions.",
+            "links": [
+              {
+                "phrase": "email-security services evaluation guide",
+                "to": "/resources/email-security-services-evaluation/"
+              }
+            ]
+          }
         ],
         "table": {
           "caption": "A responsibility comparison",
@@ -3169,7 +3199,7 @@ export const refreshedArticles: Article[] = [
         ]
       }
     ],
-    "updated": "2026-10-07"
+    "updated": "2026-10-13"
   },
   {
     "slug": "email-security-services-evaluation",
@@ -6592,7 +6622,7 @@ export const refreshedArticles: Article[] = [
     "metaTitle": "Microsoft 365 Retention vs Backup for SMBs | Helm",
     "metaDesc": "Microsoft offers retention, recovery and native backup. Compare workload coverage, restore requirements and operating duties before choosing a service.",
     "date": "2026-10-06",
-    "readMin": 8,
+    "readMin": 9,
     "lane": "Professional services",
     "laneTo": "/professional-services/",
     "organizationByline": true,
@@ -6770,9 +6800,19 @@ export const refreshedArticles: Article[] = [
           "Review the record after a new application, acquisition, substantial site change or provider transition, and confirm that the service order still matches the environment. If you plan to cancel a service, agree on data access, any required export, administrative handover and the date recovery access ends while the current service is still available.",
           "When reporting to leadership, explain which important workloads are covered and what the restore test showed. Include the scenario tested and anything unresolved. Successful job counts show completed activity, but cannot establish that every business recovery will succeed; the report should stay tied to the configured service and the scenarios examined."
         ]
+      },
+      {
+        "h": "A worked recovery comparison",
+        "ps": [
+          "Consider a fictional comparison at the 40-person accounting firm described above, using non-sensitive sample data. These illustrative results describe its configured methods and test conditions; they are not recovery guarantees for a product.",
+          "For the deleted client file, the firm needs the approved version in a working location with the intended user access. Its retained IT provider restores the sample through an already configured recovery method, and the business owner opens it and checks the content and permissions. No requirement remains unmet for that tested scenario. The firm keeps the demonstrated method rather than buying another service for the same task.",
+          "For the damaged shared site, the firm needs the required document set and access from an agreed recovery point, with legitimate later work preserved or reconciled. Retained IT runs the test, but the existing method returns only part of the required set. The business owner cannot resume the workflow from that result. The record identifies a site-recovery gap; it does not establish that every native option would fail.",
+          "That documented gap warrants evaluating another configured native service or a third-party service for site recovery. The firm will buy only after a proposed service demonstrates the usable result and confirms the operator, included work and charges. If a configuration change lets the existing method pass the same test, the firm keeps that capability.",
+          "Define one controlled damaged-site recovery test with retained IT next. Agree the sample data, recovery point, restored destination, treatment of later work and business approver, then compare the configured options against that same request. Keep the successful file result and the unresolved site requirement in the purchasing record."
+        ]
       }
     ],
-    "updated": "2026-10-07"
+    "updated": "2026-10-13"
   },
   {
     "slug": "outlook-email-encryption-options",

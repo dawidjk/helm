@@ -449,7 +449,8 @@ export const articles: Article[] = [
     "metaTitle": "Managed Service Providers in New Jersey: 7 Signs | Helm",
     "metaDesc": "Compare general MSPs and security-focused providers, check seven buying signals, and download a vendor scorecard for your New Jersey small or midsized business.",
     "date": "2026-10-06",
-    "readMin": 8,
+    "updated": "2026-10-13",
+    "readMin": 9,
     "lane": "All industries",
     "laneTo": "/",
     "organizationByline": true,
@@ -593,6 +594,31 @@ export const articles: Article[] = [
             ]
           },
           "Take the findings and responsibility map to the relevant IT or security provider. If the initial Helm conversation cannot establish fit or scope, bounded paid discovery costs $2,500 to $7,500, which may be credited toward the first service year when stated in the service order. Agree on the responsible owner, written next step and date before ending the discussion."
+        ]
+      },
+      {
+        "h": "Compare the contract before you sign",
+        "ps": [
+          "Have each shortlisted vendor point to the clauses that answer these questions. Record the answer and any exception beside its proposal.",
+          {
+            "list": [
+              "How do response and resolution targets differ? Check whether response means acknowledgement or active triage, and whether resolution means restored service or a closed ticket. Compare support hours, incident severity, escalation steps and conditions that pause either clock.",
+              "Who owns each incident action? Name the security provider, retained IT owner and business approver for investigation, containment and recovery. Confirm who may isolate systems, who alerts leadership and when, and any agreed help with insurer or customer notifications.",
+              "Which work is billed separately? Request rates, minimum charges and approval rules for onboarding, onsite visits, after-hours work, projects and specialist response. Include annual adjustments and the work still billed by your existing IT provider when comparing total cost.",
+              "What can you export? Confirm ownership and access to your business data, service documentation and configuration records. Ask for formats, delivery times, retention or deletion arrangements, and any licensing or access limits. Agree on a secure handover of administrative credentials.",
+              "What does leaving cost? Check renewal and notice rules, early termination charges, export fees and the treatment of prepaid services or licenses. Request a written exit cost for the services in your proposal.",
+              "Who helps with the transition? Agree which team delivers records, transfers access and coordinates with the incoming provider. Confirm included hours or separate rates, handover timing and responsibility for essential services during the change."
+            ]
+          },
+          {
+            "text": "Keep these contract answers alongside the vendor evaluation scorecard (PDF) when you compare proposals.",
+            "links": [
+              {
+                "phrase": "vendor evaluation scorecard (PDF)",
+                "to": "/downloads/Helm_MSP_Vendor_Evaluation_Scorecard.pdf"
+              }
+            ]
+          }
         ]
       }
     ]

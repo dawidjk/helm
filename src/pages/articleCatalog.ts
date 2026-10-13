@@ -91,7 +91,7 @@ export const articleCatalog = [
     "slug": "cybersecurity-risk-assessment-tools",
     "title": "How to evaluate a cybersecurity risk assessment tool for small businesses",
     "lane": "Professional services",
-    "readMin": 8
+    "readMin": 9
   },
   {
     "slug": "cybersecurity-roadmap-milestones",
@@ -115,7 +115,7 @@ export const articleCatalog = [
     "slug": "email-security-gateway-managed-service",
     "title": "Email security gateway versus managed gateway service: choosing the right model for your SMB",
     "lane": "Professional services",
-    "readMin": 8
+    "readMin": 9
   },
   {
     "slug": "email-security-services-evaluation",
@@ -235,7 +235,7 @@ export const articleCatalog = [
     "slug": "microsoft-365-retention-vs-backup",
     "title": "Microsoft 365 Native Retention vs Third-Party Backup: Which Is Right for Your Small Business",
     "lane": "Professional services",
-    "readMin": 8
+    "readMin": 9
   },
   {
     "slug": "outlook-email-encryption-options",
@@ -373,6 +373,6 @@ export const articleCatalog = [
     "slug": "managed-service-providers-new-jersey",
     "title": "Seven signs your company needs a managed service provider, and what to do next",
     "lane": "All industries",
-    "readMin": 8
+    "readMin": 9
   }
 ];
