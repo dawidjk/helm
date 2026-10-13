@@ -3783,11 +3783,16 @@ body {
   background: light-dark(rgba(255,255,255,.94), rgba(22,32,25,.92));
 }
 
-.cta-band .lead-form button[data-variant='primary'] {
-  border-color: rgba(255, 253, 247, .72) !important;
-  background: #f2e5cf !important;
-  color: #17382c !important;
+.cta-band .lead-form button {
+  border-color: light-dark(rgba(255, 253, 247, .72), #17382c) !important;
+  background: light-dark(#f2e5cf, #214b3b) !important;
+  color: light-dark(#17382c, #fffdf7) !important;
   box-shadow: 0 14px 32px -14px rgba(0, 0, 0, .72) !important;
+}
+
+.cta-band .lead-form button:focus-visible {
+  outline: 2px solid light-dark(#fffdf7, #214b3b) !important;
+  outline-offset: 3px;
 }
 
 .action-link {
@@ -5313,3 +5318,5 @@ ol.article-checklist,
     font-size: 14px; line-height: 1.45;
   }
 }
+
+.japandi-home-hero > picture { position: absolute; inset: 0; z-index: -2; }

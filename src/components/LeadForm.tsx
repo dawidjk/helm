@@ -74,7 +74,7 @@ export default function LeadForm({
     submitting.current = true;
     setState('busy');
     trackConversion('scan_started', source);
-    const url = new URL('/scan/auto', PORTAL_URL);
+    const url = new URL('/scan', PORTAL_URL);
     url.searchParams.set('email', trimmed);
     const attributedUrl = withAttribution(url.toString(), source);
     // Full top-level navigation (not a fetch): the visitor leaves this page

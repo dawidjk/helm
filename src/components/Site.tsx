@@ -508,11 +508,12 @@ export function RevealManager() {
 export function MailingAddress() {
   return (
     <address className="mailing-address">
-      <a href="https://www.google.com/maps/search/?api=1&query=865%20NJ%2033%20Ste%203%20Unit%20%23256%2C%20Freehold%2C%20NJ%2007728">
+      <a href="https://www.google.com/maps/search/?api=1&query=865%20NJ%2033%20Ste%203%20Unit%20%23256%2C%20Freehold%2C%20NJ%2007728" target="_blank" rel="noopener noreferrer">
         Helm Security<br />
         865 NJ 33<br />
         Ste 3, Unit #256<br />
         Freehold, NJ 07728
+        <span className="sr-only"> (opens in a new tab)</span>
       </a>
     </address>
   );
@@ -561,9 +562,9 @@ export function SiteFooter() {
         <div className="footer-bottom">
           <span>© {year} Helm Security LLC · New Jersey</span>
           <div className="footer-social" aria-label="Helm Security social media">
-            <a href={linkedInUrl} aria-label="Helm Security on LinkedIn">LinkedIn</a>
-            <a href={facebookUrl} aria-label="Helm Security on Facebook">Facebook</a>
-            <a href={instagramUrl} aria-label="Helm Security on Instagram">Instagram</a>
+            <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" aria-label="Helm Security on LinkedIn (opens in a new tab)">LinkedIn</a>
+            <a href={facebookUrl} target="_blank" rel="noopener noreferrer" aria-label="Helm Security on Facebook (opens in a new tab)">Facebook</a>
+            <a href={instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Helm Security on Instagram (opens in a new tab)">Instagram</a>
           </div>
         </div>
       </div>

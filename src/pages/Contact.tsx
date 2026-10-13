@@ -78,6 +78,8 @@ export default function Contact() {
         company: body.get('company'),
         email: body.get('email'),
         phone: body.get('phone'),
+        employeeCount: body.get('employeeCount'),
+        heardAboutUs: body.get('heardAboutUs'),
         interest: body.get('interest'),
         message: body.get('message'),
         turnstileToken,
@@ -193,6 +195,22 @@ export default function Contact() {
               </label>
             </div>
 
+            <div className="cf-row">
+              <label>
+                How many employees does your firm have?
+                <select name="employeeCount" required defaultValue="">
+                  <option value="" disabled>Choose a range…</option>
+                  {['1-9', '10-19', '20-75', '75-250', '500+'].map((range) => (
+                    <option key={range} value={range}>{range}</option>
+                  ))}
+                </select>
+              </label>
+              <label>
+                Where did you hear about us? <span className="cf-opt">(optional)</span>
+                <input type="text" name="heardAboutUs" maxLength={200} placeholder="Referral, Google, LinkedIn…" />
+              </label>
+            </div>
+
             <label>
               What do you need help with?
               <select name="interest" required value={interest} onChange={(event) => setInterest(event.target.value)}>
@@ -215,7 +233,7 @@ export default function Contact() {
                 maxLength={2000}
                 placeholder={interest === 'Secure AI Adoption'
                   ? 'Describe one internal task, who does it, and what takes time today…'
-                  : 'Team size, deadlines, what your insurer or customer is asking for…'}
+                  : 'Deadlines, what your insurer or customer is asking for…'}
                 aria-describedby={interest === 'Secure AI Adoption' ? 'ai-inquiry-guidance' : undefined}
               />
             </label>
