@@ -113,6 +113,10 @@ export const professionalServices: Lane = {
   headline: 'Protect the client information and payments your firm handles every day.',
   sub: "A compromised mailbox can redirect a payment, expose a confidential matter, or leave the firm unable to support an answer to an insurer or a client’s security questionnaire.",
   primaryCta: 'Get my free scan',
+  industryLinks: [
+    {to: '/law-firms/', label: 'Law firms', note: 'Client information and payment changes'},
+    {to: '/accounting-firms/', label: 'Accounting and tax firms', note: 'Taxpayer data and written security plans'},
+  ],
   pains: [
     {
       title: 'Wire fraud targets your inbox',

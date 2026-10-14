@@ -31,7 +31,7 @@ export type Article = {
   takeaway: string;
   organizationByline?: boolean;
   hideVisual?: boolean;
-  consultation?: {title: string; sub: string; label: string; to: string};
+  consultation?: {title: string; sub: string; label: string; to: string; secondary?: {label: string; to: string}};
   /**
    * 'scan' (default) sends the reader to the free domain scan CTA.
    * 'book' sends compliance-research readers (cyber-insurance, HIPAA topics)

@@ -245,6 +245,11 @@ export default function ArticlePage() {
             <p className="observe d1">{a.consultation.sub}</p>
             <div className="cta-form observe d2">
               <ActionLink to={a.consultation.to} label={a.consultation.label} />
+              {a.consultation.secondary && (
+                <div className="cta-alt">
+                  <Link to={a.consultation.secondary.to}>{a.consultation.secondary.label}</Link>
+                </div>
+              )}
             </div>
           </div>
         </section>

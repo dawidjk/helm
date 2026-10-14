@@ -111,11 +111,19 @@ export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
             </li>
           ))}
         </ol>
+        <p className="observe">
+          {p.slug === 'helm-core' ? (
+            <>Plan inventory checks, installation and verification with your IT owner using the <Link to="/resources/managed-endpoint-protection-rollout/">endpoint rollout guide</Link>.</>
+          ) : (
+            <>The <Link to="/resources/virtual-ciso-service-evaluation/">vCISO evaluation guide</Link> explains how to compare deliverables, meeting cadence and the responsibilities your firm keeps.</>
+          )}
+        </p>
       </Band>
 
       <Band variant="raised">
         <div className="band-head observe">
           <h2>Common questions</h2>
+          <p>Before deciding, review <Link to="/about/">who operates Helm</Link> and the <Link to="/trust/">current security disclosures</Link>, including vendor roles and known control gaps.</p>
         </div>
         <div className="faq-list">
           {p.faqs.map((f, i) => (

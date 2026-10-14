@@ -20,6 +20,7 @@ export type Lane = {
   headline: string;
   sub: string;
   primaryCta: string;
+  industryLinks?: {to: string; label: string; note: string}[];
   /**
    * How the hero and bottom-band CTAs behave. 'scan' (default) renders the
    * email-in LeadForm that runs the instant domain scan; 'book' renders a
@@ -123,6 +124,25 @@ export default function LanePage({lane}: {lane: Lane}) {
         </div>
         <ScrollCue />
       </header>
+
+      {lane.industryLinks && (
+        <Band>
+          <div className="band-head">
+            <h2>Choose your industry.</h2>
+          </div>
+          <nav className="lane-strip" aria-label="Professional-services industries">
+            {lane.industryLinks.map((industry) => (
+              <Link key={industry.to} to={industry.to} className="lane-row">
+                <div className="lane-title">{industry.label}</div>
+                <div className="lane-side">
+                  <span className="lane-note">{industry.note}</span>
+                  <DirectionIcon className="lane-arrow" />
+                </div>
+              </Link>
+            ))}
+          </nav>
+        </Band>
+      )}
 
       {buyerCopy && (
         <>

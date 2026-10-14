@@ -2482,6 +2482,16 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
+    "consultation": {
+      "title": "Discuss who will keep your security roadmap current.",
+      "sub": "Tell us about one unfinished security action and your current IT arrangements. We can discuss how Command keeps the roadmap current, when leadership reviews it and who carries out the agreed work.",
+      "label": "Discuss Command",
+      "to": "/contact/?service=helm-command&intent=service-discussion&src=article%20cybersecurity-roadmap-milestones",
+      "secondary": {
+        "label": "Run the free scan for public email and web configuration",
+        "to": "/free-scan/"
+      }
+    },
     "intro": "A security recommendation needs a few decisions before it becomes work the firm can approve: what should happen next, who will do it and how they will show it is finished. A list of tools leaves those decisions to you. A useful roadmap records them, so leadership can approve the next action without leaving the work itself unassigned.",
     "lead": [
       {
@@ -7167,6 +7177,16 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
+    "consultation": {
+      "title": "Discuss recurring questionnaire and evidence work.",
+      "sub": "Describe the requests your firm receives, their deadlines and who gathers the evidence today. We can discuss Command’s limits on response work and your firm’s approval of every final answer. Keep sensitive records out of the inquiry.",
+      "label": "Discuss Command",
+      "to": "/contact/?service=helm-command&intent=service-discussion&src=article%20security-questionnaire-response-services",
+      "secondary": {
+        "label": "Run the free scan for public email and web configuration",
+        "to": "/free-scan/"
+      }
+    },
     "intro": "A report covering employee laptops cannot, by itself, answer a client's question about protection across the whole business. Someone has to read the question, check what the evidence actually covers and approve the answer. Choosing between DIY and a questionnaire response service starts with deciding who can do that work.",
     "lead": [
       "DIY can work if someone at your firm understands the controls, can get evidence from IT and has time to coordinate reviews. A response service can help with drafting and organization. Your firm still owns every final representation it makes to the client."
@@ -8270,6 +8290,16 @@ export const refreshedArticles: Article[] = [
     "organizationByline": true,
     "hideVisual": true,
     "readingLayout": true,
+    "consultation": {
+      "title": "Discuss security leadership for your firm.",
+      "sub": "Tell us which security decisions need an owner and who handles IT today. We can discuss whether Helm Command fits, what it would deliver and which work your team would keep.",
+      "label": "Discuss Command",
+      "to": "/contact/?service=helm-command&intent=service-discussion&src=article%20virtual-ciso-service-evaluation",
+      "secondary": {
+        "label": "Run the free scan for public email and web configuration",
+        "to": "/free-scan/"
+      }
+    },
     "intro": "A virtual chief information security officer, or vCISO, handles agreed security-leadership work without a full-time executive appointment. When you compare providers, the useful detail is what the adviser will deliver each month and which decisions your firm will still make. Those duties vary from one engagement to another. The proposal needs to spell them out.",
     "lead": [
       "For a professional-services firm with existing IT, that means naming who keeps the risk view current and recommends priorities. It also means agreeing who tracks the evidence and brings unresolved decisions to leadership. These responsibilities give you something concrete to compare across proposals."

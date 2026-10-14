@@ -41,7 +41,7 @@ export default function SecureAiAdoption() {
               financial-services businesses.
             </p>
             <p>
-              Bring one recurring internal task you want to evaluate. Your existing IT provider stays in place, and we agree on responsibilities and any access or configuration changes before work begins.
+              Bring one recurring internal task you want to evaluate. The <Link to="/resources/choose-first-ai-workflow/">guide to choosing your first AI workflow</Link> can help you select a task with a clear review process. Your existing IT provider stays in place, and we agree on responsibilities and any access or configuration changes before work begins.
             </p>
             <p>
               Managed cybersecurity remains Helm’s primary service.
@@ -62,7 +62,7 @@ export default function SecureAiAdoption() {
             </li>
             <li>
               <h3>Review the proposed tools and data</h3>
-              <p>Before testing, we review how the proposed tool handles, stores, and retains data, along with its permissions, licensing, software costs, and where human review is required. We agree on which data and platform the firm would approve for the test.</p>
+              <p>Before testing, we review how the proposed tool handles, stores, and retains data, along with its permissions, licensing, software costs, and where human review is required. We agree on which data and platform the firm would approve for the test. The <Link to="/resources/ai-access-business-documents/">guide to AI access to business documents</Link> explains how to decide what the tool should be allowed to read.</p>
             </li>
             <li>
               <h3>Decide whether to test</h3>
@@ -80,7 +80,7 @@ export default function SecureAiAdoption() {
               separate scope and quote after the review.</p>
             <p>Compare the same task before and during the pilot. Count the time
               people spend preparing inputs, checking outputs, and correcting mistakes.
-              A faster first draft only helps if the finished work meets the agreed standard.</p>
+              A faster first draft only helps if the finished work meets the agreed standard. The <Link to="/resources/measure-ai-time-savings/">guide to measuring AI time savings</Link> explains how to include that time in the comparison.</p>
           </div>
           <dl className="ai-measures">
             <div><dt>Output quality</dt><dd>Check accuracy, completeness, and suitability
@@ -121,6 +121,7 @@ export default function SecureAiAdoption() {
             <p>People remain responsible for reviewing outputs and making decisions.
               This engagement does not include autonomous legal, financial, medical,
               or hiring decisions.</p>
+            <p>If the model, connected data, or workflow changes, use the <Link to="/resources/retest-ai-workflow-changes/">AI retesting guide</Link> to decide what needs checking again.</p>
             <p>Custom applications, production integrations, company-wide rollouts,
               and ongoing support require separate scoping.</p>
           </div>

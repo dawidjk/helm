@@ -145,12 +145,14 @@ export default function Pricing() {
           <article className="pricing-term observe d1">
             <h3>Clear service boundaries</h3>
             <p>Help desk, routine IT, patching, and remediation stay with your IT provider unless a separate written scope says otherwise.</p>
+            <p>Include your existing IT charges and any separately scoped work in the total budget. The <Link to="/resources/managed-service-provider-security-models/">comparison of provider models</Link> explains the responsibilities to check in each proposal.</p>
           </article>
           <article className="pricing-term observe d2">
             <h3>Assessment credit, when agreed</h3>
             <p>A separately scoped paid assessment may be credited toward the first year of Core or Command when the service order states that credit.</p>
           </article>
         </div>
+        <p className="observe">The <Link to="/resources/managed-service-providers-new-jersey/">guide to evaluating managed service providers</Link> covers scope, evidence and costs to check before choosing a service.</p>
       </Band>
 
       <CommandReadinessSection />

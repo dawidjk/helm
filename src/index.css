@@ -5544,6 +5544,12 @@ ol.article-checklist,
 
 
 /* Shared keyboard controls clear the sticky navigation; headings retain their anchor offsets. */
+.hero-note a,
+.ai-prose a {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
 main :is(a, button, input, select, textarea) {
   scroll-margin-block-start: calc(var(--site-nav-block-size) + 24px);
   scroll-margin-block-end: 24px;
