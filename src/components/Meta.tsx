@@ -12,6 +12,7 @@ export default function Meta({
   publishedTime,
   modifiedTime,
   author,
+  noIndex = false,
 }: {
   title: string;
   desc: string;
@@ -23,6 +24,7 @@ export default function Meta({
   publishedTime?: string;
   modifiedTime?: string;
   author?: {name: string; url: string};
+  noIndex?: boolean;
 }) {
   const canonicalUrl = siteUrl(path);
   const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${SITE_ORIGIN}${ogImage}`;
@@ -31,7 +33,7 @@ export default function Meta({
       <title>{title}</title>
       <meta name="description" content={desc} />
       {keywords?.length ? <meta name="keywords" content={keywords.join(', ')} /> : null}
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />
       <link rel="canonical" href={canonicalUrl} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={desc} />

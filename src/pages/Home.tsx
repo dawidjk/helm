@@ -7,7 +7,8 @@ import {businessPhone, facebookUrl, instagramUrl, linkedInUrl, serviceAreaJsonLd
 import {productList} from './products';
 import japandiHero from '../assets/variants/japandi-hero.webp';
 import japandiHeroMobile from '../assets/brand/japandi-home-mobile-640.webp';
-import {DirectionIcon, ScrollCue} from '../components/Site';
+import {BookCallLink, DirectionIcon, ScrollCue} from '../components/Site';
+import {BOOKING_ENABLED} from '../lib/booking';
 import './SecureAiAdoption.css';
 import PanelVisual from '../components/PanelVisual';
 import './HomeRefinements.css';
@@ -22,6 +23,7 @@ const lanes = [
 function Scan({source}: {source: string}) {
   return (
     <div className="home-scan">
+      {BOOKING_ENABLED && <div className="booking-inline-action"><BookCallLink className="booking-secondary-action" /></div>}
       <LeadForm source={source} cta="Get my free scan" compact />
     </div>
   );

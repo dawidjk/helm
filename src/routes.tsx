@@ -5,6 +5,7 @@ import {countyCatalog} from './pages/countyCatalog';
 import type {RouteRecord} from 'vite-react-ssg';
 import Layout from './App';
 import GlobalErrorBoundary from './components/GlobalErrorBoundary';
+import {BOOKING_ENABLED, BOOKING_PREVIEW_ENABLED} from './lib/booking';
 
 const lazyPage = (load: () => Promise<{default: ComponentType}>) => async () => ({
   Component: (await load()).default,
@@ -121,6 +122,10 @@ export const routes: RouteRecord[] = [
         },
       })),
       {path: 'free-scan/', lazy: lazyPage(() => import('./pages/FreeScan'))},
+      ...(BOOKING_ENABLED ? [{path: 'book/', lazy: lazyPage(() => import('./pages/Book'))}] : []),
+      ...(BOOKING_PREVIEW_ENABLED ? [{path: 'booking-preview/calendar/', lazy: async () => ({
+        Component: (await import('./pages/Book')).BookingCalendarPreview,
+      })}] : []),
       {path: 'quiz/', lazy: lazyPage(() => import('./pages/Quiz'))},
       {path: 'about/', lazy: lazyPage(() => import('./pages/About'))},
       {path: 'faq/', lazy: lazyPage(() => import('./pages/Faq'))},

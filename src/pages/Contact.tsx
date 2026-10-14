@@ -10,6 +10,7 @@ import Turnstile from '../components/Turnstile';
 import {contactInterests} from './products';
 import {businessPhone, serviceAreaText} from '../lib/business';
 import {useHydratedForm} from '../lib/useHydratedForm';
+import {companySizes} from '../lib/companySizes';
 
 const CONTACT_ENDPOINT =
   import.meta.env.VITE_CONTACT_URL ??
@@ -199,7 +200,7 @@ export default function Contact() {
                 How many employees does your firm have?
                 <select name="employeeCount" required defaultValue="">
                   <option value="" disabled>Choose a range…</option>
-                  {['1-9', '10-19', '20-74', '75-250', '251-499', '500+'].map((range) => (
+                  {companySizes.map((range) => (
                     <option key={range} value={range}>{range}</option>
                   ))}
                 </select>

@@ -4,6 +4,8 @@ import LeadForm, {PORTAL_URL} from './LeadForm';
 import ThemePicker from './ThemePicker';
 import {canonicalPath} from '../lib/urls';
 import {openPrivacyChoices} from '../lib/adTracking';
+import {BOOKING_ENABLED, BOOKING_PATH} from '../lib/booking';
+import {bookingCopy} from '../pages/bookingCopy';
 import {
   businessPhone,
   facebookUrl,
@@ -12,6 +14,7 @@ import {
   serviceAreaText,
 } from '../lib/business';
 import './SiteNav.css';
+import './BookingActions.css';
 
 export function HelmMark({size = 28}: {size?: number}) {
   return (
@@ -80,6 +83,10 @@ export function ActionLink({
       {label}
     </Link>
   );
+}
+
+export function BookCallLink({size = 'lg', className = ''}: {size?: 'sm' | 'lg'; className?: string}) {
+  return BOOKING_ENABLED ? <ActionLink to={BOOKING_PATH} label={bookingCopy.navLabel} size={size} className={className} /> : null;
 }
 
 const lanes = [
@@ -311,10 +318,14 @@ export function SiteNav() {
                 Pricing
               </RouterNavLink>
               <a href={`${PORTAL_URL}/login`}>Sign in</a>
-              <ActionLink to="/free-scan/" label="Free scan" size="sm" className="nav-cta" />
+              {BOOKING_ENABLED ? <>
+                <RouterNavLink to="/free-scan/">Free scan</RouterNavLink>
+                <BookCallLink size="sm" className="nav-cta" />
+              </> : <ActionLink to="/free-scan/" label="Free scan" size="sm" className="nav-cta" />}
             </div>
             <ThemePicker compact />
-            <ActionLink to="/free-scan/" label="Free scan" size="sm" className="nav-cta-mobile" />
+            {BOOKING_ENABLED ? <BookCallLink size="sm" className="nav-cta-mobile" /> :
+              <ActionLink to="/free-scan/" label="Free scan" size="sm" className="nav-cta-mobile" />}
             <button
               ref={menuButtonRef}
               className={`nav-burger${open ? ' open' : ''}`}
@@ -338,6 +349,7 @@ export function SiteNav() {
           aria-label="Mobile navigation"
           tabIndex={-1}
         >
+          <BookCallLink className="drawer-cta" />
           <ActionLink to="/free-scan/" label="Get my free scan" className="drawer-cta" />
           <div className="drawer-primary" aria-label="Primary navigation">
             <details className={`drawer-section drawer-primary-section${productActive ? ' active' : ''}`}>
@@ -467,8 +479,9 @@ export function CtaBand({
         <h2 className="observe">{title}</h2>
         <p className="observe d1">{sub}</p>
         <div className="cta-form observe d2">
+          {BOOKING_ENABLED && <div className="booking-inline-action"><BookCallLink className={mode === 'book' ? '' : 'booking-secondary-action'} /></div>}
           {mode === 'book' ? (
-            <ActionLink to={canonicalPath(contactPath)} label={cta} />
+            <ActionLink to={canonicalPath(contactPath)} label={cta} className={BOOKING_ENABLED ? 'booking-secondary-action' : ''} />
           ) : (
             <LeadForm source={source} cta={cta} />
           )}
@@ -550,6 +563,7 @@ export function SiteFooter() {
           {footerCols.map((col) => (
             <div key={col.title} className="footer-col">
               <div className="footer-col-title">{col.title}</div>
+              {col.title === 'Company' && BOOKING_ENABLED && <Link to={BOOKING_PATH}>{bookingCopy.navLabel}</Link>}
               {col.links.map((l) => (
                 <Link key={l.to} to={canonicalPath(l.to)}>
                   {l.label}

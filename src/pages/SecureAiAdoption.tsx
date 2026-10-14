@@ -1,7 +1,8 @@
 import {Link} from 'react-router-dom';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import Meta from '../components/Meta';
-import {ActionLink, Band, ScrollCue} from '../components/Site';
+import {ActionLink, Band, BookCallLink, ScrollCue} from '../components/Site';
+import {BOOKING_ENABLED} from '../lib/booking';
 import './SecureAiAdoption.css';
 
 // Consulting scope approved for publication on October 1, 2026.
@@ -24,7 +25,8 @@ export default function SecureAiAdoption() {
             and data it would need.
           </p>
           <div className="hero-ctas reveal d2">
-            <ActionLink to="/contact/?service=secure-ai-adoption" label="Discuss an AI workflow" />
+            <BookCallLink />
+            <ActionLink to="/contact/?service=secure-ai-adoption" label="Discuss an AI workflow" className={BOOKING_ENABLED ? 'booking-secondary-action' : ''} />
           </div>
           <p className="hero-note reveal d3">Consulting engagement. Pricing quoted after scoping.</p>
         </div>
@@ -134,7 +136,8 @@ export default function SecureAiAdoption() {
           <p>Describe the task, who does it, and what takes time today.
             Keep client records and sensitive information out of the inquiry.</p>
           <div className="cta-form">
-            <ActionLink to="/contact/?service=secure-ai-adoption" label="Discuss an AI workflow" />
+            {BOOKING_ENABLED && <div className="booking-inline-action"><BookCallLink /></div>}
+            <ActionLink to="/contact/?service=secure-ai-adoption" label="Discuss an AI workflow" className={BOOKING_ENABLED ? 'booking-secondary-action' : ''} />
             <p className="ai-quote-note">Pricing is quoted after scoping.</p>
           </div>
         </div>

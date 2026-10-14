@@ -1,12 +1,13 @@
 import {CommandReadinessSection} from './CommandReadinessSection';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {useParams, Link} from 'react-router-dom';
-import {ActionLink, Band, CtaBand, ScrollCue} from '../components/Site';
+import {ActionLink, Band, BookCallLink, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import ServicePreview from './ServicePreview';
 import ProductMotif from '../components/ProductMotif';
 import {productList} from './products';
 import {siteUrl} from '../lib/urls';
+import {BOOKING_ENABLED} from '../lib/booking';
 import './ProductPage.css';
 
 export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
@@ -59,9 +60,11 @@ export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
           </h1>
           <p className="sub reveal d2">{p.desc}</p>
           <div className="hero-ctas reveal d3">
+            <BookCallLink />
             <ActionLink
               to={`/contact/?service=${p.slug}`}
               label={p.slug === 'helm-core' ? 'Discuss Core' : 'Discuss Command'}
+              className={BOOKING_ENABLED ? 'booking-secondary-action' : ''}
             />
             <Link className="product-scan-link" to="/free-scan/">Check public email controls first</Link>
           </div>
