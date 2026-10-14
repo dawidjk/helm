@@ -207,7 +207,7 @@ export const privacy: LegalDoc = {
     {
       h: '3. Marketing email',
       body: [
-        `The scan report appears on screen; an emailed report is not required to access it. The portal offers a separate optional email follow-up choice. We use that choice to record your request for report-related follow-up. We may send marketing email about Helm products and security guidance when you have agreed to receive it. Every marketing message has an unsubscribe option, and unsubscribing never affects service notices or incident alerts, which are operational and cannot be opted out of while you are a customer.`,
+        `The scan report appears on screen; an emailed report is not required to access it. The portal offers a separate optional email follow-up choice. Email follow-up is optional and does not affect access to the report. We may send marketing email about Helm products and security guidance when you have agreed to receive it. Every marketing message has an unsubscribe option, and unsubscribing never affects service notices or incident alerts, which are operational and cannot be opted out of while you are a customer.`,
       ],
     },
     {
