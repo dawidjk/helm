@@ -320,3 +320,9 @@ a[href*="src=article%20meraki-october-2026-security-update"] + .cta-alt a:focus-
     padding: 24px 20px;
   }
 }
+
+/* Preserve provider screenshot detail and intrinsic size within the article measure. */
+.article-explainer img[src^="/guides/providers/"] {
+  width: auto;
+  max-width: min(100%, 740px);
+}

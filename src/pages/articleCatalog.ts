@@ -4,19 +4,19 @@ export const articleCatalog = [
     "slug": "fix-dmarc-monitoring-policy",
     "title": "Move a monitoring-only DMARC policy toward enforcement",
     "lane": "All industries",
-    "readMin": 2
+    "readMin": 3
   },
   {
     "slug": "fix-dmarc-reporting",
     "title": "Set up and verify DMARC aggregate reporting",
     "lane": "All industries",
-    "readMin": 2
+    "readMin": 3
   },
   {
     "slug": "verify-dkim-signing",
     "title": "Verify DKIM signing when a public scan finds no key",
     "lane": "All industries",
-    "readMin": 2
+    "readMin": 3
   },
   {
     "slug": "review-spf-softfail",
@@ -28,7 +28,7 @@ export const articleCatalog = [
     "slug": "fix-spf-record",
     "title": "Fix a missing, duplicate or invalid SPF record",
     "lane": "All industries",
-    "readMin": 2
+    "readMin": 3
   },
   {
     "slug": "enable-dnssec-safely",
@@ -52,7 +52,7 @@ export const articleCatalog = [
     "slug": "fix-mx-mail-routing",
     "title": "Investigate and fix MX mail-routing records",
     "lane": "All industries",
-    "readMin": 2
+    "readMin": 3
   },
   {
     "slug": "investigate-smtp-check",

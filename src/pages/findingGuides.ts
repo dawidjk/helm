@@ -5,7 +5,7 @@ export const findingGuides: Article[] = [
     "title": "Move a monitoring-only DMARC policy toward enforcement",
     "metaDesc": "Plan a DMARC enforcement change around legitimate senders, external message tests and a documented recovery procedure.",
     "date": "2026-10-14",
-    "readMin": 2,
+    "readMin": 3,
     "lane": "All industries",
     "laneTo": "/",
     "intro": "If the scan finds p=none, the next step is to review legitimate mail before tightening the policy. Ask the mail administrator and DNS owner to work together; the person using Outlook may not know who hosts the mail or DNS.",
@@ -45,6 +45,58 @@ export const findingGuides: Article[] = [
           "width": 774,
           "height": 960
         }
+      },
+      {
+        "h": "Microsoft 365: verify mail authentication first",
+        "ps": [
+          "Have the mail administrator review DKIM under Defender → Email & collaboration → Policies & rules → Threat policies → Email authentication settings → DKIM. Check an external test message’s signing domain and alignment. The DNS owner changes the custom domain’s DMARC TXT policy after the sender review and recovery plan above.",
+          {
+            "text": "Use the provider setup instructions for your account. Open the full-size Microsoft 365 DKIM screenshot to read small fields.",
+            "links": [
+              {
+                "phrase": "provider setup instructions",
+                "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure"
+              },
+              {
+                "phrase": "Open the full-size Microsoft 365 DKIM screenshot",
+                "to": "/guides/providers/microsoft-dkim-cnames.png"
+              }
+            ]
+          }
+        ],
+        "figure": {
+          "src": "/guides/providers/microsoft-dkim-cnames.png",
+          "alt": "Microsoft’s DKIM example shows two CNAME values, Copy and a disabled signing toggle for contoso.com.",
+          "caption": "Read Publish CNAMEs and Copy; enable signing after Microsoft detects your records. The Contoso values are an example. Retrieve your tenant’s current CNAME targets. Published provider documentation example, not a Helm tenant or client account. Source checked October 14, 2026.",
+          "width": 456,
+          "height": 612
+        }
+      },
+      {
+        "h": "cPanel: review the existing DMARC record",
+        "ps": [
+          "If cPanel hosts authoritative DNS, open Domains → Zone Editor → Manage for the domain and find its existing _dmarc TXT record. Review the policy and reporting tags together. A suggested p=none record does not establish that enforcement is ready. The host controls feature availability; use its supported interface for the approved change.",
+          {
+            "text": "Use the provider setup instructions for your account. Open the full-size cPanel Zone Editor screenshot to read small fields.",
+            "links": [
+              {
+                "phrase": "provider setup instructions",
+                "to": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
+              },
+              {
+                "phrase": "Open the full-size cPanel Zone Editor screenshot",
+                "to": "/guides/providers/cpanel-zone-add.png"
+              }
+            ]
+          }
+        ],
+        "figure": {
+          "src": "/guides/providers/cpanel-zone-add.png",
+          "alt": "Namecheap’s cPanel Zone Editor example highlights Add Record above the DNS records table.",
+          "caption": "Add Record opens record creation. Locate and edit an existing DMARC TXT record instead of creating a second one. Confirm authoritative DNS ownership first. Published provider documentation example, not a Helm tenant or client account. Source checked October 14, 2026.",
+          "width": 1221,
+          "height": 253
+        }
       }
     ],
     "takeaway": "Resolve legitimate authentication failures and test business mail before approving a stricter DMARC policy.",
@@ -63,7 +115,7 @@ export const findingGuides: Article[] = [
     "title": "Set up and verify DMARC aggregate reporting",
     "metaDesc": "Choose a monitored DMARC reporting destination, verify external authorization where required and confirm report receipt.",
     "date": "2026-10-14",
-    "readMin": 2,
+    "readMin": 3,
     "lane": "All industries",
     "laneTo": "/",
     "intro": "A missing rua address means this record does not request aggregate reports at that address. It does not establish that nobody monitors mail through another system. Ask who owns reporting and whether the destination is approved for the information it receives.",
@@ -91,6 +143,58 @@ export const findingGuides: Article[] = [
             "ordered": true
           }
         ]
+      },
+      {
+        "h": "Microsoft 365: send the change to the DNS owner",
+        "ps": [
+          "For a custom domain, publish the reporting change at its authoritative DNS host. The Microsoft 365 domain wizard helps identify mail setup, but has no DMARC editor for custom domains. Have the DNS owner update rua in the existing DMARC TXT record, using the approved destination and any required external authorization.",
+          {
+            "text": "Use the provider setup instructions for your account. Open the full-size Microsoft 365 Domains screenshot to read small fields.",
+            "links": [
+              {
+                "phrase": "provider setup instructions",
+                "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure"
+              },
+              {
+                "phrase": "Open the full-size Microsoft 365 Domains screenshot",
+                "to": "/guides/providers/microsoft-domain-setup.png"
+              }
+            ]
+          }
+        ],
+        "figure": {
+          "src": "/guides/providers/microsoft-domain-setup.png",
+          "alt": "Microsoft’s Domains example highlights Start setup for contoso.com.",
+          "caption": "Start setup opens domain setup. Current workflows may use DNS records → Manage DNS. Review your domain’s required records. This screen does not identify who hosts authoritative DNS. Published provider documentation example, not a Helm tenant or client account. Source checked October 14, 2026.",
+          "width": 582,
+          "height": 189
+        }
+      },
+      {
+        "h": "cPanel: preserve the policy while adding reporting",
+        "ps": [
+          "Use Domains → Zone Editor → Manage only if that service controls authoritative DNS. Edit the existing _dmarc TXT record to include the approved rua destination and preserve the agreed policy. A generic suggested DMARC record may omit reporting. When DNS is elsewhere, send the approved change to that provider.",
+          {
+            "text": "Use the provider setup instructions for your account. Open the full-size cPanel Zone Editor screenshot to read small fields.",
+            "links": [
+              {
+                "phrase": "provider setup instructions",
+                "to": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
+              },
+              {
+                "phrase": "Open the full-size cPanel Zone Editor screenshot",
+                "to": "/guides/providers/cpanel-zone-add.png"
+              }
+            ]
+          }
+        ],
+        "figure": {
+          "src": "/guides/providers/cpanel-zone-add.png",
+          "alt": "Namecheap’s cPanel Zone Editor example highlights Add Record above the DNS records table.",
+          "caption": "Add Record opens record creation. Locate and edit an existing DMARC TXT record instead of creating a second one. Confirm authoritative DNS ownership first. Published provider documentation example, not a Helm tenant or client account. Source checked October 14, 2026.",
+          "width": 1221,
+          "height": 253
+        }
       }
     ],
     "takeaway": "Verify the reporting destination and its owner separately from the decision to enforce DMARC.",
@@ -109,7 +213,7 @@ export const findingGuides: Article[] = [
     "title": "Verify DKIM signing when a public scan finds no key",
     "metaDesc": "Check the actual DKIM selector, provider activation and receiver-side message results when a public scan finds no key.",
     "date": "2026-10-14",
-    "readMin": 2,
+    "readMin": 3,
     "lane": "All industries",
     "laneTo": "/",
     "intro": "A “no DKIM key found” result may mean the public scanner did not query the selector your provider uses. Ask the mail administrator to verify the configured selector and an actual test message before treating it as an absent control.",
@@ -143,6 +247,58 @@ export const findingGuides: Article[] = [
         "ps": [
           "Name the sending-platform administrator and DNS owner. Capture the existing selector and public-record configuration. Follow the provider’s domain-specific instructions; stop if the sending service or required access cannot be confirmed. Test important sending routes with external receivers after an approved change. A public key without a passing message result is incomplete evidence. Keep the previous configuration and the provider’s supported rotation or recovery procedure available."
         ]
+      },
+      {
+        "h": "Microsoft 365: publish the CNAMEs, then enable signing",
+        "ps": [
+          "An authorized mail administrator opens Defender’s Email authentication settings → DKIM tab and the custom domain flyout. Generate keys if needed, then copy both current CNAME names and targets to the authoritative DNS owner. After Microsoft detects them, enable signing and verify an external message. Newer and older domains can use different target formats; retrieve your actual tenant values.",
+          {
+            "text": "Use the provider setup instructions for your account. Open the full-size Microsoft 365 DKIM screenshot to read small fields.",
+            "links": [
+              {
+                "phrase": "provider setup instructions",
+                "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure"
+              },
+              {
+                "phrase": "Open the full-size Microsoft 365 DKIM screenshot",
+                "to": "/guides/providers/microsoft-dkim-cnames.png"
+              }
+            ]
+          }
+        ],
+        "figure": {
+          "src": "/guides/providers/microsoft-dkim-cnames.png",
+          "alt": "Microsoft’s DKIM example shows two CNAME values, Copy and a disabled signing toggle for contoso.com.",
+          "caption": "Read Publish CNAMEs and Copy; enable signing after Microsoft detects your records. The Contoso values are an example. Retrieve your tenant’s current CNAME targets. Published provider documentation example, not a Helm tenant or client account. Source checked October 14, 2026.",
+          "width": 456,
+          "height": 612
+        }
+      },
+      {
+        "h": "cPanel: identify the service that signs the mail",
+        "ps": [
+          "If the cPanel server sends this mail, use Email → Email Deliverability → Manage to inspect the suggested public DKIM Name and Value. Publish them at authoritative DNS and verify a sent message. A cPanel website can use Microsoft 365 or another sender; those messages need that sender’s DKIM configuration. Never publish the private key.",
+          {
+            "text": "Use the provider setup instructions for your account. Open the full-size cPanel DKIM screenshot to read small fields.",
+            "links": [
+              {
+                "phrase": "provider setup instructions",
+                "to": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
+              },
+              {
+                "phrase": "Open the full-size cPanel DKIM screenshot",
+                "to": "/guides/providers/cpanel-dkim.png"
+              }
+            ]
+          }
+        ],
+        "figure": {
+          "src": "/guides/providers/cpanel-dkim.png",
+          "alt": "Namecheap’s cPanel example shows the suggested public DKIM Name and Value, Copy and Install the Suggested Record.",
+          "caption": "Read the public Name and Value beside Copy. Install applies when this server controls authoritative DNS. Keep the private key private; View the Private Key is not needed for DNS publication. Published provider documentation example, not a Helm tenant or client account. Source checked October 14, 2026.",
+          "width": 690,
+          "height": 564
+        }
       }
     ],
     "takeaway": "Confirm the configured selector and a passing, aligned message result; a public key alone does not prove signing.",
@@ -241,6 +397,58 @@ export const findingGuides: Article[] = [
         "ps": [
           "Record the domain, sending services checked, test date, receiver results and remaining exceptions. Helm’s public scan can check published configuration; it cannot inspect the firm’s complete sender inventory. Existing IT and the relevant vendors own configuration changes under their agreed scope."
         ]
+      },
+      {
+        "h": "Microsoft 365: include every legitimate sender",
+        "ps": [
+          "Review the required TXT records in Settings → Domains → DNS records → Manage DNS. Account for Microsoft 365 and each approved third-party sender before deciding whether to change ~all. Have the DNS owner publish the approved single SPF record and repeat the message tests above.",
+          {
+            "text": "Use the provider setup instructions for your account. Open the full-size Microsoft 365 Domains screenshot to read small fields.",
+            "links": [
+              {
+                "phrase": "provider setup instructions",
+                "to": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
+              },
+              {
+                "phrase": "Open the full-size Microsoft 365 Domains screenshot",
+                "to": "/guides/providers/microsoft-domain-setup.png"
+              }
+            ]
+          }
+        ],
+        "figure": {
+          "src": "/guides/providers/microsoft-domain-setup.png",
+          "alt": "Microsoft’s Domains example highlights Start setup for contoso.com.",
+          "caption": "Start setup opens domain setup. Current workflows may use DNS records → Manage DNS. Review your domain’s required records. This screen does not identify who hosts authoritative DNS. Published provider documentation example, not a Helm tenant or client account. Source checked October 14, 2026.",
+          "width": 582,
+          "height": 189
+        }
+      },
+      {
+        "h": "cPanel: review the all policy in Customize",
+        "ps": [
+          "For cPanel-hosted sending, open Email Deliverability → Manage → SPF → Customize and review the preview. Exclude All Other Hosts selects -all. cPanel commonly recommends ~all. Test legitimate routes before tightening it. Installation applies to authoritative DNS controlled by that server.",
+          {
+            "text": "Use the provider setup instructions for your account. Open the full-size cPanel SPF screenshot to read small fields.",
+            "links": [
+              {
+                "phrase": "provider setup instructions",
+                "to": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
+              },
+              {
+                "phrase": "Open the full-size cPanel SPF screenshot",
+                "to": "/guides/providers/cpanel-spf-preview.png"
+              }
+            ]
+          }
+        ],
+        "figure": {
+          "src": "/guides/providers/cpanel-spf-preview.png",
+          "alt": "Namecheap’s cPanel SPF example shows the include list, minus-all option and preview before installation.",
+          "caption": "Review Include List and Preview before approving installation. The pictured partial record is not a configuration to copy. Decide on an all policy after testing legitimate senders. Published provider documentation example, not a Helm tenant or client account. Source checked October 14, 2026.",
+          "width": 684,
+          "height": 549
+        }
       }
     ],
     "takeaway": "A softfail suffix needs a sender and policy review before a change; stronger-looking DNS is not delivery evidence.",
@@ -259,7 +467,7 @@ export const findingGuides: Article[] = [
     "title": "Fix a missing, duplicate or invalid SPF record",
     "metaDesc": "Investigate a missing, duplicate or invalid SPF record with the mail administrator. Preserve senders and validate the repair.",
     "date": "2026-10-14",
-    "readMin": 2,
+    "readMin": 3,
     "lane": "All industries",
     "laneTo": "/",
     "intro": "A missing or invalid SPF policy needs a sender inventory before DNS is repaired. Ask the mail administrator to distinguish no record, duplicate records, syntax errors and an evaluation exceeding the DNS lookup limit. A timeout remains inconclusive. The record must match the actual envelope-sender domain.",
@@ -314,6 +522,58 @@ export const findingGuides: Article[] = [
             ]
           }
         ]
+      },
+      {
+        "h": "Microsoft 365: compare the required TXT records",
+        "ps": [
+          "Open Settings → Domains, select the domain, then DNS records → Manage DNS to review Microsoft’s required TXT records. Have the DNS owner merge the required sending authorization into the domain’s one SPF record, preserving approved third-party senders. Recheck the lookup limit and test messages from each sending route.",
+          {
+            "text": "Use the provider setup instructions for your account. Open the full-size Microsoft 365 Domains screenshot to read small fields.",
+            "links": [
+              {
+                "phrase": "provider setup instructions",
+                "to": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
+              },
+              {
+                "phrase": "Open the full-size Microsoft 365 Domains screenshot",
+                "to": "/guides/providers/microsoft-domain-setup.png"
+              }
+            ]
+          }
+        ],
+        "figure": {
+          "src": "/guides/providers/microsoft-domain-setup.png",
+          "alt": "Microsoft’s Domains example highlights Start setup for contoso.com.",
+          "caption": "Start setup opens domain setup. Current workflows may use DNS records → Manage DNS. Review your domain’s required records. This screen does not identify who hosts authoritative DNS. Published provider documentation example, not a Helm tenant or client account. Source checked October 14, 2026.",
+          "width": 582,
+          "height": 189
+        }
+      },
+      {
+        "h": "cPanel: inspect the SPF recommendation",
+        "ps": [
+          "For mail sent by the cPanel server, open Email → Email Deliverability → Manage for the domain and review SPF → Customize. Compare the recommendation with the sender inventory. Publish one approved SPF record at authoritative DNS. The host must enable this interface; Repair and Install cannot update an external DNS service.",
+          {
+            "text": "Use the provider setup instructions for your account. Open the full-size cPanel SPF screenshot to read small fields.",
+            "links": [
+              {
+                "phrase": "provider setup instructions",
+                "to": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
+              },
+              {
+                "phrase": "Open the full-size cPanel SPF screenshot",
+                "to": "/guides/providers/cpanel-spf-preview.png"
+              }
+            ]
+          }
+        ],
+        "figure": {
+          "src": "/guides/providers/cpanel-spf-preview.png",
+          "alt": "Namecheap’s cPanel SPF example shows the include list, minus-all option and preview before installation.",
+          "caption": "Review Include List and Preview before approving installation. The pictured partial record is not a configuration to copy. Decide on an all policy after testing legitimate senders. Published provider documentation example, not a Helm tenant or client account. Source checked October 14, 2026.",
+          "width": 684,
+          "height": 549
+        }
       }
     ],
     "takeaway": "Prepare one supported SPF record from the real sender inventory, then validate message results and recovery.",
@@ -530,7 +790,7 @@ export const findingGuides: Article[] = [
     "title": "Investigate and fix MX mail-routing records",
     "metaDesc": "Confirm whether the domain should receive mail, compare MX records with the provider and validate approved routing changes.",
     "date": "2026-10-14",
-    "readMin": 2,
+    "readMin": 3,
     "lane": "All industries",
     "laneTo": "/",
     "intro": "A scanner’s inability to contact a mail server is not enough to diagnose a mail outage. Ask the administrator whether the domain is intended to receive mail and which service handles it. A retired domain, sending-only domain and active business mailbox domain need different decisions.",
@@ -565,6 +825,58 @@ export const findingGuides: Article[] = [
             "ordered": true
           }
         ]
+      },
+      {
+        "h": "Microsoft 365: retrieve the intended MX destination",
+        "ps": [
+          "In Settings → Domains, select the domain and use DNS records → Manage DNS to inspect the required MX record. Set up users and mailboxes before an approved switch to Exchange Online. Have the DNS owner apply the tenant-specific destination and priority, preserving any documented gateway or hybrid routing. Test inbound delivery after the change.",
+          {
+            "text": "Use the provider setup instructions for your account. Open the full-size Microsoft 365 Domains screenshot to read small fields.",
+            "links": [
+              {
+                "phrase": "provider setup instructions",
+                "to": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
+              },
+              {
+                "phrase": "Open the full-size Microsoft 365 Domains screenshot",
+                "to": "/guides/providers/microsoft-domain-setup.png"
+              }
+            ]
+          }
+        ],
+        "figure": {
+          "src": "/guides/providers/microsoft-domain-setup.png",
+          "alt": "Microsoft’s Domains example highlights Start setup for contoso.com.",
+          "caption": "Start setup opens domain setup. Current workflows may use DNS records → Manage DNS. Review your domain’s required records. This screen does not identify who hosts authoritative DNS. Published provider documentation example, not a Helm tenant or client account. Source checked October 14, 2026.",
+          "width": 582,
+          "height": 189
+        }
+      },
+      {
+        "h": "cPanel: check DNS and local mail routing separately",
+        "ps": [
+          "If this server hosts authoritative DNS, use Domains → Zone Editor → Manage to review MX entries. Use the intended provider’s destination and priority. Separately ask the host to verify Email → Email Routing for local or remote delivery; automatic detection uses the local zone file. A cPanel website does not establish that this server receives the domain’s mail.",
+          {
+            "text": "Use the provider setup instructions for your account. Open the full-size cPanel MX screenshot to read small fields.",
+            "links": [
+              {
+                "phrase": "provider setup instructions",
+                "to": "https://docs.cpanel.net/cpanel/email/email-routing/"
+              },
+              {
+                "phrase": "Open the full-size cPanel MX screenshot",
+                "to": "/guides/providers/cpanel-mx.png"
+              }
+            ]
+          }
+        ],
+        "figure": {
+          "src": "/guides/providers/cpanel-mx.png",
+          "alt": "Namecheap’s cPanel Zone Editor example highlights MX, Priority, Destination and Save Record.",
+          "caption": "The highlighted Type is MX. Use the priority and destination from your mail-routing design. The pictured example domain and destination are not Microsoft 365 settings. Published provider documentation example, not a Helm tenant or client account. Source checked October 14, 2026.",
+          "width": 1096,
+          "height": 108
+        }
       }
     ],
     "takeaway": "Confirm the intended receiving service and mailbox readiness before changing routing records.",

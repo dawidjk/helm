@@ -160,76 +160,148 @@ export const articleSupport: Record<string, ArticleSupport> = {
 
   "fix-dmarc-monitoring-policy": {
     "relatedSlugs": [
-      "what-is-dmarc",
-      "check-website-security"
+        "what-is-dmarc",
+        "check-website-security"
     ],
     "sources": [
-      {
-        "title": "Microsoft’s deployment guidance",
-        "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure"
-      },
-      {
-        "title": "Google Workspace’s guidance",
-        "href": "https://knowledge.workspace.google.com/admin/security/set-up-dmarc"
-      }
+        {
+            "title": "Microsoft’s deployment guidance",
+            "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure"
+        },
+        {
+            "title": "Google Workspace’s guidance",
+            "href": "https://knowledge.workspace.google.com/admin/security/set-up-dmarc"
+        },
+        {
+            "title": "Microsoft: DKIM setup and domain flyout",
+            "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure"
+        },
+        {
+            "title": "cPanel: Zone Editor and DNS record management",
+            "href": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
+        },
+        {
+            "title": "Namecheap: cPanel Zone Editor and MX screenshot examples",
+            "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9256/29/how-to-edit-dns-zone-in-cpanel/"
+        }
     ]
-  },
+},
   "fix-dmarc-reporting": {
     "relatedSlugs": [
-      "what-is-dmarc",
-      "check-website-security"
+        "what-is-dmarc",
+        "check-website-security"
     ],
     "sources": [
-      {
-        "title": "aggregate-reporting standard",
-        "href": "https://datatracker.ietf.org/doc/html/rfc9990"
-      }
+        {
+            "title": "aggregate-reporting standard",
+            "href": "https://datatracker.ietf.org/doc/html/rfc9990"
+        },
+        {
+            "title": "Microsoft: DMARC setup for custom domains",
+            "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure"
+        },
+        {
+            "title": "Microsoft: Domains screenshot and DNS setup example",
+            "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/dns/create-dns-records-at-godaddy?view=o365-worldwide"
+        },
+        {
+            "title": "cPanel: Zone Editor and DNS record management",
+            "href": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
+        },
+        {
+            "title": "Namecheap: cPanel Zone Editor and MX screenshot examples",
+            "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9256/29/how-to-edit-dns-zone-in-cpanel/"
+        }
     ]
-  },
+},
   "verify-dkim-signing": {
     "relatedSlugs": [
-      "what-is-dmarc",
-      "check-website-security"
+        "what-is-dmarc",
+        "check-website-security"
     ],
     "sources": [
-      {
-        "title": "Google Workspace’s DKIM instructions",
-        "href": "https://knowledge.workspace.google.com/admin/security/set-up-dkim"
-      }
+        {
+            "title": "Google Workspace’s DKIM instructions",
+            "href": "https://knowledge.workspace.google.com/admin/security/set-up-dkim"
+        },
+        {
+            "title": "Microsoft: DKIM setup and domain flyout",
+            "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure"
+        },
+        {
+            "title": "cPanel: Email Deliverability, prerequisites and record handling",
+            "href": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
+        },
+        {
+            "title": "Namecheap: cPanel SPF and DKIM screenshot examples",
+            "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9214/31/cpanel-email-deliverability-tool-spf-dkim-and-dmarc-records/"
+        }
     ]
-  },
+},
   "review-spf-softfail": {
     "relatedSlugs": [
-      "what-is-dmarc",
-      "check-website-security"
+        "what-is-dmarc",
+        "check-website-security"
     ],
     "sources": [
-      {
-        "title": "SPF standard",
-        "href": "https://datatracker.ietf.org/doc/html/rfc7208"
-      },
-      {
-        "title": "Microsoft’s SPF setup guide",
-        "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
-      }
+        {
+            "title": "SPF standard",
+            "href": "https://datatracker.ietf.org/doc/html/rfc7208"
+        },
+        {
+            "title": "Microsoft’s SPF setup guide",
+            "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
+        },
+        {
+            "title": "Microsoft: domain setup and required DNS records",
+            "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
+        },
+        {
+            "title": "Microsoft: Domains screenshot and DNS setup example",
+            "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/dns/create-dns-records-at-godaddy?view=o365-worldwide"
+        },
+        {
+            "title": "cPanel: Email Deliverability, prerequisites and record handling",
+            "href": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
+        },
+        {
+            "title": "Namecheap: cPanel SPF and DKIM screenshot examples",
+            "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9214/31/cpanel-email-deliverability-tool-spf-dkim-and-dmarc-records/"
+        }
     ]
-  },
+},
   "fix-spf-record": {
     "relatedSlugs": [
-      "what-is-dmarc",
-      "check-website-security"
+        "what-is-dmarc",
+        "check-website-security"
     ],
     "sources": [
-      {
-        "title": "Microsoft’s SPF setup guide",
-        "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
-      },
-      {
-        "title": "RFC 7208",
-        "href": "https://datatracker.ietf.org/doc/html/rfc7208"
-      }
+        {
+            "title": "Microsoft’s SPF setup guide",
+            "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
+        },
+        {
+            "title": "RFC 7208",
+            "href": "https://datatracker.ietf.org/doc/html/rfc7208"
+        },
+        {
+            "title": "Microsoft: domain setup and required DNS records",
+            "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
+        },
+        {
+            "title": "Microsoft: Domains screenshot and DNS setup example",
+            "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/dns/create-dns-records-at-godaddy?view=o365-worldwide"
+        },
+        {
+            "title": "cPanel: Email Deliverability, prerequisites and record handling",
+            "href": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
+        },
+        {
+            "title": "Namecheap: cPanel SPF and DKIM screenshot examples",
+            "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9214/31/cpanel-email-deliverability-tool-spf-dkim-and-dmarc-records/"
+        }
     ]
-  },
+},
   "enable-dnssec-safely": {
     "relatedSlugs": [
       "what-is-dmarc",
@@ -276,16 +348,32 @@ export const articleSupport: Record<string, ArticleSupport> = {
   },
   "fix-mx-mail-routing": {
     "relatedSlugs": [
-      "what-is-dmarc",
-      "check-website-security"
+        "what-is-dmarc",
+        "check-website-security"
     ],
     "sources": [
-      {
-        "title": "SMTP’s routing standard",
-        "href": "https://datatracker.ietf.org/doc/html/rfc5321"
-      }
+        {
+            "title": "SMTP’s routing standard",
+            "href": "https://datatracker.ietf.org/doc/html/rfc5321"
+        },
+        {
+            "title": "Microsoft: domain setup and required DNS records",
+            "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
+        },
+        {
+            "title": "Microsoft: Domains screenshot and DNS setup example",
+            "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/dns/create-dns-records-at-godaddy?view=o365-worldwide"
+        },
+        {
+            "title": "cPanel: local and remote Email Routing",
+            "href": "https://docs.cpanel.net/cpanel/email/email-routing/"
+        },
+        {
+            "title": "Namecheap: cPanel Zone Editor and MX screenshot examples",
+            "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9256/29/how-to-edit-dns-zone-in-cpanel/"
+        }
     ]
-  },
+},
   "investigate-smtp-check": {
     "relatedSlugs": [
       "what-is-dmarc",
