@@ -31,13 +31,13 @@ export default function About() {
               '@type': 'Person',
               name: 'Kelly Kluszczynski',
               image: 'https://helmsecured.com/team/kelly-kluszczynski.png',
-              jobTitle: 'Vice President, Growth & Partnerships',
+              jobTitle: 'Co-owner',
             },
             {
               '@type': 'Person',
               name: 'Dawid Kluszczynski',
               image: 'https://helmsecured.com/team/dawid-kluszczynski.png',
-              jobTitle: 'Vice President, Product & Delivery',
+              jobTitle: 'Co-owner',
             },
           ],
         }}
@@ -64,9 +64,9 @@ export default function About() {
           <div>
             <h3 className="observe">Who we are</h3>
             <p className="observe d1">
-              Helm is a New Jersey company run by Kelly and Dawid Kluszczynski.
-              Dawid leads the technical delivery. Kelly leads customer
-              communication, growth, and partnerships.
+              Helm is a New Jersey company co-owned by Kelly Kluszczynski and
+              Dawid Kluszczynski. Dawid leads the technical delivery. Kelly leads
+              customer communication, growth, and partnerships.
             </p>
             <p className="observe d2">
               Small and medium-sized businesses already have plenty of tools and alerts. They still need to know which issues matter, who should fix them, and whether the work is complete. Helm is designed to make those responsibilities clear, with explanations in plain language and the price and scope stated up front.
@@ -103,12 +103,12 @@ export default function About() {
             <img
               className="founder-portrait"
               src="/team/kelly-kluszczynski.png"
-              alt="Kelly Kluszczynski, VP of Growth and Partnerships at Helm Security"
+              alt="Kelly Kluszczynski, Co-owner of Helm Security"
               loading="lazy"
             />
             <div>
               <h3>Kelly Kluszczynski</h3>
-              <p className="founder-role">VP, Growth &amp; Partnerships</p>
+              <p className="founder-role">Co-owner</p>
               <p>
                 Kelly leads discovery, customer communication, marketing, and
                 partner relationships. She makes sure the work addresses the
@@ -120,12 +120,12 @@ export default function About() {
             <img
               className="founder-portrait"
               src="/team/dawid-kluszczynski.png"
-              alt="Dawid Kluszczynski, VP of Product and Delivery at Helm Security"
+              alt="Dawid Kluszczynski, Co-owner of Helm Security"
               loading="lazy"
             />
             <div>
               <h3>Dawid Kluszczynski</h3>
-              <p className="founder-role">VP, Product &amp; Delivery</p>
+              <p className="founder-role">Co-owner</p>
               <p>
                 Dawid designs Helm&apos;s services, automation, and technical
                 delivery. He follows the work from the first scan through
