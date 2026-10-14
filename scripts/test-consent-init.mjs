@@ -91,6 +91,10 @@ try{
       assert.ok(after.samples.filter(s=>s.reads===0).every(s=>!s.banner&&!s.panel),'No flash before preference resolution');
       if(!test.banner)assert.ok(after.samples.every(s=>!s.banner&&!s.panel),'Returning decided visitors must never see a banner');
       if(test.banner)assert.equal(await page.$eval('.ad-consent p',e=>e.textContent),exact);
+      if(expected.length)await page.waitForFunction(categories=>categories.every(category=>{
+        const frame=document.querySelector(`iframe[data-helm-tracking="${category}"]`);
+        return Boolean(frame?.contentDocument?.querySelector(category==='analytics'?'script[src*="googletagmanager.com"]':'script[src*="connect.facebook.net"]'));
+      }),{timeout:15000},expected);
       assert.equal(requests.some(r=>/googletagmanager/.test(r.url)),test.analytics);
       assert.equal(requests.some(r=>/connect.facebook.net/.test(r.url)),test.advertising);
       if(test.banner){
