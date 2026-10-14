@@ -157,6 +157,31 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+  "retest-ai-workflow-changes": {
+  "relatedSlugs": [
+    "choose-first-ai-workflow",
+    "ai-access-business-documents",
+    "measure-ai-time-savings"
+  ],
+  "sources": [
+    {
+      "title": "NIST: AI RMF Playbook, Manage",
+      "href": "https://airc.nist.gov/airmf-resources/playbook/manage/"
+    },
+    {
+      "title": "NIST: AI RMF Playbook, Measure",
+      "href": "https://airc.nist.gov/airmf-resources/playbook/measure/"
+    },
+    {
+      "title": "NIST: Generative AI Profile",
+      "href": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
+    },
+    {
+      "title": "Anthropic: Demystifying evals for AI agents",
+      "href": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+    }
+  ]
+},
 
   "fix-dmarc-monitoring-policy": {
     "relatedSlugs": [

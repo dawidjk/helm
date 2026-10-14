@@ -151,6 +151,7 @@ const guideGroups: GuideGroup[] = [
       'choose-first-ai-workflow',
       'ai-access-business-documents',
       'measure-ai-time-savings',
+      'retest-ai-workflow-changes',
     ],
   },
   {
