@@ -2,6 +2,7 @@ import {useEffect, useRef, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {Button} from '@astryxdesign/core/Button';
 import LeadForm from './LeadForm';
+import {quizPriorities} from '../lib/quizPriorities';
 
 type Option = {label: string; points: number};
 type Question = {id: string; category: string; text: string; options: Option[]};
@@ -128,60 +129,25 @@ function getTier(score: number): Tier {
   if (score <= 40) {
     return {
       key: 'risk',
-      label: 'At Risk',
-      headline: 'Several basic fraud controls are missing',
-      copy: "A convincing payment request could reach one employee without a required callback or second approval, and without a written first step to follow. Address those process gaps before adding more tools.",
+      label: 'Fewer practices reported',
+      headline: 'Start with the gaps in your answers',
+      copy: "Your answers report several missing or uncertain practices. Review the three priorities below with the people responsible for payments, email and staff procedures. The check has not inspected your systems.",
     };
   }
   if (score <= 70) {
     return {
       key: 'exposed',
-      label: 'Exposed',
-      headline: 'Some controls are in place, but important exceptions remain',
-      copy: "Where a payment, account, or employee falls outside your current process, stopping a convincing fake may depend on someone spotting it. Start with the answers marked Partial and apply the rule consistently.",
+      label: 'Mixed practices reported',
+      headline: 'Review the exceptions your answers identify',
+      copy: "Your answers report a mix of established, partial and uncertain practices. Confirm how the reported processes work and who owns the remaining exceptions. These results are based on your answers, without technical verification.",
     };
   }
   return {
     key: 'prepared',
-    label: 'Prepared',
-    headline: 'Your answers suggest stronger overall readiness',
-    copy: "Start with any answers marked Gap or Partial. Keep controls current as your payment processes, employees, vendors, and AI tools change, and check that insurance and customer-security answers still describe the controls your business uses.",
+    label: 'More practices reported',
+    headline: 'Confirm and maintain the practices you reported',
+    copy: "Your answers report more established practices. Check any gaps first, then confirm that the processes still work as staff, vendors and tools change. A higher answer total does not verify a control or establish protection from compromise.",
   };
-}
-
-/**
- * Recommendation copy is a deliberate departure from the source HTML: it
- * points to the current two-offer model with real internal links.
- */
-function Recommendation({tier}: {tier: TierKey}) {
-  if (tier === 'risk') {
-    return (
-      <p className="quiz-recommendation-text">
-        Start with <Link to="/helm-core/">Helm Core</Link>. It combines the
-        technical protection with ongoing awareness learning. If the process
-        gaps require hands-on policy and leadership work, Helm Command adds the
-        managed roadmap and operating cadence.
-      </p>
-    );
-  }
-  if (tier === 'exposed') {
-    return (
-      <p className="quiz-recommendation-text">
-        <Link to="/helm-core/">Helm Core</Link> combines managed email,
-        device, identity, backup, awareness, and digital risk protection. Use{' '}
-        <Link to="/helm-command/">Helm Command</Link> when leadership also
-        needs Helm to maintain the policies, evidence, and remediation roadmap.
-      </p>
-    );
-  }
-  return (
-    <p className="quiz-recommendation-text">
-      <Link to="/helm-command/">Helm Command</Link> keeps existing controls,
-      evidence, gaps, and the prioritized roadmap current for insurers,
-      customers, and assessors. Your organization still reviews and owns every
-      final attestation.
-    </p>
-  );
 }
 
 /** Breakdown flags ported verbatim: 10 = Strong, 5 = Partial, 0 = Gap. */
@@ -242,6 +208,7 @@ export default function QuizWidget() {
       return sum + QUESTIONS[i].options[optIndex].points;
     }, 0);
     const tier = getTier(score);
+    const priorities = quizPriorities(QUESTIONS.map((q,i)=>({id:q.id,points:answers[i] === null ? 0 : q.options[answers[i]!].points})));
 
     return (
       <div className="quiz-root">
@@ -250,15 +217,17 @@ export default function QuizWidget() {
             <div className={`quiz-tier-badge quiz-tier-${tier.key}`}>{tier.label}</div>
             <div className={`quiz-score-circle quiz-score-circle-${tier.key}`}>
               <div className="quiz-score-num">{score}</div>
-              <div className="quiz-score-max">out of 100</div>
+              <div className="quiz-score-max">answer points / 100</div>
             </div>
             <h2 ref={contentHeading} tabIndex={-1} className="quiz-tier-headline">{tier.headline}</h2>
             <p className="quiz-tier-copy">{tier.copy}</p>
           </div>
 
           <div className="quiz-recommendation">
-            <h3 className="quiz-recommendation-title">Recommended next step</h3>
-            <Recommendation tier={tier.key} />
+            <h3 className="quiz-recommendation-title">Three priorities from your answers</h3>
+            <ol>
+              {priorities.map(p=>(<li key={p.id}><h4>{p.title}</h4><p>{p.action} <Link to={p.to}>{p.guide}</Link>.</p></li>))}
+            </ol>
           </div>
 
           <div className="quiz-breakdown">
@@ -289,8 +258,8 @@ export default function QuizWidget() {
           </div>
 
           <p className="quiz-fine-print">
-            This tool provides a general readiness estimate and is not a substitute for a full
-            security assessment.
+            This is a summary of your answers, not a technical audit, certification
+            or probability of compromise. No systems or documents were inspected.
           </p>
         </div>
       </div>

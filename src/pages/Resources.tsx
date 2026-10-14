@@ -257,11 +257,11 @@ export default function Resources() {
 
           <aside className="resource-feature" aria-labelledby="resources-quiz-title">
             <div>
-              <h2 id="resources-quiz-title">AI scam readiness quiz</h2>
+              <h2 id="resources-quiz-title">Email and Scam Security Check</h2>
               <p>Answer 10 questions to see your score and the gaps to address. No email address is required to see the result.</p>
             </div>
             <Link to="/quiz/" className="resource-feature-link">
-              Take the 3-minute quiz <DirectionIcon />
+              Start the 3-minute check <DirectionIcon />
             </Link>
           </aside>
 

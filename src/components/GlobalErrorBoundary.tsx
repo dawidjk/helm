@@ -16,7 +16,7 @@ const VALID_PAGES = [
   {path: '/contractors/', label: 'Contractors & Trades'},
   {path: '/pricing/', label: 'Pricing'},
   {path: '/free-scan/', label: 'Free Scan'},
-  {path: '/quiz/', label: 'AI Scam Readiness Quiz'},
+  {path: '/quiz/', label: 'Email and Scam Security Check'},
   {path: '/about/', label: 'About'},
   {path: '/faq/', label: 'FAQ'},
   {path: '/trust/', label: 'Trust & Security'},

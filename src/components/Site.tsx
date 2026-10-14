@@ -129,7 +129,7 @@ const footerCols = [
       {to: '/about', label: 'About'},
       {to: '/resources', label: 'Resources'},
       {to: '/blog', label: 'Blog'},
-      {to: '/quiz', label: 'AI scam quiz'},
+      {to: '/quiz', label: 'Email and scam check'},
       {to: '/faq', label: 'FAQ'},
       {to: '/trust', label: 'Trust & Security'},
       {to: '/contact', label: 'Contact'},
@@ -150,7 +150,7 @@ const drawerSecondary = [
     title: 'Company',
     links: [
       {to: '/about', label: 'About'},
-      {to: '/quiz', label: 'AI scam quiz'},
+      {to: '/quiz', label: 'Email and scam check'},
       {to: '/faq', label: 'FAQ'},
       {to: '/trust', label: 'Trust & Security'},
       {to: '/contact', label: 'Contact'},

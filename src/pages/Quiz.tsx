@@ -7,21 +7,21 @@ export default function Quiz() {
   return (
     <>
       <Meta
-        title="AI Scam Readiness Quiz: Score Your Business | Helm"
-        desc="10 questions, about 3 minutes. Score how exposed your business is to AI-powered scams and get a plain-English action plan."
+        title="Email and Scam Security Check | Helm"
+        desc="Answer ten questions about email, payment checks and scam-response procedures. See three priorities based on your answers, without an email gate."
         path="/quiz"
       />
       <header className="hero lane brand-hero">
         <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">
-            How exposed is your business to AI-powered scams?
+            Email and Scam Security Check
           </h1>
           <p className="sub reveal d2">
-            Answer 10 quick questions about payment verification, training,
-            and email security. You get a score out of 100 and a
-            plain-English list of the gaps in your answers. You can see your
-            result without providing an email address.
+            Answer ten questions about payment verification, email security
+            and related procedures. Your results summarize your answers and
+            suggest three things to review. You can see them without providing
+            an email address.
           </p>
         </div>
         <ScrollCue />
