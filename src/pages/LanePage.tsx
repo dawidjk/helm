@@ -5,6 +5,7 @@ import HeroBackdrop, {type BackdropKind} from '../components/HeroBackdrop';
 import LeadForm from '../components/LeadForm';
 import PanelVisual from '../components/PanelVisual';
 import {canonicalPath, siteUrl} from '../lib/urls';
+import {laneBuyerCopy} from './laneBuyerCopy';
 import './LanePage.css';
 
 export type Lane = {
@@ -60,6 +61,8 @@ function StatusChip({text}: {text: string}) {
 }
 
 export default function LanePage({lane}: {lane: Lane}) {
+  const buyerCopy = laneBuyerCopy[lane.slug];
+  const sectionCopy = buyerCopy?.sectionCopy;
   return (
     <>
       <Meta
@@ -121,6 +124,39 @@ export default function LanePage({lane}: {lane: Lane}) {
         <ScrollCue />
       </header>
 
+      {buyerCopy && (
+        <>
+          <Band>
+            <div className="band-head lane-buyer-head">
+              <h2>{buyerCopy.selection.title}</h2>
+            </div>
+            <div className="lane-buyer-copy">
+              {buyerCopy.selection.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+              <ul className="lane-buyer-links">
+                {buyerCopy.selection.links.map(link => <li key={link.to}><Link to={link.to}>{link.label}</Link></li>)}
+              </ul>
+            </div>
+          </Band>
+          <Band variant="raised">
+            <div className="band-head lane-buyer-head">
+              <h2 id={`${lane.slug}-responsibility-title`}>{buyerCopy.responsibility.title}</h2>
+              <p>{buyerCopy.responsibility.intro}</p>
+            </div>
+            <p className="lane-table-hint" id={`${lane.slug}-responsibility-hint`}>On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.</p>
+            <div className="lane-responsibility-scroll" data-focus-clearance role="region" aria-labelledby={`${lane.slug}-responsibility-title`} aria-describedby={`${lane.slug}-responsibility-hint`} tabIndex={0}>
+              <table className="lane-responsibility-table">
+                <caption>{buyerCopy.responsibility.caption}</caption>
+                <thead><tr>{buyerCopy.responsibility.headers.map(header => <th key={header} scope="col">{header}</th>)}</tr></thead>
+                <tbody>{buyerCopy.responsibility.rows.map(row => (
+                  <tr key={row[0]}><th scope="row">{row[0]}</th><td>{row[1]}</td><td>{row[2]}</td></tr>
+                ))}</tbody>
+              </table>
+            </div>
+            <p className="lane-buyer-followup"><Link to={buyerCopy.responsibility.link.to}>{buyerCopy.responsibility.link.label}</Link></p>
+          </Band>
+        </>
+      )}
+
       {lane.regulatoryUpdate && (
         <section className="lane-regulatory-update" aria-labelledby={`${lane.slug}-regulatory-update-title`}>
           <div className="wrap lane-regulatory-update-inner">
@@ -159,8 +195,8 @@ export default function LanePage({lane}: {lane: Lane}) {
       {lane.evidence && (
         <Band>
           <div className="band-head lane-evidence-head">
-            <h2 className="observe">What published sources show.</h2>
-            <p className="observe d1">Read each finding with its source and scope. National figures do not establish your firm’s likelihood of an incident.</p>
+            <h2 className="observe">{sectionCopy?.evidence.title ?? 'What published sources show.'}</h2>
+            <p className="observe d1">{sectionCopy?.evidence.intro ?? 'Read each finding with its source and scope. National figures do not establish your firm’s likelihood of an incident.'}</p>
           </div>
           <div className="lane-evidence-list">
             {lane.evidence.map((item, i) => (
@@ -174,12 +210,34 @@ export default function LanePage({lane}: {lane: Lane}) {
         </Band>
       )}
 
+      {buyerCopy?.duty && (
+        <Band variant="raised">
+          <div className="band-head lane-buyer-head"><h2>{buyerCopy.duty.title}</h2></div>
+          <div className="lane-buyer-copy">
+            <p>{buyerCopy.duty.text}</p>
+            <ul className="lane-buyer-links">
+              {buyerCopy.duty.links.map(link => <li key={link.to}><a href={link.to}>{link.label}</a></li>)}
+            </ul>
+          </div>
+        </Band>
+      )}
+
       <Band>
         <div className="band-head">
           <h2 className="observe">{lane.planTitle}</h2>
           <p className="observe d1">{lane.planSub}</p>
         </div>
-        <ol className="steps-flow">
+        {buyerCopy ? (
+          <div className="lane-buyer-services">
+            {buyerCopy.services.map(service => (
+              <section key={service.title}>
+                <h3>{service.title}</h3>
+                {service.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+                <Link to={service.link.to}>{service.link.label}</Link>
+              </section>
+            ))}
+          </div>
+        ) : <ol className="steps-flow">
           {[
             {
               num: '1',
@@ -198,7 +256,7 @@ export default function LanePage({lane}: {lane: Lane}) {
               <p>{step.body}</p>
             </li>
           ))}
-        </ol>
+        </ol>}
       </Band>
 
       <Band variant="raised">
@@ -218,8 +276,8 @@ export default function LanePage({lane}: {lane: Lane}) {
       {lane.commonQuestions && (
         <Band>
           <div className="band-head lane-questions-head">
-            <h2 className="observe">Questions to answer before choosing a service.</h2>
-            <p className="observe d1">The answer determines which systems, people, and evidence belong in scope.</p>
+            <h2 className="observe">{sectionCopy?.questions.title ?? 'Questions to answer before choosing a service.'}</h2>
+            {(!sectionCopy?.questions || sectionCopy.questions.intro) && <p className="observe d1">{sectionCopy?.questions.intro ?? 'The answer determines which systems, people, and evidence belong in scope.'}</p>}
           </div>
           <div className="lane-question-list">
             {lane.commonQuestions.map((item, index) => (
@@ -239,8 +297,8 @@ export default function LanePage({lane}: {lane: Lane}) {
 
       <Band variant={lane.commonQuestions ? 'raised' : undefined}>
         <div className="band-head">
-          <h2 className="observe">Guides for the problem in front of you.</h2>
-          <p className="observe d1">Start with the closest question and use the related guide for the next step.</p>
+          <h2 className="observe">{sectionCopy?.resources.title ?? 'Guides for the problem in front of you.'}</h2>
+          {(!sectionCopy?.resources || sectionCopy.resources.intro) && <p className="observe d1">{sectionCopy?.resources.intro ?? 'Start with the closest question and use the related guide for the next step.'}</p>}
         </div>
         <div className="lane-strip">
           {lane.resources.map((resource, i) => (

@@ -19,6 +19,107 @@
   display: none;
 }
 
+.lane-buyer-head,
+.lane-buyer-copy {
+  max-width: 75ch;
+}
+
+.lane-buyer-copy p,
+.lane-buyer-services p {
+  color: var(--helm-text-dim);
+  line-height: 1.7;
+}
+
+.lane-buyer-copy p + p,
+.lane-buyer-services p + p {
+  margin-top: 18px;
+}
+
+.lane-buyer-links {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.lane-buyer-links a,
+.lane-buyer-followup a,
+.lane-buyer-services a {
+  display: inline-block;
+  padding-block: 10px;
+  color: var(--helm-accent-text);
+  text-underline-offset: 4px;
+}
+
+.lane-table-hint {
+  max-width: 65ch;
+  color: var(--helm-text-dim);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.lane-responsibility-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  scroll-margin-top: calc(var(--site-nav-block-size) + 24px);
+}
+
+.lane-responsibility-scroll:focus-visible {
+  outline: 2px solid var(--helm-text-strong);
+  outline-offset: -2px;
+}
+
+.lane-responsibility-table {
+  width: 100%;
+  min-width: 820px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  color: var(--helm-text-dim);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.lane-responsibility-table caption {
+  padding-block: 16px;
+  color: var(--helm-text-strong);
+  text-align: left;
+  font-weight: 700;
+}
+
+.lane-responsibility-table th,
+.lane-responsibility-table td {
+  padding: 20px 16px;
+  border-bottom: 1px solid var(--helm-hairline);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.lane-responsibility-table th {
+  color: var(--helm-text-strong);
+  font-weight: 700;
+}
+
+.lane-responsibility-table th:first-child {
+  width: 24%;
+  padding-left: 0;
+}
+
+.lane-buyer-followup {
+  margin-top: 24px;
+}
+
+.lane-buyer-services {
+  display: grid;
+  gap: 40px;
+}
+
+.lane-buyer-services section {
+  max-width: 75ch;
+  padding-block: 24px;
+  border-top: 1px solid var(--helm-hairline);
+}
+
 /* Keep the non-regulatory industry offers optically centered within their
    full-height canvas. The shared dense-hero rule reserves extra room below
    for the cue; these balanced page-specific insets restore the visual center
