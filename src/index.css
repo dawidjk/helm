@@ -5427,3 +5427,13 @@ ol.article-checklist,
 
 /* Mobile-readable excerpts from official provider documentation. */
 .article-explainer img[src^="/guides/official-"] { max-width: 390px; }
+
+
+/* Shared keyboard controls clear the sticky navigation; headings retain their anchor offsets. */
+main :is(a, button, input, select, textarea) {
+  scroll-margin-block-start: calc(var(--site-nav-block-size) + 24px);
+  scroll-margin-block-end: 24px;
+}
+main :is(input, select, textarea) {
+  scroll-margin-block-start: calc(var(--site-nav-block-size) + 48px);
+}

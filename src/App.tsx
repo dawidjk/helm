@@ -7,6 +7,7 @@ import {SiteNav, SiteFooter, RevealManager} from './components/Site';
 import {ThemeModeProvider, useThemeMode} from './components/ThemeMode';
 import {canonicalPath} from './lib/urls';
 import AdConsent from './components/AdConsent';
+import FocusClearance from './components/FocusClearance';
 import {isDocumentHydrated, markDocumentHydrated} from './lib/hydrationState';
 import './theme.css';
 import './index.css';
@@ -54,6 +55,7 @@ function ThemedShell() {
       <LinkProvider component={NavLink}>
         <ScrollToTop />
         <RevealManager />
+        <FocusClearance />
         <a className="skip-link" href="#main-content">Skip to content</a>
         <SiteNav />
         <main id="main-content" tabIndex={-1}>
