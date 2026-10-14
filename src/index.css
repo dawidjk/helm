@@ -5418,3 +5418,9 @@ ol.article-checklist,
   transform: none;
   opacity: 1;
 }
+
+/* Keep a focused CTA and its outline below the sticky navigation. */
+.cta-band a.action-link {
+  scroll-margin-block-start: calc(var(--site-nav-block-size) + 24px);
+  scroll-margin-block-end: 24px;
+}
