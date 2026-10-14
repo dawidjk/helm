@@ -7,7 +7,8 @@ const initial: CookiePreferences = {version: 2, analytics: false, advertising: f
 export default function AdConsent() {
   const {pathname} = useLocation();
   const [preferences, setPreferences] = useState(initial);
-  const [banner, setBanner] = useState(true);
+  // Keep the SSG and first client render hidden until storage is checked.
+  const [banner, setBanner] = useState(false);
   const [panel, setPanel] = useState(false);
   const [draft, setDraft] = useState(initial);
   const dialog = useRef<HTMLDialogElement>(null);

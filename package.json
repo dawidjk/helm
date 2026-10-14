@@ -6,6 +6,7 @@
   "scripts": {
     "test:hydration": "node scripts/test-hydration.mjs",
     "test:hydration:bootstrap": "node scripts/test-hydration-bootstrap.mjs",
+    "test:consent-init": "node scripts/test-consent-init.mjs",
     "dev": "vite",
     "build": "tsc -b && vite-react-ssg build && node scripts/generate-sitemap.js",
     "lint": "oxlint",
