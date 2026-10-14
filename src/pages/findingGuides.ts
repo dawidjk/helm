@@ -8,24 +8,24 @@ export const findingGuides: Article[] = [
     "readMin": 3,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "If the scan finds p=none, the next step is to review legitimate mail before tightening the policy. Ask the mail administrator and DNS owner to work together; the person using Outlook may not know who hosts the mail or DNS.",
+    "intro": "Before tightening a DMARC policy set to p=none, check that the services you rely on pass authentication. Your mail administrator can help test them, and whoever manages your DNS will need to make the policy change. Using Outlook alone doesn’t tell you who hosts your mail or DNS.",
     "lead": [],
     "sections": [
       {
-        "h": "Before changing a monitoring-only DMARC policy",
+        "h": "Check your senders before enforcing DMARC",
         "ps": [
           {
             "list": [
-              "Save the current DMARC record and its TTL, the time DNS resolvers may cache it. Identify who can restore that record and who will monitor delivery.",
-              "Check the sender inventory against billing, website forms, appointment reminders, forwarding and infrequent notices. Record each service’s visible From domain and business owner.",
-              "Have each service send an approved test to an external recipient. Inspect the receiver’s results for a passing, aligned SPF or DKIM result. Resolve legitimate failures before enforcement.",
-              "Agree a staffed change window, the intended policy and a stop condition, such as an approved invoicing route failing. Use the mail provider’s current deployment instructions rather than copying another organization’s record.",
-              "After the approved change, verify published DNS, repeat the message tests and review delivery reports. If legitimate delivery breaks, have the authorized administrator restore the captured configuration while investigating. Cached DNS can delay the effect of restoration."
+              "Save the current DMARC record and its TTL, which tells DNS resolvers how long they may cache it. Check that your administrator can restore it, and arrange for someone to watch mail delivery during the change.",
+              "Review the services that send mail for your business, including billing tools, website forms, appointment reminders, forwarding and occasional notices. For each service, note the visible From domain and the person responsible for it.",
+              "Send an approved test from each service to an external recipient. Check the receiver’s authentication results for a passing SPF or DKIM result that aligns with the visible From domain. Fix failures affecting legitimate mail before moving to enforcement.",
+              "Plan the change for a time when your mail and DNS administrators can help. Agree on the new policy and when to stop, such as if an approved invoicing route fails. Use your mail provider’s current deployment instructions for your sending setup. Another organization’s record may not fit your senders.",
+              "After the approved change, check the published DNS record, repeat the message tests and review delivery reports. If legitimate mail starts failing, ask the authorized administrator to restore the saved configuration and investigate. Cached DNS can delay recovery."
             ],
             "ordered": true
           },
           {
-            "text": "Microsoft’s deployment guidance covers its mail environment. Google Workspace’s guidance directs administrators to configure DMARC at the DNS host. With cPanel or another hosted service, identify the actual mail and authoritative DNS providers before choosing their instructions. Changing policy solely to improve a scan score can disrupt business mail.",
+            "text": "Microsoft’s deployment guidance covers its mail environment. Google Workspace’s guidance explains how to configure DMARC at your DNS host. If you use cPanel or another hosted service, check who sends your mail and who hosts authoritative DNS before choosing the instructions. Base your policy on the sender tests; tightening it just to improve a scan score can disrupt business mail.",
             "links": [
               {
                 "phrase": "Microsoft’s deployment guidance",
@@ -49,16 +49,16 @@ export const findingGuides: Article[] = [
       {
         "h": "Microsoft 365: verify mail authentication first",
         "ps": [
-          "Have the mail administrator review DKIM under Defender → Email & collaboration → Policies & rules → Threat policies → Email authentication settings → DKIM. Check an external test message’s signing domain and alignment. The DNS owner changes the custom domain’s DMARC TXT policy after the sender review and recovery plan above.",
+          "Ask your mail administrator to review DKIM in Defender → Email & collaboration → Policies & rules → Threat policies → Email authentication settings → DKIM. Send a test message to an external recipient and check its signing domain and DMARC alignment. Once you’ve completed the sender review and prepared the recovery plan, whoever manages your DNS can update the custom domain’s DMARC TXT policy.",
           {
-            "text": "Use the provider setup instructions for your account. Open the full-size Microsoft 365 DKIM screenshot to read small fields.",
+            "text": "Microsoft’s DKIM setup instructions cover the steps for your account. The Microsoft 365 DKIM example shows the CNAME fields and signing switch.",
             "links": [
               {
-                "phrase": "provider setup instructions",
+                "phrase": "Microsoft’s DKIM setup instructions",
                 "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure"
               },
               {
-                "phrase": "Open the full-size Microsoft 365 DKIM screenshot",
+                "phrase": "Microsoft 365 DKIM example",
                 "to": "/guides/providers/microsoft-dkim-cnames.png"
               }
             ]
@@ -75,16 +75,16 @@ export const findingGuides: Article[] = [
       {
         "h": "cPanel: review the existing DMARC record",
         "ps": [
-          "If cPanel hosts authoritative DNS, open Domains → Zone Editor → Manage for the domain and find its existing _dmarc TXT record. Review the policy and reporting tags together. A suggested p=none record does not establish that enforcement is ready. The host controls feature availability; use its supported interface for the approved change.",
+          "If cPanel hosts authoritative DNS, open Domains → Zone Editor → Manage for your domain and find the existing _dmarc TXT record. Review its policy and reporting tags together. Use the sender tests above to decide whether to move beyond a suggested p=none policy, then make the approved change through the interface your host supports. Your host controls which features are available.",
           {
-            "text": "Use the provider setup instructions for your account. Open the full-size cPanel Zone Editor screenshot to read small fields.",
+            "text": "Follow the cPanel Zone Editor instructions for your host. The cPanel Zone Editor example shows Add Record above the DNS table; use the existing DMARC record for this change.",
             "links": [
               {
-                "phrase": "provider setup instructions",
+                "phrase": "cPanel Zone Editor instructions",
                 "to": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
               },
               {
-                "phrase": "Open the full-size cPanel Zone Editor screenshot",
+                "phrase": "cPanel Zone Editor example",
                 "to": "/guides/providers/cpanel-zone-add.png"
               }
             ]
@@ -99,13 +99,13 @@ export const findingGuides: Article[] = [
         }
       }
     ],
-    "takeaway": "Resolve legitimate authentication failures and test business mail before approving a stricter DMARC policy.",
+    "takeaway": "Move to a stricter DMARC policy after legitimate senders pass the message tests and you have a way to restore the previous record.",
     "readingLayout": true,
     "hideVisual": true,
     "organizationByline": true,
     "consultation": {
       "title": "Review this finding with Helm.",
-      "sub": "Describe the finding and the provider responsible for the affected service. Any Helm assistance needs an agreed scope; retained IT and the relevant vendors own administrative changes.",
+      "sub": "Tell us what the scan found and which provider manages the service. We can agree on a scope for Helm’s help. Your existing IT team and vendors handle the configuration changes.",
       "label": "Discuss a configuration finding",
       "to": "/contact/"
     }
@@ -118,18 +118,18 @@ export const findingGuides: Article[] = [
     "readMin": 3,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "A missing rua address means this record does not request aggregate reports at that address. It does not establish that nobody monitors mail through another system. Ask who owns reporting and whether the destination is approved for the information it receives.",
+    "intro": "If your DMARC record has no rua address, add one for a mailbox or reporting service you control. The reports help you see which services send mail using your domain, so review them before tightening the policy.",
     "lead": [],
     "sections": [
       {
-        "h": "Set up a monitored aggregate-reporting destination",
+        "h": "Choose a reporting address and check that reports arrive",
         "ps": [
           {
             "list": [
-              "Choose a dedicated mailbox or reporting service, agree who reviews it and confirm its handling and retention of report data. Aggregate reports can include sending infrastructure and authentication information.",
-              "Capture the existing DMARC record. Update its reporting destination in that record; do not publish a second competing DMARC record or change enforcement as an incidental step.",
+              "Set up a dedicated mailbox or reporting service and decide who will review the reports. Before using the destination, check how it handles and retains report data, which can include sending infrastructure and authentication information.",
+              "Save the existing DMARC record, then edit the reporting address in that record. Keep the current enforcement policy while setting up reporting, and publish only one DMARC record.",
               {
-                "text": "If the destination belongs to another domain, have the reporting provider confirm the external-destination authorization described by the aggregate-reporting standard. A mailbox address alone may be insufficient.",
+                "text": "For an address on another domain, ask the reporting provider to confirm the external-destination authorization described by the aggregate-reporting standard. The destination may need that authorization as well as a working mailbox.",
                 "links": [
                   {
                     "phrase": "aggregate-reporting standard",
@@ -137,26 +137,26 @@ export const findingGuides: Article[] = [
                   }
                 ]
               },
-              "Verify the published record and applicable destination authorization. Then check receipt from participating receivers as mail is sent. Report timing and participation vary; an empty inbox immediately after setup is inconclusive.",
-              "Assign unexplained sources for review. If the destination is wrong or the arrangement must end, have the DNS owner restore the prior destination and verify the published change. Follow the reporting service’s process for information it already received."
+              "Check the published record and any required destination authorization. As your services send mail, look for reports from participating receivers. Receivers vary in whether and when they report, so allow time before treating an empty inbox as a setup problem.",
+              "Make sure someone investigates sources you don’t recognize. If the reporting address is wrong or you need to end the arrangement, ask whoever manages your DNS to restore the previous destination and check the published change. Follow the reporting service’s process for information it has already received."
             ],
             "ordered": true
           }
         ]
       },
       {
-        "h": "Microsoft 365: send the change to the DNS owner",
+        "h": "Microsoft 365: update reporting at your DNS host",
         "ps": [
-          "For a custom domain, publish the reporting change at its authoritative DNS host. The Microsoft 365 domain wizard helps identify mail setup, but has no DMARC editor for custom domains. Have the DNS owner update rua in the existing DMARC TXT record, using the approved destination and any required external authorization.",
+          "For a custom domain, ask whoever manages DNS to update rua in the existing DMARC TXT record at the authoritative DNS host. Use the approved reporting address and check any required external authorization. The Microsoft 365 domain wizard helps with mail setup, but it has no DMARC editor for custom domains.",
           {
-            "text": "Use the provider setup instructions for your account. Open the full-size Microsoft 365 Domains screenshot to read small fields.",
+            "text": "Microsoft’s DMARC setup instructions explain the custom-domain configuration. The Microsoft 365 Domains example shows the start of domain setup.",
             "links": [
               {
-                "phrase": "provider setup instructions",
+                "phrase": "Microsoft’s DMARC setup instructions",
                 "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure"
               },
               {
-                "phrase": "Open the full-size Microsoft 365 Domains screenshot",
+                "phrase": "Microsoft 365 Domains example",
                 "to": "/guides/providers/microsoft-domain-setup.png"
               }
             ]
@@ -173,16 +173,16 @@ export const findingGuides: Article[] = [
       {
         "h": "cPanel: preserve the policy while adding reporting",
         "ps": [
-          "Use Domains → Zone Editor → Manage only if that service controls authoritative DNS. Edit the existing _dmarc TXT record to include the approved rua destination and preserve the agreed policy. A generic suggested DMARC record may omit reporting. When DNS is elsewhere, send the approved change to that provider.",
+          "If cPanel hosts authoritative DNS, open Domains → Zone Editor → Manage and edit the existing _dmarc TXT record. Add the approved rua address and keep the agreed enforcement policy. A suggested DMARC record may omit reporting, so check its reporting tags. If another provider hosts your DNS, ask that provider to apply the approved change.",
           {
-            "text": "Use the provider setup instructions for your account. Open the full-size cPanel Zone Editor screenshot to read small fields.",
+            "text": "The cPanel Zone Editor instructions explain how to manage the record. In the cPanel Zone Editor example, Add Record creates a new entry; update your existing DMARC entry when adding reporting.",
             "links": [
               {
-                "phrase": "provider setup instructions",
+                "phrase": "cPanel Zone Editor instructions",
                 "to": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
               },
               {
-                "phrase": "Open the full-size cPanel Zone Editor screenshot",
+                "phrase": "cPanel Zone Editor example",
                 "to": "/guides/providers/cpanel-zone-add.png"
               }
             ]
@@ -197,13 +197,13 @@ export const findingGuides: Article[] = [
         }
       }
     ],
-    "takeaway": "Verify the reporting destination and its owner separately from the decision to enforce DMARC.",
+    "takeaway": "Check that reports reach a destination you control, and keep the reporting change separate from any decision to enforce DMARC.",
     "readingLayout": true,
     "hideVisual": true,
     "organizationByline": true,
     "consultation": {
       "title": "Review this finding with Helm.",
-      "sub": "Describe the finding and the provider responsible for the affected service. Any Helm assistance needs an agreed scope; retained IT and the relevant vendors own administrative changes.",
+      "sub": "Tell us what the scan found and which provider manages the service. We can agree on a scope for Helm’s help. Your existing IT team and vendors handle the configuration changes.",
       "label": "Discuss a configuration finding",
       "to": "/contact/"
     }
@@ -216,15 +216,15 @@ export const findingGuides: Article[] = [
     "readMin": 3,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "A “no DKIM key found” result may mean the public scanner did not query the selector your provider uses. Ask the mail administrator to verify the configured selector and an actual test message before treating it as an absent control.",
+    "intro": "A “no DKIM key found” result can mean the scanner checked a different selector from the one your mail provider uses. Ask your mail administrator to check the configured selector and a test message’s DKIM result before deciding that signing is missing.",
     "lead": [],
     "sections": [
       {
-        "h": "Verify DKIM with a message, not a guessed selector",
+        "h": "Check the configured selector and a sent message",
         "ps": [
-          "A public scanner can look for selected DKIM names and still miss the selector your provider uses. Finding a public key also does not establish that the platform signs outgoing mail. Ask the mail administrator for the configured selector and a test message’s results.",
+          "Get the sending platform’s configured selector from your mail administrator. Look up its public record, then send a test from that platform to an external recipient and check the receiver’s DKIM result. Finding a public key alone doesn’t confirm that the platform signs outgoing mail.",
           {
-            "text": "Google Workspace’s DKIM instructions separate publishing the public record from starting authentication in the Admin console. Use the values generated for the actual domain, then send a test and inspect its receiver-side DKIM result and signing domain. The private key must remain private.",
+            "text": "Google Workspace’s DKIM instructions have two separate steps: publish the public record generated for your domain, then start authentication in the Admin console. Send a test message and check the receiving service’s DKIM result and signing domain. Keep the private key private.",
             "links": [
               {
                 "phrase": "Google Workspace’s DKIM instructions",
@@ -232,7 +232,7 @@ export const findingGuides: Article[] = [
               }
             ]
           },
-          "For Microsoft 365 or a third-party sender, follow that product’s current domain-specific setup and activation instructions. Check every relevant sending route and DMARC alignment. Preserve the old signing configuration and use the provider’s supported rotation or recovery procedure if legitimate signing fails; removing a published key prematurely can affect messages still in transit."
+          "For Microsoft 365 or a third-party sender, follow the provider’s current setup and activation instructions for your domain. Test each sending route and check DMARC alignment. If legitimate signing fails, use the saved signing configuration and the provider’s supported rotation or recovery procedure. Removing a published key too soon can affect messages still in transit."
         ],
         "figure": {
           "src": "/guides/official-dkim-annotated.png",
@@ -243,24 +243,24 @@ export const findingGuides: Article[] = [
         }
       },
       {
-        "h": "Before changing the signing setup",
+        "h": "Before changing DKIM",
         "ps": [
-          "Name the sending-platform administrator and DNS owner. Capture the existing selector and public-record configuration. Follow the provider’s domain-specific instructions; stop if the sending service or required access cannot be confirmed. Test important sending routes with external receivers after an approved change. A public key without a passing message result is incomplete evidence. Keep the previous configuration and the provider’s supported rotation or recovery procedure available."
+          "Work with your mail administrator and whoever manages your DNS. Before making a change, save the current selector and public record, and read the provider’s rotation or recovery instructions. Keep them available in case signing fails. If you don’t know which service sends the mail or can’t get the required access, stop here. After an approved change, send an external test through each important route and check for a passing DKIM result that aligns with the visible From domain."
         ]
       },
       {
         "h": "Microsoft 365: publish the CNAMEs, then enable signing",
         "ps": [
-          "An authorized mail administrator opens Defender’s Email authentication settings → DKIM tab and the custom domain flyout. Generate keys if needed, then copy both current CNAME names and targets to the authoritative DNS owner. After Microsoft detects them, enable signing and verify an external message. Newer and older domains can use different target formats; retrieve your actual tenant values.",
+          "In Defender, ask an authorized mail administrator to open Email authentication settings → DKIM and select the custom domain flyout. Generate keys if needed, then copy both current CNAME names and targets. Give those values to whoever manages authoritative DNS to publish. Once Microsoft detects the records, enable signing and send a test message to an external recipient. Use the values from your tenant; newer and older domains can use different target formats.",
           {
-            "text": "Use the provider setup instructions for your account. Open the full-size Microsoft 365 DKIM screenshot to read small fields.",
+            "text": "Follow Microsoft’s DKIM setup instructions for your account. The Microsoft 365 DKIM example shows where to copy the CNAME values and enable signing.",
             "links": [
               {
-                "phrase": "provider setup instructions",
+                "phrase": "Microsoft’s DKIM setup instructions",
                 "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure"
               },
               {
-                "phrase": "Open the full-size Microsoft 365 DKIM screenshot",
+                "phrase": "Microsoft 365 DKIM example",
                 "to": "/guides/providers/microsoft-dkim-cnames.png"
               }
             ]
@@ -277,16 +277,16 @@ export const findingGuides: Article[] = [
       {
         "h": "cPanel: identify the service that signs the mail",
         "ps": [
-          "If the cPanel server sends this mail, use Email → Email Deliverability → Manage to inspect the suggested public DKIM Name and Value. Publish them at authoritative DNS and verify a sent message. A cPanel website can use Microsoft 365 or another sender; those messages need that sender’s DKIM configuration. Never publish the private key.",
+          "For mail sent by the cPanel server, open Email → Email Deliverability → Manage and check the suggested public DKIM Name and Value. Publish them at authoritative DNS, then test a sent message. If your cPanel website sends through Microsoft 365 or another service, configure DKIM with that sender. Publish only the public key; keep the private key private.",
           {
-            "text": "Use the provider setup instructions for your account. Open the full-size cPanel DKIM screenshot to read small fields.",
+            "text": "The cPanel Email Deliverability instructions explain the setup. The cPanel DKIM example shows the public Name and Value to copy into DNS.",
             "links": [
               {
-                "phrase": "provider setup instructions",
+                "phrase": "cPanel Email Deliverability instructions",
                 "to": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
               },
               {
-                "phrase": "Open the full-size cPanel DKIM screenshot",
+                "phrase": "cPanel DKIM example",
                 "to": "/guides/providers/cpanel-dkim.png"
               }
             ]
@@ -301,13 +301,13 @@ export const findingGuides: Article[] = [
         }
       }
     ],
-    "takeaway": "Confirm the configured selector and a passing, aligned message result; a public key alone does not prove signing.",
+    "takeaway": "Use the configured selector to check DNS, then confirm a passing DKIM result and DMARC alignment on a test message.",
     "readingLayout": true,
     "hideVisual": true,
     "organizationByline": true,
     "consultation": {
       "title": "Review this finding with Helm.",
-      "sub": "Describe the finding and the provider responsible for the affected service. Any Helm assistance needs an agreed scope; retained IT and the relevant vendors own administrative changes.",
+      "sub": "Tell us what the scan found and which provider manages the service. We can agree on a scope for Helm’s help. Your existing IT team and vendors handle the configuration changes.",
       "label": "Discuss a configuration finding",
       "to": "/contact/"
     }
@@ -320,14 +320,14 @@ export const findingGuides: Article[] = [
     "readMin": 3,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "A softfail finding is a reason to check the sending arrangement with your mail administrator. Changing ~all to -all without checking legitimate senders can affect mail the business needs. The public record cannot tell you whether every billing tool or website form is configured correctly.",
+    "intro": "Review your sending services with your mail administrator before replacing ~all with -all. An untested change can disrupt mail from billing tools or website forms. A public lookup can’t tell you whether each service is configured correctly.",
     "lead": [],
     "sections": [
       {
-        "h": "Confirm the domain and the administrator",
+        "h": "Find the domain each service uses for SPF",
         "ps": [
           {
-            "text": "Ask the administrator which domain appears in the SMTP envelope sender for each sending service. It can differ from the From address a recipient sees. SPF evaluates that envelope domain, while DMARC also checks alignment with the visible domain. The DMARC guide explains that relationship.",
+            "text": "SPF checks the domain used in the SMTP envelope sender. That domain can differ from the From address a recipient sees, so ask your mail administrator which envelope domain each service uses. DMARC also checks whether the authenticated domain aligns with the visible From domain; the DMARC guide explains that relationship.",
             "links": [
               {
                 "phrase": "DMARC guide",
@@ -335,14 +335,14 @@ export const findingGuides: Article[] = [
               }
             ]
           },
-          "Identify the authoritative DNS host, the mailbox platform and outside sending services separately. Microsoft 365, Google Workspace and a cPanel host can require different sender values. A desktop mail application does not identify the hosting provider."
+          "Check who hosts your authoritative DNS and mailboxes, and which outside services send mail for you. Microsoft 365, Google Workspace and a cPanel host can require different sender values. The desktop mail app you use doesn’t tell you who hosts your mail."
         ]
       },
       {
-        "h": "Read the finding as an observation",
+        "h": "Understand what softfail tells the receiver",
         "ps": [
           {
-            "text": "Under the SPF standard, ~all returns softfail when evaluation reaches it; -all returns fail. Receivers decide how to handle the message alongside other checks. Neither suffix proves inbox delivery, rejection or protection from all impersonation.",
+            "text": "Under the SPF standard, ~all returns softfail when evaluation reaches it, while -all returns fail. The receiver uses that result alongside other checks to decide how to handle the message. The suffix alone cannot tell you whether mail will reach an inbox or be rejected, and it does not protect against every kind of impersonation.",
             "links": [
               {
                 "phrase": "SPF standard",
@@ -350,19 +350,19 @@ export const findingGuides: Article[] = [
               }
             ]
           },
-          "A lookup timeout is inconclusive. A missing record, multiple SPF records and an evaluation exceeding the DNS lookup limit require different investigations. The limit applies to DNS-querying terms encountered during evaluation, including nested mechanisms; counting visible includes is not a complete test."
+          "A lookup timeout is inconclusive. Missing records, multiple SPF records and an evaluation over the DNS lookup limit need different investigations. That limit applies to DNS-querying terms reached during evaluation, including nested mechanisms. Evaluate the sending path to check the limit; counting visible includes alone is incomplete."
         ]
       },
       {
-        "h": "Decide whether the existing policy should change",
+        "h": "Review the senders before choosing a policy",
         "ps": [
           {
             "list": [
-              "Save the current record, TTL and provider configuration. Name the DNS administrator and the person who can restore the original.",
-              "Compare the authorized sources with the actual sending inventory. Include occasional statements, website forms and relays that a short reporting period might miss.",
-              "Ask why the current provider uses softfail and whether its supported configuration calls for a different policy. Check actual external message results and DMARC alignment before deciding.",
+              "Save the current record, TTL and provider configuration, and check that your DNS administrator can restore them before you make a change.",
+              "Compare the sources authorized by the record with your list of sending services. Include occasional statements, website forms and relays that a short reporting period might miss.",
+              "Ask your provider why it uses softfail and whether its supported configuration calls for a different policy. Send tests to external recipients and check the authentication results and DMARC alignment before deciding.",
               {
-                "text": "Stop if the record is missing, duplicated or invalid. Resolve that separate problem with the SPF record repair guide before evaluating a suffix change.",
+                "text": "If the record is missing, duplicated or invalid, repair it with the SPF record repair guide before deciding whether to change the suffix.",
                 "links": [
                   {
                     "phrase": "SPF record repair guide",
@@ -370,12 +370,12 @@ export const findingGuides: Article[] = [
                   }
                 ]
               },
-              "Agree the intended update and a staffed window. If a necessary sender cannot be identified or tested, keep the decision open rather than approving a stronger-looking record."
+              "Schedule the agreed change for a time when your mail and DNS administrators can help. Wait if you can’t identify or test a sender the business needs."
             ],
             "ordered": true
           },
           {
-            "text": "Microsoft’s SPF setup guide distinguishes Microsoft-only mail from arrangements with additional senders. Its simple record should not replace a mixed environment’s policy without review.",
+            "text": "Microsoft’s SPF setup guide covers Microsoft-only mail and domains that also use other senders. Review those services’ requirements before using the simple Microsoft-only record.",
             "links": [
               {
                 "phrase": "Microsoft’s SPF setup guide",
@@ -386,31 +386,31 @@ export const findingGuides: Article[] = [
         ]
       },
       {
-        "h": "Test delivery and retain a recovery path",
+        "h": "Test mail after the change",
         "ps": [
-          "After the authorized update, verify the published DNS record and send approved tests through each business-critical route to external recipients. Inspect their authentication results and DMARC alignment as well as arrival. Forwarding can change the SPF outcome, so include important forwarding paths in the review.",
-          "If approved mail begins failing, have the administrator restore the captured record, confirm publication and investigate the sending path. Cached DNS means restoration may take time to reach receivers. Keep delivery failures visible until the affected route is tested again."
+          "After the authorized update, check the published DNS record. Send approved tests to external recipients through every route the business relies on. Check that each message arrives, then inspect its authentication results and DMARC alignment. Test important forwarding paths too, because forwarding can change the SPF result.",
+          "If legitimate mail starts failing, ask your administrator to restore the saved record and confirm it is published. Investigate the affected sending path and keep tracking delivery failures until it has been tested again. Receivers may keep using cached DNS for a while after restoration."
         ]
       },
       {
-        "h": "Give the owner a useful completion record",
+        "h": "Keep a record of what you checked",
         "ps": [
-          "Record the domain, sending services checked, test date, receiver results and remaining exceptions. Helm’s public scan can check published configuration; it cannot inspect the firm’s complete sender inventory. Existing IT and the relevant vendors own configuration changes under their agreed scope."
+          "Save the domain, services checked, test date, receiver results and any remaining exceptions. Your IT team and vendors review the full sender list and make configuration changes within their agreed scope. Helm’s public scan only checks published configuration."
         ]
       },
       {
         "h": "Microsoft 365: include every legitimate sender",
         "ps": [
-          "Review the required TXT records in Settings → Domains → DNS records → Manage DNS. Account for Microsoft 365 and each approved third-party sender before deciding whether to change ~all. Have the DNS owner publish the approved single SPF record and repeat the message tests above.",
+          "Review the required TXT records under Settings → Domains → DNS records → Manage DNS. Check Microsoft 365’s requirements alongside those of each approved third-party sender before deciding whether to change ~all. Ask whoever manages DNS to publish the approved single SPF record, then repeat the message tests above.",
           {
-            "text": "Use the provider setup instructions for your account. Open the full-size Microsoft 365 Domains screenshot to read small fields.",
+            "text": "Microsoft’s DNS setup instructions cover the required records for your account. The Microsoft 365 Domains example shows where domain setup begins.",
             "links": [
               {
-                "phrase": "provider setup instructions",
+                "phrase": "Microsoft’s DNS setup instructions",
                 "to": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
               },
               {
-                "phrase": "Open the full-size Microsoft 365 Domains screenshot",
+                "phrase": "Microsoft 365 Domains example",
                 "to": "/guides/providers/microsoft-domain-setup.png"
               }
             ]
@@ -425,18 +425,18 @@ export const findingGuides: Article[] = [
         }
       },
       {
-        "h": "cPanel: review the all policy in Customize",
+        "h": "cPanel: check the all setting in Customize",
         "ps": [
-          "For cPanel-hosted sending, open Email Deliverability → Manage → SPF → Customize and review the preview. Exclude All Other Hosts selects -all. cPanel commonly recommends ~all. Test legitimate routes before tightening it. Installation applies to authoritative DNS controlled by that server.",
+          "For mail sent by the cPanel server, open Email Deliverability → Manage → SPF → Customize and review the preview. Exclude All Other Hosts selects -all, while cPanel commonly recommends ~all. Test your legitimate sending routes before choosing a stricter policy. Installation updates authoritative DNS only when that server controls it.",
           {
-            "text": "Use the provider setup instructions for your account. Open the full-size cPanel SPF screenshot to read small fields.",
+            "text": "Check the cPanel Email Deliverability instructions for your host. Use the include list, all option and preview in the cPanel SPF example to check the proposed record before installation.",
             "links": [
               {
-                "phrase": "provider setup instructions",
+                "phrase": "cPanel Email Deliverability instructions",
                 "to": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
               },
               {
-                "phrase": "Open the full-size cPanel SPF screenshot",
+                "phrase": "cPanel SPF example",
                 "to": "/guides/providers/cpanel-spf-preview.png"
               }
             ]
@@ -451,13 +451,13 @@ export const findingGuides: Article[] = [
         }
       }
     ],
-    "takeaway": "A softfail suffix needs a sender and policy review before a change; stronger-looking DNS is not delivery evidence.",
+    "takeaway": "Choose the SPF policy from your provider’s guidance and tested sending routes, then check message results after any change.",
     "readingLayout": true,
     "hideVisual": true,
     "organizationByline": true,
     "consultation": {
       "title": "Review this finding with Helm.",
-      "sub": "Describe the finding and the provider responsible for the affected service. Any Helm assistance needs an agreed scope; retained IT and the relevant vendors own administrative changes.",
+      "sub": "Tell us what the scan found and which provider manages the service. We can agree on a scope for Helm’s help. Your existing IT team and vendors handle the configuration changes.",
       "label": "Discuss a configuration finding",
       "to": "/contact/"
     }
@@ -470,24 +470,24 @@ export const findingGuides: Article[] = [
     "readMin": 3,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "A missing or invalid SPF policy needs a sender inventory before DNS is repaired. Ask the mail administrator to distinguish no record, duplicate records, syntax errors and an evaluation exceeding the DNS lookup limit. A timeout remains inconclusive. The record must match the actual envelope-sender domain.",
+    "intro": "Before repairing SPF, list your sending services and ask your mail administrator which domain each uses in the SMTP envelope sender. The SPF record must match that domain. Check for a missing, duplicate or invalid record, and for an evaluation that exceeds the DNS lookup limit. A lookup timeout is inconclusive.",
     "lead": [],
     "sections": [
       {
-        "h": "Prepare one supported record",
+        "h": "Build one SPF record for your sending services",
         "ps": [
           {
             "list": [
-              "Save the current record, TTL and provider configuration. Name the DNS administrator, the business approval owner and the person who can restore the original.",
-              "Inventory every legitimate route, including occasional statements, forms, marketing tools and relays. Obtain each vendor’s supported instructions for the actual product and domain.",
-              "Investigate missing or duplicate records before composing one valid SPF policy. Do not publish another v=spf1 record alongside the existing one. Do not authorize an unfamiliar sender merely because it appears in a report.",
-              "Have the administrator validate syntax and evaluate representative sending paths, including nested DNS lookups. Avoid indiscriminate flattening: a snapshot of provider addresses needs its own maintenance arrangement.",
-              "Agree the approved update and a staffed window. Stop if a necessary sender cannot be identified or its documented configuration cannot be verified."
+              "Work with your DNS administrator and whoever approves the change for the business. Save the current record, TTL and provider configuration, and make sure you know who will restore them if delivery breaks.",
+              "List every legitimate sending route, including occasional statements, forms, marketing tools and relays. Get each vendor’s supported instructions for the product and domain you use.",
+              "Investigate missing or duplicate records before building the replacement. Publish only one v=spf1 record for the domain. Confirm that an unfamiliar sender is legitimate before authorizing it, even if it appears in a report.",
+              "Have your administrator check the syntax and evaluate representative sending paths, including nested DNS lookups. Flatten the record into a snapshot of provider addresses only if you have an arrangement to keep that list up to date.",
+              "Schedule the approved update for a time when your mail and DNS administrators can help. Stop if you can’t identify a sender the business needs or confirm its documented configuration."
             ],
             "ordered": true
           },
           {
-            "text": "Microsoft’s SPF setup guide distinguishes Microsoft-only mail from arrangements with additional senders. Its simple record should not replace a mixed environment’s policy without review.",
+            "text": "Microsoft’s SPF setup guide covers Microsoft-only mail and domains that also use other senders. Review those services’ requirements before using the simple Microsoft-only record.",
             "links": [
               {
                 "phrase": "Microsoft’s SPF setup guide",
@@ -498,18 +498,18 @@ export const findingGuides: Article[] = [
         ]
       },
       {
-        "h": "Test delivery and retain a recovery path",
+        "h": "Check DNS and test each sending route",
         "ps": [
-          "After the authorized update, verify the published DNS record and send approved tests through each business-critical route to external recipients. Inspect their authentication results and DMARC alignment as well as arrival. Forwarding can change the SPF outcome, so include important forwarding paths in the review.",
-          "If approved mail begins failing, have the administrator restore the captured record, confirm publication and investigate the sending path. Cached DNS means restoration may take time to reach receivers. Keep delivery failures visible until the affected route is tested again."
+          "After the authorized update, check the published DNS record. Send approved tests to external recipients through each route the business relies on. Check that each message arrives, then inspect its authentication results and DMARC alignment. Test important forwarding paths too, because forwarding can change the SPF result.",
+          "If legitimate mail starts failing, ask your administrator to restore the saved record and confirm it is published. Investigate the affected sending path and keep tracking delivery failures until it has been tested again. Receivers may keep using cached DNS for a while after restoration."
         ]
       },
       {
-        "h": "Give the owner a useful completion record",
+        "h": "Record the repair and any remaining problems",
         "ps": [
-          "Record the domain, sending services checked, test date, receiver results and remaining exceptions. Helm’s public scan can check published configuration; it cannot inspect the firm’s complete sender inventory. Existing IT and the relevant vendors own configuration changes under their agreed scope.",
+          "Save the domain, services checked, test date, receiver results and any remaining exceptions. Your existing IT team and vendors review the full sender list and make configuration changes within their agreed scope. Helm’s public scan only checks published configuration.",
           {
-            "text": "The SPF softfail review covers a valid policy’s choice of failure assertion separately. RFC 7208 defines SPF evaluation and its limits.",
+            "text": "If the record is valid and you need to decide whether to keep ~all, follow the SPF softfail review. RFC 7208 defines how SPF is evaluated and the limits that apply.",
             "links": [
               {
                 "phrase": "SPF softfail review",
@@ -526,16 +526,16 @@ export const findingGuides: Article[] = [
       {
         "h": "Microsoft 365: compare the required TXT records",
         "ps": [
-          "Open Settings → Domains, select the domain, then DNS records → Manage DNS to review Microsoft’s required TXT records. Have the DNS owner merge the required sending authorization into the domain’s one SPF record, preserving approved third-party senders. Recheck the lookup limit and test messages from each sending route.",
+          "Open Settings → Domains, select your domain, then open DNS records → Manage DNS to review Microsoft’s required TXT records. Ask whoever manages DNS to include Microsoft’s required sending authorization and your approved third-party senders in the domain’s one SPF record. Recheck the lookup limit and test mail from each sending route.",
           {
-            "text": "Use the provider setup instructions for your account. Open the full-size Microsoft 365 Domains screenshot to read small fields.",
+            "text": "Use Microsoft’s DNS setup instructions for your account. The Microsoft 365 Domains example shows the entry point to domain setup.",
             "links": [
               {
-                "phrase": "provider setup instructions",
+                "phrase": "Microsoft’s DNS setup instructions",
                 "to": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
               },
               {
-                "phrase": "Open the full-size Microsoft 365 Domains screenshot",
+                "phrase": "Microsoft 365 Domains example",
                 "to": "/guides/providers/microsoft-domain-setup.png"
               }
             ]
@@ -552,16 +552,16 @@ export const findingGuides: Article[] = [
       {
         "h": "cPanel: inspect the SPF recommendation",
         "ps": [
-          "For mail sent by the cPanel server, open Email → Email Deliverability → Manage for the domain and review SPF → Customize. Compare the recommendation with the sender inventory. Publish one approved SPF record at authoritative DNS. The host must enable this interface; Repair and Install cannot update an external DNS service.",
+          "For mail sent by the cPanel server, open Email → Email Deliverability → Manage for your domain and review SPF → Customize. Compare the suggested record with your sender list before publishing one approved SPF record at authoritative DNS. Your host must enable this interface. When another provider hosts DNS, send the approved record there; cPanel’s Repair and Install controls can’t change external DNS records.",
           {
-            "text": "Use the provider setup instructions for your account. Open the full-size cPanel SPF screenshot to read small fields.",
+            "text": "The cPanel Email Deliverability instructions explain the SPF controls. The cPanel SPF example shows the include list and preview to compare with your sending services.",
             "links": [
               {
-                "phrase": "provider setup instructions",
+                "phrase": "cPanel Email Deliverability instructions",
                 "to": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
               },
               {
-                "phrase": "Open the full-size cPanel SPF screenshot",
+                "phrase": "cPanel SPF example",
                 "to": "/guides/providers/cpanel-spf-preview.png"
               }
             ]
@@ -576,13 +576,13 @@ export const findingGuides: Article[] = [
         }
       }
     ],
-    "takeaway": "Prepare one supported SPF record from the real sender inventory, then validate message results and recovery.",
+    "takeaway": "Publish one record that covers the approved sending services, then check the published DNS record and test mail from each route. Keep the saved configuration ready if delivery breaks.",
     "readingLayout": true,
     "hideVisual": true,
     "organizationByline": true,
     "consultation": {
       "title": "Review this finding with Helm.",
-      "sub": "Describe the finding and the provider responsible for the affected service. Any Helm assistance needs an agreed scope; retained IT and the relevant vendors own administrative changes.",
+      "sub": "Tell us what the scan found and which provider manages the service. We can agree on a scope for Helm’s help. Your existing IT team and vendors handle the configuration changes.",
       "label": "Discuss a configuration finding",
       "to": "/contact/"
     }
@@ -595,15 +595,15 @@ export const findingGuides: Article[] = [
     "readMin": 2,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "DNSSEC needs coordination between the provider that signs your DNS zone and the registrar that publishes its delegation. An unsigned-domain finding should start that conversation. A DNSKEY observed by a public scan does not establish that the full chain validates.",
+    "intro": "Your DNS host and registrar need to work together to enable DNSSEC: the host signs the zone, and the registrar publishes its delegation. If a scan flags an unsigned domain, ask retained IT to check both. A DNSKEY in the results does not show whether the full chain validates.",
     "lead": [],
     "sections": [
       {
-        "h": "Establish the current arrangement",
+        "h": "Check the DNS host and registrar",
         "ps": [
-          "Ask retained IT to identify the authoritative DNS provider, registrar, zone being checked and people with access to both accounts. Record whether DNSSEC is already enabled and whether a provider or nameserver move is planned. Stop if the owners or existing delegation cannot be confirmed.",
+          "Ask retained IT to confirm the authoritative DNS provider, registrar and zone in the scan. They’ll need to work with the people who have access to both accounts to check the current signing state and delegation. Tell them about any planned provider or nameserver move before they choose a procedure. If the account owners or existing delegation are unclear, wait until IT can confirm them.",
           {
-            "text": "The DNSSEC introduction describes origin authentication and integrity for DNS data. It does not encrypt website traffic or assess a business’s internal systems. A timeout or a query at the wrong name needs investigation before the firm treats it as missing protection.",
+            "text": "The DNSSEC introduction explains how DNSSEC authenticates the origin of DNS data and protects its integrity. It does not encrypt website traffic, and a public DNSSEC check does not assess your internal systems. If the scan timed out or queried the wrong name, investigate that result before treating the zone as unsigned.",
             "links": [
               {
                 "phrase": "DNSSEC introduction",
@@ -614,10 +614,10 @@ export const findingGuides: Article[] = [
         ]
       },
       {
-        "h": "Use the sequence for the actual providers",
+        "h": "Follow your providers’ setup sequence",
         "ps": [
           {
-            "text": "For a primary zone hosted by Cloudflare, its current DNSSEC instructions begin with enabling zone signing and using the generated DS information at the registrar. Cloudflare Registrar can handle DS publication automatically. Other registrars require their own supported steps.",
+            "text": "For a primary zone on Cloudflare, follow its current DNSSEC instructions to enable signing and get the DS information for your registrar. Cloudflare Registrar can publish the DS record automatically. With another registrar, follow that registrar’s supported process.",
             "links": [
               {
                 "phrase": "current DNSSEC instructions",
@@ -625,39 +625,39 @@ export const findingGuides: Article[] = [
               }
             ]
           },
-          "Use values supplied for your zone; never copy a digest, key tag or algorithm from a screenshot. Confirm registrar and top-level-domain support before proceeding. Secondary DNS, delegated subdomains and provider migrations need their specific procedures rather than this primary-zone example."
+          "Check that your registrar and top-level domain support the setup, then use the values generated for your zone. Never copy a digest, key tag or algorithm from a screenshot. Secondary DNS, delegated subdomains and provider migrations each need their own procedure; follow that instead of these primary-zone steps."
         ]
       },
       {
-        "h": "Prepare validation and recovery first",
+        "h": "Plan how to check the change and recover from a failure",
         "ps": [
           {
             "list": [
-              "Capture the current nameservers, signing state and parent DS records. Keep the provider’s recovery instructions with the change record.",
-              "Agree who approves the change, who administers each account and which business services will be checked afterwards.",
-              "Follow the supported enablement sequence. Have IT validate the delegation and signatures through validating DNS checks, then confirm ordinary website and mail-related name resolution.",
-              "Treat a validation failure or new resolution failure as a stop condition. Escalate to the DNS provider and registrar with the observed results; do not keep toggling signing to improve a score.",
-              "Record the validated result, date and owner. A screenshot of an enabled switch is incomplete evidence."
+              "Save the current nameservers, signing state and parent DS records, along with the provider’s recovery instructions.",
+              "Get the change approved before either account is altered. Have the people managing those accounts agree with IT which business services they will check afterwards.",
+              "Follow the supported enablement sequence. Have IT use validating DNS checks to verify the delegation and signatures, then check that website and mail-related names still resolve normally.",
+              "If validation fails or a name stops resolving, stop and send the results to the DNS provider and registrar. Do not keep toggling signing to improve the scan score.",
+              "Keep the validation result, date and person responsible with the change record. The chain needs to validate even when the dashboard shows signing as enabled."
             ],
             "ordered": true
           }
         ]
       },
       {
-        "h": "Removing signing needs an ordered rollback",
+        "h": "Remove the parent DS record before disabling signing",
         "ps": [
-          "Cloudflare’s rollback instructions remove the parent DS record first and keep signing enabled until its parent-zone TTL expires. Disabling signing too soon can leave validating resolvers unable to use the domain. Follow the actual providers’ recovery sequence and verify the parent state rather than assuming a fixed waiting period.",
-          "If a provider cannot support the required arrangement, document that limitation and scope any migration separately. Helm’s public scan is a limited configuration check; DNS administration and recovery remain with the authorized technical owners."
+          "Cloudflare’s rollback instructions start by removing the parent DS record and keeping signing enabled until the parent-zone TTL expires. Disabling signing sooner can leave validating resolvers unable to use the domain. Follow your providers’ recovery sequence and verify the parent state and TTL before turning signing off.",
+          "If your provider cannot support the arrangement you need, record the limitation and scope any migration separately. The authorized DNS administrators handle setup and recovery. Helm’s public scan checks a limited set of public configuration signals."
         ]
       }
     ],
-    "takeaway": "Coordinate the DNS host and registrar, and validate the delegation before calling DNSSEC setup complete.",
+    "takeaway": "Enable DNSSEC with both the DNS host and registrar, then have IT validate the full chain. Agree the rollback sequence before changing either account.",
     "readingLayout": true,
     "hideVisual": true,
     "organizationByline": true,
     "consultation": {
       "title": "Review this finding with Helm.",
-      "sub": "Describe the finding and the provider responsible for the affected service. Any Helm assistance needs an agreed scope; retained IT and the relevant vendors own administrative changes.",
+      "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
       "label": "Discuss a configuration finding",
       "to": "/contact/"
     }
@@ -670,15 +670,15 @@ export const findingGuides: Article[] = [
     "readMin": 2,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "A missing MTA-STS marker does not prove that a message travelled unencrypted. A missing TLS-RPT marker does not establish that the firm has no delivery monitoring. Ask the mail administrator what transport protections and reporting the actual service supports before changing DNS.",
+    "intro": "Work with your mail administrator to publish a testing policy and check delivery before turning on MTA-STS enforcement. Ask what transport protections and delivery reporting the service supports. Missing MTA-STS or TLS-RPT markers alone cannot show whether a message travelled unencrypted or whether delivery is monitored elsewhere.",
     "lead": [],
     "sections": [
       {
-        "h": "Confirm the mail destinations and hosting access",
+        "h": "Confirm your MX destinations and policy host",
         "ps": [
-          "List the real MX destinations with the mail provider, including gateways and planned changes. Confirm their TLS behavior and certificates. Identify who manages DNS, the HTTPS policy host and delivery investigations. Stop if the provider cannot confirm the destinations or the required hosting arrangement.",
+          "Work through the MX destinations with your mail provider, including gateways and any planned changes, and check their TLS behavior and certificates. Involve your DNS administrator, the person hosting the HTTPS policy and whoever investigates delivery problems. Wait to publish until the provider can confirm the destinations and required hosting arrangement.",
           {
-            "text": "Microsoft’s MTA-STS guidance covers its Exchange Online arrangement. Another mailbox or gateway provider may need different MX values. Do not infer them from the mail application or paste a wildcard copied from another firm.",
+            "text": "Microsoft’s MTA-STS guidance covers Exchange Online. Your mailbox or gateway provider may require different MX values. Get those values from the provider for your setup; the mail application or a wildcard copied from another firm will not tell you what belongs in the policy.",
             "links": [
               {
                 "phrase": "Microsoft’s MTA-STS guidance",
@@ -689,10 +689,10 @@ export const findingGuides: Article[] = [
         ]
       },
       {
-        "h": "Publish the policy in a testing stage",
+        "h": "Publish and check a testing policy",
         "ps": [
           {
-            "text": "The MTA-STS standard separates the _mta-sts DNS marker from the HTTPS document at mta-sts.example.com/.well-known/mta-sts.txt. That example is a reserved illustration, not a host for your firm. The document defines the mode, permitted MX patterns and cache lifetime.",
+            "text": "The MTA-STS standard uses a DNS marker at _mta-sts and an HTTPS policy document at mta-sts.example.com/.well-known/mta-sts.txt. Replace that reserved example address with your firm’s policy host. The document sets the mode, permitted MX patterns and how long senders can cache the policy.",
             "links": [
               {
                 "phrase": "MTA-STS standard",
@@ -702,31 +702,31 @@ export const findingGuides: Article[] = [
           },
           {
             "list": [
-              "Save the current DNS marker and hosted policy, including any existing cache lifetime. Agree the approved policy and recovery owner.",
-              "Use the actual provider’s supported setup to publish a testing policy with verified MX coverage and a valid HTTPS host certificate.",
-              "Verify DNS and retrieve the policy from outside the hosting environment. Have IT check complete syntax, mode, certificate and MX matching; finding the version marker alone is insufficient.",
-              "Review delivery evidence and available reports before considering enforcement. In enforcement mode, a policy mismatch can prevent participating senders from delivering mail.",
-              "Stop if a legitimate destination or delivery path remains unexplained. Record unresolved paths rather than treating a successful web fetch as a completed mail test."
+              "Save the current DNS marker and hosted policy, including its cache lifetime. Get the proposed policy approved and agree with the provider who will handle recovery.",
+              "Verify that the testing policy covers your MX destinations and that the HTTPS policy host has a valid certificate, then follow your provider’s supported setup to publish it.",
+              "Check DNS and retrieve the policy from outside the hosting environment. Have IT check the full syntax, mode, certificate and MX matching. The version marker alone cannot confirm that the policy is correct.",
+              "Review delivery results and available reports before considering enforcement. A policy mismatch in enforcement mode can prevent participating senders from delivering mail.",
+              "If a legitimate destination or delivery path is still unexplained, pause the change and record what needs further investigation. A successful HTTPS fetch confirms that the policy is reachable; delivery still needs its own checks."
             ],
             "ordered": true
           }
         ]
       },
       {
-        "h": "Plan for cached policy during recovery",
+        "h": "Account for cached policies during recovery",
         "ps": [
-          "Deleting the DNS marker does not instantly withdraw a policy a sender has cached. Have the provider define the recovery or removal sequence around the existing policy’s lifetime, reachable HTTPS document and updated policy identifier. Verify the changed policy and affected delivery paths while monitoring reports.",
-          "For a reporting-only problem, restore or correct the authorized destination without casually changing enforcement. Keep the old configuration and record any information already sent to a third-party service. Helm’s public scan cannot confirm every sender’s enforcement or the firm’s receipt and review of reports."
+          "Senders may keep using a cached policy after you delete the DNS marker. Ask the provider to plan recovery or removal around the existing policy’s lifetime, keep the HTTPS document reachable and update the policy identifier as required by that plan. Check the changed policy and affected delivery paths while monitoring reports.",
+          "If the problem is only with reporting, restore or correct the authorized reporting destination and leave enforcement unchanged. Keep the old configuration and a record of any information already sent to a third-party service. Ask the mail administrator to check that reports arrive and someone reviews them. Helm’s public scan cannot verify that process or every sender’s enforcement."
         ]
       }
     ],
-    "takeaway": "Check the actual MX coverage and delivery evidence before enforcement, and plan recovery around cached policy.",
+    "takeaway": "Test the policy against your MX destinations and delivery results before enforcement. Plan recovery around the policies senders may have cached.",
     "readingLayout": true,
     "hideVisual": true,
     "organizationByline": true,
     "consultation": {
       "title": "Review this finding with Helm.",
-      "sub": "Describe the finding and the provider responsible for the affected service. Any Helm assistance needs an agreed scope; retained IT and the relevant vendors own administrative changes.",
+      "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
       "label": "Discuss a configuration finding",
       "to": "/contact/"
     }
@@ -739,14 +739,14 @@ export const findingGuides: Article[] = [
     "readMin": 2,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "TLS reporting can help the mail administrator investigate delivery failures reported by participating senders. It does not itself enforce encryption. Confirm the reporting owner and destination before publishing a record.",
+    "intro": "TLS reports can help your mail administrator investigate delivery failures. Before publishing the DNS record, choose where the reports will go and who will review them. The reports come from participating senders; reporting itself does not enforce encryption.",
     "lead": [],
     "sections": [
       {
-        "h": "Add a monitored TLS reporting destination",
+        "h": "Choose a destination someone will monitor",
         "ps": [
           {
-            "text": "TLS-RPT lets participating sending systems report transport results. It provides visibility and does not itself enforce encryption. DMARC aggregate reports concern authentication, so their destination and review process are a separate decision.",
+            "text": "TLS-RPT lets participating sending systems report transport results. DMARC aggregate reports cover email authentication, so decide separately where those reports go and how you review them.",
             "links": [
               {
                 "phrase": "TLS-RPT",
@@ -754,19 +754,19 @@ export const findingGuides: Article[] = [
               }
             ]
           },
-          "Choose an approved mailbox or reporting service and name the person who reviews transport failures. Confirm what delivery information the service receives and its access and retention arrangements. The administrator should capture the prior _smtp._tls record, publish the supported v=TLSRPTv1 configuration using the real destination and verify its syntax and routing.",
-          "Then observe report receipt as supported senders exchange mail. A report may not arrive immediately, and not every sender participates. An empty report inbox alone does not prove that setup failed. Assign reported certificate, policy and delivery problems to the mail or hosting owner."
+          "Work with your mail administrator to choose an approved mailbox or reporting service. Check what delivery information it will receive, who can access that information and how long it is kept. Have the administrator save the current _smtp._tls record, then follow the DNS and reporting providers’ supported setup to publish the v=TLSRPTv1 configuration with your destination. Then check the syntax and routing.",
+          "Watch for reports as participating senders exchange mail. Some senders do not participate, and reports can take time to arrive, so an empty inbox alone does not mean setup failed. Pass reported certificate, policy or delivery problems to the mail or hosting administrator responsible for investigating them."
         ]
       },
       {
-        "h": "Validate the change and retain the old destination",
+        "h": "Correct reporting problems without changing enforcement",
         "ps": [
-          "Capture the prior _smtp._tls record and follow the actual DNS and reporting providers’ supported setup. Have the administrator verify syntax and destination handling. If the arrangement is wrong, restore or correct the captured reporting destination and verify publication. Do not change MTA-STS enforcement to solve a reporting-only issue.",
+          "If reports go to the wrong place or the setup is incorrect, have the administrator correct the destination or restore the saved record. Check the syntax and how the destination handles reports, then verify that DNS publishes the corrected record. Keep MTA-STS enforcement unchanged while fixing a reporting-only problem.",
           {
-            "text": "Review reporting service access, retention and handling of information already received. Keep failures assigned to an owner and note that no immediate reports is inconclusive. See the MTA-STS setup guide for the separate transport-policy change.",
+            "text": "Check how the reporting service handles information it has already received, including who can access it and how long it is kept. Keep a record of who will investigate unresolved failures. Changes to the transport policy follow the separate MTA-STS setup guide.",
             "links": [
               {
-                "phrase": "the MTA-STS setup guide",
+                "phrase": "MTA-STS setup guide",
                 "to": "/resources/set-up-mta-sts/"
               }
             ]
@@ -774,13 +774,13 @@ export const findingGuides: Article[] = [
         ]
       }
     ],
-    "takeaway": "TLS reporting provides visibility; assign its destination and review process without treating it as encryption enforcement.",
+    "takeaway": "Send TLS reports to a monitored destination and have the mail administrator review failures. Reporting itself does not enforce encryption.",
     "readingLayout": true,
     "hideVisual": true,
     "organizationByline": true,
     "consultation": {
       "title": "Review this finding with Helm.",
-      "sub": "Describe the finding and the provider responsible for the affected service. Any Helm assistance needs an agreed scope; retained IT and the relevant vendors own administrative changes.",
+      "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
       "label": "Discuss a configuration finding",
       "to": "/contact/"
     }
@@ -793,14 +793,14 @@ export const findingGuides: Article[] = [
     "readMin": 3,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "A scanner’s inability to contact a mail server is not enough to diagnose a mail outage. Ask the administrator whether the domain is intended to receive mail and which service handles it. A retired domain, sending-only domain and active business mailbox domain need different decisions.",
+    "intro": "Ask your mail administrator whether the domain should receive mail and which service handles it. An active mailbox domain, a sending-only domain and a retired domain need different routing decisions. If a scan cannot contact the mail server, check delivery with the provider before treating it as an outage.",
     "lead": [],
     "sections": [
       {
-        "h": "Match DNS to the intended service",
+        "h": "Compare MX records with your mail provider’s settings",
         "ps": [
           {
-            "text": "SMTP’s routing standard explains how sending systems locate mail destinations. Have IT compare the published MX records with the provider’s current values for the actual domain and product. Distinguish a temporary lookup failure from an absent record or a deliberate no-mail arrangement.",
+            "text": "SMTP’s routing standard explains how sending systems find mail destinations. Ask IT to compare your published MX records with the provider’s current values for your domain and product. Check whether the finding comes from a temporary lookup failure, an absent record or a deliberate no-mail arrangement.",
             "links": [
               {
                 "phrase": "SMTP’s routing standard",
@@ -808,19 +808,19 @@ export const findingGuides: Article[] = [
               }
             ]
           },
-          "Do not replace MX records with an SPF include, a website address or values for a different tenant. An owner using Outlook could have Microsoft 365, a separate gateway or another host. cPanel and Google Workspace likewise require the actual hosting arrangement to be identified."
+          "Get the MX values from the service that receives your mail. An SPF include, a website address or another tenant’s settings cannot substitute for them. Using Outlook does not tell you whether mail arrives through Microsoft 365, a separate gateway or another host. Check the hosting arrangement for cPanel and Google Workspace too."
         ]
       },
       {
-        "h": "Review a routing change with the provider",
+        "h": "Prepare and test a routing change",
         "ps": [
           {
             "list": [
-              "Save the current MX records, priorities and TTLs. Identify the DNS owner, mail provider and business person approving the change.",
-              "Confirm that the intended receiving service accepts this domain and that its mailboxes and routing are ready. Include a filtering gateway or backup destination if the provider requires one.",
-              "Agree the exact supported values, validation steps and rollback trigger before changing DNS. Stop if mailbox readiness or domain ownership cannot be established.",
-              "After an authorized change, verify published records and send approved external tests to representative mailboxes. Check delivery logs, bounces and replies with the provider.",
-              "If business mail fails, have the authorized owner restore the captured routing while investigating. Cached records can affect the transition; a DNS save does not prove completed delivery."
+              "Ask your DNS administrator to save the current MX records, priorities and TTLs. Plan the change with your mail provider and get it approved by the firm before switching.",
+              "Check that the receiving service accepts your domain and that its mailboxes and routing are ready. Include a filtering gateway or backup destination if the provider requires one.",
+              "Before changing DNS, agree with the provider on the exact supported values, delivery checks and when to roll back. Wait until they can confirm mailbox readiness and domain ownership.",
+              "After the approved change, verify the published records and send approved external test messages to representative mailboxes. Review delivery logs, bounces and replies with the provider.",
+              "If business mail fails, have the authorized administrator restore the saved routing while investigating. Cached records can affect the transition, so test delivery even after the DNS changes have been saved."
             ],
             "ordered": true
           }
@@ -829,16 +829,16 @@ export const findingGuides: Article[] = [
       {
         "h": "Microsoft 365: retrieve the intended MX destination",
         "ps": [
-          "In Settings → Domains, select the domain and use DNS records → Manage DNS to inspect the required MX record. Set up users and mailboxes before an approved switch to Exchange Online. Have the DNS owner apply the tenant-specific destination and priority, preserving any documented gateway or hybrid routing. Test inbound delivery after the change.",
+          "In Settings → Domains, select your domain, then use DNS records → Manage DNS to find the required MX record. Set up users and mailboxes before switching to Exchange Online. Once the switch is approved, have your DNS administrator apply the tenant-specific destination and priority, keeping any documented gateway or hybrid routing in place. Test inbound delivery afterwards.",
           {
-            "text": "Use the provider setup instructions for your account. Open the full-size Microsoft 365 Domains screenshot to read small fields.",
+            "text": "The Microsoft 365 Domains example shows where setup begins. Follow the provider setup instructions for your account’s required records.",
             "links": [
               {
                 "phrase": "provider setup instructions",
                 "to": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
               },
               {
-                "phrase": "Open the full-size Microsoft 365 Domains screenshot",
+                "phrase": "Microsoft 365 Domains example",
                 "to": "/guides/providers/microsoft-domain-setup.png"
               }
             ]
@@ -855,16 +855,16 @@ export const findingGuides: Article[] = [
       {
         "h": "cPanel: check DNS and local mail routing separately",
         "ps": [
-          "If this server hosts authoritative DNS, use Domains → Zone Editor → Manage to review MX entries. Use the intended provider’s destination and priority. Separately ask the host to verify Email → Email Routing for local or remote delivery; automatic detection uses the local zone file. A cPanel website does not establish that this server receives the domain’s mail.",
+          "If the cPanel server hosts authoritative DNS, use Domains → Zone Editor → Manage to review the MX entries. Enter the intended mail provider’s destination and priority. Ask the host to check Email → Email Routing separately for local or remote delivery; automatic detection uses the local zone file. A server hosting your cPanel website may use another service for the domain’s mail.",
           {
-            "text": "Use the provider setup instructions for your account. Open the full-size cPanel MX screenshot to read small fields.",
+            "text": "The cPanel MX example shows the priority and destination fields. Follow the provider setup instructions for your account’s mail routing.",
             "links": [
               {
                 "phrase": "provider setup instructions",
                 "to": "https://docs.cpanel.net/cpanel/email/email-routing/"
               },
               {
-                "phrase": "Open the full-size cPanel MX screenshot",
+                "phrase": "cPanel MX example",
                 "to": "/guides/providers/cpanel-mx.png"
               }
             ]
@@ -879,13 +879,13 @@ export const findingGuides: Article[] = [
         }
       }
     ],
-    "takeaway": "Confirm the intended receiving service and mailbox readiness before changing routing records.",
+    "takeaway": "Confirm the receiving service and mailbox readiness before changing MX records. Save the old routing and test inbound delivery after the approved change.",
     "readingLayout": true,
     "hideVisual": true,
     "organizationByline": true,
     "consultation": {
       "title": "Review this finding with Helm.",
-      "sub": "Describe the finding and the provider responsible for the affected service. Any Helm assistance needs an agreed scope; retained IT and the relevant vendors own administrative changes.",
+      "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
       "label": "Discuss a configuration finding",
       "to": "/contact/"
     }
@@ -898,15 +898,15 @@ export const findingGuides: Article[] = [
     "readMin": 2,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "An unavailable SMTP probe calls for verification with the mail provider. It does not establish that the server is broken or that mail travelled unencrypted. This check does not authorize changes to the receiving service.",
+    "intro": "An unavailable SMTP check needs a closer look with your mail provider before you change the receiving service. The probe alone cannot show that the server is broken or that mail travelled unencrypted.",
     "lead": [],
     "sections": [
       {
-        "h": "Keep unavailable SMTP checks inconclusive",
+        "h": "Why an SMTP probe can fail",
         "ps": [
-          "Port 25 can be blocked from a scanner’s network, and a server may reject a probe for reasons that differ from normal mail delivery. The observed scanner checks one MX host and treats this probe as informational. An unavailable probe should not become a claim that mail is unencrypted or the server is broken.",
+          "Port 25 can be blocked from a scanner’s network, and a server may reject a probe even when normal mail delivery works. This scanner checks one MX host and treats the result as informational.",
           {
-            "text": "Ask the provider for a controlled check of the affected receiving path, its TLS behavior and actual logs. Confirm the scope of that check instead of extrapolating from one host to every delivery route. The mail-transport guide explains policy and reporting separately.",
+            "text": "Ask the provider to check the affected receiving path, its TLS behavior and delivery logs in a controlled test. Check which path the test covers before applying the results to other routes. The mail-transport guide explains policy and reporting.",
             "links": [
               {
                 "phrase": "mail-transport guide",
@@ -917,25 +917,25 @@ export const findingGuides: Article[] = [
         ]
       },
       {
-        "h": "Close the investigation with evidence",
+        "h": "Check the receiving path with IT",
         "ps": [
-          "Record whether the domain is meant to receive mail, the provider, the records checked and the test results. Keep unknowns assigned to an owner. DNS and mail changes require the relevant administrator’s approved procedure; this written guide does not perform them or promise delivery recovery."
+          "Give IT the probed hostname and scan time, then check with them which service should receive the domain’s mail. Compare the finding with the provider’s delivery logs and a controlled external mail test. If the receiving path is still unclear, resolve that before making changes. For a confirmed configuration problem, have the provider define the correction and recovery procedure. Do not weaken a firewall or change security settings just to let the scanner connect."
         ]
       },
       {
-        "h": "Recheck before attempting a fix",
+        "h": "Record the result and any further work",
         "ps": [
-          "Ask IT to identify the probed hostname, scan time and intended receiving service. Compare the observation with the provider’s delivery logs and a controlled external mail test. Stop if the actual receiving path is unclear. If a real configuration problem is confirmed, let the responsible provider define the change and recovery procedure. Do not weaken a firewall or alter security settings solely to make a scanner connect."
+          "Keep a record of whether the domain should receive mail, the provider, the records checked and the test results. Agree who will follow up on anything still unresolved. Any DNS or mail change needs the relevant administrator’s approval and procedure; retained IT and the provider carry out the agreed work."
         ]
       }
     ],
-    "takeaway": "An unavailable probe needs confirmation with the mail provider before it becomes a configuration change.",
+    "takeaway": "Compare an unavailable probe with the provider’s logs and a controlled mail test. Confirm the problem with the relevant administrator and get their approval before changing the configuration.",
     "readingLayout": true,
     "hideVisual": true,
     "organizationByline": true,
     "consultation": {
       "title": "Review this finding with Helm.",
-      "sub": "Describe the finding and the provider responsible for the affected service. Any Helm assistance needs an agreed scope; retained IT and the relevant vendors own administrative changes.",
+      "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
       "label": "Discuss a configuration finding",
       "to": "/contact/"
     }
@@ -948,14 +948,14 @@ export const findingGuides: Article[] = [
     "readMin": 2,
     "lane": "All industries",
     "laneTo": "/",
-    "intro": "A failed public HTTPS connection can have several causes, including the scanner’s route to the site. Ask the website provider to check the hostname, time and observed error before concluding that the site is unavailable to visitors. Check the main hostname and any important alternate or redirecting host separately.",
+    "intro": "Send the affected hostname, scan time and error to your website provider so they can check the connection visitors use. The scanner’s route to the site can cause a public HTTPS check to fail, so check visitor access before treating the result as an outage. Test the main hostname and any important alternate or redirecting hosts separately.",
     "lead": [],
     "sections": [
       {
-        "h": "Investigate HTTPS and certificate findings with the website owner",
+        "h": "Check the certificate and HTTPS connection",
         "ps": [
           {
-            "text": "TLS protects a connection and authenticates its endpoint. A valid certificate does not establish that an application is free of vulnerabilities. Its hostname coverage and expiry also need to match the service visitors actually use.",
+            "text": "TLS protects a connection and authenticates its endpoint. Check that the certificate covers the hostname visitors use and that it has not expired. A valid certificate does not tell you whether the application has vulnerabilities.",
             "links": [
               {
                 "phrase": "TLS protects a connection and authenticates its endpoint",
@@ -965,25 +965,25 @@ export const findingGuides: Article[] = [
           },
           {
             "list": [
-              "Capture the finding and current hosting, certificate and redirect configuration. Name the hosting administrator and the person who approves a change.",
-              "Have the provider verify DNS, certificate coverage, validity and chain, plus HTTPS behavior for the affected hostname. Include a proxy or content-delivery network if it terminates the connection.",
-              "Use the actual host’s supported renewal or installation process. Stop if access, hostname ownership or the configuration serving visitors cannot be established.",
-              "Test the changed site from outside the hosting environment, including redirects and representative pages. Check for browser warnings and insecure resources rather than relying only on a dashboard’s status.",
-              "If a change interrupts access, follow the host’s recovery procedure using the captured configuration, then repeat the checks. Record unresolved errors with an owner."
+              "Ask your hosting administrator to save the finding and the current hosting, certificate and redirect settings. Get approval from the person responsible for website changes before going ahead.",
+              "Have the provider check DNS, certificate coverage, validity and chain, along with HTTPS behavior for the affected hostname. Include any proxy or content-delivery network that terminates the connection.",
+              "Use the host’s supported process to renew or install the certificate. Wait until the provider can confirm access, hostname ownership and which configuration serves visitors before proceeding.",
+              "After the change, test redirects and representative pages from outside the hosting environment. Look for browser warnings and insecure resources even when the hosting dashboard reports success.",
+              "If the change interrupts access, use the saved configuration to follow the host’s recovery procedure, then repeat the checks. Keep a record of unresolved errors and who will investigate them."
             ],
             "ordered": true
           },
-          "Certificate management is not established as an included Helm service by a public scan. Retained IT and the website or hosting provider handle agreed administrative work; any further Helm assistance needs its own defined scope."
+          "Retained IT and your website or hosting provider handle agreed certificate work. If you want Helm’s help, agree the scope separately from the public scan."
         ]
       }
     ],
-    "takeaway": "Have the website provider verify the hostname and connection before changing certificate or hosting configuration.",
+    "takeaway": "Have the website provider check the affected hostname and connection before changing the certificate or hosting setup. Test visitor access again after the change.",
     "readingLayout": true,
     "hideVisual": true,
     "organizationByline": true,
     "consultation": {
       "title": "Review this finding with Helm.",
-      "sub": "Describe the finding and the provider responsible for the affected service. Any Helm assistance needs an agreed scope; retained IT and the relevant vendors own administrative changes.",
+      "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
       "label": "Discuss a configuration finding",
       "to": "/contact/"
     }

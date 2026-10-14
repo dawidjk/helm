@@ -24,7 +24,10 @@ export function renderParagraph(p: Paragraph): ReactNode {
   const parts: ReactNode[] = [];
   let remaining = p.text;
   let keyIdx = 0;
-  for (const link of p.links) {
+  // Copy changes can move a phrase ahead of another linked phrase. Render
+  // in text order without changing the source descriptors or their targets.
+  const links = [...p.links].sort((a, b) => p.text.indexOf(a.phrase) - p.text.indexOf(b.phrase));
+  for (const link of links) {
     const idx = remaining.indexOf(link.phrase);
     if (idx === -1) continue;
     if (idx > 0) parts.push(remaining.slice(0, idx));
