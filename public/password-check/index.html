@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-Tg5RBU+C96jy6CiAsy4xOJkM6NxJynyvCm9i91on4Lc=' 'strict-dynamic'; style-src 'self'; connect-src https://api.pwnedpasswords.com; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>Check a Password Against Known Exposure Data | Helm</title>
+  <meta name="description" content="Check a password value against HIBP’s known exposed-password data. The password and full hash stay in your browser; the service receives a short hash prefix.">
+  <link rel="canonical" href="https://helmsecured.com/password-check/">
+  <link rel="stylesheet" href="./checker.css">
+  <script type="module" src="./checker.mjs" integrity="sha256-Tg5RBU+C96jy6CiAsy4xOJkM6NxJynyvCm9i91on4Lc="></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to password check</a>
+  <header><a href="/">Helm Security</a><a href="/resources/">Resources</a></header>
+  <main id="main">
+    <h1>Has this password appeared in known exposure data?</h1>
+    <p>This checks a password value against Have I Been Pwned’s Pwned Passwords service. It does not look up an email address, domain or account.</p>
+    <section aria-labelledby="privacy-title">
+      <h2 id="privacy-title">What is sent when you check</h2>
+      <p id="disclosure">On your submission, this page computes a lookup hash locally and sends its first five hexadecimal characters to HIBP over HTTPS. HIBP receives that short prefix and your connection information, including your IP address. The password and full hash stay in your browser.</p>
+      <p>This page has no analytics, advertising pixels, chat or form-capture scripts. It does not store the password or hash. The input clears after submission and when the page is hidden or left.</p>
+    </section>
+    <form id="checker" autocomplete="off" aria-describedby="disclosure">
+      <label for="password">Password to check</label>
+      <input id="password" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" required disabled aria-describedby="password-help">
+      <p id="password-help">The check uses exactly what you enter, including spaces and capitalization. Nothing is sent while you type.</p>
+      <div class="actions"><button id="submit" type="submit" disabled>Check this password</button><button id="clear" type="button">Clear input and result</button></div>
+    </form>
+    <noscript><p>JavaScript is required to compute the lookup locally. No password can be submitted from this page while JavaScript is off.</p></noscript>
+    <section id="result" aria-live="polite" aria-atomic="true" tabindex="-1" hidden><h2 id="result-title"></h2><p id="result-copy"></p></section>
+    <section aria-labelledby="meaning-title">
+      <h2 id="meaning-title">What a result means</h2>
+      <p>A match means this password appears in known exposed-password data. It does not establish that your account was compromised. No match is not proof that the password is safe.</p>
+      <p>If there is a match, change the password through the service’s trusted settings and replace it wherever you reused it. A password manager can help you choose unique passwords. See our <a href="/resources/mfa-methods-compared/">MFA guide</a> for additional account protection.</p>
+      <p>Read <a href="https://haveibeenpwned.com/API/v3#PwnedPasswords" rel="noreferrer">HIBP’s Pwned Passwords documentation</a> for how the lookup works.</p>
+    </section>
+    <p>Need help reviewing account-security responsibilities? <a href="/contact/">Contact Helm</a>. Keep passwords and sensitive account information out of the inquiry.</p>
+  </main>
+  <footer><a href="/privacy/">Privacy notice</a> · <a href="/resources/">Return to Resources</a></footer>
+</body>
+</html>

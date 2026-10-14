@@ -265,6 +265,8 @@ export default function Resources() {
             </Link>
           </aside>
 
+          <p><a href="/password-check/">Check a password value against known exposure data</a>. This separate page explains the limited HIBP lookup before you submit.</p>
+
           <section className="resources-library" aria-labelledby="resources-library-title">
             <div className="resources-section-head">
               <h2 id="resources-library-title">Browse every guide.</h2>
