@@ -157,6 +157,58 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+
+  "ivanti-connect-secure-october-2026-exploitation": {
+    "relatedSlugs": [
+      "zero-day-vs-known-vulnerabilities",
+      "vulnerability-management-new-jersey",
+      "incident-response-plan-small-business"
+    ],
+    "sources": [
+      {
+        "title": "Known Exploited Vulnerabilities catalog",
+        "href": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-104935"
+      },
+      {
+        "title": "Ivanti-authored vulnerability record",
+        "href": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/104xxx/CVE-2026-104935.json"
+      },
+      {
+        "title": "October 13 investigation",
+        "href": "https://www.volexity.com/blog/2026/10/13/a-series-of-unauthenticated-events-chained-exploitation-of-ivanti-connect-secure-zero-days/"
+      },
+      {
+        "title": "Ivanti advisory",
+        "href": "https://hub.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-CVE-2026-104935"
+      }
+    ]
+  },
+  "windows-shell-october-2026-update": {
+    "relatedSlugs": [
+      "zero-day-vs-known-vulnerabilities",
+      "vulnerability-management-new-jersey",
+      "incident-response-plan-small-business"
+    ],
+    "sources": [
+      {
+        "title": "Microsoft’s advisory",
+        "href": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951"
+      },
+      {
+        "title": "October release data",
+        "href": "https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Oct"
+      },
+      {
+        "title": "protection associated with files from the internet",
+        "href": "https://support.microsoft.com/en-us/windows/security/information-about-the-attachment-manager-in-microsoft-windows"
+      },
+      {
+        "title": "Microsoft-authored CVE record",
+        "href": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/96xxx/CVE-2026-96951.json"
+      }
+    ]
+  }
+,
   'meraki-october-2026-security-update': {
   "relatedSlugs": [
     "vulnerability-management-new-jersey",

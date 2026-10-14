@@ -10,6 +10,24 @@ export const articleCatalog = [
     "metaDesc": "Cisco’s October Meraki fixes arrive on different schedules. Understand the device-specific caveats, status labels and interruptions to discuss with your IT provider."
   },
   {
+    "slug": "ivanti-connect-secure-october-2026-exploitation",
+    "title": "Ivanti Connect Secure: what to ask IT after the October 13 disclosure",
+    "lane": "Professional services",
+    "readMin": 3,
+    "collection": "blog",
+    "date": "2026-10-13",
+    "metaDesc": "Ivanti Connect Secure is under active exploitation. Ask IT about affected versions, current vendor action and assessment of possible earlier compromise."
+  },
+  {
+    "slug": "windows-shell-october-2026-update",
+    "title": "Microsoft's October Windows Shell warning: what to confirm with IT",
+    "lane": "Professional services",
+    "readMin": 3,
+    "collection": "blog",
+    "date": "2026-10-13",
+    "metaDesc": "Microsoft reports exploitation of CVE-2026-96951. Ask IT to identify affected Windows devices, apply the right update and verify the required restart."
+  },
+  {
     "slug": "accounting-firms-core-vs-command",
     "title": "Choosing between a standardized stack and full program ownership: Helm Core vs Helm Command for accounting firms",
     "lane": "Accounting firms",
