@@ -49,18 +49,18 @@ export default function AdConsent() {
   return (
     <section className="ad-consent" aria-label="Advertising privacy choices">
       <div>
-        <div className="ad-consent-title">Your privacy choice</div>
+        <div className="ad-consent-title">Advertising cookies</div>
         <p>
-          We use optional cookies to measure visits and show relevant ads.
-          These cookies stay off unless you allow them. <Link to="/privacy/">Details</Link>
+          We use optional advertising cookies to measure ad performance and show you ads based on your visit.
+          You can change your choice anytime. <Link to="/privacy/">Privacy details</Link>
         </p>
       </div>
       <div className="ad-consent-actions">
         <button type="button" className="ad-consent-decline" onClick={() => decide('declined')}>
-          No thanks
+          Reject advertising cookies
         </button>
         <button type="button" className="ad-consent-accept" onClick={() => decide('accepted')}>
-          Allow remarketing
+          Allow advertising cookies
         </button>
       </div>
     </section>
