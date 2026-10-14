@@ -158,6 +158,156 @@ const sources = {
 
 export const articleSupport: Record<string, ArticleSupport> = {
 
+  "fix-dmarc-monitoring-policy": {
+    "relatedSlugs": [
+      "what-is-dmarc",
+      "check-website-security"
+    ],
+    "sources": [
+      {
+        "title": "Microsoft’s deployment guidance",
+        "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure"
+      },
+      {
+        "title": "Google Workspace’s guidance",
+        "href": "https://knowledge.workspace.google.com/admin/security/set-up-dmarc"
+      }
+    ]
+  },
+  "fix-dmarc-reporting": {
+    "relatedSlugs": [
+      "what-is-dmarc",
+      "check-website-security"
+    ],
+    "sources": [
+      {
+        "title": "aggregate-reporting standard",
+        "href": "https://datatracker.ietf.org/doc/html/rfc9990"
+      }
+    ]
+  },
+  "verify-dkim-signing": {
+    "relatedSlugs": [
+      "what-is-dmarc",
+      "check-website-security"
+    ],
+    "sources": [
+      {
+        "title": "Google Workspace’s DKIM instructions",
+        "href": "https://knowledge.workspace.google.com/admin/security/set-up-dkim"
+      }
+    ]
+  },
+  "review-spf-softfail": {
+    "relatedSlugs": [
+      "what-is-dmarc",
+      "check-website-security"
+    ],
+    "sources": [
+      {
+        "title": "SPF standard",
+        "href": "https://datatracker.ietf.org/doc/html/rfc7208"
+      },
+      {
+        "title": "Microsoft’s SPF setup guide",
+        "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
+      }
+    ]
+  },
+  "fix-spf-record": {
+    "relatedSlugs": [
+      "what-is-dmarc",
+      "check-website-security"
+    ],
+    "sources": [
+      {
+        "title": "Microsoft’s SPF setup guide",
+        "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
+      },
+      {
+        "title": "RFC 7208",
+        "href": "https://datatracker.ietf.org/doc/html/rfc7208"
+      }
+    ]
+  },
+  "enable-dnssec-safely": {
+    "relatedSlugs": [
+      "what-is-dmarc",
+      "check-website-security"
+    ],
+    "sources": [
+      {
+        "title": "DNSSEC introduction",
+        "href": "https://datatracker.ietf.org/doc/html/rfc4033"
+      },
+      {
+        "title": "current DNSSEC instructions",
+        "href": "https://developers.cloudflare.com/dns/dnssec/"
+      }
+    ]
+  },
+  "set-up-mta-sts": {
+    "relatedSlugs": [
+      "what-is-dmarc",
+      "check-website-security"
+    ],
+    "sources": [
+      {
+        "title": "Microsoft’s MTA-STS guidance",
+        "href": "https://learn.microsoft.com/en-us/exchange/security-and-compliance/enhance-mail-flow-using-strict-transport-security"
+      },
+      {
+        "title": "MTA-STS standard",
+        "href": "https://datatracker.ietf.org/doc/html/rfc8461"
+      }
+    ]
+  },
+  "set-up-tls-reporting": {
+    "relatedSlugs": [
+      "what-is-dmarc",
+      "check-website-security"
+    ],
+    "sources": [
+      {
+        "title": "TLS-RPT",
+        "href": "https://datatracker.ietf.org/doc/html/rfc8460"
+      }
+    ]
+  },
+  "fix-mx-mail-routing": {
+    "relatedSlugs": [
+      "what-is-dmarc",
+      "check-website-security"
+    ],
+    "sources": [
+      {
+        "title": "SMTP’s routing standard",
+        "href": "https://datatracker.ietf.org/doc/html/rfc5321"
+      }
+    ]
+  },
+  "investigate-smtp-check": {
+    "relatedSlugs": [
+      "what-is-dmarc",
+      "check-website-security"
+    ],
+    "sources": []
+  },
+  "fix-website-https": {
+    "relatedSlugs": [
+      "what-is-dmarc",
+      "check-website-security"
+    ],
+    "sources": [
+      {
+        "title": "TLS protects a connection and authenticates its endpoint",
+        "href": "https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Transport_Layer_Security"
+      }
+    ]
+  }
+,
+
+
   "ivanti-connect-secure-october-2026-exploitation": {
     "relatedSlugs": [
       "zero-day-vs-known-vulnerabilities",

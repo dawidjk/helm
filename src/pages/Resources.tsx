@@ -49,6 +49,24 @@ const startChoices: StartChoice[] = [
 ];
 
 const guideGroups: GuideGroup[] = [
+{
+  "id": "public-configuration-help",
+  "title": "Investigate public scan findings",
+  "description": "Follow a specific finding with the responsible administrator. Each guide explains prerequisites, validation and recovery; an inconclusive result needs another check.",
+  "slugs": [
+    "fix-dmarc-monitoring-policy",
+    "fix-dmarc-reporting",
+    "verify-dkim-signing",
+    "review-spf-softfail",
+    "fix-spf-record",
+    "enable-dnssec-safely",
+    "set-up-mta-sts",
+    "set-up-tls-reporting",
+    "fix-mx-mail-routing",
+    "investigate-smtp-check",
+    "fix-website-https"
+  ]
+},
   {
     id: 'choose-security-partner',
     title: 'Choose a security provider and service model',

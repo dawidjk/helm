@@ -887,11 +887,20 @@ export const refreshedArticles: Article[] = [
         "h": "Repeat checks after meaningful changes",
         "ps": [
           "A hosting migration, major application update, new form or provider transition can make an earlier review out of date. Revisit the public surface and the owner's evidence after these changes, recording the date and scope so you know which version of the site the findings describe.",
-          "When answering a customer questionnaire, say what was checked and which provider supplied the internal evidence. Public findings support a statement about the configuration observed at that time. Claims about access, maintenance or recovery also need the administrative records or test results for those controls."
+          "When answering a customer questionnaire, say what was checked and which provider supplied the internal evidence. Public findings support a statement about the configuration observed at that time. Claims about access, maintenance or recovery also need the administrative records or test results for those controls.",
+          {
+            "text": "For a specific configuration problem, use the HTTPS and certificate troubleshooting guide.",
+            "links": [
+              {
+                "phrase": "HTTPS and certificate troubleshooting guide",
+                "to": "/resources/fix-website-https/"
+              }
+            ]
+          }
         ]
       }
     ],
-    "updated": "2026-10-07"
+    "updated": "2026-10-14"
   },
   {
     "slug": "choose-first-ai-workflow",
@@ -8747,7 +8756,7 @@ export const refreshedArticles: Article[] = [
     "title": "What Is DMARC? A Plain-English Guide for Business Owners",
     "metaDesc": "Learn what SPF, DKIM and DMARC check. Inventory senders, review reports and plan enforcement without treating authentication as a fraud guarantee.",
     "date": "2026-06-10",
-    "updated": "2026-10-07",
+    "updated": "2026-10-14",
     "readMin": 8,
     "lane": "All industries",
     "laneTo": "/",
@@ -8890,7 +8899,32 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "Before treating the work as complete, confirm that the sender inventory covers the services the business actually uses. Each approved service should have an owner, a supported authentication arrangement and a recorded test. Reports should reach a monitored destination, with unexplained sources assigned for investigation.",
           "Confirm that enforcement has a documented business test and a recovery procedure. Staff should know where to report missing mail. Future purchases should include a sending review, and departed administrators should not retain DNS or platform access.",
-          "If you do not have that evidence yet, ask the inventory owner for the current authentication results for your important sending services. Those results help you check how the firm’s published DNS configuration applies to the mail it actually sends."
+          "If you do not have that evidence yet, ask the inventory owner for the current authentication results for your important sending services. Those results help you check how the firm’s published DNS configuration applies to the mail it actually sends.",
+          {
+            "text": "For a specific configuration problem, use DMARC policy-change checklist, DMARC reporting setup, SPF softfail review, SPF record repair, DKIM signing verification.",
+            "links": [
+              {
+                "phrase": "DMARC policy-change checklist",
+                "to": "/resources/fix-dmarc-monitoring-policy/"
+              },
+              {
+                "phrase": "DMARC reporting setup",
+                "to": "/resources/fix-dmarc-reporting/"
+              },
+              {
+                "phrase": "SPF softfail review",
+                "to": "/resources/review-spf-softfail/"
+              },
+              {
+                "phrase": "SPF record repair",
+                "to": "/resources/fix-spf-record/"
+              },
+              {
+                "phrase": "DKIM signing verification",
+                "to": "/resources/verify-dkim-signing/"
+              }
+            ]
+          }
         ]
       }
     ],

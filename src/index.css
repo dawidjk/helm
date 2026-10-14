@@ -5424,3 +5424,6 @@ ol.article-checklist,
   scroll-margin-block-start: calc(var(--site-nav-block-size) + 24px);
   scroll-margin-block-end: 24px;
 }
+
+/* Mobile-readable excerpts from official provider documentation. */
+.article-explainer img[src^="/guides/official-"] { max-width: 390px; }
