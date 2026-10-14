@@ -71,7 +71,7 @@ try{
           if(r.resourceType()==='script')await gate;
           return await r.continue();
         }
-        requests.push({url:r.url(),method:r.method()});
+        requests.push({url:r.url(),method:r.method(),resourceType:r.resourceType()});
         if(['www.googletagmanager.com','connect.facebook.net'].includes(url.hostname))return await r.respond({status:200,contentType:'text/javascript',body:'/* Synthetic SDK; no collection or cookies. */'});
         return await r.respond({status:204});
       }catch{/* Closing an isolated context can cancel a gated request. */}
@@ -116,9 +116,13 @@ try{
         await page.keyboard.press('Escape');await page.waitForFunction(()=>!document.querySelector('.cookie-dialog').open&&document.activeElement.classList.contains('footer-privacy-button'));
       }
       if(process.env.HELM_TEST_SCREENSHOTS&&test.name.startsWith('first-visit'))await page.screenshot({path:path.join(process.env.HELM_TEST_SCREENSHOTS,`cookie-flicker-${test.width||390}.png`)});
-      assert.deepEqual(errors,[]);assert.deepEqual(warnings,[]);assert.ok(requests.every(r=>r.method==='GET'));
-      rows.push({name:test.name,passed:true,width:test.width||390,height:test.height||823,preHydrationBanner:false,preferenceResolvedBeforeBanner:true,returningBannerNeverFlashes:!test.banner,expectedCategories:expected,reopenKeyboardPassed:true,rejectAndWithdrawalPassed:test.banner,overflow:false,errors,warnings});
-    }catch(error){failures.push({name:test.name,error:error.stack});rows.push({name:test.name,passed:false,error:error.message});}
+      assert.deepEqual(errors,[]);assert.deepEqual(warnings,[]);
+      // Production can inject a Cloudflare browser-security challenge. It is
+      // intercepted too; only that path is allowed beyond SDK GET requests.
+      const securityRequests=requests.filter(r=>new URL(r.url).origin===origin&&new URL(r.url).pathname.startsWith('/cdn-cgi/challenge-platform/'));
+      assert.ok(requests.every(r=>r.method==='GET'||securityRequests.includes(r)),'No form submissions or unexpected writes');
+      rows.push({name:test.name,passed:true,width:test.width||390,height:test.height||823,preHydrationBanner:false,preferenceResolvedBeforeBanner:true,returningBannerNeverFlashes:!test.banner,expectedCategories:expected,reopenKeyboardPassed:true,rejectAndWithdrawalPassed:test.banner,securityChallengeRequestsIntercepted:securityRequests.length,overflow:false,errors,warnings});
+    }catch(error){failures.push({name:test.name,error:error.stack,requests:requests.map(r=>({method:r.method,resourceType:r.resourceType,origin:new URL(r.url).origin,path:new URL(r.url).pathname.startsWith('/cdn-cgi/challenge-platform/')?'/cdn-cgi/challenge-platform/…':new URL(r.url).pathname}))});rows.push({name:test.name,passed:false,error:error.message});}
     finally{release();await context.close();await navigation.catch(()=>{});}
   }
   if(!process.env.HELM_CONSENT_CASE){
