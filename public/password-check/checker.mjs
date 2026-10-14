@@ -46,7 +46,7 @@ form.addEventListener('submit',async event=>{
   finally{hash='';suffix='';clearTimeout(timeout);if(request===generation){busy=false;controller=null;submit.disabled=false;form.removeAttribute('aria-busy');}}
 });
 if(window.top!==window){show('Open the checker as a separate page','The password field is disabled when this page is embedded. Open the password-check page directly to use it.');return;}
-if(window.isSecureContext&&crypto.subtle){input.disabled=false;submit.disabled=false;}else show('This browser cannot run the check','Open this page over HTTPS in a browser that supports local cryptographic operations. No lookup was sent.');
+if(window.isSecureContext&&crypto.subtle){input.disabled=false;submit.disabled=false;document.getElementById('startup').hidden=true;}else show('This browser cannot run the check','Open this page over HTTPS in a browser that supports local cryptographic operations. No lookup was sent.');
 
 }
 if(typeof document!=='undefined')setupChecker();

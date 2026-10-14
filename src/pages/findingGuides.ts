@@ -41,7 +41,9 @@ export const findingGuides: Article[] = [
         "figure": {
           "src": "/guides/official-dmarc-annotated.png",
           "alt": "Google Workspace documentation explains that DMARC records are configured at the domain host, with a Helm annotation identifying the DNS owner.",
-          "caption": "Annotated excerpt of Google Workspace public documentation, captured October 14, 2026. Documentation example, not an account screenshot. Source: Google Workspace DMARC setup documentation. CC BY 4.0; Helm annotation added."
+          "caption": "Annotated excerpt of Google Workspace public documentation, captured October 14, 2026. Documentation example, not an account screenshot. Source: Google Workspace DMARC setup documentation. CC BY 4.0; Helm annotation added.",
+          "width": 774,
+          "height": 960
         }
       }
     ],
@@ -131,7 +133,9 @@ export const findingGuides: Article[] = [
         "figure": {
           "src": "/guides/official-dkim-annotated.png",
           "alt": "Google Workspace documentation highlights starting DKIM authentication after publishing the public record.",
-          "caption": "Annotated excerpt of Google Workspace public documentation, captured October 14, 2026. Documentation example, not an account screenshot. Source: Google Workspace DKIM setup documentation. CC BY 4.0; Helm annotation added."
+          "caption": "Annotated excerpt of Google Workspace public documentation, captured October 14, 2026. Documentation example, not an account screenshot. Source: Google Workspace DKIM setup documentation. CC BY 4.0; Helm annotation added.",
+          "width": 774,
+          "height": 672
         }
       },
       {

@@ -20,7 +20,7 @@ export type Article = {
   intro: Paragraph;
   lead?: Paragraph[];
   readingLayout?: boolean;
-  sections: {h: string; ps: (Paragraph | {list: Paragraph[]; ordered?: boolean})[]; table?: {caption: string; headers: string[]; rows: string[][]}; figure?: {src: string; alt: string; caption: string}}[];
+  sections: {h: string; ps: (Paragraph | {list: Paragraph[]; ordered?: boolean})[]; table?: {caption: string; headers: string[]; rows: string[][]}; figure?: {src: string; alt: string; caption: string; width?: number; height?: number}}[];
   takeaway: string;
   organizationByline?: boolean;
   hideVisual?: boolean;

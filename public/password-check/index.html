@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-Tg5RBU+C96jy6CiAsy4xOJkM6NxJynyvCm9i91on4Lc=' 'strict-dynamic'; style-src 'self'; connect-src https://api.pwnedpasswords.com; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-anN4tm84L7GDuD0f+u28YG5QECrc6tyz/RQU3Ee7g20=' 'strict-dynamic'; style-src 'self'; connect-src https://api.pwnedpasswords.com; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
   <title>Check a Password Against Known Exposure Data | Helm</title>
   <meta name="description" content="Check a password value against HIBP’s known exposed-password data. The password and full hash stay in your browser; the service receives a short hash prefix.">
   <link rel="canonical" href="https://helmsecured.com/password-check/">
   <link rel="stylesheet" href="./checker.css">
-  <script type="module" src="./checker.mjs" integrity="sha256-Tg5RBU+C96jy6CiAsy4xOJkM6NxJynyvCm9i91on4Lc="></script>
+  <script type="module" src="./checker.mjs" integrity="sha256-anN4tm84L7GDuD0f+u28YG5QECrc6tyz/RQU3Ee7g20="></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to password check</a>
@@ -23,6 +23,7 @@
       <p>This page has no analytics, advertising pixels, chat or form-capture scripts. It does not store the password or hash. The input clears after submission and when the page is hidden or left.</p>
     </section>
     <form id="checker" autocomplete="off" aria-describedby="disclosure">
+      <p id="startup">The field becomes available when the local checker starts. If it stays disabled, reload the page or use a current browser over HTTPS.</p>
       <label for="password">Password to check</label>
       <input id="password" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" required disabled aria-describedby="password-help">
       <p id="password-help">The check uses exactly what you enter, including spaces and capitalization. Nothing is sent while you type.</p>

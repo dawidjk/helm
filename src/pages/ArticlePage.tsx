@@ -168,7 +168,7 @@ export default function ArticlePage() {
                 ))}
                 {s.figure && (
                   <figure className="article-explainer">
-                    <img src={s.figure.src} alt={s.figure.alt} width="400" height="530" loading="lazy" decoding="async" />
+                    <img src={s.figure.src} alt={s.figure.alt} width={s.figure.width ?? 400} height={s.figure.height ?? 530} loading="lazy" decoding="async" />
                     <figcaption>{s.figure.caption}</figcaption>
                   </figure>
                 )}
