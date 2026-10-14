@@ -25,7 +25,7 @@ export function rangeMatch(body, suffix) {
 function setupChecker(){
 const form=document.getElementById('checker'),input=document.getElementById('password'),submit=document.getElementById('submit'),clear=document.getElementById('clear'),result=document.getElementById('result'),title=document.getElementById('result-title'),copy=document.getElementById('result-copy');
 let generation=0,controller=null,busy=false;
-function show(heading,text,focus=false){title.textContent=heading;copy.textContent=text;result.hidden=false;if(focus)result.focus();}
+function show(heading,text,focus=false){title.textContent=heading;copy.textContent=text;result.hidden=false;if(focus){result.focus({preventScroll:true});result.scrollIntoView({block:'start',inline:'nearest',behavior:'instant'});}}
 function cancel(){generation++;controller?.abort();controller=null;busy=false;submit.disabled=false;form.removeAttribute('aria-busy');result.hidden=true;title.textContent='';copy.textContent='';}
 function clearAll(){cancel();input.value='';}
 input.addEventListener('input',cancel);

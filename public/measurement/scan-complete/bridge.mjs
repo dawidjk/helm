@@ -1,4 +1,5 @@
 export const CONSENT_KEY = 'helm-remarketing-consent-v1';
+export const PREFERENCES_KEY = 'helm-cookie-preferences-v2';
 export const COMMAND = 'helm:scan-completed';
 
 export function validContext(win, doc, config) {
@@ -16,7 +17,14 @@ export function isCompletionCommand(event, win, config) {
 }
 
 export function hasConsent(win) {
-  try { return win.localStorage.getItem(CONSENT_KEY) === 'accepted'; }
+  try {
+    const raw = win.localStorage.getItem(PREFERENCES_KEY);
+    if (raw) {
+      const value = JSON.parse(raw);
+      if (value.version === 2 && value.decided === true && typeof value.advertising === 'boolean') return value.advertising;
+    }
+    return win.localStorage.getItem(CONSENT_KEY) === 'accepted';
+  }
   catch { return false; }
 }
 
@@ -37,7 +45,7 @@ export function installBridge(win, doc, config) {
     }
   };
   const onStorage = event => {
-    if ((event.key === CONSENT_KEY || event.key === null) && !hasConsent(win)) revoke();
+    if ((event.key === CONSENT_KEY || event.key === PREFERENCES_KEY || event.key === null) && !hasConsent(win)) revoke();
   };
   const onMessage = event => {
     if (attempted || !isCompletionCommand(event, win, config)) return;

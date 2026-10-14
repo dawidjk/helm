@@ -3,7 +3,7 @@ import {NavLink as RouterNavLink, Link, useLocation} from 'react-router-dom';
 import LeadForm, {PORTAL_URL} from './LeadForm';
 import ThemePicker from './ThemePicker';
 import {canonicalPath} from '../lib/urls';
-import {isRemarketingConfigured, openPrivacyChoices} from '../lib/adTracking';
+import {openPrivacyChoices} from '../lib/adTracking';
 import {
   businessPhone,
   facebookUrl,
@@ -524,7 +524,6 @@ export function MailingAddress() {
 }
 
 export function SiteFooter() {
-  const remarketingConfigured = isRemarketingConfigured();
   const [year, setYear] = useState<number>(import.meta.env.HELM_BUILD_YEAR);
   useEffect(() => { setYear(new Date().getFullYear()); }, []);
   return (
@@ -555,7 +554,7 @@ export function SiteFooter() {
                   {l.label}
                 </Link>
               ))}
-              {col.title === 'Legal' && remarketingConfigured && (
+              {col.title === 'Legal' && (
                 <button type="button" className="footer-privacy-button" onClick={openPrivacyChoices}>
                   Privacy choices
                 </button>

@@ -1,4 +1,5 @@
 import {trackMetaConversion} from './adTracking';
+import {analyticsAllowed} from './cookiePreferences';
 
 export const CONVERSION_EVENTS = [
   'scan_started',
@@ -81,6 +82,8 @@ export function getAttribution(source?: string): Attribution {
     referrerHost: referrerHost(),
   };
 
+  if (!analyticsAllowed()) return {journeyId: '', ...current};
+
   let stored: Partial<Attribution> = {};
   try {
     stored = JSON.parse(sessionStorage.getItem(ATTRIBUTION_KEY) ?? '{}') as Partial<Attribution>;
@@ -110,8 +113,9 @@ export function getAttribution(source?: string): Attribution {
 
 /** Add the non-personal journey and campaign fields to an internal Helm URL. */
 export function withAttribution(url: string, source?: string): string {
-  const attribution = getAttribution(source);
   const target = new URL(url, window.location.origin);
+  if (!analyticsAllowed()) return target.toString();
+  const attribution = getAttribution(source);
   const fields: Record<string, string | null> = {
     j: attribution.journeyId,
     src: attribution.source,
@@ -138,6 +142,7 @@ export function trackConversion(
   source?: string,
 ): void {
   trackMetaConversion(event);
+  if (!analyticsAllowed()) return;
   const body = JSON.stringify({event, ...getAttribution(source)});
   try {
     if (

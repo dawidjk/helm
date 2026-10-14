@@ -5497,3 +5497,78 @@ ol.article-checklist,
 @media (max-width: 700px) {
   .ad-consent { max-height: calc(100svh - 24px); }
 }
+
+
+/* Category choices follow the site's form and paper surfaces. */
+.ad-consent-actions { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ad-consent button, .cookie-dialog button {
+  min-height: 44px;
+  border: 1px solid var(--helm-hairline);
+  background: light-dark(#214b3b, #d2b993);
+  color: light-dark(#fffdf7, #132019);
+  border-radius: 12px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+.cookie-dialog {
+  width: min(680px, calc(100% - 32px));
+  max-height: calc(100svh - 32px);
+  padding: clamp(20px, 4vw, 32px);
+  border: 1px solid var(--helm-hairline);
+  border-radius: 16px;
+  color: var(--helm-text);
+  background: var(--helm-surface);
+  overflow: auto;
+}
+.cookie-dialog:not([open]) { display: none; }
+.cookie-dialog::backdrop { background: rgba(10, 20, 14, 0.65); }
+.cookie-dialog-head { display: flex; align-items: start; justify-content: space-between; gap: 24px; }
+.cookie-dialog-head h2 { margin: 0; font-size: 28px; }
+.cookie-dialog p { line-height: 1.55; }
+.cookie-category { border-top: 1px solid var(--helm-hairline); padding-block: 20px; }
+.cookie-category label { display: flex; align-items: center; gap: 12px; font-weight: 600; }
+.cookie-category input { width: 24px; height: 24px; accent-color: light-dark(#214b3b, #d2b993); }
+.cookie-category input:disabled { opacity: 1; }
+.cookie-category p { margin-bottom: 0; }
+.cookie-dialog-actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.cookie-dialog :is(button, input, a):focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.cookie-dialog button:focus-visible { outline-offset: -4px; }
+.cookie-dialog-actions button { scroll-margin-block: 20px; }
+@media (max-width: 700px) {
+  .ad-consent-actions { grid-template-columns: minmax(0, 1fr); }
+  .cookie-dialog-actions { grid-template-columns: minmax(0, 1fr); }
+}
+
+
+/* Shared keyboard controls clear the sticky navigation; headings retain their anchor offsets. */
+main :is(a, button, input, select, textarea) {
+  scroll-margin-block-start: calc(var(--site-nav-block-size) + 24px);
+  scroll-margin-block-end: 24px;
+}
+main :is(input, select, textarea) {
+  scroll-margin-block-start: calc(var(--site-nav-block-size) + 48px);
+}
+
+.cookie-category label { min-height: 44px; }
+.cookie-dialog input:focus-visible { outline-color: var(--helm-text-strong); }
+
+.cookie-dialog :is(input, a) { scroll-margin-block: 12px; }
+@media (max-height: 320px) {
+  .ad-consent {
+    position: relative;
+    inset: auto;
+    width: calc(100% - 24px);
+    max-height: none;
+    overflow: visible;
+    margin: 24px auto;
+  }
+  .ad-consent button {
+    scroll-margin-block-start: calc(var(--site-nav-block-size) + 24px);
+  }
+}
+
+/* Keyboard focus clearance uses the final native scroll position. */
+html.keyboard-focus-scroll { scroll-behavior: auto; }
