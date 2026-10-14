@@ -3,10 +3,9 @@ import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {useParams, Link} from 'react-router-dom';
 import {ActionLink, Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
-import LeadForm from '../components/LeadForm';
+import ServicePreview from './ServicePreview';
 import ProductMotif from '../components/ProductMotif';
 import {productList} from './products';
-import {BOOK_CTA} from './ctaCopy';
 import {siteUrl} from '../lib/urls';
 import './ProductPage.css';
 
@@ -60,14 +59,11 @@ export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
           </h1>
           <p className="sub reveal d2">{p.desc}</p>
           <div className="hero-ctas reveal d3">
-            {p.ctaMode === 'book' ? (
-              <ActionLink
-                to="/contact/"
-                label="Discuss Command"
-              />
-            ) : (
-              <LeadForm source={`product ${p.slug}`} cta="Get my free scan" compact />
-            )}
+            <ActionLink
+              to={`/contact/?service=${p.slug}`}
+              label={p.slug === 'helm-core' ? 'Discuss Core' : 'Discuss Command'}
+            />
+            <Link className="product-scan-link" to="/free-scan/">Check public email controls first</Link>
           </div>
           <div className="hero-note reveal d3">
             {p.price} · <Link to="/pricing/">full pricing</Link>
@@ -97,6 +93,8 @@ export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
           </div>
         </div>
       </Band>
+
+      <ServicePreview command={p.slug === 'helm-command'} />
 
       {p.slug === 'helm-command' && <CommandReadinessSection />}
 
@@ -129,21 +127,14 @@ export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
         </div>
       </Band>
 
-      {p.ctaMode === 'book' ? (
-        <CtaBand
-          title={BOOK_CTA.title}
-          sub={BOOK_CTA.sub}
-          cta={BOOK_CTA.label}
-          source={`product ${p.slug} cta`}
-          mode="book"
-        />
-      ) : (
-        <CtaBand
-          title="Check your public email controls. Free."
-          sub="The free scan reports on your domain's public email and web configuration, with plain-English findings and next steps."
-          source={`product ${p.slug} cta`}
-        />
-      )}
+      <CtaBand
+        title={p.slug === 'helm-core' ? 'Discuss managed protection for your firm.' : 'Discuss security leadership for your firm.'}
+        sub="Tell us about your firm and current IT provider. We will confirm the service fit, coverage and next steps before you commit."
+        cta={p.slug === 'helm-core' ? 'Discuss Core' : 'Discuss Command'}
+        source={`product ${p.slug} cta`}
+        contactService={p.slug}
+        mode="book"
+      />
     </>
   );
 }

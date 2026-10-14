@@ -21,7 +21,7 @@ export default function FreeScan() {
           <p className="sub reveal d2">
             Enter your work email. The scan checks public email records and limited web configuration
             for your domain. It does not access your accounts or assess internal
-            controls. You receive a scored, plain-English report, usually in about a minute.
+            controls. Your scored report opens on screen, usually in about a minute.
           </p>
           <div className="hero-ctas reveal d3">
             <LeadForm source="free-scan page" cta="Run my free scan" compact />
@@ -56,7 +56,7 @@ export default function FreeScan() {
           <li className="observe d1">
             <div className="step-dot">1</div>
             <h3>Confirm your domain</h3>
-            <p>Our secure portal fills in your company domain from your email. Confirm the domain there to start the scan.</p>
+            <p>Our secure portal fills in your company domain from your email. The portal starts the scan after its browser security check. You can correct the domain if needed.</p>
           </li>
           <li className="observe d2">
             <div className="step-dot">2</div>
@@ -65,13 +65,13 @@ export default function FreeScan() {
           </li>
           <li className="observe d3">
             <div className="step-dot">3</div>
-            <h3>Choose email follow-up</h3>
-            <p>In the portal, choose whether to receive an emailed report link and one short follow-up about the findings.</p>
+            <h3>Use the findings</h3>
+            <p>Share the relevant findings with your IT contact. Each finding explains its limits and suggests what to verify before changing a setting.</p>
           </li>
           <li className="observe d4">
             <div className="step-dot">4</div>
             <h3>You decide what happens next</h3>
-            <p>Fix the findings yourself, ask us for help, or unsubscribe from the follow-up at any time.</p>
+            <p>Contact Helm if you want help deciding what to address next. Email follow-up is optional and does not affect access to your on-screen report.</p>
           </li>
         </ol>
       </Band>

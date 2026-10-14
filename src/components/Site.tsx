@@ -439,6 +439,7 @@ export function CtaBand({
   cta = 'Get my free scan',
   source,
   mode = 'scan',
+  contactService,
 }: {
   title: string;
   sub: string;
@@ -446,6 +447,7 @@ export function CtaBand({
   source: string;
   /** 'scan' (default) shows the instant-scan LeadForm; 'book' links to /contact. */
   mode?: 'scan' | 'book';
+  contactService?: string;
 }) {
   const mailSubject = mode === 'book' ? `${cta} (${source})` : 'Free security scan request';
   const mailBody =
@@ -454,7 +456,9 @@ export function CtaBand({
       : "Hi Helm team,\n\nI'd like the free security scan for my company.\n\nCompany:\nWebsite domain:\nBest phone (optional):\n\nThanks!";
   const contactPath =
     mode === 'book'
-      ? `/contact?intent=findings-call&src=${encodeURIComponent(source)}`
+      ? contactService
+        ? `/contact?service=${encodeURIComponent(contactService)}&src=${encodeURIComponent(source)}`
+        : `/contact?intent=findings-call&src=${encodeURIComponent(source)}`
       : '/contact';
   return (
     <section className="cta-band" id="contact">

@@ -2,7 +2,7 @@ import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {useEffect, useRef, useState} from 'react';
 import {useSearchParams} from 'react-router-dom';
 import {Button} from '@astryxdesign/core/Button';
-import {Band, MailingAddress, ScrollCue} from '../components/Site';
+import {Band, MailingAddress} from '../components/Site';
 import Meta from '../components/Meta';
 import {getAttribution, trackConversion} from '../lib/measurement';
 import {contactSubmissionId, trackContactSuccess} from '../lib/contactSubmission';
@@ -133,7 +133,7 @@ export default function Contact() {
         desc="Contact Helm about managed cybersecurity through Core or Command, or a separately scoped Secure AI Adoption engagement."
         path="/contact"
       />
-      <header className="hero lane brand-hero">
+      <header className="hero lane brand-hero contact-hero">
         <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal hero-h1-sm">
@@ -144,7 +144,6 @@ export default function Contact() {
             business hours about fit and next steps.
           </p>
         </div>
-        <ScrollCue />
       </header>
 
       <Band>
@@ -180,7 +179,7 @@ export default function Contact() {
               </label>
               <label>
                 Company
-                <input type="text" name="company" required maxLength={150} autoComplete="organization" placeholder="Rivera Machining Co." />
+                <input type="text" name="company" required maxLength={150} autoComplete="organization" placeholder="Rivera Advisory Group" />
               </label>
             </div>
 
@@ -200,7 +199,7 @@ export default function Contact() {
                 How many employees does your firm have?
                 <select name="employeeCount" required defaultValue="">
                   <option value="" disabled>Choose a range…</option>
-                  {['1-9', '10-19', '20-75', '75-250', '500+'].map((range) => (
+                  {['1-9', '10-19', '20-74', '75-250', '251-499', '500+'].map((range) => (
                     <option key={range} value={range}>{range}</option>
                   ))}
                 </select>

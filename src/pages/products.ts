@@ -25,8 +25,8 @@ export const productList: Product[] = [
     motif: 'core',
     name: 'Helm Core',
     metaTitle: 'Helm Core: Managed Cybersecurity for NJ Businesses',
-    tagline: 'The security stack your business needs, managed as one service.',
-    desc: 'Helm Core gives New Jersey businesses managed cybersecurity alongside their existing IT team. It combines email protection, managed detection and response, identity protection, cloud backup, security awareness, and digital risk protection in one per-user service. Your existing IT provider keeps the help desk and routine IT. Helm runs the security layer and gives you one clear monthly report.',
+    tagline: 'Managed protection alongside your IT team.',
+    desc: 'Keep your IT provider. Helm manages the security layer for your firm, covering email, supported devices and identities, cloud productivity backup, employee awareness, and digital risk protection. One monthly report shows what is covered and which actions need your attention.',
     bestFor: 'organizations with 20 to 75 people that need complete, standardized protection without adding another high-touch consulting relationship',
     metaDesc:
       'Helm Core combines email, device, identity, backup, awareness, and digital risk protection for $125 per user each month with a $2,500 monthly minimum.',
@@ -71,7 +71,7 @@ export const productList: Product[] = [
     name: 'Helm Command',
     metaTitle: 'Helm Command: vCISO Leadership and Managed Security',
     tagline: 'vCISO leadership and managed security.',
-    desc: 'Helm Command combines virtual chief information security officer (vCISO) leadership with the complete Helm Core protection stack. Helm maintains your risk register, roadmap, evidence, questionnaire responses, and quarterly leadership reviews while your existing IT provider or internal team runs general IT and completes assigned remediation.',
+    desc: 'When client questionnaires and security decisions need a clear owner, Helm Command adds virtual chief information security officer (vCISO) leadership to the covered Core protection stack. Helm maintains the risk register, roadmap and evidence, drafts agreed questionnaire responses, and leads quarterly reviews. Your IT team keeps general IT and assigned remediation.',
     bestFor: "organizations with 75 to 250 people that need an accountable security-program owner, regular leadership reviews, and evidence kept up to date",
     metaDesc:
       'Helm Command combines vCISO leadership with managed security, risk planning and evidence upkeep starting at $10,000/month. Covered Core protection is included.',

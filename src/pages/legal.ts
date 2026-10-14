@@ -200,14 +200,14 @@ export const privacy: LegalDoc = {
     {
       h: '2. How we use it',
       body: [
-        `To run the scan, show you the report, and send a short follow-up sequence about the findings when the scan identifies actionable gaps. To respond to enquiries and provide quotes. To deliver, monitor and support the services you buy. To detect, investigate and respond to security incidents in your environment. To bill you and keep accounting records. To send service and security notices. To improve our services and our site.`,
+        `To run the scan and show you the report on screen. We use your email to secure and recover the scan. Requesting a scan does not automatically subscribe you to marketing email. To respond to enquiries and provide quotes. To deliver, monitor and support the services you buy. To detect, investigate and respond to security incidents in your environment. To bill you and keep accounting records. To send service and security notices. To improve our services and our site.`,
         `We do not sell personal information. We do not use customer service telemetry to market to employees. We share the limited advertising events described above with Meta only after a website visitor chooses to allow remarketing.`,
       ],
     },
     {
       h: '3. Marketing email',
       body: [
-        `The scan form tells you that requesting a scan starts a short report-related follow-up sequence when the report identifies actionable gaps. We may also send occasional email about Helm products and security guidance relevant to your business. Every marketing message has an unsubscribe option, and unsubscribing never affects service notices or incident alerts, which are operational and cannot be opted out of while you are a customer.`,
+        `The scan report appears on screen; an emailed report is not required to access it. The portal offers a separate optional email follow-up choice. We use that choice to record your request for report-related follow-up. We may send marketing email about Helm products and security guidance when you have agreed to receive it. Every marketing message has an unsubscribe option, and unsubscribing never affects service notices or incident alerts, which are operational and cannot be opted out of while you are a customer.`,
       ],
     },
     {
