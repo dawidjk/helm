@@ -1,6 +1,7 @@
 import type {ComponentType} from 'react';
 import {articleSlugs, blogSlugs} from './pages/articleSlugs';
 import {productSlugs} from './pages/productSlugs';
+import {countyCatalog} from './pages/countyCatalog';
 import type {RouteRecord} from 'vite-react-ssg';
 import Layout from './App';
 import GlobalErrorBoundary from './components/GlobalErrorBoundary';
@@ -57,6 +58,15 @@ const lazyContractors = async () => {
   return {Component: () => <LanePage lane={contractors} />};
 };
 
+const lazyCounty = (slug: string) => async () => {
+  const [{default: CountyPage}, {countyPages}] = await Promise.all([
+    import('./pages/CountyPage'), import('./pages/countyPages'),
+  ]);
+  const page = countyPages.find(county => county.slug === slug);
+  if (!page) throw new Response('Page not found', {status: 404});
+  return {Component: () => <CountyPage page={page} />};
+};
+
 const lazyTerms = async () => {
   const [{default: LegalPage}, {terms}] = await Promise.all([
     import('./pages/LegalPage'),
@@ -91,6 +101,8 @@ export const routes: RouteRecord[] = [
     entry: 'src/App.tsx',
     children: [
       {index: true, lazy: lazyPage(() => import('./pages/Home'))},
+      {path: 'service-areas/', lazy: lazyPage(() => import('./pages/ServiceAreas'))},
+      ...countyCatalog.map(page => ({path: `service-areas/${page.slug}/`, lazy: lazyCounty(page.slug)})),
       {path: 'manufacturing/', lazy: lazyManufacturing},
       {path: 'professional-services/', lazy: lazyProfessionalServices},
       {path: 'law-firms/', lazy: lazyLawFirms},

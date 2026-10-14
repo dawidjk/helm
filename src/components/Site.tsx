@@ -126,6 +126,7 @@ const footerCols = [
   {
     title: 'Company',
     links: [
+      {to: '/service-areas/', label: 'Service areas'},
       {to: '/about', label: 'About'},
       {to: '/resources', label: 'Resources'},
       {to: '/blog', label: 'Blog'},

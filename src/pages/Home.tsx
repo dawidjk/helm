@@ -183,8 +183,9 @@ export default function Home() {
         <PanelVisual />
       </section>
       <section className="home-region" aria-labelledby="home-region-title">
-        <h2 id="home-region-title">Serving businesses in Monmouth, Middlesex and Ocean counties.</h2>
+        <h2 id="home-region-title">Serving businesses in New Jersey.</h2>
         <p>Based in New Jersey, Helm works alongside your existing IT team. Start with your industry’s needs: <Link to="/professional-services/">professional services</Link>, <Link to="/manufacturing/">manufacturing and defense</Link>, or <Link to="/contractors/">contractors and trades</Link>.</p>
+        <Link className="home-detail-link" to="/service-areas/">Service areas <DirectionIcon /></Link>
       </section>
     </div>
   );

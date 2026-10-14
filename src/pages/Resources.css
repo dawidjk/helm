@@ -7,6 +7,38 @@ a[href*="src=article%20meraki-october-2026-security-update"] + .cta-alt a:focus-
   margin-top: 40px;
 }
 
+.county-breadcrumb {
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #f5f1e8;
+}
+
+.county-breadcrumb a {
+  display: inline-block;
+  padding-block: 8px;
+  color: inherit;
+  text-underline-offset: 4px;
+}
+
+.county-breadcrumb a:focus-visible {
+  outline-color: #f5f1e8;
+}
+
+.county-reading > h2 {
+  margin-top: 64px;
+  margin-bottom: 20px;
+}
+
+.county-reading > h2:first-child {
+  margin-top: 0;
+}
+
+.county-reading > h3 {
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
 .blog-resources-link a {
   display: inline-block;
   padding-block: 12px;
