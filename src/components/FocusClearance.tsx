@@ -9,7 +9,7 @@ export default function FocusClearance() {
     const pointer = () => { keyboard = false; };
     const focus = (event: FocusEvent) => {
       const control = event.target;
-      if (!keyboard || !(control instanceof HTMLElement) || !control.matches('a, button, input, select, textarea') || !document.getElementById('main-content')?.contains(control)) return;
+      if (!keyboard || !(control instanceof HTMLElement) || !control.matches('a, button, input, select, textarea') || (!document.getElementById('main-content')?.contains(control) && !control.closest('.site-footer, .ad-consent'))) return;
       cancelAnimationFrame(frame);
       frame = requestAnimationFrame(() => {
         if (!control.isConnected || document.activeElement !== control) return;
