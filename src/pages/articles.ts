@@ -6,6 +6,12 @@ import type {Paragraph, LinkedParagraph} from '../lib/richText';
 import {gapArticles} from './seoGapArticles';
 export type {Paragraph, LinkedParagraph};
 
+export type ArticleCodeBlock = {
+  code: string;
+  language?: 'text' | 'bash' | 'powershell';
+  caption?: string;
+};
+
 export type Article = {
   slug: string;
   /** Timely posts live in Blog; evergreen guides default to Resources. */
@@ -21,7 +27,7 @@ export type Article = {
   intro: Paragraph;
   lead?: Paragraph[];
   readingLayout?: boolean;
-  sections: {h: string; ps: (Paragraph | {list: Paragraph[]; ordered?: boolean})[]; table?: {caption: string; headers: string[]; rows: string[][]}; figure?: {src: string; alt: string; caption: string; width?: number; height?: number}}[];
+  sections: {h: string; ps: (Paragraph | {list: Paragraph[]; ordered?: boolean} | ArticleCodeBlock)[]; table?: {caption: string; headers: string[]; rows: string[][]}; figure?: {src: string; alt: string; caption: string; width?: number; height?: number}}[];
   takeaway: string;
   organizationByline?: boolean;
   hideVisual?: boolean;

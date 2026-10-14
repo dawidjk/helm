@@ -39,6 +39,53 @@ a[href*="src=article%20meraki-october-2026-security-update"] + .cta-alt a:focus-
   margin-bottom: 12px;
 }
 
+.article-code {
+  margin: 24px 0;
+}
+
+.article-read-body :is(p, li) {
+  overflow-wrap: anywhere;
+}
+
+.article-trust p a {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.article-code figcaption {
+  color: var(--helm-text-dim);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.article-code-scroll {
+  margin: 12px 0 0;
+  max-inline-size: 100%;
+  max-block-size: min(420px, calc(100svh - var(--site-nav-block-size) - 48px));
+  padding: 16px;
+  overflow: auto;
+  border: 1px solid var(--helm-hairline);
+  border-radius: 12px;
+  background: var(--helm-surface);
+  color: var(--helm-text-strong);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: pre;
+  scroll-margin-block-start: calc(var(--site-nav-block-size) + 24px);
+  scroll-margin-block-end: 24px;
+}
+
+.article-code-scroll code {
+  font: inherit;
+  white-space: inherit;
+}
+
+.article-code-scroll:focus-visible {
+  outline: 2px solid var(--helm-accent-text);
+  outline-offset: 3px;
+}
+
 .blog-resources-link a {
   display: inline-block;
   padding-block: 12px;

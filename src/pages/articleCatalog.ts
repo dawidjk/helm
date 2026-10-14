@@ -10,67 +10,67 @@ export const articleCatalog = [
     "slug": "fix-dmarc-monitoring-policy",
     "title": "Move a monitoring-only DMARC policy toward enforcement",
     "lane": "All industries",
-    "readMin": 3
+    "readMin": 16
   },
   {
     "slug": "fix-dmarc-reporting",
     "title": "Set up and verify DMARC aggregate reporting",
     "lane": "All industries",
-    "readMin": 3
+    "readMin": 16
   },
   {
     "slug": "verify-dkim-signing",
     "title": "Verify DKIM signing when a public scan finds no key",
     "lane": "All industries",
-    "readMin": 3
+    "readMin": 15
   },
   {
     "slug": "review-spf-softfail",
     "title": "Review SPF softfail before changing the policy",
     "lane": "All industries",
-    "readMin": 3
+    "readMin": 13
   },
   {
     "slug": "fix-spf-record",
     "title": "Fix a missing, duplicate or invalid SPF record",
     "lane": "All industries",
-    "readMin": 3
+    "readMin": 19
   },
   {
     "slug": "enable-dnssec-safely",
     "title": "Enable DNSSEC with your DNS host and registrar",
     "lane": "All industries",
-    "readMin": 2
+    "readMin": 15
   },
   {
     "slug": "set-up-mta-sts",
     "title": "Set up and test an MTA-STS mail policy",
     "lane": "All industries",
-    "readMin": 2
+    "readMin": 15
   },
   {
     "slug": "set-up-tls-reporting",
     "title": "Set up and verify TLS reporting for email delivery",
     "lane": "All industries",
-    "readMin": 2
+    "readMin": 13
   },
   {
     "slug": "fix-mx-mail-routing",
     "title": "Investigate and fix MX mail-routing records",
     "lane": "All industries",
-    "readMin": 3
+    "readMin": 18
   },
   {
     "slug": "investigate-smtp-check",
     "title": "Investigate an unavailable SMTP check",
     "lane": "All industries",
-    "readMin": 2
+    "readMin": 11
   },
   {
     "slug": "fix-website-https",
     "title": "Investigate and fix website HTTPS or certificate errors",
     "lane": "All industries",
-    "readMin": 2
+    "readMin": 14
   },
   {
     "slug": "meraki-october-2026-security-update",

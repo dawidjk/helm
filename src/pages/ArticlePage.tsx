@@ -31,6 +31,15 @@ function sectionId(heading: string, index: number) {
   return `${slug || 'section'}-${index + 1}`;
 }
 
+type SectionBlock = Article['sections'][number]['ps'][number];
+
+function sectionBlockText(block: SectionBlock): string {
+  if (typeof block === 'string') return block;
+  if ('code' in block) return [block.code, block.caption ?? ''].join(' ');
+  if ('list' in block) return block.list.map(item => typeof item === 'string' ? item : item.text).join(' ');
+  return block.text;
+}
+
 export default function ArticlePage() {
   const data = useLoaderData() as {article: Article; support: ArticleSupport} | null;
   // Static-loader lookup returns null for an address without a generated
@@ -54,9 +63,7 @@ export default function ArticlePage() {
     typeof a.intro === 'string' ? a.intro : a.intro.text,
     ...(a.lead ?? []).map((paragraph) => typeof paragraph === 'string' ? paragraph : paragraph.text),
     a.takeaway,
-    ...a.sections.flatMap((section) => section.ps.map((paragraph) => (
-      typeof paragraph === 'string' ? paragraph : 'list' in paragraph ? paragraph.list.map((item) => typeof item === 'string' ? item : item.text).join(' ') : paragraph.text
-    ))),
+    ...a.sections.flatMap((section) => section.ps.map(sectionBlockText)),
     ...a.sections.flatMap((section) => section.table ? [section.table.caption, ...section.table.headers, ...section.table.rows.flat()] : []),
   ].join(' ').trim().split(/\s+/).filter(Boolean).length;
 
@@ -160,7 +167,14 @@ export default function ArticlePage() {
                 <h2 id={sectionId(s.h, index)}>{s.h}</h2>
                 {s.ps.map((p, i) => (
                   <Fragment key={i}>
-                    {typeof p !== 'string' && 'list' in p ? (
+                    {typeof p !== 'string' && 'code' in p ? (
+                      <figure className="article-code">
+                        {p.caption && <figcaption id={`code-caption-${index}-${i}`}>{p.caption}</figcaption>}
+                        <pre className="article-code-scroll" role="region" aria-labelledby={p.caption ? `code-caption-${index}-${i}` : sectionId(s.h, index)} tabIndex={0} data-focus-clearance>
+                          <code data-language={p.language}>{p.code}</code>
+                        </pre>
+                      </figure>
+                    ) : typeof p !== 'string' && 'list' in p ? (
                       p.ordered ? <ol className="article-checklist">{p.list.map((item, itemIndex) => <li key={itemIndex}>{renderParagraph(item)}</li>)}</ol>
                         : <ul className="article-checklist">{p.list.map((item, itemIndex) => <li key={itemIndex}>{renderParagraph(item)}</li>)}</ul>
                     ) : <p>{renderParagraph(p)}</p>}
@@ -175,7 +189,7 @@ export default function ArticlePage() {
                 {s.table && (
                   <>
                   <p className="article-table-hint" id={`table-help-${index}`}>On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.</p>
-                  <div className="subproc-scroll article-comparison" role="region" aria-label={s.table.caption} aria-describedby={`table-help-${index}`} tabIndex={0}>
+                  <div className="subproc-scroll article-comparison" data-focus-clearance role="region" aria-label={s.table.caption} aria-describedby={`table-help-${index}`} tabIndex={0}>
                     <table className="subproc-table">
                       <caption>{s.table.caption}</caption>
                       <thead><tr>{s.table.headers.map((heading) => <th scope="col" key={heading}>{heading}</th>)}</tr></thead>

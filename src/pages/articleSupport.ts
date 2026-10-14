@@ -184,240 +184,665 @@ export const articleSupport: Record<string, ArticleSupport> = {
 },
 
   "fix-dmarc-monitoring-policy": {
-    "relatedSlugs": [
-        "what-is-dmarc",
-        "check-website-security"
-    ],
-    "sources": [
-        {
-            "title": "Microsoft’s deployment guidance",
-            "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure"
-        },
-        {
-            "title": "Google Workspace’s guidance",
-            "href": "https://knowledge.workspace.google.com/admin/security/set-up-dmarc"
-        },
-        {
-            "title": "Microsoft: DKIM setup and domain flyout",
-            "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure"
-        },
-        {
-            "title": "cPanel: Zone Editor and DNS record management",
-            "href": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
-        },
-        {
-            "title": "Namecheap: cPanel Zone Editor and MX screenshot examples",
-            "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9256/29/how-to-edit-dns-zone-in-cpanel/"
-        }
-    ]
+  "relatedSlugs": [
+    "what-is-dmarc",
+    "check-website-security"
+  ],
+  "sources": [
+    {
+      "title": "Microsoft’s deployment guidance",
+      "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure"
+    },
+    {
+      "title": "Google Workspace’s guidance",
+      "href": "https://knowledge.workspace.google.com/admin/security/set-up-dmarc"
+    },
+    {
+      "title": "Microsoft: DKIM setup and domain flyout",
+      "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure"
+    },
+    {
+      "title": "cPanel: Zone Editor and DNS record management",
+      "href": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
+    },
+    {
+      "title": "Namecheap: cPanel Zone Editor and MX screenshot examples",
+      "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9256/29/how-to-edit-dns-zone-in-cpanel/"
+    },
+    {
+      "title": "current DMARC standard's interoperability guidance",
+      "href": "https://datatracker.ietf.org/doc/html/rfc9989#section-7.4"
+    },
+    {
+      "title": "Google Admin Toolbox Dig",
+      "href": "https://toolbox.googleapps.com/apps/dig/"
+    },
+    {
+      "title": "Cloudflare's nameserver documentation",
+      "href": "https://developers.cloudflare.com/dns/nameservers/"
+    },
+    {
+      "title": "Microsoft's header instructions",
+      "href": "https://support.microsoft.com/en-us/outlook/view-internet-message-headers-in-outlook"
+    },
+    {
+      "title": "Google's DKIM instructions",
+      "href": "https://knowledge.workspace.google.com/admin/security/set-up-dkim"
+    },
+    {
+      "title": "Cloudflare's editor instructions",
+      "href": "https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/"
+    },
+    {
+      "title": "GoDaddy's TXT instructions",
+      "href": "https://www.godaddy.com/en/help/add-a-txt-record-19232"
+    },
+    {
+      "title": "ISC's dig manual",
+      "href": "https://bind9.readthedocs.io/en/stable/manpages.html#dig-dns-lookup-utility"
+    },
+    {
+      "title": "RFC 9989's tag definitions",
+      "href": "https://datatracker.ietf.org/doc/html/rfc9989#section-4.7"
+    }
+  ]
 },
   "fix-dmarc-reporting": {
-    "relatedSlugs": [
-        "what-is-dmarc",
-        "check-website-security"
-    ],
-    "sources": [
-        {
-            "title": "aggregate-reporting standard",
-            "href": "https://datatracker.ietf.org/doc/html/rfc9990"
-        },
-        {
-            "title": "Microsoft: DMARC setup for custom domains",
-            "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure"
-        },
-        {
-            "title": "Microsoft: Domains screenshot and DNS setup example",
-            "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/dns/create-dns-records-at-godaddy?view=o365-worldwide"
-        },
-        {
-            "title": "cPanel: Zone Editor and DNS record management",
-            "href": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
-        },
-        {
-            "title": "Namecheap: cPanel Zone Editor and MX screenshot examples",
-            "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9256/29/how-to-edit-dns-zone-in-cpanel/"
-        }
-    ]
+  "relatedSlugs": [
+    "what-is-dmarc",
+    "check-website-security"
+  ],
+  "sources": [
+    {
+      "title": "aggregate-reporting standard",
+      "href": "https://datatracker.ietf.org/doc/html/rfc9990"
+    },
+    {
+      "title": "Microsoft: DMARC setup for custom domains",
+      "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure"
+    },
+    {
+      "title": "Microsoft: Domains screenshot and DNS setup example",
+      "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/dns/create-dns-records-at-godaddy?view=o365-worldwide"
+    },
+    {
+      "title": "cPanel: Zone Editor and DNS record management",
+      "href": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
+    },
+    {
+      "title": "Namecheap: cPanel Zone Editor and MX screenshot examples",
+      "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9256/29/how-to-edit-dns-zone-in-cpanel/"
+    },
+    {
+      "title": "Google's report guidance",
+      "href": "https://knowledge.workspace.google.com/admin/security/about-dmarc-reports"
+    },
+    {
+      "title": "Google's account instructions",
+      "href": "https://knowledge.workspace.google.com/admin/users/add-an-account-for-a-new-user"
+    },
+    {
+      "title": "Microsoft's shared-mailbox instructions",
+      "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/email/create-a-shared-mailbox?view=o365-worldwide"
+    },
+    {
+      "title": "Google Admin Toolbox Dig",
+      "href": "https://toolbox.googleapps.com/apps/dig/"
+    },
+    {
+      "title": "Cloudflare's nameserver guidance",
+      "href": "https://developers.cloudflare.com/dns/nameservers/"
+    },
+    {
+      "title": "Google's DMARC setup guidance",
+      "href": "https://knowledge.workspace.google.com/admin/security/set-up-dmarc"
+    },
+    {
+      "title": "DMARC standard",
+      "href": "https://datatracker.ietf.org/doc/html/rfc9989"
+    },
+    {
+      "title": "aggregate-reporting standard's external-destination procedure",
+      "href": "https://datatracker.ietf.org/doc/html/rfc9990#section-4"
+    },
+    {
+      "title": "Cloudflare's record instructions",
+      "href": "https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/"
+    },
+    {
+      "title": "TXT record instructions",
+      "href": "https://www.godaddy.com/en/help/add-a-txt-record-19232"
+    },
+    {
+      "title": "ISC's dig documentation",
+      "href": "https://bind9.readthedocs.io/en/stable/manpages.html#dig-dns-lookup-utility"
+    }
+  ]
 },
   "verify-dkim-signing": {
-    "relatedSlugs": [
-        "what-is-dmarc",
-        "check-website-security"
-    ],
-    "sources": [
-        {
-            "title": "Google Workspace’s DKIM instructions",
-            "href": "https://knowledge.workspace.google.com/admin/security/set-up-dkim"
-        },
-        {
-            "title": "Microsoft: DKIM setup and domain flyout",
-            "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure"
-        },
-        {
-            "title": "cPanel: Email Deliverability, prerequisites and record handling",
-            "href": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
-        },
-        {
-            "title": "Namecheap: cPanel SPF and DKIM screenshot examples",
-            "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9214/31/cpanel-email-deliverability-tool-spf-dkim-and-dmarc-records/"
-        }
-    ]
+  "relatedSlugs": [
+    "what-is-dmarc",
+    "check-website-security"
+  ],
+  "sources": [
+    {
+      "title": "Google Workspace’s DKIM instructions",
+      "href": "https://knowledge.workspace.google.com/admin/security/set-up-dkim"
+    },
+    {
+      "title": "Microsoft: DKIM setup and domain flyout",
+      "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure"
+    },
+    {
+      "title": "cPanel: Email Deliverability, prerequisites and record handling",
+      "href": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
+    },
+    {
+      "title": "Namecheap: cPanel SPF and DKIM screenshot examples",
+      "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9214/31/cpanel-email-deliverability-tool-spf-dkim-and-dmarc-records/"
+    },
+    {
+      "title": "DKIM standard",
+      "href": "https://datatracker.ietf.org/doc/html/rfc6376"
+    },
+    {
+      "title": "Microsoft's header instructions",
+      "href": "https://support.microsoft.com/en-us/outlook/view-internet-message-headers-in-outlook"
+    },
+    {
+      "title": "Google Admin Toolbox Dig",
+      "href": "https://toolbox.googleapps.com/apps/dig/"
+    },
+    {
+      "title": "Cloudflare's nameserver documentation",
+      "href": "https://developers.cloudflare.com/dns/nameservers/"
+    },
+    {
+      "title": "Cloudflare's email troubleshooting guidance",
+      "href": "https://developers.cloudflare.com/dns/troubleshooting/email-issues/"
+    },
+    {
+      "title": "Cloudflare's record editor",
+      "href": "https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/"
+    },
+    {
+      "title": "GoDaddy's TXT instructions",
+      "href": "https://www.godaddy.com/en/help/add-a-txt-record-19232"
+    },
+    {
+      "title": "Zone Editor documentation",
+      "href": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
+    },
+    {
+      "title": "Google's DKIM troubleshooting instructions",
+      "href": "https://knowledge.workspace.google.com/admin/security/troubleshoot-dkim-issues"
+    },
+    {
+      "title": "ISC's dig manual",
+      "href": "https://bind9.readthedocs.io/en/stable/manpages.html#dig-dns-lookup-utility"
+    },
+    {
+      "title": "Cloudflare's flattening controls",
+      "href": "https://developers.cloudflare.com/dns/cname-flattening/set-up-cname-flattening/"
+    }
+  ]
 },
   "review-spf-softfail": {
-    "relatedSlugs": [
-        "what-is-dmarc",
-        "check-website-security"
-    ],
-    "sources": [
-        {
-            "title": "SPF standard",
-            "href": "https://datatracker.ietf.org/doc/html/rfc7208"
-        },
-        {
-            "title": "Microsoft’s SPF setup guide",
-            "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
-        },
-        {
-            "title": "Microsoft: domain setup and required DNS records",
-            "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
-        },
-        {
-            "title": "Microsoft: Domains screenshot and DNS setup example",
-            "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/dns/create-dns-records-at-godaddy?view=o365-worldwide"
-        },
-        {
-            "title": "cPanel: Email Deliverability, prerequisites and record handling",
-            "href": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
-        },
-        {
-            "title": "Namecheap: cPanel SPF and DKIM screenshot examples",
-            "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9214/31/cpanel-email-deliverability-tool-spf-dkim-and-dmarc-records/"
-        }
-    ]
+  "relatedSlugs": [
+    "what-is-dmarc",
+    "check-website-security"
+  ],
+  "sources": [
+    {
+      "title": "SPF standard",
+      "href": "https://datatracker.ietf.org/doc/html/rfc7208"
+    },
+    {
+      "title": "Microsoft’s SPF setup guide",
+      "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
+    },
+    {
+      "title": "Microsoft: domain setup and required DNS records",
+      "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
+    },
+    {
+      "title": "Microsoft: Domains screenshot and DNS setup example",
+      "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/dns/create-dns-records-at-godaddy?view=o365-worldwide"
+    },
+    {
+      "title": "cPanel: Email Deliverability, prerequisites and record handling",
+      "href": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
+    },
+    {
+      "title": "Namecheap: cPanel SPF and DKIM screenshot examples",
+      "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9214/31/cpanel-email-deliverability-tool-spf-dkim-and-dmarc-records/"
+    },
+    {
+      "title": "Google Workspace: supported SPF setup and softfail recommendation",
+      "href": "https://knowledge.workspace.google.com/admin/security/set-up-spf"
+    },
+    {
+      "title": "Google Workspace: troubleshoot SPF and forwarding",
+      "href": "https://knowledge.workspace.google.com/admin/security/troubleshoot-spf-issues"
+    },
+    {
+      "title": "Gmail: read a received message's full headers",
+      "href": "https://support.google.com/mail/answer/29436"
+    },
+    {
+      "title": "Google Admin Toolbox: browser-based DNS lookup",
+      "href": "https://toolbox.googleapps.com/apps/dig/"
+    },
+    {
+      "title": "Cloudflare: nameservers and authoritative DNS",
+      "href": "https://www.cloudflare.com/learning/dns/dns-records/dns-ns-record/"
+    },
+    {
+      "title": "Cloudflare: DNS time to live and caching",
+      "href": "https://developers.cloudflare.com/dns/manage-dns-records/reference/ttl/"
+    },
+    {
+      "title": "RFC 7489: DMARC domain alignment",
+      "href": "https://datatracker.ietf.org/doc/html/rfc7489"
+    },
+    {
+      "title": "RFC 8601: trusted receiver Authentication-Results",
+      "href": "https://datatracker.ietf.org/doc/html/rfc8601"
+    }
+  ]
 },
   "fix-spf-record": {
-    "relatedSlugs": [
-        "what-is-dmarc",
-        "check-website-security"
-    ],
-    "sources": [
-        {
-            "title": "Microsoft’s SPF setup guide",
-            "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
-        },
-        {
-            "title": "RFC 7208",
-            "href": "https://datatracker.ietf.org/doc/html/rfc7208"
-        },
-        {
-            "title": "Microsoft: domain setup and required DNS records",
-            "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
-        },
-        {
-            "title": "Microsoft: Domains screenshot and DNS setup example",
-            "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/dns/create-dns-records-at-godaddy?view=o365-worldwide"
-        },
-        {
-            "title": "cPanel: Email Deliverability, prerequisites and record handling",
-            "href": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
-        },
-        {
-            "title": "Namecheap: cPanel SPF and DKIM screenshot examples",
-            "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9214/31/cpanel-email-deliverability-tool-spf-dkim-and-dmarc-records/"
-        }
-    ]
+  "relatedSlugs": [
+    "what-is-dmarc",
+    "check-website-security"
+  ],
+  "sources": [
+    {
+      "title": "Microsoft’s SPF setup guide",
+      "href": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
+    },
+    {
+      "title": "RFC 7208",
+      "href": "https://datatracker.ietf.org/doc/html/rfc7208"
+    },
+    {
+      "title": "Microsoft: domain setup and required DNS records",
+      "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
+    },
+    {
+      "title": "Microsoft: Domains screenshot and DNS setup example",
+      "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/dns/create-dns-records-at-godaddy?view=o365-worldwide"
+    },
+    {
+      "title": "cPanel: Email Deliverability, prerequisites and record handling",
+      "href": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
+    },
+    {
+      "title": "Namecheap: cPanel SPF and DKIM screenshot examples",
+      "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9214/31/cpanel-email-deliverability-tool-spf-dkim-and-dmarc-records/"
+    },
+    {
+      "title": "Google Workspace: set up SPF",
+      "href": "https://knowledge.workspace.google.com/admin/security/set-up-spf"
+    },
+    {
+      "title": "Google Workspace: SPF troubleshooting and message checks",
+      "href": "https://knowledge.workspace.google.com/admin/security/troubleshoot-spf-issues"
+    },
+    {
+      "title": "Google Workspace: SPF record mechanisms and modifiers",
+      "href": "https://knowledge.workspace.google.com/admin/security/about-spf-records"
+    },
+    {
+      "title": "Google Admin Toolbox: Check MX and SPF",
+      "href": "https://toolbox.googleapps.com/apps/checkmx/"
+    },
+    {
+      "title": "Gmail: read a received message's full headers",
+      "href": "https://support.google.com/mail/answer/29436"
+    },
+    {
+      "title": "cPanel: create and edit DNS records",
+      "href": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
+    },
+    {
+      "title": "Google Admin Toolbox: browser-based DNS lookup",
+      "href": "https://toolbox.googleapps.com/apps/dig/"
+    },
+    {
+      "title": "Cloudflare: nameservers and authoritative DNS",
+      "href": "https://www.cloudflare.com/learning/dns/dns-records/dns-ns-record/"
+    },
+    {
+      "title": "Cloudflare: DNS time to live and caching",
+      "href": "https://developers.cloudflare.com/dns/manage-dns-records/reference/ttl/"
+    },
+    {
+      "title": "RFC 7489: DMARC domain alignment",
+      "href": "https://datatracker.ietf.org/doc/html/rfc7489"
+    },
+    {
+      "title": "RFC 8601: trusted receiver Authentication-Results",
+      "href": "https://datatracker.ietf.org/doc/html/rfc8601"
+    },
+    {
+      "title": "Kitterman: SPF syntax and sending-path testing forms",
+      "href": "https://www.kitterman.com/spf/validate.html"
+    }
+  ]
 },
   "enable-dnssec-safely": {
-    "relatedSlugs": [
-      "what-is-dmarc",
-      "check-website-security"
-    ],
-    "sources": [
-      {
-        "title": "DNSSEC introduction",
-        "href": "https://datatracker.ietf.org/doc/html/rfc4033"
-      },
-      {
-        "title": "current DNSSEC instructions",
-        "href": "https://developers.cloudflare.com/dns/dnssec/"
-      }
-    ]
-  },
+  "relatedSlugs": [
+    "what-is-dmarc",
+    "check-website-security"
+  ],
+  "sources": [
+    {
+      "title": "DNSSEC introduction",
+      "href": "https://datatracker.ietf.org/doc/html/rfc4033"
+    },
+    {
+      "title": "current DNSSEC instructions",
+      "href": "https://developers.cloudflare.com/dns/dnssec/"
+    },
+    {
+      "title": "Cloudflare: DNSSEC validation, dig and troubleshooting",
+      "href": "https://developers.cloudflare.com/dns/dnssec/troubleshooting/"
+    },
+    {
+      "title": "Namecheap: DNSSEC delegation for external nameservers",
+      "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9722/2232/managing-dnssec-for-domains-pointed-to-custom-dns/"
+    },
+    {
+      "title": "Google Admin Toolbox: browser-based DNS lookup",
+      "href": "https://toolbox.googleapps.com/apps/dig/"
+    },
+    {
+      "title": "Cloudflare: nameservers and authoritative DNS",
+      "href": "https://www.cloudflare.com/learning/dns/dns-records/dns-ns-record/"
+    },
+    {
+      "title": "Cloudflare: DNS time to live and caching",
+      "href": "https://developers.cloudflare.com/dns/manage-dns-records/reference/ttl/"
+    },
+    {
+      "title": "DNSViz: analyze and refresh a DNSSEC chain",
+      "href": "https://dnsviz.net/"
+    },
+    {
+      "title": "Cloudflare: public resolver addresses",
+      "href": "https://developers.cloudflare.com/1.1.1.1/ip-addresses/"
+    },
+    {
+      "title": "Google Public DNS: resolver addresses",
+      "href": "https://developers.google.com/speed/public-dns/docs/using"
+    },
+    {
+      "title": "Google Public DNS: DNSSEC validation",
+      "href": "https://developers.google.com/speed/public-dns/docs/security"
+    }
+  ]
+},
   "set-up-mta-sts": {
-    "relatedSlugs": [
-      "what-is-dmarc",
-      "check-website-security"
-    ],
-    "sources": [
-      {
-        "title": "Microsoft’s MTA-STS guidance",
-        "href": "https://learn.microsoft.com/en-us/exchange/security-and-compliance/enhance-mail-flow-using-strict-transport-security"
-      },
-      {
-        "title": "MTA-STS standard",
-        "href": "https://datatracker.ietf.org/doc/html/rfc8461"
-      }
-    ]
-  },
+  "relatedSlugs": [
+    "what-is-dmarc",
+    "check-website-security"
+  ],
+  "sources": [
+    {
+      "title": "Microsoft’s MTA-STS guidance",
+      "href": "https://learn.microsoft.com/en-us/exchange/security-and-compliance/enhance-mail-flow-using-strict-transport-security"
+    },
+    {
+      "title": "MTA-STS standard",
+      "href": "https://datatracker.ietf.org/doc/html/rfc8461"
+    },
+    {
+      "title": "Google’s configuration check",
+      "href": "https://knowledge.workspace.google.com/admin/gmail/advanced/check-your-mta-sts-configuration"
+    },
+    {
+      "title": "Google’s policy instructions",
+      "href": "https://knowledge.workspace.google.com/admin/gmail/advanced/create-an-mta-sts-policy"
+    },
+    {
+      "title": "Google’s publishing instructions",
+      "href": "https://knowledge.workspace.google.com/admin/gmail/advanced/publish-your-mta-sts-policy"
+    },
+    {
+      "title": "Zone Editor documentation",
+      "href": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
+    },
+    {
+      "title": "Cloudflare’s DNS record instructions",
+      "href": "https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/"
+    },
+    {
+      "title": "Namecheap: cPanel Zone Editor screenshot example",
+      "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9256/29/how-to-edit-dns-zone-in-cpanel/"
+    },
+    {
+      "title": "Microsoft: retrieve domain-specific DNS records",
+      "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
+    },
+    {
+      "title": "ISC BIND: dig DNS lookup options",
+      "href": "https://bind9.readthedocs.io/en/latest/manpages.html#dig-dns-lookup-utility"
+    },
+    {
+      "title": "IETF: Null MX for domains accepting no mail",
+      "href": "https://datatracker.ietf.org/doc/html/rfc7505"
+    },
+    {
+      "title": "IETF: SMTP domain syntax",
+      "href": "https://datatracker.ietf.org/doc/html/rfc5321"
+    }
+  ]
+},
   "set-up-tls-reporting": {
-    "relatedSlugs": [
-      "what-is-dmarc",
-      "check-website-security"
-    ],
-    "sources": [
-      {
-        "title": "TLS-RPT",
-        "href": "https://datatracker.ietf.org/doc/html/rfc8460"
-      }
-    ]
-  },
+  "relatedSlugs": [
+    "what-is-dmarc",
+    "check-website-security"
+  ],
+  "sources": [
+    {
+      "title": "TLS-RPT",
+      "href": "https://datatracker.ietf.org/doc/html/rfc8460"
+    },
+    {
+      "title": "Microsoft’s shared-mailbox instructions",
+      "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/email/create-a-shared-mailbox?view=o365-worldwide"
+    },
+    {
+      "title": "Google’s user-creation instructions",
+      "href": "https://knowledge.workspace.google.com/admin/users/add-an-account-for-a-new-user"
+    },
+    {
+      "title": "CPanel Email Accounts instructions",
+      "href": "https://docs.cpanel.net/cpanel/email/email-accounts/"
+    },
+    {
+      "title": "CPanel Zone Editor documentation",
+      "href": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
+    },
+    {
+      "title": "Cloudflare DNS instructions",
+      "href": "https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/"
+    },
+    {
+      "title": "Google’s TLS reporting instructions",
+      "href": "https://knowledge.workspace.google.com/admin/gmail/advanced/turn-on-mta-sts-and-tls-reporting"
+    },
+    {
+      "title": "Namecheap: cPanel Zone Editor screenshot example",
+      "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9256/29/how-to-edit-dns-zone-in-cpanel/"
+    },
+    {
+      "title": "cPanel: create a mailbox and select storage quota",
+      "href": "https://docs.cpanel.net/cpanel/email/create-an-email-account/"
+    },
+    {
+      "title": "ISC BIND: dig DNS lookup options",
+      "href": "https://bind9.readthedocs.io/en/latest/manpages.html#dig-dns-lookup-utility"
+    },
+    {
+      "title": "IETF: DNS aliases and CNAME coexistence",
+      "href": "https://datatracker.ietf.org/doc/html/rfc1034"
+    }
+  ]
+},
   "fix-mx-mail-routing": {
-    "relatedSlugs": [
-        "what-is-dmarc",
-        "check-website-security"
-    ],
-    "sources": [
-        {
-            "title": "SMTP’s routing standard",
-            "href": "https://datatracker.ietf.org/doc/html/rfc5321"
-        },
-        {
-            "title": "Microsoft: domain setup and required DNS records",
-            "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
-        },
-        {
-            "title": "Microsoft: Domains screenshot and DNS setup example",
-            "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/dns/create-dns-records-at-godaddy?view=o365-worldwide"
-        },
-        {
-            "title": "cPanel: local and remote Email Routing",
-            "href": "https://docs.cpanel.net/cpanel/email/email-routing/"
-        },
-        {
-            "title": "Namecheap: cPanel Zone Editor and MX screenshot examples",
-            "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9256/29/how-to-edit-dns-zone-in-cpanel/"
-        }
-    ]
+  "relatedSlugs": [
+    "what-is-dmarc",
+    "check-website-security"
+  ],
+  "sources": [
+    {
+      "title": "SMTP’s routing standard",
+      "href": "https://datatracker.ietf.org/doc/html/rfc5321"
+    },
+    {
+      "title": "Microsoft: domain setup and required DNS records",
+      "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
+    },
+    {
+      "title": "Microsoft: Domains screenshot and DNS setup example",
+      "href": "https://learn.microsoft.com/en-us/microsoft-365/admin/dns/create-dns-records-at-godaddy?view=o365-worldwide"
+    },
+    {
+      "title": "cPanel: local and remote Email Routing",
+      "href": "https://docs.cpanel.net/cpanel/email/email-routing/"
+    },
+    {
+      "title": "Namecheap: cPanel Zone Editor and MX screenshot examples",
+      "href": "https://www.namecheap.com/support/knowledgebase/article.aspx/9256/29/how-to-edit-dns-zone-in-cpanel/"
+    },
+    {
+      "title": "RFC 7505: null MX and domains that accept no mail",
+      "href": "https://datatracker.ietf.org/doc/html/rfc7505"
+    },
+    {
+      "title": "Google Workspace: MX setup and Gmail activation",
+      "href": "https://knowledge.workspace.google.com/admin/domains/set-up-mx-records-for-google-workspace"
+    },
+    {
+      "title": "cPanel: create and edit DNS records",
+      "href": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
+    },
+    {
+      "title": "Google Admin Toolbox: browser-based DNS lookup",
+      "href": "https://toolbox.googleapps.com/apps/dig/"
+    },
+    {
+      "title": "Cloudflare: nameservers and authoritative DNS",
+      "href": "https://www.cloudflare.com/learning/dns/dns-records/dns-ns-record/"
+    },
+    {
+      "title": "Cloudflare: DNS time to live and caching",
+      "href": "https://developers.cloudflare.com/dns/manage-dns-records/reference/ttl/"
+    }
+  ]
 },
   "investigate-smtp-check": {
-    "relatedSlugs": [
-      "what-is-dmarc",
-      "check-website-security"
-    ],
-    "sources": []
-  },
+  "relatedSlugs": [
+    "what-is-dmarc",
+    "check-website-security"
+  ],
+  "sources": [
+    {
+      "title": "SMTP TLS standard",
+      "href": "https://datatracker.ietf.org/doc/html/rfc3207"
+    },
+    {
+      "title": "Microsoft’s message-trace instructions",
+      "href": "https://learn.microsoft.com/en-us/exchange/monitoring/trace-an-email-message/message-trace-modern-eac"
+    },
+    {
+      "title": "CPanel’s Track Delivery instructions",
+      "href": "https://docs.cpanel.net/cpanel/email/track-delivery/"
+    },
+    {
+      "title": "Google’s header instructions",
+      "href": "https://support.google.com/mail/answer/29436?hl=en"
+    },
+    {
+      "title": "IETF: SMTP routing, replies and mail-server behavior",
+      "href": "https://datatracker.ietf.org/doc/html/rfc5321"
+    },
+    {
+      "title": "IETF: Null MX for domains accepting no mail",
+      "href": "https://datatracker.ietf.org/doc/html/rfc7505"
+    },
+    {
+      "title": "ISC BIND: dig DNS lookup options",
+      "href": "https://bind9.readthedocs.io/en/latest/manpages.html#dig-dns-lookup-utility"
+    },
+    {
+      "title": "Google: find messages with Email Log Search",
+      "href": "https://knowledge.workspace.google.com/admin/support/troubleshooting/find-messages-with-email-log-search"
+    },
+    {
+      "title": "Google: investigate mail missing from one sender",
+      "href": "https://knowledge.workspace.google.com/admin/support/troubleshooting/not-receiving-email-from-one-sender"
+    }
+  ]
+},
   "fix-website-https": {
-    "relatedSlugs": [
-      "what-is-dmarc",
-      "check-website-security"
-    ],
-    "sources": [
-      {
-        "title": "TLS protects a connection and authenticates its endpoint",
-        "href": "https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Transport_Layer_Security"
-      }
-    ]
-  }
+  "relatedSlugs": [
+    "what-is-dmarc",
+    "check-website-security"
+  ],
+  "sources": [
+    {
+      "title": "TLS protects a connection and authenticates its endpoint",
+      "href": "https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Transport_Layer_Security"
+    },
+    {
+      "title": "Let’s Encrypt’s challenge documentation",
+      "href": "https://letsencrypt.org/docs/challenge-types/"
+    },
+    {
+      "title": "CPanel’s status instructions",
+      "href": "https://docs.cpanel.net/cpanel/security/ssl-tls-status/"
+    },
+    {
+      "title": "CPanel’s SSL/TLS instructions",
+      "href": "https://docs.cpanel.net/cpanel/security/ssl-tls/"
+    },
+    {
+      "title": "Cloudflare’s Full (strict) instructions",
+      "href": "https://developers.cloudflare.com/ssl/origin-configuration/ssl-modes/full-strict/"
+    },
+    {
+      "title": "Cloudflare error 526",
+      "href": "https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-526/"
+    },
+    {
+      "title": "MDN’s mixed-content documentation",
+      "href": "https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Mixed_content"
+    },
+    {
+      "title": "MDN’s HSTS documentation",
+      "href": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security"
+    },
+    {
+      "title": "Cloudflare: Origin CA and browser trust",
+      "href": "https://developers.cloudflare.com/ssl/origin-configuration/origin-ca/"
+    },
+    {
+      "title": "cPanel: AutoSSL checks and logs in WHM",
+      "href": "https://docs.cpanel.net/whm/ssl-tls/manage-autossl/"
+    },
+    {
+      "title": "Cloudflare: general SSL errors",
+      "href": "https://developers.cloudflare.com/ssl/troubleshooting/general-ssl-errors/"
+    },
+    {
+      "title": "curl: protocol restrictions, redirect limits and response headers",
+      "href": "https://curl.se/docs/manpage.html"
+    }
+  ]
+}
 ,
 
 
