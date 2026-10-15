@@ -9,13 +9,13 @@
   align-items: center;
   min-height: 44px;
   margin-block-start: 8px;
-  color: inherit;
+  color: #fffdf7;
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
 
 .command-sample-hero-link:focus-visible {
-  outline: 2px solid currentColor;
+  outline: 2px solid #fffdf7;
   outline-offset: 4px;
 }
 
