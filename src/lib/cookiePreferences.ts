@@ -5,8 +5,10 @@ export const ANALYTICS_SCOPE = 'ga4-hubspot-v1';
 export type CookiePreferences = {version: 2; analytics: boolean; advertising: boolean; decided: boolean; analyticsScope?: typeof ANALYTICS_SCOPE};
 const empty = (): CookiePreferences => ({version: 2, analytics: false, advertising: false, decided: false});
 let volatile: CookiePreferences | null = null;
+let volatileRequired = false;
 export function getCookiePreferences(): CookiePreferences {
   if (typeof window === 'undefined') return empty();
+  if (volatile && volatileRequired) return {...volatile};
   try {
     const raw = localStorage.getItem(PREFERENCES_KEY);
     if (raw) {
@@ -25,12 +27,13 @@ export function setCookiePreferences(analytics: boolean, advertising: boolean): 
   volatile = {version: 2, analytics, advertising, decided: true, analyticsScope: ANALYTICS_SCOPE};
   try {
     localStorage.setItem(PREFERENCES_KEY, JSON.stringify(volatile));
-    // Existing consent-aware public scan bridge reads this advertising-only key.
-    localStorage.setItem(LEGACY_AD_KEY, advertising ? 'accepted' : 'declined');
-  } catch { /* Apply the selection in this document even when storage is blocked. */ }
+    volatileRequired = false;
+  } catch { volatileRequired = true; }
+  // Compatibility storage cannot undo the primary decision.
+  try {localStorage.setItem(LEGACY_AD_KEY, advertising ? 'accepted' : 'declined');} catch { /* Current page keeps its explicit choice. */ }
   document.dispatchEvent(new Event(PREFERENCES_EVENT));
 }
-export function resetVolatilePreferences(): void { volatile = null; }
+export function resetVolatilePreferences(): void { if (!volatileRequired) volatile = null; }
 export function analyticsAllowed(): boolean { return getCookiePreferences().analytics; }
 export function needsAnalyticsChoiceRefresh(): boolean {
   const preferences = getCookiePreferences();
