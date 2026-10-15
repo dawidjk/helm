@@ -1,9 +1,10 @@
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
+import {useBrowserLayoutEffect} from '../lib/useBrowserLayoutEffect';
 import {useThemeMode, type ThemeMode} from './ThemeMode';
 import './ThemePicker.css';
 
 /**
- * Explicit three-mode theme control in the nav: Auto (follow system), Light,
+ * Explicit three-mode theme control: Auto (follow system), Light,
  * and Dark. The actual theme is applied by ThemeModeProvider / the Astryx
  * <Theme> wrapper; this control only reads and updates that shared state.
  *
@@ -49,7 +50,7 @@ function Icon({mode}: {mode: ThemeMode}) {
 export default function ThemePicker({compact = false}: {compact?: boolean}) {
   const {mode, setMode} = useThemeMode();
   const [mounted, setMounted] = useState(false);
-  useEffect(() => { setMounted(true); }, []);
+  useBrowserLayoutEffect(() => { setMounted(true); }, []);
 
   // Before mount, show the Auto default so SSR/hydration markup matches.
   const current = mounted ? mode : 'auto';

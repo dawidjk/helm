@@ -300,8 +300,6 @@ export default function Resources() {
       </Band>
 
       <CtaBand
-        title="Check your domain's public security settings."
-        sub="The free email security scan checks public domain configuration and returns a plain-English report, usually in about a minute."
         source="resources cta"
       />
     </>

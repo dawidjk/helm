@@ -1,8 +1,7 @@
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Fragment} from 'react';
 import {useLoaderData, Link} from 'react-router-dom';
-import {ActionLink, Band, BookCallLink, CtaBand, ScrollCue} from '../components/Site';
-import {BOOKING_ENABLED} from '../lib/booking';
+import {Band, BookCallLink, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {articleCatalog} from './articleCatalog';
 import type {Article} from './articles';
@@ -245,9 +244,8 @@ export default function ArticlePage() {
             <h2 className="observe">{a.consultation.title}</h2>
             <p className="observe d1">{a.consultation.sub}</p>
             <div className="cta-form observe d2">
-              {BOOKING_ENABLED && <div className="booking-inline-action"><BookCallLink /></div>}
-              <ActionLink to={a.consultation.to} label={a.consultation.label} className={BOOKING_ENABLED ? 'booking-secondary-action' : ''} />
-              {a.consultation.secondary && (
+              <BookCallLink label={a.consultation.label} />
+              {a.consultation.secondary && !/^\/(?:free-scan|contact|book)\/?(?:\?|$)/.test(a.consultation.secondary.to) && (
                 <div className="cta-alt">
                   <Link to={a.consultation.secondary.to}>{a.consultation.secondary.label}</Link>
                 </div>
@@ -261,12 +259,9 @@ export default function ArticlePage() {
           sub={bookCta(a.ctaMode).sub}
           cta={bookCta(a.ctaMode).label}
           source={`article ${a.slug}`}
-          mode="book"
         />
       ) : (
         <CtaBand
-          title="See what your public domain configuration shows."
-          sub="The free scan checks public email and web configuration and returns a plain-English report, usually in about a minute."
           source={`article ${a.slug}`}
         />
       )}

@@ -1,4 +1,4 @@
-import {useId, useRef, useState} from 'react';
+import {useId, useRef, useState, type ReactNode} from 'react';
 import {Button} from '@astryxdesign/core/Button';
 import {trackConversion, withAttribution} from '../lib/measurement';
 import './LeadForm.css';
@@ -42,10 +42,12 @@ export default function LeadForm({
   source,
   cta = 'Get my free scan',
   compact = false,
+  secondaryAction,
 }: {
   source: string;
   cta?: string;
   compact?: boolean;
+  secondaryAction?: ReactNode;
 }) {
   const inputId = useId();
   const errorId = `${inputId}-error`;
@@ -105,6 +107,7 @@ export default function LeadForm({
         type="submit"
         isLoading={state === 'busy'}
       />
+      {secondaryAction}
       {state === 'error' && (
         <div id={errorId} className="lead-form-error" role="alert">
           Enter a valid work email address to run your scan.

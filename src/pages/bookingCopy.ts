@@ -8,7 +8,7 @@ export const bookingCopy = {
   "callPurposeBody": "We'll discuss your security priorities and current IT setup. Core provides managed protection; Command adds security leadership and coordination within an agreed scope.",
   "scopeBody": "Your IT team keeps day-to-day IT, including patching, help desk and routine remediation. AI work is scoped separately.",
   "bookingAction": "Choose a time",
-  "bookingExternalHint": "The booking page opens in a new tab, leaving this page open.",
+  "bookingExternalHint": "The 30-minute call is over Google Meet. Google Calendar opens in a new tab.",
   "qualificationTitle": "On the booking form",
   "qualificationBody": "The booking form asks for your company size. You can also add a question you'd like to discuss.",
   "companySizeLabel": "How many employees does your firm have?",
@@ -26,10 +26,6 @@ export const bookingCopy = {
   "discussionLabel": "What would you like to discuss? (optional)",
   "discussionPlaceholder": "A security concern or customer requirement",
   "discussionHelp": "A short outline is enough. Leave out confidential or sensitive information.",
-  "scanTitle": "Free scan for your domain",
-  "scanBody": "The free scan checks a limited set of public email, DNS and web settings for your domain. View the report in the portal when it's ready.",
-  "scanLabel": "Get my free scan",
-  "contactTitle": "Prefer to send a message?",
   "contactLabel": "Use the contact form",
   "bookingUnavailableTitle": "Arrange a call by message",
   "bookingUnavailableBody": "Use the contact form to discuss your needs and arrange a call.",
@@ -40,6 +36,8 @@ export const bookingCopy = {
   "previewCalendarBody": "Try the proposed booking questions below. There are no appointment times; continuing shows a sample completion message.",
   "previewSubmitLabel": "Continue preview",
   "previewCompletionTitle": "Preview complete",
-  "previewCompletionBody": "No appointment was created. Return to Helm to view the free scan option.",
-  "previewReturnLabel": "Return to Helm"
+  "previewCompletionBody": "No appointment was created. Return to the booking page.",
+  "previewReturnLabel": "Return to booking page",
+  "closingTitle": "Talk through your security priorities.",
+  "closingBody": "Book a call to discuss your current IT setup and whether Core or Command fits your firm."
 } as const;

@@ -8,7 +8,7 @@ import {productList} from './products';
 import japandiHero from '../assets/variants/japandi-hero.webp';
 import japandiHeroMobile from '../assets/brand/japandi-home-mobile-640.webp';
 import {BookCallLink, DirectionIcon, ScrollCue} from '../components/Site';
-import {BOOKING_ENABLED} from '../lib/booking';
+import {BOOKING_DESTINATION} from '../lib/booking';
 import './SecureAiAdoption.css';
 import PanelVisual from '../components/PanelVisual';
 import './HomeRefinements.css';
@@ -23,8 +23,8 @@ const lanes = [
 function Scan({source}: {source: string}) {
   return (
     <div className="home-scan">
-      {BOOKING_ENABLED && <div className="booking-inline-action"><BookCallLink className="booking-secondary-action" /></div>}
-      <LeadForm source={source} cta="Get my free scan" compact />
+      <LeadForm source={source} cta="Get my free scan" compact
+        secondaryAction={<BookCallLink size="sm" className="booking-secondary-action" />} />
     </div>
   );
 }
@@ -87,8 +87,7 @@ export default function Home() {
             Get managed cybersecurity with Core, or add virtual security leadership
             and evidence upkeep with Command.
           </p>
-          <Scan source="home hero" />
-          <small>Free domain scan · no card · no required meeting</small>
+          <BookCallLink />
         </div>
         <ScrollCue />
       </header>
@@ -127,7 +126,7 @@ export default function Home() {
           <p className="home-it-responsibility">Your IT provider remains responsible for help desk, administration, patching and routine remediation. Helm manages the security work included in your service order.</p>
           <div className="home-comparison-links">
             <Link to="/pricing/">Compare pricing and scope <DirectionIcon /></Link>
-            <Link to="/contact/?service=helm-command">Discuss Command <DirectionIcon /></Link>
+            <a href={BOOKING_DESTINATION ?? undefined} target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer">Discuss Command <DirectionIcon external /><span className="sr-only"> (opens in a new tab)</span></a>
           </div>
           <section className="home-onboarding" aria-labelledby="home-onboarding-title">
             <h3 id="home-onboarding-title">How work starts</h3>
@@ -147,7 +146,7 @@ export default function Home() {
           <p>Pricing quoted after scoping. Any pilot has a separate scope.</p>
           <div className="home-ai-links">
             <Link to="/secure-ai-adoption/">Explore Secure AI Adoption <DirectionIcon /></Link>
-            <Link to="/contact/?service=secure-ai-adoption">Discuss an AI workflow <DirectionIcon /></Link>
+            <a href={BOOKING_DESTINATION ?? undefined} target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer">Discuss an AI workflow <DirectionIcon external /><span className="sr-only"> (opens in a new tab)</span></a>
           </div>
         </div>
       </section>

@@ -151,6 +151,11 @@ html[data-theme='dark'] {
   color-scheme: dark;
 }
 
+/* The static Astryx wrapper starts in Auto. Honor the saved pre-paint choice
+   inside it while React restores the matching provider state. */
+html[data-theme='light'] #root > [data-astryx-theme] { color-scheme: light; }
+html[data-theme='dark'] #root > [data-astryx-theme] { color-scheme: dark; }
+
 html {
   scroll-behavior: smooth;
 }

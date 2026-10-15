@@ -1,4 +1,5 @@
-import {createContext, useContext, useEffect, useState, type ReactNode} from 'react';
+import {createContext, useContext, useState, type ReactNode} from 'react';
+import {useBrowserLayoutEffect} from '../lib/useBrowserLayoutEffect';
 
 /**
  * Shared light/dark/auto theme state for the marketing site.
@@ -10,7 +11,7 @@ import {createContext, useContext, useEffect, useState, type ReactNode} from 're
  * <html data-theme> for browser chrome and content outside the wrapper.
  *
  * SSG/hydration-safe: the initial render always assumes Auto (matching the
- * static HTML). localStorage is read only in useEffect, after mount. A tiny
+ * static HTML). localStorage is restored in a layout effect before paint. A tiny
  * pre-paint script in index.html applies the saved choice to <html> before
  * first paint, so there is no flash while this effect catches up.
  */
@@ -32,7 +33,7 @@ export function useThemeMode(): ThemeModeCtx {
 export function ThemeModeProvider({children}: {children: ReactNode}) {
   const [mode, setModeState] = useState<ThemeMode>('auto');
 
-  useEffect(() => {
+  useBrowserLayoutEffect(() => {
     try {
       const v = localStorage.getItem(STORAGE_KEY);
       if (v === 'light' || v === 'dark' || v === 'auto') setModeState(v);

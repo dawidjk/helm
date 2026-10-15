@@ -1,8 +1,7 @@
 import {Link} from 'react-router-dom';
-import {ActionLink, Band, CtaBand, DirectionIcon, ScrollCue} from '../components/Site';
+import {Band, BookCallLink, CtaBand, DirectionIcon, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import HeroBackdrop, {type BackdropKind} from '../components/HeroBackdrop';
-import LeadForm from '../components/LeadForm';
 import PanelVisual from '../components/PanelVisual';
 import {canonicalPath, siteUrl} from '../lib/urls';
 import {laneBuyerCopy} from './laneBuyerCopy';
@@ -22,10 +21,8 @@ export type Lane = {
   primaryCta: string;
   industryLinks?: {to: string; label: string; note: string}[];
   /**
-   * How the hero and bottom-band CTAs behave. 'scan' (default) renders the
-   * email-in LeadForm that runs the instant domain scan; 'book' renders a
-   * button to /contact for engagement-style offers (e.g. a CMMC gap
-   * assessment) where an automatic domain scan is the wrong response.
+   * Legacy content classification. All conversion actions now book directly;
+   * 'book' retains a specific readiness-call label and contextual copy.
    */
   ctaMode?: 'scan' | 'book';
   statusChip?: string;
@@ -112,11 +109,7 @@ export default function LanePage({lane}: {lane: Lane}) {
             <strong className="lane-audience">{lane.eyebrow}.</strong> {lane.sub}
           </p>
           <div className="hero-ctas reveal d3">
-            {lane.ctaMode === 'book' ? (
-              <ActionLink to="/contact/" label={lane.primaryCta} />
-            ) : (
-              <LeadForm source={`${lane.slug} hero`} cta={lane.primaryCta} compact />
-            )}
+            <BookCallLink />
           </div>
           <div className="hero-note reveal d3">
             See <Link to="/pricing/">published pricing</Link> for Helm Core and Helm Command
@@ -340,11 +333,8 @@ export default function LanePage({lane}: {lane: Lane}) {
       </Band>
 
       <CtaBand
-        title={lane.cta.title}
-        sub={lane.cta.sub}
-        cta={lane.cta.label}
+        {...(lane.ctaMode === 'book' ? {title: lane.cta.title, sub: lane.cta.sub, cta: lane.cta.label} : {})}
         source={`${lane.slug} cta band`}
-        mode={lane.ctaMode}
       />
     </>
   );

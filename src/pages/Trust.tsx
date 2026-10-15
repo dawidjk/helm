@@ -261,7 +261,6 @@ export default function Trust() {
         sub={BOOK_CTA.sub}
         cta={BOOK_CTA.label}
         source="trust cta"
-        mode="book"
       />
     </>
   );

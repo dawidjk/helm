@@ -1,6 +1,6 @@
 import {Fragment} from 'react';
 import {Link} from 'react-router-dom';
-import {ActionLink, Band} from '../components/Site';
+import {BookCallLink, Band} from '../components/Site';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import Meta from '../components/Meta';
 import {renderParagraph} from '../lib/richText';
@@ -16,7 +16,7 @@ export default function CountyPage({page}: {page: CountyPageCopy}) {
         <nav className="county-breadcrumb" aria-label="Breadcrumb"><Link to="/">Helm</Link><span aria-hidden> / </span><Link to="/service-areas/">Service areas</Link><span aria-hidden> / </span><span aria-current="page">{page.county} County</span></nav>
         <h1>{page.h1}</h1>
         <p className="sub">{page.intro}</p>
-        <ActionLink to="/contact/" label={page.cta} />
+        <BookCallLink label={page.cta} />
       </div>
     </header>
     <Band><article className="article-body article-read-body county-reading">

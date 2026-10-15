@@ -42,8 +42,6 @@ export default function LegalPage({doc}: {doc: LegalDoc}) {
       </Band>
 
       <CtaBand
-        title="Need us to clarify a term?"
-        sub="Ask before you sign. A Helm executive will respond during business hours."
         source={`${doc.slug} cta`}
       />
     </>

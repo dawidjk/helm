@@ -101,8 +101,6 @@ export default function Faq() {
       </Band>
 
       <CtaBand
-        title="Question not here?"
-        sub="Use the contact link above for a question; a Helm executive responds during business hours. The optional scan checks public domain configuration."
         source="faq cta"
       />
     </>

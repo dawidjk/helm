@@ -159,10 +159,9 @@ export default function Pricing() {
 
       <CtaBand
         title="Which service model fits?"
-        sub="Tell us how many people you protect, who owns IT today, and what has prompted you to seek security help. We will confirm whether Core or Command is the right fit."
-        cta="Talk to us"
+        sub="Talk with Helm about your security needs and whether Core or Command fits alongside your existing IT team."
+        cta="Book a call"
         source="pricing cta"
-        mode="book"
       />
     </>
   );

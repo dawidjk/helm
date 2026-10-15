@@ -1,7 +1,8 @@
 import {useEffect, useRef, useState} from 'react';
 import {Link} from 'react-router-dom';
 import {Button} from '@astryxdesign/core/Button';
-import LeadForm from './LeadForm';
+import {BookCallLink} from './Site';
+import {bookingCallCopy} from '../pages/bookingCallCopy';
 import {quizPriorities} from '../lib/quizPriorities';
 
 type Option = {label: string; points: number};
@@ -249,12 +250,9 @@ export default function QuizWidget() {
 
           <div className="quiz-cta">
             <p className="quiz-cta-intro">
-              Use the free domain scan to review public email configuration. It cannot verify your quiz answers or internal controls.
+              {bookingCallCopy.sub}
             </p>
-            <LeadForm source="quiz" cta="Run my free scan" compact />
-            <p className="quiz-cta-alt">
-              Prefer to talk it through? <Link to="/contact/">Contact us.</Link>
-            </p>
+            <BookCallLink />
           </div>
 
           <p className="quiz-fine-print">

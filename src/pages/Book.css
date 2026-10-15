@@ -1,4 +1,9 @@
-.hero.lane.booking-hero { min-height: 0; padding-block: clamp(48px, 6vw, 88px); }
+.hero.lane.booking-hero {
+  min-height: calc(100svh - var(--site-nav-block-size) - var(--urgency-offset, 0px));
+  padding-block: clamp(48px, 6vw, 88px);
+  display: flex;
+  align-items: center;
+}
 .booking-hero .sub { max-width: 38rem; }
 .booking-action { margin-top: 28px; max-width: 38rem; }
 .booking-hint { font-size: 16px; line-height: 1.6; }

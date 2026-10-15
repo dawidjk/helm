@@ -1,11 +1,12 @@
 import {useEffect, useRef, useState, type ReactNode, type SyntheticEvent} from 'react';
 import {NavLink as RouterNavLink, Link, useLocation} from 'react-router-dom';
-import LeadForm, {PORTAL_URL} from './LeadForm';
+import {PORTAL_URL} from './LeadForm';
 import ThemePicker from './ThemePicker';
 import {canonicalPath} from '../lib/urls';
 import {openPrivacyChoices} from '../lib/adTracking';
-import {BOOKING_ENABLED, BOOKING_PATH} from '../lib/booking';
+import {BOOKING_DESTINATION, BOOKING_ENABLED} from '../lib/booking';
 import {bookingCopy} from '../pages/bookingCopy';
+import {bookingCallCopy} from '../pages/bookingCallCopy';
 import {
   businessPhone,
   facebookUrl,
@@ -85,8 +86,15 @@ export function ActionLink({
   );
 }
 
-export function BookCallLink({size = 'lg', className = ''}: {size?: 'sm' | 'lg'; className?: string}) {
-  return BOOKING_ENABLED ? <ActionLink to={BOOKING_PATH} label={bookingCopy.navLabel} size={size} className={className} /> : null;
+export function BookCallLink({label = bookingCopy.navLabel, size = 'lg', className = ''}: {
+  label?: string; size?: 'sm' | 'lg'; className?: string;
+}) {
+  return BOOKING_ENABLED && BOOKING_DESTINATION ? (
+    <a href={BOOKING_DESTINATION} target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer"
+      className={`action-link action-link-${size}${className ? ` ${className}` : ''}`}>
+      {label}<span className="sr-only"> (opens in a new tab)</span>
+    </a>
+  ) : null;
 }
 
 const lanes = [
@@ -158,7 +166,6 @@ const drawerSecondary = [
     title: 'Company',
     links: [
       {to: '/about', label: 'About'},
-      {to: '/quiz', label: 'Email and scam check'},
       {to: '/faq', label: 'FAQ'},
       {to: '/trust', label: 'Trust & Security'},
       {to: '/contact', label: 'Contact'},
@@ -179,6 +186,7 @@ export function SiteNav() {
   const industryActive = lanes.some(({to}) => pathname.startsWith(to));
   const resourcesActive = pathname.startsWith('/resources');
   const blogActive = pathname.startsWith('/blog');
+  const learnActive = resourcesActive || blogActive || pathname.startsWith('/free-scan') || pathname.startsWith('/quiz');
   const pricingActive = pathname.startsWith('/pricing');
   const [open, setOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -189,6 +197,32 @@ export function SiteNav() {
     document.querySelectorAll<HTMLDetailsElement>('.site-nav .nav-menu[open]')
       .forEach((menu) => menu.removeAttribute('open'));
   }, [pathname]);
+
+  useEffect(() => {
+    const closeOutside = (event: Event) => {
+      const target = event.target;
+      document.querySelectorAll<HTMLDetailsElement>('.site-nav .nav-menu[open]').forEach(menu => {
+        if (target instanceof Node && !menu.contains(target)) menu.open = false;
+      });
+    };
+    const escapeMenu = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return;
+      const active = document.activeElement;
+      const menu = active?.closest<HTMLDetailsElement>('.site-nav .nav-menu[open]');
+      if (!menu) return;
+      event.preventDefault();
+      menu.open = false;
+      menu.querySelector<HTMLElement>('summary')?.focus();
+    };
+    document.addEventListener('pointerdown', closeOutside);
+    document.addEventListener('focusin', closeOutside);
+    document.addEventListener('keydown', escapeMenu);
+    return () => {
+      document.removeEventListener('pointerdown', closeOutside);
+      document.removeEventListener('focusin', closeOutside);
+      document.removeEventListener('keydown', escapeMenu);
+    };
+  }, []);
 
   useEffect(() => {
     if (!open) {
@@ -308,24 +342,21 @@ export function SiteNav() {
                   ))}
                 </div>
               </details>
-              <RouterNavLink to="/resources/" className={resourcesActive ? 'active' : ''} aria-current={resourcesActive ? 'page' : undefined}>
-                Resources
-              </RouterNavLink>
-              <RouterNavLink to="/blog/" className={blogActive ? 'active' : ''} aria-current={blogActive ? 'page' : undefined}>
-                Blog
-              </RouterNavLink>
+              <details className={`nav-menu${learnActive ? ' active' : ''}`} onToggle={keepDesktopMenusExclusive}>
+                <summary aria-current={learnActive ? 'page' : undefined}>Learn</summary>
+                <div className="nav-menu-panel nav-menu-panel-compact">
+                  <RouterNavLink to="/resources/">Resources</RouterNavLink>
+                  <RouterNavLink to="/blog/">Blog</RouterNavLink>
+                  <RouterNavLink to="/free-scan/">Free scan</RouterNavLink>
+                  <RouterNavLink to="/quiz/">Email and scam check</RouterNavLink>
+                </div>
+              </details>
               <RouterNavLink to="/pricing/" className={pricingActive ? 'active' : ''} aria-current={pricingActive ? 'page' : undefined}>
                 Pricing
               </RouterNavLink>
-              <a href={`${PORTAL_URL}/login`}>Sign in</a>
-              {BOOKING_ENABLED ? <>
-                <RouterNavLink to="/free-scan/">Free scan</RouterNavLink>
-                <BookCallLink size="sm" className="nav-cta" />
-              </> : <ActionLink to="/free-scan/" label="Free scan" size="sm" className="nav-cta" />}
+              <BookCallLink size="sm" className="nav-cta" />
             </div>
-            <ThemePicker compact />
-            {BOOKING_ENABLED ? <BookCallLink size="sm" className="nav-cta-mobile" /> :
-              <ActionLink to="/free-scan/" label="Free scan" size="sm" className="nav-cta-mobile" />}
+            <a className="nav-sign-in" href={`${PORTAL_URL}/login`}>Sign in</a>
             <button
               ref={menuButtonRef}
               className={`nav-burger${open ? ' open' : ''}`}
@@ -350,7 +381,6 @@ export function SiteNav() {
           tabIndex={-1}
         >
           <BookCallLink className="drawer-cta" />
-          <ActionLink to="/free-scan/" label="Get my free scan" className="drawer-cta" />
           <div className="drawer-primary" aria-label="Primary navigation">
             <details className={`drawer-section drawer-primary-section${productActive ? ' active' : ''}`}>
               <summary>Services</summary>
@@ -373,14 +403,15 @@ export function SiteNav() {
                 ))}
               </div>
             </details>
-            <Link className={`drawer-direct${resourcesActive ? ' active' : ''}`} to="/resources/" aria-current={resourcesActive ? 'page' : undefined}>
-              <span>Resources</span>
-              <DirectionIcon />
-            </Link>
-            <Link className={`drawer-direct${blogActive ? ' active' : ''}`} to="/blog/" aria-current={blogActive ? 'page' : undefined}>
-              <span>Blog</span>
-              <DirectionIcon />
-            </Link>
+            <details className={`drawer-section drawer-primary-section${learnActive ? ' active' : ''}`}>
+              <summary>Learn</summary>
+              <div className="drawer-section-links">
+                <Link to="/resources/">Resources</Link>
+                <Link to="/blog/">Blog</Link>
+                <Link to="/free-scan/">Free scan</Link>
+                <Link to="/quiz/">Email and scam check</Link>
+              </div>
+            </details>
             <Link className={`drawer-direct${pricingActive ? ' active' : ''}`} to="/pricing/" aria-current={pricingActive ? 'page' : undefined}>
               <span>Pricing</span>
               <DirectionIcon />
@@ -402,10 +433,6 @@ export function SiteNav() {
                 </div>
               </details>
             ))}
-          </div>
-          <div className="drawer-foot">
-            <a href={`${PORTAL_URL}/login`}>Sign in</a>
-            <ThemePicker />
           </div>
         </nav>
       )}
@@ -447,55 +474,23 @@ export function ScrollCue() {
 }
 
 export function CtaBand({
-  title,
-  sub,
-  cta = 'Get my free scan',
+  title = bookingCallCopy.title,
+  sub = bookingCallCopy.sub,
+  cta = bookingCallCopy.label,
   source,
-  mode = 'scan',
-  contactService,
 }: {
-  title: string;
-  sub: string;
+  title?: string;
+  sub?: string;
   cta?: string;
   source: string;
-  /** 'scan' (default) shows the instant-scan LeadForm; 'book' links to /contact. */
-  mode?: 'scan' | 'book';
-  contactService?: string;
 }) {
-  const mailSubject = mode === 'book' ? `${cta} (${source})` : 'Free security scan request';
-  const mailBody =
-    mode === 'book'
-      ? "Hi Helm team,\n\nI'd like to book a call.\n\nCompany:\nBest phone (optional):\nAnything you want us to know up front:\n\nThanks!"
-      : "Hi Helm team,\n\nI'd like the free security scan for my company.\n\nCompany:\nWebsite domain:\nBest phone (optional):\n\nThanks!";
-  const contactPath =
-    mode === 'book'
-      ? contactService
-        ? `/contact?service=${encodeURIComponent(contactService)}&src=${encodeURIComponent(source)}`
-        : `/contact?intent=findings-call&src=${encodeURIComponent(source)}`
-      : '/contact';
   return (
-    <section className="cta-band" id="contact">
+    <section className="cta-band" id="contact" data-cta-source={source}>
       <div className="wrap">
         <h2 className="observe">{title}</h2>
         <p className="observe d1">{sub}</p>
         <div className="cta-form observe d2">
-          {BOOKING_ENABLED && <div className="booking-inline-action"><BookCallLink className={mode === 'book' ? '' : 'booking-secondary-action'} /></div>}
-          {mode === 'book' ? (
-            <ActionLink to={canonicalPath(contactPath)} label={cta} className={BOOKING_ENABLED ? 'booking-secondary-action' : ''} />
-          ) : (
-            <LeadForm source={source} cta={cta} />
-          )}
-          <div className="cta-alt">
-            Have more to tell us?{' '}
-            <Link to="/contact/">Use the full contact form <DirectionIcon /></Link>
-            <br />
-            Prefer email?{' '}
-            <a
-              href={`mailto:hello@helmsecured.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`}
-            >
-              hello@helmsecured.com
-            </a>
-          </div>
+          <BookCallLink label={cta} />
         </div>
       </div>
     </section>
@@ -563,7 +558,7 @@ export function SiteFooter() {
           {footerCols.map((col) => (
             <div key={col.title} className="footer-col">
               <div className="footer-col-title">{col.title}</div>
-              {col.title === 'Company' && BOOKING_ENABLED && <Link to={BOOKING_PATH}>{bookingCopy.navLabel}</Link>}
+              {col.title === 'Company' && <BookCallLink size="sm" className="footer-booking-link" />}
               {col.links.map((l) => (
                 <Link key={l.to} to={canonicalPath(l.to)}>
                   {l.label}
@@ -579,6 +574,7 @@ export function SiteFooter() {
         </nav>
         <div className="footer-bottom">
           <span>© {year} Helm Security LLC · New Jersey</span>
+          <div className="footer-theme"><ThemePicker /></div>
           <div className="footer-social" aria-label="Helm Security social media">
             <a href={linkedInUrl} target="_blank" rel="noopener noreferrer" aria-label="Helm Security on LinkedIn (opens in a new tab)">LinkedIn</a>
             <a href={facebookUrl} target="_blank" rel="noopener noreferrer" aria-label="Helm Security on Facebook (opens in a new tab)">Facebook</a>

@@ -1,6 +1,5 @@
 import {useEffect, useRef, useState, type FormEvent} from 'react';
-import {Link} from 'react-router-dom';
-import {ActionLink, Band} from '../components/Site';
+import {ActionLink, Band, BookCallLink} from '../components/Site';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import Meta from '../components/Meta';
 import {BOOKING_DESTINATION, BOOKING_PATH, BOOKING_PREVIEW_ENABLED, verifiedBookingSettings} from '../lib/booking';
@@ -54,15 +53,9 @@ export default function Book() {
       </Band>
       <Band variant="raised">
         <div className="booking-next">
-          <h2>{copy.scanTitle}</h2>
-          <p>{copy.scanBody}</p>
-          <ActionLink to="/free-scan/" label={copy.scanLabel} />
-        </div>
-      </Band>
-      <Band>
-        <div className="booking-contact">
-          <h2>{copy.contactTitle}</h2>
-          <Link to="/contact/">{copy.contactLabel}</Link>
+          <h2>{copy.closingTitle}</h2>
+          <p>{copy.closingBody}</p>
+          <BookCallLink label={copy.bookingAction} />
         </div>
       </Band>
     </>

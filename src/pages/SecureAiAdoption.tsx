@@ -1,8 +1,7 @@
 import {Link} from 'react-router-dom';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import Meta from '../components/Meta';
-import {ActionLink, Band, BookCallLink, ScrollCue} from '../components/Site';
-import {BOOKING_ENABLED} from '../lib/booking';
+import {Band, BookCallLink, ScrollCue} from '../components/Site';
 import './SecureAiAdoption.css';
 
 // Consulting scope approved for publication on October 1, 2026.
@@ -25,8 +24,7 @@ export default function SecureAiAdoption() {
             and data it would need.
           </p>
           <div className="hero-ctas reveal d2">
-            <BookCallLink />
-            <ActionLink to="/contact/?service=secure-ai-adoption" label="Discuss an AI workflow" className={BOOKING_ENABLED ? 'booking-secondary-action' : ''} />
+            <BookCallLink label="Discuss an AI workflow" />
           </div>
           <p className="hero-note reveal d3">Consulting engagement. Pricing quoted after scoping.</p>
         </div>
@@ -133,11 +131,10 @@ export default function SecureAiAdoption() {
       <section className="cta-band">
         <div className="wrap">
           <h2>Bring one workflow to discuss.</h2>
-          <p>Describe the task, who does it, and what takes time today.
-            Keep client records and sensitive information out of the inquiry.</p>
+          <p>Come ready to describe the task, who does it, and what takes time today.
+            You can discuss the workflow without sharing client records or sensitive information.</p>
           <div className="cta-form">
-            {BOOKING_ENABLED && <div className="booking-inline-action"><BookCallLink /></div>}
-            <ActionLink to="/contact/?service=secure-ai-adoption" label="Discuss an AI workflow" className={BOOKING_ENABLED ? 'booking-secondary-action' : ''} />
+            <BookCallLink label="Discuss an AI workflow" />
             <p className="ai-quote-note">Pricing is quoted after scoping.</p>
           </div>
         </div>

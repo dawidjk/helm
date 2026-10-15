@@ -149,8 +149,6 @@ export default function About() {
       </Band>
 
       <CtaBand
-        title="Start with the free scan."
-        sub="Review your public email and web configuration, with findings and next steps explained in plain English."
         source="about cta"
       />
     </>

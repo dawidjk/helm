@@ -1,5 +1,4 @@
 .booking-inline-action { margin-block: 0 20px; }
-.home-scan .booking-inline-action { margin-block: 0 16px; }
 .action-link.booking-secondary-action {
   border-color: currentColor;
   background: transparent;
@@ -16,4 +15,19 @@
 }
 @media (max-width: 700px) {
   .japandi-home-hero .action-link.booking-secondary-action { color: #f5f1e8; }
+}
+
+.home-scan .lead-form {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+}
+.home-scan .lead-form :is(.lead-form-label, input, .lead-form-error) { grid-column: 1 / -1; }
+.home-scan .lead-form input[type='email'] { width: 100%; min-width: 0; }
+.home-scan .lead-form .booking-secondary-action { min-height: 46px; padding-inline: 16px; font-size: 14px; }
+@media (max-width: 380px) {
+  .home-scan .lead-form { grid-template-columns: minmax(0, 1fr); }
+  .home-scan .lead-form > :is(button, a) { justify-self: start; }
 }

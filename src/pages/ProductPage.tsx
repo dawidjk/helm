@@ -1,13 +1,12 @@
 import {CommandReadinessSection} from './CommandReadinessSection';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {useParams, Link} from 'react-router-dom';
-import {ActionLink, Band, BookCallLink, CtaBand, ScrollCue} from '../components/Site';
+import {Band, BookCallLink, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import ServicePreview from './ServicePreview';
 import ProductMotif from '../components/ProductMotif';
 import {productList} from './products';
 import {siteUrl} from '../lib/urls';
-import {BOOKING_ENABLED} from '../lib/booking';
 import './ProductPage.css';
 
 export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
@@ -60,13 +59,7 @@ export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
           </h1>
           <p className="sub reveal d2">{p.desc}</p>
           <div className="hero-ctas reveal d3">
-            <BookCallLink />
-            <ActionLink
-              to={`/contact/?service=${p.slug}`}
-              label={p.slug === 'helm-core' ? 'Discuss Core' : 'Discuss Command'}
-              className={BOOKING_ENABLED ? 'booking-secondary-action' : ''}
-            />
-            <Link className="product-scan-link" to="/free-scan/">Check public email controls first</Link>
+            <BookCallLink label={p.slug === 'helm-core' ? 'Discuss Core' : 'Discuss Command'} />
           </div>
           <div className="hero-note reveal d3">
             {p.price} · <Link to="/pricing/">full pricing</Link>
@@ -140,11 +133,9 @@ export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
 
       <CtaBand
         title={p.slug === 'helm-core' ? 'Discuss managed protection for your firm.' : 'Discuss security leadership for your firm.'}
-        sub="Tell us about your firm and current IT provider. We will confirm the service fit, coverage and next steps before you commit."
+        sub={p.slug === 'helm-core' ? "Choose a time to talk about your current IT setup and whether Core's coverage fits your firm." : 'Tell us about your firm and current IT provider. We will confirm the service fit, coverage and next steps before you commit.'}
         cta={p.slug === 'helm-core' ? 'Discuss Core' : 'Discuss Command'}
         source={`product ${p.slug} cta`}
-        contactService={p.slug}
-        mode="book"
       />
     </>
   );
