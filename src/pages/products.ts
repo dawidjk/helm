@@ -26,7 +26,7 @@ export const productList: Product[] = [
     name: 'Helm Core',
     metaTitle: 'Helm Core: Managed Cybersecurity for NJ Businesses',
     tagline: 'Managed protection alongside your IT team.',
-    desc: "Helm Core provides managed cybersecurity for firms with 20 to 75 people. We coordinate protection with your existing IT provider or internal team.",
+    desc: "Helm Core provides managed cybersecurity for firms with 20 to 75 people, alongside your existing IT provider or internal team. One automated monthly report uses the available security signals to show what is covered, what changed and what your firm or IT team needs to do next.",
     bestFor: 'organizations with 20 to 75 people that need complete, standardized protection without adding another high-touch consulting relationship',
     metaDesc:
       "Helm Core coordinates supported email, workstation and identity protection alongside your IT team for $125 per user per month, with a $2,500 monthly minimum.",
