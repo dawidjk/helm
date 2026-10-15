@@ -26,10 +26,10 @@ export const productList: Product[] = [
     name: 'Helm Core',
     metaTitle: 'Helm Core: Managed Cybersecurity for NJ Businesses',
     tagline: 'Managed protection alongside your IT team.',
-    desc: 'Keep your IT provider. Helm manages the security layer for your firm, covering email, supported devices and identities, cloud productivity backup, employee awareness, and digital risk protection. One monthly report shows what is covered and which actions need your attention.',
+    desc: "Helm Core provides managed cybersecurity for firms with 20 to 75 people. We coordinate protection with your existing IT provider or internal team.",
     bestFor: 'organizations with 20 to 75 people that need complete, standardized protection without adding another high-touch consulting relationship',
     metaDesc:
-      'Helm Core combines email, device, identity, backup, awareness, and digital risk protection for $125 per user each month with a $2,500 monthly minimum.',
+      "Helm Core coordinates supported email, workstation and identity protection alongside your IT team for $125 per user per month, with a $2,500 monthly minimum.",
     price: '$125 / user / month',
     term: '12 months or 36-month price lock',
     priceDetail: '$2,500 monthly account minimum. Choose a 12-month initial term at the current rate or lock the starting per-user price and account minimum for a 36-month initial term. Includes up to two eligible Windows or Mac workstations per covered user. Additional eligible workstations are $12 each per month.',
@@ -58,10 +58,10 @@ export const productList: Product[] = [
     ],
     faqs: [
       {q: 'Does Helm Core replace our MSP or internal IT team?', a: 'No. Your existing IT provider or internal team keeps responsibility for help desk, patching, administration, procurement, routine remediation, and general IT operations. Helm manages the defined security layer and coordinates exceptions with the named IT contact.'},
-      {q: 'What is included?', a: 'Core includes managed email protection, device detection and response, supported identity protection, cloud productivity backup, security-awareness learning and simulations, digital risk protection, and an automated monthly security report.'},
+      {q: 'What is included?', a: "Core includes managed email protection, device detection and response, supported identity protection, cloud productivity backup, security-awareness learning and simulations, digital risk protection, and an automated monthly security report. Backup covers supported Microsoft 365 or Google Workspace data. Before you sign, Helm confirms which email and identity platforms are supported for your firm."},
       {q: 'How many devices are included?', a: 'Core includes up to two eligible Windows or Mac workstations per covered user. Additional eligible workstations are $12 each per month. Servers, phones, tablets, network equipment, and specialized systems require separate written scope.'},
       {q: 'Does Helm staff the 24/7 security operations center?', a: 'No. Specialist vendor security operations teams provide the continuous monitoring and containment behind the covered services. Helm owns deployment, account management, coordination, and the reporting relationship.'},
-      {q: 'Does Core include quarterly reviews or a vCISO?', a: "No. Core is a standardized, low-touch service. Choose Helm Command when your organization needs a maintained risk register, leadership cadence, roadmap, questionnaire response, or ongoing security-program ownership."},
+      {q: 'Does Core include quarterly reviews or a vCISO?', a: "No. Core provides standardized managed protection and an automated monthly report. Helm Command adds vCISO leadership and ongoing security-program ownership, including a maintained risk register, roadmap, evidence upkeep and quarterly leadership reviews. Client questionnaire and insurance-response coordination require Command or a separately agreed scope, with volume and turnaround set in the service order."},
     ],
   },
   {

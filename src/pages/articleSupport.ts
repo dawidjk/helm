@@ -1,3 +1,4 @@
+import {medicalProposalArticle, medicalProposalArticleSupport} from './medicalProposalArticle';
 import {ciscoEmailArticle, ciscoEmailArticleSupport} from './ciscoEmailArticle';
 import {refreshedArticleSupport} from './refreshedArticleSupport';
 export type ArticleSource = {
@@ -158,6 +159,7 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+  [medicalProposalArticle.slug]: medicalProposalArticleSupport,
   [ciscoEmailArticle.slug]: ciscoEmailArticleSupport,
   "retest-ai-workflow-changes": {
   "relatedSlugs": [
