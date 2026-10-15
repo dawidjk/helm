@@ -42,7 +42,7 @@ const subprocessors: {service: string; does: string; sees: string}[] = [
 const gaps = [
   'No SOC 2 or ISO 27001 audit is in place for our two-person company',
   'No multi-factor authentication on portal accounts yet. Today the control is the magic link itself, sent only to the mailbox you gave us',
-  "Backups and disaster recovery rely on our hosting and database providers' own resilience, not on a process we have independently documented and tested ourselves",
+  "Our deployment tooling includes a database export step before schema changes. We still rely on provider resilience and have not yet independently documented and tested a complete backup and disaster-recovery process.",
 ];
 
 export default function Trust() {
@@ -113,8 +113,10 @@ export default function Trust() {
                 <h3>Known gaps today</h3>
                 <p>
                   We do not have a SOC 2 or ISO 27001 audit or portal MFA yet.
-                  Backup and recovery rely on provider resilience rather than
-                  a process we have independently documented and tested.
+                  Our deployment tooling includes a database export step before
+                  schema changes. We still rely on provider resilience and have
+                  not yet independently documented and tested a complete backup
+                  and disaster-recovery process.
                 </p>
               </section>
             </div>
@@ -124,7 +126,7 @@ export default function Trust() {
             <section>
               <h2>Who we are</h2>
               <p>
-                Helm Security is a New Jersey LLC with an EIN and business bank account. Kelly and Dawid Kluszczynski are the entire operating team today: Dawid is VP, Product &amp; Delivery, and Kelly is VP, Growth &amp; Partnerships. Both must agree to material pricing, scope, legal, and service commitments.
+                Helm Security is a New Jersey LLC with an EIN and business bank account. Kelly and Dawid Kluszczynski are co-owners and the entire operating team today. Both must agree to material pricing, scope, legal, and service commitments.
               </p>
             </section>
 
