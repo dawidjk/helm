@@ -6,7 +6,7 @@
 }
 
 #monthly-report {
-  scroll-margin-block-start: var(--site-nav-block-size);
+  scroll-margin-block-start: calc(var(--site-nav-block-size) + 24px);
 }
 
 .core-monthly-report {

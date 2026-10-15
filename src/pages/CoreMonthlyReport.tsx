@@ -59,9 +59,9 @@ const followUps = [
 
 export default function CoreMonthlyReport() {
   return (
-    <Band id="monthly-report">
+    <Band>
       <div className="band-head observe">
-        <h2>What your monthly report shows</h2>
+        <h2 id="monthly-report">What your monthly report shows</h2>
         <p>Helm Core includes one automated monthly report. Leaders can check coverage and changes, then pass the next actions to the right person at the firm or its IT provider.</p>
       </div>
 

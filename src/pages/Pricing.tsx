@@ -152,7 +152,6 @@ export default function Pricing() {
             <p>A separately scoped paid assessment may be credited toward the first year of Core or Command when the service order states that credit.</p>
           </article>
         </div>
-        <p className="observe">The <Link to="/resources/managed-service-providers-new-jersey/">guide to evaluating managed service providers</Link> covers scope, evidence and costs to check before choosing a service.</p>
       </Band>
 
       <CommandReadinessSection />
