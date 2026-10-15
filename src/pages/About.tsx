@@ -110,9 +110,11 @@ export default function About() {
               <h3>Kelly Kluszczynski</h3>
               <p className="founder-role">Co-owner</p>
               <p>
-                Kelly leads discovery, customer communication, marketing, and
-                partner relationships. She makes sure the work addresses the
-                reason the customer came to Helm and that the next step is clear.
+                Kelly is an operations executive with 10 years of experience in
+                financial services. At Helm, she leads discovery, customer
+                communication, marketing, and partner relationships. She makes sure the
+                work addresses the reason the customer came to Helm and that the next
+                step is clear.
               </p>
             </div>
           </article>
@@ -127,9 +129,11 @@ export default function About() {
               <h3>Dawid Kluszczynski</h3>
               <p className="founder-role">Co-owner</p>
               <p>
-                Dawid designs Helm&apos;s services, automation, and technical
-                delivery. He follows the work from the first scan through
-                deployment, documentation, and ongoing review.
+                Dawid has 12 years of software engineering experience, from small
+                startups to big tech. His work emphasizes scalability, reliability, and
+                security. At Helm, he designs services, automation, and technical
+                delivery. He follows the work from the first scan through deployment,
+                documentation, and ongoing review.
               </p>
             </div>
           </article>

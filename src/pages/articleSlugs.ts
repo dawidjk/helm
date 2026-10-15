@@ -75,6 +75,7 @@ export const articleSlugs = [
   "managed-service-providers-new-jersey"
 ];
 export const blogSlugs = [
+  "cisco-secure-email-gateway-october-2026-exploitation",
   "meraki-october-2026-security-update",
   "ivanti-connect-secure-october-2026-exploitation",
   "windows-shell-october-2026-update"

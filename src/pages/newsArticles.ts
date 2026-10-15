@@ -1,6 +1,8 @@
+import {ciscoEmailArticle} from './ciscoEmailArticle';
 import type {Article} from './articles';
 
 export const newsArticles: Article[] = [
+  ciscoEmailArticle,
   {
     "slug": "meraki-october-2026-security-update",
     "collection": "blog",

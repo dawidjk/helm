@@ -1,3 +1,4 @@
+import {ciscoEmailArticle, ciscoEmailArticleSupport} from './ciscoEmailArticle';
 import {refreshedArticleSupport} from './refreshedArticleSupport';
 export type ArticleSource = {
   title: string;
@@ -157,6 +158,7 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+  [ciscoEmailArticle.slug]: ciscoEmailArticleSupport,
   "retest-ai-workflow-changes": {
   "relatedSlugs": [
     "choose-first-ai-workflow",

@@ -73,6 +73,15 @@ export const articleCatalog = [
     "readMin": 14
   },
   {
+    "slug": "cisco-secure-email-gateway-october-2026-exploitation",
+    "title": "Cisco Secure Email Gateway: confirm updates and assess compromise",
+    "lane": "Professional services",
+    "readMin": 5,
+    "collection": "blog",
+    "date": "2026-10-15",
+    "metaDesc": "Confirm updates and assess possible compromise with IT."
+  },
+  {
     "slug": "meraki-october-2026-security-update",
     "title": "Cisco’s October Meraki update: some fixes are still on the way",
     "lane": "Professional services",
