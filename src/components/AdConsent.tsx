@@ -61,9 +61,9 @@ export default function AdConsent() {
           <noscript><p>Optional cookies are off when JavaScript is unavailable.</p></noscript>
         </div>
         <div className="ad-consent-actions">
-          <button type="button" onClick={() => save(false, false)}>Reject optional</button>
-          <button type="button" onClick={manage}>Manage preferences</button>
           <button type="button" onClick={() => save(true, true)}>Accept all</button>
+          <button type="button" onClick={manage}>Manage preferences</button>
+          <button type="button" onClick={() => save(false, false)}>Reject optional</button>
         </div>
       </section>}
       <dialog ref={dialog} className="cookie-dialog" aria-labelledby="cookie-preferences-title" aria-describedby="cookie-preferences-description" onCancel={event => {event.preventDefault(); setPanel(false);}} onKeyDown={event => {
@@ -92,9 +92,9 @@ export default function AdConsent() {
         <p><Link to="/privacy/" onClick={() => setPanel(false)}>Privacy policy</Link> describes the services involved and the data they receive.</p>
         <p>If your browser blocks storage, your choice applies only to this page.</p>
         <div className="cookie-dialog-actions">
-          <button type="button" onClick={() => save(false, false)}>Reject optional</button>
-          <button type="button" onClick={() => save(draft.analytics, draft.advertising)}>Save preferences</button>
           <button type="button" onClick={() => save(true, true)}>Accept all</button>
+          <button type="button" onClick={() => save(draft.analytics, draft.advertising)}>Save preferences</button>
+          <button type="button" onClick={() => save(false, false)}>Reject optional</button>
         </div>
       </dialog>
     </>
