@@ -10,12 +10,14 @@ const dist=path.resolve(process.env.HELM_TEST_DIST||'dist');
 const reportPath=process.env.HELM_TEST_REPORT||'consent-init-test-report.json';
 const key='helm-cookie-preferences-v2', legacyKey='helm-remarketing-consent-v1';
 const exact="We use cookies to make our site work and to analyze how it's used. You can choose to accept all cookies or manage your preferences below.";
-const prefs=(analytics,advertising)=>JSON.stringify({version:2,analytics,advertising,decided:true});
+const prefs=(analytics,advertising,scoped=true)=>JSON.stringify({version:2,analytics,advertising,decided:true,...(scoped?{analyticsScope:'ga4-hubspot-v1'}:{})});
 const cases=[
   {name:'first-visit',banner:true,analytics:false,advertising:false},
-  {name:'returning-accepted',raw:prefs(true,true),banner:false,analytics:true,advertising:true},
+  {name:'returning-accepted',raw:prefs(true,true),banner:false,analytics:true,advertising:true,hubspot:true},
+  {name:'old-google-and-ads-choice',raw:prefs(true,true,false),banner:true,analytics:true,advertising:true,refresh:true},
+  {name:'old-google-only-choice',raw:prefs(true,false,false),banner:true,analytics:true,advertising:false,refresh:true},
   {name:'returning-rejected',raw:prefs(false,false),banner:false,analytics:false,advertising:false},
-  {name:'returning-analytics-only',raw:prefs(true,false),banner:false,analytics:true,advertising:false},
+  {name:'returning-analytics-only',raw:prefs(true,false),banner:false,analytics:true,advertising:false,hubspot:true},
   {name:'returning-advertising-only',raw:prefs(false,true),banner:false,analytics:false,advertising:true},
   {name:'invalid-json',raw:'{invalid',banner:true,analytics:false,advertising:false},
   {name:'invalid-types',raw:'{"version":2,"analytics":"true","advertising":true,"decided":true}',banner:true,analytics:false,advertising:false},
@@ -47,7 +49,7 @@ try{
     await page.setViewport({width:test.width||390,height:test.height||823});
     await page.emulateMediaFeatures([{name:'prefers-reduced-motion',value:'reduce'}]);
     await page.evaluateOnNewDocument(({raw,legacy,blocked,key,legacyKey})=>{
-      if(raw!==undefined)localStorage.setItem(key,raw);if(legacy)localStorage.setItem(legacyKey,legacy);
+      if(window===window.top){if(raw!==undefined)localStorage.setItem(key,raw);if(legacy)localStorage.setItem(legacyKey,legacy);}
       window.__consentQA={reads:[],samples:[]};
       const get=Storage.prototype.getItem;
       Storage.prototype.getItem=function(name){
@@ -72,7 +74,7 @@ try{
           return await r.continue();
         }
         requests.push({url:r.url(),method:r.method(),resourceType:r.resourceType()});
-        if(['www.googletagmanager.com','connect.facebook.net'].includes(url.hostname))return await r.respond({status:200,contentType:'text/javascript',body:'/* Synthetic SDK; no collection or cookies. */'});
+        if(['www.googletagmanager.com','connect.facebook.net','js-na2.hs-scripts.com'].includes(url.hostname))return await r.respond({status:200,contentType:'text/javascript',body:'/* Synthetic SDK; no collection or cookies. */'});
         return await r.respond({status:204});
       }catch{/* Closing an isolated context can cancel a gated request. */}
     });
@@ -87,16 +89,17 @@ try{
       await new Promise(resolve=>setTimeout(resolve,150));
       const after=await page.evaluate(()=>({banner:Boolean(document.querySelector('.ad-consent')),panel:Boolean(document.querySelector('.cookie-dialog')?.open),tracking:[...document.querySelectorAll('iframe[data-helm-tracking]')].map(e=>e.dataset.helmTracking).sort(),samples:window.__consentQA.samples,overflow:document.documentElement.scrollWidth>innerWidth}));
       assert.equal(after.banner,test.banner);assert.equal(after.panel,false);assert.equal(after.overflow,false);
-      const expected=['analytics','advertising'].filter(category=>test[category]).sort();assert.deepEqual(after.tracking,expected);
+      const expected=['analytics','advertising','hubspot'].filter(category=>test[category]).sort();assert.deepEqual(after.tracking,expected);
       assert.ok(after.samples.filter(s=>s.reads===0).every(s=>!s.banner&&!s.panel),'No flash before preference resolution');
       if(!test.banner)assert.ok(after.samples.every(s=>!s.banner&&!s.panel),'Returning decided visitors must never see a banner');
       if(test.banner)assert.equal(await page.$eval('.ad-consent p',e=>e.textContent),exact);
       if(expected.length)await page.waitForFunction(categories=>categories.every(category=>{
         const frame=document.querySelector(`iframe[data-helm-tracking="${category}"]`);
-        return Boolean(frame?.contentDocument?.querySelector(category==='analytics'?'script[src*="googletagmanager.com"]':'script[src*="connect.facebook.net"]'));
+        return Boolean(frame?.contentDocument?.querySelector(category==='analytics'?'script[src*="googletagmanager.com"]':category==='hubspot'?'#hs-script-loader':'script[src*="connect.facebook.net"]'));
       }),{timeout:15000},expected);
       assert.equal(requests.some(r=>/googletagmanager/.test(r.url)),test.analytics);
       assert.equal(requests.some(r=>/connect.facebook.net/.test(r.url)),test.advertising);
+      assert.equal(requests.some(r=>/js-na2.hs-scripts.com/.test(r.url)),Boolean(test.hubspot));
       if(test.banner){
         const buttons=await page.$$('.ad-consent button');
         const manage=await Promise.all(buttons.map(async button=>({button,text:await button.evaluate(e=>e.textContent.trim())})));
@@ -104,7 +107,7 @@ try{
       }else await page.focus('.footer-privacy-button');
       await page.keyboard.press('Enter');await page.waitForFunction(()=>document.querySelector('.cookie-dialog').open);
       const controls=await page.$$eval('.cookie-category input',es=>es.map(e=>({checked:e.checked,disabled:e.disabled})));
-      assert.deepEqual(controls,[{checked:true,disabled:true},{checked:test.analytics,disabled:false},{checked:test.advertising,disabled:false}]);
+      assert.deepEqual(controls,[{checked:true,disabled:true},{checked:test.refresh?false:test.analytics,disabled:false},{checked:test.advertising,disabled:false}]);
       assert.equal(await page.evaluate(()=>document.activeElement.textContent.trim()),'Close');
       assert.equal(await page.evaluate(()=>document.querySelector('.cookie-dialog').scrollWidth>document.querySelector('.cookie-dialog').clientWidth),false);
       for(let i=0;i<9;i++){await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.querySelector('.cookie-dialog').contains(document.activeElement)),true)}

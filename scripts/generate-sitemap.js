@@ -22,6 +22,7 @@ function walkDir(dir, callback) {
 }
 
 const urls = [];
+const hubspotPages = {};
 
 function getPriority(route) {
   if (route === '') return '1.0';
@@ -61,6 +62,10 @@ walkDir(DIST_DIR, (filePath) => {
     // those pages at trailing-slash URLs. Submit only the final URLs.
     const url = `${SITE_URL}${route === '' ? '/' : '/' + route + '/'}`;
     urls.push({ url, route, lastmod });
+    // Keep optional HubSpot measurement confined to actual published pages.
+    // Titles come from the static build, never query strings or form state.
+    const html = fs.readFileSync(filePath, 'utf8');
+    hubspotPages[route === '' ? '/' : '/' + route + '/'] = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] ?? '';
   }
 });
 
@@ -72,6 +77,7 @@ ${urls.map(({url, route, lastmod}) => `  <url>\n    <loc>${url}</loc>${lastmod ?
 </urlset>`;
 
 fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), sitemap);
+fs.writeFileSync(path.join(DIST_DIR, 'measurement/hubspot/published-pages.mjs'), `export default ${JSON.stringify(hubspotPages)};\n`);
 // Serve genuine missing-page HTML for unknown GitHub Pages URLs. Copying
 // Home here would hydrate Home's DOM as a different route and trigger recovery.
 fs.copyFileSync(path.join(DIST_DIR, '404/index.html'), path.join(DIST_DIR, '404.html'));

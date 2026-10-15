@@ -11,7 +11,7 @@ const dist = path.resolve('dist');
 const reportPath = process.env.HELM_TEST_REPORT || 'hydration-test-report.json';
 const mode = process.argv[2] || 'all';
 const rows = [], failures = [];
-const mime = {'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png','.woff2':'font/woff2'};
+const mime = {'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png','.woff2':'font/woff2'};
 const server = http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url, 'http://localhost');
@@ -35,7 +35,10 @@ async function fixture(route, {consent='unknown',theme='auto',slow=false,hold=fa
   await page.setViewport({width:412,height:823,deviceScaleFactor:1.75,isMobile:true,hasTouch:true});
   await page.emulateMediaFeatures([{name:'prefers-color-scheme',value:theme==='dark'?'dark':'light'}]);
   await page.evaluateOnNewDocument(({consent,theme,future}) => {
-    if(consent!=='unknown') localStorage.setItem('helm-remarketing-consent-v1',consent);
+    if(window===window.top){
+      if(consent==='analytics')localStorage.setItem('helm-cookie-preferences-v2',JSON.stringify({version:2,analytics:true,advertising:false,decided:true,analyticsScope:'ga4-hubspot-v1'}));
+      else if(consent!=='unknown')localStorage.setItem('helm-remarketing-consent-v1',consent);
+    }
     localStorage.setItem('helm-theme',theme);
     if(future) {
       const NativeDate = Date;
@@ -56,7 +59,7 @@ async function fixture(route, {consent='unknown',theme='auto',slow=false,hold=fa
   page.on('request',async request=>{
     try {
       const url = new URL(request.url());
-      if(request.isNavigationRequest()) {
+      if(request.isNavigationRequest() && request.frame()===page.mainFrame()) {
         if(firstNavigation && request.url()===origin+route) firstNavigation=false;
         else {
           navigations.push({origin:url.origin,path:url.pathname,email:url.searchParams.get('email'),src:url.searchParams.get('src'),method:request.method()});
@@ -70,13 +73,15 @@ async function fixture(route, {consent='unknown',theme='auto',slow=false,hold=fa
       } else {blocked.push({origin:url.origin,path:url.pathname,method:request.method()}); await request.abort();}
     } catch(e) {errors.push(e.message);}
   });
-  const navigation=page.goto(origin+route,{waitUntil:'domcontentloaded'});
-  await page.waitForSelector('h1');
+  // A held hydration script deliberately delays DOMContentLoaded. Handle a
+  // navigation error immediately, then report it through the test assertion.
+  const navigation=page.goto(origin+route,{waitUntil:'domcontentloaded',timeout:60000}).then(()=>null,error=>error);
+  try {await page.waitForSelector('h1');} catch(error) {release();await context.close();await navigation;throw error;}
   await page.evaluate(()=>{window.__originalHeading=document.querySelector('h1');});
   return {page,errors,warnings,blocked,navigations,release,navigation,close:()=>context.close()};
 }
 async function hydrated(f) {
-  f.release(); await f.navigation;
+  f.release(); const navigationError=await f.navigation;if(navigationError)throw navigationError;
   await f.page.waitForFunction(()=>window.__VITE_REACT_SSG_CONTEXT__ && Object.keys(document.querySelector('.nav-burger,.error-search')||{}).some(k=>k.startsWith('__reactProps')), {timeout:20000});
   await sleep(120);
 }
@@ -98,7 +103,9 @@ async function routes(dir=dist) {
 }
 try {
   if(['all','routes','blog'].includes(mode)) {
-    const selectedRoutes=(await routes()).filter(route=>mode!=='blog'||route.startsWith('/blog/'));
+    const requestedRoutes=process.env.HELM_HYDRATION_ROUTES?.split(',');
+    const selectedRoutes=(await routes()).filter(route=>(mode!=='blog'||route.startsWith('/blog/'))&&(!requestedRoutes||requestedRoutes.includes(route)));
+    assert.ok(selectedRoutes.length,'At least one requested generated route must match');
     const tasks=selectedRoutes.flatMap(route=>['unknown','declined','accepted'].flatMap(consent=>['auto','light','dark'].map(theme=>({route,consent,theme}))));
     let next=0;
     await Promise.all(Array.from({length:3},async()=>{
@@ -108,7 +115,8 @@ try {
           const f=await fixture(route,{consent,theme});
           try {
             await hydrated(f);noErrors(f);
-            const state=await f.page.evaluate(()=>({sameHeading:window.__originalHeading===document.querySelector('h1'),mode:localStorage.getItem('helm-theme'),appliedTheme:document.documentElement.dataset.theme,canonical:document.querySelector('link[rel=canonical]')?.href,pageViews:(window.fbq?.queue||[]).filter(a=>a[0]==='track'&&a[1]==='PageView').length}));
+            if(consent==='accepted'&&route!=='/404/')await f.page.waitForFunction(()=>document.querySelector('iframe[data-helm-tracking="advertising"]')?.contentWindow?.fbq?.queue?.some(a=>a[0]==='track'&&a[1]==='PageView'));
+            const state=await f.page.evaluate(()=>({sameHeading:window.__originalHeading===document.querySelector('h1'),mode:localStorage.getItem('helm-theme'),appliedTheme:document.documentElement.dataset.theme,canonical:document.querySelector('link[rel=canonical]')?.href,pageViews:(document.querySelector('iframe[data-helm-tracking="advertising"]')?.contentWindow?.fbq?.queue||[]).filter(a=>a[0]==='track'&&a[1]==='PageView').length}));
             assert.ok(state.sameHeading); assert.equal(state.mode,theme);
             // Astryx represents system/Auto by removing the HTML attribute.
             assert.equal(state.appliedTheme,theme==='auto'?undefined:theme);
@@ -148,11 +156,13 @@ try {
     });
     await test('Early 404 search text and focus survive without submission',async()=>{
       const f=await fixture('/one/two/',{hold:true,slow:true});
-      try{await f.page.focus('#error-page-search');await f.page.keyboard.type('pricing');await hydrated(f);noErrors(f);const state=await f.page.$eval('#error-page-search',e=>({value:e.value,focus:e===document.activeElement}));assert.equal(state.value,'pricing');assert.equal(state.focus,true);return {state};}finally{await f.close();}
+      try{await f.page.waitForSelector('#error-page-search');await f.page.focus('#error-page-search');await f.page.keyboard.type('pricing');await hydrated(f);noErrors(f);const state=await f.page.$eval('#error-page-search',e=>({value:e.value,focus:e===document.activeElement}));assert.equal(state.value,'pricing');assert.equal(state.focus,true);return {state};}finally{await f.close();}
     });
   }
   if(['all','forms'].includes(mode)) {
-    for(const route of ['/','/helm-core/','/free-scan/']) for(const consent of ['unknown','declined','accepted']) for(const scenario of ['early-business','early-personal','early-invalid','typed-early-submit-late','typed-late-submit-late']) {
+    // Home and product heroes now use the approved direct booking link.
+    // The email scan form is published on its dedicated landing page.
+    for(const route of ['/free-scan/']) for(const consent of ['unknown','declined','accepted','analytics']) for(const scenario of ['early-business','early-personal','early-invalid','typed-early-submit-late','typed-late-submit-late']) {
       await test(`form ${route} ${consent} ${scenario}`,async()=>{
         const f=await fixture(route,{consent,slow:true,hold:true});
         try {
@@ -168,7 +178,7 @@ try {
           const state=await f.page.$eval('.lead-form',form=>({value:form.querySelector('input').value,error:form.querySelector('[role=alert]')?.textContent,disabled:form.querySelector('input').disabled,focused:form.querySelector('input')===document.activeElement}));
           if(scenario==='early-invalid') {assert.equal(f.navigations.length,0);assert.equal(state.value,email);assert.equal(state.focused,true);}
           else if(scenario==='early-personal') {assert.equal(f.navigations.length,0);assert.match(state.error,/personal inbox/);assert.equal(state.value,email);assert.equal(state.focused,true);}
-          else {assert.equal(f.navigations.length,1);assert.equal(f.navigations[0].origin,'https://app.helmsecured.com');assert.equal(f.navigations[0].path,'/scan/auto');assert.equal(f.navigations[0].email,email);assert.ok(f.navigations[0].src);assert.equal(state.disabled,true);}
+          else {assert.equal(f.navigations.length,1);assert.equal(f.navigations[0].origin,'https://app.helmsecured.com');assert.equal(f.navigations[0].path,'/scan');assert.equal(f.navigations[0].email,email);if(consent==='analytics')assert.ok(f.navigations[0].src);else assert.equal(f.navigations[0].src,null);assert.equal(state.disabled,true);}
           assert.equal(f.blocked.some(r=>r.method==='POST' && r.path!=='/api/marketing/events'),false);
           return {route,consent,scenario,state,interceptedNavigations:f.navigations,blockedRequests:f.blocked};
         } finally {await f.close();}
@@ -177,7 +187,7 @@ try {
     await test('Contact early input, selection and focus survive; no unprotected submit',async()=>{
       const f=await fixture('/contact/?service=helm-core',{consent:'accepted',hold:true});
       try {
-        await f.page.waitForSelector('.contact-form');await f.page.select('select[name=interest]','Secure AI Adoption');
+        await f.page.waitForSelector('.contact-form');await f.page.select('select[name=interest]','Secure AI Adoption');await f.page.select('select[name=employeeCount]','20-74');
         await f.page.focus('input[name=company]');await f.page.keyboard.type('Example fixture');
         await f.page.focus('input[name=email]');await f.page.keyboard.type('probe@example.invalid');
         await f.page.focus('input[name=name]');await f.page.keyboard.type('Synthetic tester');
@@ -189,7 +199,7 @@ try {
     });
   }
   if(['all','interactions','blog'].includes(mode)) {
-    for(const route of ['/','/helm-core/']) for(const consent of ['unknown','declined','accepted']) await test(`early scroll/input ${route} ${consent}`,async()=>{
+    for(const route of ['/free-scan/']) for(const consent of ['unknown','declined','accepted']) await test(`early scroll/input ${route} ${consent}`,async()=>{
       const f=await fixture(route,{consent,slow:true,hold:true});
       try {
         await f.page.focus('.lead-form input');await f.page.keyboard.type('probe@example.invalid');
@@ -200,11 +210,20 @@ try {
         await f.page.keyboard.press('Escape');await f.page.waitForFunction(()=>!document.querySelector('main').inert&&getComputedStyle(document.body).overflow!=='hidden');return {state};
       }finally{await f.close();}
     });
+    for(const route of ['/','/helm-core/','/helm-command/']) await test(`booking CTA survives hydration ${route}`,async()=>{
+      const f=await fixture(route,{consent:'declined',hold:true});
+      try{
+        const selector='main a[href="https://calendar.app.google/RFsRMyZcxgechAbj7"]';
+        await f.page.focus(selector);await hydrated(f);noErrors(f);
+        const link=await f.page.$eval(selector,e=>({href:e.href,target:e.target,rel:e.rel,referrerPolicy:e.referrerPolicy,focused:document.activeElement===e}));
+        assert.equal(link.target,'_blank');assert.ok(link.rel.includes('noopener')&&link.rel.includes('noreferrer'));assert.equal(link.referrerPolicy,'no-referrer');assert.equal(link.focused,true);return {link};
+      }finally{await f.close();}
+    });
     await test('Blog post navigation keeps evergreen Resources separate',async()=>{
       const f=await fixture('/blog/',{consent:'declined'});
       try {
         await hydrated(f);
-        await f.page.click('.blog-post');
+        await f.page.click('a.blog-post[href="/blog/meraki-october-2026-security-update/"]');
         await f.page.waitForFunction(()=>location.pathname==='/blog/meraki-october-2026-security-update/');
         await f.page.waitForFunction(()=>document.querySelector('.article-body'));
         assert.equal(await f.page.$eval('link[rel=canonical]',e=>e.href),'https://helmsecured.com/blog/meraki-october-2026-security-update/');
@@ -220,7 +239,10 @@ try {
         await f.page.waitForFunction(()=>document.querySelector('.resources-library'));
         assert.equal(await f.page.$('a[href="/resources/meraki-october-2026-security-update/"]'),null);
         await f.page.click('.nav-burger');await f.page.waitForFunction(()=>document.querySelector('.nav-drawer'));
-        await f.page.click('.nav-drawer a[href="/blog/"]');await f.page.waitForFunction(()=>location.pathname==='/blog/'&&!document.querySelector('.nav-drawer'));
+        await f.page.evaluate(()=>Array.from(document.querySelectorAll('.nav-drawer summary')).find(e=>e.textContent.trim()==='Learn').focus());
+        await f.page.keyboard.press('Enter');
+        await f.page.waitForFunction(()=>document.querySelector('.nav-drawer a[href="/blog/"]').closest('details').open);
+        await f.page.click('.nav-drawer a[href="/blog/"]');await f.page.waitForFunction(()=>location.pathname==='/blog/'&&document.querySelector('.nav-burger').getAttribute('aria-expanded')==='false');
         noErrors(f);return {};
       }finally{await f.close();}
     });

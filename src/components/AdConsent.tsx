@@ -1,9 +1,15 @@
 import {useEffect, useRef, useState} from 'react';
 import {Link, useLocation} from 'react-router-dom';
-import {getCookiePreferences, setCookiePreferences, resetVolatilePreferences, PREFERENCES_EVENT, PREFERENCES_KEY, LEGACY_AD_KEY, type CookiePreferences} from '../lib/cookiePreferences';
+import {getCookiePreferences, setCookiePreferences, resetVolatilePreferences, needsAnalyticsChoiceRefresh, PREFERENCES_EVENT, PREFERENCES_KEY, LEGACY_AD_KEY, type CookiePreferences} from '../lib/cookiePreferences';
 import {syncTrackingPreferences, trackPage} from '../lib/trackingFrames';
 
 const initial: CookiePreferences = {version: 2, analytics: false, advertising: false, decided: false};
+function preferenceDraft(): CookiePreferences {
+  const preferences = getCookiePreferences();
+  // Keep earlier choices operating within their original scope, while asking
+  // explicitly before adding HubSpot to an earlier Google-only permission.
+  return {...preferences, analytics: needsAnalyticsChoiceRefresh() ? false : preferences.analytics};
+}
 export default function AdConsent() {
   const {pathname} = useLocation();
   const [preferences, setPreferences] = useState(initial);
@@ -18,12 +24,12 @@ export default function AdConsent() {
     const update = () => {
       const next = getCookiePreferences();
       syncTrackingPreferences();
-      setPreferences(next); setBanner(!next.decided);
+      setPreferences(next); setBanner(!next.decided || needsAnalyticsChoiceRefresh());
     };
     const storage = (event: StorageEvent) => {
       if (event.key === PREFERENCES_KEY || event.key === LEGACY_AD_KEY || event.key === null) {resetVolatilePreferences(); update();}
     };
-    const open = () => {opener.current = document.activeElement as HTMLElement; setDraft(getCookiePreferences()); setPanel(true);};
+    const open = () => {opener.current = document.activeElement as HTMLElement; setDraft(preferenceDraft()); setPanel(true);};
     update(); document.addEventListener(PREFERENCES_EVENT, update);
     document.addEventListener('helm:privacy-choices', open); window.addEventListener('storage', storage);
     return () => {document.removeEventListener(PREFERENCES_EVENT, update); document.removeEventListener('helm:privacy-choices', open); window.removeEventListener('storage', storage);};
@@ -31,7 +37,7 @@ export default function AdConsent() {
   useEffect(() => {
     syncTrackingPreferences();
     trackPage('analytics', pathname); trackPage('advertising', pathname);
-  }, [pathname, preferences.analytics, preferences.advertising]);
+  }, [pathname, preferences.analytics, preferences.advertising, preferences.analyticsScope]);
   useEffect(() => {
     const element = dialog.current; if (!element) return;
     if (panel && !element.open) {element.showModal(); close.current?.focus();}
@@ -41,7 +47,7 @@ export default function AdConsent() {
       target?.focus({preventScroll: true});
     }
   }, [panel]);
-  const manage = () => {opener.current = document.activeElement as HTMLElement; setDraft(getCookiePreferences()); setPanel(true);};
+  const manage = () => {opener.current = document.activeElement as HTMLElement; setDraft(preferenceDraft()); setPanel(true);};
   const save = (analytics: boolean, advertising: boolean) => {
     setCookiePreferences(analytics, advertising); setBanner(false); setPanel(false);
     if (!panel) requestAnimationFrame(() => document.getElementById('main-content')?.focus({preventScroll: true}));
@@ -77,7 +83,7 @@ export default function AdConsent() {
         </div>
         <div className="cookie-category">
           <label><input type="checkbox" checked={draft.analytics} onChange={event => setDraft({...draft, analytics: event.target.checked})} aria-describedby="cookie-analytics-description" />Analytics</label>
-          <p id="cookie-analytics-description">Helps us understand which pages people use and which actions lead to an enquiry. Analytics services can receive page, browser, device and approximate-location information. A random identifier can connect scan and enquiry steps within this browser tab.</p>
+          <p id="cookie-analytics-description">Allows Google Analytics and HubSpot to help us understand which pages people use and which actions lead to an enquiry. These services can receive page, browser, device and approximate-location information, cookie identifiers and your IP address. A random identifier can connect scan and enquiry steps within this browser tab.</p>
         </div>
         <div className="cookie-category">
           <label><input type="checkbox" checked={draft.advertising} onChange={event => setDraft({...draft, advertising: event.target.checked})} aria-describedby="cookie-advertising-description" />Advertising</label>
