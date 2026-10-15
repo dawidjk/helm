@@ -4,6 +4,8 @@ import {useParams, Link} from 'react-router-dom';
 import {Band, BookCallLink, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import ServicePreview from './ServicePreview';
+import CoreMonthlyReport from './CoreMonthlyReport';
+import CommandSamplePack from './CommandSamplePack';
 import ProductMotif from '../components/ProductMotif';
 import {productList} from './products';
 import {siteUrl} from '../lib/urls';
@@ -64,6 +66,10 @@ export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
           <div className="hero-note reveal d3">
             {p.price} · <Link to="/pricing/">full pricing</Link>
           </div>
+          {p.slug === 'helm-core' && (
+            <a className="product-scan-link core-report-hero-link" href="#monthly-report">See a sample monthly report</a>
+          )}
+          {p.slug === 'helm-command' && <a className="command-sample-hero-link reveal d3" href="#command-sample">Inspect the sample Command pack</a>}
         </div>
         <ScrollCue />
       </header>
@@ -90,7 +96,13 @@ export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
         </div>
       </Band>
 
-      <ServicePreview command={p.slug === 'helm-command'} />
+      {p.slug === 'helm-core' ? (
+        <CoreMonthlyReport />
+      ) : p.slug === 'helm-command' ? (
+        <CommandSamplePack />
+      ) : (
+        <ServicePreview command={p.slug === 'helm-command'} />
+      )}
 
       {p.slug === 'helm-command' && <CommandReadinessSection />}
 
