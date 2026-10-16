@@ -1,8 +1,10 @@
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
+import OwnerPortrait from '../components/OwnerPortrait';
 import {siteUrl} from '../lib/urls';
 import {businessPhone, facebookUrl, instagramUrl, linkedInUrl, serviceAreaJsonLd} from '../lib/business';
+import './About.css';
 
 export default function About() {
   return (
@@ -98,6 +100,10 @@ export default function About() {
             delivery and follow-up.
           </p>
         </div>
+        <OwnerPortrait
+          className="about-owner-portrait"
+          sizes="(min-width: 808px) 760px, calc(100vw - 48px)"
+        />
         <div className="founder-grid">
           <article className="founder-card observe">
             <img

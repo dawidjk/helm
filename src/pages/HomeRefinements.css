@@ -1,3 +1,41 @@
+.home-owner-intro {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(24px, 3vw, 40px);
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto;
+  padding-block: clamp(40px, 5vw, 64px);
+  border-bottom: 1px solid var(--helm-hairline);
+}
+.home-owner-intro .home-owner-portrait { width: 240px; max-width: 100%; }
+.home-owner-intro > div { min-width: 0; }
+.home-owner-intro h2 {
+  max-width: 28ch;
+  margin: 0 0 16px;
+  color: var(--helm-text-strong);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+}
+.home-owner-intro p {
+  max-width: 65ch;
+  margin: 0 0 12px;
+  color: var(--helm-text);
+  line-height: 1.65;
+}
+@media (max-width: 700px) {
+  .home-owner-intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    width: min(1200px, calc(100% - 48px));
+    padding-block: 32px;
+  }
+  .home-owner-intro .home-owner-portrait { width: 200px; }
+}
+
 .home-service-section { grid-template-columns: minmax(220px, .65fr) minmax(0, 1.35fr); gap: clamp(40px, 6vw, 88px); }
 .home-comparison { min-width: 0; }
 .home-service-summary { padding-block: 28px; border-block-end: 1px solid var(--helm-hairline); }

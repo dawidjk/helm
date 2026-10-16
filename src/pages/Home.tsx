@@ -11,6 +11,7 @@ import {BookCallLink, DirectionIcon, ScrollCue} from '../components/Site';
 import {BOOKING_DESTINATION} from '../lib/booking';
 import './SecureAiAdoption.css';
 import PanelVisual from '../components/PanelVisual';
+import OwnerPortrait from '../components/OwnerPortrait';
 import './HomeRefinements.css';
 
 const lanes = [
@@ -91,6 +92,15 @@ export default function Home() {
         </div>
         <ScrollCue />
       </header>
+
+      <section className="home-owner-intro" aria-labelledby="home-owner-title">
+        <OwnerPortrait className="home-owner-portrait" sizes="(max-width: 700px) 200px, 240px" />
+        <div>
+          <h2 id="home-owner-title">Kelly and Dawid Kluszczynski</h2>
+          <p>You’ll work directly with Helm’s co-owners from the first conversation through delivery and follow-up.</p>
+          <Link className="home-detail-link" to="/about/">About Kelly and Dawid <DirectionIcon /></Link>
+        </div>
+      </section>
 
       <section id="services" className="home-service-section" aria-labelledby="home-services-title">
         <div className="home-section-intro">
