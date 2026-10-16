@@ -58,8 +58,8 @@
 .command-sample-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 24px;
-  margin-block: 24px 48px;
+  gap: 8px 16px;
+  margin-block: 24px 32px;
   padding-block: 16px;
   border-block: 1px solid var(--helm-hairline);
 }
@@ -73,8 +73,48 @@
   padding-block: 8px;
 }
 
+.command-sample-nav button,
+.command-sample-pagination button {
+  min-height: 48px;
+  padding: 12px 16px;
+  border: 1px solid var(--helm-hairline);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--helm-text-strong);
+  font: inherit;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.command-sample-nav button {
+  padding-inline: 0;
+  border: 0;
+  border-block-end: 2px solid transparent;
+  border-radius: 0;
+  text-align: start;
+}
+
+.command-sample-nav button[aria-selected='true'] {
+  border-block-end-color: currentColor;
+  font-weight: 700;
+}
+
+.command-sample-nav button:hover,
+.command-sample-pagination button:not(:disabled):hover {
+  background: var(--helm-surface);
+}
+
+.command-sample-section[hidden] {
+  display: none;
+}
+
+.command-sample-section[role='tabpanel'] {
+  margin-block-start: 0;
+}
+
 .command-sample-section,
 .command-evidence-list > li,
+.command-sample-section h3,
 #command-sample-title {
   scroll-margin-block-start: 112px;
 }
@@ -162,7 +202,7 @@
   cursor: default;
 }
 
-.command-sample :is(a, button, select):focus-visible {
+.command-sample :is(a, button, select, [role='tabpanel'], h3, li[tabindex]):focus-visible {
   outline: 2px solid var(--helm-text-strong);
   outline-offset: 4px;
 }
@@ -248,6 +288,25 @@
   margin-block-start: 48px;
 }
 
+.command-sample-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-block-start: 32px;
+}
+
+.command-sample-pagination p {
+  margin: 0;
+  color: var(--helm-text-dim);
+}
+
+.command-sample-pagination button:disabled {
+  color: var(--helm-text-dim);
+  cursor: default;
+}
+
 @media (max-width: 700px) {
   .command-register-fields,
   .command-record-title,
@@ -265,5 +324,19 @@
 
   .command-register-fields button {
     width: 100%;
+  }
+
+  .command-sample-nav {
+    gap: 8px 16px;
+  }
+
+  .command-sample-pagination {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .command-sample-pagination p {
+    grid-column: 1 / -1;
+    grid-row: 1;
   }
 }
