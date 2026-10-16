@@ -5534,7 +5534,10 @@ body { padding-block-end: var(--consent-focus-clearance, 0px); }
 .cookie-dialog-head h2 { margin: 0; font-size: 24px; line-height: 1.2; }
 .cookie-dialog p { max-width: 72ch; margin-block: 12px; font-size: 1rem; line-height: 1.5; }
 .cookie-category { border-top: 1px solid var(--helm-hairline); padding-block: 12px; }
+.cookie-category-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .cookie-category label { display: flex; align-items: center; gap: 12px; font-weight: 600; }
+.cookie-category input { flex-shrink: 0; }
+.cookie-dialog .cookie-details-toggle { flex-shrink: 0; background: transparent; color: var(--helm-text); padding-inline: 12px; }
 .cookie-category input { width: 24px; height: 24px; accent-color: light-dark(#214b3b, #d2b993); }
 .cookie-category input:disabled { opacity: 1; }
 .cookie-category p { margin-block: 4px 0; }

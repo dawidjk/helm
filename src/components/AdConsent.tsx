@@ -10,6 +10,23 @@ function preferenceDraft(): CookiePreferences {
   // explicitly before adding HubSpot to an earlier Google-only permission.
   return {...preferences, analytics: needsAnalyticsChoiceRefresh() ? false : preferences.analytics};
 }
+function CookieCategory({name, descriptionId, children, checked, disabled, onChange}: {
+  name: string;
+  descriptionId: string;
+  children: string;
+  checked: boolean;
+  disabled?: boolean;
+  onChange?: (checked: boolean) => void;
+}) {
+  const [expanded, setExpanded] = useState(false);
+  return <div className="cookie-category">
+    <div className="cookie-category-head">
+      <label><input type="checkbox" checked={checked} disabled={disabled} onChange={event => onChange?.(event.target.checked)} aria-describedby={descriptionId} />{name}</label>
+      <button type="button" className="cookie-details-toggle" aria-label={`${expanded ? 'Hide' : 'Show'} details: ${name}`} aria-expanded={expanded} aria-controls={descriptionId} onClick={() => setExpanded(!expanded)}>{expanded ? 'Hide details' : 'Details'}</button>
+    </div>
+    <p id={descriptionId} hidden={!expanded}>{children}</p>
+  </div>;
+}
 export default function AdConsent() {
   const {pathname} = useLocation();
   const [preferences, setPreferences] = useState(initial);
@@ -77,18 +94,9 @@ export default function AdConsent() {
           <button ref={close} type="button" onClick={() => setPanel(false)}>Close</button>
         </div>
         <p id="cookie-preferences-description">Choose which optional cookies and similar storage this site can use. You can change or withdraw your choices through Privacy choices in the footer.</p>
-        <div className="cookie-category">
-          <label><input type="checkbox" checked disabled aria-describedby="cookie-necessary-description" />Necessary (always on)</label>
-          <p id="cookie-necessary-description">Supports your privacy choice, theme preference and secure form submission. The customer portal uses a separate sign-in cookie.</p>
-        </div>
-        <div className="cookie-category">
-          <label><input type="checkbox" checked={draft.analytics} onChange={event => setDraft({...draft, analytics: event.target.checked})} aria-describedby="cookie-analytics-description" />Analytics</label>
-          <p id="cookie-analytics-description">Allows Google Analytics and HubSpot to help us understand which pages people use and which actions lead to an enquiry. These services can receive page, browser, device and approximate-location information, cookie identifiers and your IP address. A random identifier can connect scan and enquiry steps within this browser tab.</p>
-        </div>
-        <div className="cookie-category">
-          <label><input type="checkbox" checked={draft.advertising} onChange={event => setDraft({...draft, advertising: event.target.checked})} aria-describedby="cookie-advertising-description" />Advertising</label>
-          <p id="cookie-advertising-description">Helps measure advertising and show you ads based on your visit. Advertising services may receive page, browser and device information and your IP address. They may connect that information with their own account or browser records.</p>
-        </div>
+        <CookieCategory name="Necessary (always on)" descriptionId="cookie-necessary-description" checked disabled>Supports your privacy choice, theme preference and secure form submission. The customer portal uses a separate sign-in cookie.</CookieCategory>
+        <CookieCategory name="Analytics" descriptionId="cookie-analytics-description" checked={draft.analytics} onChange={analytics => setDraft({...draft, analytics})}>Allows Google Analytics and HubSpot to help us understand which pages people use and which actions lead to an enquiry. These services can receive page, browser, device and approximate-location information, cookie identifiers and your IP address. A random identifier can connect scan and enquiry steps within this browser tab.</CookieCategory>
+        <CookieCategory name="Advertising" descriptionId="cookie-advertising-description" checked={draft.advertising} onChange={advertising => setDraft({...draft, advertising})}>Helps measure advertising and show you ads based on your visit. Advertising services may receive page, browser and device information and your IP address. They may connect that information with their own account or browser records.</CookieCategory>
         <p><Link to="/privacy/" onClick={() => setPanel(false)}>Privacy policy</Link> describes the services involved and the data they receive.</p>
         <p>If your browser blocks storage, your choice applies only to this page.</p>
         <div className="cookie-dialog-actions">
