@@ -1,3 +1,4 @@
+import {beyondTrustArticle} from './beyondTrustArticle';
 import {medicalProposalArticle} from './medicalProposalArticle';
 import {aiRetestArticle} from './aiRetestArticle';
 import {findingGuides} from './findingGuides';
@@ -46,6 +47,7 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+beyondTrustArticle,
 medicalProposalArticle,
 aiRetestArticle,
 ...findingGuides,

@@ -1,3 +1,4 @@
+import {beyondTrustArticle, beyondTrustArticleSupport} from './beyondTrustArticle';
 import {medicalProposalArticle, medicalProposalArticleSupport} from './medicalProposalArticle';
 import {ciscoEmailArticle, ciscoEmailArticleSupport} from './ciscoEmailArticle';
 import {refreshedArticleSupport} from './refreshedArticleSupport';
@@ -159,6 +160,7 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+  [beyondTrustArticle.slug]: beyondTrustArticleSupport,
   [medicalProposalArticle.slug]: medicalProposalArticleSupport,
   [ciscoEmailArticle.slug]: ciscoEmailArticleSupport,
   "retest-ai-workflow-changes": {
