@@ -73,12 +73,14 @@ export default function LanePage({lane}: {lane: Lane}) {
           '@graph': [
             {
               '@type': 'Service',
+              '@id': siteUrl(`/${lane.slug}/#service`),
               name: lane.metaTitle.split(' | ')[0],
               serviceType: lane.serviceType || 'Managed cybersecurity services',
               description: lane.metaDesc,
               url: siteUrl(`/${lane.slug}`),
               provider: {
                 '@type': 'Organization',
+                '@id': siteUrl('/#organization'),
                 name: 'Helm Security LLC',
                 url: siteUrl('/'),
               },

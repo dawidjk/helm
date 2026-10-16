@@ -2,6 +2,8 @@ import {Link} from 'react-router-dom';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import Meta from '../components/Meta';
 import {Band, BookCallLink, ScrollCue} from '../components/Site';
+import {serviceAreaJsonLd} from '../lib/business';
+import {siteUrl} from '../lib/urls';
 import './SecureAiAdoption.css';
 
 // Consulting scope approved for publication on October 1, 2026.
@@ -13,6 +15,16 @@ export default function SecureAiAdoption() {
         title="Secure AI Adoption for New Jersey Firms | Helm"
         desc="Evaluate one internal AI workflow with Helm. Review data, permissions, human review, and costs before deciding on a separately scoped pilot."
         path="/secure-ai-adoption/"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          '@id': siteUrl('/secure-ai-adoption/#service'),
+          name: 'Secure AI Adoption',
+          url: siteUrl('/secure-ai-adoption/'),
+          areaServed: serviceAreaJsonLd,
+          description: 'Evaluate one internal AI workflow with Helm. Review data, permissions, human review, and costs before deciding on a separately scoped pilot.',
+          provider: {'@type': 'Organization', '@id': siteUrl('/#organization'), name: 'Helm Security LLC', url: siteUrl('/')},
+        }}
       />
       <header className="hero lane brand-hero hero-fit-dense">
         <BrandHeroBackdrop />

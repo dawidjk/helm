@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import Meta from '../components/Meta';
 import LeadForm from '../components/LeadForm';
 import {canonicalPath, siteUrl} from '../lib/urls';
-import {businessPhone, facebookUrl, instagramUrl, linkedInUrl, serviceAreaJsonLd} from '../lib/business';
+import {organizationJsonLd} from '../lib/business';
 import {productList} from './products';
 import japandiHero from '../assets/variants/japandi-hero.webp';
 import japandiHeroMobile from '../assets/brand/japandi-home-mobile-640.webp';
@@ -48,20 +48,7 @@ export default function Home() {
               url: siteUrl('/'),
               publisher: {'@id': siteUrl('/#organization')},
             },
-            {
-          '@type': 'Organization',
-          '@id': siteUrl('/#organization'),
-          logo: {'@type': 'ImageObject', url: siteUrl('/favicon.png'), width: 2048, height: 2048},
-          name: 'Helm Security LLC',
-          alternateName: ['Helm Security', 'Helm'],
-          url: siteUrl('/'),
-          sameAs: [linkedInUrl, facebookUrl, instagramUrl],
-          email: 'hello@helmsecured.com',
-          telephone: businessPhone.e164,
-          areaServed: serviceAreaJsonLd,
-          address: {'@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US'},
-          description: 'Managed cybersecurity alongside existing IT, with security-program leadership through Helm Command.',
-            },
+            organizationJsonLd,
           ],
         }}
       />

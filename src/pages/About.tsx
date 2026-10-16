@@ -2,8 +2,7 @@ import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import OwnerPortrait from '../components/OwnerPortrait';
-import {siteUrl} from '../lib/urls';
-import {businessPhone, facebookUrl, instagramUrl, linkedInUrl, serviceAreaJsonLd} from '../lib/business';
+import {organizationJsonLd} from '../lib/business';
 import './About.css';
 
 export default function About() {
@@ -15,19 +14,7 @@ export default function About() {
         path="/about"
         jsonLd={{
           '@context': 'https://schema.org',
-          '@type': 'Organization',
-          '@id': siteUrl('/#organization'),
-          alternateName: ['Helm Security', 'Helm'],
-          logo: {'@type': 'ImageObject', url: siteUrl('/favicon.png'), width: 2048, height: 2048},
-          name: 'Helm Security LLC',
-          url: siteUrl('/'),
-          sameAs: [linkedInUrl, facebookUrl, instagramUrl],
-          email: 'hello@helmsecured.com',
-          telephone: businessPhone.e164,
-          areaServed: serviceAreaJsonLd,
-          address: {'@type': 'PostalAddress', addressRegion: 'NJ', addressCountry: 'US'},
-          description:
-            'Managed cybersecurity alongside existing IT, with security-program leadership through Helm Command.',
+          ...organizationJsonLd,
           employee: [
             {
               '@type': 'Person',

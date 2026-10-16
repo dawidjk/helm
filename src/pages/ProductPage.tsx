@@ -28,6 +28,7 @@ export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
           '@graph': [
             {
               '@type': 'Service',
+              '@id': siteUrl(`/${p.slug}/#service`),
               name: p.name,
               url: siteUrl(`/${p.slug}`),
               serviceType: p.slug === 'helm-core' ? 'Managed cybersecurity' : 'vCISO leadership and managed cybersecurity',
