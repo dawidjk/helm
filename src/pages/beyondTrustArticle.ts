@@ -38,6 +38,15 @@ export const beyondTrustArticle: Article = {
           "to": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/102xxx/CVE-2026-102764.json"
         }
       ]
+    },
+    {
+      "text": "CISA added CVE-2026-102764 to its Known Exploited Vulnerabilities catalog on October 16. The entry calls for mitigation under the vendor's instructions and forensic triage, a review for signs of compromise. Confirm who will handle the fix and who will assess possible earlier access.",
+      "links": [
+        {
+          "phrase": "Known Exploited Vulnerabilities catalog",
+          "to": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"
+        }
+      ]
     }
   ],
   "takeaway": "",
@@ -156,7 +165,7 @@ export const beyondTrustArticle: Article = {
             }
           ]
         },
-        "Ask which records are available, including copies held outside the appliance. Missing records limit what the responder can conclude. If they do not cover August and September, have it explain the gap and what can still be assessed.",
+        "Ask which records are available, including copies held outside the appliance. Missing records limit what the responder can conclude. If they do not cover August and September, have the responder explain the gap and what can still be assessed.",
         {
           "text": "Keep the review assigned after patching is confirmed, with a date for the next report. The person at your firm who can approve an interruption or additional response work should receive that report. Our incident-response planning guide explains how to agree authority when several providers need to act.",
           "links": [
@@ -193,6 +202,10 @@ export const beyondTrustArticleSupport: ArticleSupport = {
     {
       "title": "BeyondTrust-authored CVE-2026-102764 record",
       "href": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/102xxx/CVE-2026-102764.json"
+    },
+    {
+      "title": "CISA: Known Exploited Vulnerabilities catalog (CVE-2026-102764)",
+      "href": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"
     }
   ]
 };
