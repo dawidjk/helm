@@ -101,8 +101,8 @@ export default function AdConsent() {
         <p>If your browser blocks storage, your choice applies only to this page.</p>
         <div className="cookie-dialog-actions">
           <button type="button" onClick={() => save(true, true)}>Accept all</button>
-          <button type="button" onClick={() => save(draft.analytics, draft.advertising)}>Save preferences</button>
           <button type="button" onClick={() => save(false, false)}>Reject optional</button>
+          <button type="button" onClick={() => save(draft.analytics, draft.advertising)}>Save preferences</button>
         </div>
       </dialog>
     </>
