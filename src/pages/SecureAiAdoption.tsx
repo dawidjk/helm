@@ -6,6 +6,25 @@ import {serviceAreaJsonLd} from '../lib/business';
 import {siteUrl} from '../lib/urls';
 import './SecureAiAdoption.css';
 
+const aiQuestions = [
+  {
+    "question": "What will we have after the initial review?",
+    "answer": "Helm recommends whether a pilot is appropriate, what needs to change first, or why the workflow should stay as it is. Deliverables depend on the agreed scope and may include a workflow map with current effort and cost, plus a data and access checklist."
+  },
+  {
+    "question": "Who handles access or configuration changes?",
+    "answer": "We agree on who is responsible for any access or configuration changes before work begins. Your existing IT provider stays in place."
+  },
+  {
+    "question": "Does the initial review commit us to a pilot?",
+    "answer": "A pilot is optional and requires a separate scope and quote after the review. It covers one workflow on one approved platform."
+  },
+  {
+    "question": "Does a pilot include a company-wide rollout or ongoing support?",
+    "answer": "Company-wide rollouts and ongoing support require separate scoping, as do custom applications and production integrations."
+  }
+];
+
 // Consulting scope approved for publication on October 1, 2026.
 // This extends Helm's existing service-page layout and Japandi design system.
 export default function SecureAiAdoption() {
@@ -137,6 +156,18 @@ export default function SecureAiAdoption() {
             <p>Custom applications, production integrations, company-wide rollouts,
               and ongoing support require separate scoping.</p>
           </div>
+        </div>
+      </Band>
+
+      <Band variant="raised">
+        <div className="band-head"><h2>Common questions</h2></div>
+        <div className="faq-list">
+          {aiQuestions.map(item => (
+            <div className="faq-item" key={item.question}>
+              <h3>{item.question}</h3>
+              <p>{item.answer}</p>
+            </div>
+          ))}
         </div>
       </Band>
 

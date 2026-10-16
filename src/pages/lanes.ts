@@ -416,6 +416,20 @@ export const medicalPractices: Lane = {
       'No claim that one tool or assessment makes a practice compliant',
     ],
   },
+  commonQuestions: [
+    {
+      "question": "Does Core cover sending patient information by email?",
+      "answer": "Core's email protection checks for threats such as phishing and impersonation. It excludes secure-message portals, encrypted outbound delivery and secure file transfer. Your practice approves the patient-information workflow with its advisers, while IT administers the email system. Confirm any separate delivery service and its support before relying on it."
+    },
+    {
+      "question": "How do Helm and our IT provider handle an after-hours alert?",
+      "answer": "For Core and Command, security partners run covered detection and automated containment continuously. Helm's human follow-up follows the service order; its published hours are Monday through Friday, 9 a.m. to 5 p.m. Eastern, excluding federal holidays. Your IT provider keeps help desk, patching, administration and routine remediation. Confirm containment authority, recovery ownership and IT availability before signing."
+    },
+    {
+      "question": "What do we get from a separately scoped assessment?",
+      "answer": "A gap assessment can provide documented findings and a prioritized roadmap. Agree the systems and workflows to review, the evidence needed and the deliverables in the written scope. Remediation is separately authorized, so confirm who will carry out the recommended changes."
+    }
+  ],
   resources: [
     {slug: 'hipaa-risk-analysis-medical-practices', title: 'HIPAA Risk Analysis for Medical Practices', note: 'Scope the whole practice'},
     {slug: 'hipaa-email-rules-small-practices', title: 'HIPAA Email Rules for Small Practices', note: 'Know when protection is not encryption'},
@@ -485,6 +499,20 @@ export const contractors: Lane = {
       "Readiness evidence scoped to the questionnaire you need to answer",
     ],
   },
+  commonQuestions: [
+    {
+      "question": "Who verifies a supplier's changed bank details?",
+      "answer": "Your staff are responsible for verifying the change and approving payment. Confirm changed bank details with an authorized supplier contact at a number already in your records. Helm can help define the verification protocol under a separate written scope for your approval process."
+    },
+    {
+      "question": "Are job-site phones and tablets included in Helm Core?",
+      "answer": "Phones and tablets need separate written scope. Core includes up to two eligible Windows or Mac workstations per covered user. Before you sign, Helm confirms the covered devices and any exclusions."
+    },
+    {
+      "question": "What stays with our current IT provider?",
+      "answer": "Your IT provider or internal team keeps responsibility for help desk, patching, administration, procurement and routine remediation unless a separate written scope says otherwise. Helm manages the defined security layer and coordinates exceptions with your named IT contact."
+    }
+  ],
   resources: [
     {slug: 'vendor-email-compromise-contractors', title: 'Vendor Email Compromise for Contractors', note: 'Protect the payment chain'},
     {slug: 'invoice-fraud-red-flags', title: 'Invoice-Fraud Red Flags', note: 'Verify changes'},
