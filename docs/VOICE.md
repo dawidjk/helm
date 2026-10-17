@@ -36,6 +36,6 @@ This project voice applies to Impeccable clarify, critique, polish, and content 
 
 Voice review never relaxes Impeccable's accessibility, contrast, keyboard focus, semantic structure, responsive layout, motion, usability, localization, or technical checks. Preserve the existing Japandi visual system. Check new copy after integration at desktop and mobile widths and native 200%/400% zoom where relevant; keep native QA explicitly pending when unavailable. Do not use a prose review as evidence that rendered checks passed.
 
-Use current source files for exact commercial and technical facts. PRODUCT.md provides context, but a disagreement about current scope must be resolved from the approved service definition rather than rewritten as a new promise. Discovery credit is conditional on the written service order. Existing legal drafts remain under attorney review.
+Use current source files for exact commercial and technical facts. PRODUCT.md provides context, but a disagreement about current scope must be resolved from the approved service definition rather than rewritten as a new promise. Discovery credit is conditional on the written service order. Legal content has not received attorney review. The owner removed that project publication prerequisite on October17,2026. Do not claim attorney approval or legal compliance.
 
 New voice manuscripts live outside src and public. They require separate integration and publication approval; an accessibility release must use its exact reviewed commit without absorbing these drafts.

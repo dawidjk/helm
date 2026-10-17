@@ -1,7 +1,8 @@
 // Legal pages content. Structure mirrors lanes.ts / products.ts.
 //
-// ATTORNEY REVIEW REQUIRED before these routes ship. This is a working draft
-// written to the shape of a small MSSP's terms, not reviewed legal advice.
+// Legal review has not occurred. On October17,2026 the owner removed the
+// project prerequisite requiring attorney review before publication. This
+// records a release decision, not attorney approval or a legal-compliance claim.
 
 export type LegalSection = {h: string; body: string[]};
 
@@ -22,7 +23,7 @@ const ENTITY = 'Helm Security LLC';
 const STATE = 'New Jersey';
 const EMAIL = 'hello@helmsecured.com';
 const TERMS_EFFECTIVE = 'August 19, 2026';
-const PRIVACY_EFFECTIVE = 'October 13, 2026';
+const PRIVACY_EFFECTIVE = 'October 17, 2026';
 
 export const terms: LegalDoc = {
   slug: 'terms',
@@ -194,6 +195,8 @@ export const privacy: LegalDoc = {
         `Service telemetry. Depending on the service purchased, our security platforms process security-relevant data from the environments we protect, including email metadata and quarantined message details or endpoint process and alert data. This can include personal information about your employees.`,
         `Site analytics. Basic request data such as pages viewed, referrer and approximate region. When you allow Analytics, we record a random browser-tab journey identifier, the page path, campaign source and UTM tags, and whether a scan was started or completed, a findings call was selected, or a contact form was submitted. These records do not contain the form's name, email, company, message, or scanned domain.`,
         `Optional remarketing data. If you allow Advertising, Helm sends Meta page-view events and a lead event after a contact form is accepted. Our event parameters do not include form entries or scanned domains. Meta's tool may also receive the page URL and query parameters, referrer, browser and device information, cookie identifiers, IP address and page metadata. Meta may connect this information with your account or browser under its own privacy policy so Helm can measure advertising and show follow-up ads.`,
+        "Book a call clicks. With a new Advertising choice covering this use, Helm sends a click on a Book a call link on our website through our server to Meta as a Lead event. Helm uses the event to help attribute booking-link clicks to ads. This records an intent to open the booking page. It does not confirm that you scheduled, completed or attended a call. Meta may connect the event with its own account or browser records and use it for advertising measurement and targeting.",
+        "The server event contains the click time, your IP address and browser user-agent, and existing Meta browser or click identifiers (_fbp and _fbc) when available. It includes the originating public Helm page URL without query strings, fragments or sensitive paths. We do not include email addresses, form entries, scanned domains or scan results, Calendar data, booking confirmations or CRM enrichment in this server event.",
         `Google Analytics and HubSpot measure website usage only when you allow Analytics. Analytics and Advertising are separate optional choices. Google Analytics can receive page, browser, device and approximate-location information. After a contact form is accepted, we send Google Analytics a lead event with a random submission identifier and fixed form metadata; those event parameters do not include your form entries. HubSpot can receive page paths and titles, browser and device information, IP addresses and cookie identifiers. We do not send form entries, scanned domains or scan contents through our HubSpot analytics connection. HubSpot may connect a browser it already knows to an existing contact record.`,
       ],
     },
@@ -201,7 +204,7 @@ export const privacy: LegalDoc = {
       h: '2. How we use it',
       body: [
         `To run the scan and show you the report on screen. We use your email to secure and recover the scan. Requesting a scan does not automatically subscribe you to marketing email. To respond to enquiries and provide quotes. To deliver, monitor and support the services you buy. To detect, investigate and respond to security incidents in your environment. To bill you and keep accounting records. To send service and security notices. To improve our services and our site.`,
-        `We do not sell personal information. We do not use customer service telemetry to market to employees. We share the limited advertising events described above with Meta only after a website visitor chooses to allow remarketing.`,
+        "We do not sell personal information. We do not use customer service telemetry to market to employees. We share the limited advertising events described above with Meta only after a website visitor chooses to allow Advertising.",
       ],
     },
     {
@@ -213,9 +216,9 @@ export const privacy: LegalDoc = {
     {
       h: '4. Who we share it with',
       body: [
-        `We use a small number of vendors ("subprocessors") to deliver our services. They are contractually limited to processing data for us and may not use it for their own purposes.`,
+        "We use vendors for security services, payments, hosting, site delivery, email, contact records and database storage. We also use website analytics and advertising tools when you allow the relevant category.",
         `Huntress, for managed endpoint detection and response. MailProtector, for mail-flow filtering and email traffic controls. Doppel, for social-engineering detection, reported-message triage, phishing simulations, and awareness learning. Stripe, for payment processing and subscription billing. GitHub Pages, for marketing-site hosting. Vercel, for portal hosting. Cloudflare, for site delivery and form-security checks. Resend, for transactional and notification email.`,
-        `Meta, only when a website visitor allows remarketing, for advertising measurement and follow-up advertising. Meta receives page and conversion event data, but Helm does not place form entries or scanned domains in those events.`,
+        "Meta receives the advertising events described in section 1 when you allow Advertising for those uses. Helm uses browser events for advertising measurement and follow-up ads, and server Book a call events to help attribute booking-link clicks to ads. Meta may connect these events with its own account or browser records and use them for advertising measurement and targeting. Helm does not place form entries or scanned domains in those events.",
         `HubSpot, for business contact details and inquiry records when you contact us, and for website analytics when you allow Analytics. Turso, for application database storage. Google Analytics, for website usage and accepted-contact measurement.`,
         `We also share information where we must: with your own advisors at your direction, with law enforcement or regulators where legally required, with professional advisors under confidentiality, and with an acquirer if the business is sold.`,
         `A current subprocessor list is maintained on our trust page. We will give notice before adding a subprocessor that processes customer service telemetry.`,
@@ -231,7 +234,9 @@ export const privacy: LegalDoc = {
       h: '6. How long we keep it',
       body: [
         `Free scan records and the resulting report: twelve months, then deleted.`,
-        `First-party conversion records: twelve months, then deleted.`,
+        "First-party Analytics conversion records: twelve months, then deleted.",
+        "For server measurement of Book a call clicks, Helm marks click records as eligible for deletion seven days after creation. A daily cleanup is scheduled to remove them; failed or delayed runs can extend retention. The IP address, browser user-agent, Meta browser or click identifiers and originating page URL sent to Meta are not stored in Helm's click records.",
+        "The permission to send these clicks expires within twenty-four hours. The record of that choice becomes eligible for deletion seven days after expiry and is removed by a successful cleanup run.",
         `Enquiries that do not become customers: twenty-four months.`,
         `Customer organization data, including scans, reports and alerts: for the life of the engagement and deleted from the live application within thirty days after offboarding. Deleted records may remain recoverable in provider backups until that provider's normal backup window expires.`,
         `Administrative impersonation audit records: twenty-four months, including after the related customer organization is deleted, because these records document privileged administrative access.`,
@@ -264,7 +269,9 @@ export const privacy: LegalDoc = {
       h: '10. Cookies',
       body: [
         `Necessary storage keeps your privacy choice and theme preference locally and protects form submissions against duplicate retries. Optional Analytics and Advertising stay off until allowed; a previous advertising opt-out remains an opt-out. When you allow Analytics, browser session storage keeps a random journey identifier and campaign tags together while that browser tab remains open. This first-party identifier is not shared with advertisers or used to follow you across other websites.`,
-        `If you allow Analytics, the site loads Google Analytics and HubSpot, which may set or read analytics cookies. A previous choice covering Google Analytics alone does not enable HubSpot; you need to make a new Analytics choice. If you allow Advertising, the site loads Meta's advertising tool. Meta may set or read advertising cookies and receive the limited page and conversion events described above. Your category choices are stored in your browser. Accept all allows both Analytics and Advertising; Reject optional disables both. Use Manage preferences or Privacy choices in the footer to select, change or withdraw either category. Withdrawing a category stops its tracking on this site, removes its measurement documents and clears the related cookies and optional storage our site can access. It does not erase data already sent to a service. The customer portal uses a separate session cookie to keep signed-in customers signed in.`,
+        "If you allow Analytics, the site loads Google Analytics and HubSpot, which may set or read analytics cookies. A previous choice covering Google Analytics alone does not enable HubSpot; you need to make a new Analytics choice. If you allow Advertising, the site loads Meta's advertising tool. Meta may set or read advertising cookies and receive the limited page and conversion events described above.",
+        "The server measurement of Book a call clicks requires a new Advertising choice covering the use described in section 1. An earlier Advertising permission does not enable it. Our server keeps a record of your choice and uses a separate session cookie to check permission before sending a click.",
+        "Your category choices are stored in your browser. Accept all allows both Analytics and Advertising; Reject optional disables both. Use Manage preferences or Privacy choices in the footer to select, change or withdraw either category. Withdrawing a category stops its browser tracking on this site, unloads its tracking tools and clears the related cookies and optional storage our site can access. Withdrawing Advertising also stops new Book a call measurements and asks our server to cancel unsent events. The server can act on withdrawal only after it receives the request; a transmission already in progress cannot be recalled. Withdrawal does not erase data already sent to a service. The customer portal uses a separate session cookie to keep signed-in customers signed in.",
       ],
     },
     {

@@ -3,6 +3,7 @@ import {ActionLink, Band, BookCallLink} from '../components/Site';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import Meta from '../components/Meta';
 import {BOOKING_DESTINATION, BOOKING_PATH, BOOKING_PREVIEW_ENABLED, verifiedBookingSettings} from '../lib/booking';
+import {trackBookingClick} from '../lib/bookingClickMeasurement';
 import {companySizes} from '../lib/companySizes';
 import {bookingCopy as copy} from './bookingCopy';
 import './Book.css';
@@ -20,6 +21,7 @@ export default function Book() {
           {BOOKING_DESTINATION ? (
             <div className="booking-action">
               <a className="action-link action-link-lg" href={BOOKING_DESTINATION}
+                onClick={event => trackBookingClick(event.nativeEvent, 'book_primary')} onAuxClick={event => trackBookingClick(event.nativeEvent, 'book_primary')}
                 target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer"
                 aria-describedby="booking-external-hint">
                 {BOOKING_PREVIEW_ENABLED ? copy.previewBookingAction : copy.bookingAction}

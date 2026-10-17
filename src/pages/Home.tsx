@@ -9,6 +9,7 @@ import japandiHero from '../assets/variants/japandi-hero.webp';
 import japandiHeroMobile from '../assets/brand/japandi-home-mobile-640.webp';
 import {BookCallLink, DirectionIcon, ScrollCue} from '../components/Site';
 import {BOOKING_DESTINATION} from '../lib/booking';
+import {trackBookingClick} from '../lib/bookingClickMeasurement';
 import './SecureAiAdoption.css';
 import PanelVisual from '../components/PanelVisual';
 import OwnerPortrait from '../components/OwnerPortrait';
@@ -123,7 +124,7 @@ export default function Home() {
           <p className="home-it-responsibility">Your IT provider remains responsible for help desk, administration, patching and routine remediation. Helm manages the security work included in your service order.</p>
           <div className="home-comparison-links">
             <Link to="/pricing/">Compare pricing and scope <DirectionIcon /></Link>
-            <a href={BOOKING_DESTINATION ?? undefined} target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer">Discuss Command <DirectionIcon external /><span className="sr-only"> (opens in a new tab)</span></a>
+            <a href={BOOKING_DESTINATION ?? undefined} target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer" onClick={event => trackBookingClick(event.nativeEvent, 'home_command')} onAuxClick={event => trackBookingClick(event.nativeEvent, 'home_command')}>Discuss Command <DirectionIcon external /><span className="sr-only"> (opens in a new tab)</span></a>
           </div>
           <section className="home-onboarding" aria-labelledby="home-onboarding-title">
             <h3 id="home-onboarding-title">How work starts</h3>
@@ -143,7 +144,7 @@ export default function Home() {
           <p>Pricing quoted after scoping. Any pilot has a separate scope.</p>
           <div className="home-ai-links">
             <Link to="/secure-ai-adoption/">Explore Secure AI Adoption <DirectionIcon /></Link>
-            <a href={BOOKING_DESTINATION ?? undefined} target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer">Discuss an AI workflow <DirectionIcon external /><span className="sr-only"> (opens in a new tab)</span></a>
+            <a href={BOOKING_DESTINATION ?? undefined} target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer" onClick={event => trackBookingClick(event.nativeEvent, 'home_ai')} onAuxClick={event => trackBookingClick(event.nativeEvent, 'home_ai')}>Discuss an AI workflow <DirectionIcon external /><span className="sr-only"> (opens in a new tab)</span></a>
           </div>
         </div>
       </section>

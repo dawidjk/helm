@@ -5,6 +5,8 @@ import ThemePicker from './ThemePicker';
 import {canonicalPath} from '../lib/urls';
 import {openPrivacyChoices} from '../lib/adTracking';
 import {BOOKING_DESTINATION, BOOKING_ENABLED} from '../lib/booking';
+import {trackBookingClick} from '../lib/bookingClickMeasurement';
+import type {BookingPlacement} from '../lib/bookingClickRecorder';
 import {bookingCopy} from '../pages/bookingCopy';
 import {bookingCallCopy} from '../pages/bookingCallCopy';
 import {
@@ -86,11 +88,12 @@ export function ActionLink({
   );
 }
 
-export function BookCallLink({label = bookingCopy.navLabel, size = 'lg', className = ''}: {
-  label?: string; size?: 'sm' | 'lg'; className?: string;
+export function BookCallLink({label = bookingCopy.navLabel, size = 'lg', className = '', placement = 'book_call_link'}: {
+  label?: string; size?: 'sm' | 'lg'; className?: string; placement?: BookingPlacement;
 }) {
   return BOOKING_ENABLED && BOOKING_DESTINATION ? (
     <a href={BOOKING_DESTINATION} target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer"
+      onClick={event => trackBookingClick(event.nativeEvent, placement)} onAuxClick={event => trackBookingClick(event.nativeEvent, placement)}
       className={`action-link action-link-${size}${className ? ` ${className}` : ''}`}>
       {label}<span className="sr-only"> (opens in a new tab)</span>
     </a>
@@ -354,7 +357,7 @@ export function SiteNav() {
               <RouterNavLink to="/pricing/" className={pricingActive ? 'active' : ''} aria-current={pricingActive ? 'page' : undefined}>
                 Pricing
               </RouterNavLink>
-              <BookCallLink size="sm" className="nav-cta" />
+              <BookCallLink size="sm" className="nav-cta" placement="nav_desktop" />
             </div>
             <a className="nav-sign-in" href={`${PORTAL_URL}/login`}>Sign in</a>
             <button
@@ -380,7 +383,7 @@ export function SiteNav() {
           aria-label="Mobile navigation"
           tabIndex={-1}
         >
-          <BookCallLink className="drawer-cta" />
+          <BookCallLink className="drawer-cta" placement="nav_mobile" />
           <div className="drawer-primary" aria-label="Primary navigation">
             <details className={`drawer-section drawer-primary-section${productActive ? ' active' : ''}`}>
               <summary>Services</summary>
@@ -490,7 +493,7 @@ export function CtaBand({
         <h2 className="observe">{title}</h2>
         <p className="observe d1">{sub}</p>
         <div className="cta-form observe d2">
-          <BookCallLink label={cta} />
+          <BookCallLink label={cta} placement="cta_band" />
         </div>
       </div>
     </section>
@@ -558,7 +561,7 @@ export function SiteFooter() {
           {footerCols.map((col) => (
             <div key={col.title} className="footer-col">
               <div className="footer-col-title">{col.title}</div>
-              {col.title === 'Company' && <BookCallLink size="sm" className="footer-booking-link" />}
+              {col.title === 'Company' && <BookCallLink size="sm" className="footer-booking-link" placement="footer" />}
               {col.links.map((l) => (
                 <Link key={l.to} to={canonicalPath(l.to)}>
                   {l.label}

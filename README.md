@@ -68,3 +68,9 @@ unset; production does not.
 
 `VITE_CONTACT_URL` may point previews or local builds at another portal origin.
 Production defaults to `https://app.helmsecured.com/api/contact`.
+
+## Held server measurement for booking clicks
+
+This candidate adds a versioned Advertising choice for server-side Book a call click attribution. Its browser source hold remains false. Existing Advertising acceptance does not enable the new purpose; previous refusals remain refusals. Only a fresh matching choice and signed first-party server permission can authorize capture. Analytics behavior stays separate. No new public environment variable enables this feature.
+
+The paired portal uses the existing `META_BOOKING_CAPI_ENABLED` flag and server-only credential settings. `META_BOOKING_CLICK_CAPI_ENABLED` is an abandoned draft name and is not an alias. Both applications require the exact reviewed release approval; do not infer activation from a configured credential or successful local tests. The event records a click, not a confirmed appointment.
