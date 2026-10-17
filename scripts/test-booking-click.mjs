@@ -90,8 +90,8 @@ await check('explicit grant and decline use separate ordered consent calls; no c
   const choices = x.calls.filter(c => c.url.endsWith('/consent') && c.init.method === 'POST').map(c => JSON.parse(c.init.body));
   assert.deepEqual(choices.map(c => c.decision), ['accepted','declined']); assert.ok(choices.every(c => c.disclosureVersion === version)); assert.equal(x.posts().length, 0);
 });
-await check('source gate remains a hard false and existing analytics scope is unchanged', async () => {
-  assert.match(await fs.readFile('src/lib/bookingClickConfig.ts','utf8'), /BOOKING_CLICK_BROWSER_RELEASE_APPROVED = false/);
+await check('reviewed release flag is explicit and existing analytics scope is unchanged', async () => {
+  assert.match(await fs.readFile('src/lib/bookingClickConfig.ts','utf8'), /BOOKING_CLICK_BROWSER_RELEASE_APPROVED = true/);
   const preferences = await fs.readFile('src/lib/cookiePreferences.ts','utf8'); assert.match(preferences, /ANALYTICS_SCOPE = 'ga4-hubspot-v1'/);
   assert.match(preferences, /bookingDisclosureVersion === BOOKING_CLICK_CONSENT_VERSION/);
 });
