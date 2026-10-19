@@ -48,11 +48,15 @@ walkDir(DIST_DIR, (filePath) => {
 
     if (relativePath === '404.html' || relativePath.startsWith('404/') || relativePath.startsWith('measurement/')) return;
 
+    const html = fs.readFileSync(filePath, 'utf8');
+    // Static redirect documents are alternate entry points, not published
+    // content. Keep them out of the sitemap and optional measurement allowlist.
+    if (/<meta\b[^>]*http-equiv=["']refresh["']/i.test(html)) return;
+
     // Only publish lastmod when the page carries a real editorial date. A
     // deploy date is not evidence that the page content changed.
     let lastmod;
     if (route.startsWith('resources/') || route.startsWith('blog/')) {
-      const html = fs.readFileSync(filePath, 'utf8');
       const modified = html.match(/"dateModified":"(\d{4}-\d{2}-\d{2})"/);
       const published = html.match(/"datePublished":"(\d{4}-\d{2}-\d{2})"/);
       lastmod = modified?.[1] ?? published?.[1];
@@ -64,7 +68,6 @@ walkDir(DIST_DIR, (filePath) => {
     urls.push({ url, route, lastmod });
     // Keep optional HubSpot measurement confined to actual published pages.
     // Titles come from the static build, never query strings or form state.
-    const html = fs.readFileSync(filePath, 'utf8');
     hubspotPages[route === '' ? '/' : '/' + route + '/'] = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] ?? '';
   }
 });
