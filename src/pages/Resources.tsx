@@ -151,6 +151,7 @@ const guideGroups: GuideGroup[] = [
     slugs: [
       'choose-first-ai-workflow',
       'ai-access-business-documents',
+      'compare-ai-consulting-proposals',
       'measure-ai-time-savings',
       'retest-ai-workflow-changes',
     ],

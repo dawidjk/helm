@@ -10,6 +10,8 @@ Borrow its conversational, evidence-led reasoning and connected explanation. Its
 
 Start from a decision or question the reader actually faces. That does not require a question as the first sentence. Across related articles, vary the openings: a concrete fact, a supported situation, or a useful explanation may serve the reader better. Give the answer enough context to make sense, then explain how the evidence or mechanism supports it. Let each paragraph answer the next useful question. Explain why a distinction matters before asking the reader to absorb its technical details.
 
+For Helm Resource articles, never open with “Suppose.” Do not use a staged hypothetical as a substitute for a useful opening. Develop the explanation as a connected article, with examples that help the reader understand the choice; do not default to a checklist or instruction manual.
+
 Use familiar words, specific actors, and concrete consequences. Vary sentence length and paragraph shape by meaning. A short sentence can emphasize a new fact; a longer one can connect a cause with its consequence. Use natural transitions and occasional asides only when they help. Do not force jokes, conversational openers, three-part lists, dramatic fragments, or identical section endings.
 
 Keep findings separate from possible explanations. State uncertainty accurately and give a qualified recommendation the reader can use. Preserve necessary technical detail and explain unfamiliar terms where the reader needs them. Descriptive or question headings can help; lists are useful for actual steps or comparisons. Do not turn every paragraph into a template.
