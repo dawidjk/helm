@@ -1,5 +1,6 @@
 import {commandReadiness} from './commandReadiness';
 import type {MotifKind} from '../components/ProductMotif';
+import type {Paragraph} from '../lib/richText';
 
 export type Product = {
   slug: string;
@@ -13,7 +14,7 @@ export type Product = {
   price?: string;
   priceDetail: string;
   term: string;
-  features: {title: string; body: string}[];
+  features: {title: string; body: Paragraph}[];
   how: {num: string; title: string; body: string}[];
   faqs: {q: string; a: string}[];
   ctaMode?: 'scan' | 'book';
@@ -36,15 +37,24 @@ export const productList: Product[] = [
     features: [
       {
         title: 'Email and human-risk protection',
-        body: "Email protection includes managed filtering, phishing and impersonation detection, employee reporting, and triage. Simulations and awareness learning help protect the person making the decision as well as the inbox.",
+        body: {
+          text: "Email protection includes managed filtering, phishing and impersonation detection, employee reporting, and triage. Simulations and awareness learning help protect the person making the decision as well as the inbox.",
+          links: [{phrase: 'Simulations and awareness learning', to: '/resources/managed-awareness-training-vs-diy/'}],
+        },
       },
       {
         title: 'Device and identity monitoring',
-        body: "A vendor-operated 24/7 security operations center monitors covered Windows and Mac workstations and supported identity activity. The team investigates real threats and can contain covered devices when required.",
+        body: {
+          text: "A vendor-operated 24/7 security operations center monitors covered Windows and Mac workstations and supported identity activity. The team investigates real threats and can contain covered devices when required.",
+          links: [{phrase: 'supported identity activity', to: '/resources/managed-identity-threat-response/'}],
+        },
       },
       {
         title: 'Cloud backup and digital risk protection',
-        body: "Supported Microsoft 365 or Google Workspace data is backed up. External monitoring looks for impersonation, lookalike domains, and other public risks tied to your organization.",
+        body: {
+          text: "Supported Microsoft 365 or Google Workspace data is backed up. External monitoring looks for impersonation, lookalike domains, and other public risks tied to your organization.",
+          links: [{phrase: 'External monitoring', to: '/resources/digital-risk-protection-services/'}],
+        },
       },
       {
         title: 'One monthly security report',

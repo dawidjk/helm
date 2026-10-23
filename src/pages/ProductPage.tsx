@@ -9,6 +9,7 @@ import CommandSamplePack from './CommandSamplePack';
 import ProductMotif from '../components/ProductMotif';
 import {productList} from './products';
 import {siteUrl} from '../lib/urls';
+import {renderParagraph} from '../lib/richText';
 import './ProductPage.css';
 
 export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
@@ -85,7 +86,7 @@ export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
             {p.features.map((f, i) => (
               <div key={f.title} className={`product-feature observe d${Math.min(i + 1, 5)}`}>
                 <h3>{f.title}</h3>
-                <p>{f.body}</p>
+                <p>{renderParagraph(f.body)}</p>
               </div>
             ))}
           </div>

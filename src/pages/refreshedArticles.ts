@@ -8391,7 +8391,12 @@ export const refreshedArticles: Article[] = [
           "A useful risk record describes the business consequence, evidence, uncertainty and owner. It also records the proposed treatment and the decision needed from leadership. Ask the provider to show a fictional example with an unresolved dependency rather than only completed success items.",
           "Take one recommendation from the roadmap and follow it through to implementation. A new access policy, for example, may depend on licenses, enrollment and tested recovery before rollout. The plan should account for those dependencies in its dates and expected costs. It should also tell the assigned owner how completion will be checked.",
           "A deferred recommendation still needs a place in the risk register. If leadership accepts a risk for a limited period, keep the rationale, approver, conditions and review date in the record. An unavailable implementation budget does not resolve the risk. Keeping the record current lets leadership see when the assumptions behind its decision change.",
-          "Connect each roadmap milestone to the risk or business requirement it addresses. When the work closes, update the supporting evidence and remaining risk too. Leadership can then trace the funded work to its intended effect, rather than seeing only a completed task."
+          {
+            "text": "Connect each roadmap milestone to the risk or business requirement it addresses. When the work closes, update the supporting evidence and remaining risk too. Leadership can then trace the funded work to its intended effect, rather than seeing only a completed task.",
+            "links": [
+              {"phrase": "roadmap milestone", "to": "/resources/cybersecurity-roadmap-milestones/"}
+            ]
+          }
         ]
       },
       {
@@ -8627,6 +8632,10 @@ export const refreshedArticles: Article[] = [
               {
                 "phrase": "logging guidance for small businesses",
                 "to": "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/use-logging-on-business-systems"
+              },
+              {
+                "phrase": "configured data source and a staffed service",
+                "to": "/resources/siem-software-managed-detection/"
               }
             ]
           }
