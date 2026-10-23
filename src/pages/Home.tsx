@@ -106,9 +106,9 @@ export default function Home() {
                 <p>{service.slug === 'helm-core'
                   ? "Core includes managed email, device and identity protection, supported cloud backup, awareness training and digital risk monitoring. You receive one monthly security report."
                   : 'Everything in Core, plus virtual chief information security officer (vCISO) leadership, a risk register and a 12-month roadmap. Includes questionnaire responses within agreed limits, quarterly reviews and an annual tabletop exercise.'}</p>
-                <p className="home-service-price"><span data-nosnippet="">{service.price}</span></p>
+                {service.price && <p className="home-service-price"><span data-nosnippet="">{service.price}</span></p>}
                 <p className="home-service-terms"><span data-nosnippet="">{service.slug === 'helm-core'
-                  ? '$2,500 monthly minimum. 12-month term or 36-month price lock.'
+                  ? '$500 monthly minimum. 12-month term or 36-month price lock.'
                   : 'Final quotes depend on covered users and agreed scope. 36-month initial term. Price adjusts 6% on each service anniversary.'}</span></p>
                 <Link className="home-detail-link" to={canonicalPath(`/${service.slug}`)}>Explore {service.name} <DirectionIcon /></Link>
               </article>

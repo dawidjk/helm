@@ -24,7 +24,7 @@ const faqs: {q: string; a: Paragraph}[] = [
   {
     q: 'How is pricing structured?',
     a: {
-      text: 'Helm Core is $125 per covered user per month with a $2,500 monthly account minimum. Choose a 12-month Core term at the current rate or a 36-month Core term that locks the starting price for all three years. Helm Command starts at $10,000/month. Final quotes depend on covered users and agreed scope. Command has a 36-month initial term and a 6% adjustment on each service anniversary. Work outside the written scope is priced separately. See the pricing page for details.',
+      text: 'Helm Core is $125 per covered user per month with a $500 monthly account minimum. Choose a 12-month Core term at the current rate or a 36-month Core term that locks the starting price for all three years. Final quotes depend on covered users and agreed scope. Command has a 36-month initial term and a 6% adjustment on each service anniversary. Work outside the written scope is priced separately. See the pricing page for details.',
       links: [{phrase: 'pricing page', to: '/pricing'}],
     },
   },

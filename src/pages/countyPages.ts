@@ -90,7 +90,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core is designed for organizations with 20 to 75 people. It combines managed email protection, device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital risk protection, and an automated monthly security report. It costs $125 per covered user per month, with a $2,500 monthly minimum.",
+          "text": "Helm Core is designed for organizations with 20 to 75 people. It combines managed email protection, device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital risk protection, and an automated monthly security report. It costs $125 per covered user per month, with a $500 monthly minimum.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -102,7 +102,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Command is designed for organizations with 75 to 250 people that need someone to keep the security program moving. It includes the covered Core stack, a maintained risk register and 12-month roadmap, evidence upkeep, questionnaire and insurance responses within the agreed volume and turnaround, quarterly leadership reviews, an annual tabletop and coordination with the named IT owner. Pricing starts at $10,000 per month; the final quote depends on covered users and agreed scope.",
+          "text": "Helm Command is designed for organizations with 75 to 250 people that need someone to keep the security program moving. It includes the covered Core stack, a maintained risk register and 12-month roadmap, evidence upkeep, questionnaire and insurance responses within the agreed volume and turnaround, quarterly leadership reviews, an annual tabletop and coordination with the named IT owner. The final quote depends on covered users and agreed scope.",
           "links": [
             {
               "phrase": "Helm Command",
@@ -332,7 +332,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core gives organizations with 20 to 75 people a defined managed protection stack: email protection, device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital risk protection, and an automated monthly report. The price is $125 per covered user per month, with a $2,500 monthly minimum.",
+          "text": "Helm Core gives organizations with 20 to 75 people a defined managed protection stack: email protection, device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital risk protection, and an automated monthly report. The price is $125 per covered user per month, with a $500 monthly minimum.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -344,7 +344,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Choose Helm Command when an organization in the 75 to 250 person range needs continuing security-program ownership alongside the covered Core stack. Helm maintains the risk register, 12-month roadmap and evidence, prepares questionnaire and insurance responses within the agreed volume and turnaround, leads quarterly leadership reviews, and coordinates assigned work with the named IT owner. An annual tabletop is included. Command starts at $10,000 per month; covered users and agreed scope determine the final quote.",
+          "text": "Choose Helm Command when an organization in the 75 to 250 person range needs continuing security-program ownership alongside the covered Core stack. Helm maintains the risk register, 12-month roadmap and evidence, prepares questionnaire and insurance responses within the agreed volume and turnaround, leads quarterly leadership reviews, and coordinates assigned work with the named IT owner. An annual tabletop is included. Covered users and agreed scope determine the final quote.",
           "links": [
             {
               "phrase": "Helm Command",
@@ -583,7 +583,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core is designed for organizations with 20 to 75 people. It includes managed email protection, device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital risk protection, and an automated monthly report. The price is $125 per covered user per month with a $2,500 monthly minimum.",
+          "text": "Helm Core is designed for organizations with 20 to 75 people. It includes managed email protection, device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital risk protection, and an automated monthly report. The price is $125 per covered user per month with a $500 monthly minimum.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -599,7 +599,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Command includes the covered Core stack and continuing security-program ownership for organizations with 75 to 250 people. Helm maintains the risk register, 12-month roadmap and evidence, prepares questionnaire and insurance responses within the agreed volume and turnaround, leads quarterly leadership reviews, and coordinates with the named IT owner. Pricing starts at $10,000 per month; the final quote depends on covered users and agreed scope. Your organization reviews and owns the final questionnaire answers and remediation decisions.",
+          "text": "Helm Command includes the covered Core stack and continuing security-program ownership for organizations with 75 to 250 people. Helm maintains the risk register, 12-month roadmap and evidence, prepares questionnaire and insurance responses within the agreed volume and turnaround, leads quarterly leadership reviews, and coordinates with the named IT owner. The final quote depends on covered users and agreed scope. Your organization reviews and owns the final questionnaire answers and remediation decisions.",
           "links": [
             {
               "phrase": "Helm Command",
@@ -802,7 +802,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core gives organizations with 20 to 75 people a defined managed protection stack and an automated monthly report. It costs $125 per covered user per month, with a $2,500 monthly minimum. It can fit a firm whose own security owner already sets priorities and follows up with IT.",
+          "text": "Helm Core gives organizations with 20 to 75 people a defined managed protection stack and an automated monthly report. It costs $125 per covered user per month, with a $500 monthly minimum. It can fit a firm whose own security owner already sets priorities and follows up with IT.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -826,7 +826,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Command starts at $10,000 per month; covered users and agreed scope determine the final quote. Compare pricing and terms with the amount of continuing management your firm needs. The comparison of security service models explains the work that stays with the business under each model.",
+          "text": "Covered users and agreed scope determine the final quote. Compare pricing and terms with the amount of continuing management your firm needs. The comparison of security service models explains the work that stays with the business under each model.",
           "links": [
             {
               "phrase": "pricing and terms",
@@ -986,7 +986,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core is designed for organizations with 20 to 75 people that need standardized managed protection. It costs $125 per covered user per month, with a $2,500 monthly minimum. Its automated monthly report shows coverage and actions for the business or IT provider.",
+          "text": "Helm Core is designed for organizations with 20 to 75 people that need standardized managed protection. It costs $125 per covered user per month, with a $500 monthly minimum. Its automated monthly report shows coverage and actions for the business or IT provider.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -998,7 +998,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Command combines the covered Core stack with virtual chief information security officer (vCISO) leadership. It is designed for organizations with 75 to 250 people and starts at $10,000 per month, with the final quote based on covered users and agreed scope. Helm maintains the risk register and 12-month roadmap, keeps evidence current and leads quarterly reviews. An unresolved action after the move can stay in that plan with its IT owner and due date. The service order defines the evidence work and coordination included.",
+          "text": "Helm Command combines the covered Core stack with virtual chief information security officer (vCISO) leadership. It is designed for organizations with 75 to 250 people, with the final quote based on covered users and agreed scope. Helm maintains the risk register and 12-month roadmap, keeps evidence current and leads quarterly reviews. An unresolved action after the move can stay in that plan with its IT owner and due date. The service order defines the evidence work and coordination included.",
           "links": [
             {
               "phrase": "Helm Command",
@@ -1153,7 +1153,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core is designed for organizations with 20 to 75 people that need standardized managed protection. It costs $125 per covered user per month, with a $2,500 monthly minimum, and includes an automated monthly security report.",
+          "text": "Helm Core is designed for organizations with 20 to 75 people that need standardized managed protection. It costs $125 per covered user per month, with a $500 monthly minimum, and includes an automated monthly security report.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -1165,7 +1165,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Command includes the covered Core stack plus virtual chief information security officer (vCISO) leadership for organizations with 75 to 250 people. Helm keeps the risk register, 12-month roadmap and evidence current, and coordinates agreed security actions with the named IT owner. Command starts at $10,000 per month; the final quote depends on covered users and agreed scope.",
+          "text": "Helm Command includes the covered Core stack plus virtual chief information security officer (vCISO) leadership for organizations with 75 to 250 people. Helm keeps the risk register, 12-month roadmap and evidence current, and coordinates agreed security actions with the named IT owner. The final quote depends on covered users and agreed scope.",
           "links": [
             {
               "phrase": "Helm Command",
@@ -1324,7 +1324,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core is designed for organizations with 20 to 75 people that need standardized managed protection alongside retained IT. It includes protection for supported email and identities, detection and response for eligible Windows or Mac workstations, and an automated monthly security report. The price is $125 per covered user per month, with a $2,500 monthly minimum.",
+          "text": "Helm Core is designed for organizations with 20 to 75 people that need standardized managed protection alongside retained IT. It includes protection for supported email and identities, detection and response for eligible Windows or Mac workstations, and an automated monthly security report. The price is $125 per covered user per month, with a $500 monthly minimum.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -1336,7 +1336,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Command includes the covered Core stack plus virtual chief information security officer (vCISO) leadership for organizations with 75 to 250 people. Helm maintains the risk register, 12-month roadmap and evidence, leads quarterly leadership reviews, and coordinates security actions with the named IT owner. Command starts at $10,000 per month; covered users and agreed scope determine the final quote.",
+          "text": "Helm Command includes the covered Core stack plus virtual chief information security officer (vCISO) leadership for organizations with 75 to 250 people. Helm maintains the risk register, 12-month roadmap and evidence, leads quarterly leadership reviews, and coordinates security actions with the named IT owner. Covered users and agreed scope determine the final quote.",
           "links": [
             {
               "phrase": "Helm Command",
@@ -1508,7 +1508,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core is the standardized managed protection service for organizations with 20 to 75 people. Its automated monthly report shows coverage, changes and actions for the business or IT provider. Core costs $125 per covered user per month, with a $2,500 monthly minimum.",
+          "text": "Helm Core is the standardized managed protection service for organizations with 20 to 75 people. Its automated monthly report shows coverage, changes and actions for the business or IT provider. Core costs $125 per covered user per month, with a $500 monthly minimum.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -1532,7 +1532,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Command's coordination and evidence work follow the agreed scope. Helm drafts questionnaire and annual insurance responses within the volume and turnaround agreed in the service order. Your organization reviews and owns the final answers. Command starts at $10,000 per month; the final quote depends on covered users and agreed scope. The pricing page explains the terms and other commercial details.",
+          "text": "Command's coordination and evidence work follow the agreed scope. Helm drafts questionnaire and annual insurance responses within the volume and turnaround agreed in the service order. Your organization reviews and owns the final answers. The final quote depends on covered users and agreed scope. The pricing page explains the terms and other commercial details.",
           "links": [
             {
               "phrase": "pricing page",
@@ -1679,7 +1679,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core is designed for organizations with 20 to 75 people. It provides standardized managed protection and an automated monthly report showing coverage and actions for the business or its IT provider. Core costs $125 per covered user per month, with a $2,500 monthly minimum. Your manager and IT provider handle the actions assigned to them.",
+          "text": "Helm Core is designed for organizations with 20 to 75 people. It provides standardized managed protection and an automated monthly report showing coverage and actions for the business or its IT provider. Core costs $125 per covered user per month, with a $500 monthly minimum. Your manager and IT provider handle the actions assigned to them.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -1691,7 +1691,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Command adds virtual chief information security officer (vCISO) leadership to the covered Core protection for organizations with 75 to 250 people. Helm maintains the risk register, 12-month roadmap and supporting evidence, and leads quarterly leadership reviews. Helm follows up on security actions with the responsible teams under the agreed program scope. Command starts at $10,000 per month; the final quote depends on covered users and agreed scope.",
+          "text": "Helm Command adds virtual chief information security officer (vCISO) leadership to the covered Core protection for organizations with 75 to 250 people. Helm maintains the risk register, 12-month roadmap and supporting evidence, and leads quarterly leadership reviews. Helm follows up on security actions with the responsible teams under the agreed program scope. The final quote depends on covered users and agreed scope.",
           "links": [
             {
               "phrase": "Helm Command",
@@ -1859,7 +1859,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core is designed for organizations with 20 to 75 people and costs $125 per covered user per month, with a $2,500 monthly minimum. Its managed protection includes covered email, eligible workstations and supported identities, with an automated monthly security report. Consider Core if your team can keep the access decisions and supporting records current.",
+          "text": "Helm Core is designed for organizations with 20 to 75 people and costs $125 per covered user per month, with a $500 monthly minimum. Its managed protection includes covered email, eligible workstations and supported identities, with an automated monthly security report. Consider Core if your team can keep the access decisions and supporting records current.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -1871,7 +1871,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Command includes the covered Core stack plus virtual chief information security officer (vCISO) leadership for organizations with 75 to 250 people. Helm maintains the risk register, 12-month roadmap and evidence within the agreed scope. It also drafts client questionnaire responses, with volume and turnaround set in the service order. Command starts at $10,000 per month; the final quote depends on covered users and agreed scope.",
+          "text": "Helm Command includes the covered Core stack plus virtual chief information security officer (vCISO) leadership for organizations with 75 to 250 people. Helm maintains the risk register, 12-month roadmap and evidence within the agreed scope. It also drafts client questionnaire responses, with volume and turnaround set in the service order. The final quote depends on covered users and agreed scope.",
           "links": [
             {
               "phrase": "Helm Command",
@@ -2027,7 +2027,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core provides managed protection for covered email, eligible workstations and supported identities for organizations with 20 to 75 people. It costs $125 per covered user per month, with a $2,500 monthly minimum. Core can fit where your existing team already owns supplier approvals and follow-up.",
+          "text": "Helm Core provides managed protection for covered email, eligible workstations and supported identities for organizations with 20 to 75 people. It costs $125 per covered user per month, with a $500 monthly minimum. Core can fit where your existing team already owns supplier approvals and follow-up.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -2039,7 +2039,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Command adds virtual chief information security officer (vCISO) leadership to the covered Core stack for organizations with 75 to 250 people. Within the agreed program scope, Helm maintains the risk register and evidence, follows up with the named IT owner and leads quarterly leadership reviews. Command starts at $10,000 per month; the final quote depends on covered users and agreed scope.",
+          "text": "Helm Command adds virtual chief information security officer (vCISO) leadership to the covered Core stack for organizations with 75 to 250 people. Within the agreed program scope, Helm maintains the risk register and evidence, follows up with the named IT owner and leads quarterly leadership reviews. The final quote depends on covered users and agreed scope.",
           "links": [
             {
               "phrase": "Helm Command",
@@ -2190,7 +2190,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core is for organizations with 20 to 75 people that need managed protection alongside retained IT. It costs $125 per covered user per month, with a $2,500 monthly minimum. Standard device coverage includes up to two eligible Windows or Mac workstations per covered user; additional eligible workstations cost $12 each per month. If your staff share a workstation that your firm controls, confirm its eligibility and coverage before counting it in the service.",
+          "text": "Helm Core is for organizations with 20 to 75 people that need managed protection alongside retained IT. It costs $125 per covered user per month, with a $500 monthly minimum. Standard device coverage includes up to two eligible Windows or Mac workstations per covered user; additional eligible workstations cost $12 each per month. If your staff share a workstation that your firm controls, confirm its eligibility and coverage before counting it in the service.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -2202,7 +2202,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Command includes the covered Core stack and adds virtual chief information security officer (vCISO) leadership for organizations with 75 to 250 people. It starts at $10,000 per month; covered users and agreed scope determine the final quote. Helm maintains the risk register, 12-month roadmap and evidence, and leads quarterly leadership reviews. Questionnaire work is bounded by the agreed volume and turnaround; your firm reviews and owns the final representations.",
+          "text": "Helm Command includes the covered Core stack and adds virtual chief information security officer (vCISO) leadership for organizations with 75 to 250 people. Covered users and agreed scope determine the final quote. Helm maintains the risk register, 12-month roadmap and evidence, and leads quarterly leadership reviews. Questionnaire work is bounded by the agreed volume and turnaround; your firm reviews and owns the final representations.",
           "links": [
             {
               "phrase": "Helm Command",
@@ -2298,9 +2298,9 @@ export const countyPages: CountyPageCopy[] = [
     "county": "Hunterdon",
     "slug": "hunterdon-county-nj",
     "title": "Cybersecurity in Hunterdon County, NJ | Helm",
-    "description": "Compare Helm Core's $2,500 monthly minimum with your practice's needs and existing IT costs. Cybersecurity for Hunterdon County firms, with NJ on-site visits.",
+    "description": "Compare Helm Core's $500 monthly minimum with your practice's needs and existing IT costs. Cybersecurity for Hunterdon County firms, with NJ on-site visits.",
     "h1": "Cybersecurity for Hunterdon County professional practices",
-    "intro": "Helm provides managed cybersecurity for Hunterdon County professional practices alongside their existing IT provider. Core's monthly account minimum is $2,500. Compare that fee with the protection it adds and the IT costs you will still pay. On-site visits are available across New Jersey.",
+    "intro": "Helm provides managed cybersecurity for Hunterdon County professional practices alongside their existing IT provider. Core's monthly account minimum is $500. Compare that fee with the protection it adds and the IT costs you will still pay. On-site visits are available across New Jersey.",
     "cta": "Book a call about fit",
     "blocks": [
       {
@@ -2311,7 +2311,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core is designed for organizations with 20 to 75 people. It costs $125 per covered user per month, with a $2,500 monthly account minimum. At 20 covered users, the base fee is $2,500 per month.",
+          "text": "Helm Core is designed for organizations with 20 to 75 people. It costs $125 per covered user per month, with a $500 monthly account minimum. At four covered users, the base fee is $500 per month.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -2322,7 +2322,7 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "If your practice has fewer than 20 people, it is below Core's published target range. A lower headcount does not reduce the account minimum. If $2,500 per month is beyond your budget, Core does not fit at its published price."
+        "paragraph": "If your practice has fewer than 20 people, it is below Core's published target range. A lower headcount does not reduce the account minimum. If $500 per month is beyond your budget, Core does not fit at its published price."
       },
       {
         "kind": "paragraph",
@@ -2386,7 +2386,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Command is designed for organizations with 75 to 250 people that need a security-program owner. It includes the covered Core stack plus virtual chief information security officer (vCISO) leadership, a maintained risk register and 12-month roadmap, evidence upkeep and quarterly leadership reviews. Pricing starts at $10,000 per month; covered users and agreed scope determine the final quote. Command has a 36-month initial term, with a 6% price adjustment on each service anniversary.",
+          "text": "Helm Command is designed for organizations with 75 to 250 people that need a security-program owner. It includes the covered Core stack plus virtual chief information security officer (vCISO) leadership, a maintained risk register and 12-month roadmap, evidence upkeep and quarterly leadership reviews. Covered users and agreed scope determine the final quote. Command has a 36-month initial term, with a 6% price adjustment on each service anniversary.",
           "links": [
             {
               "phrase": "Helm Command",
@@ -2433,7 +2433,7 @@ export const countyPages: CountyPageCopy[] = [
           "@id": "https://helmsecured.com/service-areas/hunterdon-county-nj/#webpage",
           "url": "https://helmsecured.com/service-areas/hunterdon-county-nj/",
           "name": "Cybersecurity in Hunterdon County, NJ | Helm",
-          "description": "Compare Helm Core's $2,500 monthly minimum with your practice's needs and existing IT costs. Cybersecurity for Hunterdon County firms, with NJ on-site visits.",
+          "description": "Compare Helm Core's $500 monthly minimum with your practice's needs and existing IT costs. Cybersecurity for Hunterdon County firms, with NJ on-site visits.",
           "about": {
             "@id": "https://helmsecured.com/service-areas/hunterdon-county-nj/#service"
           }
@@ -2557,7 +2557,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core provides defined managed protection and an automated monthly security report for organizations with 20 to 75 people. It costs $125 per covered user per month, with a $2,500 monthly minimum. Core may fit when your existing team can maintain the program records and prepare its own responses. Ongoing questionnaire work and security leadership require Command or a separate agreed scope.",
+          "text": "Helm Core provides defined managed protection and an automated monthly security report for organizations with 20 to 75 people. It costs $125 per covered user per month, with a $500 monthly minimum. Core may fit when your existing team can maintain the program records and prepare its own responses. Ongoing questionnaire work and security leadership require Command or a separate agreed scope.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -2581,7 +2581,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Command starts at $10,000 per month. The final quote depends on covered users and agreed scope, including evidence work and coordination. The pricing page sets out the commercial terms for both services.",
+          "text": "The final quote depends on covered users and agreed scope, including evidence work and coordination. The pricing page sets out the commercial terms for both services.",
           "links": [
             {
               "phrase": "pricing page",
@@ -2741,7 +2741,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core provides standardized managed protection and an automated monthly report for organizations with 20 to 75 people. It costs $125 per covered user per month, with a $2,500 monthly minimum. Consider Core when your firm already has someone responsible for its security plan and supporting records. Core's standard scope excludes quarterly leadership reviews and open-ended advisory work.",
+          "text": "Helm Core provides standardized managed protection and an automated monthly report for organizations with 20 to 75 people. It costs $125 per covered user per month, with a $500 monthly minimum. Consider Core when your firm already has someone responsible for its security plan and supporting records. Core's standard scope excludes quarterly leadership reviews and open-ended advisory work.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -2753,7 +2753,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Command includes the covered Core stack and virtual chief information security officer (vCISO) leadership for organizations with 75 to 250 people. Helm maintains the risk register, 12-month roadmap and evidence, and leads quarterly leadership reviews. An annual tabletop is included. Command starts at $10,000 per month; the final quote depends on covered users and agreed scope. Questionnaire and annual insurance responses stay within the volume and turnaround agreed in the service order.",
+          "text": "Helm Command includes the covered Core stack and virtual chief information security officer (vCISO) leadership for organizations with 75 to 250 people. Helm maintains the risk register, 12-month roadmap and evidence, and leads quarterly leadership reviews. An annual tabletop is included. The final quote depends on covered users and agreed scope. Questionnaire and annual insurance responses stay within the volume and turnaround agreed in the service order.",
           "links": [
             {
               "phrase": "Helm Command",
@@ -2945,7 +2945,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core is designed for organizations with 20 to 75 people that need standardized managed protection and an automated monthly security report. It costs $125 per covered user per month with a $2,500 monthly minimum.",
+          "text": "Helm Core is designed for organizations with 20 to 75 people that need standardized managed protection and an automated monthly security report. It costs $125 per covered user per month with a $500 monthly minimum.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -2957,7 +2957,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "For organizations with 75 to 250 people, Helm Command includes virtual chief information security officer (vCISO) leadership and the covered Core stack. Helm maintains the risk register, 12-month roadmap and evidence, and coordinates security actions with the named IT owner. Questionnaire and insurance responses have agreed volume and turnaround; your organization reviews and owns the final answers. Command starts at $10,000 per month, with the final quote based on covered users and agreed scope.",
+          "text": "For organizations with 75 to 250 people, Helm Command includes virtual chief information security officer (vCISO) leadership and the covered Core stack. Helm maintains the risk register, 12-month roadmap and evidence, and coordinates security actions with the named IT owner. Questionnaire and insurance responses have agreed volume and turnaround; your organization reviews and owns the final answers. The final quote is based on covered users and agreed scope.",
           "links": [
             {
               "phrase": "Helm Command",
@@ -3133,7 +3133,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core suits organizations with 20 to 75 people that need standardized managed protection. It costs $125 per covered user per month, with a $2,500 monthly minimum. Your IT provider or internal team keeps help desk, patching, administration, procurement and routine remediation.",
+          "text": "Helm Core suits organizations with 20 to 75 people that need standardized managed protection. It costs $125 per covered user per month, with a $500 monthly minimum. Your IT provider or internal team keeps help desk, patching, administration, procurement and routine remediation.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -3157,7 +3157,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Quarterly leadership reviews can keep unresolved recovery questions on the agenda. Command also includes an annual tabletop to rehearse decisions and coordination; it does not prove that an application can be restored. Command starts at $10,000 per month, with the final quote based on covered users and agreed scope. See prices and terms when comparing the two offers.",
+          "text": "Quarterly leadership reviews can keep unresolved recovery questions on the agenda. Command also includes an annual tabletop to rehearse decisions and coordination; it does not prove that an application can be restored. The final quote is based on covered users and agreed scope. See prices and terms when comparing the two offers.",
           "links": [
             {
               "phrase": "prices and terms",
@@ -3313,7 +3313,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core is designed for organizations with 20 to 75 people that need standardized managed protection alongside IT. Core costs $125 per covered user per month with a $2,500 monthly minimum. It protects covered email, eligible Windows and Mac workstations and supported identities, with an automated monthly security report. The service page sets out supported platforms and workstation limits.",
+          "text": "Helm Core is designed for organizations with 20 to 75 people that need standardized managed protection alongside IT. Core costs $125 per covered user per month with a $500 monthly minimum. It protects covered email, eligible Windows and Mac workstations and supported identities, with an automated monthly security report. The service page sets out supported platforms and workstation limits.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -3325,7 +3325,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Command is for organizations with 75 to 250 people that need continuing virtual chief information security officer (vCISO) leadership. It includes the covered Core stack plus a maintained risk register and 12-month roadmap, evidence upkeep and quarterly leadership reviews. Questionnaire and insurance response work has agreed volume and turnaround limits. Command starts at $10,000 per month; the final quote depends on covered users and agreed scope.",
+          "text": "Helm Command is for organizations with 75 to 250 people that need continuing virtual chief information security officer (vCISO) leadership. It includes the covered Core stack plus a maintained risk register and 12-month roadmap, evidence upkeep and quarterly leadership reviews. Questionnaire and insurance response work has agreed volume and turnaround limits. The final quote depends on covered users and agreed scope.",
           "links": [
             {
               "phrase": "Helm Command",
@@ -3475,7 +3475,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core is designed for organizations with 20 to 75 people that need standardized managed protection. It costs $125 per covered user per month, with a $2,500 monthly minimum. Core includes up to two eligible Windows or Mac workstations per covered user; additional eligible workstations cost $12 each per month.",
+          "text": "Helm Core is designed for organizations with 20 to 75 people that need standardized managed protection. It costs $125 per covered user per month, with a $500 monthly minimum. Core includes up to two eligible Windows or Mac workstations per covered user; additional eligible workstations cost $12 each per month.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -3487,7 +3487,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Command adds virtual chief information security officer (vCISO) leadership to the covered Core stack for organizations with 75 to 250 people. It starts at $10,000 per month; the final quote depends on covered users and agreed scope. Helm maintains the risk register, 12-month roadmap and evidence, and leads quarterly leadership reviews. Helm drafts questionnaire and insurance responses within the agreed volume and turnaround. Your firm reviews and owns the final answers.",
+          "text": "Helm Command adds virtual chief information security officer (vCISO) leadership to the covered Core stack for organizations with 75 to 250 people. The final quote depends on covered users and agreed scope. Helm maintains the risk register, 12-month roadmap and evidence, and leads quarterly leadership reviews. Helm drafts questionnaire and insurance responses within the agreed volume and turnaround. Your firm reviews and owns the final answers.",
           "links": [
             {
               "phrase": "Helm Command",
@@ -3670,7 +3670,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core includes managed email protection, awareness learning and simulations to help staff recognize and report suspicious requests. It is designed for organizations with 20 to 75 people and costs $125 per covered user per month, with a $2,500 monthly minimum.",
+          "text": "Helm Core includes managed email protection, awareness learning and simulations to help staff recognize and report suspicious requests. It is designed for organizations with 20 to 75 people and costs $125 per covered user per month, with a $500 monthly minimum.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -3682,7 +3682,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Command includes the covered Core stack and adds virtual chief information security officer (vCISO) leadership for organizations with 75 to 250 people. Helm maintains the risk register, 12-month roadmap and evidence, coordinates with the named IT owner, and leads quarterly leadership reviews. An annual tabletop is included. Command starts at $10,000 per month; the final quote depends on covered users and agreed scope.",
+          "text": "Helm Command includes the covered Core stack and adds virtual chief information security officer (vCISO) leadership for organizations with 75 to 250 people. Helm maintains the risk register, 12-month roadmap and evidence, coordinates with the named IT owner, and leads quarterly leadership reviews. An annual tabletop is included. The final quote depends on covered users and agreed scope.",
           "links": [
             {
               "phrase": "Helm Command",
@@ -3854,7 +3854,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Core provides standardized managed protection for organizations with 20 to 75 people. It includes protection for covered email, eligible Windows or Mac workstations and supported identities, with an automated monthly report. Core costs $125 per covered user per month, with a $2,500 monthly minimum.",
+          "text": "Helm Core provides standardized managed protection for organizations with 20 to 75 people. It includes protection for covered email, eligible Windows or Mac workstations and supported identities, with an automated monthly report. Core costs $125 per covered user per month, with a $500 monthly minimum.",
           "links": [
             {
               "phrase": "Helm Core",
@@ -3866,7 +3866,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm Command includes the covered Core stack plus virtual chief information security officer (vCISO) leadership for organizations with 75 to 250 people. Helm maintains the risk register, 12-month roadmap and evidence, and leads quarterly leadership reviews. It tracks agreed security actions with a responsible owner and a due date. Command starts at $10,000 per month; covered users and agreed scope determine the final quote.",
+          "text": "Helm Command includes the covered Core stack plus virtual chief information security officer (vCISO) leadership for organizations with 75 to 250 people. Helm maintains the risk register, 12-month roadmap and evidence, and leads quarterly leadership reviews. It tracks agreed security actions with a responsible owner and a due date. Covered users and agreed scope determine the final quote.",
           "links": [
             {
               "phrase": "Helm Command",

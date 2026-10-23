@@ -102,7 +102,7 @@ export const laneBuyerCopy: Partial<Record<string, LaneBuyerCopy>> = {
         "title": "Helm Core",
         "paragraphs": [
           "For a 50-person firm whose partners and IT provider already handle security decisions, evidence and follow-up, Core is the standard option to consider. It includes managed email, device and supported identity protection, cloud productivity backup, awareness learning and simulations, digital risk protection and an automated monthly report.",
-          "Core costs $125 per covered user per month, with a $2,500 monthly account minimum. It includes up to two eligible Windows or Mac workstations per covered user; additional eligible workstations are $12 each per month."
+          "Core costs $125 per covered user per month, with a $500 monthly account minimum. It includes up to two eligible Windows or Mac workstations per covered user; additional eligible workstations are $12 each per month."
         ],
         "link": {
           "label": "Review Core coverage and terms",
@@ -113,7 +113,7 @@ export const laneBuyerCopy: Partial<Record<string, LaneBuyerCopy>> = {
         "title": "Helm Command",
         "paragraphs": [
           "Command adds ongoing security-program leadership to the covered Core stack for qualified organizations with 75 to 250 people. Helm maintains the risk register, 12-month roadmap and evidence, drafts bounded questionnaire and insurance responses, leads quarterly reviews and an annual tabletop, and coordinates with existing IT.",
-          "Pricing starts at $10,000 per month. The final quote depends on covered users and agreed scope. If your firm needs help maintaining its program, describe that work in the fit discussion so we can confirm what the service would cover."
+          "The final quote depends on covered users and agreed scope. If your firm needs help maintaining its program, describe that work in the fit discussion so we can confirm what the service would cover."
         ],
         "link": {
           "label": "Review Command scope and terms",
@@ -204,7 +204,7 @@ export const laneBuyerCopy: Partial<Record<string, LaneBuyerCopy>> = {
         "title": "Helm Core",
         "paragraphs": [
           "Core is the standard fit for firms with 20 to 75 people that already have someone responsible for the WISP, security decisions and follow-up with IT. It includes managed email, device and supported identity protection, cloud productivity backup, awareness learning and simulations, digital risk protection and an automated monthly report.",
-          "Core costs $125 per covered user per month, with a $2,500 monthly account minimum. It includes up to two eligible Windows or Mac workstations per covered user; additional eligible workstations are $12 each per month. Check who is covered as seasonal staff join and leave."
+          "Core costs $125 per covered user per month, with a $500 monthly account minimum. It includes up to two eligible Windows or Mac workstations per covered user; additional eligible workstations are $12 each per month. Check who is covered as seasonal staff join and leave."
         ],
         "link": {
           "label": "Review Core coverage and terms",
@@ -215,7 +215,7 @@ export const laneBuyerCopy: Partial<Record<string, LaneBuyerCopy>> = {
         "title": "Helm Command",
         "paragraphs": [
           "Command is designed for qualified organizations with 75 to 250 people that need ongoing security-program leadership. It includes the covered Core stack, a maintained risk register, 12-month roadmap, evidence upkeep, bounded questionnaire and insurance responses, quarterly leadership reviews, an annual tabletop and coordination with existing IT.",
-          "Pricing starts at $10,000 per month. The final quote depends on covered users and agreed scope. Bring a redacted questionnaire or an unfinished WISP task to the fit discussion so we can check what the service would cover."
+          "The final quote depends on covered users and agreed scope. Bring a redacted questionnaire or an unfinished WISP task to the fit discussion so we can check what the service would cover."
         ],
         "link": {
           "label": "Review Command scope and terms",

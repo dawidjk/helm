@@ -51,7 +51,7 @@ export const refreshedArticles: Article[] = [
         "h": "Choose a stack when the program already has an owner",
         "ps": [
           {
-            "text": "Helm Core includes managed email protection, device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital-risk protection and monthly reporting. Its standard fit is 20 to 75 people, at $125 per covered user per month with a $2,500 minimum.",
+            "text": "Helm Core includes managed email protection, device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital-risk protection and monthly reporting. Its standard fit is 20 to 75 people, at $125 per covered user per month with a $500 minimum.",
             "links": [
               {
                 "phrase": "Helm Core",
@@ -67,7 +67,7 @@ export const refreshedArticles: Article[] = [
         "h": "Choose program ownership when coordination is missing",
         "ps": [
           {
-            "text": "Helm Command includes the covered Core stack plus a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance responses, quarterly leadership reviews, an annual tabletop and IT coordination. Pricing starts at $10,000/month for a qualified 75 to 250-person organization. Final quotes depend on covered users and agreed scope.",
+            "text": "Helm Command includes the covered Core stack plus a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance responses, quarterly leadership reviews, an annual tabletop and IT coordination. Final quotes depend on covered users and agreed scope.",
             "links": [
               {
                 "phrase": "Helm Command",
@@ -139,7 +139,7 @@ export const refreshedArticles: Article[] = [
       {
         "h": "Price the two models over the same scope",
         "ps": [
-          "For a fictional firm with 30 covered users, the published Core rate works out to $3,750 per month before separately scoped work or applicable charges. A smaller calculation below $2,500 would still be subject to the published minimum. Neither example is a quote; supported platforms, coverage and written terms need confirmation.",
+          "For a fictional firm with 30 covered users, the published Core rate works out to $3,750 per month before separately scoped work or applicable charges. A smaller calculation below $500 would still be subject to the published minimum. Neither example is a quote; supported platforms, coverage and written terms need confirmation.",
           "The two prices also cover different responsibilities. Subtracting Core's price from Command's price will not isolate an advisory fee: Command is scoped after a review of fit and complexity. Compare what each proposal leaves your firm responsible for, and check that Command's service order explains the covered population and the limits on coordination, evidence work and questionnaires.",
           "Put retained IT charges, transition work, licensing changes and specialist exclusions in the same worksheet. Confirm contract duration, renewal terms and price changes using the proposal. Do not assume that a monthly figure means the service can be canceled month to month.",
           "Less time spent chasing evidence may free partner or IT capacity, which can support the business case. It becomes a cash saving only if the cost actually changes. If you quantify the time, use the firm's own records and describe it as capacity where that is what the firm gains."
@@ -2541,7 +2541,7 @@ export const refreshedArticles: Article[] = [
             ]
           },
           {
-            "text": "Helm Command includes the covered Core stack, a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire responses, quarterly leadership reviews, an annual tabletop and coordination with the named IT owner. Pricing starts at $10,000/month. Final quotes depend on covered users and agreed scope.",
+            "text": "Helm Command includes the covered Core stack, a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire responses, quarterly leadership reviews, an annual tabletop and coordination with the named IT owner. Final quotes depend on covered users and agreed scope.",
             "links": [
               {
                 "phrase": "Helm Command",
@@ -3078,7 +3078,7 @@ export const refreshedArticles: Article[] = [
         "h": "Fit the service into existing IT",
         "ps": [
           {
-            "text": "Helm Core includes managed email protection within a defined security stack, alongside device, supported identity, backup, awareness and digital-risk protection, with monthly reporting. It is intended for a standard 20 to 75-person fit and costs $125 per covered user per month, with a $2,500 minimum.",
+            "text": "Helm Core includes managed email protection within a defined security stack, alongside device, supported identity, backup, awareness and digital-risk protection, with monthly reporting. It is intended for a standard 20 to 75-person fit and costs $125 per covered user per month, with a $500 minimum.",
             "links": [
               {
                 "phrase": "Helm Core",
@@ -5497,7 +5497,7 @@ export const refreshedArticles: Article[] = [
         "ps": [
           "A software license and a managed service leave the firm with different amounts of work. Their headline prices won't show that difference. Compare each proposal against the same account and device list, with subscriptions, onboarding, IT time and training included. Add any specialist response work that the proposal excludes so it stays visible in the budget.",
           {
-            "text": "Helm Core is a standardized service for a typical 20 to 75-person fit, at $125 per covered user per month with a $2,500 minimum. It includes email, device, supported identity, cloud productivity backup, awareness and digital-risk protection, with monthly reporting. Core scope and terms.",
+            "text": "Helm Core is a standardized service for a typical 20 to 75-person fit, at $125 per covered user per month with a $500 minimum. It includes email, device, supported identity, cloud productivity backup, awareness and digital-risk protection, with monthly reporting. Core scope and terms.",
             "links": [
               {
                 "phrase": "Core scope and terms",
@@ -5506,7 +5506,7 @@ export const refreshedArticles: Article[] = [
             ]
           },
           {
-            "text": "Helm Command is intended for a qualified 75 to 250-person organization that needs program ownership. Pricing starts at $10,000/month. Final quotes depend on covered users and agreed scope. It adds a risk register, prioritized roadmap, evidence upkeep, bounded questionnaire responses, quarterly leadership reviews and an annual tabletop to the covered stack. Command scope and terms.",
+            "text": "Helm Command is intended for a qualified 75 to 250-person organization that needs program ownership. Final quotes depend on covered users and agreed scope. It adds a risk register, prioritized roadmap, evidence upkeep, bounded questionnaire responses, quarterly leadership reviews and an annual tabletop to the covered stack. Command scope and terms.",
             "links": [
               {
                 "phrase": "Command scope and terms",
@@ -8343,7 +8343,7 @@ export const refreshedArticles: Article[] = [
             ]
           },
           {
-            "text": "Helm Command combines the covered Core stack with vCISO leadership and managed security-program ownership. Its scope includes a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance responses, quarterly leadership reviews, an annual tabletop and IT coordination. Pricing starts at $10,000/month. Final quotes depend on covered users and agreed scope. Compare those written duties with each prospective vCISO engagement to establish which work is included.",
+            "text": "Helm Command combines the covered Core stack with vCISO leadership and managed security-program ownership. Its scope includes a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance responses, quarterly leadership reviews, an annual tabletop and IT coordination. Final quotes depend on covered users and agreed scope. Compare those written duties with each prospective vCISO engagement to establish which work is included.",
             "links": [
               {
                 "phrase": "Helm Command",

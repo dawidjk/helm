@@ -206,8 +206,8 @@ aiRetestArticle,
             }
           ]
         },
-        "Helm’s published prices provide another concrete reference. Core costs $125 per covered user per month with a $2,500 monthly minimum. For 35 covered users, the base recurring cost is $4,375 per month, or $52,500 over 12 months, before separately scoped work or additional workstations. Keep existing general-IT costs in the budget.",
-        "Command starts at $10,000/month, including its covered protection stack and program scope. Final quotes depend on covered users and agreed scope. At the starting monthly price, the first 12 months total $120,000; a higher quote increases that total. Its initial term is 36 months, with a 6% adjustment on each service anniversary.",
+        "Helm’s published prices provide another concrete reference. Core costs $125 per covered user per month with a $500 monthly minimum. For 35 covered users, the base recurring cost is $4,375 per month, or $52,500 over 12 months, before separately scoped work or additional workstations. Keep existing general-IT costs in the budget.",
+        "Final quotes depend on covered users and agreed scope. Command's initial term is 36 months, with a 6% adjustment on each service anniversary.",
         "Get written quotes from IR firms and independent assessors. With an IR retainer, check whether you are paying for availability or prepaid hours, what after-hours work costs, and when unused hours expire. With evidence software, establish who will collect and verify the records. Compare each offer with insurer-provided services so you do not buy the same work twice."
       ]
     },
@@ -387,7 +387,7 @@ aiRetestArticle,
               }
             ]
           },
-          "Core costs $125 per covered user per month with a $2,500 monthly account minimum. It includes up to two eligible Windows or Mac workstations per covered user; additional eligible workstations cost $12 each per month. Choose a 12-month initial term or a 36-month lock on the starting per-user price and minimum.",
+          "Core costs $125 per covered user per month with a $500 monthly account minimum. It includes up to two eligible Windows or Mac workstations per covered user; additional eligible workstations cost $12 each per month. Choose a 12-month initial term or a 36-month lock on the starting per-user price and minimum.",
           {
             "text": "Helm Command illustrates the program model for organizations with 75 to 250 people. It includes the covered Core stack plus a maintained risk register, prioritized 12-month roadmap, evidence upkeep, bounded questionnaire and insurance response, quarterly leadership reviews, an annual tabletop, and coordination with the IT owner.",
             "links": [
@@ -397,7 +397,7 @@ aiRetestArticle,
               }
             ]
           },
-          "Command starts at $10,000/month. Final quotes depend on covered users and agreed scope. Its initial term is 36 months, with a 6% adjustment on each service anniversary. At the overlapping 75-person boundary, the work required helps determine fit. Headcount is one input.",
+          "Final quotes depend on covered users and agreed scope. Command's initial term is 36 months, with a 6% adjustment on each service anniversary. At the overlapping 75-person boundary, the work required helps determine fit. Headcount is one input.",
           "Specialist vendor teams provide continuous monitoring and containment for covered capabilities. Helm does not staff its own 24/7 security operations center. Servers, phones, tablets, network equipment, specialized systems, forensic response, breach counsel, and hands-on remediation require separate written scope unless expressly included. Helm does not issue certifications or guarantee customer, regulatory, or insurance decisions."
         ]
       },
@@ -557,7 +557,7 @@ aiRetestArticle,
           "Tier names become easier to compare once you have a responsibility map. Reactive support usually handles authorized individual jobs, while recurring managed IT adds agreed ongoing tasks. A broader package may add security or advisory services. A higher tier is useful only if its added duties address the work your business needs.",
           "Helm has two security tiers that work alongside the existing IT owner. As a security-focused provider, Helm leaves help desk, routine administration, procurement, patching, and general IT with the client’s retained IT arrangement unless a separate written scope says otherwise.",
           {
-            "text": "Helm Core is the standardized model for organizations with 20 to 75 people. It includes managed email protection, device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital-risk protection, and a monthly report. It costs $125 per covered user per month with a $2,500 monthly account minimum.",
+            "text": "Helm Core is the standardized model for organizations with 20 to 75 people. It includes managed email protection, device detection and response, supported identity protection, cloud productivity backup, awareness learning and simulations, digital-risk protection, and a monthly report. It costs $125 per covered user per month with a $500 monthly account minimum.",
             "links": [
               {
                 "phrase": "Helm Core",
@@ -575,7 +575,7 @@ aiRetestArticle,
               }
             ]
           },
-          "Command starts at $10,000/month. Final quotes depend on covered users and agreed scope. Command has a 36-month initial term and a 6% adjustment on each service anniversary. Scope and complexity determine fit, particularly at the overlapping 75-person boundary. Specialist vendor teams provide continuous monitoring and containment for covered capabilities; Helm does not staff its own 24/7 security operations center.",
+          "Final quotes depend on covered users and agreed scope. Command has a 36-month initial term and a 6% adjustment on each service anniversary. Scope and complexity determine fit, particularly at the overlapping 75-person boundary. Specialist vendor teams provide continuous monitoring and containment for covered capabilities; Helm does not staff its own 24/7 security operations center.",
           "Servers, phones, tablets, network equipment, specialized systems, forensic response, breach counsel, and hands-on remediation require separate written scope unless expressly included. In a hypothetical 45-person Princeton accounting firm, Core could provide standardized protection while its MSP runs IT. A hypothetical 120-person Newark professional-services firm with recurring questionnaires may need Command’s program cadence. Headcount alone does not settle either decision."
         ]
       },

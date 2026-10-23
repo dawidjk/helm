@@ -12,8 +12,7 @@ const pricingTiles = [...productList].sort((a, b) =>
   ['helm-core', 'helm-command'].indexOf(a.slug) - ['helm-core', 'helm-command'].indexOf(b.slug));
 
 const minimumBySlug: Record<string, string> = {
-  'helm-core': '$2,500 / month account',
-  'helm-command': '$10,000 / month account',
+  'helm-core': '$500 / month account',
 };
 
 export default function Pricing() {
@@ -21,7 +20,7 @@ export default function Pricing() {
     <>
       <Meta
         title="Pricing: Helm Core and Helm Command | Helm"
-        desc="Two managed security offers: Helm Core at $125 per user each month with a $2,500 minimum, and Helm Command starting at $10,000/month."
+        desc="Two managed security offers: Helm Core at $125 per covered user each month with a $500 monthly account minimum, and Helm Command."
         path="/pricing"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -101,7 +100,7 @@ export default function Pricing() {
               <h2 className="product-tile-title">{product.name}</h2>
               <p><strong>Best for</strong> {product.bestFor}.</p>
               <div className="price-row">
-                <h3>{product.price}</h3>
+                {product.price && <h3>{product.price}</h3>}
                 <span className="term-chip">{product.term}</span>
               </div>
               <p>{product.priceDetail}</p>
@@ -122,18 +121,17 @@ export default function Pricing() {
         <div className="band-head">
           <h2 className="observe">What the price looks like in practice</h2>
           <p className="observe d1">
-            Core is priced by covered user. Command starts at $10,000/month, including the covered Core stack. Final quotes depend on covered users and agreed scope, including the systems, evidence work and coordination required.
+            Core is priced by covered user. Final quotes depend on covered users and agreed scope, including the systems, evidence work and coordination required.
           </p>
         </div>
         <div className="price-math">
           <article className="price-math-tile observe">
-            <div className="price-math-eq">20 people × $125</div>
-            <div className="price-math-result">$2,500 / month</div>
+            <div className="price-math-eq">4 covered users × $125</div>
+            <div className="price-math-result">$500 / month</div>
             <p>At Helm Core&apos;s monthly minimum, you get the complete standardized protection stack and monthly reporting.</p>
           </article>
           <article className="price-math-tile observe d1">
             <div className="price-math-eq">75 to 250 people</div>
-            <div className="price-math-result">Starting at $10,000/month</div>
             <p>Helm Command includes the covered Core stack plus hands-on security-program ownership and quarterly leadership reviews.</p>
           </article>
         </div>

@@ -54,7 +54,7 @@ function ServiceLink({index}: {index: number}) {
     <Link className="vh-service" to={canonicalPath(`/${service.slug}`)}>
       <span className="vh-service-name">{service.name}</span>
       <strong>{service.tagline}</strong>
-      <span className="vh-service-price">{service.price}</span>
+      {service.price && <span className="vh-service-price">{service.price}</span>}
       <span className="vh-arrow" aria-hidden="true">→</span>
     </Link>
   );
@@ -144,7 +144,7 @@ export function AkariHome() {
         <div className="va-orbit">
           {productList.map((service) => (
             <Link key={service.slug} to={canonicalPath(`/${service.slug}`)}>
-              <span>{service.name}</span><strong>{service.tagline}</strong><small>{service.price}</small><b aria-hidden="true">→</b>
+              <span>{service.name}</span><strong>{service.tagline}</strong>{service.price && <small>{service.price}</small>}<b aria-hidden="true">→</b>
             </Link>
           ))}
         </div>

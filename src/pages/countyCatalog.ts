@@ -66,7 +66,7 @@ export const countyCatalog = [
     "county": "Hunterdon",
     "slug": "hunterdon-county-nj",
     "title": "Cybersecurity in Hunterdon County, NJ | Helm",
-    "description": "Compare Helm Core's $2,500 monthly minimum with your practice's needs and existing IT costs. Cybersecurity for Hunterdon County firms, with NJ on-site visits.",
+    "description": "Compare Helm Core's $500 monthly minimum with your practice's needs and existing IT costs. Cybersecurity for Hunterdon County firms, with NJ on-site visits.",
     "h1": "Cybersecurity for Hunterdon County professional practices"
   },
   {

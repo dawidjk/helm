@@ -64,9 +64,11 @@ export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
           <div className="hero-ctas reveal d3">
             <BookCallLink label={p.slug === 'helm-core' ? 'Discuss Core' : 'Discuss Command'} />
           </div>
-          <div className="hero-note reveal d3">
-            {p.price} · <Link to="/pricing/">full pricing</Link>
-          </div>
+          {p.price && (
+            <div className="hero-note reveal d3">
+              {p.price} · <Link to="/pricing/">full pricing</Link>
+            </div>
+          )}
           {p.slug === 'helm-core' && (
             <a className="product-scan-link core-report-hero-link" href="#monthly-report">See a sample monthly report</a>
           )}
@@ -90,7 +92,7 @@ export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
           <div className="product-tile product-summary observe d1">
             <ProductMotif kind={p.motif} />
             <h2 className="product-tile-title">{p.name}</h2>
-            <h3 className="product-summary-price">{p.price}</h3>
+            {p.price && <h3 className="product-summary-price">{p.price}</h3>}
             <p>{p.priceDetail}</p>
             <p>{p.term}</p>
           </div>

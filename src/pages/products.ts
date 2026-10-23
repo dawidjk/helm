@@ -10,7 +10,7 @@ export type Product = {
   desc: string;
   bestFor: string;
   metaDesc: string;
-  price: string;
+  price?: string;
   priceDetail: string;
   term: string;
   features: {title: string; body: string}[];
@@ -29,10 +29,10 @@ export const productList: Product[] = [
     desc: "Helm Core provides managed cybersecurity for firms with 20 to 75 people, alongside your existing IT provider or internal team. One automated monthly report uses the available security signals to show what is covered, what changed and what your firm or IT team needs to do next.",
     bestFor: 'organizations with 20 to 75 people that need complete, standardized protection without adding another high-touch consulting relationship',
     metaDesc:
-      "Helm Core coordinates supported email, workstation and identity protection alongside your IT team for $125 per user per month, with a $2,500 monthly minimum.",
+      "Helm Core coordinates supported email, workstation and identity protection alongside your IT team for $125 per user per month, with a $500 monthly minimum.",
     price: '$125 / user / month',
     term: '12 months or 36-month price lock',
-    priceDetail: '$2,500 monthly account minimum. Choose a 12-month initial term at the current rate or lock the starting per-user price and account minimum for a 36-month initial term. Includes up to two eligible Windows or Mac workstations per covered user. Additional eligible workstations are $12 each per month.',
+    priceDetail: '$500 monthly account minimum. Choose a 12-month initial term at the current rate or lock the starting per-user price and account minimum for a 36-month initial term. Includes up to two eligible Windows or Mac workstations per covered user. Additional eligible workstations are $12 each per month.',
     features: [
       {
         title: 'Email and human-risk protection',
@@ -74,8 +74,7 @@ export const productList: Product[] = [
     desc: 'When client questionnaires and security decisions need a clear owner, Helm Command adds virtual chief information security officer (vCISO) leadership to the covered Core protection stack. Helm maintains the risk register, roadmap and evidence, drafts agreed questionnaire responses, and leads quarterly reviews. Your IT team keeps general IT and assigned remediation.',
     bestFor: "organizations with 75 to 250 people that need an accountable security-program owner, regular leadership reviews, and evidence kept up to date",
     metaDesc:
-      'Helm Command combines vCISO leadership with managed security, risk planning and evidence upkeep starting at $10,000/month. Covered Core protection is included.',
-    price: 'Starting at $10,000/month',
+      'Helm Command combines vCISO leadership with managed security, risk planning and evidence upkeep. Covered Core protection is included.',
     term: '36-month initial term',
     priceDetail: "Final quotes depend on covered users and agreed scope. The monthly price includes the covered Helm Core stack and adjusts 6% on each service anniversary. Before work starts, we write down the implementation scope and any remediation you have authorized separately.",
     features: [
@@ -109,7 +108,7 @@ export const productList: Product[] = [
       {q: 'Does Command include SOC 2 readiness?', a: `${commandReadiness.status} ${commandReadiness.description} ${commandReadiness.boundary}`},
       {q: 'Does Helm Command replace our MSP or internal IT team?', a: 'No. Command is the accountable security-program layer. Your MSP or internal IT team keeps responsibility for help desk, administration, patching, procurement, backup operations outside the covered service, and other routine IT work.'},
       {q: 'Does Command include vCISO leadership?', a: "Yes. Command includes virtual chief information security officer (vCISO) leadership and the covered Helm Core stack. It also includes a maintained risk and decision register, a prioritized 12-month roadmap, evidence upkeep, and bounded questionnaire and insurance response. Quarterly leadership reviews, an annual tabletop, and coordination with the named IT owner are included."},
-      {q: "What determines Command's final quote?", a: "Command starts at $10,000/month. Final quotes depend on covered users and agreed scope, including the systems, evidence work and coordination required. Helm confirms one all-in monthly price after the fit review."},
+      {q: "What determines Command's final quote?", a: "Final quotes depend on covered users and agreed scope, including the systems, evidence work and coordination required. Helm confirms one all-in monthly price after the fit review."},
       {q: 'Does Helm certify compliance or guarantee an insurance outcome?', a: 'No. Helm helps document the current program, evidence, and gaps. Independent assessors, regulators, insurers, and customers make their own decisions, and your organization owns every final attestation.'},
       {q: 'Does Command include unlimited support or remediation?', a: 'No. Command includes the written program cadence and coordination scope. Help desk, forensic response, breach counsel, routine IT work, and hands-on remediation remain with the responsible provider or require a separate written authorization.'},
     ],
