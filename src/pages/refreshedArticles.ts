@@ -8394,7 +8394,7 @@ export const refreshedArticles: Article[] = [
           {
             "text": "Connect each roadmap milestone to the risk or business requirement it addresses. When the work closes, update the supporting evidence and remaining risk too. Leadership can then trace the funded work to its intended effect, rather than seeing only a completed task.",
             "links": [
-              {"phrase": "roadmap milestone", "to": "/resources/cybersecurity-roadmap-milestones/"}
+              {"phrase": "roadmap milestone", "to": "/resources/cybersecurity-roadmap-milestones/", "className": "contextual-resource-link"}
             ]
           }
         ]
@@ -8635,7 +8635,8 @@ export const refreshedArticles: Article[] = [
               },
               {
                 "phrase": "configured data source and a staffed service",
-                "to": "/resources/siem-software-managed-detection/"
+                "to": "/resources/siem-software-managed-detection/",
+                "className": "contextual-resource-link"
               }
             ]
           }

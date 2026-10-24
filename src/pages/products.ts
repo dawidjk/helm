@@ -39,21 +39,21 @@ export const productList: Product[] = [
         title: 'Email and human-risk protection',
         body: {
           text: "Email protection includes managed filtering, phishing and impersonation detection, employee reporting, and triage. Simulations and awareness learning help protect the person making the decision as well as the inbox.",
-          links: [{phrase: 'Simulations and awareness learning', to: '/resources/managed-awareness-training-vs-diy/'}],
+          links: [{phrase: 'Simulations and awareness learning', to: '/resources/managed-awareness-training-vs-diy/', className: 'contextual-resource-link'}],
         },
       },
       {
         title: 'Device and identity monitoring',
         body: {
           text: "A vendor-operated 24/7 security operations center monitors covered Windows and Mac workstations and supported identity activity. The team investigates real threats and can contain covered devices when required.",
-          links: [{phrase: 'supported identity activity', to: '/resources/managed-identity-threat-response/'}],
+          links: [{phrase: 'supported identity activity', to: '/resources/managed-identity-threat-response/', className: 'contextual-resource-link'}],
         },
       },
       {
         title: 'Cloud backup and digital risk protection',
         body: {
           text: "Supported Microsoft 365 or Google Workspace data is backed up. External monitoring looks for impersonation, lookalike domains, and other public risks tied to your organization.",
-          links: [{phrase: 'External monitoring', to: '/resources/digital-risk-protection-services/'}],
+          links: [{phrase: 'External monitoring', to: '/resources/digital-risk-protection-services/', className: 'contextual-resource-link'}],
         },
       },
       {

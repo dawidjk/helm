@@ -5227,6 +5227,12 @@ a.nav-cta-mobile.action-link:hover {
   outline-offset: 4px;
 }
 
+/* Keep these contextual reading links identifiable without relying on color. */
+a.contextual-resource-link {
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}
+
 .article-read-body p.article-table-hint {
   font-size: 16px;
   line-height: 1.5;
