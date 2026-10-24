@@ -241,14 +241,6 @@ export const aiProposalsArticleSupport: ArticleSupport = {
     {
       "title": "Helm: Terms of Service",
       "href": "https://helmsecured.com/terms/"
-    },
-    {
-      "title": "Helm: Secure AI Adoption scope",
-      "href": "/secure-ai-adoption/"
-    },
-    {
-      "title": "Helm: Terms of Service",
-      "href": "/terms/"
     }
   ]
 };

@@ -1384,22 +1384,6 @@ export const articleSupport: Record<string, ArticleSupport> = {
     {
       "title": "Helm: Scope of the free public-domain scan",
       "href": "https://helmsecured.com/terms/"
-    },
-    {
-      "title": "Helm: Core service scope and terms",
-      "href": "/helm-core/"
-    },
-    {
-      "title": "Helm: Command service scope and terms",
-      "href": "/helm-command/"
-    },
-    {
-      "title": "Helm: Secure AI Adoption consulting",
-      "href": "/secure-ai-adoption/"
-    },
-    {
-      "title": "Helm: Scope of the free public-domain scan",
-      "href": "/terms/"
     }
   ]
 },
@@ -1434,22 +1418,6 @@ export const articleSupport: Record<string, ArticleSupport> = {
     {
       "title": "Helm: Scope of the free public-domain scan",
       "href": "https://helmsecured.com/terms/"
-    },
-    {
-      "title": "Helm: Core service scope and terms",
-      "href": "/helm-core/"
-    },
-    {
-      "title": "Helm: Command service scope and terms",
-      "href": "/helm-command/"
-    },
-    {
-      "title": "Helm: Secure AI Adoption consulting",
-      "href": "/secure-ai-adoption/"
-    },
-    {
-      "title": "Helm: Scope of the free public-domain scan",
-      "href": "/terms/"
     }
   ]
 },

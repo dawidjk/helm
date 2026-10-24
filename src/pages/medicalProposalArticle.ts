@@ -266,18 +266,6 @@ export const medicalProposalArticleSupport: ArticleSupport = {
     {
       "title": "Helm: Terms of Service",
       "href": "https://helmsecured.com/terms/"
-    },
-    {
-      "title": "Helm Core: Current service scope",
-      "href": "/helm-core/"
-    },
-    {
-      "title": "Helm Command: Current service scope",
-      "href": "/helm-command/"
-    },
-    {
-      "title": "Helm: Terms of Service",
-      "href": "/terms/"
     }
   ]
 };
