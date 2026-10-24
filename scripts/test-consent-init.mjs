@@ -10,21 +10,25 @@ const dist=path.resolve(process.env.HELM_TEST_DIST||'dist');
 const reportPath=process.env.HELM_TEST_REPORT||'consent-init-test-report.json';
 const key='helm-cookie-preferences-v2', legacyKey='helm-remarketing-consent-v1';
 const exact="We use cookies to make our site work and to analyze how it's used. You can choose to accept all cookies or manage your preferences below.";
-const prefs=(analytics,advertising,scoped=true)=>JSON.stringify({version:2,analytics,advertising,decided:true,...(scoped?{analyticsScope:'ga4-hubspot-v1'}:{})});
+const prefs=(analytics,advertising,scoped=true,bookingScoped=false)=>JSON.stringify({version:2,analytics,advertising,decided:true,...(scoped?{analyticsScope:'ga4-hubspot-v1'}:{}),...(bookingScoped?{bookingAdvertisingScope:'website-booking-click-meta-v1',bookingAdvertisingChoiceId:'00000000-0000-4000-8000-000000000001'}:{})});
 const cases=[
   {name:'first-visit',banner:true,analytics:false,advertising:false},
-  {name:'returning-accepted',raw:prefs(true,true),banner:false,analytics:true,advertising:true,hubspot:true},
-  {name:'old-google-and-ads-choice',raw:prefs(true,true,false),banner:true,analytics:true,advertising:true,refresh:true},
+  // Earlier advertising permission stays active within its old scope; the
+  // booking-click purpose requires a new, initially unchecked choice.
+  {name:'old-booking-scope-accepted',raw:prefs(true,true),banner:true,analytics:true,advertising:true,hubspot:true,bookingRefresh:true},
+  {name:'current-scope-accepted',raw:prefs(true,true,true,true),banner:false,analytics:true,advertising:true,hubspot:true},
+  {name:'current-scope-advertising-only',raw:prefs(false,true,true,true),banner:false,analytics:false,advertising:true},
+  {name:'old-google-and-ads-choice',raw:prefs(true,true,false),banner:true,analytics:true,advertising:true,refresh:true,bookingRefresh:true},
   {name:'old-google-only-choice',raw:prefs(true,false,false),banner:true,analytics:true,advertising:false,refresh:true},
   {name:'returning-rejected',raw:prefs(false,false),banner:false,analytics:false,advertising:false},
   {name:'returning-analytics-only',raw:prefs(true,false),banner:false,analytics:true,advertising:false,hubspot:true},
-  {name:'returning-advertising-only',raw:prefs(false,true),banner:false,analytics:false,advertising:true},
+  {name:'old-booking-scope-advertising-only',raw:prefs(false,true),banner:true,analytics:false,advertising:true,bookingRefresh:true},
   {name:'invalid-json',raw:'{invalid',banner:true,analytics:false,advertising:false},
   {name:'invalid-types',raw:'{"version":2,"analytics":"true","advertising":true,"decided":true}',banner:true,analytics:false,advertising:false},
   {name:'invalid-null',raw:'null',banner:true,analytics:false,advertising:false},
   {name:'storage-unavailable',blocked:true,banner:true,analytics:false,advertising:false},
   {name:'legacy-rejected',legacy:'declined',banner:false,analytics:false,advertising:false},
-  {name:'legacy-accepted-advertising-only',legacy:'accepted',banner:true,analytics:false,advertising:true},
+  {name:'legacy-accepted-advertising-only',legacy:'accepted',banner:true,analytics:false,advertising:true,bookingRefresh:true},
   ...[[320,700],[697,374],[348,186],[1391,1000]].map(([width,height])=>({name:`first-visit-layout-${width}`,width,height,banner:true,analytics:false,advertising:false}))
 ].filter(c=>!process.env.HELM_CONSENT_CASE||c.name===process.env.HELM_CONSENT_CASE);
 assert.ok(cases.length);
@@ -107,7 +111,7 @@ try{
       }else await page.focus('.footer-privacy-button');
       await page.keyboard.press('Enter');await page.waitForFunction(()=>document.querySelector('.cookie-dialog').open);
       const controls=await page.$$eval('.cookie-category input',es=>es.map(e=>({checked:e.checked,disabled:e.disabled})));
-      assert.deepEqual(controls,[{checked:true,disabled:true},{checked:test.refresh?false:test.analytics,disabled:false},{checked:test.advertising,disabled:false}]);
+      assert.deepEqual(controls,[{checked:true,disabled:true},{checked:test.refresh?false:test.analytics,disabled:false},{checked:test.bookingRefresh?false:test.advertising,disabled:false}]);
       assert.equal(await page.evaluate(()=>document.activeElement.textContent.trim()),'Close');
       assert.equal(await page.evaluate(()=>document.querySelector('.cookie-dialog').scrollWidth>document.querySelector('.cookie-dialog').clientWidth),false);
       for(let i=0;i<9;i++){await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.querySelector('.cookie-dialog').contains(document.activeElement)),true)}

@@ -152,7 +152,7 @@ try {
     });
     await test('Early 404 search preserves input/focus and replays one submit',async()=>{
       const f=await fixture('/one/two/',{hold:true,slow:true});
-      try{await f.page.focus('#error-page-search');await f.page.keyboard.type('pricing');await f.page.keyboard.press('Enter');await f.page.keyboard.press('Enter');f.release();await f.navigation;await f.page.waitForFunction(()=>location.pathname==='/pricing/');await sleep(200);noErrors(f);assert.equal(f.navigations.length,0);assert.equal(await f.page.$eval('link[rel=canonical]',e=>e.href),'https://helmsecured.com/pricing/');return {nativeNavigationBlocked:true};}finally{await f.close();}
+      try{await f.page.waitForSelector('#error-page-search');await f.page.focus('#error-page-search');await f.page.keyboard.type('pricing');await f.page.keyboard.press('Enter');await f.page.keyboard.press('Enter');f.release();await f.navigation;await f.page.waitForFunction(()=>location.pathname==='/pricing/');await sleep(200);noErrors(f);assert.equal(f.navigations.length,0);assert.equal(await f.page.$eval('link[rel=canonical]',e=>e.href),'https://helmsecured.com/pricing/');return {nativeNavigationBlocked:true};}finally{await f.close();}
     });
     await test('Early 404 search text and focus survive without submission',async()=>{
       const f=await fixture('/one/two/',{hold:true,slow:true});
