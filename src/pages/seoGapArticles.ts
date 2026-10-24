@@ -454,7 +454,6 @@ export const gapArticles: Article[] = [
             "caption": "Illustrative groups, not a production configuration. Your IT provider must define and test the connections each group needs."
           }
         },
-        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
         {
           "table": {
             "caption": "Separate devices by the access they need",
@@ -621,7 +620,6 @@ export const gapArticles: Article[] = [
         "A backup is a copy you can use for restoration under the product's supported conditions. A recovery plan covers the steps and dependencies needed to resume work. It may require rebuilding a device, restoring application data, verifying access and checking that the workflow produces the right result.",
         "File synchronization can spread a deletion or unwanted change to connected devices. Retention can preserve certain information for a defined period, while a backup product has its own restoration methods and coverage. Examine the actual service documentation rather than assuming that all copies of data serve the same purpose.",
         "Ask the provider to demonstrate restoration of the systems your workflow actually uses. A demonstration on a different application can explain the steps, but it leaves your own recovery capability untested. The comparison below can help you identify what evidence is still missing.",
-        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
         {
           "table": {
             "caption": "Understand the difference between backup and recovery",

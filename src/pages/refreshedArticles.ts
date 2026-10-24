@@ -2947,7 +2947,6 @@ export const refreshedArticles: Article[] = [
       "ps": [
         "Ask the provider to walk through the lookalike-site example. Does it submit an abuse report, help prepare one, supply a template or only identify the reporting route? If the answer is \"contact support,\" establish who takes the case and what help remains included.",
         "Takedown depends on the relevant platform, evidence and process. Assistance is not a guarantee that every site or account will disappear within a fixed period. Agree who handles a rejected or ignored report, including the business escalation owner and any legal or specialist work that needs a separate engagement.",
-        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
         {
           "table": {
             "caption": "Compare response assistance in detail",
@@ -3192,7 +3191,6 @@ export const refreshedArticles: Article[] = [
         {
           "h3": "A responsibility comparison"
         },
-        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
         {
           "table": {
             "caption": "A responsibility comparison",
@@ -4727,7 +4725,6 @@ export const refreshedArticles: Article[] = [
       "h": "A first-actions planning table",
       "ps": [
         "Adapt the table to your actual systems and contracts. It is a planning aid, not an instruction to execute unfamiliar technical actions without authorization.",
-        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
         {
           "table": {
             "caption": "A first-actions planning table",
@@ -5279,7 +5276,6 @@ export const refreshedArticles: Article[] = [
           ]
         },
         "Ask IT to demonstrate the supported actions on a test device. Do not assume every personal phone can be remotely wiped, or treat a submitted wipe request as proof that the wipe succeeded. These management controls are not part of Helm Core itself.",
-        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
         {
           "table": {
             "caption": "Set device and account safeguards together",
@@ -5889,7 +5885,6 @@ export const refreshedArticles: Article[] = [
     {
       "h": "Use the evidence to assign the next work",
       "ps": [
-        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
         {
           "table": {
             "caption": "Connect the baseline to recovery and response",
@@ -6692,7 +6687,6 @@ export const refreshedArticles: Article[] = [
       "h": "A practical comparison",
       "ps": [
         "A method’s phishing resistance is only part of the choice. The account must support it, policy must enforce it, and staff must be able to recover access. Review those conditions with IT for the accounts in scope.",
-        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
         {
           "table": {
             "caption": "A practical comparison",
@@ -7097,7 +7091,6 @@ export const refreshedArticles: Article[] = [
         {
           "h3": "Compare the operational burden"
         },
-        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
         {
           "table": {
             "caption": "Compare the operational burden",

@@ -311,7 +311,6 @@ aiRetestArticle,
       "ps": [
         "A standardized stack gives you a defined set of security services, with a repeatable process for deployment and reporting. If your platforms are supported, your reporting needs are manageable and someone already owns IT, this can be enough. You still need someone in the business to decide wider security priorities and coordinate work outside the service.",
         "Program ownership adds a management role. The provider maintains an agreed risk register and roadmap, organizes evidence and prepares questionnaire responses within defined limits. It brings decisions to leadership, which still approves spending, accepts risks and makes final representations. Use the contract to define what “full program ownership” covers and which approvals stay with your firm. It should also specify the covered systems, response duties and exclusions.",
-        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
         {
           "table": {
             "caption": "Compare the responsibilities, then check them against each proposal",

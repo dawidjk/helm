@@ -236,7 +236,6 @@ export const findingGuides: Article[] = [
           "language": "text"
         },
         "For a separately tested notices.example.com subdomain, an explicit record at _dmarc.notices.example.com lets you change that stream's p value separately. The record name belongs under the zone that hosts it; in an example.com zone, the relative name is _dmarc.notices. Introducing that record overrides inherited settings, so include its intended reporting destination and alignment choices.",
-        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
         {
           "table": {
             "caption": "DMARC record fields to review",
@@ -474,7 +473,6 @@ export const findingGuides: Article[] = [
         },
         "The semicolons separate fields. The DNS record type is TXT and its name is _dmarc within the example.com zone. Do not put the mailbox address in the Name field or put _dmarc in the Value field. Do not add literal outer quotation marks unless your DNS editor's instructions require them.",
         "For the example above, a provider that appends example.com to the Name field should display the saved name as _dmarc.example.com. The Value or Content field should contain the entire line from v=DMARC1 through the reporting address. TXT means a text record; the policy is stored as text in that value.",
-        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
         {
           "table": {
             "caption": "DMARC fields when adding or repairing aggregate reporting",
@@ -1721,7 +1719,6 @@ export const findingGuides: Article[] = [
       "h": "Enter the DS fields supplied for your zone",
       "ps": [
         "At an external registrar, open the domain's DNSSEC or DS records settings. This is a delegation setting for the registered domain, not an ordinary text (TXT) record in your child zone. Some registrars accept one DS line; others ask for its four fields separately. Copy those fields from your DNS host's current generated DS.",
-        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
         {
           "table": {
             "caption": "DS record fields for registrar publication",
@@ -1985,7 +1982,6 @@ export const findingGuides: Article[] = [
             }
           ]
         },
-        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
         {
           "table": {
             "caption": "MTA-STS policy fields",
@@ -2084,7 +2080,6 @@ export const findingGuides: Article[] = [
             "height": 253
           }
         },
-        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
         {
           "table": {
             "caption": "Fields for the MTA-STS DNS marker",
@@ -2270,7 +2265,6 @@ export const findingGuides: Article[] = [
           "language": "text"
         },
         "If you intentionally use two email destinations, write each complete mailto: URI, with a comma between them. For example, rua=mailto:tls-reports@example.com,mailto:transport-review@example.com demonstrates the syntax. Either recipient may receive report data; a sender can choose to deliver to only one of the listed destinations. Do not add a second address simply as an untested backup.",
-        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
         {
           "table": {
             "caption": "TLS-RPT DNS fields",
@@ -2847,7 +2841,6 @@ export const findingGuides: Article[] = [
       "h": "Match the observed failure to the next useful check",
       "ps": [
         "Use the stage recorded in the result or log. A public status page can help identify an ongoing provider incident, but compare its affected service and time with your own test. Treat each possible cause below as something to verify.",
-        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
         {
           "table": {
             "caption": "SMTP findings and follow-up checks",
