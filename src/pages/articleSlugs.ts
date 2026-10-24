@@ -77,6 +77,7 @@ export const articleSlugs = [
   "managed-service-providers-new-jersey"
 ];
 export const blogSlugs = [
+  "litellm-compromised-release-recovery",
   "google-meet-recap-audience",
   "beyondtrust-remote-support-october-2026",
   "cisco-secure-email-gateway-october-2026-exploitation",

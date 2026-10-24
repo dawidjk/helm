@@ -1,3 +1,4 @@
+import {liteLlmIncidentArticle, liteLlmIncidentArticleSupport} from './liteLlmIncidentArticle';
 import {googleMeetRecapArticle, googleMeetRecapArticleSupport} from './googleMeetRecapArticle';
 import {beyondTrustArticle, beyondTrustArticleSupport} from './beyondTrustArticle';
 import {aiProposalsArticle, aiProposalsArticleSupport} from './aiProposalsArticle';
@@ -164,6 +165,7 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+  [liteLlmIncidentArticle.slug]: liteLlmIncidentArticleSupport,
   [googleMeetRecapArticle.slug]: googleMeetRecapArticleSupport,
   [aiProposalsArticle.slug]: aiProposalsArticleSupport,
   [beyondTrustArticle.slug]: beyondTrustArticleSupport,
