@@ -18,7 +18,8 @@ export const liteLlmIncidentArticle: Article = {
       "links": [
         {
           "phrase": "LiteLLM's disclosure",
-          "to": "https://docs.litellm.ai/blog/security-incident-oct-21-2026"
+          "to": "https://docs.litellm.ai/blog/security-incident-oct-21-2026",
+          "className": "contextual-resource-link"
         }
       ]
     }
@@ -33,7 +34,8 @@ export const liteLlmIncidentArticle: Article = {
           "links": [
             {
               "phrase": "Docker's documentation",
-              "to": "https://docs.docker.com/dhi/explore/security-concepts/digests/"
+              "to": "https://docs.docker.com/dhi/explore/security-concepts/digests/",
+              "className": "contextual-resource-link"
             }
           ]
         },
@@ -50,7 +52,8 @@ export const liteLlmIncidentArticle: Article = {
           "links": [
             {
               "phrase": "Lidor Machluf's report for Upwind",
-              "to": "https://github.com/BerriAI/litellm/issues/47826"
+              "to": "https://github.com/BerriAI/litellm/issues/47826",
+              "className": "contextual-resource-link"
             }
           ]
         },
@@ -60,7 +63,8 @@ export const liteLlmIncidentArticle: Article = {
           "links": [
             {
               "phrase": "follow-up",
-              "to": "https://github.com/BerriAI/litellm/issues/47826#issuecomment-6316601885"
+              "to": "https://github.com/BerriAI/litellm/issues/47826#issuecomment-6316601885",
+              "className": "contextual-resource-link"
             }
           ]
         }
@@ -74,7 +78,8 @@ export const liteLlmIncidentArticle: Article = {
           "links": [
             {
               "phrase": "Python's documentation",
-              "to": "https://docs.python.org/3.13/library/site.html"
+              "to": "https://docs.python.org/3.13/library/site.html",
+              "className": "contextual-resource-link"
             }
           ]
         },
@@ -83,7 +88,8 @@ export const liteLlmIncidentArticle: Article = {
           "links": [
             {
               "phrase": "completed attack-chain investigation",
-              "to": "https://docs.litellm.ai/blog/security-incident-oct-21-2026-attack-chain"
+              "to": "https://docs.litellm.ai/blog/security-incident-oct-21-2026-attack-chain",
+              "className": "contextual-resource-link"
             }
           ]
         }
@@ -107,7 +113,8 @@ export const liteLlmIncidentArticle: Article = {
           "links": [
             {
               "phrase": "incident response plan",
-              "to": "/resources/incident-response-plan-small-business/"
+              "to": "/resources/incident-response-plan-small-business/",
+              "className": "contextual-resource-link"
             }
           ]
         }
