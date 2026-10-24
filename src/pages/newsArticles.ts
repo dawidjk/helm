@@ -4,93 +4,98 @@ import type {Article} from './articles';
 export const newsArticles: Article[] = [
   ciscoEmailArticle,
   {
-    "slug": "meraki-october-2026-security-update",
-    "collection": "blog",
-    "title": "Cisco’s October Meraki update: some fixes are still on the way",
-    "metaTitle": "Meraki October Update: Some Fixes Still Pending | Helm",
-    "metaDesc": "Cisco’s October Meraki fixes arrive on different schedules. Understand the device-specific caveats, status labels and interruptions to discuss with your IT provider.",
-    "date": "2026-10-09",
-    "updated": "2026-10-10",
-    "readMin": 3,
-    "lane": "Professional services",
-    "laneTo": "/professional-services/",
-    "intro": "Some Meraki equipment can receive Cisco’s October security fixes now. Other devices are waiting for releases expected between mid-October and mid-November. If an outside IT provider looks after your firm’s network, that’s worth a conversation: equipment in the same office may need different updates on different schedules.",
-    "lead": [
-      {
-        "text": "Cisco published the advisory on October 7, 2026, and revised it on October 8. It covers Campus Gateways, MG cellular gateways, MR wireless access points, MS switches, MV cameras and MX security appliances. Cisco reports no known malicious exploitation and says there are no workarounds that address the vulnerabilities.",
-        "links": [
-          {
-            "phrase": "Cisco published the advisory",
-            "to": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-meraki-os-drbEX9GH"
-          }
-        ]
-      }
-    ],
-    "takeaway": "",
-    "readingLayout": true,
-    "hideVisual": true,
-    "ctaMode": "book",
-    "sections": [
-      {
-        "h": "The fix can depend on a footnote",
-        "ps": [
-          "In the advisory’s MX section, Cisco lists release 19.2.9. The footnote says it’s available only for Z3 devices. That same note directs administrators to contact Meraki support if either 18.107.14 or 19.2.9 is missing from Dashboard, the service used to manage the equipment.",
-          "Those details explain why the provider needs to check the model and the software branch each device is running. Choosing a release from a headline, or assuming that a higher version number settles the question, could miss the qualification that applies to your equipment.",
-          {
-            "text": "There can also be an extra step between finding the right update and installing it. Meraki’s firmware-management documentation describes upgrade paths that require an intermediate release. Your provider needs to check that path and the release notes for compatibility with your network.",
-            "links": [
-              {
-                "phrase": "firmware-management documentation",
-                "to": "https://documentation.meraki.com/Platform_Management/Product_Information/Compatibility_and_Firmware/Firmware_Upgrades/Managing_Firmware_Upgrades"
-              }
-            ]
-          },
-          "For releases still planned for mid-October, late October or mid-November, Cisco’s date is a reason to check availability again. It isn’t your firm’s installation date. The provider still has to confirm that the update is available for your equipment and work out how to install it. If it recommends a temporary restriction while you wait, you’ll also need to understand what that changes for staff and what remains unresolved."
-        ]
-      },
-      {
-        "h": "What Meraki’s status labels tell you",
-        "ps": [
-          {
-            "text": "Meraki gives firmware, the software running on a device, a green “Good” status when no end-of-maintenance date has been set, or when that date is more than six months away. Those criteria concern maintenance timing; the installed version still needs to be checked against this advisory’s fixes.",
-            "links": [
-              {
-                "phrase": "“Good” status",
-                "to": "https://documentation.meraki.com/Platform_Management/Product_Information/Compatibility_and_Firmware/Firmware_Upgrades/Managing_Firmware_Upgrades"
-              }
-            ]
-          },
-          {
-            "text": "There’s a similar distinction after an upgrade. In Meraki’s documented MS switch workflow, “Completed” can appear after a 30-minute timeout. A switch locked to a firmware version by Meraki support can also be skipped while the group’s upgrade is considered complete.",
-            "links": [
-              {
-                "phrase": "documented MS switch workflow",
-                "to": "https://documentation.meraki.com/Platform_Management/Product_Information/Compatibility_and_Firmware/Firmware_Upgrades/Meraki_Switching_Firmware_Upgrades"
-              }
-            ]
-          },
-          "So a completed upgrade job still needs a check of the software actually running on the devices. If something was skipped, stayed on the old version or had to be rolled back, the firm needs to know that work remains. The timeout behavior above belongs to the documented MS workflow; your provider will need appropriate checks for the other device families, too.",
-          "This is also why it’s worth agreeing beforehand on what the provider will test once the equipment comes back online. A successful change should include checking the business functions you rely on, as well as confirming the installed version."
-        ]
-      },
-      {
-        "h": "Plan the interruption around the firm’s work",
-        "ps": [
-          {
-            "text": "Meraki’s upgrade guidance describes a connectivity interruption during reboot and an additional delay before Dashboard information refreshes. It also explains how upgrades are scheduled and administrators are notified, so your provider should check whether a change is already booked.",
-            "links": [
-              {
-                "phrase": "upgrade guidance",
-                "to": "https://documentation.meraki.com/Platform_Management/Product_Information/Compatibility_and_Firmware/Firmware_Upgrades/Meraki_Firmware_Release_Process"
-              }
-            ]
-          },
-          "A maintenance window that works for IT might overlap with a remote hearing or a tax filing. That’s information the firm needs to contribute. Agree on a time, who to contact if something fails and how the provider would recover from a problem.",
-          "With fixes arriving on different schedules, the first round of upgrades may leave some equipment waiting on Cisco. Agreeing on when your provider will check again keeps those devices in the plan after the available updates are installed."
-        ]
-      }
-    ]
-  }
+  "slug": "meraki-october-2026-security-update",
+  "collection": "blog",
+  "title": "Cisco’s October Meraki update: some fixes are still on the way",
+  "metaTitle": "Meraki October Update: Some Fixes Still Pending | Helm",
+  "metaDesc": "Cisco’s October Meraki fixes arrive on different schedules. Understand the device-specific caveats, status labels and interruptions to discuss with your IT provider.",
+  "date": "2026-10-09",
+  "updated": "2026-10-24",
+  "readMin": 4,
+  "lane": "Professional services",
+  "laneTo": "/professional-services/",
+  "intro": "Some Meraki equipment can receive Cisco’s October security fixes now. Cisco’s October 15 advisory revision still lists other releases for late October or mid-November. If an outside IT provider looks after your firm’s network, that’s worth a conversation: equipment in the same office may need different updates on different schedules.",
+  "lead": [
+    {
+      "text": "Cisco published the advisory on October 7, 2026, and revised it on October 8 and October 15. It covers Campus Gateways, MG cellular gateways, MR wireless access points, MS switches, MV cameras and MX security appliances. Cisco reports no known malicious exploitation and says there are no workarounds that address the vulnerabilities.",
+      "links": [
+        {
+          "phrase": "Cisco published the advisory",
+          "to": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-hardening-meraki-os-drbEX9GH",
+          "start": 0
+        }
+      ]
+    }
+  ],
+  "takeaway": "",
+  "readingLayout": true,
+  "hideVisual": true,
+  "ctaMode": "book",
+  "sections": [
+    {
+      "h": "The fix can depend on a footnote",
+      "ps": [
+        "In the advisory’s MX section, Cisco lists release 19.2.9. The footnote says it’s recommended only for Z3 devices. That same note directs administrators to contact Meraki support if either 18.107.14 or 19.2.9 is missing from Dashboard, the service used to manage the equipment.",
+        "Those details explain why the provider needs to check the model and the software branch each device is running. Choosing a release from a headline, or assuming that a higher version number settles the question, could miss the qualification that applies to your equipment.",
+        {
+          "text": "There can also be an extra step between finding the right update and installing it. Meraki’s firmware-management documentation describes upgrade paths that require an intermediate release. Your provider needs to check that path and the release notes for compatibility with your network.",
+          "links": [
+            {
+              "phrase": "firmware-management documentation",
+              "to": "https://documentation.meraki.com/Platform_Management/Product_Information/Compatibility_and_Firmware/Firmware_Upgrades/Managing_Firmware_Upgrades",
+              "start": 93
+            }
+          ]
+        },
+        "For releases still planned for late October or mid-November, Cisco’s date is a reason to check availability again. It isn’t your firm’s installation date. The provider still has to confirm that the update is available for your equipment and work out how to install it. If it recommends a temporary restriction while you wait, you’ll also need to understand what that changes for staff and what remains unresolved."
+      ]
+    },
+    {
+      "h": "What Meraki’s status labels tell you",
+      "ps": [
+        {
+          "text": "Meraki gives firmware, the software running on a device, a green “Good” status when no end-of-maintenance date has been set, or when that date is more than six months away. Those criteria concern maintenance timing; the installed version still needs to be checked against this advisory’s fixes.",
+          "links": [
+            {
+              "phrase": "“Good” status",
+              "to": "https://documentation.meraki.com/Platform_Management/Product_Information/Compatibility_and_Firmware/Firmware_Upgrades/Managing_Firmware_Upgrades",
+              "start": 65
+            }
+          ]
+        },
+        {
+          "text": "There’s a similar distinction after an upgrade. In Meraki’s documented MS switch workflow, “Completed” can appear after a 30-minute timeout. A switch locked to a firmware version by Meraki support can also be skipped while the group’s upgrade is considered complete.",
+          "links": [
+            {
+              "phrase": "documented MS switch workflow",
+              "to": "https://documentation.meraki.com/Platform_Management/Product_Information/Compatibility_and_Firmware/Firmware_Upgrades/Meraki_Switching_Firmware_Upgrades",
+              "start": 60
+            }
+          ]
+        },
+        "So a completed upgrade job still needs a check of the software actually running on the devices. If something was skipped, stayed on the old version or had to be rolled back, the firm needs to know that work remains. The timeout behavior above belongs to the documented MS workflow; your provider will need appropriate checks for the other device families, too.",
+        "This is also why it’s worth agreeing beforehand on what the provider will test once the equipment comes back online. A successful change should include checking the business functions you rely on, as well as confirming the installed version."
+      ]
+    },
+    {
+      "h": "Plan the interruption around the firm’s work",
+      "ps": [
+        {
+          "text": "Meraki’s upgrade guidance describes a connectivity interruption during reboot and an additional delay before Dashboard information refreshes. It also explains how upgrades are scheduled and administrators are notified, so your provider should check whether a change is already booked.",
+          "links": [
+            {
+              "phrase": "upgrade guidance",
+              "to": "https://documentation.meraki.com/Platform_Management/Product_Information/Compatibility_and_Firmware/Firmware_Upgrades/Meraki_Firmware_Release_Process",
+              "start": 9
+            }
+          ]
+        },
+        "A maintenance window that works for IT might overlap with a remote hearing or a tax filing. That’s information the firm needs to contribute. Agree on a time, who to contact if something fails and how the provider would recover from a problem.",
+        "With fixes arriving on different schedules, the first round of upgrades may leave some equipment waiting on Cisco. Agreeing on when your provider will check again keeps those devices in the plan after the available updates are installed."
+      ]
+    }
+  ]
+}
 ,
 {
   "slug": "ivanti-connect-secure-october-2026-exploitation",
@@ -211,20 +216,22 @@ export const newsArticles: Article[] = [
   "lane": "Professional services",
   "laneTo": "/professional-services/",
   "intro": {
-    "text": "Microsoft reports an exploited Windows Shell flaw in its October 13 security release. The vulnerability, CVE-2026-96951, bypasses a Windows security feature and requires a person to interact with a crafted file or link. Microsoft marks the issue as exploitation detected and lists customer action and a restart as required for the affected Windows updates. Microsoft’s advisory and October release data provide the product-specific details.",
+    "text": "Microsoft reported an exploited Windows Shell flaw in its October 13, 2026 security release. The vulnerability, CVE-2026-96951, bypasses a Windows security feature and requires a person to interact with a crafted file or link. Microsoft marks the issue as exploitation detected and lists customer action and a restart as required for the affected Windows updates. Microsoft’s advisory and October release data provide the product-specific details.",
     "links": [
       {
         "phrase": "Microsoft’s advisory",
-        "to": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951"
+        "to": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951",
+        "start": 364
       },
       {
         "phrase": "October release data",
-        "to": "https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Oct"
+        "to": "https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Oct",
+        "start": 389
       }
     ]
   },
   "lead": [
-    "If you run a professional-services firm and retain an IT provider, ask them to check which Windows devices are affected and confirm when the relevant update and restart are complete. Agree on how they will report devices that remain outstanding. That gives you a useful decision to make if a laptop is unavailable or a server needs a maintenance window."
+    "For a professional-services firm with retained IT, the next step is to confirm completed updates and restarts, with outstanding devices reported separately."
   ],
   "takeaway": "",
   "readingLayout": true,
@@ -241,29 +248,33 @@ export const newsArticles: Article[] = [
       "h": "What the Windows Shell warning means",
       "ps": [
         {
-          "text": "Microsoft identifies this as a Mark of the Web bypass. The attack gets around a protection associated with files from the internet; the documented route depends on user interaction. The advisory is the reference for that mechanism.",
+          "text": "Microsoft identifies this as a Mark of the Web bypass. The attack gets around a protection associated with files from the internet; the documented route depends on user interaction. The advisory explains that mechanism.",
           "links": [
             {
               "phrase": "protection associated with files from the internet",
-              "to": "https://support.microsoft.com/en-us/windows/security/information-about-the-attachment-manager-in-microsoft-windows"
+              "to": "https://support.microsoft.com/en-us/windows/security/information-about-the-attachment-manager-in-microsoft-windows",
+              "start": 80
             },
             {
               "phrase": "The advisory",
-              "to": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951"
+              "to": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951",
+              "start": 182
             }
           ]
         },
         "For a firm whose work involves receiving documents and links, that requirement makes staff behavior relevant while updates are being completed. Keep your existing process for checking unexpected files and reporting suspicious messages in use. A staff reminder can support the response, but the corrective action in Microsoft’s release is the applicable security update.",
         {
-          "text": "Microsoft’s exploitation flag is a reason to prioritize that work. It does not establish that your firm has been attacked. The public disclosure date is October 13, 2026; the Microsoft-authored CVE record does not give an exploitation start date. Our guide to zero-day and known vulnerabilities explains the broader distinction between a public warning and exposure in a particular business.",
+          "text": "Microsoft’s exploitation flag is a reason to prioritize that work. It does not establish that your firm has been attacked. Microsoft published the advisory on October 13, 2026; the Microsoft-authored CVE record does not give an exploitation start date. Our guide to zero-day and known vulnerabilities explains the broader distinction between a public warning and exposure in a particular business.",
           "links": [
             {
               "phrase": "Microsoft-authored CVE record",
-              "to": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/96xxx/CVE-2026-96951.json"
+              "to": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/96xxx/CVE-2026-96951.json",
+              "start": 181
             },
             {
               "phrase": "guide to zero-day and known vulnerabilities",
-              "to": "/resources/zero-day-vs-known-vulnerabilities/"
+              "to": "/resources/zero-day-vs-known-vulnerabilities/",
+              "start": 257
             }
           ]
         }
@@ -273,41 +284,49 @@ export const newsArticles: Article[] = [
       "h": "Your Windows version determines the fix",
       "ps": [
         {
-          "text": "The affected-product information covers multiple Windows 10, Windows 11 and Windows Server branches. Their fixes vary. Your IT team needs to match the version and edition actually installed on each device to Microsoft’s current product and update information, including the device’s supported servicing path. Use the affected-product record and Microsoft’s update guidance.",
+          "text": "The affected-product information covers multiple Windows 10, Windows 11 and Windows Server branches. Their fixes vary. Your IT team needs to match the version and edition installed on each device to Microsoft’s current product and update information, including the device’s supported servicing path. Use the affected-product record and Microsoft’s update guidance.",
           "links": [
             {
               "phrase": "affected-product record",
-              "to": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/96xxx/CVE-2026-96951.json"
+              "to": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/96xxx/CVE-2026-96951.json",
+              "start": 308
             },
             {
               "phrase": "Microsoft’s update guidance",
-              "to": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951"
+              "to": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951",
+              "start": 336
             }
           ]
         },
         {
-          "text": "Discuss the required restart explicitly. Microsoft’s release data marks a restart as required. Ask IT how it will verify the resulting update status after restart and what it will do about devices that cannot complete the process. An update deployment report can leave an owner with an incomplete picture if it includes machines still waiting for that step.",
+          "text": "Microsoft’s release data marks a restart as required. Ask IT how it will verify update status after restart and handle devices that cannot complete the process.",
           "links": [
             {
               "phrase": "Microsoft’s release data",
-              "to": "https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Oct"
+              "to": "https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Oct",
+              "start": 0
             }
           ]
         },
-        "For example, if a partner’s laptop is offline during the rollout, the useful next decision is when it will reconnect and finish updating. If a server restart would interrupt scheduled work, agree on the maintenance window with IT and keep the device on the outstanding list until completion is verified. "
+        "For example, if a partner’s laptop is offline during the rollout, agree on when it will reconnect and finish updating. If a server restart would interrupt scheduled work, agree on the maintenance window with IT and keep the device on the outstanding list until completion is verified."
       ]
     },
     {
       "h": "What to ask your IT provider",
       "ps": [
-        "A short request can keep the response specific:",
-        "“Please check our Windows devices against CVE-2026-96951. Confirm the affected versions, the applicable updates and which devices have completed the required restart. For anything outstanding, tell us the reason, who owns the next step and when we should expect another update.”",
+        "You can send your provider this request:",
+        {
+          "quote": [
+            "“Please check our Windows devices against CVE-2026-96951. Confirm the affected versions, the applicable updates and which devices have completed the required restart. For anything outstanding, tell us the reason, who owns the next step and when we should expect another update.”"
+          ]
+        },
         {
           "text": "Ask for the number of devices checked alongside the result. If some devices have not reported recently, keep that uncertainty visible rather than counting them as updated. You can then decide whether staff need to make a laptop available or approve downtime. The wider process for documenting remediation is covered in our vulnerability-management guide.",
           "links": [
             {
               "phrase": "vulnerability-management guide",
-              "to": "/resources/vulnerability-management-new-jersey/"
+              "to": "/resources/vulnerability-management-new-jersey/",
+              "start": 323
             }
           ]
         },
@@ -316,12 +335,14 @@ export const newsArticles: Article[] = [
           "links": [
             {
               "phrase": "talk with Helm about security-program coordination",
-              "to": "/contact/"
+              "to": "/contact/",
+              "start": 228
             }
           ]
         }
       ]
     }
-  ]
+  ],
+  "updated": "2026-10-24"
 }
 ];

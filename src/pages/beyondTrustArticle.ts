@@ -8,7 +8,7 @@ export const beyondTrustArticle: Article = {
   "metaTitle": "BeyondTrust Remote Support: October 2026 patch | Helm",
   "metaDesc": "Check whether your IT provider uses BeyondTrust Remote Support, confirm the BT26-05 patch and assign review of possible access before the October disclosure.",
   "date": "2026-10-16",
-  "readMin": 4,
+  "readMin": 5,
   "lane": "Professional services",
   "laneTo": "/professional-services/",
   "intro": {
@@ -16,7 +16,8 @@ export const beyondTrustArticle: Article = {
     "links": [
       {
         "phrase": "BeyondTrust's October 15 advisory",
-        "to": "https://www.beyondtrust.com/trust-center/security-advisories/bt26-05"
+        "to": "https://www.beyondtrust.com/trust-center/security-advisories/bt26-05",
+        "start": 0
       }
     ]
   },
@@ -26,7 +27,8 @@ export const beyondTrustArticle: Article = {
       "links": [
         {
           "phrase": "connect to and troubleshoot computers",
-          "to": "https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust/"
+          "to": "https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust",
+          "start": 32
         }
       ]
     },
@@ -35,16 +37,18 @@ export const beyondTrustArticle: Article = {
       "links": [
         {
           "phrase": "BeyondTrust's CVE record",
-          "to": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/102xxx/CVE-2026-102764.json"
+          "to": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/102xxx/CVE-2026-102764.json",
+          "start": 0
         }
       ]
     },
     {
-      "text": "CISA added CVE-2026-102764 to its Known Exploited Vulnerabilities catalog on October 16. The entry calls for mitigation under the vendor's instructions and forensic triage, a review for signs of compromise. Confirm who will handle the fix and who will assess possible earlier access.",
+      "text": "CISA added CVE-2026-102764 to its Known Exploited Vulnerabilities catalog on October 16. The entry calls for mitigation under the vendor's instructions and forensic triage, a review for signs of compromise.",
       "links": [
         {
           "phrase": "Known Exploited Vulnerabilities catalog",
-          "to": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"
+          "to": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+          "start": 34
         }
       ]
     }
@@ -65,11 +69,12 @@ export const beyondTrustArticle: Article = {
       "ps": [
         "Have your IT provider check the tools its technicians use, including any separate support supplier with access to your systems. For BeyondTrust, establish whether BeyondTrust hosts the service or your firm or a supplier runs it. That determines who can confirm its patch status. Ask how the installation can reach your computers and what access it holds; a supplier's use of BeyondTrust alone does not establish that someone accessed your firm.",
         {
-          "text": "If another supplier operates the system, your IT provider may have to request the patch record from it. Agree who will follow up and when you will hear back. Our comparison of provider models can help resolve responsibilities when different firms handle IT and security.",
+          "text": "If another supplier operates the system, your IT provider may have to request the patch record from it. Our comparison of provider models can help resolve responsibilities when different firms handle IT and security.",
           "links": [
             {
               "phrase": "comparison of provider models",
-              "to": "/resources/managed-service-provider-security-models/"
+              "to": "/resources/managed-service-provider-security-models/",
+              "start": 108
             }
           ]
         }
@@ -83,17 +88,28 @@ export const beyondTrustArticle: Article = {
           "links": [
             {
               "phrase": "BT26-05 advisory",
-              "to": "https://www.beyondtrust.com/trust-center/security-advisories/bt26-05"
+              "to": "https://www.beyondtrust.com/trust-center/security-advisories/bt26-05",
+              "start": 14
             }
           ]
         },
-        "Ask the operator for the installed version and dated confirmation that BT26-05-RS was applied. An installation on 24.3.1 can accept the patch; the version alone cannot confirm its presence. Check completion even if automatic updates are enabled. If work remains, ask what interim precautions IT recommends and whether they would interrupt support.",
+        {
+          "text": "Ask the operator for the installed version and dated confirmation that BT26-05-RS was applied. An installation on 24.3.1 can accept the patch; the version alone cannot confirm its presence. Check completion even if automatic updates are enabled. If work remains, ask what interim precautions IT recommends and whether they would interrupt support. Record the applied fix and who checked it, as described in our vulnerability-management guide.",
+          "links": [
+            {
+              "phrase": "vulnerability-management guide",
+              "to": "/resources/vulnerability-management-new-jersey/",
+              "start": 411
+            }
+          ]
+        },
         {
           "text": "BeyondTrust says all BeyondTrust-hosted Remote Support customers had received the patch by October 9. Ask your provider to confirm that this statement covers the service it uses for your firm.",
           "links": [
             {
               "phrase": "received the patch by October 9",
-              "to": "https://www.beyondtrust.com/trust-center/security-advisories/bt26-05"
+              "to": "https://www.beyondtrust.com/trust-center/security-advisories/bt26-05",
+              "start": 69
             }
           ]
         },
@@ -102,16 +118,8 @@ export const beyondTrustArticle: Article = {
           "links": [
             {
               "phrase": "precautionary patch for self-hosted Privileged Remote Access",
-              "to": "https://www.beyondtrust.com/blog/entry/bt26-05"
-            }
-          ]
-        },
-        {
-          "text": "Use the verification approach described in our vulnerability-management guide: record the applied fix and the person who checked it.",
-          "links": [
-            {
-              "phrase": "vulnerability-management guide",
-              "to": "/resources/vulnerability-management-new-jersey/"
+              "to": "https://www.beyondtrust.com/blog/entry/bt26-05",
+              "start": 41
             }
           ]
         }
@@ -125,7 +133,8 @@ export const beyondTrustArticle: Article = {
           "links": [
             {
               "phrase": "BeyondTrust's timeline",
-              "to": "https://www.beyondtrust.com/blog/entry/bt26-05"
+              "to": "https://www.beyondtrust.com/blog/entry/bt26-05",
+              "start": 0
             }
           ]
         },
@@ -134,7 +143,8 @@ export const beyondTrustArticle: Article = {
           "links": [
             {
               "phrase": "Mandiant's investigation",
-              "to": "https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust/"
+              "to": "https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust",
+              "start": 3
             }
           ]
         },
@@ -143,7 +153,8 @@ export const beyondTrustArticle: Article = {
           "links": [
             {
               "phrase": "credential and configuration review",
-              "to": "https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust/"
+              "to": "https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust",
+              "start": 28
             }
           ]
         },
@@ -152,7 +163,8 @@ export const beyondTrustArticle: Article = {
           "links": [
             {
               "phrase": "evidence of exploitation",
-              "to": "https://www.beyondtrust.com/blog/entry/bt26-05"
+              "to": "https://www.beyondtrust.com/blog/entry/bt26-05",
+              "start": 32
             }
           ]
         },
@@ -161,23 +173,36 @@ export const beyondTrustArticle: Article = {
           "links": [
             {
               "phrase": "preserving evidence before changes or reboots",
-              "to": "https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust/"
+              "to": "https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust",
+              "start": 50
             }
           ]
         },
         "Ask which records are available, including copies held outside the appliance. Missing records limit what the responder can conclude. If they do not cover August and September, have the responder explain the gap and what can still be assessed.",
         {
-          "text": "Keep the review assigned after patching is confirmed, with a date for the next report. The person at your firm who can approve an interruption or additional response work should receive that report. Our incident-response planning guide explains how to agree authority when several providers need to act.",
+          "text": "Agree who owns the patch confirmation and exposure review, and when you will hear back. Keep the review assigned even after patching is confirmed. The report should go to the person at your firm who can approve an interruption or additional response work. Our incident-response planning guide explains how to agree authority when several providers need to act.",
           "links": [
             {
               "phrase": "incident-response planning guide",
-              "to": "/resources/incident-response-plan-small-business/"
+              "to": "/resources/incident-response-plan-small-business/",
+              "start": 260
+            }
+          ]
+        },
+        {
+          "text": "Related reading: Cybersecurity for professional services firms.",
+          "links": [
+            {
+              "phrase": "Cybersecurity for professional services firms",
+              "to": "/professional-services/",
+              "start": 17
             }
           ]
         }
       ]
     }
-  ]
+  ],
+  "updated": "2026-10-24"
 };
 
 export const beyondTrustArticleSupport: ArticleSupport = {
@@ -197,7 +222,7 @@ export const beyondTrustArticleSupport: ArticleSupport = {
     },
     {
       "title": "Mandiant: ARMORY CASTLE Exploits BeyondTrust",
-      "href": "https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust/"
+      "href": "https://cloud.google.com/blog/topics/threat-intelligence/armory-castle-exploits-beyondtrust"
     },
     {
       "title": "BeyondTrust-authored CVE-2026-102764 record",

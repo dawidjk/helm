@@ -5,18 +5,18 @@ export const aiRetestArticle: Article = {
   "metaTitle": "Retesting an AI Workflow After Changes | Helm",
   "metaDesc": "Check whether an internal AI workflow still works after prompts, source documents or settings change. Keep repeatable tests, review failures and plan a fallback.",
   "date": "2026-10-14",
-  "readMin": 8,
+  "readMin": 9,
   "lane": "Professional services",
   "laneTo": "/professional-services/",
-  "intro": "Suppose your operations manager uses an approved AI tool to turn an internal procedure into a short staff checklist. The firm tested it, assigned a reviewer and decided the result was useful. A month later, someone shortens the instructions to make the output easier to read. The next checklist looks cleaner, but it leaves out an exception for temporary staff.",
+  "intro": "An operations manager at a hypothetical firm uses an approved AI tool to turn an internal procedure into a short staff checklist. The firm tested it, assigned a reviewer and decided the result was useful. A month later, someone shortens the instructions to make the output easier to read. The next checklist looks cleaner, but it leaves out an exception for temporary staff.",
   "lead": [
-    "The original approval cannot answer whether that revised workflow still works. Before staff rely on the change, the owner needs to check the behavior that mattered in the first place. That means keeping a few reusable examples, knowing what each should contain and recording what the changed version actually does.",
+    "The original approval cannot answer whether that revised workflow still works. Before staff rely on the change, retest the requirements that justified the original approval. That means keeping a few reusable examples, knowing what each should contain and recording what the changed version actually does.",
     "For a small professional-services firm, this can begin with a modest comparison of approved internal material. It should remain a reviewable drafting task. A successful comparison does not authorize new data access, automatic sending or professional decisions."
   ],
   "readingLayout": true,
   "organizationByline": true,
   "hideVisual": true,
-  "takeaway": "Retest the requirements that justified the original approval. Preserve failed attempts, judge errors by their consequences and tell staff which version or manual process they may use.",
+  "takeaway": "",
   "consultation": {
     "title": "Discuss an AI workflow",
     "sub": "Describe the task and the change you want to evaluate. Keep client records and sensitive information out of the inquiry. Pricing is quoted after scoping.",
@@ -34,7 +34,8 @@ export const aiRetestArticle: Article = {
           "links": [
             {
               "phrase": "NIST's AI RMF Playbook",
-              "to": "https://airc.nist.gov/airmf-resources/playbook/manage/"
+              "to": "https://airc.nist.gov/airmf-resources/playbook/manage/",
+              "start": 0
             }
           ]
         },
@@ -43,7 +44,8 @@ export const aiRetestArticle: Article = {
           "links": [
             {
               "phrase": "document-access guide",
-              "to": "/resources/ai-access-business-documents/"
+              "to": "/resources/ai-access-business-documents/",
+              "start": 314
             }
           ]
         }
@@ -52,7 +54,7 @@ export const aiRetestArticle: Article = {
     {
       "h": "Keep examples that would reveal a meaningful failure",
       "ps": [
-        "Return to the workflow's accepted purpose. For the hypothetical checklist, the manager might require the output to preserve mandatory steps, name the right approver and include relevant exceptions. Attractive formatting is helpful, but it cannot compensate for a missing instruction.",
+        "Return to the workflow's accepted purpose. For the checklist, the manager might require the output to preserve mandatory steps, identify the right approver and include relevant exceptions. Attractive formatting is helpful, but it cannot compensate for a missing instruction.",
         "Choose examples because they test those requirements. A routine staff case tells you whether the ordinary path still works. A temporary-worker case tests the exception. Another example can deliberately omit information the procedure needs, so you can see whether the draft identifies the gap or fills it with an unsupported instruction.",
         "Use public, synthetic or explicitly approved low-sensitivity material. A useful test does not need a real employee's record or a client's file. Make the expected result specific enough that a second reviewer could understand why an output passed or failed. “Looks sensible” leaves too much to memory.",
         {
@@ -60,7 +62,8 @@ export const aiRetestArticle: Article = {
           "links": [
             {
               "phrase": "Anthropic's engineering guidance on evaluations",
-              "to": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+              "to": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+              "start": 0
             }
           ]
         },
@@ -79,7 +82,8 @@ export const aiRetestArticle: Article = {
           "links": [
             {
               "phrase": "measurement guidance",
-              "to": "https://airc.nist.gov/airmf-resources/playbook/measure/"
+              "to": "https://airc.nist.gov/airmf-resources/playbook/measure/",
+              "start": 208
             }
           ]
         }
@@ -88,8 +92,8 @@ export const aiRetestArticle: Article = {
     {
       "h": "Let the consequence of an error drive the decision",
       "ps": [
-        "In the hypothetical firm, a changed heading might need a small edit. A missing approval step would make the checklist unsuitable for staff use. Both are errors, but treating them as equal in an overall percentage would obscure the decision.",
-        "Suppose the revised instructions produce nine acceptable drafts and one draft that tells temporary staff to skip an approval. These numbers are illustrative, not a measured Helm result. Reporting a 90 percent pass rate would leave the owner without the most important fact: one tested case gave staff the wrong instruction at a point where approval mattered.",
+        "In this firm, a changed heading might need a small edit. A missing approval step would make the checklist unsuitable for staff use. Both are errors, but treating them as equal in an overall percentage would obscure the decision.",
+        "Suppose the revised instructions produce nine acceptable drafts and one draft that tells temporary staff to skip an approval. Reporting a 90 percent pass rate would leave the owner without the most important fact: one tested case gave staff the wrong instruction at a point where approval mattered.",
         "Agree on the response to that failure before a deadline creates pressure to accept it. The manager could hold the revised instructions, keep the established manual checklist available and investigate why the exception disappeared. If the earlier workflow remains available and its sources are still current, the owner can decide whether its existing approval still applies. Restoring old instructions should not restore an obsolete procedure.",
         "The response also depends on whether the output has already been used. A failure confined to a test can be corrected within the test. If staff received a faulty checklist, identify the affected copies and have the responsible owner decide what needs correction. Possible disclosure or unauthorized actions belong in the firm's existing incident process.",
         {
@@ -97,7 +101,8 @@ export const aiRetestArticle: Article = {
           "links": [
             {
               "phrase": "Generative AI Profile",
-              "to": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf"
+              "to": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+              "start": 7
             }
           ]
         }
@@ -128,24 +133,27 @@ export const aiRetestArticle: Article = {
         "Explain where the approved instructions live and remove ambiguity about superseded versions. Show staff the failure they should report and the procedure to use while the workflow is paused. Assign a backup reviewer if the normal owner is away; otherwise, an apparently simple approval can leave work waiting for one person.",
         "Choose the next review point from the workflow's consequences and rate of change. Relevant triggers include a source-procedure revision, changed instructions, a different platform configuration or a newly observed failure. Periodic checks can also uncover changes that nobody announced. Record the limits of what the product lets the firm observe.",
         {
-          "text": "Include this upkeep when deciding whether the workflow remains worthwhile. Review time and corrections are recurring work, as the AI time-savings guide explains. If maintaining acceptable results consumes the expected benefit, retaining the manual process is a reasonable outcome.",
-          "links": [
-            {
-              "phrase": "AI time-savings guide",
-              "to": "/resources/measure-ai-time-savings/"
-            }
-          ]
-        },
-        {
           "text": "Helm's Secure AI Adoption assessment starts with one recurring internal workflow, its effort and cost, and the proposed tools and data. It leads to a recommendation about whether a pilot is appropriate. Any pilot is separately scoped and quoted; production integrations, wider rollout and ongoing support require separate scoping. For a discussion, describe the task and the change you want to evaluate, keeping client records and sensitive information out of the inquiry.",
           "links": [
             {
               "phrase": "Secure AI Adoption assessment",
-              "to": "/secure-ai-adoption/"
+              "to": "/secure-ai-adoption/",
+              "start": 7
+            }
+          ]
+        },
+        {
+          "text": "Include this upkeep when deciding whether the workflow remains worthwhile. Review time and corrections are recurring work, as the AI time-savings guide explains. If maintaining acceptable results consumes the expected benefit, retaining the manual process is a reasonable outcome.",
+          "links": [
+            {
+              "phrase": "AI time-savings guide",
+              "to": "/resources/measure-ai-time-savings/",
+              "start": 130
             }
           ]
         }
       ]
     }
-  ]
+  ],
+  "updated": "2026-10-24"
 };

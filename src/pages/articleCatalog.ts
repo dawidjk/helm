@@ -19,7 +19,7 @@ export const articleCatalog = [
     "slug": "beyondtrust-remote-support-october-2026",
     "title": "BeyondTrust Remote Support: what to ask your IT provider",
     "lane": "Professional services",
-    "readMin": 4,
+    "readMin": 5,
     "collection": "blog",
     "date": "2026-10-16",
     "metaDesc": "Check whether your IT provider uses BeyondTrust Remote Support, confirm the BT26-05 patch and assign review of possible access before the October disclosure."
@@ -34,7 +34,7 @@ export const articleCatalog = [
     "slug": "retest-ai-workflow-changes",
     "title": "When an AI workflow changes, what needs retesting?",
     "lane": "Professional services",
-    "readMin": 8
+    "readMin": 9
   },
   {
     "slug": "fix-dmarc-monitoring-policy",
@@ -115,7 +115,7 @@ export const articleCatalog = [
     "slug": "meraki-october-2026-security-update",
     "title": "Cisco’s October Meraki update: some fixes are still on the way",
     "lane": "Professional services",
-    "readMin": 3,
+    "readMin": 4,
     "collection": "blog",
     "date": "2026-10-09",
     "metaDesc": "Cisco’s October Meraki fixes arrive on different schedules. Understand the device-specific caveats, status labels and interruptions to discuss with your IT provider."
@@ -142,13 +142,13 @@ export const articleCatalog = [
     "slug": "accounting-firms-core-vs-command",
     "title": "Choosing between a standardized stack and full program ownership: Helm Core vs Helm Command for accounting firms",
     "lane": "Accounting firms",
-    "readMin": 8
+    "readMin": 9
   },
   {
     "slug": "ai-access-business-documents",
     "title": "What to check before giving AI access to business documents",
     "lane": "All industries",
-    "readMin": 8
+    "readMin": 7
   },
   {
     "slug": "ai-phishing-red-flags",
@@ -160,7 +160,7 @@ export const articleCatalog = [
     "slug": "backup-testing-insurers",
     "title": "Backup Testing: Evidence to Prepare for Cyber Insurance Questions",
     "lane": "Professional Services",
-    "readMin": 8
+    "readMin": 9
   },
   {
     "slug": "check-website-security",
@@ -202,19 +202,19 @@ export const articleCatalog = [
     "slug": "cyber-insurance-claim-denied",
     "title": "Cyber Insurance Claim Disputes: Coverage, Evidence and the Questions to Resolve",
     "lane": "Professional Services",
-    "readMin": 8
+    "readMin": 9
   },
   {
     "slug": "cyber-insurance-questionnaire",
     "title": "How to Answer a Cyber Insurance Questionnaire with Evidence",
     "lane": "Professional Services",
-    "readMin": 8
+    "readMin": 9
   },
   {
     "slug": "cybersecurity-point-solutions-vs-managed-security",
     "title": "Cybersecurity Point Solutions vs Managed Security for NJ SMBs",
     "lane": "Professional services",
-    "readMin": 8
+    "readMin": 9
   },
   {
     "slug": "cybersecurity-risk-assessment-tools",
@@ -262,13 +262,13 @@ export const articleCatalog = [
     "slug": "google-workspace-retention-vs-backup",
     "title": "Google Workspace Native Retention vs Managed Backup Services: Choosing the Right Fit for Your Business",
     "lane": "Professional services",
-    "readMin": 8
+    "readMin": 9
   },
   {
     "slug": "google-workspace-security-managed-vs-diy",
     "title": "Managed Google Workspace Security vs DIY: Which Is Right for Your SMB",
     "lane": "Professional services",
-    "readMin": 9
+    "readMin": 8
   },
   {
     "slug": "hipaa-email-rules-small-practices",
@@ -298,7 +298,7 @@ export const articleCatalog = [
     "slug": "intentional-insider-threats",
     "title": "What Business Owners Need to Know About Intentional Insider Threats",
     "lane": "Professional services",
-    "readMin": 8
+    "readMin": 7
   },
   {
     "slug": "invoice-fraud-red-flags",
@@ -358,7 +358,7 @@ export const articleCatalog = [
     "slug": "mfa-methods-compared",
     "title": "MFA Methods Compared: SMS, TOTP, Push and Passkeys",
     "lane": "All industries",
-    "readMin": 8
+    "readMin": 9
   },
   {
     "slug": "microsoft-365-retention-vs-backup",
@@ -382,7 +382,7 @@ export const articleCatalog = [
     "slug": "security-questionnaire-response-services",
     "title": "Security questionnaire response services versus DIY: what SMBs should consider",
     "lane": "Professional services",
-    "readMin": 8
+    "readMin": 7
   },
   {
     "slug": "shadow-ai-at-work",
@@ -436,7 +436,7 @@ export const articleCatalog = [
     "slug": "what-is-dmarc",
     "title": "What Is DMARC? A Plain-English Guide for Business Owners",
     "lane": "All industries",
-    "readMin": 8
+    "readMin": 9
   },
   {
     "slug": "windows-defender-vs-managed-security",
@@ -448,7 +448,7 @@ export const articleCatalog = [
     "slug": "wire-fraud-prevention-law-firms",
     "title": "Wire Fraud Prevention for Law Firms: The Callback Protocol",
     "lane": "Law Firms",
-    "readMin": 9
+    "readMin": 7
   },
   {
     "slug": "wisp-checklist-accounting-firms",
@@ -466,13 +466,13 @@ export const articleCatalog = [
     "slug": "pen-test-vs-vulnerability-scan",
     "title": "Penetration Testing vs Vulnerability Scanning: What Your Business Should Buy",
     "lane": "Small business",
-    "readMin": 9
+    "readMin": 10
   },
   {
     "slug": "dns-filtering-small-business",
     "title": "DNS Filtering for Small Business: Coverage, Limits and a Rollout Checklist",
     "lane": "Small business",
-    "readMin": 9
+    "readMin": 10
   },
   {
     "slug": "network-hardening-small-business",
@@ -484,7 +484,7 @@ export const articleCatalog = [
     "slug": "disaster-recovery-small-business",
     "title": "Disaster Recovery for Small Business: A Plan You Can Test",
     "lane": "Small business",
-    "readMin": 10
+    "readMin": 11
   },
   {
     "slug": "cyber-insurance-cybersecurity-vendors",
@@ -496,12 +496,12 @@ export const articleCatalog = [
     "slug": "managed-service-provider-security-models",
     "title": "Comparing Managed Service Provider Models: Standard Security Stack versus Full Program Ownership",
     "lane": "All industries",
-    "readMin": 8
+    "readMin": 9
   },
   {
     "slug": "managed-service-providers-new-jersey",
     "title": "Seven signs your company needs a managed service provider, and what to do next",
     "lane": "All industries",
-    "readMin": 9
+    "readMin": 11
   }
 ];

@@ -8,24 +8,27 @@ export const findingGuides: Article[] = [
   "readMin": 16,
   "lane": "All industries",
   "laneTo": "/",
-  "intro": "A DMARC record with p=none lets you collect authentication reports without requesting quarantine or rejection for DMARC failures. Before changing it, check which services send your business mail and whether their messages pass DMARC at outside receivers. Then choose a policy for the domain's actual use, publish the change in authoritative DNS and test delivery while you can still restore the saved record.",
-  "lead": [],
+  "intro": "Before you change a monitoring-only DMARC policy, test the mail your business depends on. A low failure percentage can hide an entire low-volume invoicing route. Tightening the policy while that route still fails DMARC can disrupt legitimate messages.",
+  "lead": [
+    "A record with p=none lets you collect authentication reports without requesting quarantine or rejection for DMARC failures. Check which services send your mail and whether their messages pass DMARC at outside receivers. Then choose a policy for the domain's use, publish the change in authoritative DNS and test delivery while you can still restore the saved record."
+  ],
   "sections": [
     {
       "h": "What a stricter policy changes",
       "ps": [
+        "A stricter policy can affect a legitimate sender as readily as an unauthorized one when both fail DMARC. An invoice tool signing only with its vendor domain, for example, can pass DKIM and still fail alignment with your business From address. Fix that sender setup before changing policy.",
         "DMARC (Domain-based Message Authentication, Reporting, and Conformance) checks the domain in the From address a recipient sees. It passes when SPF or DKIM passes and the authenticated domain aligns with that From domain. SPF checks the sending server against the SMTP envelope sender's domain; that address is used for delivery-error notices and can differ from the visible From address. DKIM verifies a digital signature using the signing domain in the message's d= field.",
         "For ordinary business domains, example.com and mail.example.com share the organizational domain example.com. With the usual relaxed alignment, domains under the same organizational domain can align. Strict alignment requires an exact domain match. These settings determine whether a passing authentication result counts toward DMARC.",
         {
-          "text": "The p field requests how receivers treat messages that fail DMARC. none requests no change to handling because of DMARC; quarantine asks receivers to treat failing messages as suspicious; reject asks them to refuse them. Receivers still apply their own filtering decisions. A DMARC pass does not guarantee inbox placement, and p=none does not prevent other spam checks from rejecting a message. The DMARC explanation develops the authentication and alignment mechanism.",
+          "text": "The p field requests how receivers treat messages that fail DMARC. none requests no change to handling because of DMARC; quarantine asks receivers to treat failing messages as suspicious; reject asks them to refuse them. Receivers still apply their own filtering decisions. A DMARC pass does not guarantee inbox placement, and p=none does not prevent other spam checks from rejecting a message. The DMARC explanation explains authentication and alignment in more detail.",
           "links": [
             {
               "phrase": "DMARC explanation",
-              "to": "/resources/what-is-dmarc/"
+              "to": "/resources/what-is-dmarc/",
+              "start": 399
             }
           ]
-        },
-        "A stricter policy can affect a legitimate sender as readily as an unauthorized one when both fail DMARC. An invoice tool signing only with its vendor domain, for example, can pass DKIM and still fail alignment with your business From address. That is a sender setup problem to fix before changing policy."
+        }
       ]
     },
     {
@@ -37,7 +40,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "current DMARC standard's interoperability guidance",
-              "to": "https://datatracker.ietf.org/doc/html/rfc9989#section-7.4"
+              "to": "https://datatracker.ietf.org/doc/html/rfc9989#section-7.4",
+              "start": 72
             }
           ]
         },
@@ -46,12 +50,17 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Microsoft's deployment guide",
-              "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure"
+              "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure",
+              "start": 0
             }
           ]
         },
+        {
+          "h3": "Percentage and testing flags vary by receiver"
+        },
         "Older provider examples may suggest pct=10, pct=25 and other percentages. RFC 9989 removed pct after inconsistent implementation. A low percentage is therefore an unreliable way to limit the impact of enforcement across receivers. Stage the work by a tested domain or subdomain, with reporting and recovery ready.",
-        "The newer t=y flag asks supporting receivers to apply a policy one level below the published one: none for quarantine, or quarantine for reject. The rua field still controls report requests. Receivers using the older standard may ignore that flag and apply the stricter p value. Do not publish a policy you are unprepared to apply on the assumption that t=y will soften it everywhere."
+        "The newer t=y flag asks supporting receivers to apply a policy one level below the published one: none for quarantine, or quarantine for reject. The rua field still controls report requests.",
+        "Receivers using the older standard may ignore t=y and apply the stricter p value. Only publish a policy you are prepared to apply; t=y cannot be relied on to soften it everywhere."
       ]
     },
     {
@@ -64,11 +73,13 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google Admin Toolbox Dig",
-              "to": "https://toolbox.googleapps.com/apps/dig/"
+              "to": "https://toolbox.googleapps.com/apps/dig/",
+              "start": 105
             },
             {
               "phrase": "Cloudflare's nameserver documentation",
-              "to": "https://developers.cloudflare.com/dns/nameservers/"
+              "to": "https://developers.cloudflare.com/dns/nameservers/",
+              "start": 355
             }
           ]
         },
@@ -78,7 +89,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "DMARC reporting guide",
-              "to": "/resources/fix-dmarc-reporting/"
+              "to": "/resources/fix-dmarc-reporting/",
+              "start": 345
             }
           ]
         },
@@ -94,7 +106,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "reporting setup guide",
-              "to": "/resources/fix-dmarc-reporting/"
+              "to": "/resources/fix-dmarc-reporting/",
+              "start": 386
             }
           ]
         },
@@ -114,7 +127,8 @@ export const findingGuides: Article[] = [
               "links": [
                 {
                   "phrase": "Microsoft's header instructions",
-                  "to": "https://support.microsoft.com/en-us/outlook/view-internet-message-headers-in-outlook"
+                  "to": "https://support.microsoft.com/en-us/outlook/view-internet-message-headers-in-outlook",
+                  "start": 179
                 }
               ]
             },
@@ -124,7 +138,7 @@ export const findingGuides: Article[] = [
           ],
           "ordered": true
         },
-        "If you cannot identify a business-critical sender or obtain a representative test, keep that domain in monitoring while you resolve it. A low failure percentage can hide an entire low-volume invoicing route. Read failures by service and business consequence, not just the overall pass rate."
+        "If you cannot identify a business-critical sender or obtain a representative test, keep that domain in monitoring while you resolve it. Read failures by service and business consequence, not just the overall pass rate."
       ]
     },
     {
@@ -135,7 +149,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google's DKIM instructions",
-              "to": "https://knowledge.workspace.google.com/admin/security/set-up-dkim"
+              "to": "https://knowledge.workspace.google.com/admin/security/set-up-dkim",
+              "start": 284
             }
           ]
         },
@@ -144,18 +159,21 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "DMARC setup instructions",
-              "to": "https://knowledge.workspace.google.com/admin/security/set-up-dmarc"
+              "to": "https://knowledge.workspace.google.com/admin/security/set-up-dmarc",
+              "start": 9
             }
           ]
+        },
+        {
+          "figure": {
+            "src": "/guides/official-dmarc-annotated.png",
+            "alt": "Google's public DMARC documentation explains that the record is published at the domain host rather than in the Google Admin console.",
+            "caption": "Annotated excerpt of Google Workspace public documentation, captured October 14, 2026. Use the authoritative DNS account identified above to edit the policy. This is a documentation excerpt, not an account screenshot. Source: Google Workspace DMARC setup documentation. CC BY 4.0; Helm annotation added.",
+            "width": 774,
+            "height": 960
+          }
         }
-      ],
-      "figure": {
-        "src": "/guides/official-dmarc-annotated.png",
-        "alt": "Google's public DMARC documentation explains that the record is published at the domain host rather than in the Google Admin console.",
-        "caption": "Annotated excerpt of Google Workspace public documentation, captured October 14, 2026. Use the authoritative DNS account identified above to edit the policy. This is a documentation excerpt, not an account screenshot. Source: Google Workspace DMARC setup documentation. CC BY 4.0; Helm annotation added.",
-        "width": 774,
-        "height": 960
-      }
+      ]
     },
     {
       "h": "Microsoft 365: check the custom domain's signing status",
@@ -165,18 +183,21 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Microsoft's DKIM documentation",
-              "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure"
+              "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure",
+              "start": 356
             }
           ]
+        },
+        {
+          "figure": {
+            "src": "/guides/providers/microsoft-dkim-cnames.png",
+            "alt": "Microsoft's public DKIM example shows a disabled signing toggle and the two required CNAMEs.",
+            "caption": "Microsoft's public Contoso example, checked October 14, 2026. A published DNS alias alone does not establish that signing is enabled. Use your domain's status and an external message result. Source: Microsoft Learn, DKIM configuration documentation.",
+            "width": 456,
+            "height": 612
+          }
         }
-      ],
-      "figure": {
-        "src": "/guides/providers/microsoft-dkim-cnames.png",
-        "alt": "Microsoft's public DKIM example shows a disabled signing toggle and the two required CNAMEs.",
-        "caption": "Microsoft's public Contoso example, checked October 14, 2026. A published DNS alias alone does not establish that signing is enabled. Use your domain's status and an external message result. Source: Microsoft Learn, DKIM configuration documentation.",
-        "width": 456,
-        "height": 612
-      }
+      ]
     },
     {
       "h": "cPanel: test the server and website senders separately",
@@ -186,7 +207,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "DKIM verification guide",
-              "to": "/resources/verify-dkim-signing/"
+              "to": "/resources/verify-dkim-signing/",
+              "start": 321
             }
           ]
         }
@@ -195,13 +217,14 @@ export const findingGuides: Article[] = [
     {
       "h": "Prepare the exact policy change and recovery",
       "ps": [
-        "Choose a time when you can inspect external tests, delivery logs and reports and restore DNS if needed. Copy the current record into your change notes. Write down the intended value beside it, which sending domains it affects and a concrete recovery trigger, such as an invoice route failing DMARC or necessary mail appearing in recipient quarantine. Confirm that your DNS login and mailbox access will still work during that window.",
+        "Choose a time when you can inspect external tests, delivery logs and reports, with access to restore DNS if needed. Copy the current record into your change notes and put the intended value beside it. Record which sending domains the change affects and what would trigger recovery, such as an invoice route failing DMARC or necessary mail appearing in recipient quarantine. Confirm that your DNS login and mailbox access will still work during that window.",
         {
           "text": "For an existing valid monitoring record, the initial enforcement change is usually its p value. Keep rua and the other fields unless you have separately decided to change them. At the organizational domain, sp sets the policy for existing subdomains that inherit this record. Without it, those subdomains can follow the new p value. The np tag sets the policy for nonexistent subdomains; without np, receivers use the applicable sp or p value. Review these fields so the main-domain change does not also tighten a subdomain you have yet to test. RFC 9989's tag definitions describe that scope.",
           "links": [
             {
               "phrase": "RFC 9989's tag definitions",
-              "to": "https://datatracker.ietf.org/doc/html/rfc9989#section-4.7"
+              "to": "https://datatracker.ietf.org/doc/html/rfc9989#section-4.7",
+              "start": 546
             }
           ]
         },
@@ -212,53 +235,56 @@ export const findingGuides: Article[] = [
           "code": "Before: v=DMARC1; p=none; sp=none; rua=mailto:dmarc-reports@example.com\nAfter: v=DMARC1; p=quarantine; sp=none; rua=mailto:dmarc-reports@example.com",
           "language": "text"
         },
-        "For a separately tested notices.example.com subdomain, an explicit record at _dmarc.notices.example.com lets you change that stream's p value separately. The record name belongs under the zone that hosts it; in an example.com zone, the relative name is _dmarc.notices. Introducing that record overrides inherited settings, so include its intended reporting destination and alignment choices."
-      ],
-      "table": {
-        "caption": "DMARC record fields to review",
-        "headers": [
-          "Field to review",
-          "Effect",
-          "Decision before saving"
-        ],
-        "rows": [
-          [
-            "v=DMARC1",
-            "Identifies DMARC; it must appear first.",
-            "Preserve it and publish one policy at the intended name."
-          ],
-          [
-            "p=",
-            "Requests none, quarantine or reject for failures.",
-            "Change only to the stage your tests support."
-          ],
-          [
-            "rua=",
-            "Requests aggregate reports at the listed mailto destinations.",
-            "Keep a verified, reviewed destination."
-          ],
-          [
-            "sp= and np=",
-            "Control applicable inherited subdomain policies.",
-            "Check the affected subdomains; retain the intended scope."
-          ],
-          [
-            "adkim= and aspf=",
-            "Select strict or relaxed alignment.",
-            "Keep the current choice during this policy change."
-          ],
-          [
-            "pct= and t=",
-            "Older percentage sampling and newer testing settings differ across implementations.",
-            "Do not rely on them as a universal limit on enforcement. Review an existing testing flag before calling the rollout complete."
-          ],
-          [
-            "ruf=, fo= and other tags",
-            "Control separate reporting or specialized settings.",
-            "Preserve them unless a separate reviewed change requires otherwise."
-          ]
-        ]
-      }
+        "For a separately tested notices.example.com subdomain, an explicit record at _dmarc.notices.example.com lets you change that stream's p value separately. The record name belongs under the zone that hosts it; in an example.com zone, the relative name is _dmarc.notices. Introducing that record overrides inherited settings, so include its intended reporting destination and alignment choices.",
+        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
+        {
+          "table": {
+            "caption": "DMARC record fields to review",
+            "headers": [
+              "Field to review",
+              "Effect",
+              "Decision before saving"
+            ],
+            "rows": [
+              [
+                "v=DMARC1",
+                "Identifies DMARC; it must appear first.",
+                "Preserve it and publish one policy at the intended name."
+              ],
+              [
+                "p=",
+                "Requests none, quarantine or reject for failures.",
+                "Change only to the stage your tests support."
+              ],
+              [
+                "rua=",
+                "Requests aggregate reports at the listed mailto destinations.",
+                "Keep a verified, reviewed destination."
+              ],
+              [
+                "sp= and np=",
+                "Control applicable inherited subdomain policies.",
+                "Check the affected subdomains; retain the intended scope."
+              ],
+              [
+                "adkim= and aspf=",
+                "Select strict or relaxed alignment.",
+                "Keep the current choice during this policy change."
+              ],
+              [
+                "pct= and t=",
+                "Older percentage sampling and newer testing settings differ across implementations.",
+                "Do not rely on them as a universal limit on enforcement. Review an existing testing flag before calling the rollout complete."
+              ],
+              [
+                "ruf=, fo= and other tags",
+                "Control separate reporting or specialized settings.",
+                "Preserve them unless a separate reviewed change requires otherwise."
+              ]
+            ]
+          }
+        }
+      ]
     },
     {
       "h": "Edit the existing TXT record in authoritative DNS",
@@ -268,11 +294,13 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Cloudflare's editor instructions",
-              "to": "https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/"
+              "to": "https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/",
+              "start": 337
             },
             {
               "phrase": "GoDaddy's TXT instructions",
-              "to": "https://www.godaddy.com/en/help/add-a-txt-record-19232"
+              "to": "https://www.godaddy.com/en/help/add-a-txt-record-19232",
+              "start": 374
             }
           ]
         },
@@ -281,19 +309,22 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Zone Editor documentation",
-              "to": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
+              "to": "https://docs.cpanel.net/cpanel/domains/zone-editor/",
+              "start": 346
             }
           ]
         },
-        "For a Microsoft 365 custom domain, make this edit at the DNS host you identified above. Microsoft's admin-center DNS record creation procedure for onmicrosoft.com domains is a separate case. For Google Workspace, the policy is also saved at the DNS host. A cPanel DNS editor works publicly only when that service controls the domain's authoritative records."
-      ],
-      "figure": {
-        "src": "/guides/providers/cpanel-zone-add.png",
-        "alt": "Namecheap's published cPanel Zone Editor example shows Edit beside a record and Add Record above the table.",
-        "caption": "Namecheap's public cPanel documentation example, checked October 14, 2026. Use the existing DMARC record's Edit control for a policy change. The pictured A record is an example of the editor, not a value to use for DMARC. Source: Namecheap, How to edit DNS zone in cPanel.",
-        "width": 1221,
-        "height": 253
-      }
+        "For a Microsoft 365 custom domain, make this edit at the DNS host you identified above. Microsoft's admin-center DNS record creation procedure for onmicrosoft.com domains is a separate case. For Google Workspace, the policy is also saved at the DNS host. A cPanel DNS editor works publicly only when that service controls the domain's authoritative records.",
+        {
+          "figure": {
+            "src": "/guides/providers/cpanel-zone-add.png",
+            "alt": "Namecheap's published cPanel Zone Editor example shows Edit beside a record and Add Record above the table.",
+            "caption": "Namecheap's public cPanel documentation example, checked October 14, 2026. Use the existing DMARC record's Edit control for a policy change. The pictured A record is an example of the editor, not a value to use for DMARC. Source: Namecheap, How to edit DNS zone in cPanel.",
+            "width": 1221,
+            "height": 253
+          }
+        }
+      ]
     },
     {
       "h": "Verify the saved policy and delivery",
@@ -309,7 +340,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "ISC's dig manual",
-              "to": "https://bind9.readthedocs.io/en/stable/manpages.html#dig-dns-lookup-utility"
+              "to": "https://bind9.readthedocs.io/en/stable/manpages.html#dig-dns-lookup-utility",
+              "start": 0
             }
           ]
         },
@@ -326,7 +358,7 @@ export const findingGuides: Article[] = [
       ]
     }
   ],
-  "takeaway": "Resolve legitimate authentication failures and test business mail before approving a stricter DMARC policy.",
+  "takeaway": "",
   "readingLayout": true,
   "hideVisual": true,
   "organizationByline": true,
@@ -335,7 +367,8 @@ export const findingGuides: Article[] = [
     "sub": "Tell us what the scan found and which provider manages the service. We can agree on a scope for Helm’s help. Your existing IT team and vendors handle the configuration changes.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
-  }
+  },
+  "updated": "2026-10-24"
 },
   {
   "slug": "fix-dmarc-reporting",
@@ -345,8 +378,10 @@ export const findingGuides: Article[] = [
   "readMin": 16,
   "lane": "All industries",
   "laneTo": "/",
-  "intro": "The rua field in a DMARC record tells participating mail receivers where to send aggregate reports about email using your domain. To add reporting, prepare a mailbox or reporting service that can receive those reports, then edit the domain's existing DMARC TXT record. If no record exists, start with a monitoring policy. Keep an existing enforcement policy intact while you fix its reporting address.",
-  "lead": [],
+  "intro": "To set up DMARC aggregate reporting, prepare a mailbox or reporting service you can review, then put its address in the rua field of your domain's DMARC TXT record. Keep any existing enforcement policy intact while you fix the reporting address. If no record exists, start with a monitoring policy.",
+  "lead": [
+    "The repair is complete when reports reach that destination and you can review them. Publishing the address alone does not establish that."
+  ],
   "sections": [
     {
       "h": "What rua and mailto mean",
@@ -356,7 +391,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "DMARC explanation",
-              "to": "/resources/what-is-dmarc/"
+              "to": "/resources/what-is-dmarc/",
+              "start": 520
             }
           ]
         },
@@ -366,7 +402,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google's report guidance",
-              "to": "https://knowledge.workspace.google.com/admin/security/about-dmarc-reports"
+              "to": "https://knowledge.workspace.google.com/admin/security/about-dmarc-reports",
+              "start": 366
             }
           ]
         },
@@ -377,13 +414,14 @@ export const findingGuides: Article[] = [
     {
       "h": "Prepare a destination you can use",
       "ps": [
-        "For a mailbox, create a dedicated address in your mail platform or use one already reserved for DMARC reports. Avoid an employee's personal inbox: reports can arrive regularly, and access needs to survive staffing changes. Confirm the account can receive mail from outside your organization, retain attachments and handle the expected volume. Send it an ordinary external test first. A successful test confirms basic delivery; it does not prove a receiver will generate DMARC reports.",
+        "For a mailbox, create a dedicated address in your mail platform or use one already reserved for DMARC reports. Avoid an employee's personal inbox: reports can arrive regularly, and access needs to survive staffing changes. Confirm the account can receive mail from outside your organization, retain attachments and handle the expected volume. Before editing DNS, send an ordinary email to that address from outside your organization. If it arrives, you have checked basic delivery. You still need to confirm that a receiver generates DMARC reports and that they reach this address.",
         {
           "text": "In Google Workspace, sign in to admin.google.com with the appropriate user-management privileges, then open Directory, Users, Add new user. Enter the account details and the reporting address you want as Primary email, select Add New User and finish the setup. Check that Gmail is available for that account before testing delivery; you may need a Workspace license. A Google Group can also receive reports, but its posting permissions must allow the external report senders. Google's account instructions cover creation and access.",
           "links": [
             {
               "phrase": "Google's account instructions",
-              "to": "https://knowledge.workspace.google.com/admin/users/add-an-account-for-a-new-user"
+              "to": "https://knowledge.workspace.google.com/admin/users/add-an-account-for-a-new-user",
+              "start": 476
             }
           ]
         },
@@ -392,12 +430,13 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Microsoft's shared-mailbox instructions",
-              "to": "https://learn.microsoft.com/en-us/microsoft-365/admin/email/create-a-shared-mailbox?view=o365-worldwide"
+              "to": "https://learn.microsoft.com/en-us/microsoft-365/admin/email/create-a-shared-mailbox?view=o365-worldwide",
+              "start": 524
             }
           ]
         },
         "A reporting service receives the XML and turns it into a searchable view of sending sources and results. Add your domain to the service first, then copy the rua address it assigns to that domain. Check who can access the dashboard and how long the service retains data about your sending systems. An address from a vendor's public example may belong to another account and will not put reports in yours.",
-        "Whichever option you choose, set a review schedule and make sure you can open or interpret the reports. During a new rollout, review them daily. If you use a mailbox, use a trusted XML viewer or your chosen reporting tool; do not upload your firm's reports to an arbitrary converter. A mailbox full of unread attachments leaves authentication failures unresolved."
+        "Set a review schedule for your chosen mailbox or service, and make sure you can open or interpret its reports. During a new rollout, review them daily. If you use a mailbox, use a trusted XML viewer or your chosen reporting tool; do not upload your firm's reports to an arbitrary converter. A mailbox full of unread attachments leaves authentication failures unresolved."
       ]
     },
     {
@@ -409,11 +448,13 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google Admin Toolbox Dig",
-              "to": "https://toolbox.googleapps.com/apps/dig/"
+              "to": "https://toolbox.googleapps.com/apps/dig/",
+              "start": 113
             },
             {
               "phrase": "Cloudflare's nameserver guidance",
-              "to": "https://developers.cloudflare.com/dns/nameservers/"
+              "to": "https://developers.cloudflare.com/dns/nameservers/",
+              "start": 448
             }
           ]
         },
@@ -432,53 +473,56 @@ export const findingGuides: Article[] = [
           "language": "text"
         },
         "The semicolons separate fields. The DNS record type is TXT and its name is _dmarc within the example.com zone. Do not put the mailbox address in the Name field or put _dmarc in the Value field. Do not add literal outer quotation marks unless your DNS editor's instructions require them.",
-        "For the example above, a provider that appends example.com to the Name field should display the saved name as _dmarc.example.com. The Value or Content field should contain the entire line from v=DMARC1 through the reporting address. TXT means a text record; the policy is stored as text in that value."
-      ],
-      "table": {
-        "caption": "DMARC fields when adding or repairing aggregate reporting",
-        "headers": [
-          "Field",
-          "Meaning",
-          "What to do for a reporting repair"
-        ],
-        "rows": [
-          [
-            "v=DMARC1",
-            "Identifies the DMARC version. It must be first.",
-            "Keep this value."
-          ],
-          [
-            "p=none, p=quarantine or p=reject",
-            "Requests the receiver's treatment of messages that fail DMARC.",
-            "Preserve the existing policy. Use none for the new monitoring example."
-          ],
-          [
-            "rua=mailto:address",
-            "Requests aggregate reports at that email destination.",
-            "Add or correct this field with your tested address."
-          ],
-          [
-            "sp=",
-            "Sets a policy for subdomains that inherit this record.",
-            "Preserve it; omitting it can change the subdomain policy."
-          ],
-          [
-            "adkim= and aspf=",
-            "Select strict or relaxed domain matching for DKIM and SPF.",
-            "Preserve them. s means strict; r means relaxed."
-          ],
-          [
-            "ruf= and fo=",
-            "Request and control separate failure reporting.",
-            "Leave the existing decision intact; aggregate reporting does not require them."
-          ],
-          [
-            "pct=, ri= or other existing tags",
-            "Some records include older or specialized settings.",
-            "Keep them during this focused repair and review them separately against current documentation."
-          ]
-        ]
-      }
+        "For the example above, a provider that appends example.com to the Name field should display the saved name as _dmarc.example.com. The Value or Content field should contain the entire line from v=DMARC1 through the reporting address. TXT means a text record; the policy is stored as text in that value.",
+        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
+        {
+          "table": {
+            "caption": "DMARC fields when adding or repairing aggregate reporting",
+            "headers": [
+              "Field",
+              "Meaning",
+              "What to do for a reporting repair"
+            ],
+            "rows": [
+              [
+                "v=DMARC1",
+                "Identifies the DMARC version. It must be first.",
+                "Keep this value."
+              ],
+              [
+                "p=none, p=quarantine or p=reject",
+                "Requests the receiver's treatment of messages that fail DMARC.",
+                "Preserve the existing policy. Use none for the new monitoring example."
+              ],
+              [
+                "rua=mailto:address",
+                "Requests aggregate reports at that email destination.",
+                "Add or correct this field with your tested address."
+              ],
+              [
+                "sp=",
+                "Sets a policy for subdomains that inherit this record.",
+                "Preserve it; omitting it can change the subdomain policy."
+              ],
+              [
+                "adkim= and aspf=",
+                "Select strict or relaxed domain matching for DKIM and SPF.",
+                "Preserve them. s means strict; r means relaxed."
+              ],
+              [
+                "ruf= and fo=",
+                "Request and control separate failure reporting.",
+                "Leave the existing decision intact; aggregate reporting does not require them."
+              ],
+              [
+                "pct=, ri= or other existing tags",
+                "Some records include older or specialized settings.",
+                "Keep them during this focused repair and review them separately against current documentation."
+              ]
+            ]
+          }
+        }
+      ]
     },
     {
       "h": "Choose the branch that matches your DNS result",
@@ -490,7 +534,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google's DMARC setup guidance",
-              "to": "https://knowledge.workspace.google.com/admin/security/set-up-dmarc"
+              "to": "https://knowledge.workspace.google.com/admin/security/set-up-dmarc",
+              "start": 434
             }
           ]
         },
@@ -499,7 +544,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "DMARC standard",
-              "to": "https://datatracker.ietf.org/doc/html/rfc9989"
+              "to": "https://datatracker.ietf.org/doc/html/rfc9989",
+              "start": 497
             }
           ]
         },
@@ -518,7 +564,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "aggregate-reporting standard's external-destination procedure",
-              "to": "https://datatracker.ietf.org/doc/html/rfc9990#section-4"
+              "to": "https://datatracker.ietf.org/doc/html/rfc9990#section-4",
+              "start": 50
             }
           ]
         }
@@ -532,7 +579,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Cloudflare's record instructions",
-              "to": "https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/"
+              "to": "https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/",
+              "start": 316
             }
           ]
         },
@@ -541,7 +589,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "TXT record instructions",
-              "to": "https://www.godaddy.com/en/help/add-a-txt-record-19232"
+              "to": "https://www.godaddy.com/en/help/add-a-txt-record-19232",
+              "start": 291
             }
           ]
         }
@@ -555,19 +604,22 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "cPanel Zone Editor instructions",
-              "to": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
+              "to": "https://docs.cpanel.net/cpanel/domains/zone-editor/",
+              "start": 336
             }
           ]
         },
-        "If Zone Editor or TXT is unavailable, your host may have disabled the interface or access to that record type. Request the relevant feature for your account. Keep the prepared policy and use the authoritative DNS host's editor if that is a different service."
-      ],
-      "figure": {
-        "src": "/guides/providers/cpanel-zone-add.png",
-        "alt": "Namecheap's published cPanel Zone Editor example shows the record table, Edit controls and Add Record.",
-        "caption": "Namecheap's public cPanel documentation example, checked October 14, 2026. Use Edit for an existing DMARC entry; Add Record is for a missing entry. The pictured domain and A record illustrate the editor, not a DMARC configuration. Source: Namecheap, How to edit DNS zone in cPanel.",
-        "width": 1221,
-        "height": 253
-      }
+        "If Zone Editor or TXT is unavailable, your host may have disabled the interface or access to that record type. Request the relevant feature for your account. Keep the prepared policy and use the authoritative DNS host's editor if that is a different service.",
+        {
+          "figure": {
+            "src": "/guides/providers/cpanel-zone-add.png",
+            "alt": "Namecheap's published cPanel Zone Editor example shows the record table, Edit controls and Add Record.",
+            "caption": "Namecheap's public cPanel documentation example, checked October 14, 2026. Use Edit for an existing DMARC entry; Add Record is for a missing entry. The pictured domain and A record illustrate the editor, not a DMARC configuration. Source: Namecheap, How to edit DNS zone in cPanel.",
+            "width": 1221,
+            "height": 253
+          }
+        }
+      ]
     },
     {
       "h": "Microsoft 365: distinguish custom-domain DNS from Microsoft-hosted DNS",
@@ -577,18 +629,21 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Microsoft's DMARC instructions",
-              "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure"
+              "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dmarc-configure",
+              "start": 396
             }
           ]
+        },
+        {
+          "figure": {
+            "src": "/guides/providers/microsoft-domain-setup.png",
+            "alt": "Microsoft's public Domains example shows Start setup beside the example domain.",
+            "caption": "Microsoft's public domain-setup example, checked October 14, 2026. Start setup opens the domain workflow; it is not a DMARC reporting editor. Source: Microsoft Learn, DNS setup documentation.",
+            "width": 582,
+            "height": 189
+          }
         }
-      ],
-      "figure": {
-        "src": "/guides/providers/microsoft-domain-setup.png",
-        "alt": "Microsoft's public Domains example shows Start setup beside the example domain.",
-        "caption": "Microsoft's public domain-setup example, checked October 14, 2026. Start setup opens the domain workflow; it is not a DMARC reporting editor. Source: Microsoft Learn, DNS setup documentation.",
-        "width": 582,
-        "height": 189
-      }
+      ]
     },
     {
       "h": "Verify publication and wait for report receipt",
@@ -604,23 +659,25 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "ISC's dig documentation",
-              "to": "https://bind9.readthedocs.io/en/stable/manpages.html#dig-dns-lookup-utility"
+              "to": "https://bind9.readthedocs.io/en/stable/manpages.html#dig-dns-lookup-utility",
+              "start": 134
             }
           ]
         },
-        "Send normal or harmless test mail through your usual sending routes to outside recipients. Participating receivers commonly report daily, so allow a complete reporting interval after they can see the new record. Check the destination or dashboard over the next few days. Not every receiver reports, and little outgoing mail produces little data. An empty inbox immediately after a DNS save is inconclusive."
+        "Send normal mail or a harmless test message through your usual sending routes to outside recipients. Participating receivers commonly report daily, so allow a complete reporting interval after they can see the new record. Check the destination or dashboard over the next few days. Not every receiver reports, and little outgoing mail produces little data. An empty inbox immediately after a DNS save is inconclusive."
       ]
     },
     {
       "h": "If reports do not arrive, or the destination is wrong",
       "ps": [
-        "Start with the public TXT answer. A misspelled name, duplicate domain suffix, missing mailto:, wrong mailbox or competing policy record can prevent the intended request. If DNS is correct, check external authorization, mailbox spam and quarantine, group posting restrictions, attachment filtering and storage limits. For a service, check that you enrolled the right domain and copied its assigned address. Keep ordinary external delivery tests separate from proof of DMARC report receipt.",
+        "Start with the public TXT answer. A misspelled name, duplicate domain suffix, missing mailto:, wrong mailbox or competing policy record can prevent the intended request. If DNS is correct, check external authorization, mailbox spam and quarantine, group posting restrictions, attachment filtering and storage limits. For a service, check that you enrolled the right domain and copied its assigned address. Receiving your test message still does not confirm that a DMARC report has arrived.",
         {
           "text": "When a report arrives, check its reporting organization, date range and policy domain. Review source IPs, counts and evaluated alignment results. Raw SPF or DKIM pass fields alone do not prove DMARC alignment. For example, an invoice tool can pass DKIM for the vendor's domain while failing alignment with your firm's From address. Match unfamiliar sources to your services before authorizing them; a failing source can be spoofed mail or a legitimate sender that needs repair. The DMARC policy guide explains how to use those results before changing enforcement.",
           "links": [
             {
               "phrase": "DMARC policy guide",
-              "to": "/resources/fix-dmarc-monitoring-policy/"
+              "to": "/resources/fix-dmarc-monitoring-policy/",
+              "start": 482
             }
           ]
         },
@@ -629,7 +686,7 @@ export const findingGuides: Article[] = [
       ]
     }
   ],
-  "takeaway": "Publish one DMARC record with the correct rua destination, preserve its policy and confirm that reports arrive where you can review them.",
+  "takeaway": "",
   "readingLayout": true,
   "hideVisual": true,
   "organizationByline": true,
@@ -638,7 +695,8 @@ export const findingGuides: Article[] = [
     "sub": "Tell us what the scan found and which provider manages the service. We can agree on a scope for Helm’s help. Your existing IT team and vendors handle the configuration changes.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
-  }
+  },
+  "updated": "2026-10-24"
 },
   {
   "slug": "verify-dkim-signing",
@@ -652,6 +710,12 @@ export const findingGuides: Article[] = [
   "lead": [],
   "sections": [
     {
+      "h": "Quick answer",
+      "ps": [
+        "Confirm the configured selector and a passing, aligned message result; a public key alone does not prove signing."
+      ]
+    },
+    {
       "h": "What you are checking",
       "ps": [
         "DKIM, or DomainKeys Identified Mail, adds a digital signature to outgoing email. Your sending service keeps a private key and signs parts of the message. The receiving server retrieves the matching public key from DNS and checks the signature. Publish only the public record supplied by your service. A private key belongs in the sending system and must never go into DNS, a support ticket or a screenshot.",
@@ -660,18 +724,20 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "DKIM standard",
-              "to": "https://datatracker.ietf.org/doc/html/rfc6376"
+              "to": "https://datatracker.ietf.org/doc/html/rfc6376",
+              "start": 418
             }
           ]
         },
-        "For example, if a message had d=example.com and s=mail2026, you would look up mail2026._domainkey.example.com. This is a hypothetical example using a reserved domain. mail2026 is an invented selector to show how the name is assembled; use the selector from your own message, not this one.",
+        "In a hypothetical message with d=example.com and s=mail2026, the lookup would be mail2026._domainkey.example.com. The reserved domain and invented selector illustrate the format; use the values from your own message.",
         "If d= names a vendor domain you do not control, inspect its public key but configure your own domain through that sender's custom-domain setup. Publish only the records the sender supplies for the zone you control.",
         {
           "text": "For a passing DKIM signature to help a message pass DMARC, its signing domain must align with the domain in the visible From address. A signature can pass for a provider's domain while failing that comparison with your business domain. DMARC can also pass through aligned SPF, so read both authentication results when investigating. The DMARC explanation covers how the domains must match.",
           "links": [
             {
               "phrase": "DMARC explanation",
-              "to": "/resources/what-is-dmarc/"
+              "to": "/resources/what-is-dmarc/",
+              "start": 337
             }
           ]
         }
@@ -689,7 +755,8 @@ export const findingGuides: Article[] = [
               "links": [
                 {
                   "phrase": "Microsoft's header instructions",
-                  "to": "https://support.microsoft.com/en-us/outlook/view-internet-message-headers-in-outlook"
+                  "to": "https://support.microsoft.com/en-us/outlook/view-internet-message-headers-in-outlook",
+                  "start": 253
                 }
               ]
             },
@@ -710,11 +777,13 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google Admin Toolbox Dig",
-              "to": "https://toolbox.googleapps.com/apps/dig/"
+              "to": "https://toolbox.googleapps.com/apps/dig/",
+              "start": 143
             },
             {
               "phrase": "Cloudflare's nameserver documentation",
-              "to": "https://developers.cloudflare.com/dns/nameservers/"
+              "to": "https://developers.cloudflare.com/dns/nameservers/",
+              "start": 503
             }
           ]
         },
@@ -740,18 +809,21 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google's setup instructions",
-              "to": "https://knowledge.workspace.google.com/admin/security/set-up-dkim"
+              "to": "https://knowledge.workspace.google.com/admin/security/set-up-dkim",
+              "start": 0
             }
           ]
+        },
+        {
+          "figure": {
+            "src": "/guides/official-dkim-annotated.png",
+            "alt": "Google's public DKIM documentation says to click Start authentication and identifies the working status as Authenticating email with DKIM.",
+            "caption": "Annotated excerpt of Google Workspace public documentation, captured October 14, 2026. The status described here is the one to check after publishing your key. This image is a documentation excerpt, not a Google Admin account screen. Source: Google Workspace DKIM setup documentation. CC BY 4.0; Helm annotation added.",
+            "width": 774,
+            "height": 672
+          }
         }
-      ],
-      "figure": {
-        "src": "/guides/official-dkim-annotated.png",
-        "alt": "Google's public DKIM documentation says to click Start authentication and identifies the working status as Authenticating email with DKIM.",
-        "caption": "Annotated excerpt of Google Workspace public documentation, captured October 14, 2026. The status described here is the one to check after publishing your key. This image is a documentation excerpt, not a Google Admin account screen. Source: Google Workspace DKIM setup documentation. CC BY 4.0; Helm annotation added.",
-        "width": 774,
-        "height": 672
-      }
+      ]
     },
     {
       "h": "Microsoft 365: copy both CNAMEs from your domain's settings",
@@ -772,18 +844,21 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Microsoft's DKIM procedure",
-              "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure"
+              "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-dkim-configure",
+              "start": 0
             }
           ]
+        },
+        {
+          "figure": {
+            "src": "/guides/providers/microsoft-dkim-cnames.png",
+            "alt": "Microsoft's published DKIM example shows Publish CNAMEs, two Hostname and target pairs, Copy, and the disabled signing toggle.",
+            "caption": "Microsoft's public documentation example for Contoso, checked October 14, 2026. Use Publish CNAMEs and Copy in your own domain's flyout. The pictured target addresses belong to the example. Source: Microsoft Learn, DKIM configuration documentation.",
+            "width": 456,
+            "height": 612
+          }
         }
-      ],
-      "figure": {
-        "src": "/guides/providers/microsoft-dkim-cnames.png",
-        "alt": "Microsoft's published DKIM example shows Publish CNAMEs, two Hostname and target pairs, Copy, and the disabled signing toggle.",
-        "caption": "Microsoft's public documentation example for Contoso, checked October 14, 2026. Use Publish CNAMEs and Copy in your own domain's flyout. The pictured target addresses belong to the example. Source: Microsoft Learn, DKIM configuration documentation.",
-        "width": 456,
-        "height": 612
-      }
+      ]
     },
     {
       "h": "cPanel: use the key for the server that sends the message",
@@ -794,7 +869,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "cPanel's Email Deliverability documentation",
-              "to": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
+              "to": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/",
+              "start": 247
             }
           ]
         },
@@ -803,18 +879,21 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "cPanel documents a PHP sending limitation",
-              "to": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
+              "to": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/",
+              "start": 175
             }
           ]
+        },
+        {
+          "figure": {
+            "src": "/guides/providers/cpanel-dkim.png",
+            "alt": "Namecheap's published cPanel example shows the public DKIM Name and Value with Copy controls and Install the Suggested Record.",
+            "caption": "Namecheap's cPanel documentation example, checked October 14, 2026. Copy the public Name and Value from your own domain. View the Private Key is unnecessary for DNS publication. Source: Namecheap, cPanel Email Deliverability Tool.",
+            "width": 690,
+            "height": 564
+          }
         }
-      ],
-      "figure": {
-        "src": "/guides/providers/cpanel-dkim.png",
-        "alt": "Namecheap's published cPanel example shows the public DKIM Name and Value with Copy controls and Install the Suggested Record.",
-        "caption": "Namecheap's cPanel documentation example, checked October 14, 2026. Copy the public Name and Value from your own domain. View the Private Key is unnecessary for DNS publication. Source: Namecheap, cPanel Email Deliverability Tool.",
-        "width": 690,
-        "height": 564
-      }
+      ]
     },
     {
       "h": "Enter the DNS fields without changing the record's meaning",
@@ -825,15 +904,18 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Cloudflare's email troubleshooting guidance",
-              "to": "https://developers.cloudflare.com/dns/troubleshooting/email-issues/"
+              "to": "https://developers.cloudflare.com/dns/troubleshooting/email-issues/",
+              "start": 243
             },
             {
               "phrase": "Cloudflare's record editor",
-              "to": "https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/"
+              "to": "https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/",
+              "start": 341
             },
             {
               "phrase": "GoDaddy's TXT instructions",
-              "to": "https://www.godaddy.com/en/help/add-a-txt-record-19232"
+              "to": "https://www.godaddy.com/en/help/add-a-txt-record-19232",
+              "start": 539
             }
           ]
         },
@@ -842,7 +924,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Zone Editor documentation",
-              "to": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
+              "to": "https://docs.cpanel.net/cpanel/domains/zone-editor/",
+              "start": 239
             }
           ]
         },
@@ -852,7 +935,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google's DKIM troubleshooting instructions",
-              "to": "https://knowledge.workspace.google.com/admin/security/troubleshoot-dkim-issues"
+              "to": "https://knowledge.workspace.google.com/admin/security/troubleshoot-dkim-issues",
+              "start": 250
             }
           ]
         }
@@ -872,7 +956,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "ISC's dig manual",
-              "to": "https://bind9.readthedocs.io/en/stable/manpages.html#dig-dns-lookup-utility"
+              "to": "https://bind9.readthedocs.io/en/stable/manpages.html#dig-dns-lookup-utility",
+              "start": 285
             }
           ]
         },
@@ -888,11 +973,13 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Cloudflare's troubleshooting steps",
-              "to": "https://developers.cloudflare.com/dns/troubleshooting/email-issues/"
+              "to": "https://developers.cloudflare.com/dns/troubleshooting/email-issues/",
+              "start": 193
             },
             {
               "phrase": "Cloudflare's flattening controls",
-              "to": "https://developers.cloudflare.com/dns/cname-flattening/set-up-cname-flattening/"
+              "to": "https://developers.cloudflare.com/dns/cname-flattening/set-up-cname-flattening/",
+              "start": 525
             }
           ]
         },
@@ -903,7 +990,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "DMARC policy recovery steps",
-              "to": "/resources/fix-dmarc-monitoring-policy/"
+              "to": "/resources/fix-dmarc-monitoring-policy/",
+              "start": 610
             }
           ]
         },
@@ -911,7 +999,7 @@ export const findingGuides: Article[] = [
       ]
     }
   ],
-  "takeaway": "Confirm the configured selector and a passing, aligned message result; a public key alone does not prove signing.",
+  "takeaway": "",
   "readingLayout": true,
   "hideVisual": true,
   "organizationByline": true,
@@ -920,7 +1008,8 @@ export const findingGuides: Article[] = [
     "sub": "Tell us what the scan found and which provider manages the service. We can agree on a scope for Helm’s help. Your existing IT team and vendors handle the configuration changes.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
-  }
+  },
+  "updated": "2026-10-24"
 },
   {
   "slug": "review-spf-softfail",
@@ -934,6 +1023,12 @@ export const findingGuides: Article[] = [
   "lead": [],
   "sections": [
     {
+      "h": "Quick answer",
+      "ps": [
+        "Keep ~all when your provider recommends it and your legitimate sending routes authenticate correctly. Leave it in place while a necessary sender or forwarding path remains unresolved. Change to -all only when your provider's supported setup calls for it and a valid single SPF record covers your verified senders."
+      ]
+    },
+    {
       "h": "Understand the suffix before changing it",
       "ps": [
         "SPF, or Sender Policy Framework, checks the server delivering a message against the authorization published for its envelope-sender domain. The envelope sender is the return address used between mail servers; it can differ from the From address visible to a recipient. SPF mechanisms, the tests within a policy, are evaluated in order. A matching authorization can return pass before the final all mechanism is reached.",
@@ -943,16 +1038,23 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "SPF standard",
-              "to": "https://datatracker.ietf.org/doc/html/rfc7208"
+              "to": "https://datatracker.ietf.org/doc/html/rfc7208",
+              "start": 144
             }
           ]
         },
         {
-          "text": "DKIM, or DomainKeys Identified Mail, is the signature a sending service adds to a message. DMARC, or Domain-based Message Authentication, Reporting, and Conformance, checks whether the visible From domain aligns with a passing SPF or DKIM domain. Alignment requires identical domains in strict mode. In relaxed mode, they can share the same organizational domain, the registered name such as example.com underlying its subdomains. A valid, aligned DKIM signature can let DMARC pass when forwarding a received message to another address causes SPF to fail. The DMARC guide explains that relationship.",
+          "text": "DKIM, or DomainKeys Identified Mail, is the signature a sending service adds to a message. DMARC, or Domain-based Message Authentication, Reporting, and Conformance, checks whether the visible From domain aligns with a passing SPF or DKIM domain. Alignment requires identical domains in strict mode. In relaxed mode, the domains can differ if they share the same organizational domain under DMARC's discovery rules. The current DMARC specification uses DNS records to determine that boundary. A valid, aligned DKIM signature can let DMARC pass when forwarding a received message to another address causes SPF to fail. The DMARC guide explains that relationship.",
           "links": [
             {
+              "phrase": "current DMARC specification",
+              "to": "https://www.rfc-editor.org/info/rfc9989/",
+              "start": 420
+            },
+            {
               "phrase": "DMARC guide",
-              "to": "/resources/what-is-dmarc/"
+              "to": "/resources/what-is-dmarc/",
+              "start": 622
             }
           ]
         }
@@ -967,7 +1069,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google Admin Toolbox Dig",
-              "to": "https://toolbox.googleapps.com/apps/dig/"
+              "to": "https://toolbox.googleapps.com/apps/dig/",
+              "start": 32
             }
           ]
         },
@@ -977,7 +1080,7 @@ export const findingGuides: Article[] = [
             "Open the registrar account identified by your renewal receipt or password manager, select the domain, and compare its Nameservers with the lookup. If the lists differ, establish the active delegation through registrar support before editing. If it uses external nameservers, open that DNS service's account. Do not change nameservers as part of this review.",
             "At the active DNS service, select the domain and open DNS records or Zone Editor. A zone is the set of records served for a domain. Filter to TXT, the record type that stores text, then locate the value beginning v=spf1 at the exact name. The root domain is the main name, such as example.com, whose record commonly uses @ or a blank Name field; a sending subdomain has its own record name. Check the saved full name so you do not review a different subdomain.",
             "If there is no SPF record, more than one v=spf1 row, or a syntax or lookup-limit error, resolve that first with the SPF repair guide. A timeout means the DNS query received no answer in time. SERVFAIL means the DNS service could not return a usable answer. Investigate those lookup failures before deciding whether to switch suffixes.",
-            "Save the full current SPF value, its record name and TTL before doing anything else. TTL, or time to live, is how long a DNS answer can stay in a resolver's cache. A resolver looks up DNS on a computer's behalf. Save the unit too: 3600 seconds is one hour. If DNS access is missing, recover the provider account or request its DNS-editing role; you can still complete the sender and message review."
+            "Before editing, save the full current SPF value, its record name and TTL. TTL, or time to live, is how long a DNS answer can stay in a resolver's cache. A resolver looks up DNS on a computer's behalf. Save the unit too: 3600 seconds is one hour. If DNS access is missing, recover the provider account or request its DNS-editing role; you can still complete the sender and message review."
           ],
           "ordered": true
         },
@@ -986,7 +1089,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "SPF repair guide",
-              "to": "/resources/fix-spf-record/"
+              "to": "/resources/fix-spf-record/",
+              "start": 4
             }
           ]
         },
@@ -1011,7 +1115,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Gmail's header instructions",
-              "to": "https://support.google.com/mail/answer/29436"
+              "to": "https://support.google.com/mail/answer/29436",
+              "start": 0
             }
           ]
         }
@@ -1025,7 +1130,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google's SPF guidance",
-              "to": "https://knowledge.workspace.google.com/admin/security/set-up-spf"
+              "to": "https://knowledge.workspace.google.com/admin/security/set-up-spf",
+              "start": 0
             }
           ]
         },
@@ -1034,7 +1140,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Microsoft's SPF guidance",
-              "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
+              "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure",
+              "start": 0
             }
           ]
         },
@@ -1051,18 +1158,21 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Microsoft's domain setup instructions",
-              "to": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
+              "to": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide",
+              "start": 0
             }
           ]
+        },
+        {
+          "figure": {
+            "src": "/guides/providers/microsoft-domain-setup.png",
+            "alt": "Microsoft 365 documentation example with Start setup highlighted for the selected contoso.com domain.",
+            "caption": "Microsoft's documentation shows Start setup for contoso.com, an example domain. For your custom domain, use DNS records, then Manage DNS, and inspect the required TXT entry. Compare it with the existing policy at your DNS host. Source checked October 14, 2026.",
+            "width": 582,
+            "height": 189
+          }
         }
-      ],
-      "figure": {
-        "src": "/guides/providers/microsoft-domain-setup.png",
-        "alt": "Microsoft 365 documentation example with Start setup highlighted for the selected contoso.com domain.",
-        "caption": "Microsoft's documentation shows Start setup for contoso.com, an example domain. For your custom domain, use DNS records, then Manage DNS, and inspect the required TXT entry. Compare it with the existing policy at your DNS host. Source checked October 14, 2026.",
-        "width": 582,
-        "height": 189
-      }
+      ]
     },
     {
       "h": "cPanel: check the minus-all option and the complete preview",
@@ -1074,25 +1184,28 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "cPanel's Email Deliverability instructions",
-              "to": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
+              "to": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/",
+              "start": 0
             }
           ]
+        },
+        {
+          "figure": {
+            "src": "/guides/providers/cpanel-spf-preview.png",
+            "alt": "cPanel SPF documentation example showing Include List, an unchecked Use the minus-all Entry box, an incomplete Preview and the installation button.",
+            "caption": "Namecheap's cPanel example shows Use the -all Entry, which controls the final failure assertion. The visible preview is incomplete and is not a valid record to copy. Inspect your complete value and test results before installing it. Source checked October 14, 2026.",
+            "width": 684,
+            "height": 549
+          }
         }
-      ],
-      "figure": {
-        "src": "/guides/providers/cpanel-spf-preview.png",
-        "alt": "cPanel SPF documentation example showing Include List, an unchecked Use the minus-all Entry box, an incomplete Preview and the installation button.",
-        "caption": "Namecheap's cPanel example shows Use the -all Entry, which controls the final failure assertion. The visible preview is incomplete and is not a valid record to copy. Inspect your complete value and test results before installing it. Source checked October 14, 2026.",
-        "width": 684,
-        "height": 549
-      }
+      ]
     },
     {
       "h": "Decide whether to retain softfail or change the policy",
       "ps": [
         "Keep ~all if it is your provider's supported recommendation and your legitimate routes authenticate correctly. Also retain it while a necessary sender or forwarding path remains unresolved. Record the reason and the outstanding test so the review can be resumed when that evidence is available.",
         "A move to -all needs a valid single SPF record, a verified sender list and the provider's supported configuration. Review DKIM and DMARC results at the same time. If direct mail from a required sender currently returns softfail, repair its sending setup or missing authorization before making the suffix stricter.",
-        "A failure caused by forwarding deserves a separate review. The forwarding server changes the connecting server's IP address, its network address, that SPF checks. Adding a general forwarding service to your SPF record authorizes that service to send as your envelope domain; it does not merely label forwarded mail as safe. Follow the forwarding provider's supported behavior and check whether an aligned DKIM signature survives."
+        "A failure caused by forwarding deserves a separate review. For forwarded mail, the receiver checks the forwarding server's IP address (its network address), which can differ from the original sender's. Adding a general forwarding service to your SPF record authorizes that service to send as your envelope domain; it does not merely label forwarded mail as safe. Follow the forwarding provider's supported behavior and check whether an aligned DKIM signature survives."
       ]
     },
     {
@@ -1122,11 +1235,11 @@ export const findingGuides: Article[] = [
           ],
           "ordered": true
         },
-        "Save the decision, domain, provider instructions, tested services, dates and receiver results. Helm's public scan can observe the published policy; it cannot inspect the business's complete sender inventory or assess internal systems. Help from Helm needs an agreed scope; retained IT and the relevant providers handle administration under their arrangements."
+        "Save the decision, domain, provider instructions, tested services, dates and receiver results. Review these notes when you add a sending service or change a forwarding route. Helm's public scan can observe the published policy; it cannot inspect the business's complete sender inventory or assess internal systems. Help from Helm needs an agreed scope; retained IT and the relevant providers handle administration under their arrangements."
       ]
     }
   ],
-  "takeaway": "Keep the policy decision alongside the tested sender list, and review both when you add a sending service or change a forwarding route.",
+  "takeaway": "",
   "readingLayout": true,
   "hideVisual": true,
   "organizationByline": true,
@@ -1135,7 +1248,8 @@ export const findingGuides: Article[] = [
     "sub": "Tell us what the scan found and which provider manages the service. We can agree on a scope for Helm’s help. Your existing IT team and vendors handle the configuration changes.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
-  }
+  },
+  "updated": "2026-10-24"
 },
   {
   "slug": "fix-spf-record",
@@ -1145,7 +1259,7 @@ export const findingGuides: Article[] = [
   "readMin": 19,
   "lane": "All industries",
   "laneTo": "/",
-  "intro": "To fix SPF, find the domain your sending service uses and repair its sending policy in the Domain Name System (DNS). A missing record, competing records and an invalid record need different repairs. Save what is there before editing, build one TXT record for the legitimate senders, and test mail from every sending service afterwards.",
+  "intro": "To fix SPF, first confirm the domain your sending service uses. Then repair its policy in the Domain Name System (DNS): create a missing record, consolidate duplicate records into one, or fix the specific syntax or lookup-limit error in an invalid record. Save the current state before editing and test mail from every sending service afterwards.",
   "lead": [],
   "sections": [
     {
@@ -1153,13 +1267,23 @@ export const findingGuides: Article[] = [
       "ps": [
         "SPF stands for Sender Policy Framework. It lets a receiving mail server check whether the server sending a message is authorized to use its envelope-sender domain. The envelope sender is the return address used in delivery instructions between mail servers. The root domain is the main name, such as example.com; bounce.example.com is a subdomain. The envelope-sender domain can differ from the From address you see in your inbox.",
         "For example, a hypothetical invoice can show billing@example.com in From while using bounce.mail.example.com for returned mail. SPF checks the latter. Adding a record at example.com will not automatically cover that subdomain. A sending service may also use a return address on its own domain, which it manages itself.",
-        "DKIM, or DomainKeys Identified Mail, adds a signature that a receiving service can verify. DMARC, or Domain-based Message Authentication, Reporting, and Conformance, checks whether a passing SPF or DKIM domain matches the visible From domain under its alignment rules. Alignment requires identical domains in strict mode. In relaxed mode, they can share the same organizational domain, the registered name such as example.com underlying its subdomains. SPF repair is one part of that setup; checking the received message tells you which part worked.",
+        {
+          "text": "DKIM, or DomainKeys Identified Mail, adds a signature that a receiving service can verify. DMARC, or Domain-based Message Authentication, Reporting, and Conformance, checks whether a passing SPF or DKIM domain matches the visible From domain under its alignment rules. Alignment requires identical domains in strict mode. In relaxed mode, they must share the same organizational domain, the highest domain in the hierarchy under the same administrative authority. SPF repair is one part of that setup; checking the received message tells you which part worked.",
+          "links": [
+            {
+              "phrase": "organizational domain",
+              "to": "https://www.rfc-editor.org/rfc/rfc9989.html#section-3.2.14",
+              "start": 364
+            }
+          ]
+        },
         {
           "text": "Open the scan result and copy the exact domain and error. For a real message, open its full headers, the technical delivery details stored with the message, and find the receiving system's Authentication-Results entry. That entry records authentication checks; smtp.mailfrom identifies the envelope domain when present. Compare it with the sending service's domain-authentication settings. The DMARC guide explains how a passing SPF or DKIM result also needs to align with the visible From domain.",
           "links": [
             {
               "phrase": "DMARC guide",
-              "to": "/resources/what-is-dmarc/"
+              "to": "/resources/what-is-dmarc/",
+              "start": 394
             }
           ]
         },
@@ -1175,7 +1299,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google Admin Toolbox Dig",
-              "to": "https://toolbox.googleapps.com/apps/dig/"
+              "to": "https://toolbox.googleapps.com/apps/dig/",
+              "start": 32
             }
           ]
         },
@@ -1228,45 +1353,47 @@ export const findingGuides: Article[] = [
     {
       "h": "Read the mechanisms in the existing SPF value",
       "ps": [
-        "cPanel and gateway records can authorize sending through address or mail-server records as well as includes. A gateway is a server that handles mail before passing it to another service. Read unfamiliar terms before removing them. The following forms explain common entries; they are not a complete record to publish."
-      ],
-      "table": {
-        "caption": "Common SPF terms you may encounter",
-        "headers": [
-          "Term",
-          "How it affects the policy"
-        ],
-        "rows": [
-          [
-            "v=spf1",
-            "The version marker. It starts the SPF record once."
-          ],
-          [
-            "include:provider-domain",
-            "Evaluates the named domain's SPF policy to see whether this sending IP passes its authorization. Use the exact value documented by your sender. A missing or invalid included policy can produce an error."
-          ],
-          [
-            "ip4:address or ip6:address",
-            "Authorizes a documented public IPv4 or IPv6 sending address or range. IPv4 and IPv6 are the two address formats. A range includes several addresses, so its size affects who is authorized. These mechanisms do not consume the DNS-querying-term budget: the limit on evaluated SPF terms that need DNS data, explained below."
-          ],
-          [
-            "a or mx",
-            "Checks addresses from the named domain's address records or mail-exchanger records. These terms consume lookup budget and can authorize hosts beyond the one you expected. Retain them when the sender's supported design requires them."
-          ],
-          [
-            "redirect=domain",
-            "Uses another domain's SPF policy when the local mechanisms do not match. It is a modifier, an instruction that changes how SPF applies the policy. It uses the other policy's result when local mechanisms do not match, while include checks for authorization. Adding all anywhere causes SPF to ignore redirect, so preserve a supported redirect design instead of appending a suffix by habit."
-          ],
-          [
-            "~all or -all",
-            "A final match for any sender that reaches it. Tilde returns softfail, a weaker assertion that the sender is probably unauthorized. Hyphen returns fail, an explicit assertion that it is unauthorized. Use the failure policy supported by your provider and sender review."
-          ],
-          [
-            "+all",
-            "Passes any sender reaching it. Adding it to make tests pass would authorize senders outside your intended list."
-          ]
-        ]
-      }
+        "cPanel and gateway records can authorize sending through address or mail-server records as well as includes. A gateway is a server that handles mail before passing it to another service. Read unfamiliar terms before removing them. The following forms explain common entries; they are not a complete record to publish.",
+        {
+          "table": {
+            "caption": "Common SPF terms you may encounter",
+            "headers": [
+              "Term",
+              "How it affects the policy"
+            ],
+            "rows": [
+              [
+                "v=spf1",
+                "The version marker. It starts the SPF record once."
+              ],
+              [
+                "include:provider-domain",
+                "Evaluates the named domain's SPF policy to see whether this sending IP passes its authorization. Use the exact value documented by your sender. A missing or invalid included policy can produce an error."
+              ],
+              [
+                "ip4:address or ip6:address",
+                "Authorizes a documented public IPv4 or IPv6 sending address or range. IPv4 and IPv6 are the two address formats. A range includes several addresses, so its size affects who is authorized. These mechanisms do not consume the DNS-querying-term budget: the limit on evaluated SPF terms that need DNS data, explained below."
+              ],
+              [
+                "a or mx",
+                "Checks addresses from the named domain's address records or mail-exchanger records. These terms consume lookup budget and can authorize hosts beyond the one you expected. Retain them when the sender's supported design requires them."
+              ],
+              [
+                "redirect=domain",
+                "Uses another domain's SPF policy when the local mechanisms do not match. It is a modifier, an instruction that changes how SPF applies the policy. It uses the other policy's result when local mechanisms do not match, while include checks for authorization. Adding all anywhere causes SPF to ignore redirect, so preserve a supported redirect design instead of appending a suffix by habit."
+              ],
+              [
+                "~all or -all",
+                "A final match for any sender that reaches it. Tilde returns softfail, a weaker assertion that the sender is probably unauthorized. Hyphen returns fail, an explicit assertion that it is unauthorized. Use the failure policy supported by your provider and sender review."
+              ],
+              [
+                "+all",
+                "Passes any sender reaching it. Adding it to make tests pass would authorize senders outside your intended list."
+              ]
+            ]
+          }
+        }
+      ]
     },
     {
       "h": "Use the instructions for your mail provider",
@@ -1276,7 +1403,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google's SPF setup guide",
-              "to": "https://knowledge.workspace.google.com/admin/security/set-up-spf"
+              "to": "https://knowledge.workspace.google.com/admin/security/set-up-spf",
+              "start": 57
             }
           ]
         },
@@ -1285,28 +1413,32 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Microsoft's SPF setup guide",
-              "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure"
+              "to": "https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure",
+              "start": 183
             }
           ]
         },
         "In Microsoft's manual workflow, continue to Add DNS records, select Exchange and Exchange Online Protection for the mail setup, and expand TXT Records to reveal the suggested value. Treat it as one input to your combined policy. A guided or automatic setup can propose other DNS changes too; read the proposal before accepting it. You can edit the SPF TXT record directly at the confirmed DNS host.",
         {
-          "text": "Microsoft's domain setup instructions describe the current navigation and manual workflow. In the retained documentation example, Start setup opens domain setup. Retrieve the TXT requirement in the manual workflow above, then edit the public record at your DNS host.",
+          "text": "Microsoft's domain setup instructions cover the manual workflow above and automatic Domain Connect setup.",
           "links": [
             {
               "phrase": "Microsoft's domain setup instructions",
-              "to": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
+              "to": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide",
+              "start": 0
             }
           ]
+        },
+        {
+          "figure": {
+            "src": "/guides/providers/microsoft-domain-setup.png",
+            "alt": "Microsoft 365 Domains documentation example with contoso.com selected and Start setup highlighted.",
+            "caption": "Microsoft's documentation shows Start setup for the example domain contoso.com. For your custom domain, use DNS records, then Manage DNS, to retrieve its requirements. Make the SPF edit at the DNS host identified above. Source checked October 14, 2026.",
+            "width": 582,
+            "height": 189
+          }
         }
-      ],
-      "figure": {
-        "src": "/guides/providers/microsoft-domain-setup.png",
-        "alt": "Microsoft 365 Domains documentation example with contoso.com selected and Start setup highlighted.",
-        "caption": "Microsoft's documentation shows Start setup for the example domain contoso.com. For your custom domain, use DNS records, then Manage DNS, to retrieve its requirements. Make the SPF edit at the DNS host identified above. Source checked October 14, 2026.",
-        "width": 582,
-        "height": 189
-      }
+      ]
     },
     {
       "h": "cPanel: read the proposed SPF value before installing it",
@@ -1318,49 +1450,54 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "cPanel's Email Deliverability documentation",
-              "to": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/"
+              "to": "https://docs.cpanel.net/cpanel/email/email-deliverability-in-cpanel/",
+              "start": 278
             }
           ]
+        },
+        {
+          "figure": {
+            "src": "/guides/providers/cpanel-spf-preview.png",
+            "alt": "cPanel documentation example showing Include List, the unchecked minus-all option, an incomplete SPF preview and Install a Customized SPF Record.",
+            "caption": "Namecheap's cPanel example shows Include List, the -all checkbox, Preview and Install a Customized SPF Record. Its incomplete preview is not a valid record to copy. Check your complete value against your sender list before installation. Source checked October 14, 2026.",
+            "width": 684,
+            "height": 549
+          }
         }
-      ],
-      "figure": {
-        "src": "/guides/providers/cpanel-spf-preview.png",
-        "alt": "cPanel documentation example showing Include List, the unchecked minus-all option, an incomplete SPF preview and Install a Customized SPF Record.",
-        "caption": "Namecheap's cPanel example shows Include List, the -all checkbox, Preview and Install a Customized SPF Record. Its incomplete preview is not a valid record to copy. Check your complete value against your sender list before installation. Source checked October 14, 2026.",
-        "width": 684,
-        "height": 549
-      }
+      ]
     },
     {
       "h": "Fill in the SPF TXT fields",
       "ps": [
-        "At the DNS host, choose TXT as the record type. Use the fields below to create the missing record or repair the existing one. Use the host's accepted name format; editors differ in whether they automatically append the domain."
-      ],
-      "table": {
-        "caption": "SPF record fields at your authoritative DNS host",
-        "headers": [
-          "Field",
-          "What to enter and why"
-        ],
-        "rows": [
-          [
-            "Type",
-            "TXT. SPF is stored as text; an MX record routes incoming mail and cannot hold this policy."
-          ],
-          [
-            "Name / Host",
-            "The envelope domain you are configuring. For the root of example.com, many editors use @ or a blank field. For bounce.example.com in that zone, many use bounce. A host requiring a full name uses bounce.example.com. Check the saved full name to avoid example.com.example.com."
-          ],
-          [
-            "Value / Content / TXT data",
-            "The complete combined SPF value for your confirmed senders. Use ordinary spaces between mechanisms, retain exact provider spelling, and follow the editor's instructions about surrounding quotes."
-          ],
-          [
-            "TTL",
-            "The DNS cache lifetime. For a new record, use your provider's recommended value or the editor's default. During a repair, preserve the current value unless the provider requires a change. Check the unit: 3600 seconds is one hour. Changing TTL now does not shorten a previously cached answer."
-          ]
-        ]
-      }
+        "At the DNS host, choose TXT as the record type. Use the fields below to create the missing record or repair the existing one. Use the host's accepted name format; editors differ in whether they automatically append the domain.",
+        {
+          "table": {
+            "caption": "SPF record fields at your authoritative DNS host",
+            "headers": [
+              "Field",
+              "What to enter and why"
+            ],
+            "rows": [
+              [
+                "Type",
+                "TXT. SPF is stored as text; an MX record routes incoming mail and cannot hold this policy."
+              ],
+              [
+                "Name / Host",
+                "The envelope domain you are configuring. For the root of example.com, many editors use @ or a blank field. For bounce.example.com in that zone, many use bounce. A host requiring a full name uses bounce.example.com. Check the saved full name to avoid example.com.example.com."
+              ],
+              [
+                "Value / Content / TXT data",
+                "The complete combined SPF value for your confirmed senders. Use ordinary spaces between mechanisms, retain exact provider spelling, and follow the editor's instructions about surrounding quotes."
+              ],
+              [
+                "TTL",
+                "The DNS cache lifetime. For a new record, use your provider's recommended value or the editor's default. During a repair, preserve the current value unless the provider requires a change. Check the unit: 3600 seconds is one hour. Changing TTL now does not shorten a previously cached answer."
+              ]
+            ]
+          }
+        }
+      ]
     },
     {
       "h": "Create, edit or consolidate the record",
@@ -1379,7 +1516,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "RFC 7208",
-              "to": "https://datatracker.ietf.org/doc/html/rfc7208"
+              "to": "https://datatracker.ietf.org/doc/html/rfc7208",
+              "start": 0
             }
           ]
         },
@@ -1388,7 +1526,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google Admin Toolbox Check MX",
-              "to": "https://toolbox.googleapps.com/apps/checkmx/"
+              "to": "https://toolbox.googleapps.com/apps/checkmx/",
+              "start": 38
             }
           ]
         },
@@ -1397,7 +1536,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Kitterman's SPF Record Testing Tools",
-              "to": "https://www.kitterman.com/spf/validate.html"
+              "to": "https://www.kitterman.com/spf/validate.html",
+              "start": 57
             }
           ]
         },
@@ -1422,7 +1562,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google's SPF troubleshooting guide",
-              "to": "https://knowledge.workspace.google.com/admin/security/troubleshoot-spf-issues"
+              "to": "https://knowledge.workspace.google.com/admin/security/troubleshoot-spf-issues",
+              "start": 0
             }
           ]
         },
@@ -1431,30 +1572,33 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Gmail's full-header instructions",
-              "to": "https://support.google.com/mail/answer/29436"
+              "to": "https://support.google.com/mail/answer/29436",
+              "start": 0
             }
           ]
-        }
+        },
+        "Keep the repaired SPF value, its previous version and the test results from each sending route so you can check the next mail-service change against them."
       ]
     },
     {
       "h": "If the repair fails, restore the captured state",
       "ps": [
-        "If a working business route starts failing after your edit, return to the same DNS record and restore its saved value, name and TTL. If you created a previously missing record, removing that new row returns DNS to its earlier state; it also restores the lack of SPF. First check whether you can correct an omitted legitimate sender in the single record. For a consolidation, keep the single valid policy if that is the repair needed; recreating the original duplicates restores their SPF error.",
+        "If a working business route starts failing after your edit, first check whether you omitted a legitimate sender from the single record. If you need to restore the earlier working setup, return to the same DNS record and restore its saved value, name and TTL. Removing a newly created record returns DNS to its earlier state, including the lack of SPF. For a consolidation, keep the single valid policy if that is the repair needed; recreating the original duplicates restores their SPF error.",
         "Query DNS after restoration and retest the affected service. Receivers can continue using cached answers until their TTL expires. Keep the original configuration and failed test headers so the mail provider can compare the sending IP, envelope domain and authorization. Restoring DNS can recover an earlier working setup, but an originally missing or invalid record still needs repair.",
         {
           "text": "Review the choice of ~all or -all separately in the SPF softfail guide. Helm's public scan can recheck the published configuration; it cannot establish your complete sender inventory, assess internal systems or promise inbox delivery. Help from Helm needs an agreed scope; retained IT and the relevant vendors handle administration under their arrangements.",
           "links": [
             {
               "phrase": "SPF softfail guide",
-              "to": "/resources/review-spf-softfail/"
+              "to": "/resources/review-spf-softfail/",
+              "start": 52
             }
           ]
         }
       ]
     }
   ],
-  "takeaway": "Keep the repaired SPF value, its previous version and the test results from each sending route so you can check the next mail-service change against them.",
+  "takeaway": "",
   "readingLayout": true,
   "hideVisual": true,
   "organizationByline": true,
@@ -1463,7 +1607,8 @@ export const findingGuides: Article[] = [
     "sub": "Tell us what the scan found and which provider manages the service. We can agree on a scope for Helm’s help. Your existing IT team and vendors handle the configuration changes.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
-  }
+  },
+  "updated": "2026-10-24"
 },
   {
   "slug": "enable-dnssec-safely",
@@ -1485,7 +1630,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "DNSSEC introduction",
-              "to": "https://datatracker.ietf.org/doc/html/rfc4033"
+              "to": "https://datatracker.ietf.org/doc/html/rfc4033",
+              "start": 202
             }
           ]
         },
@@ -1502,7 +1648,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google Admin Toolbox Dig",
-              "to": "https://toolbox.googleapps.com/apps/dig/"
+              "to": "https://toolbox.googleapps.com/apps/dig/",
+              "start": 32
             }
           ]
         },
@@ -1563,7 +1710,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Cloudflare's DNSSEC instructions",
-              "to": "https://developers.cloudflare.com/dns/dnssec/"
+              "to": "https://developers.cloudflare.com/dns/dnssec/",
+              "start": 0
             }
           ]
         }
@@ -1572,37 +1720,40 @@ export const findingGuides: Article[] = [
     {
       "h": "Enter the DS fields supplied for your zone",
       "ps": [
-        "At an external registrar, open the domain's DNSSEC or DS records settings. This is a delegation setting for the registered domain, not an ordinary text (TXT) record in your child zone. Some registrars accept one DS line; others ask for its four fields separately. Copy those fields from your DNS host's current generated DS."
-      ],
-      "table": {
-        "caption": "DS record fields for registrar publication",
-        "headers": [
-          "Field",
-          "Meaning and source"
-        ],
-        "rows": [
-          [
-            "Key tag / KeyTag",
-            "A numeric identifier for the signing key. Copy it from this zone's generated DS; a tag for another domain does not identify your key."
-          ],
-          [
-            "Algorithm",
-            "The numeric code or matching label for the public-key signing algorithm. Choose the DNS host's supplied value. Do not substitute a different algorithm because the registrar accepts it."
-          ],
-          [
-            "Digest type / DigestType",
-            "The code for the hash function used to calculate the DS digest. A hash function turns the public-key data into a fingerprint for comparison. It is separate from the signing algorithm. Match the supplied DS exactly."
-          ],
-          [
-            "Digest",
-            "The long hexadecimal fingerprint of the relevant DNSKEY. Copy every character from your zone's DS. It is not the full DNSKEY and not a private key."
-          ],
-          [
-            "TTL, if shown",
-            "The parent record's cache lifetime. Save it for rollback planning. The parent or registrar may control this value; the TTL of a website address record is a different setting."
-          ]
-        ]
-      }
+        "At an external registrar, open the domain's DNSSEC or DS records settings. This is a delegation setting for the registered domain, not an ordinary text (TXT) record in your child zone. Some registrars accept one DS line; others ask for its four fields separately. Copy those fields from your DNS host's current generated DS.",
+        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
+        {
+          "table": {
+            "caption": "DS record fields for registrar publication",
+            "headers": [
+              "Field",
+              "Meaning and source"
+            ],
+            "rows": [
+              [
+                "Key tag / KeyTag",
+                "A numeric identifier for the signing key. Copy it from this zone's generated DS; a tag for another domain does not identify your key."
+              ],
+              [
+                "Algorithm",
+                "The numeric code or matching label for the public-key signing algorithm. Choose the DNS host's supplied value. Do not substitute a different algorithm because the registrar accepts it."
+              ],
+              [
+                "Digest type / DigestType",
+                "The code for the hash function used to calculate the DS digest. A hash function turns the public-key data into a fingerprint for comparison. It is separate from the signing algorithm. Match the supplied DS exactly."
+              ],
+              [
+                "Digest",
+                "The long hexadecimal fingerprint of the relevant DNSKEY. Copy every character from your zone's DS. It is not the full DNSKEY and not a private key."
+              ],
+              [
+                "TTL, if shown",
+                "The parent record's cache lifetime. Save it for rollback planning. The parent or registrar may control this value; the TTL of a website address record is a different setting."
+              ]
+            ]
+          }
+        }
+      ]
     },
     {
       "h": "Namecheap registrar with external DNS: add or inspect the DS entry",
@@ -1612,7 +1763,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Namecheap's custom-DNS instructions",
-              "to": "https://www.namecheap.com/support/knowledgebase/article.aspx/9722/2232/managing-dnssec-for-domains-pointed-to-custom-dns/"
+              "to": "https://www.namecheap.com/support/knowledgebase/article.aspx/9722/2232/managing-dnssec-for-domains-pointed-to-custom-dns/",
+              "start": 92
             }
           ]
         },
@@ -1639,7 +1791,8 @@ export const findingGuides: Article[] = [
               "links": [
                 {
                   "phrase": "DNSViz",
-                  "to": "https://dnsviz.net/"
+                  "to": "https://dnsviz.net/",
+                  "start": 5
                 }
               ]
             },
@@ -1650,11 +1803,12 @@ export const findingGuides: Article[] = [
           "ordered": true
         },
         {
-          "text": "Cloudflare's DNSSEC troubleshooting guide explains dig results and links to DNSViz. Keep the full chain result with your service tests; a DNSKEY observation from a public scan covers only part of the setup.",
+          "text": "Cloudflare's DNSSEC troubleshooting guide explains dig results and links to DNSViz. Keep the full chain result with your service tests; a DNSKEY observation from a public scan covers only part of the setup. Save the validated delegation and the parent DS TTL with your domain records; you will need them before a nameserver move, key rollover or DNSSEC rollback.",
           "links": [
             {
               "phrase": "Cloudflare's DNSSEC troubleshooting guide",
-              "to": "https://developers.cloudflare.com/dns/dnssec/troubleshooting/"
+              "to": "https://developers.cloudflare.com/dns/dnssec/troubleshooting/",
+              "start": 0
             }
           ]
         }
@@ -1675,7 +1829,16 @@ export const findingGuides: Article[] = [
           "list": [
             "If recovery requires returning to an unsigned delegation, remove the parent DS entries for this zone through the registrar first. During a managed rollover or migration, follow that arrangement's recovery procedure so another active signing path is not removed by mistake. For Cloudflare Registrar, use its documented registrar workflow. Keep the current signing keys and service available while DS removal propagates.",
             "Confirm that the parent no longer publishes the DS and record the time. Keep signing available until the removed parent DS's previously published TTL has fully expired after removal. Use the TTL captured during the starting checks or after enablement, together with the provider's recovery guidance. A website record's TTL or an arbitrary one-hour wait does not establish when cached DS entries have expired.",
-            "Only then disable zone signing if that is the intended recovery. With automatic DS publication, check what the provider's control does and verify that parent removal has completed. Cloudflare's disable control can leave signing and DNSKEY records present; stopping signing and deleting keys is a separate operation with its own recovery guidance. Automatic registrar publication timing is not manually controlled.",
+            {
+              "text": "Only then disable zone signing if that is the intended recovery. With automatic DS publication, check what the provider's control does and verify that parent removal has completed. Cloudflare's disable control can leave signing and DNSKEY records present. Stopping signing and deleting keys is a separate operation: Cloudflare recommends waiting at least 1.5 times the removed DS record's TTL before deleting the remaining DNSKEY records. Automatic registrar publication timing is not manually controlled.",
+              "links": [
+                {
+                  "phrase": "Cloudflare recommends waiting at least 1.5 times the removed DS record's TTL",
+                  "to": "https://developers.cloudflare.com/dns/dnssec/troubleshooting/#delete-remaining-dnskey-records-after-disabling-dnssec",
+                  "start": 316
+                }
+              ]
+            },
             "Query through validating resolvers again, open the website and repeat mail tests. DNS caching can delay recovery. Keep the failed validation and restored state so you can resolve the underlying problem before re-enabling."
           ],
           "ordered": true
@@ -1684,7 +1847,7 @@ export const findingGuides: Article[] = [
       ]
     }
   ],
-  "takeaway": "Save the validated delegation and the parent DS TTL with your domain records; you will need them before a nameserver move, key rollover or DNSSEC rollback.",
+  "takeaway": "",
   "readingLayout": true,
   "hideVisual": true,
   "organizationByline": true,
@@ -1693,7 +1856,8 @@ export const findingGuides: Article[] = [
     "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
-  }
+  },
+  "updated": "2026-10-24"
 },
   {
   "slug": "set-up-mta-sts",
@@ -1716,7 +1880,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "MTA-STS standard",
-              "to": "https://datatracker.ietf.org/doc/html/rfc8461"
+              "to": "https://datatracker.ietf.org/doc/html/rfc8461",
+              "start": 43
             }
           ]
         },
@@ -1725,7 +1890,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "TLS reporting guide",
-              "to": "/resources/set-up-tls-reporting/"
+              "to": "/resources/set-up-tls-reporting/",
+              "start": 98
             }
           ]
         }
@@ -1762,7 +1928,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google’s configuration check",
-              "to": "https://knowledge.workspace.google.com/admin/gmail/advanced/check-your-mta-sts-configuration"
+              "to": "https://knowledge.workspace.google.com/admin/gmail/advanced/check-your-mta-sts-configuration",
+              "start": 238
             }
           ]
         },
@@ -1772,7 +1939,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Microsoft’s MTA-STS guidance",
-              "to": "https://learn.microsoft.com/en-us/exchange/security-and-compliance/enhance-mail-flow-using-strict-transport-security"
+              "to": "https://learn.microsoft.com/en-us/exchange/security-and-compliance/enhance-mail-flow-using-strict-transport-security",
+              "start": 195
             }
           ]
         },
@@ -1781,7 +1949,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "hosting walkthrough",
-              "to": "https://learn.microsoft.com/en-us/exchange/security-and-compliance/enhance-mail-flow-using-strict-transport-security"
+              "to": "https://learn.microsoft.com/en-us/exchange/security-and-compliance/enhance-mail-flow-using-strict-transport-security",
+              "start": 72
             }
           ]
         }
@@ -1801,7 +1970,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google’s policy instructions",
-              "to": "https://knowledge.workspace.google.com/admin/gmail/advanced/create-an-mta-sts-policy"
+              "to": "https://knowledge.workspace.google.com/admin/gmail/advanced/create-an-mta-sts-policy",
+              "start": 0
             }
           ]
         },
@@ -1810,41 +1980,45 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google’s testing guidance",
-              "to": "https://knowledge.workspace.google.com/admin/gmail/advanced/create-an-mta-sts-policy"
+              "to": "https://knowledge.workspace.google.com/admin/gmail/advanced/create-an-mta-sts-policy",
+              "start": 0
             }
           ]
+        },
+        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
+        {
+          "table": {
+            "caption": "MTA-STS policy fields",
+            "headers": [
+              "Field",
+              "Meaning",
+              "What to enter"
+            ],
+            "rows": [
+              [
+                "version",
+                "The policy format version.",
+                "STSv1, with this spelling and capitalization."
+              ],
+              [
+                "mode",
+                "How supporting senders apply the policy.",
+                "testing permits delivery despite MTA-STS validation failures. enforce withholds delivery to destinations that fail validation. none tells senders fetching this policy that the domain has no active MTA-STS policy."
+              ],
+              [
+                "mx",
+                "A permitted receiving-server hostname or supported pattern.",
+                "One mx line for each required destination or provider-approved pattern. Include backup or gateway destinations. Enter the hostname without the priority number or the final dot printed by dig."
+              ],
+              [
+                "max_age",
+                "How long a sender can cache this policy, in seconds.",
+                "Use a whole number from 0 to 31557600, chosen with your provider’s rollout and recovery instructions. 86400 is one day in this fictional example; it is not a universal recommendation."
+              ]
+            ]
+          }
         }
-      ],
-      "table": {
-        "caption": "MTA-STS policy fields",
-        "headers": [
-          "Field",
-          "Meaning",
-          "What to enter"
-        ],
-        "rows": [
-          [
-            "version",
-            "The policy format version.",
-            "STSv1, with this spelling and capitalization."
-          ],
-          [
-            "mode",
-            "How supporting senders apply the policy.",
-            "testing permits delivery despite MTA-STS validation failures. enforce withholds delivery to destinations that fail validation. none tells senders fetching this policy that the domain has no active MTA-STS policy."
-          ],
-          [
-            "mx",
-            "A permitted receiving-server hostname or supported pattern.",
-            "One mx line for each required destination or provider-approved pattern. Include backup or gateway destinations. Enter the hostname without the priority number or the final dot printed by dig."
-          ],
-          [
-            "max_age",
-            "How long a sender can cache this policy, in seconds.",
-            "Use a whole number from 0 to 31557600, chosen with your provider’s rollout and recovery instructions. 86400 is one day in this fictional example; it is not a universal recommendation."
-          ]
-        ]
-      }
+      ]
     },
     {
       "h": "Host the file at the exact HTTPS address",
@@ -1863,7 +2037,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google’s publishing instructions",
-              "to": "https://knowledge.workspace.google.com/admin/gmail/advanced/publish-your-mta-sts-policy"
+              "to": "https://knowledge.workspace.google.com/admin/gmail/advanced/publish-your-mta-sts-policy",
+              "start": 0
             }
           ]
         },
@@ -1885,7 +2060,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Zone Editor documentation",
-              "to": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
+              "to": "https://docs.cpanel.net/cpanel/domains/zone-editor/",
+              "start": 193
             }
           ]
         },
@@ -1894,43 +2070,49 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Cloudflare’s DNS record instructions",
-              "to": "https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/"
+              "to": "https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/",
+              "start": 110
             }
           ]
+        },
+        {
+          "figure": {
+            "src": "/guides/providers/cpanel-zone-add.png",
+            "alt": "cPanel Zone Editor example with Add Record highlighted; the table shows Name, TTL, Type, Record and Actions.",
+            "caption": "Namecheap’s published cPanel example highlights Add Record. Use it when _mta-sts is absent, then choose TXT; use Edit for an existing row. The pictured A record and its IP address are unrelated to an MTA-STS marker. This is a provider documentation example, not a Helm or customer account.",
+            "width": 1221,
+            "height": 253
+          }
+        },
+        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
+        {
+          "table": {
+            "caption": "Fields for the MTA-STS DNS marker",
+            "headers": [
+              "DNS field",
+              "Value or decision"
+            ],
+            "rows": [
+              [
+                "Type",
+                "TXT. This is separate from the A, AAAA or CNAME that makes the policy website reachable."
+              ],
+              [
+                "Name / Host",
+                "_mta-sts if the editor appends your domain; _mta-sts.example.com if it requires a complete name. Check the resulting row to avoid _mta-sts.example.com.example.com."
+              ],
+              [
+                "Value / Content / Record",
+                "v=STSv1; id=2026101401 in this illustration. Enter the protocol text, not the HTTPS URL or the contents of mta-sts.txt. Do not add the DNS zone-file quotation marks unless your editor specifically requires them."
+              ],
+              [
+                "TTL",
+                "Time to live, the number of seconds DNS resolvers may cache this TXT answer. Preserve an existing TTL or use the provider’s default for a new record. This is different from the policy’s max_age."
+              ]
+            ]
+          }
         }
-      ],
-      "table": {
-        "caption": "Fields for the MTA-STS DNS marker",
-        "headers": [
-          "DNS field",
-          "Value or decision"
-        ],
-        "rows": [
-          [
-            "Type",
-            "TXT. This is separate from the A, AAAA or CNAME that makes the policy website reachable."
-          ],
-          [
-            "Name / Host",
-            "_mta-sts if the editor appends your domain; _mta-sts.example.com if it requires a complete name. Check the resulting row to avoid _mta-sts.example.com.example.com."
-          ],
-          [
-            "Value / Content / Record",
-            "v=STSv1; id=2026101401 in this illustration. Enter the protocol text, not the HTTPS URL or the contents of mta-sts.txt. Do not add the DNS zone-file quotation marks unless your editor specifically requires them."
-          ],
-          [
-            "TTL",
-            "Time to live, the number of seconds DNS resolvers may cache this TXT answer. Preserve an existing TTL or use the provider’s default for a new record. This is different from the policy’s max_age."
-          ]
-        ]
-      },
-      "figure": {
-        "src": "/guides/providers/cpanel-zone-add.png",
-        "alt": "cPanel Zone Editor example with Add Record highlighted; the table shows Name, TTL, Type, Record and Actions.",
-        "caption": "Namecheap’s published cPanel example highlights Add Record. Use it when _mta-sts is absent, then choose TXT; use Edit for an existing row. The pictured A record and its IP address are unrelated to an MTA-STS marker. This is a provider documentation example, not a Helm or customer account.",
-        "width": 1221,
-        "height": 253
-      }
+      ]
     },
     {
       "h": "Verify publication and test incoming mail",
@@ -1953,20 +2135,21 @@ export const findingGuides: Article[] = [
       "ps": [
         "After all intended MX destinations pass validation and your tests and reports show no unresolved legitimate route, save the working testing file. Change mode to enforce using your provider’s supported policy, publish the file, check its public response, and update the TXT id. Choose max_age with the same recovery plan you used for testing. Watch new TLS reports, delivery logs and external tests during the transition.",
         "If a legitimate sender starts failing, collect its bounce or delay details and the receiving hostname. First correct a wrong mx entry, expired mail-server certificate or broken policy host when the evidence identifies it. If you need to pause MTA-STS enforcement, publish a valid policy with mode: testing and update id. Keep the HTTPS endpoint reachable so senders can fetch the revised policy. Recheck the affected delivery path after the change.",
-        "An older enforced policy may remain cached for its max_age. Deleting the marker or shortening the new policy’s lifetime will not instantly erase those copies, so recovery may be delayed. Use the previous files and publication times to calculate the longest remaining cache window with your provider. A scheduled change of mail gateways needs compatible policy coverage before the MX cutover for this reason.",
+        "An older enforced policy may remain cached for its max_age. Deleting the marker or shortening the new policy’s lifetime will not instantly erase those copies, so recovery may be delayed. For each previous policy, add its max_age to the time it was last served. Use the latest resulting expiry to plan the remaining cache window with your provider. A scheduled change of mail gateways needs compatible policy coverage before the MX cutover for this reason.",
         {
           "text": "For permanent removal, the standard’s removal procedure uses mode: none, a new identifier and a wait for all previously served policies to expire before removing the marker and HTTPS endpoint. Keep TLS reporting available while investigating; changing its destination does not require changing MTA-STS enforcement. Helm’s public scan cannot confirm every sender’s enforcement or whether your reports are being received and reviewed.",
           "links": [
             {
               "phrase": "standard’s removal procedure",
-              "to": "https://datatracker.ietf.org/doc/html/rfc8461"
+              "to": "https://datatracker.ietf.org/doc/html/rfc8461",
+              "start": 27
             }
           ]
         }
       ]
     }
   ],
-  "takeaway": "Publish a reachable testing policy for your verified mail destinations, add its DNS marker, and review delivery tests and TLS reports before enforcing it. Record how long previously published policies can remain cached so you can plan recovery.",
+  "takeaway": "",
   "readingLayout": true,
   "hideVisual": true,
   "organizationByline": true,
@@ -1975,7 +2158,8 @@ export const findingGuides: Article[] = [
     "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
-  }
+  },
+  "updated": "2026-10-24"
 },
   {
   "slug": "set-up-tls-reporting",
@@ -1989,6 +2173,12 @@ export const findingGuides: Article[] = [
   "lead": [],
   "sections": [
     {
+      "h": "Quick answer",
+      "ps": [
+        "Create and test the destination first, then publish one valid _smtp._tls TXT record. Verify the public answer and actual report receipt separately, and use reported failures to investigate the affected mail or policy host."
+      ]
+    },
+    {
       "h": "What TLS reports contain, and what rua means",
       "ps": [
         "TLS stands for Transport Layer Security, which encrypts a connection. TLS-RPT is the reporting protocol for email transport. A report summarizes connections from a participating sending service to your receiving mail service during a reporting period. It can contain counts of successes and failures, server names, IP addresses and the policy the sender used. It is not an alert for each individual message.",
@@ -1997,7 +2187,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "TLS-RPT standard",
-              "to": "https://datatracker.ietf.org/doc/html/rfc8460"
+              "to": "https://datatracker.ietf.org/doc/html/rfc8460",
+              "start": 4
             }
           ]
         },
@@ -2007,7 +2198,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "MTA-STS setup guide",
-              "to": "/resources/set-up-mta-sts/"
+              "to": "/resources/set-up-mta-sts/",
+              "start": 4
             }
           ]
         }
@@ -2031,7 +2223,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Microsoft’s shared-mailbox instructions",
-              "to": "https://learn.microsoft.com/en-us/microsoft-365/admin/email/create-a-shared-mailbox?view=o365-worldwide"
+              "to": "https://learn.microsoft.com/en-us/microsoft-365/admin/email/create-a-shared-mailbox?view=o365-worldwide",
+              "start": 315
             }
           ]
         },
@@ -2040,7 +2233,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google’s user-creation instructions",
-              "to": "https://knowledge.workspace.google.com/admin/users/add-an-account-for-a-new-user"
+              "to": "https://knowledge.workspace.google.com/admin/users/add-an-account-for-a-new-user",
+              "start": 345
             }
           ]
         },
@@ -2049,7 +2243,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "cPanel Email Accounts instructions",
-              "to": "https://docs.cpanel.net/cpanel/email/email-accounts/"
+              "to": "https://docs.cpanel.net/cpanel/email/email-accounts/",
+              "start": 314
             }
           ]
         },
@@ -2074,41 +2269,44 @@ export const findingGuides: Article[] = [
           "caption": "Illustrative TXT value. Publish only after substituting a verified report destination.",
           "language": "text"
         },
-        "If you intentionally use two email destinations, write each complete mailto: URI, with a comma between them. For example, rua=mailto:tls-reports@example.com,mailto:transport-review@example.com demonstrates the syntax. Both recipients receive the report data. Do not add a second address simply as an untested backup."
-      ],
-      "table": {
-        "caption": "TLS-RPT DNS fields",
-        "headers": [
-          "Field",
-          "What it means and what to enter"
-        ],
-        "rows": [
-          [
-            "Type",
-            "TXT for the manual reporting record described here. Its value is text; an MX record selects mail routing. Check an existing CNAME delegation before adding TXT."
-          ],
-          [
-            "Name / Host",
-            "_smtp._tls when the DNS editor adds your domain, or the complete _smtp._tls.example.com when required. Preserve both underscores and the dot between smtp and tls."
-          ],
-          [
-            "Value / Content / Record",
-            "The complete v=TLSRPTv1; rua=... string. v identifies the protocol version. rua identifies the destination. Use ordinary semicolons and an equals sign for each field."
-          ],
-          [
-            "mailto: destination",
-            "An existing, tested email address with mailto: immediately before it. A bare email address lacks the delivery method."
-          ],
-          [
-            "https:// destination",
-            "An exact upload endpoint assigned by a TLS-RPT service. A browser loading a page at that address does not prove it accepts report uploads."
-          ],
-          [
-            "TTL",
-            "Time to live in seconds, which controls how long resolvers may cache this DNS answer. Preserve an existing TTL or use the DNS provider’s default for a new record."
-          ]
-        ]
-      }
+        "If you intentionally use two email destinations, write each complete mailto: URI, with a comma between them. For example, rua=mailto:tls-reports@example.com,mailto:transport-review@example.com demonstrates the syntax. Either recipient may receive report data; a sender can choose to deliver to only one of the listed destinations. Do not add a second address simply as an untested backup.",
+        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
+        {
+          "table": {
+            "caption": "TLS-RPT DNS fields",
+            "headers": [
+              "Field",
+              "What it means and what to enter"
+            ],
+            "rows": [
+              [
+                "Type",
+                "TXT for the manual reporting record described here. Its value is text; an MX record selects mail routing. Check an existing CNAME delegation before adding TXT."
+              ],
+              [
+                "Name / Host",
+                "_smtp._tls when the DNS editor adds your domain, or the complete _smtp._tls.example.com when required. Preserve both underscores and the dot between smtp and tls."
+              ],
+              [
+                "Value / Content / Record",
+                "The complete v=TLSRPTv1; rua=... string. v identifies the protocol version. rua identifies the destination. Use ordinary semicolons and an equals sign for each field."
+              ],
+              [
+                "mailto: destination",
+                "An existing, tested email address with mailto: immediately before it. A bare email address lacks the delivery method."
+              ],
+              [
+                "https:// destination",
+                "An exact upload endpoint assigned by a TLS-RPT service. A browser loading a page at that address does not prove it accepts report uploads."
+              ],
+              [
+                "TTL",
+                "Time to live in seconds, which controls how long resolvers may cache this DNS answer. Preserve an existing TTL or use the DNS provider’s default for a new record."
+              ]
+            ]
+          }
+        }
+      ]
     },
     {
       "h": "Use the right DNS editor for your provider",
@@ -2118,7 +2316,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "cPanel Zone Editor documentation",
-              "to": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
+              "to": "https://docs.cpanel.net/cpanel/domains/zone-editor/",
+              "start": 191
             }
           ]
         },
@@ -2127,7 +2326,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Cloudflare DNS instructions",
-              "to": "https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/"
+              "to": "https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/",
+              "start": 175
             }
           ]
         },
@@ -2136,18 +2336,21 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google’s TLS reporting instructions",
-              "to": "https://knowledge.workspace.google.com/admin/gmail/advanced/turn-on-mta-sts-and-tls-reporting"
+              "to": "https://knowledge.workspace.google.com/admin/gmail/advanced/turn-on-mta-sts-and-tls-reporting",
+              "start": 0
             }
           ]
+        },
+        {
+          "figure": {
+            "src": "/guides/providers/cpanel-zone-add.png",
+            "alt": "cPanel Zone Editor example with Add Record highlighted; the table shows Name, TTL, Type, Record and Actions.",
+            "caption": "Namecheap’s cPanel documentation highlights Add Record for a missing DNS row. Select TXT for TLS reporting and use _smtp._tls as the host prefix when the editor adds your domain. The displayed A record is unrelated. This example shows a provider documentation account, not Helm or a customer.",
+            "width": 1221,
+            "height": 253
+          }
         }
-      ],
-      "figure": {
-        "src": "/guides/providers/cpanel-zone-add.png",
-        "alt": "cPanel Zone Editor example with Add Record highlighted; the table shows Name, TTL, Type, Record and Actions.",
-        "caption": "Namecheap’s cPanel documentation highlights Add Record for a missing DNS row. Select TXT for TLS reporting and use _smtp._tls as the host prefix when the editor adds your domain. The displayed A record is unrelated. This example shows a provider documentation account, not Helm or a customer.",
-        "width": 1221,
-        "height": 253
-      }
+      ]
     },
     {
       "h": "Verify the public record and allow for caching",
@@ -2188,7 +2391,7 @@ export const findingGuides: Article[] = [
       ]
     }
   ],
-  "takeaway": "Create and test the destination first, then publish one valid _smtp._tls TXT record. Verify the public answer and actual report receipt separately, and use reported failures to investigate the affected mail or policy host.",
+  "takeaway": "",
   "readingLayout": true,
   "hideVisual": true,
   "organizationByline": true,
@@ -2197,7 +2400,8 @@ export const findingGuides: Article[] = [
     "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
-  }
+  },
+  "updated": "2026-10-24"
 },
   {
   "slug": "fix-mx-mail-routing",
@@ -2207,9 +2411,15 @@ export const findingGuides: Article[] = [
   "readMin": 18,
   "lane": "All industries",
   "laneTo": "/",
-  "intro": "Mail Exchange (MX) records in the Domain Name System (DNS) tell other mail systems where to deliver mail for your domain. Confirm the intended receiving service, make sure it is ready for your addresses, then compare and correct the records at the active DNS host. Test incoming mail afterwards. A failed scanner connection alone does not prove that routing is broken.",
+  "intro": "Mail Exchange (MX) records in the Domain Name System (DNS) tell other mail systems where to deliver mail for your domain. A failed scanner connection alone does not prove that routing is broken.",
   "lead": [],
   "sections": [
+    {
+      "h": "Quick answer",
+      "ps": [
+        "Confirm that the intended receiving service is ready for your domain and addresses before changing MX. Save the complete current set, compare it with the receiving provider's instructions, and correct confirmed differences at the active DNS host. Then test incoming mail and check the receiving logs."
+      ]
+    },
     {
       "h": "Decide whether this domain should receive mail",
       "ps": [
@@ -2217,11 +2427,12 @@ export const findingGuides: Article[] = [
         "SMTP, or Simple Mail Transfer Protocol, is the protocol mail servers use to deliver messages. An MX record names an SMTP receiving destination. A filtering gateway accepts incoming mail first, applies its checks and passes accepted messages on to the mailbox platform.",
         "For an active mailbox domain, confirm which service receives mail first. That can be Microsoft 365, Google Workspace, a cPanel server or a filtering gateway that forwards to one of them. A person using Outlook can have any of those arrangements. The expected MX destination comes from the receiving provider's configuration for your domain and product.",
         {
-          "text": "A domain deliberately accepting no mail can use a null MX: one MX entry with priority 0 and destination represented by a dot. Priority is the preference number for a destination; lower numbers are tried first. Null MX explicitly declares that the domain accepts no mail. Keep it unless the domain is being brought into receiving service. The null-MX standard explains the constraints, including how it affects addresses used for sending.",
+          "text": "A domain deliberately accepting no mail can declare that with a null MX: one MX entry with priority 0 and destination represented by a dot. Keep it unless the domain is being brought into receiving service. The null-MX standard explains the constraints, including how it affects addresses used for sending.",
           "links": [
             {
               "phrase": "null-MX standard",
-              "to": "https://datatracker.ietf.org/doc/html/rfc7505"
+              "to": "https://datatracker.ietf.org/doc/html/rfc7505",
+              "start": 211
             }
           ]
         },
@@ -2237,7 +2448,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google Admin Toolbox Dig",
-              "to": "https://toolbox.googleapps.com/apps/dig/"
+              "to": "https://toolbox.googleapps.com/apps/dig/",
+              "start": 32
             }
           ]
         },
@@ -2273,7 +2485,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "SMTP's routing standard",
-              "to": "https://datatracker.ietf.org/doc/html/rfc5321"
+              "to": "https://datatracker.ietf.org/doc/html/rfc5321",
+              "start": 0
             }
           ]
         }
@@ -2298,37 +2511,39 @@ export const findingGuides: Article[] = [
     {
       "h": "Understand the MX editor fields",
       "ps": [
-        "Use the exact record values supplied by the receiving provider. The hypothetical example mail.example.net with priority 10 only illustrates the fields; it is not a destination for your domain. Lower numbers have higher priority. Two entries at the same priority can both be used, so priority is not a way to combine unrelated mailbox platforms."
-      ],
-      "table": {
-        "caption": "MX fields at the authoritative DNS host",
-        "headers": [
-          "Field",
-          "What it means and how to fill it"
-        ],
-        "rows": [
-          [
-            "Type",
-            "MX, short for Mail Exchange. SPF (Sender Policy Framework) uses a TXT text record to authorize outgoing sending servers; that record cannot hold an MX destination."
-          ],
-          [
-            "Name / Host / Alias",
-            "The domain receiving the mail. The root domain, the main name such as example.com, often uses @ or a blank field. For support.example.com in the example.com zone, many hosts accept support; others require a full name. Confirm the full saved name and the provider's format."
-          ],
-          [
-            "Destination / Target / Points to",
-            "The provider-supplied mail-server hostname. Use no email address, https:// prefix, URL path or SPF include, which is an authorization term for outgoing senders. Follow the DNS host's instructions for a trailing dot. A fully qualified name is the complete hostname, such as mail.example.net; editors can otherwise append the zone's domain again."
-          ],
-          [
-            "Priority / Preference",
-            "The provider-supplied number. Lower numbers are tried first; 10 is preferred to 20. Preserve each priority in a documented multi-record set."
-          ],
-          [
-            "TTL",
-            "Time to live, the period DNS answers can remain cached. Preserve the existing value or follow the provider's specified value. Check whether the editor uses seconds, minutes or hours. A TTL change cannot shorten an answer already cached under the previous TTL."
-          ]
-        ]
-      }
+        "Use the exact record values supplied by the receiving provider. The hypothetical example mail.example.net with priority 10 only illustrates the fields; it is not a destination for your domain. Lower numbers have higher priority. Two entries at the same priority can both be used, so priority is not a way to combine unrelated mailbox platforms.",
+        {
+          "table": {
+            "caption": "MX fields at the authoritative DNS host",
+            "headers": [
+              "Field",
+              "What it means and how to fill it"
+            ],
+            "rows": [
+              [
+                "Type",
+                "MX, short for Mail Exchange. SPF (Sender Policy Framework) uses a TXT text record to authorize outgoing sending servers; that record cannot hold an MX destination."
+              ],
+              [
+                "Name / Host / Alias",
+                "The domain receiving the mail. The root domain, the main name such as example.com, often uses @ or a blank field. For support.example.com in the example.com zone, many hosts accept support; others require a full name. Confirm the full saved name and the provider's format."
+              ],
+              [
+                "Destination / Target / Points to",
+                "The provider-supplied mail-server hostname. Use no email address, https:// prefix, URL path or SPF include, which is an authorization term for outgoing senders. Follow the DNS host's instructions for a trailing dot. A fully qualified name is the complete hostname, such as mail.example.net; editors can otherwise append the zone's domain again."
+              ],
+              [
+                "Priority / Preference",
+                "The provider-supplied number. Lower numbers are tried first; 10 is preferred to 20. Preserve each priority in a documented multi-record set."
+              ],
+              [
+                "TTL",
+                "Time to live, the period DNS answers can remain cached. Preserve the existing value or follow the provider's specified value. Check whether the editor uses seconds, minutes or hours. A TTL change cannot shorten an answer already cached under the previous TTL."
+              ]
+            ]
+          }
+        }
+      ]
     },
     {
       "h": "Microsoft 365: retrieve the destination for your custom domain",
@@ -2343,22 +2558,25 @@ export const findingGuides: Article[] = [
           "ordered": true
         },
         {
-          "text": "Microsoft's domain setup instructions explain how to retrieve the domain-specific record and prepare mailboxes. The retained Start setup example opens the domain setup workflow. Retrieve your custom domain's target in the manual steps above before opening the DNS editor.",
+          "text": "Microsoft's domain setup instructions explain how to retrieve the domain-specific record and prepare mailboxes. The Start setup screenshot shows the domain setup workflow for an example domain. Retrieve your custom domain's target in the manual steps above before opening the DNS editor.",
           "links": [
             {
               "phrase": "Microsoft's domain setup instructions",
-              "to": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide"
+              "to": "https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide",
+              "start": 0
             }
           ]
+        },
+        {
+          "figure": {
+            "src": "/guides/providers/microsoft-domain-setup.png",
+            "alt": "Microsoft 365 documentation example with contoso.com selected and Start setup highlighted.",
+            "caption": "Microsoft's documentation shows Start setup for the example domain contoso.com. For your custom domain, use DNS records and Manage DNS to retrieve its MX target. Copy that domain's values into the active DNS host. Source checked October 14, 2026.",
+            "width": 582,
+            "height": 189
+          }
         }
-      ],
-      "figure": {
-        "src": "/guides/providers/microsoft-domain-setup.png",
-        "alt": "Microsoft 365 documentation example with contoso.com selected and Start setup highlighted.",
-        "caption": "Microsoft's documentation shows Start setup for the example domain contoso.com. For your custom domain, use DNS records and Manage DNS to retrieve its MX target. Copy that domain's values into the active DNS host. Source checked October 14, 2026.",
-        "width": 582,
-        "height": 189
-      }
+      ]
     },
     {
       "h": "Google Workspace: check the supported record set and Gmail activation",
@@ -2368,7 +2586,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google's current MX setup instructions",
-              "to": "https://knowledge.workspace.google.com/admin/domains/set-up-mx-records-for-google-workspace"
+              "to": "https://knowledge.workspace.google.com/admin/domains/set-up-mx-records-for-google-workspace",
+              "start": 0
             }
           ]
         },
@@ -2386,18 +2605,21 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "cPanel's Zone Editor instructions",
-              "to": "https://docs.cpanel.net/cpanel/domains/zone-editor/"
+              "to": "https://docs.cpanel.net/cpanel/domains/zone-editor/",
+              "start": 0
             }
           ]
+        },
+        {
+          "figure": {
+            "src": "/guides/providers/cpanel-mx.png",
+            "alt": "cPanel Zone Editor example with Name, TTL, Type MX, Priority, Destination and Save Record visible.",
+            "caption": "Namecheap's public cPanel example shows Type MX, Priority, Destination and Save Record. Fill these fields from your receiving provider's instructions. The pictured name, priority 10, TTL 1200 and mail.nctest.info destination are example data. Source checked October 14, 2026.",
+            "width": 1096,
+            "height": 108
+          }
         }
-      ],
-      "figure": {
-        "src": "/guides/providers/cpanel-mx.png",
-        "alt": "cPanel Zone Editor example with Name, TTL, Type MX, Priority, Destination and Save Record visible.",
-        "caption": "Namecheap's public cPanel example shows Type MX, Priority, Destination and Save Record. Fill these fields from your receiving provider's instructions. The pictured name, priority 10, TTL 1200 and mail.nctest.info destination are example data. Source checked October 14, 2026.",
-        "width": 1096,
-        "height": 108
-      }
+      ]
     },
     {
       "h": "cPanel: check the server's local or remote delivery setting",
@@ -2417,7 +2639,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "cPanel's Email Routing documentation",
-              "to": "https://docs.cpanel.net/cpanel/email/email-routing/"
+              "to": "https://docs.cpanel.net/cpanel/email/email-routing/",
+              "start": 0
             }
           ]
         }
@@ -2457,7 +2680,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "unavailable SMTP-check guide",
-              "to": "/resources/investigate-smtp-check/"
+              "to": "/resources/investigate-smtp-check/",
+              "start": 4
             }
           ]
         },
@@ -2469,11 +2693,11 @@ export const findingGuides: Article[] = [
       "ps": [
         "If new delivery fails after your MX change, return to the same DNS editor and restore the saved MX set, including every original priority and TTL, when the previous receiving service still accepts the domain. Remove new destinations that conflict with that restored set. If the original MX set was missing or invalid, restoring it would restore that defect too: correct the confirmed error in the new set or follow the receiving provider's recovery procedure. If you also changed cPanel Email Routing, restore its captured option when it belongs to the earlier working route.",
         "Verify the authoritative and public answers, then repeat external delivery and local-form tests. DNS caches can delay the effect. Restoring MX cannot recover mail already rejected or deliver messages to a disabled previous account, so inspect both providers' logs and establish what happened to the affected tests.",
-        "Keep the previous and repaired MX sets, recipient tests, timestamps, logs and unresolved addresses with your mail configuration. Helm's public scan checks limited public configuration; it does not inspect mailbox readiness, complete delivery logs or internal systems. Help from Helm needs an agreed scope; retained IT and the mail and DNS vendors handle administration under their arrangements."
+        "Keep the previous and repaired MX sets, recipient tests, timestamps, logs and unresolved addresses with your mail configuration. Before the next mail-provider switch, check mailbox readiness and gateway routing again. Helm's public scan checks limited public configuration; it does not inspect mailbox readiness, complete delivery logs or internal systems. Help from Helm needs an agreed scope; retained IT and the mail and DNS vendors handle administration under their arrangements."
       ]
     }
   ],
-  "takeaway": "Retain the verified MX set and recipient tests, and check mailbox readiness and gateway routing again before the next mail-provider switch.",
+  "takeaway": "",
   "readingLayout": true,
   "hideVisual": true,
   "organizationByline": true,
@@ -2482,7 +2706,8 @@ export const findingGuides: Article[] = [
     "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
-  }
+  },
+  "updated": "2026-10-24"
 },
   {
   "slug": "investigate-smtp-check",
@@ -2492,8 +2717,10 @@ export const findingGuides: Article[] = [
   "readMin": 11,
   "lane": "All industries",
   "laneTo": "/",
-  "intro": "If an SMTP check is unavailable, first test whether your domain can receive real mail and compare the result with the receiving provider’s logs. SMTP is the protocol mail servers use to transfer messages. A scanner can fail to connect because of its network, timing or the server’s treatment of probes, even while normal mail arrives.",
-  "lead": [],
+  "intro": "If an SMTP check is unavailable, treat that result as inconclusive. First confirm the domain’s intended mail route, send a controlled external test message and compare the result with the receiving provider’s logs. Change a setting only when that evidence identifies the problem and the provider’s instructions explain the fix.",
+  "lead": [
+    "SMTP is the protocol mail servers use to transfer messages. A scanner can fail to connect because of its network, timing or the server’s treatment of probes, even while normal mail arrives."
+  ],
   "sections": [
     {
       "h": "Understand the connection the scan attempted",
@@ -2505,7 +2732,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "SMTP TLS standard",
-              "to": "https://datatracker.ietf.org/doc/html/rfc3207"
+              "to": "https://datatracker.ietf.org/doc/html/rfc3207",
+              "start": 107
             }
           ]
         }
@@ -2517,7 +2745,7 @@ export const findingGuides: Article[] = [
         "Start with a mailbox address your business currently uses. The domain after @ is the domain to check. A retired brand domain, an active mailbox domain and a domain used only for sending notices may have different receiving arrangements. Check your email-service subscription and the domain list in its account to establish whether this domain is meant to receive mail.",
         "The registrar renews your domain; the DNS host publishes its records; the email host receives and stores mail. Use the Nameservers setting in your registrar account to locate the DNS provider, then open its DNS records or Zone Editor page for this domain. If you cannot locate the login, check the renewal receipt and business password manager, then use that provider’s account-recovery process. Recover access without changing the nameservers.",
         "Read the MX rows and save each priority and destination. Lower priority numbers normally receive the first attempt. Compare the published destinations with your mail-service or filtering-gateway account. A gateway in front of Microsoft 365 or Google Workspace is part of the receiving route and may have the only public MX hostname. Outlook’s name does not identify that route.",
-        "On a computer with dig installed, run this read-only command in Terminal after substituting your domain. The priority and destination should match what you saw in authoritative DNS.",
+        "On a computer with dig installed, run this read-only command in Terminal after substituting your domain. By default, dig queries your computer’s configured DNS server. Compare its answer with the published records; a cached answer can lag behind a recent DNS change.",
         {
           "code": "dig +short MX example.com",
           "caption": "Read the receiving destinations for your domain; example.com is a teaching example.",
@@ -2528,7 +2756,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "MX mail-routing guide",
-              "to": "/resources/fix-mx-mail-routing/"
+              "to": "/resources/fix-mx-mail-routing/",
+              "start": 430
             }
           ]
         },
@@ -2547,7 +2776,7 @@ export const findingGuides: Article[] = [
           ],
           "ordered": true
         },
-        "An SMTP server can accept a message and then route it to quarantine or reject a particular mailbox. That is a different stage from failing to connect. The exact error and log events help you find the stage that needs attention."
+        "A server can accept an SMTP connection but reject a recipient address. It can also accept a message and then route it to quarantine. These are different stages from failing to connect. The exact error and log events help you find the stage that needs attention."
       ]
     },
     {
@@ -2558,17 +2787,19 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Microsoft’s message-trace instructions",
-              "to": "https://learn.microsoft.com/en-us/exchange/monitoring/trace-an-email-message/message-trace-modern-eac"
+              "to": "https://learn.microsoft.com/en-us/exchange/monitoring/trace-an-email-message/message-trace-modern-eac",
+              "start": 290
             }
           ]
         },
-        "If the trace has no matching event, widen the time range, verify the sender and recipient spelling, and consider any gateway before Exchange Online. No event in Exchange does not identify where the connection failed before reaching it. Use the gateway’s log for that part. If you cannot open Message trace, request the message-trace role or a trace export through your Microsoft 365 account-support process, giving the exact test addresses and time range.",
+        "If the trace has no matching event, widen the time range, verify the sender and recipient spelling, and consider any gateway before Exchange Online. No event in Exchange does not identify where the connection failed before reaching it. Use the gateway’s log for that part. If you cannot open Message trace, request the required message-trace permissions or a trace export through your Microsoft 365 account-support process, giving the exact test addresses and time range.",
         {
           "text": "For mail received by a cPanel server, open Email > Track Delivery. Enter your test recipient in Recipient Email and select Run Report. Inspect the matching row’s time, result and available details. Show Blocked & Failed helps find rejected attempts; Show All restores the broader view. cPanel’s Track Delivery instructions explain the report and trace. This view concerns the server’s local delivery activity, so it is unsuitable for a cPanel website whose mail goes directly to another provider.",
           "links": [
             {
               "phrase": "cPanel’s Track Delivery instructions",
-              "to": "https://docs.cpanel.net/cpanel/email/track-delivery/"
+              "to": "https://docs.cpanel.net/cpanel/email/track-delivery/",
+              "start": 286
             }
           ]
         },
@@ -2579,11 +2810,12 @@ export const findingGuides: Article[] = [
       "h": "Check Google Workspace logs and delivered-message headers",
       "ps": [
         {
-          "text": "In Google Workspace, sign in to admin.google.com with the Gmail Settings administrator privilege and go to Reporting > Email Log Search. Open Custom Search, select the test’s date range, enter the complete sender and recipient addresses, and select Search. Use the Message ID when available. Google’s Email Log Search instructions explain the fields and limits; delivery-status searches work for messages within the past 30 days. Search results may take up to an hour.",
+          "text": "In Google Workspace, sign in to admin.google.com with the Gmail Settings administrator privilege and go to Reporting > Email Log Search. Open Custom Search, select the test’s date range, enter the complete sender and recipient addresses, and select Search. Use the Message ID when available. Google’s Email Log Search instructions explain the fields and limits; delivery-status searches work for messages within the past 30 days. Large searches may take up to an hour to return results.",
           "links": [
             {
               "phrase": "Google’s Email Log Search instructions",
-              "to": "https://knowledge.workspace.google.com/admin/support/troubleshooting/find-messages-with-email-log-search"
+              "to": "https://knowledge.workspace.google.com/admin/support/troubleshooting/find-messages-with-email-log-search",
+              "start": 292
             }
           ]
         },
@@ -2592,7 +2824,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google’s missing-message guidance",
-              "to": "https://knowledge.workspace.google.com/admin/support/troubleshooting/not-receiving-email-from-one-sender"
+              "to": "https://knowledge.workspace.google.com/admin/support/troubleshooting/not-receiving-email-from-one-sender",
+              "start": 230
             }
           ]
         },
@@ -2601,7 +2834,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Google’s header instructions",
-              "to": "https://support.google.com/mail/answer/29436?hl=en"
+              "to": "https://support.google.com/mail/answer/29436?hl=en",
+              "start": 108
             }
           ]
         },
@@ -2612,41 +2846,44 @@ export const findingGuides: Article[] = [
     {
       "h": "Match the observed failure to the next useful check",
       "ps": [
-        "Use the stage recorded in the result or log. A public status page can help identify an ongoing provider incident, but compare its affected service and time with your own test. Treat each possible cause below as something to verify."
-      ],
-      "table": {
-        "caption": "SMTP findings and follow-up checks",
-        "headers": [
-          "Observed result",
-          "What to check next"
-        ],
-        "rows": [
-          [
-            "DNS timeout, SERVFAIL or an unresolved destination",
-            "Check authoritative DNS and the MX hostname’s address records through the DNS provider. An unresolved name prevents a connection attempt."
-          ],
-          [
-            "Connection timeout or refusal",
-            "Compare tests from the receiving provider and a network permitted to use port 25. The scanner’s outbound network or the receiving service may block the attempt."
-          ],
-          [
-            "SMTP greeting or probe rejected",
-            "Read the exact server response and its log. Anti-abuse controls, rate limits or a temporary refusal can treat probes differently from ordinary mail."
-          ],
-          [
-            "STARTTLS absent or TLS negotiation fails",
-            "Check the actual receiving service’s TLS configuration and supported protocols with its provider. A successful web HTTPS test uses a different service."
-          ],
-          [
-            "Certificate validation failure",
-            "Check expiry, the receiving MX hostname and the trusted certificate chain on that mail service. A certificate for only the website is insufficient."
-          ],
-          [
-            "Message accepted but absent from the inbox",
-            "Follow the delivery, filtering, forwarding and quarantine events. This can be a mailbox or routing issue after the connection succeeded."
-          ]
-        ]
-      }
+        "Use the stage recorded in the result or log. A public status page can help identify an ongoing provider incident, but compare its affected service and time with your own test. Treat each possible cause below as something to verify.",
+        "On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.",
+        {
+          "table": {
+            "caption": "SMTP findings and follow-up checks",
+            "headers": [
+              "Observed result",
+              "What to check next"
+            ],
+            "rows": [
+              [
+                "DNS timeout, SERVFAIL or an unresolved destination",
+                "Check authoritative DNS and the MX hostname’s address records through the DNS provider. An unresolved name prevents a connection attempt."
+              ],
+              [
+                "Connection timeout or refusal",
+                "Compare tests from the receiving provider and a network permitted to use port 25. The scanner’s outbound network or the receiving service may block the attempt."
+              ],
+              [
+                "SMTP greeting or probe rejected",
+                "Read the exact server response and its log. Anti-abuse controls, rate limits or a temporary refusal can treat probes differently from ordinary mail."
+              ],
+              [
+                "STARTTLS absent or TLS negotiation fails",
+                "Check the actual receiving service’s TLS configuration and supported protocols with its provider. A successful web HTTPS test uses a different service."
+              ],
+              [
+                "Certificate validation failure",
+                "Check expiry, the receiving MX hostname and the trusted certificate chain on that mail service. A certificate for only the website is insufficient."
+              ],
+              [
+                "Message accepted but absent from the inbox",
+                "Follow the delivery, filtering, forwarding and quarantine events. This can be a mailbox or routing issue after the connection succeeded."
+              ]
+            ]
+          }
+        }
+      ]
     },
     {
       "h": "Apply a confirmed fix and verify its scope",
@@ -2659,7 +2896,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "mail-transport guide",
-              "to": "/resources/set-up-mta-sts/"
+              "to": "/resources/set-up-mta-sts/",
+              "start": 52
             }
           ]
         }
@@ -2673,7 +2911,7 @@ export const findingGuides: Article[] = [
       ]
     }
   ],
-  "takeaway": "Treat the unavailable probe as inconclusive while you check the intended mail route, an external test message and the relevant logs. Change a setting only when that evidence identifies the problem and the provider’s instructions explain the fix.",
+  "takeaway": "",
   "readingLayout": true,
   "hideVisual": true,
   "organizationByline": true,
@@ -2682,7 +2920,8 @@ export const findingGuides: Article[] = [
     "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
-  }
+  },
+  "updated": "2026-10-24"
 },
   {
   "slug": "fix-website-https",
@@ -2704,7 +2943,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "MDN’s TLS explanation",
-              "to": "https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Transport_Layer_Security"
+              "to": "https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Transport_Layer_Security",
+              "start": 147
             }
           ]
         },
@@ -2741,43 +2981,45 @@ export const findingGuides: Article[] = [
       "ps": [
         "Use your browser’s site-information or certificate viewer when it is available, and compare the presented certificate with the hostname you opened. The viewer’s label varies by browser. Your host’s certificate details page can also show the certificate it expects to serve. A dashboard saying Active is useful, but the public connection must present the intended certificate.",
         "The certificate’s Subject Alternative Names, often abbreviated SANs, list the names it covers. A wildcard such as *.example.com covers a single subdomain level such as www.example.com; it does not cover example.com itself or a deeper name such as portal.team.example.com. Check every address in your earlier tests, including addresses that redirect.",
-        "A certificate chain contains the site certificate and intermediate certificates that connect it to a trusted issuing authority. A certificate authority, or CA, issues certificates. If an intermediate is missing, some clients may show a trust error even though the site certificate has not expired. Use the chain supplied by your issuer or hosting service for that certificate."
-      ],
-      "table": {
-        "caption": "Certificate and connection findings",
-        "headers": [
-          "What you see",
-          "Likely area to verify",
-          "Repair to pursue after confirmation"
-        ],
-        "rows": [
-          [
-            "Expired or not-yet-valid certificate",
-            "Device clock and the dates on the certificate actually served.",
-            "Renew or reissue an expired certificate and install it on the affected endpoint; correct a local clock error locally."
-          ],
-          [
-            "Hostname mismatch",
-            "SAN coverage, DNS destination and the host’s custom-domain mapping.",
-            "Issue a certificate for the intended hostname or repair a wrong domain mapping or DNS destination."
-          ],
-          [
-            "Untrusted issuer or incomplete chain",
-            "Certificate issuer and intermediate chain on the serving endpoint.",
-            "Install the provider’s complete chain or a certificate trusted by the intended clients."
-          ],
-          [
-            "Timeout, refusal or TLS handshake failure",
-            "DNS, hosting status, port 443 and the proxy-to-origin connection.",
-            "Repair the confirmed network or service problem; a new certificate may not address it."
-          ],
-          [
-            "Page opens, but resources are blocked or insecure",
-            "Browser Console and Network entries for HTTP resources.",
-            "Fix the mixed-content URLs or third-party resource configuration."
-          ]
-        ]
-      }
+        "A certificate chain contains the site certificate and intermediate certificates that connect it to a trusted issuing authority. A certificate authority, or CA, issues certificates. If an intermediate is missing, some clients may show a trust error even though the site certificate has not expired. Use the chain supplied by your issuer or hosting service for that certificate.",
+        {
+          "table": {
+            "caption": "Certificate and connection findings",
+            "headers": [
+              "What you see",
+              "Likely area to verify",
+              "Repair to pursue after confirmation"
+            ],
+            "rows": [
+              [
+                "Expired or not-yet-valid certificate",
+                "Device clock and the dates on the certificate actually served.",
+                "Renew or reissue an expired certificate and install it on the affected endpoint; correct a local clock error locally."
+              ],
+              [
+                "Hostname mismatch",
+                "SAN coverage, DNS destination and the host’s custom-domain mapping.",
+                "Issue a certificate for the intended hostname or repair a wrong domain mapping or DNS destination."
+              ],
+              [
+                "Untrusted issuer or incomplete chain",
+                "Certificate issuer and intermediate chain on the serving endpoint.",
+                "Install the provider’s complete chain or a certificate trusted by the intended clients."
+              ],
+              [
+                "Timeout, refusal or TLS handshake failure",
+                "DNS, hosting status, port 443 and the proxy-to-origin connection.",
+                "Repair the confirmed network or service problem; a new certificate may not address it."
+              ],
+              [
+                "Page opens, but resources are blocked or insecure",
+                "Browser Console and Network entries for HTTP resources.",
+                "Fix the mixed-content URLs or third-party resource configuration."
+              ]
+            ]
+          }
+        }
+      ]
     },
     {
       "h": "Renew a managed certificate or create missing coverage",
@@ -2789,11 +3031,21 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Let’s Encrypt’s challenge documentation",
-              "to": "https://letsencrypt.org/docs/challenge-types/"
+              "to": "https://letsencrypt.org/docs/challenge-types/",
+              "start": 60
             }
           ]
         },
-        "If validation fails, check the exact hostname, DNS answer and challenge location. A login requirement, redirect rule, wrong document root or proxy can prevent an HTTP challenge from being reached. If a Certificate Authority Authorization (CAA) record blocks issuance, obtain the host’s required issuer names and review the existing CAA policy before changing it. CAA restricts which authorities may issue certificates; deleting all CAA records discards that restriction.",
+        {
+          "text": "If validation fails, check the exact hostname, DNS answer and challenge location. A login requirement, redirect rule, wrong document root or proxy can prevent an HTTP challenge from being reached. If a Certification Authority Authorization (CAA) record blocks issuance, obtain the host’s required issuer names and review the existing CAA policy before changing it. CAA restricts which authorities may issue certificates; deleting all CAA records discards that restriction.",
+          "links": [
+            {
+              "phrase": "Certification Authority Authorization (CAA)",
+              "to": "https://www.rfc-editor.org/rfc/rfc8659.html",
+              "start": 202
+            }
+          ]
+        },
         "For a paid or manually managed certificate, use the issuer’s renewal process and the host’s supported installation procedure. A CSR is a certificate signing request created with a private key; the issued certificate must match that key. Renewal does not install the new certificate on its own. Keep the current valid certificate until the replacement is installed and tested."
       ]
     },
@@ -2805,7 +3057,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "cPanel’s status instructions",
-              "to": "https://docs.cpanel.net/cpanel/security/ssl-tls-status/"
+              "to": "https://docs.cpanel.net/cpanel/security/ssl-tls-status/",
+              "start": 67
             }
           ]
         },
@@ -2815,36 +3068,39 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "cPanel’s SSL/TLS instructions",
-              "to": "https://docs.cpanel.net/cpanel/security/ssl-tls/"
+              "to": "https://docs.cpanel.net/cpanel/security/ssl-tls/",
+              "start": 344
             }
           ]
+        },
+        {
+          "table": {
+            "caption": "Manual certificate installation fields",
+            "headers": [
+              "Field",
+              "What belongs there"
+            ],
+            "rows": [
+              [
+                "Domain",
+                "The website hostname or site receiving the certificate. Confirm its document root and domain mapping."
+              ],
+              [
+                "Certificate (CRT)",
+                "The site certificate issued for your requested names, including its BEGIN and END CERTIFICATE lines when pasted."
+              ],
+              [
+                "Private Key (KEY)",
+                "The protected key matching that certificate. An unrelated key will not work. Never include this secret in a public diagnostic or ordinary email."
+              ],
+              [
+                "Certificate Authority Bundle (CABUNDLE)",
+                "The issuer’s intermediate chain for this certificate. Use the bundle provided by the CA or host, rather than a chain copied from another site."
+              ]
+            ]
+          }
         }
-      ],
-      "table": {
-        "caption": "Manual certificate installation fields",
-        "headers": [
-          "Field",
-          "What belongs there"
-        ],
-        "rows": [
-          [
-            "Domain",
-            "The website hostname or site receiving the certificate. Confirm its document root and domain mapping."
-          ],
-          [
-            "Certificate (CRT)",
-            "The site certificate issued for your requested names, including its BEGIN and END CERTIFICATE lines when pasted."
-          ],
-          [
-            "Private Key (KEY)",
-            "The protected key matching that certificate. An unrelated key will not work. Never include this secret in a public diagnostic or ordinary email."
-          ],
-          [
-            "Certificate Authority Bundle (CABUNDLE)",
-            "The issuer’s intermediate chain for this certificate. Use the bundle provided by the CA or host, rather than a chain copied from another site."
-          ]
-        ]
-      }
+      ]
     },
     {
       "h": "Cloudflare: check the edge and origin separately",
@@ -2855,7 +3111,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Cloudflare’s Full (strict) instructions",
-              "to": "https://developers.cloudflare.com/ssl/origin-configuration/ssl-modes/full-strict/"
+              "to": "https://developers.cloudflare.com/ssl/origin-configuration/ssl-modes/full-strict/",
+              "start": 0
             }
           ]
         },
@@ -2864,7 +3121,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "Cloudflare error 526",
-              "to": "https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-526/"
+              "to": "https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-5xx-errors/error-526/",
+              "start": 0
             }
           ]
         },
@@ -2881,7 +3139,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "MDN’s mixed-content documentation",
-              "to": "https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Mixed_content"
+              "to": "https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Mixed_content",
+              "start": 170
             }
           ]
         },
@@ -2911,7 +3170,8 @@ export const findingGuides: Article[] = [
           "links": [
             {
               "phrase": "MDN’s HSTS documentation",
-              "to": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security"
+              "to": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security",
+              "start": 111
             }
           ]
         },
@@ -2920,7 +3180,7 @@ export const findingGuides: Article[] = [
       ]
     }
   ],
-  "takeaway": "Repair the affected hostname on the service that presents its certificate, then verify HTTPS, redirects and representative pages from outside the hosting environment. Keep the prior working configuration available and check that future renewal is enabled.",
+  "takeaway": "",
   "readingLayout": true,
   "hideVisual": true,
   "organizationByline": true,
@@ -2929,6 +3189,7 @@ export const findingGuides: Article[] = [
     "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
-  }
+  },
+  "updated": "2026-10-24"
 }
 ];

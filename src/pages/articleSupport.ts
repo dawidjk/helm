@@ -7,11 +7,13 @@ import {refreshedArticleSupport} from './refreshedArticleSupport';
 export type ArticleSource = {
   title: string;
   href: string;
+  note?: string;
 };
 
 export type ArticleSupport = {
   relatedSlugs: string[];
   sources: ArticleSource[];
+  relatedLinks?: ArticleSource[];
 };
 
 const sources = {
@@ -394,6 +396,18 @@ export const articleSupport: Record<string, ArticleSupport> = {
     {
       "title": "Cloudflare's flattening controls",
       "href": "https://developers.cloudflare.com/dns/cname-flattening/set-up-cname-flattening/"
+    },
+    {
+      "title": "What Is DMARC? A Plain-English Guide for Business Owners",
+      "href": "/resources/what-is-dmarc/"
+    },
+    {
+      "title": "How to check website security: a simple step-by-step checklist for New Jersey small businesses",
+      "href": "/resources/check-website-security/"
+    },
+    {
+      "title": "How Helm works",
+      "href": "/"
     }
   ]
 },
@@ -453,11 +467,16 @@ export const articleSupport: Record<string, ArticleSupport> = {
     },
     {
       "title": "RFC 7489: DMARC domain alignment",
-      "href": "https://datatracker.ietf.org/doc/html/rfc7489"
+      "href": "https://datatracker.ietf.org/doc/html/rfc7489",
+      "note": "(historical; obsoleted in May 2026)"
     },
     {
       "title": "RFC 8601: trusted receiver Authentication-Results",
       "href": "https://datatracker.ietf.org/doc/html/rfc8601"
+    },
+    {
+      "title": "RFC 9989: current DMARC specification and domain alignment",
+      "href": "https://www.rfc-editor.org/info/rfc9989/"
     }
   ]
 },
@@ -529,7 +548,8 @@ export const articleSupport: Record<string, ArticleSupport> = {
     },
     {
       "title": "RFC 7489: DMARC domain alignment",
-      "href": "https://datatracker.ietf.org/doc/html/rfc7489"
+      "href": "https://datatracker.ietf.org/doc/html/rfc7489",
+      "note": "(historical specification, superseded in May 2026)"
     },
     {
       "title": "RFC 8601: trusted receiver Authentication-Results",
@@ -538,6 +558,10 @@ export const articleSupport: Record<string, ArticleSupport> = {
     {
       "title": "Kitterman: SPF syntax and sending-path testing forms",
       "href": "https://www.kitterman.com/spf/validate.html"
+    },
+    {
+      "title": "RFC 9989: current DMARC specification and organizational-domain discovery",
+      "href": "https://www.rfc-editor.org/rfc/rfc9989.html"
     }
   ]
 },
@@ -590,6 +614,18 @@ export const articleSupport: Record<string, ArticleSupport> = {
     {
       "title": "Google Public DNS: DNSSEC validation",
       "href": "https://developers.google.com/speed/public-dns/docs/security"
+    },
+    {
+      "title": "What Is DMARC? A Plain-English Guide for Business Owners",
+      "href": "/resources/what-is-dmarc/"
+    },
+    {
+      "title": "How to check website security: a simple step-by-step checklist for New Jersey small businesses",
+      "href": "/resources/check-website-security/"
+    },
+    {
+      "title": "How Helm works",
+      "href": "/"
     }
   ]
 },
@@ -646,6 +682,18 @@ export const articleSupport: Record<string, ArticleSupport> = {
     {
       "title": "IETF: SMTP domain syntax",
       "href": "https://datatracker.ietf.org/doc/html/rfc5321"
+    },
+    {
+      "title": "What Is DMARC? A Plain-English Guide for Business Owners",
+      "href": "/resources/what-is-dmarc/"
+    },
+    {
+      "title": "How to check website security: a simple step-by-step checklist for New Jersey small businesses",
+      "href": "/resources/check-website-security/"
+    },
+    {
+      "title": "How Helm works",
+      "href": "/"
     }
   ]
 },
@@ -698,6 +746,18 @@ export const articleSupport: Record<string, ArticleSupport> = {
     {
       "title": "IETF: DNS aliases and CNAME coexistence",
       "href": "https://datatracker.ietf.org/doc/html/rfc1034"
+    },
+    {
+      "title": "What Is DMARC? A Plain-English Guide for Business Owners",
+      "href": "/resources/what-is-dmarc/"
+    },
+    {
+      "title": "How to check website security: a simple step-by-step checklist for New Jersey small businesses",
+      "href": "/resources/check-website-security/"
+    },
+    {
+      "title": "How Helm works",
+      "href": "/"
     }
   ]
 },
@@ -750,6 +810,18 @@ export const articleSupport: Record<string, ArticleSupport> = {
     {
       "title": "Cloudflare: DNS time to live and caching",
       "href": "https://developers.cloudflare.com/dns/manage-dns-records/reference/ttl/"
+    },
+    {
+      "title": "What Is DMARC? A Plain-English Guide for Business Owners",
+      "href": "/resources/what-is-dmarc/"
+    },
+    {
+      "title": "How to check website security: a simple step-by-step checklist for New Jersey small businesses",
+      "href": "/resources/check-website-security/"
+    },
+    {
+      "title": "How Helm works",
+      "href": "/"
     }
   ]
 },
@@ -882,30 +954,30 @@ export const articleSupport: Record<string, ArticleSupport> = {
     ]
   },
   "windows-shell-october-2026-update": {
-    "relatedSlugs": [
-      "zero-day-vs-known-vulnerabilities",
-      "vulnerability-management-new-jersey",
-      "incident-response-plan-small-business"
-    ],
-    "sources": [
-      {
-        "title": "Microsoft’s advisory",
-        "href": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951"
-      },
-      {
-        "title": "October release data",
-        "href": "https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Oct"
-      },
-      {
-        "title": "protection associated with files from the internet",
-        "href": "https://support.microsoft.com/en-us/windows/security/information-about-the-attachment-manager-in-microsoft-windows"
-      },
-      {
-        "title": "Microsoft-authored CVE record",
-        "href": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/96xxx/CVE-2026-96951.json"
-      }
-    ]
-  }
+  "relatedSlugs": [
+    "zero-day-vs-known-vulnerabilities",
+    "vulnerability-management-new-jersey",
+    "incident-response-plan-small-business"
+  ],
+  "sources": [
+    {
+      "title": "Microsoft’s advisory",
+      "href": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-96951"
+    },
+    {
+      "title": "October release data",
+      "href": "https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Oct"
+    },
+    {
+      "title": "protection associated with files from the internet",
+      "href": "https://support.microsoft.com/en-us/windows/security/information-about-the-attachment-manager-in-microsoft-windows"
+    },
+    {
+      "title": "Microsoft-authored CVE record",
+      "href": "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2026/96xxx/CVE-2026-96951.json"
+    }
+  ]
+}
 ,
   'meraki-october-2026-security-update': {
   "relatedSlugs": [
@@ -1283,50 +1355,104 @@ export const articleSupport: Record<string, ArticleSupport> = {
   ]
 },
   "managed-service-provider-security-models": {
-    relatedSlugs: ["managed-service-providers-new-jersey", "cyber-insurance-application-walkthrough", "choose-first-ai-workflow"],
-    sources: [
-      {title: "NIST: Building Your Small Business’s Cybersecurity Team", href: "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/building-your-team"},
-      {title: "CISA and partner agencies: Protecting MSPs and their customers", href: "https://media.defense.gov/2022/May/11/2002994383/0/0/0/CSA_Protecting_Against_Cyber_Threats_to_MSPs_and_their_Customers_05112022.PDF"},
-      {title: "Helm: Core service scope and terms", href: "https://helmsecured.com/helm-core/"},
-      {title: "Helm: Command service scope and terms", href: "https://helmsecured.com/helm-command/"},
-      {title: "Helm: Secure AI Adoption consulting", href: "https://helmsecured.com/secure-ai-adoption/"},
-      {title: "Helm: Scope of the free public-domain scan", href: "https://helmsecured.com/terms/"},
-    ],
-  },
+  "relatedSlugs": [
+    "managed-service-providers-new-jersey",
+    "cyber-insurance-application-walkthrough",
+    "choose-first-ai-workflow"
+  ],
+  "sources": [
+    {
+      "title": "NIST: Building Your Small Business’s Cybersecurity Team",
+      "href": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/building-your-team"
+    },
+    {
+      "title": "CISA and partner agencies: Protecting MSPs and their customers",
+      "href": "https://media.defense.gov/2022/May/11/2002994383/0/0/0/CSA_Protecting_Against_Cyber_Threats_to_MSPs_and_their_Customers_05112022.PDF"
+    },
+    {
+      "title": "Helm: Core service scope and terms",
+      "href": "https://helmsecured.com/helm-core/"
+    },
+    {
+      "title": "Helm: Command service scope and terms",
+      "href": "https://helmsecured.com/helm-command/"
+    },
+    {
+      "title": "Helm: Secure AI Adoption consulting",
+      "href": "https://helmsecured.com/secure-ai-adoption/"
+    },
+    {
+      "title": "Helm: Scope of the free public-domain scan",
+      "href": "https://helmsecured.com/terms/"
+    },
+    {
+      "title": "Helm: Core service scope and terms",
+      "href": "/helm-core/"
+    },
+    {
+      "title": "Helm: Command service scope and terms",
+      "href": "/helm-command/"
+    },
+    {
+      "title": "Helm: Secure AI Adoption consulting",
+      "href": "/secure-ai-adoption/"
+    },
+    {
+      "title": "Helm: Scope of the free public-domain scan",
+      "href": "/terms/"
+    }
+  ]
+},
   "managed-service-providers-new-jersey": {
-    "relatedSlugs": [
-      "managed-service-provider-security-models",
-      "what-a-soc-actually-does",
-      "cyber-insurance-application-walkthrough",
-      "choose-first-ai-workflow"
-    ],
-    "sources": [
-      {
-        "title": "NIST: Building Your Small Business’s Cybersecurity Team",
-        "href": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/building-your-team"
-      },
-      {
-        "title": "CISA and partner agencies: Protecting MSPs and their customers",
-        "href": "https://media.defense.gov/2022/May/11/2002994383/0/0/0/CSA_Protecting_Against_Cyber_Threats_to_MSPs_and_their_Customers_05112022.PDF"
-      },
-      {
-        "title": "Helm: Core service scope and terms",
-        "href": "https://helmsecured.com/helm-core/"
-      },
-      {
-        "title": "Helm: Command service scope and terms",
-        "href": "https://helmsecured.com/helm-command/"
-      },
-      {
-        "title": "Helm: Secure AI Adoption consulting",
-        "href": "https://helmsecured.com/secure-ai-adoption/"
-      },
-      {
-        "title": "Helm: Scope of the free public-domain scan",
-        "href": "https://helmsecured.com/terms/"
-      }
-    ]
-  },
+  "relatedSlugs": [
+    "managed-service-provider-security-models",
+    "what-a-soc-actually-does",
+    "cyber-insurance-application-walkthrough",
+    "choose-first-ai-workflow"
+  ],
+  "sources": [
+    {
+      "title": "NIST: Building Your Small Business’s Cybersecurity Team",
+      "href": "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/building-your-team"
+    },
+    {
+      "title": "CISA and partner agencies: Protecting MSPs and their customers",
+      "href": "https://media.defense.gov/2022/May/11/2002994383/0/0/0/CSA_Protecting_Against_Cyber_Threats_to_MSPs_and_their_Customers_05112022.PDF"
+    },
+    {
+      "title": "Helm: Core service scope and terms",
+      "href": "https://helmsecured.com/helm-core/"
+    },
+    {
+      "title": "Helm: Command service scope and terms",
+      "href": "https://helmsecured.com/helm-command/"
+    },
+    {
+      "title": "Helm: Secure AI Adoption consulting",
+      "href": "https://helmsecured.com/secure-ai-adoption/"
+    },
+    {
+      "title": "Helm: Scope of the free public-domain scan",
+      "href": "https://helmsecured.com/terms/"
+    },
+    {
+      "title": "Helm: Core service scope and terms",
+      "href": "/helm-core/"
+    },
+    {
+      "title": "Helm: Command service scope and terms",
+      "href": "/helm-command/"
+    },
+    {
+      "title": "Helm: Secure AI Adoption consulting",
+      "href": "/secure-ai-adoption/"
+    },
+    {
+      "title": "Helm: Scope of the free public-domain scan",
+      "href": "/terms/"
+    }
+  ]
+},
   "choose-first-ai-workflow": {
     "relatedSlugs": [
       "ai-access-business-documents",
@@ -1518,65 +1644,101 @@ export const articleSupport: Record<string, ArticleSupport> = {
   },
 
   "pen-test-vs-vulnerability-scan": {
-    "relatedSlugs": [
-      "vulnerability-management-new-jersey",
-      "cybersecurity-risk-assessment-tools",
-      "network-hardening-small-business"
-    ],
-    "sources": [
-      {
-        "title": "NIST's technical testing guide",
-        "href": "https://csrc.nist.gov/pubs/sp/800/115/final"
-      }
-    ]
-  },
+  "relatedSlugs": [
+    "vulnerability-management-new-jersey",
+    "cybersecurity-risk-assessment-tools",
+    "network-hardening-small-business"
+  ],
+  "sources": [
+    {
+      "title": "NIST's technical testing guide",
+      "href": "https://csrc.nist.gov/pubs/sp/800/115/final"
+    },
+    {
+      "title": "How to build a vulnerability management program for small businesses in New Jersey",
+      "href": "/resources/vulnerability-management-new-jersey/"
+    },
+    {
+      "title": "How to evaluate a cybersecurity risk assessment tool for small businesses",
+      "href": "/resources/cybersecurity-risk-assessment-tools/"
+    },
+    {
+      "title": "Network Hardening for Small Business: A Checklist Your IT Provider Can Use",
+      "href": "/resources/network-hardening-small-business/"
+    },
+    {
+      "title": "Helm for Small business",
+      "href": "/professional-services/"
+    }
+  ]
+},
   "dns-filtering-small-business": {
-    "relatedSlugs": [
-      "network-hardening-small-business",
-      "mfa-methods-compared",
-      "email-security-services-evaluation"
-    ],
-    "sources": [
-      {
-        "title": "Cloudflare's DNS filtering documentation",
-        "href": "https://developers.cloudflare.com/cloudflare-one/traffic-policies/get-started/dns/"
-      }
-    ]
-  },
+  "relatedSlugs": [
+    "network-hardening-small-business",
+    "mfa-methods-compared",
+    "email-security-services-evaluation"
+  ],
+  "sources": [
+    {
+      "title": "Cloudflare's DNS filtering documentation",
+      "href": "https://developers.cloudflare.com/cloudflare-one/traffic-policies/get-started/dns/"
+    },
+    {
+      "title": "Cloudflare: HTTP filtering",
+      "href": "https://developers.cloudflare.com/cloudflare-one/traffic-controls/get-started/http/"
+    },
+    {
+      "title": "NSA: Adopting Encrypted DNS in Enterprise Environments",
+      "href": "https://media.defense.gov/2021/Jan/14/2002564889/-1/-1/0/CSI_ADOPTING_ENCRYPTED_DNS_U_OO_102904_21.PDF"
+    },
+    {
+      "title": "Cloudflare: Business Continuity Guide",
+      "href": "https://developers.cloudflare.com/cloudflare-one/team-and-resources/devices/cloudflare-one-client/business-continuity/"
+    },
+    {
+      "title": "Cloudflare: Test DNS filtering",
+      "href": "https://developers.cloudflare.com/cloudflare-one/traffic-controls/dns-policies/test-dns-filtering/"
+    },
+    {
+      "title": "RFC 9076: DNS Privacy Considerations",
+      "href": "https://www.rfc-editor.org/rfc/rfc9076.html"
+    }
+  ]
+},
   "network-hardening-small-business": {
-    "relatedSlugs": [
-      "dns-filtering-small-business",
-      "employee-offboarding-checklist",
-      "vulnerability-management-new-jersey"
-    ],
-    "sources": [
-      {
-        "title": "CISA's infrastructure hardening guidance",
-        "href": "https://www.cisa.gov/resources-tools/resources/enhanced-visibility-and-hardening-guidance-communications-infrastructure"
-      },
-      {
-        "title": "CISA recommends phishing-resistant MFA",
-        "href": "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/require-multifactor-authentication"
-      }
-    ]
-  },
+  "relatedSlugs": [
+    "dns-filtering-small-business",
+    "employee-offboarding-checklist",
+    "vulnerability-management-new-jersey"
+  ],
+  "sources": [
+    {
+      "title": "CISA's infrastructure hardening guidance",
+      "href": "https://www.cisa.gov/resources-tools/resources/enhanced-visibility-and-hardening-guidance-communications-infrastructure"
+    },
+    {
+      "title": "CISA recommends phishing-resistant MFA",
+      "href": "https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/require-multifactor-authentication"
+    }
+  ]
+},
   "disaster-recovery-small-business": {
-    "relatedSlugs": [
-      "backup-testing-insurers",
-      "microsoft-365-retention-vs-backup",
-      "incident-response-plan-small-business"
-    ],
-    "sources": [
-      {
-        "title": "NIST's contingency planning guide",
-        "href": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final"
-      },
-      {
-        "title": "CISA's ransomware guidance",
-        "href": "https://www.cisa.gov/stopransomware/ransomware-guide"
-      }
-    ]
-  },
+  "relatedSlugs": [
+    "backup-testing-insurers",
+    "microsoft-365-retention-vs-backup",
+    "incident-response-plan-small-business"
+  ],
+  "sources": [
+    {
+      "title": "NIST's contingency planning guide",
+      "href": "https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final"
+    },
+    {
+      "title": "CISA's ransomware guidance",
+      "href": "https://www.cisa.gov/stopransomware/ransomware-guide"
+    }
+  ]
+},
 
   ...refreshedArticleSupport,
 };

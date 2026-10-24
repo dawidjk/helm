@@ -4,7 +4,7 @@ import {useLoaderData, Link} from 'react-router-dom';
 import {Band, BookCallLink, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import {articleCatalog} from './articleCatalog';
-import type {Article} from './articles';
+import type {Article, ArticleTable} from './articles';
 import type {ArticleSupport} from './articleSupport';
 import {renderParagraph} from '../lib/richText';
 import {bookCta} from './ctaCopy';
@@ -37,7 +37,24 @@ function sectionBlockText(block: SectionBlock): string {
   if (typeof block === 'string') return block;
   if ('code' in block) return [block.code, block.caption ?? ''].join(' ');
   if ('list' in block) return block.list.map(item => typeof item === 'string' ? item : item.text).join(' ');
+  if ('table' in block) return [block.table.caption, ...block.table.headers, ...block.table.rows.flat()].join(' ');
+  if ('figure' in block) return block.figure.caption;
+  if ('h3' in block) return block.h3;
+  if ('quote' in block) return block.quote.map(item => typeof item === 'string' ? item : item.text).join(' ');
   return block.text;
+}
+
+function InlineArticleTable({table, id}: {table: ArticleTable; id: string}) {
+  return <>
+    <p className="article-table-hint" id={`table-help-${id}`}>On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.</p>
+    <div className="subproc-scroll article-comparison" data-focus-clearance role="region" aria-label={table.caption} aria-describedby={`table-help-${id}`} tabIndex={0}>
+      <table className="subproc-table">
+        <caption>{table.caption}</caption>
+        <thead><tr>{table.headers.map(heading => <th scope="col" key={heading}>{heading}</th>)}</tr></thead>
+        <tbody>{table.rows.map(row => <tr key={row[0]}>{row.map((cell, i) => i === 0 ? <th scope="row" key={i}>{cell}</th> : <td key={i}>{cell}</td>)}</tr>)}</tbody>
+      </table>
+    </div>
+  </>;
 }
 
 export default function ArticlePage() {
@@ -147,10 +164,10 @@ export default function ArticlePage() {
           <div className="observe">
             <p className="article-intro">{renderParagraph(a.intro)}</p>
             {a.lead?.map((paragraph, index) => <p key={index}>{renderParagraph(paragraph)}</p>)}
-            {isBlog ? (a.takeaway ? <p>{a.takeaway}</p> : null) : <aside className="article-quick-answer" aria-labelledby="article-quick-answer-heading">
+            {isBlog ? (a.takeaway ? <p>{a.takeaway}</p> : null) : a.takeaway ? <aside className="article-quick-answer" aria-labelledby="article-quick-answer-heading">
               <h2 id="article-quick-answer-heading">Quick answer</h2>
               <p>{a.takeaway}</p>
-            </aside>}
+            </aside> : null}
             {!a.hideVisual && <ArticleVisual slug={a.slug} />}
             {!isBlog && <nav className="article-on-page" aria-labelledby="article-on-page-heading">
               <h2 id="article-on-page-heading">On this page</h2>
@@ -177,6 +194,17 @@ export default function ArticlePage() {
                     ) : typeof p !== 'string' && 'list' in p ? (
                       p.ordered ? <ol className="article-checklist">{p.list.map((item, itemIndex) => <li key={itemIndex}>{renderParagraph(item)}</li>)}</ol>
                         : <ul className="article-checklist">{p.list.map((item, itemIndex) => <li key={itemIndex}>{renderParagraph(item)}</li>)}</ul>
+                    ) : typeof p !== 'string' && 'table' in p ? (
+                      <InlineArticleTable table={p.table} id={`${index}-${i}`} />
+                    ) : typeof p !== 'string' && 'figure' in p ? (
+                      <figure className="article-explainer">
+                        <img src={p.figure.src} alt={p.figure.alt} width={p.figure.width ?? 400} height={p.figure.height ?? 530} loading="lazy" decoding="async" />
+                        <figcaption>{p.figure.caption}</figcaption>
+                      </figure>
+                    ) : typeof p !== 'string' && 'h3' in p ? (
+                      <h3 id={`${sectionId(p.h3, index)}-${i}`}>{p.h3}</h3>
+                    ) : typeof p !== 'string' && 'quote' in p ? (
+                      <blockquote>{p.quote.map((paragraph, quoteIndex) => <p key={quoteIndex}>{renderParagraph(paragraph)}</p>)}</blockquote>
                     ) : <p>{renderParagraph(p)}</p>}
                   </Fragment>
                 ))}
@@ -221,7 +249,7 @@ export default function ArticlePage() {
             <ul>
               {support.sources.map((source) => (
                 <li key={source.href}>
-                  <a href={source.href}>{source.title}</a>
+                  <a href={source.href}>{source.title}</a>{source.note && <> {source.note}</>}
                 </li>
               ))}
             </ul>
@@ -233,6 +261,7 @@ export default function ArticlePage() {
                 {article.title}
               </Link>
             ))}
+            {support.relatedLinks?.map(link => <Link key={link.href} to={canonicalPath(link.href)}>{link.title}</Link>)}
             <Link to={canonicalPath(a.laneTo)}>{a.lane === 'All industries' ? 'How Helm works' : `Helm for ${a.lane}`}</Link>
           </nav>
         </article>
