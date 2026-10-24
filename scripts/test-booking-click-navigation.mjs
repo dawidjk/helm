@@ -45,7 +45,7 @@ try{
   assert.equal(popup.url(),before.href);assert.equal(page.url(),origin+'/');assert.equal(before.target,'_blank');
   assert.equal(before.rel,'noopener noreferrer');assert.equal(before.referrerPolicy,'no-referrer');
   if(mode!=='no-javascript'){
-    await page.waitForFunction(expected=>window.calls.filter(c=>!c.url.endsWith('/consent')).length===expected,{},mode==='denied'?0:1);
+    await page.waitForFunction(expected=>window.calls.filter(c=>!c.url.endsWith('/consent')).length===expected,{polling:50},mode==='denied'?0:1);
     const state=await page.evaluate(()=>({prevented:window.prevented,calls:window.calls}));assert.equal(state.prevented,false);
     if(mode==='denied')assert.deepEqual(state.calls,[]);
     else {assert.equal(state.calls.length,2);assert.equal(JSON.parse(state.calls[1].body).sourcePath,'/pricing/');}
