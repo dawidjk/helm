@@ -1,4 +1,5 @@
 .home-owner-intro {
+  scroll-margin-block-start: var(--site-nav-block-size);
   display: grid;
   grid-template-columns: 240px minmax(0, 1fr);
   align-items: center;
