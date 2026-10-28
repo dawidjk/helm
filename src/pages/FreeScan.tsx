@@ -66,7 +66,7 @@ export default function FreeScan() {
           <li className="observe d3">
             <div className="step-dot">3</div>
             <h3>Use the findings</h3>
-            <p>Share the relevant findings with your IT contact. Each finding explains its limits and suggests what to verify before changing a setting.</p>
+            <p>Open a finding and follow its verification steps before changing a setting. Check its stated limits too: a public scan cannot confirm what is happening inside your accounts or systems.</p>
           </li>
           <li className="observe d4">
             <div className="step-dot">4</div>

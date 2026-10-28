@@ -7,7 +7,7 @@ export const articleCatalog = [
     "readMin": 4,
     "collection": "blog",
     "date": "2026-10-24",
-    "metaDesc": "What to ask your IT or AI provider after LiteLLM's October 21 compromise: execution evidence, credential recovery and the unknowns that remain."
+    "metaDesc": "Check artifact and execution evidence after LiteLLM's October 21 compromise, then track exposed credentials separately from the rebuild."
   },
   {
     "slug": "google-meet-recap-audience",
@@ -16,7 +16,7 @@ export const articleCatalog = [
     "readMin": 4,
     "collection": "blog",
     "date": "2026-10-19",
-    "metaDesc": "Google Meet recaps can reach internal invitees who missed the call. Check Chat membership, separate notes access and sharing controls with your IT provider."
+    "metaDesc": "Google Meet recaps can reach internal invitees who missed the call. Check the Chat audience, separate notes access and sharing choices before a confidential meeting."
   },
   {
     "slug": "compare-ai-consulting-proposals",
@@ -26,12 +26,12 @@ export const articleCatalog = [
   },
   {
     "slug": "beyondtrust-remote-support-october-2026",
-    "title": "BeyondTrust Remote Support: what to ask your IT provider",
+    "title": "BeyondTrust patching leaves an earlier-access question open",
     "lane": "Professional services",
     "readMin": 5,
     "collection": "blog",
     "date": "2026-10-16",
-    "metaDesc": "Check whether your IT provider uses BeyondTrust Remote Support, confirm the BT26-05 patch and assign review of possible access before the October disclosure."
+    "metaDesc": "Check your exposure to BeyondTrust Remote Support, verify the BT26-05 patch and keep the review of possible earlier access open after remediation."
   },
   {
     "slug": "compare-cybersecurity-proposals-medical-practice",
@@ -118,7 +118,7 @@ export const articleCatalog = [
     "readMin": 5,
     "collection": "blog",
     "date": "2026-10-15",
-    "metaDesc": "Confirm updates and assess possible compromise with IT."
+    "metaDesc": "Check whether your email gateway is affected, verify its update and keep possible compromise under separate review."
   },
   {
     "slug": "meraki-october-2026-security-update",
@@ -127,7 +127,7 @@ export const articleCatalog = [
     "readMin": 4,
     "collection": "blog",
     "date": "2026-10-09",
-    "metaDesc": "Cisco’s October Meraki fixes arrive on different schedules. Understand the device-specific caveats, status labels and interruptions to discuss with your IT provider."
+    "metaDesc": "Cisco’s October Meraki fixes arrive on different schedules. Match your devices to the advisory, plan the interruption and verify installed versions after each update."
   },
   {
     "slug": "ivanti-connect-secure-october-2026-exploitation",
@@ -173,7 +173,7 @@ export const articleCatalog = [
   },
   {
     "slug": "check-website-security",
-    "title": "How to check website security: a simple step-by-step checklist for New Jersey small businesses",
+    "title": "How to check your website beyond the security score",
     "lane": "Professional services",
     "readMin": 8
   },
@@ -233,7 +233,7 @@ export const articleCatalog = [
   },
   {
     "slug": "cybersecurity-roadmap-milestones",
-    "title": "Key milestones to include in a cybersecurity roadmap for New Jersey professional-services firms",
+    "title": "A cybersecurity milestone needs a finish line",
     "lane": "Professional services",
     "readMin": 8
   },
@@ -245,13 +245,13 @@ export const articleCatalog = [
   },
   {
     "slug": "digital-risk-protection-services",
-    "title": "How to evaluate and implement digital risk protection services on a budget for small businesses",
+    "title": "A digital-risk alert leaves you work to finish",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "email-security-gateway-managed-service",
-    "title": "Email security gateway versus managed gateway service: choosing the right model for your SMB",
+    "title": "Before buying email protection, follow a held message",
     "lane": "Professional services",
     "readMin": 9
   },
@@ -293,7 +293,7 @@ export const articleCatalog = [
   },
   {
     "slug": "iam-security-core-vs-command",
-    "title": "IAM Cyber Security for SMBs: How Helm Core Compares to Helm Command",
+    "title": "Choose identity protection by the access work you still need to do",
     "lane": "Professional services",
     "readMin": 8
   },
@@ -317,7 +317,7 @@ export const articleCatalog = [
   },
   {
     "slug": "job-site-devices-public-wifi",
-    "title": "Job Site Devices and Public Wi-Fi: What Actually Puts a Contractor at Risk",
+    "title": "A safer connection will not fix a shared tablet’s access",
     "lane": "Contractors & Trades",
     "readMin": 8
   },
@@ -335,25 +335,25 @@ export const articleCatalog = [
   },
   {
     "slug": "m365-security-baseline",
-    "title": "Microsoft 365 Security Baseline: Access, Mail and Recovery",
+    "title": "Check what your Microsoft 365 accounts can reach",
     "lane": "All industries",
     "readMin": 8
   },
   {
     "slug": "managed-awareness-training-vs-diy",
-    "title": "Managed cyber security awareness training programs versus DIY: choosing the right path for your SMB",
+    "title": "Can you keep the next security training cycle running?",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "managed-endpoint-protection-rollout",
-    "title": "How to Implement Endpoint Security Protection with a Managed Service: Assessment, Rollout, and Ongoing Evidence",
+    "title": "An installed endpoint agent is only the start of your rollout",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "managed-identity-threat-response",
-    "title": "Key capabilities to look for in a managed identity threat detection and response provider",
+    "title": "An identity alert can be acknowledged before access is stopped",
     "lane": "Professional services",
     "readMin": 8
   },
@@ -371,13 +371,13 @@ export const articleCatalog = [
   },
   {
     "slug": "microsoft-365-retention-vs-backup",
-    "title": "Microsoft 365 Native Retention vs Third-Party Backup: Which Is Right for Your Small Business",
+    "title": "Microsoft 365 retention and backup: test your recovery options before you buy",
     "lane": "Professional services",
     "readMin": 9
   },
   {
     "slug": "outlook-email-encryption-options",
-    "title": "S/MIME vs Office 365 Message Encryption vs TLS: Choosing the Right Outlook Encryption for Your Company",
+    "title": "Choose email encryption the recipient can actually use",
     "lane": "Professional services",
     "readMin": 8
   },
@@ -425,7 +425,7 @@ export const articleCatalog = [
   },
   {
     "slug": "virtual-ciso-service-evaluation",
-    "title": "How to Choose a Virtual CISO Service That Delivers Roadmaps, Evidence, and Quarterly Accountability",
+    "title": "Choose a vCISO service by the decisions you cannot finish today",
     "lane": "Professional services",
     "readMin": 8
   },
@@ -443,7 +443,7 @@ export const articleCatalog = [
   },
   {
     "slug": "what-is-dmarc",
-    "title": "What Is DMARC? A Plain-English Guide for Business Owners",
+    "title": "Your email can pass DMARC while your invoices fail",
     "lane": "All industries",
     "readMin": 9
   },
@@ -467,13 +467,13 @@ export const articleCatalog = [
   },
   {
     "slug": "zero-day-vs-known-vulnerabilities",
-    "title": "Zero-Day vs Known Vulnerabilities: How Patch Management, Threat Intelligence, and Managed Services Reduce Your Risk",
+    "title": "A zero-day label cannot set your patching priority",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "pen-test-vs-vulnerability-scan",
-    "title": "Penetration Testing vs Vulnerability Scanning: What Your Business Should Buy",
+    "title": "Buy the security test that can answer your question",
     "lane": "Small business",
     "readMin": 10
   },
@@ -485,7 +485,7 @@ export const articleCatalog = [
   },
   {
     "slug": "network-hardening-small-business",
-    "title": "Network Hardening for Small Business: A Checklist Your IT Provider Can Use",
+    "title": "A separate guest Wi-Fi name does not prove your network is separated",
     "lane": "Small business",
     "readMin": 9
   },
@@ -503,13 +503,13 @@ export const articleCatalog = [
   },
   {
     "slug": "managed-service-provider-security-models",
-    "title": "Comparing Managed Service Provider Models: Standard Security Stack versus Full Program Ownership",
+    "title": "The same security tools can leave you with a different job",
     "lane": "All industries",
     "readMin": 9
   },
   {
     "slug": "managed-service-providers-new-jersey",
-    "title": "Seven signs your company needs a managed service provider, and what to do next",
+    "title": "Seven signs it may be time to evaluate a managed service provider",
     "lane": "All industries",
     "readMin": 11
   }

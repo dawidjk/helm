@@ -151,7 +151,7 @@ export default function Trust() {
             <section>
               <h2>What you can verify before buying</h2>
               <p>
-                Before you sign, we will show you a sample scan report, the relevant statement of work, and a redacted example of the deliverable. Our starting prices and known control gaps are public. We do not publish invented testimonials, customer counts, or certifications we have not earned.
+                Before you sign, we will show you a sample scan report, the relevant statement of work, and a redacted example of the deliverable. Our Core pricing, service scope and known control gaps are public. We do not publish invented testimonials, customer counts, or certifications we have not earned.
               </p>
               <p>
                 Vendor platform names describe who supplies the underlying
@@ -182,9 +182,9 @@ export default function Trust() {
             </section>
 
             <section>
-              <h2>Our subprocessors</h2>
+              <h2 id="trust-subprocessors-title">Our subprocessors</h2>
               <p>These providers handle your data as part of the service. Each has a different role and sees different information.</p>
-              <div className="subproc-scroll">
+              <div className="subproc-scroll" role="region" aria-labelledby="trust-subprocessors-title" tabIndex={0} data-focus-clearance>
                 <table className="subproc-table">
                   <thead>
                     <tr>

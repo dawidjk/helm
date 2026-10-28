@@ -152,13 +152,13 @@ export const professionalServices: Lane = {
     },
   ],
   planTitle: "Protect daily work and support the answers your firm signs.",
-  planSub: "Helm Core provides managed protection. Helm Command adds virtual chief information security officer (vCISO) leadership and evidence upkeep, helping the firm support the security answers it gives to clients and insurers.",
+  planSub: "Helm Core provides managed protection. Helm Command adds virtual chief information security officer (vCISO) leadership and evidence upkeep so you can support the security answers you give to clients and insurers.",
   proof: {
-    title: 'What the firm can put in place and show.',
+    title: "What you can put in place and show.",
     points: [
       'Payment-instruction protocol designed to prevent unverified changes',
       'Questionnaire answers tied to documented controls and evidence',
-      'Published scope and pricing before work begins',
+      "Published service scope and a written quote before work begins",
       'Direct leadership involvement with clear vendor attribution',
     ],
   },
@@ -342,7 +342,7 @@ export const accountingFirms: Lane = {
     },
     {
       question: 'What should support a client or vendor security questionnaire?',
-      answer: "Keep each question with its response, the systems and people it covers, the requested period and dated evidence. IT and application providers should confirm the controls they operate. The firm reviews and approves the completed answers, including how any gaps are explained.",
+      answer: "Keep each question with its response, the systems and people it covers, the requested period and dated evidence. Check the records for controls operated by IT and application services, and leave unsupported claims unresolved. Review and approve the completed answers, including how any gaps are explained.",
       resource: {slug: 'cyber-insurance-questionnaire', label: 'Review the questionnaire evidence checklist'},
     },
   ],
@@ -451,7 +451,7 @@ export const contractors: Lane = {
     'Reduce exposure to fake invoices and hijacked payment instructions. Practical email, payment-verification, and readiness support for contractors and trades.',
   eyebrow: 'Contractors · Trades · Field Services',
   headline: 'One changed bank account can turn a paid invoice into an unpaid bill.',
-  sub: 'A fake supplier or GC message can redirect the payment while the legitimate vendor still expects to be paid. Customers and insurers may also ask the contractor to show which security controls are in place.',
+  sub: "A fake supplier or GC message can redirect the payment while the legitimate vendor still expects to be paid. Customers and insurers may also ask you to show which security controls are in place.",
   primaryCta: 'Get my free scan',
   pains: [
     {

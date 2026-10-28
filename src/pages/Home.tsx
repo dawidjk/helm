@@ -102,7 +102,7 @@ export default function Home() {
                 <h3><Link to={canonicalPath(`/${service.slug}`)}>{service.name} <DirectionIcon /></Link></h3>
                 <p className="home-service-fit">{service.slug === 'helm-core'
                   ? 'For businesses that need managed protection while their IT team handles daily operations.'
-                  : "For firms that need someone to keep the security roadmap and evidence current and hold leadership reviews."}</p>
+                  : "For firms that need ongoing help keeping the security roadmap and evidence current, with regular leadership reviews."}</p>
                 <p>{service.slug === 'helm-core'
                   ? "Core includes managed email, device and identity protection, supported cloud backup, awareness training and digital risk monitoring. You receive one monthly security report."
                   : 'Everything in Core, plus virtual chief information security officer (vCISO) leadership, a risk register and a 12-month roadmap. Includes questionnaire responses within agreed limits, quarterly reviews and an annual tabletop exercise.'}</p>

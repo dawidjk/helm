@@ -6,7 +6,7 @@ export const ciscoEmailArticle: Article = {
   "collection": "blog",
   "title": "Cisco Secure Email Gateway: confirm updates and assess compromise",
   "metaTitle": "Cisco Secure Email Gateway Advisory | Helm",
-  "metaDesc": "Confirm updates and assess possible compromise with IT.",
+  "metaDesc": "Check whether your email gateway is affected, verify its update and keep possible compromise under separate review.",
   "date": "2026-10-15",
   "readMin": 5,
   "lane": "Professional services",
@@ -23,7 +23,7 @@ export const ciscoEmailArticle: Article = {
   },
   "lead": [
     {
-      "text": "CISA added the flaw to its Known Exploited Vulnerabilities catalog on October 14, 2026. Ask the person who runs your email service to prioritize checking whether it affects your firm.",
+      "text": "CISA added the flaw to its Known Exploited Vulnerabilities catalog on October 14, 2026. Prioritize checking whether your mail passes through an affected gateway, even if your mailbox is hosted elsewhere.",
       "links": [
         {
           "phrase": "Known Exploited Vulnerabilities catalog",
@@ -38,16 +38,16 @@ export const ciscoEmailArticle: Article = {
   "hideVisual": true,
   "ctaMode": "book",
   "consultation": {
-    "title": "Coordinate the security work across your providers.",
-    "sub": "Discuss the security-program coordination and evidence review your firm needs. Helm Command’s work is bounded by the agreed scope; retained IT owns patching and routine remediation.",
-    "label": "Discuss security-program coordination",
+    "title": "Keep your security decisions and evidence current.",
+    "sub": "Discuss the security work and evidence you need to keep current. Helm Command provides program coordination within an agreed scope. Your existing IT arrangements still cover patching and routine remediation.",
+    "label": "Discuss security-program support",
     "to": "/contact/"
   },
   "sections": [
     {
       "h": "Find out whether your mail uses an affected gateway",
       "ps": [
-        "If the first answer is that the firm uses Microsoft 365, ask whether mail passes through another filtering service before reaching it. The provider should be able to explain that route and identify who operates each part. The check may establish that your firm does not use this particular product.",
+        "Start with the route your incoming mail takes. Microsoft 365 may be the final mailbox while a separate gateway filters messages first. Check your mail-service records for that gateway and its operator. If the route contains no Cisco Secure Email Gateway, record that finding before moving on to another product’s advisory.",
         {
           "text": "Physical or virtual gateways are affected when they run vulnerable AsyncOS software, have File Reputation enabled and assigned to a mail policy, and use Content Scanner Tools earlier than 25.3.0.5525. A crafted email attachment can allow file writes and commands with full system access, without sign-in or the recipient opening it.",
           "links": [
@@ -58,7 +58,7 @@ export const ciscoEmailArticle: Article = {
             }
           ]
         },
-        "Have the operator check all those conditions and provide the full installed software version. A branch number identifies a release family; it leaves out the specific release that needs checking. If a supplier operates the gateway, establish whether your provider has its confirmation or is still waiting. You can help obtain an answer through the business relationship while the operator handles the technical check."
+        "Compare the full installed software version and scanner version with all the affected conditions. A branch number identifies a release family but leaves out the specific release. If you cannot access the gateway, keep its status unconfirmed until you have an installation-specific record; a general supplier assurance is not that record. Do not change an appliance you are not authorized to administer."
       ]
     },
     {
@@ -74,14 +74,14 @@ export const ciscoEmailArticle: Article = {
             }
           ]
         },
-        "Ask for the scanner version the operator observed and when it checked. An automatic-update setting describes intended behavior; it does not confirm that the update arrived. If the provider plans a separate software upgrade, ask about timing and any interruption that needs your approval. Where compromise is suspected, evidence preservation must come before that upgrade.",
+        "Check the observed scanner version and the time it was checked. An automatic-update setting describes intended behavior; it does not confirm that the update arrived. Review any separate software upgrade for timing and interruption before approving it. Where compromise is suspected, preserve the required evidence before that upgrade.",
         {
-          "text": "A proposed maintenance window may overlap with a client filing deadline. Tell IT about the conflict and agree on how email will be handled during the work. The provider chooses the appropriate supported release and verifies the result; you make the business dependencies visible and approve the arrangements. Our vulnerability-management guide explains how to connect remediation work to a responsible person and a verified result.",
+          "text": "Before approving a maintenance window, check whether it overlaps a filing deadline and how you will receive and send email during the work. Keep the supported-release decision, authorization and verification result together. The vulnerability-management guide explains how to connect remediation work to a responsible person and a verified result.",
           "links": [
             {
               "phrase": "vulnerability-management guide",
               "to": "/resources/vulnerability-management-new-jersey/",
-              "start": 313
+              "start": 229
             }
           ]
         }
@@ -90,7 +90,7 @@ export const ciscoEmailArticle: Article = {
     {
       "h": "Preserve evidence before maintenance",
       "ps": [
-        "Attackers with access can hide evidence. Cisco recommends checking external network and firewall logs as well as reviewing each cluster member. Have the responder explain which records it examined, what it could not obtain and how those limits affect its conclusion. A report that found no indicators needs that context.",
+        "Attackers with access can hide evidence. Cisco recommends checking external network and firewall logs as well as each cluster member. When reviewing the assessment, check which records were examined and which were unavailable. A finding of no indicators has to be read within those limits; it does not erase a gap in the evidence.",
         {
           "text": "For suspected compromise of a virtual appliance, Cisco says to preserve forensics before upgrading: upgrading a compromised instance destroys forensic data and logs. Its recovery guidance calls for a new virtual machine running fixed software, a rebuilt configuration without imports from the old appliance, renewed credentials and cryptographic material, and continued monitoring. Restore every member of a cluster containing a compromised appliance. For suspected physical-appliance compromise, contact Cisco TAC.",
           "links": [
@@ -102,16 +102,16 @@ export const ciscoEmailArticle: Article = {
           ]
         },
         {
-          "text": "Put the gateway operator and the authorized responder in contact before routine maintenance proceeds. They need to agree on evidence collection and urgent protective work, including who can approve an email interruption or recovery costs. If another specialist is needed, agree on the engagement and its authority to act. The incident-response planning guide covers those contacts and decision responsibilities.",
+          "text": "Before routine maintenance proceeds, confirm that the recovery plan covers evidence collection, urgent protective work and authorization for an email interruption or recovery costs. Keep specialist work within its agreed authority; do not improvise forensic collection on the appliance. The incident-response planning guide covers those contacts and decision responsibilities.",
           "links": [
             {
               "phrase": "incident-response planning guide",
               "to": "/resources/incident-response-plan-small-business/",
-              "start": 326
+              "start": 291
             }
           ]
         },
-        "Consider a hypothetical firm whose operator confirms the scanner fix and proposes a virtual-appliance upgrade that evening. A responder is already investigating suspected compromise. Before approving the window, have both parties confirm that the evidence needed from the instance has been preserved. The scanner update result and the investigation conclusion should have separate statuses."
+        "If a scanner fix is confirmed while suspected compromise is still under investigation, keep two statuses in your record. Before approving a virtual-appliance upgrade, verify that the required evidence has been preserved. The update result answers whether the flaw was fixed; the investigation must still establish what happened before the fix."
       ]
     },
     {
@@ -127,7 +127,7 @@ export const ciscoEmailArticle: Article = {
             }
           ]
         },
-        "Check where vendor notices arrive, including through your provider, and whether a recovery request is awaiting approval. A general update notice does not resolve a customer-specific recovery case. Keep that case open until the responsible provider explains the remaining action and confirms completion."
+        "Check the vendor notices for your installation and any open recovery case. A general update notice does not resolve a customer-specific recovery request. Keep the case open until you can account for the remaining actions and their completion evidence."
       ]
     },
     {

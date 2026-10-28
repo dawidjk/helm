@@ -23,7 +23,7 @@ export default function Blog() {
     <>
       <Meta
         title="Blog: Security Updates for Your Business | Helm"
-        desc="Recent security advisories and developments, explained for business owners working with an existing IT provider."
+        desc="Recent security advisories and developments, explained so you can check your exposure and decide what to do next."
         path="/blog"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -37,7 +37,7 @@ export default function Blog() {
         <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">Security updates, explained.</h1>
-          <p className="sub reveal d2">Recent advisories and developments, with the checks and decisions to discuss with your IT provider.</p>
+          <p className="sub reveal d2">Recent advisories and developments, with practical checks to establish whether you are affected and what to do next.</p>
         </div>
         <ScrollCue />
       </header>

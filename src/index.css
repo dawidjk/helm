@@ -2574,6 +2574,10 @@ html[data-theme='light'] .legal-beam {
   gap: 22px;
 }
 
+.contact-form .lead-form-error {
+  color: light-dark(#b03327, #ff9e9e);
+}
+
 .cf-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -3049,9 +3053,9 @@ html[data-theme='light'] .legal-beam {
 
 .quiz-root {
   /* Tier colors, chosen to read on both themes via light-dark(). */
-  --quiz-risk: light-dark(#c0392b, #ff9e9e);
-  --quiz-exposed: light-dark(#8a6100, #f2c15a);
-  --quiz-prepared: light-dark(#0c7a44, #7ee0a3);
+  --quiz-risk: light-dark(#b03327, #ff9e9e);
+  --quiz-exposed: light-dark(#7d5700, #f2c15a);
+  --quiz-prepared: light-dark(#0b7040, #7ee0a3);
   --quiz-risk-bg: light-dark(rgba(192, 57, 43, 0.1), rgba(255, 158, 158, 0.12));
   --quiz-exposed-bg: light-dark(rgba(138, 97, 0, 0.1), rgba(242, 193, 90, 0.12));
   --quiz-prepared-bg: light-dark(rgba(12, 122, 68, 0.1), rgba(126, 224, 163, 0.12));
@@ -3283,7 +3287,9 @@ html[data-theme='light'] .legal-beam {
 
 .quiz-flag {
   font-weight: 650;
-  white-space: nowrap;
+  min-width: 0;
+  white-space: normal;
+  text-align: right;
 }
 
 .quiz-flag.quiz-flag-good { color: var(--quiz-prepared); }

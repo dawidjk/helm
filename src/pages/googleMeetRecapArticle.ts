@@ -6,7 +6,7 @@ export const googleMeetRecapArticle: Article = {
   "collection": "blog",
   "title": "Your Google Meet recap can reach someone who never joined",
   "metaTitle": "Who Can Read Your Google Meet Recap? | Helm",
-  "metaDesc": "Google Meet recaps can reach internal invitees who missed the call. Check Chat membership, separate notes access and sharing controls with your IT provider.",
+  "metaDesc": "Google Meet recaps can reach internal invitees who missed the call. Check the Chat audience, separate notes access and sharing choices before a confidential meeting.",
   "date": "2026-10-19",
   "readMin": 4,
   "lane": "Professional services",
@@ -75,7 +75,7 @@ export const googleMeetRecapArticle: Article = {
       "h": "Decide the audience before the meeting",
       "ps": [
         {
-          "text": "Your retained IT provider can help translate that business decision into settings. For Business and Enterprise Standard or Plus editions, Google documents controls that let administrators choose the default notes audience and prevent hosts from changing it. Those controls can apply to a department or group, but they cover scheduled meetings only, not impromptu calls. Configuring them requires both Meet's Gemini features and Gemini note-taking to be on. Google's default audience is internal invitees. The admin documentation describes these existing controls; have IT confirm what your edition and configuration support.",
+          "text": "Check which audience controls your edition supports before deciding how to share notes. For Business and Enterprise Standard or Plus editions, Google documents controls that let administrators choose the default notes audience and prevent hosts from changing it. Those controls can apply to a department or group, but they cover scheduled meetings only, not impromptu calls. Configuring them requires both Meet's Gemini features and Gemini note-taking to be on. Google's default audience is internal invitees. The admin documentation describes these controls. If you cannot inspect the admin settings, keep enforcement unconfirmed; a choice you can make as a host does not establish an organization-wide restriction.",
           "links": [
             {
               "phrase": "The admin documentation",
@@ -92,8 +92,8 @@ export const googleMeetRecapArticle: Article = {
             }
           ]
         },
-        "Before the next confidential client call, ask IT to run a scheduled test meeting with harmless content and the same sharing choices your staff would use. Include an internal invitee who doesn't attend. Check the conversation's current membership and what that person can read in Chat and in the notes document. Confirm whether the host can change the notes audience. If client guests normally join, include an approved external test account so the document and chat results can be checked separately.",
-        "Ask for the observed recipients and settings, along with any rollout limitation. A missing recap during rollout doesn't establish that your chosen restriction worked. The test should give the owner enough information to approve an audience for ordinary updates and decide when a narrower one is needed.",
+        "Before the next confidential client call, run a scheduled test meeting with harmless content and the same sharing choices you would normally use. Include a consenting internal invitee who doesn't attend. Check the conversation's current membership and, with that invitee, compare what they can read in Chat and in the notes document. Confirm whether you can change the notes audience as host. If client guests normally join, include an approved external test account and check its document and chat access separately.",
+        "Record the observed recipients and settings, along with any rollout limitation. A missing recap during rollout doesn't establish that your chosen restriction worked. Use the results to approve an audience for ordinary updates and decide which discussions need narrower sharing. If you cannot establish who will receive the information, keep confidential content out of the test and postpone automatic notes for that discussion.",
         {
           "text": "Any participant in the meeting conversation can delete the recap card. That permanently removes the Chat summary while leaving the notes document in Drive. Agree on the readers before a confidential discussion starts, while there's still time to choose how its notes will be shared.",
           "links": [

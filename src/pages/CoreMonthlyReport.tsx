@@ -62,7 +62,7 @@ export default function CoreMonthlyReport() {
     <Band>
       <div className="band-head observe">
         <h2 id="monthly-report">What your monthly report shows</h2>
-        <p>Helm Core includes one automated monthly report. Leaders can check coverage and changes, then pass the next actions to the right person at the firm or its IT provider.</p>
+        <p>Use your automated monthly report to compare coverage with your current users and devices, review changes, and track each open action to completion. The report distinguishes your firm’s responsibilities from work assigned to IT and Helm.</p>
       </div>
 
       <article className="core-monthly-report" aria-labelledby="core-report-title" aria-describedby="core-report-example">

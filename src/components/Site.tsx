@@ -110,7 +110,7 @@ const lanes = [
 ];
 
 const services = [
-  {to: '/helm-core', label: 'Helm Core', clue: 'Complete managed protection'},
+  {to: '/helm-core', label: 'Helm Core', clue: "Managed security protection"},
   {to: '/helm-command', label: 'Helm Command', clue: 'Security program ownership'},
   {to: '/secure-ai-adoption', label: 'Secure AI Adoption', clue: 'Scoped workflow consulting'},
 ];

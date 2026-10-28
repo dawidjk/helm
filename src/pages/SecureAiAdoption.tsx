@@ -64,7 +64,7 @@ export default function SecureAiAdoption() {
 
       <Band>
         <div className="ai-section-layout">
-          <h2>For firms evaluating AI alongside their existing IT provider.</h2>
+          <h2>Evaluate AI without replacing your existing IT support.</h2>
           <div className="ai-prose">
             <p>
               This engagement is for New Jersey professional-services firms with

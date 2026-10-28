@@ -52,7 +52,7 @@ const guideGroups: GuideGroup[] = [
 {
   "id": "public-configuration-help",
   "title": "Investigate public scan findings",
-  "description": "Follow a specific finding with the responsible administrator. Each guide explains prerequisites, validation and recovery; an inconclusive result needs another check.",
+  "description": "Open the guide for your finding. Check the prerequisites, follow the verification steps and keep a recovery path before making changes. If the result is inconclusive, do not treat it as a pass.",
   "slugs": [
     "fix-dmarc-monitoring-policy",
     "fix-dmarc-reporting",
@@ -261,7 +261,7 @@ export default function Resources() {
           <aside className="resource-feature" aria-labelledby="resources-quiz-title">
             <div>
               <h2 id="resources-quiz-title">Email and Scam Security Check</h2>
-              <p>Answer 10 questions to see your score and the gaps to address. No email address is required to see the result.</p>
+              <p>Answer 10 questions to see suggested priorities based on your answers. No email address is required to see the result.</p>
             </div>
             <Link to="/quiz/" className="resource-feature-link">
               Start the 3-minute check <DirectionIcon />

@@ -49,7 +49,7 @@ const QUESTIONS: Question[] = [
     category: 'Multi-factor authentication',
     text: 'Is multi-factor authentication (MFA) required for company email and financial accounts?',
     options: [
-      {label: 'Yes, required for everyone, everywhere', points: 10},
+      {label: "Yes, required for all company email and financial accounts", points: 10},
       {label: 'Required for some accounts or some employees', points: 5},
       {label: 'Not required, or we are not sure', points: 0},
     ],
@@ -57,9 +57,9 @@ const QUESTIONS: Question[] = [
   {
     id: 'email_auth',
     category: 'Email authentication (DMARC/SPF/DKIM)',
-    text: 'Do you know whether your company domain has SPF, DKIM, and DMARC set up to stop email spoofing?',
+    text: "Do you know whether SPF, DKIM, and DMARC are configured to help receivers identify unauthorized email using your company domain?",
     options: [
-      {label: 'Yes, all three are configured and enforced', points: 10},
+      {label: "Yes, SPF and DKIM are configured, and DMARC requests quarantine or rejection", points: 10},
       {label: 'Some are set up, or we are not fully sure', points: 5},
       {label: 'No, or we do not know what these are', points: 0},
     ],
@@ -71,7 +71,7 @@ const QUESTIONS: Question[] = [
     options: [
       {label: 'Yes, a written policy exists and employees know it', points: 10},
       {label: 'We have informal guidance but nothing written', points: 5},
-      {label: 'No policy, employees use whatever they want', points: 0},
+      {label: "We do not have a policy for staff AI use", points: 0},
     ],
   },
   {
@@ -132,7 +132,7 @@ function getTier(score: number): Tier {
       key: 'risk',
       label: 'Fewer practices reported',
       headline: 'Start with the gaps in your answers',
-      copy: "Your answers report several missing or uncertain practices. Review the three priorities below with the people responsible for payments, email and staff procedures. The check has not inspected your systems.",
+      copy: "Your answers report several missing or uncertain practices. Start with the three priorities below and check the records for each practice before deciding what needs to change. The check has not inspected your systems.",
     };
   }
   if (score <= 70) {
@@ -153,9 +153,9 @@ function getTier(score: number): Tier {
 
 /** Breakdown flags ported verbatim: 10 = Strong, 5 = Partial, 0 = Gap. */
 function flagFor(points: number): {text: string; cls: string} {
-  if (points >= 10) return {text: 'Strong', cls: 'quiz-flag-good'};
-  if (points >= 5) return {text: 'Partial', cls: 'quiz-flag-warn'};
-  return {text: 'Gap', cls: 'quiz-flag-bad'};
+  if (points >= 10) return {text: 'Practice reported', cls: 'quiz-flag-good'};
+  if (points >= 5) return {text: 'Partial or uncertain', cls: 'quiz-flag-warn'};
+  return {text: 'Not reported', cls: 'quiz-flag-bad'};
 }
 
 /**
@@ -307,7 +307,7 @@ export default function QuizWidget() {
         <div className="quiz-nav-row">
           <Button label="Back" variant="secondary" onClick={goBack} isDisabled={currentIndex === 0} />
           <Button
-            label={isLast ? 'See My Score' : 'Next'}
+            label={isLast ? 'See my results' : 'Next'}
             variant="primary"
             onClick={goNext}
             isDisabled={selectedIndex === null}

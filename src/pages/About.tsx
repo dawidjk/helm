@@ -38,10 +38,7 @@ export default function About() {
             Clear security help for businesses without a security department.
           </h1>
           <p className="sub reveal d2">
-            A small business can lose money through one changed invoice, expose
-            client information through one account, or lose a contract because
-            it cannot back up an answer to a security question. Helm helps identify the problem,
-            choose a practical response, and follow the work through.
+            A changed invoice can send your payment to the wrong account. A compromised account can expose your client information. And a security question you cannot support with evidence can put a contract at risk. Helm helps you identify the problem, choose a practical response, and follow the work through.
           </p>
         </div>
         <ScrollCue />
@@ -58,14 +55,14 @@ export default function About() {
               customer communication, growth, and partnerships.
             </p>
             <p className="observe d2">
-              Small and medium-sized businesses already have plenty of tools and alerts. They still need to know which issues matter, who should fix them, and whether the work is complete. Helm is designed to make those responsibilities clear, with explanations in plain language and the price and scope stated up front.
+              You need to know which security issues matter, what needs to happen next, and whether the work is complete. Helm explains those responsibilities in plain language and states the price and scope before work starts.
             </p>
           </div>
           <div>
             <h3 className="observe">How we operate</h3>
             <ul className="check-list">
               <li className="observe d1">Plain English, with technical terms explained when you need them</li>
-              <li className="observe d2">Published starting prices and scope ranges, confirmed in writing before work starts</li>
+              <li className="observe d2">Published Core pricing and service scope, with your quote confirmed in writing before work starts</li>
               <li className="observe d3">24/7 monitoring supplied by disclosed security operations partners</li>
               <li className="observe d4">Findings explained with practical next steps and a written scope for paid work</li>
               <li className="observe d5">Automated monitoring with people responsible for investigation and decisions</li>

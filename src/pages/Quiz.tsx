@@ -8,7 +8,7 @@ export default function Quiz() {
     <>
       <Meta
         title="Email and Scam Security Check | Helm"
-        desc="Answer ten questions about email, payment checks and scam-response procedures. See three priorities based on your answers, without an email gate."
+        desc="Answer ten questions about email, payment checks and scam-response procedures. See three priorities based on your answers, without providing an email address."
         path="/quiz"
       />
       <header className="hero lane brand-hero">

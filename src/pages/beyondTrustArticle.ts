@@ -4,15 +4,15 @@ import type {ArticleSupport} from './articleSupport';
 export const beyondTrustArticle: Article = {
   "slug": "beyondtrust-remote-support-october-2026",
   "collection": "blog",
-  "title": "BeyondTrust Remote Support: what to ask your IT provider",
+  "title": "BeyondTrust patching leaves an earlier-access question open",
   "metaTitle": "BeyondTrust Remote Support: October 2026 patch | Helm",
-  "metaDesc": "Check whether your IT provider uses BeyondTrust Remote Support, confirm the BT26-05 patch and assign review of possible access before the October disclosure.",
+  "metaDesc": "Check your exposure to BeyondTrust Remote Support, verify the BT26-05 patch and keep the review of possible earlier access open after remediation.",
   "date": "2026-10-16",
   "readMin": 5,
   "lane": "Professional services",
   "laneTo": "/professional-services/",
   "intro": {
-    "text": "BeyondTrust's October 15 advisory disclosed a critical Remote Support vulnerability, CVE-2026-102764. Ask your IT provider whether it uses the product to connect to your firm and who operates that service. If it does, you need confirmation of the applied patch and a separate answer about possible access before disclosure.",
+    "text": "BeyondTrust's October 15 advisory disclosed a critical Remote Support vulnerability, CVE-2026-102764. If the product can reach your firm's computers, you have two questions to resolve: whether the patch is in place and whether someone could have accessed the service before it was fixed. A completed update answers only the first.",
     "links": [
       {
         "phrase": "BeyondTrust's October 15 advisory",
@@ -58,23 +58,23 @@ export const beyondTrustArticle: Article = {
   "hideVisual": true,
   "ctaMode": "book",
   "consultation": {
-    "title": "Coordinate the security work across your providers.",
-    "sub": "Book a call to discuss the security-program coordination and evidence review your firm needs. Helm Command's work is bounded by the agreed scope; retained IT owns patching and routine remediation.",
-    "label": "Book a consultation",
+    "title": "Keep your security decisions and evidence current.",
+    "sub": "Discuss the security work and evidence you need to keep current. Helm Command provides program coordination within an agreed scope. Your existing IT arrangements still cover patching and routine remediation.",
+    "label": "Discuss security-program support",
     "to": "/contact/"
   },
   "sections": [
     {
-      "h": "Where your provider uses the product",
+      "h": "Establish how Remote Support reaches your firm",
       "ps": [
-        "Have your IT provider check the tools its technicians use, including any separate support supplier with access to your systems. For BeyondTrust, establish whether BeyondTrust hosts the service or your firm or a supplier runs it. That determines who can confirm its patch status. Ask how the installation can reach your computers and what access it holds; a supplier's use of BeyondTrust alone does not establish that someone accessed your firm.",
+        "Trace the remote-support connections into your systems, including access used by separate support suppliers. Check the tools and access records against the services in your contracts; your own software purchases may not include a supplier's installation. For BeyondTrust, record whether the service is hosted by BeyondTrust, your firm or a supplier, and what access it holds. Supplier use alone does not establish that anyone accessed your firm.",
         {
-          "text": "If another supplier operates the system, your IT provider may have to request the patch record from it. Our comparison of provider models can help resolve responsibilities when different firms handle IT and security.",
+          "text": "Keep the patch record for the installation that can reach your firm. If you cannot access that record directly, obtain it from the system operator and record any unresolved gap. The comparison of provider models can help you check which agreement covers the work.",
           "links": [
             {
               "phrase": "comparison of provider models",
               "to": "/resources/managed-service-provider-security-models/",
-              "start": 108
+              "start": 182
             }
           ]
         }
@@ -94,17 +94,17 @@ export const beyondTrustArticle: Article = {
           ]
         },
         {
-          "text": "Ask the operator for the installed version and dated confirmation that BT26-05-RS was applied. An installation on 24.3.1 can accept the patch; the version alone cannot confirm its presence. Check completion even if automatic updates are enabled. If work remains, ask what interim precautions IT recommends and whether they would interrupt support. Record the applied fix and who checked it, as described in our vulnerability-management guide.",
+          "text": "Match the installed version to dated confirmation that BT26-05-RS was applied. An installation on 24.3.1 can accept the patch; the version alone cannot confirm its presence. Check completion even if automatic updates are enabled. For unfinished work, assess the proposed interim precautions and any interruption to support before approving them. Keep the applied fix and verification record together, as described in our vulnerability-management guide.",
           "links": [
             {
               "phrase": "vulnerability-management guide",
               "to": "/resources/vulnerability-management-new-jersey/",
-              "start": 411
+              "start": 421
             }
           ]
         },
         {
-          "text": "BeyondTrust says all BeyondTrust-hosted Remote Support customers had received the patch by October 9. Ask your provider to confirm that this statement covers the service it uses for your firm.",
+          "text": "BeyondTrust says all BeyondTrust-hosted Remote Support customers had received the patch by October 9. Check that your service is in that hosted population before relying on the statement.",
           "links": [
             {
               "phrase": "received the patch by October 9",
@@ -114,7 +114,7 @@ export const beyondTrustArticle: Article = {
           ]
         },
         {
-          "text": "BeyondTrust's response also recommends a precautionary patch for self-hosted Privileged Remote Access (PRA), which shares the affected code. The vendor says its internal testing has found no way to exploit this vulnerability in PRA. The provider should identify which product it checked.",
+          "text": "BeyondTrust's response also recommends a precautionary patch for self-hosted Privileged Remote Access (PRA), which shares the affected code. The vendor says its internal testing has found no way to exploit this vulnerability in PRA. Record the exact product so you do not apply a Remote Support conclusion to PRA.",
           "links": [
             {
               "phrase": "precautionary patch for self-hosted Privileged Remote Access",
@@ -129,7 +129,7 @@ export const beyondTrustArticle: Article = {
       "h": "The review needs to reach back to August",
       "ps": [
         {
-          "text": "BeyondTrust's timeline dates exploitation to August 29 and discovery to September 28. The patch release began October 8; public disclosure followed on October 15. August and September therefore belong in the review of possible earlier access. The incident responder, the person or team investigating possible compromise, should include the period before the verified patch date and decide what later activity needs review.",
+          "text": "BeyondTrust's timeline dates exploitation to August 29 and discovery to September 28. The patch release began October 8; public disclosure followed on October 15. Include August and September when defining the review of possible earlier access, through the verified patch date. Check the assessment's stated time window and the reason for including or excluding later activity; a review beginning at disclosure leaves the earlier period unanswered.",
           "links": [
             {
               "phrase": "BeyondTrust's timeline",
@@ -149,7 +149,7 @@ export const beyondTrustArticle: Article = {
           ]
         },
         {
-          "text": "Its guidance also calls for credential and configuration review for customers using BeyondTrust's software-as-a-service (SaaS) version; appliance patching alone does not complete that work. Ask who will assess that exposure and whether BeyondTrust Support or another authorized responder needs to be involved.",
+          "text": "Its guidance also calls for credential and configuration review for customers using BeyondTrust's software-as-a-service (SaaS) version; appliance patching alone does not complete that work. Include that review in your response scope, with authorized access and any required involvement from BeyondTrust Support.",
           "links": [
             {
               "phrase": "credential and configuration review",
@@ -159,12 +159,12 @@ export const beyondTrustArticle: Article = {
           ]
         },
         {
-          "text": "BeyondTrust asks customers with evidence of exploitation to open a Severity 1 support request citing BT26-05 and to treat credentials the appliance stored or injected as exposed. The operator and responder should agree the order of protective changes and evidence preservation, including any interruption you need to approve.",
+          "text": "If you have evidence of exploitation, open the Severity 1 support request BeyondTrust specifies, citing BT26-05, and treat credentials the appliance stored or injected as exposed. Before approving an interruption, check that the response plan covers both evidence preservation and protective changes in the order required by the current guidance. Appliance operations and forensic collection still require the appropriate authorization and expertise.",
           "links": [
             {
               "phrase": "evidence of exploitation",
               "to": "https://www.beyondtrust.com/blog/entry/bt26-05",
-              "start": 32
+              "start": 12
             }
           ]
         },
@@ -178,14 +178,14 @@ export const beyondTrustArticle: Article = {
             }
           ]
         },
-        "Ask which records are available, including copies held outside the appliance. Missing records limit what the responder can conclude. If they do not cover August and September, have the responder explain the gap and what can still be assessed.",
+        "Check which records cover the exposure window, including copies held outside the appliance. Missing records limit the conclusions you can draw. If August or September is missing, keep that gap in the assessment and distinguish what the remaining evidence can establish from what is unknown.",
         {
-          "text": "Agree who owns the patch confirmation and exposure review, and when you will hear back. Keep the review assigned even after patching is confirmed. The report should go to the person at your firm who can approve an interruption or additional response work. Our incident-response planning guide explains how to agree authority when several providers need to act.",
+          "text": "Track patch confirmation and the exposure review separately, each with a responsible person and a next update. Keep the review open after patching is confirmed. Before approving an interruption or additional response work, check the findings and remaining uncertainty. Our incident-response planning guide explains how to agree authority when several providers need to act.",
           "links": [
             {
               "phrase": "incident-response planning guide",
               "to": "/resources/incident-response-plan-small-business/",
-              "start": 260
+              "start": 273
             }
           ]
         },

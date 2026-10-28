@@ -363,7 +363,7 @@ export const findingGuides: Article[] = [
   "organizationByline": true,
   "consultation": {
     "title": "Review this finding with Helm.",
-    "sub": "Tell us what the scan found and which provider manages the service. We can agree on a scope for Helm’s help. Your existing IT team and vendors handle the configuration changes.",
+    "sub": "Bring the scan finding and the affected service to the discussion. We can agree on a scope for Helm’s help. Configuration changes are outside this consultation unless separately agreed; your existing IT responsibilities stay in place.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
   },
@@ -680,7 +680,7 @@ export const findingGuides: Article[] = [
           ]
         },
         "If you sent reports to the wrong destination, edit the same policy record and restore the saved rua value or replace it with the correct one. If your original record had no rua field, remove only the field you added while you prepare a correct destination. Preserve enforcement. Recheck publication and expect cached records or already queued reports to continue briefly. Removing rua stops requesting future aggregate reports once receivers see the change; it does not retrieve reports already delivered. Use the reporting service's data-removal process for data it has received.",
-        "Save the final DNS value and the first verified report or dashboard result with its date. Helm's public scan can check the published request, but it cannot confirm that your mailbox receives reports or that someone reviews them. DNS administration and any Helm assistance remain subject to the agreed scope with your existing IT and vendors."
+        "Save the final DNS value and the first verified report or dashboard result with its date. Helm's public scan can check the published request, but it cannot confirm that your mailbox receives reports or that someone reviews them. Make DNS changes only through authorized access. Any administrative help from Helm needs a separately agreed scope."
       ]
     }
   ],
@@ -690,7 +690,7 @@ export const findingGuides: Article[] = [
   "organizationByline": true,
   "consultation": {
     "title": "Review this finding with Helm.",
-    "sub": "Tell us what the scan found and which provider manages the service. We can agree on a scope for Helm’s help. Your existing IT team and vendors handle the configuration changes.",
+    "sub": "Bring the scan finding and the affected service to the discussion. We can agree on a scope for Helm’s help. Configuration changes are outside this consultation unless separately agreed; your existing IT responsibilities stay in place.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
   },
@@ -993,7 +993,7 @@ export const findingGuides: Article[] = [
             }
           ]
         },
-        "Helm's public scan checks selected public configuration. It cannot inspect all your senders or prove that every message is signed. Keep message tests and the provider's settings with the finding; any administrative help from Helm requires an agreed scope with your existing IT and vendors."
+        "Helm's public scan checks selected public configuration. It cannot inspect all your senders or prove that every message is signed. Keep message tests and the provider's settings with the finding; any administrative help from Helm requires an agreed scope and appropriate authorization."
       ]
     }
   ],
@@ -1003,7 +1003,7 @@ export const findingGuides: Article[] = [
   "organizationByline": true,
   "consultation": {
     "title": "Review this finding with Helm.",
-    "sub": "Tell us what the scan found and which provider manages the service. We can agree on a scope for Helm’s help. Your existing IT team and vendors handle the configuration changes.",
+    "sub": "Bring the scan finding and the affected service to the discussion. We can agree on a scope for Helm’s help. Configuration changes are outside this consultation unless separately agreed; your existing IT responsibilities stay in place.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
   },
@@ -1233,7 +1233,7 @@ export const findingGuides: Article[] = [
           ],
           "ordered": true
         },
-        "Save the decision, domain, provider instructions, tested services, dates and receiver results. Review these notes when you add a sending service or change a forwarding route. Helm's public scan can observe the published policy; it cannot inspect the business's complete sender inventory or assess internal systems. Help from Helm needs an agreed scope; retained IT and the relevant providers handle administration under their arrangements."
+        "Save the decision, domain, provider instructions, tested services, dates and receiver results. Review these notes when you add a sending service or change a forwarding route. Helm's public scan can observe the published policy; it cannot inspect the business's complete sender inventory or assess internal systems. Make administrative changes only within your authorized access and existing agreements. Help from Helm needs an agreed scope."
       ]
     }
   ],
@@ -1243,7 +1243,7 @@ export const findingGuides: Article[] = [
   "organizationByline": true,
   "consultation": {
     "title": "Review this finding with Helm.",
-    "sub": "Tell us what the scan found and which provider manages the service. We can agree on a scope for Helm’s help. Your existing IT team and vendors handle the configuration changes.",
+    "sub": "Bring the scan finding and the affected service to the discussion. We can agree on a scope for Helm’s help. Configuration changes are outside this consultation unless separately agreed; your existing IT responsibilities stay in place.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
   },
@@ -1582,7 +1582,7 @@ export const findingGuides: Article[] = [
       "h": "If the repair fails, restore the captured state",
       "ps": [
         "If a working business route starts failing after your edit, first check whether you omitted a legitimate sender from the single record. If you need to restore the earlier working setup, return to the same DNS record and restore its saved value, name and TTL. Removing a newly created record returns DNS to its earlier state, including the lack of SPF. For a consolidation, keep the single valid policy if that is the repair needed; recreating the original duplicates restores their SPF error.",
-        "Query DNS after restoration and retest the affected service. Receivers can continue using cached answers until their TTL expires. Keep the original configuration and failed test headers so the mail provider can compare the sending IP, envelope domain and authorization. Restoring DNS can recover an earlier working setup, but an originally missing or invalid record still needs repair.",
+        "Query DNS after restoration and retest the affected service. Receivers can continue using cached answers until their TTL expires. Compare the sending IP, envelope domain and authorization in the original configuration and failed test headers. Keep those records if the failure needs further investigation. Restoring DNS can recover an earlier working setup, but an originally missing or invalid record still needs repair.",
         {
           "text": "Review the choice of ~all or -all separately in the SPF softfail guide. Helm's public scan can recheck the published configuration; it cannot establish your complete sender inventory, assess internal systems or promise inbox delivery. Help from Helm needs an agreed scope; retained IT and the relevant vendors handle administration under their arrangements.",
           "links": [
@@ -1602,7 +1602,7 @@ export const findingGuides: Article[] = [
   "organizationByline": true,
   "consultation": {
     "title": "Review this finding with Helm.",
-    "sub": "Tell us what the scan found and which provider manages the service. We can agree on a scope for Helm’s help. Your existing IT team and vendors handle the configuration changes.",
+    "sub": "Bring the scan finding and the affected service to the discussion. We can agree on a scope for Helm’s help. Configuration changes are outside this consultation unless separately agreed; your existing IT responsibilities stay in place.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
   },
@@ -1616,7 +1616,7 @@ export const findingGuides: Article[] = [
   "readMin": 15,
   "lane": "All industries",
   "laneTo": "/",
-  "intro": "Enable DNSSEC by signing the domain's DNS records at its DNS host, then publishing their matching Delegation Signer (DS) information through the registrar. You need access to both accounts and a way to validate the result. If the domain is already signed, inspect its current delegation before changing anything: a stale DS record can stop the domain resolving.",
+  "intro": "DNSSEC needs two matching parts: signed records at your DNS host and Delegation Signer (DS) information in the parent zone, usually published through your registrar. Inspect both before changing either. You need authorized access, a way to validate the chain and a recovery plan; a stale DS record can stop your domain resolving. If the existing setup validates, keep it.",
   "lead": [],
   "sections": [
     {
@@ -1840,7 +1840,7 @@ export const findingGuides: Article[] = [
           ],
           "ordered": true
         },
-        "If the registrar or domain ending cannot support your DNS host's signing arrangement, record that limitation and evaluate a provider change separately. Helm's public scan checks limited public configuration; it does not administer DNS or assess internal systems. Help from Helm needs an agreed scope; retained IT and vendors handle administration under their arrangements."
+        "If the registrar or domain ending cannot support your DNS host's signing arrangement, record the limitation and evaluate a provider change separately. Keep the starting records and validation result so that decision has evidence behind it. Helm's public scan checks limited public configuration; it does not administer DNS or assess internal systems. Any help from Helm needs an agreed scope."
       ]
     }
   ],
@@ -1850,7 +1850,7 @@ export const findingGuides: Article[] = [
   "organizationByline": true,
   "consultation": {
     "title": "Review this finding with Helm.",
-    "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
+    "sub": "Bring the scan finding and the affected service to the discussion. We can agree on a scope for Helm’s help. Configuration changes are outside this consultation unless separately agreed; your existing IT responsibilities stay in place.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
   },
@@ -1859,7 +1859,7 @@ export const findingGuides: Article[] = [
   {
   "slug": "set-up-mta-sts",
   "title": "Set up and test an MTA-STS mail policy",
-  "metaDesc": "Confirm MX destinations, publish and test an MTA-STS policy, and plan recovery around cached policies with the mail provider.",
+  "metaDesc": "Confirm MX destinations, publish and test an MTA-STS policy, and plan recovery around the lifetime of cached enforcement policies.",
   "date": "2026-10-14",
   "readMin": 15,
   "lane": "All industries",
@@ -1942,7 +1942,7 @@ export const findingGuides: Article[] = [
           ]
         },
         {
-          "text": "Microsoft does not host customers’ policy files in Exchange Online. Its hosting walkthrough uses Azure Static Web Apps, with a custom domain and certificate. You can also use an existing host that meets the policy requirements. Read the hosting plan and its cost before creating a new service. For cPanel mail, your hosting provider must confirm the receiving hostname and mail-service certificate; a working website certificate alone does not establish SMTP certificate coverage.",
+          "text": "Microsoft does not host customers’ policy files in Exchange Online. Its hosting walkthrough uses Azure Static Web Apps, with a custom domain and certificate. You can also use an existing host that meets the policy requirements. Read the hosting plan and its cost before creating a new service. For cPanel mail, verify the receiving hostname and mail-service certificate against the hosting service's documented configuration; a working website certificate alone does not establish SMTP certificate coverage.",
           "links": [
             {
               "phrase": "hosting walkthrough",
@@ -2130,7 +2130,7 @@ export const findingGuides: Article[] = [
       "ps": [
         "After all intended MX destinations pass validation and your tests and reports show no unresolved legitimate route, save the working testing file. Change mode to enforce using your provider’s supported policy, publish the file, check its public response, and update the TXT id. Choose max_age with the same recovery plan you used for testing. Watch new TLS reports, delivery logs and external tests during the transition.",
         "If a legitimate sender starts failing, collect its bounce or delay details and the receiving hostname. First correct a wrong mx entry, expired mail-server certificate or broken policy host when the evidence identifies it. If you need to pause MTA-STS enforcement, publish a valid policy with mode: testing and update id. Keep the HTTPS endpoint reachable so senders can fetch the revised policy. Recheck the affected delivery path after the change.",
-        "An older enforced policy may remain cached for its max_age. Deleting the marker or shortening the new policy’s lifetime will not instantly erase those copies, so recovery may be delayed. For each previous policy, add its max_age to the time it was last served. Use the latest resulting expiry to plan the remaining cache window with your provider. A scheduled change of mail gateways needs compatible policy coverage before the MX cutover for this reason.",
+        "An older enforced policy may remain cached for its max_age. Deleting the marker or shortening the new policy’s lifetime will not instantly erase those copies, so recovery may be delayed. For each previous policy, add its max_age to the time it was last served. Use the latest resulting expiry to plan the remaining cache window. A scheduled change of mail gateways needs compatible policy coverage before the MX cutover for this reason.",
         {
           "text": "For permanent removal, the standard’s removal procedure uses mode: none, a new identifier and a wait for all previously served policies to expire before removing the marker and HTTPS endpoint. Keep TLS reporting available while investigating; changing its destination does not require changing MTA-STS enforcement. Helm’s public scan cannot confirm every sender’s enforcement or whether your reports are being received and reviewed.",
           "links": [
@@ -2150,7 +2150,7 @@ export const findingGuides: Article[] = [
   "organizationByline": true,
   "consultation": {
     "title": "Review this finding with Helm.",
-    "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
+    "sub": "Bring the scan finding and the affected service to the discussion. We can agree on a scope for Helm’s help. Configuration changes are outside this consultation unless separately agreed; your existing IT responsibilities stay in place.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
   },
@@ -2391,7 +2391,7 @@ export const findingGuides: Article[] = [
   "organizationByline": true,
   "consultation": {
     "title": "Review this finding with Helm.",
-    "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
+    "sub": "Bring the scan finding and the affected service to the discussion. We can agree on a scope for Helm’s help. Configuration changes are outside this consultation unless separately agreed; your existing IT responsibilities stay in place.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
   },
@@ -2409,9 +2409,9 @@ export const findingGuides: Article[] = [
   "lead": [],
   "sections": [
     {
-      "h": "Quick answer",
+      "h": "Confirm the receiving service before changing DNS",
       "ps": [
-        "Confirm that the intended receiving service is ready for your domain and addresses before changing MX. Save the complete current set, compare it with the receiving provider's instructions, and correct confirmed differences at the active DNS host. Then test incoming mail and check the receiving logs."
+        "Before editing, confirm that you have authority to change the domain and that its intended receiving service is ready for every required address. Save the complete current MX set, compare it with that service's instructions and correct only confirmed differences at the active DNS host. Test incoming mail and inspect receiving logs afterwards. If you cannot establish the active route or a working recovery path, stop at the diagnostic steps."
       ]
     },
     {
@@ -2687,7 +2687,7 @@ export const findingGuides: Article[] = [
       "ps": [
         "If new delivery fails after your MX change, return to the same DNS editor and restore the saved MX set, including every original priority and TTL, when the previous receiving service still accepts the domain. Remove new destinations that conflict with that restored set. If the original MX set was missing or invalid, restoring it would restore that defect too: correct the confirmed error in the new set or follow the receiving provider's recovery procedure. If you also changed cPanel Email Routing, restore its captured option when it belongs to the earlier working route.",
         "Verify the authoritative and public answers, then repeat external delivery and local-form tests. DNS caches can delay the effect. Restoring MX cannot recover mail already rejected or deliver messages to a disabled previous account, so inspect both providers' logs and establish what happened to the affected tests.",
-        "Keep the previous and repaired MX sets, recipient tests, timestamps, logs and unresolved addresses with your mail configuration. Before the next mail-provider switch, check mailbox readiness and gateway routing again. Helm's public scan checks limited public configuration; it does not inspect mailbox readiness, complete delivery logs or internal systems. Help from Helm needs an agreed scope; retained IT and the mail and DNS vendors handle administration under their arrangements."
+        "Keep the previous and repaired MX sets, recipient tests, timestamps, logs and unresolved addresses with your mail configuration. Before the next mail-provider switch, check mailbox readiness and gateway routing again. Helm's public scan checks limited public configuration; it does not inspect mailbox readiness, complete delivery logs or internal systems. Any help from Helm needs an agreed scope."
       ]
     }
   ],
@@ -2697,7 +2697,7 @@ export const findingGuides: Article[] = [
   "organizationByline": true,
   "consultation": {
     "title": "Review this finding with Helm.",
-    "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
+    "sub": "Bring the scan finding and the affected service to the discussion. We can agree on a scope for Helm’s help. Configuration changes are outside this consultation unless separately agreed; your existing IT responsibilities stay in place.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
   },
@@ -2706,7 +2706,7 @@ export const findingGuides: Article[] = [
   {
   "slug": "investigate-smtp-check",
   "title": "Investigate an unavailable SMTP check",
-  "metaDesc": "Recheck an unavailable SMTP probe with the mail provider. Separate scanner connection limits from actual delivery problems.",
+  "metaDesc": "Investigate an unavailable SMTP probe with controlled message tests and delivery logs. Separate scanner connection limits from actual delivery problems.",
   "date": "2026-10-14",
   "readMin": 11,
   "lane": "All industries",
@@ -2910,7 +2910,7 @@ export const findingGuides: Article[] = [
   "organizationByline": true,
   "consultation": {
     "title": "Review this finding with Helm.",
-    "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
+    "sub": "Bring the scan finding and the affected service to the discussion. We can agree on a scope for Helm’s help. Configuration changes are outside this consultation unless separately agreed; your existing IT responsibilities stay in place.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
   },
@@ -2919,12 +2919,12 @@ export const findingGuides: Article[] = [
   {
   "slug": "fix-website-https",
   "title": "Investigate and fix website HTTPS or certificate errors",
-  "metaDesc": "Investigate HTTPS and certificate errors with the website provider. Verify the affected hostname, approved change and recovery.",
+  "metaDesc": "Identify the hostname and cause of an HTTPS error, repair the confirmed problem through authorized access, and test the public connection again.",
   "date": "2026-10-14",
   "readMin": 14,
   "lane": "All industries",
   "laneTo": "/",
-  "intro": "To fix an HTTPS or certificate error, identify the exact hostname and error, check where DNS sends visitors, and renew or install the certificate on the service that handles their connection. Your website host and a proxy or CDN can serve different certificates. Test each public hostname, including www and redirecting addresses, after the repair.",
+  "intro": "To fix an HTTPS error, identify the exact hostname and error, then check where DNS sends visitors. Establish whether the failure comes from the certificate, the connection or another part of the site before changing the configuration. If the certificate needs renewal or replacement, apply that fix on the service handling the affected connection; your website host and a proxy or CDN can serve different certificates. Test each public hostname, including www and redirecting addresses, after the repair.",
   "lead": [],
   "sections": [
     {
@@ -3169,7 +3169,7 @@ export const findingGuides: Article[] = [
           ]
         },
         "After recovery, repeat the same public tests and record which addresses and pages work. For a managed certificate, verify automatic renewal and its notifications in the host or CDN account. For a manual certificate, record the expiry and the responsible account’s renewal process. Keep the domain-validation method working so the next renewal does not fail for the same reason.",
-        "Helm’s public scan checks a limited public connection. It does not establish application security or include certificate management as a service. Your website provider or retained IT handles administrative work within its agreement; any further Helm assistance needs a defined scope."
+        "Helm’s public scan checks a limited public connection. It does not establish application security or include certificate management as a service. Keep administrative work within your authorized access and existing service agreements. Any further Helm assistance needs a defined scope."
       ]
     }
   ],
@@ -3179,7 +3179,7 @@ export const findingGuides: Article[] = [
   "organizationByline": true,
   "consultation": {
     "title": "Review this finding with Helm.",
-    "sub": "Tell us what the scan found and which provider runs the affected service. Retained IT and the relevant providers handle the changes. Any help from Helm needs an agreed scope.",
+    "sub": "Bring the scan finding and the affected service to the discussion. We can agree on a scope for Helm’s help. Configuration changes are outside this consultation unless separately agreed; your existing IT responsibilities stay in place.",
     "label": "Discuss a configuration finding",
     "to": "/contact/"
   },

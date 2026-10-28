@@ -8,9 +8,9 @@ export const aiRetestArticle: Article = {
   "readMin": 9,
   "lane": "Professional services",
   "laneTo": "/professional-services/",
-  "intro": "An operations manager at a hypothetical firm uses an approved AI tool to turn an internal procedure into a short staff checklist. The firm tested it, assigned a reviewer and decided the result was useful. A month later, someone shortens the instructions to make the output easier to read. The next checklist looks cleaner, but it leaves out an exception for temporary staff.",
+  "intro": "Shorter AI instructions can produce a cleaner checklist that leaves out a required exception. If you change a drafting workflow, test the requirements that justified its approval before staff rely on the new version. For an internal procedure, that includes the unusual cases, such as a different approval route for temporary staff, that an attractive routine example can miss.",
   "lead": [
-    "The original approval cannot answer whether that revised workflow still works. Before staff rely on the change, retest the requirements that justified the original approval. That means keeping a few reusable examples, knowing what each should contain and recording what the changed version actually does.",
+    "Keep reusable examples, the requirements each should satisfy and the original outputs. That gives you a way to compare the changed workflow with its approved purpose, rather than relying on a demonstration you can no longer reproduce.",
     "For a small professional-services firm, this can begin with a modest comparison of approved internal material. It should remain a reviewable drafting task. A successful comparison does not authorize new data access, automatic sending or professional decisions."
   ],
   "readingLayout": true,
@@ -40,12 +40,12 @@ export const aiRetestArticle: Article = {
           ]
         },
         {
-          "text": "Keep changes within the approved boundary during the comparison. Adding a connection to client folders creates a separate access decision. Letting a drafting tool send its own output creates a separate action decision. Refer those changes to the responsible owner and retained IT provider before testing them. The document-access guide covers that review in more detail.",
+          "text": "Keep changes within the approved boundary during the comparison. Adding a connection to client folders creates a separate access decision. Letting a drafting tool send its own output creates a separate action decision. Establish the required approval, access and configuration review before testing either extension. The document-access guide covers that review in more detail.",
           "links": [
             {
               "phrase": "document-access guide",
               "to": "/resources/ai-access-business-documents/",
-              "start": 314
+              "start": 321
             }
           ]
         }
@@ -54,7 +54,7 @@ export const aiRetestArticle: Article = {
     {
       "h": "Keep examples that would reveal a meaningful failure",
       "ps": [
-        "Return to the workflow's accepted purpose. For the checklist, the manager might require the output to preserve mandatory steps, identify the right approver and include relevant exceptions. Attractive formatting is helpful, but it cannot compensate for a missing instruction.",
+        "Return to the workflow's accepted purpose. For the checklist, you might require the output to preserve mandatory steps, identify the right approver and include relevant exceptions. Attractive formatting is helpful, but it cannot compensate for a missing instruction.",
         "Choose examples because they test those requirements. A routine staff case tells you whether the ordinary path still works. A temporary-worker case tests the exception. Another example can deliberately omit information the procedure needs, so you can see whether the draft identifies the gap or fills it with an unsupported instruction.",
         "Use public, synthetic or explicitly approved low-sensitivity material. A useful test does not need a real employee's record or a client's file. Make the expected result specific enough that a second reviewer could understand why an output passed or failed. “Looks sensible” leaves too much to memory.",
         {
@@ -74,16 +74,16 @@ export const aiRetestArticle: Article = {
       "h": "Compare the same work and preserve the unsuccessful attempts",
       "ps": [
         "Where both versions are available, run the same approved cases through each. Keep the source material and intended task consistent. Record the changed instructions separately, so the comparison does not combine a new prompt with a repaired procedure and a different input.",
-        "Keep each original output before correcting it. Then record which requirement it met or missed, the consequence of the error and the correction needed. If the manager fixes a checklist before saving it, the record should retain that distinction. Otherwise, a later reviewer may mistake the repaired document for the tool's result.",
+        "Keep each original output before correcting it. Then record which requirement it met or missed, the consequence of the error and the correction needed. If you fix a checklist before saving it, the record should retain that distinction. Otherwise, a later reviewer may mistake the repaired document for the tool's result.",
         "AI-generated responses can vary across attempts. Repeating important cases helps expose that variation. Keep unsuccessful runs and explain how many attempts you made; rerunning until a good answer appears and reporting only that answer hides work the team would have to perform in practice.",
         "Sometimes the earlier model or setting is no longer available. Preserve the last reviewed outputs as historical evidence, then test the current workflow against the agreed requirements. You can establish whether the current result passes those checks without claiming that a particular vendor change caused the difference.",
         {
-          "text": "Ask someone who understands the procedure to review the results against the source. A second chatbot can suggest possible errors, but its agreement does not settle whether a mandatory step is present. NIST's measurement guidance calls for appropriate performance limits, evaluation over time and people able to interpret the results. The firm's reviewer still needs the authority and knowledge to reject unusable work.",
+          "text": "Compare the results with the source procedure, using the knowledge and authority needed to reject unusable work. If you cannot judge a required step, record that limit and keep acceptance open until a qualified review is complete. A second chatbot can suggest possible errors, but its agreement does not settle whether the step is present. NIST's measurement guidance calls for appropriate performance limits, evaluation over time and people able to interpret the results.",
           "links": [
             {
               "phrase": "measurement guidance",
               "to": "https://airc.nist.gov/airmf-resources/playbook/measure/",
-              "start": 208
+              "start": 347
             }
           ]
         }
@@ -92,10 +92,10 @@ export const aiRetestArticle: Article = {
     {
       "h": "Let the consequence of an error drive the decision",
       "ps": [
-        "In this firm, a changed heading might need a small edit. A missing approval step would make the checklist unsuitable for staff use. Both are errors, but treating them as equal in an overall percentage would obscure the decision.",
+        "For an internal checklist, a changed heading might need a small edit. A missing approval step would make the checklist unsuitable for staff use. Both are errors, but treating them as equal in an overall percentage would obscure the decision.",
         "Suppose the revised instructions produce nine acceptable drafts and one draft that tells temporary staff to skip an approval. Reporting a 90 percent pass rate would leave the owner without the most important fact: one tested case gave staff the wrong instruction at a point where approval mattered.",
-        "Agree on the response to that failure before a deadline creates pressure to accept it. The manager could hold the revised instructions, keep the established manual checklist available and investigate why the exception disappeared. If the earlier workflow remains available and its sources are still current, the owner can decide whether its existing approval still applies. Restoring old instructions should not restore an obsolete procedure.",
-        "The response also depends on whether the output has already been used. A failure confined to a test can be corrected within the test. If staff received a faulty checklist, identify the affected copies and have the responsible owner decide what needs correction. Possible disclosure or unauthorized actions belong in the firm's existing incident process.",
+        "Decide your response to that failure before a deadline creates pressure to accept it. Hold the revised instructions, keep the established manual checklist available and investigate why the exception disappeared. If the earlier workflow remains available and its sources are current, review whether its existing approval still applies. Restoring old instructions should not restore an obsolete procedure.",
+        "The response also depends on whether the output has already been used. A failure confined to a test can be corrected within the test. If staff received a faulty checklist, identify the affected copies and determine the required correction through the approved workflow. Use the firm's existing incident process for possible disclosure or unauthorized actions.",
         {
           "text": "NIST's Generative AI Profile includes post-deployment monitoring, escalation and evaluation of whether systems remain within acceptable limits. It does not supply a universal office-workflow pass rate. Your criteria need to reflect what the output is allowed to do and what would happen if it were wrong.",
           "links": [

@@ -38,6 +38,6 @@ export const bookingCopy = {
   "previewCompletionTitle": "Preview complete",
   "previewCompletionBody": "No appointment was created. Return to the booking page.",
   "previewReturnLabel": "Return to booking page",
-  "closingTitle": "Talk through your security priorities.",
-  "closingBody": "Book a call to discuss your current IT setup and whether Core or Command fits your firm."
+  "closingTitle": "Choose a time that works for you.",
+  "closingBody": "Bring your main security question and a brief description of your current IT setup."
 } as const;

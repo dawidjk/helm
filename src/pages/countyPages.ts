@@ -24,7 +24,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Consider a hypothetical Red Bank firm preparing a client payment. A message in an existing thread asks staff to use a different bank account. The earlier conversation does not establish that the change is legitimate. Staff should pause the payment and confirm the request using a number already held in the matter or engagement record. The wire-fraud prevention guide explains how to build that check into the firm's procedure.",
+          "text": "If a message in an existing client thread changes the bank account for a payment, pause before sending the money. The earlier conversation does not establish that the change is legitimate. Confirm the request using a number already held in the matter or engagement record. The wire-fraud prevention guide explains how to build that check into your firm's procedure.",
           "links": [
             {
               "phrase": "wire-fraud prevention guide",
@@ -185,7 +185,7 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "Tell us your town, approximate staff count, who handles IT and what prompted the inquiry. A Helm executive responds during business hours. Keep client documents and payment details out of the initial message."
+        "paragraph": "Tell us your town, approximate staff count, who handles IT and what prompted the inquiry. A Helm co-owner responds during business hours. Keep client documents and payment details out of the initial message."
       },
       {
         "kind": "paragraph",
@@ -285,7 +285,7 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "For a hypothetical supplier in Edison, office email and employee laptops might share information with a production system maintained by another vendor. A questionnaire asking whether all devices are monitored needs an answer that accounts for both. Monitoring the office computers would not establish that the production system is covered."
+        "paragraph": "If your office email and employee laptops share information with a separately maintained production system, a question about whether all devices are monitored needs an answer covering both. Check the production system separately; monitoring your office computers does not establish its coverage."
       },
       {
         "kind": "paragraph",
@@ -310,7 +310,7 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "For the hypothetical supplier, that means listing employee computers separately from production equipment and identifying who protects each system. A device running Windows still needs an eligibility review; its operating system alone does not put it into the standard service."
+        "paragraph": "List employee computers separately from production equipment and identify who protects each system. A device running Windows still needs an eligibility review; its operating system alone does not put it into the standard service."
       },
       {
         "kind": "paragraph",
@@ -421,7 +421,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Talk through your requirements or call (732) 943-0866. A Helm executive responds during business hours. The Trust page explains the technology providers and current service boundaries.",
+          "text": "Talk through your requirements or call (732) 943-0866. A Helm co-owner responds during business hours. The Trust page explains the technology providers and current service boundaries.",
           "links": [
             {
               "phrase": "Talk through your requirements",
@@ -525,7 +525,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "For a hypothetical business in Point Pleasant Beach, a seasonal employee might leave while their account still reaches a shared mailbox. Closing that access is an IT task that needs an owner. The offboarding checklist covers accounts, shared access and devices that can be missed when someone leaves.",
+          "text": "When a seasonal employee leaves, check whether their account can still reach shared mailboxes. Confirm that access removal is recorded as complete, not merely requested. Routine account changes remain with your IT team. The offboarding checklist covers accounts, shared access and devices that can be missed when someone leaves.",
           "links": [
             {
               "phrase": "offboarding checklist",
@@ -667,7 +667,7 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "Tell us about the staff change, additional location or security issue, along with your approximate staff count and current IT provider. Keep employee records and client information out of the initial message. A Helm executive responds during business hours."
+        "paragraph": "Tell us about the staff change, additional location or security issue, along with your approximate staff count and current IT provider. Keep employee records and client information out of the initial message. A Helm co-owner responds during business hours."
       },
       {
         "kind": "paragraph",
@@ -788,7 +788,7 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "After onboarding, decide who reviews the monthly security report, which shows what changed and which actions need attention. That person needs to follow up with the business or IT provider between events, while office accounts and computers remain in use."
+        "paragraph": "After onboarding, review the monthly security report for changes and outstanding actions. Keep each action with its owner and completion record so you can see what remains open between events, while your office accounts and computers remain in use."
       },
       {
         "kind": "paragraph",
@@ -946,7 +946,7 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "As you set the move dates, agree with your IT provider when staff will start at the new office and when the old one will close. Put checks for account access and covered workstations alongside the installation dates. Have someone at the firm confirm the results before signing off the move."
+        "paragraph": "As you set the move dates, record when staff will start at the new office and when the old one will close. Put checks for account access and covered workstations alongside the installation dates. Review the results before you sign off the move, using the same schedule as your IT team."
       },
       {
         "kind": "heading",
@@ -968,11 +968,11 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "Your IT provider handles the new office's routine setup and account administration. Before opening day, have staff use their own accounts from the new office to confirm they can reach the email, documents and business applications they need. An application owner may need to approve a change with its vendor; keep that contact in the move plan."
+        "paragraph": "Your IT provider handles the new office's routine setup and account administration. Before opening day, test access from the new office using the accounts and permissions for each role. Check that email, documents and required business applications open. An application owner may need to approve a change with its vendor; keep that contact in the move plan."
       },
       {
         "kind": "paragraph",
-        "paragraph": "If access is widened temporarily for the move, record who approved it and when the IT owner should remove it. When work at the old office ends, have that owner confirm the temporary access has ended and decide which remaining remote connections to the premises should be closed."
+        "paragraph": "If access is widened temporarily for the move, record who approved it, its end date and who is authorized to remove it. When work at the old office ends, check the access record against that approval. Confirm the temporary permissions have ended and decide which remaining remote connections to close. Routine account changes remain with your IT team."
       },
       {
         "kind": "paragraph",
@@ -1118,7 +1118,7 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "A county map and the client notes added to a project may need different sharing permissions. Agree with your IT provider where staff save their work and how they transfer it from the device used on site. Confirm the office copy opens and includes the latest work before clearing or reusing the field device."
+        "paragraph": "A county map and the client notes added to a project may need different sharing permissions. Choose where staff will save their work and document the approved transfer from the field device. Check those choices against your IT arrangements. Open the office copy and confirm it includes the latest work before clearing or reusing the field device."
       },
       {
         "kind": "paragraph",
@@ -1302,7 +1302,7 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "List each hosted application, including those where staff sign in with the same work email address. Ask whether sign-in is connected to the office identity system or uses a separate account. The answer helps your providers check where a change must be made."
+        "paragraph": "List each hosted application, including those where staff sign in with the same work email address. Check its sign-in configuration or account documentation to distinguish an account connected to your office identity system from a separate login. Record where an access change must be made and who is authorized to make it."
       },
       {
         "kind": "paragraph",
@@ -1491,7 +1491,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Helm's comparison of security service models explains the questions to ask about reporting, containment authority and the work each provider keeps.",
+          "text": "Compare the reporting schedule, containment authority and retained IT responsibilities in each service proposal. Helm's comparison of security service models explains those differences.",
           "links": [
             {
               "phrase": "comparison of security service models",
@@ -1661,7 +1661,7 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "At a hypothetical Vineland firm, a new office manager inherits an access-review task marked 'with IT.' The handoff omits the system and the person who can approve the change. The manager has to recover those details before they can follow up on the request."
+        "paragraph": "If you inherit an access-review task marked 'with IT,' you still need to know which system it concerns and who can approve the change. Check those details before treating the handoff as complete."
       },
       {
         "kind": "paragraph",
@@ -1821,7 +1821,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Google Drive's sharing guidance explains that a shared folder passes its permissions to the files and subfolders inside it. A file's settings cannot give someone less access than the parent folder grants. Material that needs tighter restrictions can go in a separate folder or a limited-access folder. Ask IT to check the contents and access through parent folders, groups and shareable links before inviting the client.",
+          "text": "Google Drive's sharing guidance explains that a shared folder passes its permissions to the files and subfolders inside it. A file's settings cannot give someone less access than the parent folder grants. Material that needs tighter restrictions can go in a separate folder or a limited-access folder. Before inviting the client, review the folder's contents and the access granted through parent folders, groups and shareable links. Confirm you are authorized to make any required permission changes.",
           "links": [
             {
               "phrase": "Google Drive's sharing guidance",
@@ -2004,7 +2004,7 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "Ask whether someone at your firm must approve each support session or whether the tool allows access when nobody is present. Your IT provider should confirm which account the supplier will use, how the person signs in and what they can change. Agree how IT will disable that access. The business approver should review any request for administrator privileges before IT grants them."
+        "paragraph": "Check whether the tool requires approval for each support session or allows unattended access. Record the supplier's account, sign-in method and permissions, along with the agreed way to disable access. Review any request for administrator privileges before approving it. Your IT team remains responsible for implementing the approved account changes."
       },
       {
         "kind": "heading",
@@ -2013,7 +2013,7 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "When the job ends, ask IT to confirm which supplier accounts and remote-access permissions it removed or reduced, and what remains approved for ongoing support. Keep that confirmation with the original approval."
+        "paragraph": "When the job ends, compare the current supplier accounts and remote-access permissions with the original approval. Check the completion record for access that should have been removed or reduced, and document what remains approved for ongoing support."
       },
       {
         "kind": "paragraph",
@@ -2163,11 +2163,11 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "Before the meeting, agree with your IT provider which approved laptop staff will use, how it will connect to the display and which account will open the client files. If someone intends to use a venue computer, have IT review that arrangement before anyone signs in."
+        "paragraph": "Before the meeting, choose an approved laptop, confirm how it connects to the display and check which account will open the client files. Do not sign in on a venue computer until its use has been reviewed under your firm's device and access rules."
       },
       {
         "kind": "paragraph",
-        "paragraph": "If your firm uses a shared office regularly, compare the operator's responsibilities with your IT agreement. Check who manages the network and shared equipment, and how staff report a problem. Ask your IT provider which firm workstations it administers and who has administrative access to your email."
+        "paragraph": "If your firm uses a shared office regularly, compare the operator's responsibilities with your IT agreement. Check who manages the network and shared equipment, and how staff report a problem. Use your device inventory and email administration records to identify which workstations your IT team administers and who holds administrative access to your email."
       },
       {
         "kind": "heading",
@@ -2368,7 +2368,7 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "Ask your IT provider which security services are already included in its bill and which work would remain with it after Helm is added. Compare that coverage with Core's standard scope, including managed email protection, device detection and response, and supported identity protection. Its automated monthly report shows what is covered and which actions need your team's attention."
+        "paragraph": "Read your current IT agreement alongside the bill. Identify the security services already included and the work that would remain after you add Helm; resolve any missing scope details before comparing prices. Compare that coverage with Core's standard scope, including managed email protection, device detection and response, and supported identity protection. Its automated monthly report shows what is covered and which actions need your team's attention."
       },
       {
         "kind": "paragraph",
@@ -2527,7 +2527,7 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "Keep the exact question with the draft response and the dated record that supports it. Ask the person responsible for the control to check which people or systems the record covers. That gives the reviewer a way to verify the answer before the firm approves it."
+        "paragraph": "Keep the exact question with the draft response and the dated record that supports it. Compare the people, systems and period in the question with the record's coverage. Resolve any mismatch before approving the answer; do not assume a record covers more than it states."
       },
       {
         "kind": "paragraph",
@@ -2705,7 +2705,7 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "An incoming owner needs to understand which security work is complete and which decisions still need attention. Ask the outgoing leadership and IT provider to connect unresolved issues to the decisions behind them. The handoff should show who approved a delay, when it needs another review and where the supporting record is kept."
+        "paragraph": "As the incoming owner, separate completed security work from decisions that still need attention. Review each unresolved issue alongside the decision behind it. Check who approved any delay, when it needs another review and where its supporting record is kept. Resolve missing details during the handoff while the outgoing leadership and IT contact are available."
       },
       {
         "kind": "heading",
@@ -2873,7 +2873,7 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "A replacement project can leave an old laptop and its replacement in use at the same time. Have IT and your security provider compare the computers still in use with the protection platform's enrollment records. Match them by a stable device identifier, since computer names can be reused, and check when each machine last reported. Record who uses each one, including spares that can still open client files."
+        "paragraph": "A replacement project can leave an old laptop and its replacement in use at the same time. Compare the computers still in use with the protection platform's enrollment records. Match them by a stable device identifier, since computer names can be reused, and check when each machine last reported. Record who uses each one, including spares that can still open client files. If the records are outside your access, obtain the relevant export before marking coverage as confirmed."
       },
       {
         "kind": "paragraph",
@@ -2898,11 +2898,11 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "Have the incoming IT owner confirm who at your firm can authorize administrative access to its email environment, domain registration and business applications. Record which outside providers still have administrative or remote access, why they need it and who will remove it when their work ends."
+        "paragraph": "Confirm who at your firm can authorize administrative access to email, domain registration and business applications. Record which outside providers still have administrative or remote access, why they need it and who is authorized to remove it when their work ends. Include this record in the incoming IT owner's handover."
       },
       {
         "kind": "paragraph",
-        "paragraph": "During the handover, have IT check recovery contacts and the approved way to request support. End the outgoing provider's access once the handover no longer needs it, and confirm completion. Agree who receives security alerts while providers overlap and update contact details when responsibility changes."
+        "paragraph": "During the handover, check recovery contacts and the approved way to request support. Confirm that the outgoing provider's access ends when the handover no longer needs it, using the completion record for the authorized account changes. Agree who receives security alerts while providers overlap and update contact details when responsibility changes."
       },
       {
         "kind": "heading",
@@ -2924,7 +2924,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Before a machine leaves, decide what information the firm needs to keep and assign data removal to IT or a separately engaged disposal provider. Ask for a record that identifies the equipment and explains how its data was handled. NIST's media sanitization guidance gives IT a reference for choosing data-removal controls based on the information's sensitivity.",
+          "text": "Before a machine leaves, decide what information you need to keep and agree on an authorized data-removal process. Check the completion record for the equipment identifier and the method used. NIST's media sanitization guidance explains how to choose controls according to the information's sensitivity. Keep equipment disposal and data removal within their separately agreed scope.",
           "links": [
             {
               "phrase": "NIST's media sanitization guidance",
@@ -3098,11 +3098,11 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "Ask the provider whether it can recover your firm's records after deletion or damage, as well as restore its service after an outage. Check which data is included, how far back it can restore records and what the terms say about recovery time. Confirm how your firm starts a recovery request under the plan it buys."
+        "paragraph": "Read the recovery terms for your subscription. Check whether they cover your firm's deleted or damaged records as well as a service-wide outage, which data they include, how far back recovery reaches and what they say about recovery time. Record how you start a recovery request. Resolve any missing answer before relying on the plan."
       },
       {
         "kind": "paragraph",
-        "paragraph": "Agree with your IT team and the provider how to check restoration safely. Have a staff member who uses the application complete a representative task with the recovered records and check their dates and completeness. If the plan relies on an export, establish how that information would become usable in the application again."
+        "paragraph": "Agree on a safe restoration test within your authorized access and support arrangements. Complete a representative task with the recovered records, checking their dates and completeness. If the plan relies on an export, establish how that information would become usable in the application again."
       },
       {
         "kind": "heading",
@@ -3275,7 +3275,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "The authorized client contact confirms who should receive the information; your firm checks whether its controls support the security answer for the expanded engagement. Record any unresolved gap and assign the work to the responsible provider. Your firm reviews and owns every final security representation. The questionnaire response guide explains the records and review work behind a supportable answer.",
+          "text": "Confirm the intended recipients with the authorized client contact, then check whether your controls support the security answer for the expanded engagement. Record each unresolved gap, the required action and the evidence you will use to check completion. Keep the action within the responsible team's agreed scope. You retain responsibility for your firm's final security representation. The questionnaire response guide explains the records and review work behind a supportable answer.",
           "links": [
             {
               "phrase": "questionnaire response guide",
@@ -3420,7 +3420,7 @@ export const countyPages: CountyPageCopy[] = [
     "county": "Sussex",
     "slug": "sussex-county-nj",
     "title": "Cybersecurity Services in Sussex County, NJ | Helm",
-    "description": "Cybersecurity for Sussex County firms with existing IT. Plan supported remote access and on-site work, with published Core and Command pricing.",
+    "description": "Cybersecurity for Sussex County firms with existing IT. Plan supported remote access and on-site work, with published Core pricing and service terms.",
     "h1": "Cybersecurity for Sussex County offices",
     "intro": "Helm Security provides managed cybersecurity for Sussex County professional-services firms alongside their existing IT provider. We agree how to reach the covered systems and which work needs an on-site visit. Visits are available throughout New Jersey.",
     "cta": "Book a security planning call",
@@ -3436,7 +3436,7 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "Your IT provider should confirm the approved way to reach each system involved and any administrative access needed for the task. A remote session also depends on the device being powered on and connected. If an administrator must make a change first, arrange that with the responsible provider before the session."
+        "paragraph": "Check the approved access procedure for each system and the administrative permissions the task requires. Confirm that the device will be powered on and connected. If a prerequisite change needs an administrator's authority, include it in the visit plan and confirm completion before the session."
       },
       {
         "kind": "paragraph",
@@ -3542,7 +3542,7 @@ export const countyPages: CountyPageCopy[] = [
           "@id": "https://helmsecured.com/service-areas/sussex-county-nj/#webpage",
           "url": "https://helmsecured.com/service-areas/sussex-county-nj/",
           "name": "Cybersecurity Services in Sussex County, NJ | Helm",
-          "description": "Cybersecurity for Sussex County firms with existing IT. Plan supported remote access and on-site work, with published Core and Command pricing.",
+          "description": "Cybersecurity for Sussex County firms with existing IT. Plan supported remote access and on-site work, with published Core pricing and service terms.",
           "about": {
             "@id": "https://helmsecured.com/service-areas/sussex-county-nj/#service"
           }
@@ -3653,7 +3653,7 @@ export const countyPages: CountyPageCopy[] = [
       {
         "kind": "paragraph",
         "paragraph": {
-          "text": "Ask someone covering accounts payable to find the approved supplier contact and the last change decision. If either is stored only in a colleague's private inbox, the process depends on that person being available. The invoice-fraud guide explains how to retain the verification and approval records.",
+          "text": "Test the handover by finding the approved supplier contact and the last change decision using the access available to the person covering accounts payable. If either is stored only in a colleague's private inbox, the process depends on that person being available. The invoice-fraud guide explains how to retain the verification and approval records.",
           "links": [
             {
               "phrase": "invoice-fraud guide",
@@ -3811,11 +3811,11 @@ export const countyPages: CountyPageCopy[] = [
       },
       {
         "kind": "paragraph",
-        "paragraph": "Ask the application vendor which business records the firm can export and in what format. Check whether attachments or other linked documents require a separate process. Review the notice period, export charges and any work needed from a new provider before committing to another term."
+        "paragraph": "Check the application's export documentation and your agreement for the business records you can export and the available formats. Check whether attachments or linked documents require a separate process. Resolve missing details with the vendor, and review the notice period, export charges and migration work before committing to another term."
       },
       {
         "kind": "paragraph",
-        "paragraph": "Ask the application vendor or your IT provider to demonstrate an agreed sample export, then check that the firm can read the result. If a different application is under consideration, agree who will assess whether it can use those records. Keep the result and any unresolved limitations with the renewal decision."
+        "paragraph": "Test an agreed sample export through the application's approved process, then open the result and check that your firm can read it. Stay within your authorized access; where exports require vendor action, include that dependency in the test plan. If you are considering another application, check whether it can use the exported records. Keep the result and unresolved limitations with the renewal decision."
       },
       {
         "kind": "paragraph",

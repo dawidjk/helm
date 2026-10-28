@@ -28,7 +28,7 @@ export const productList: Product[] = [
     metaTitle: 'Helm Core: Managed Cybersecurity for NJ Businesses',
     tagline: 'Managed protection alongside your IT team.',
     desc: "Helm Core provides managed cybersecurity for firms with 20 to 75 people, alongside your existing IT provider or internal team. One automated monthly report uses the available security signals to show what is covered, what changed and what your firm or IT team needs to do next.",
-    bestFor: 'organizations with 20 to 75 people that need complete, standardized protection without adding another high-touch consulting relationship',
+    bestFor: "organizations with 20 to 75 people that need standardized managed protection and already have someone responsible for security decisions and follow-up",
     metaDesc:
       "Helm Core coordinates supported email, workstation and identity protection alongside your IT team for $125 per user per month, with a $500 monthly minimum.",
     price: '$125 / user / month',
@@ -58,7 +58,7 @@ export const productList: Product[] = [
       },
       {
         title: 'One monthly security report',
-        body: "Helm brings the available security signals together in one automated monthly report. It shows leaders what is covered, what changed, and which actions the business or its IT provider needs to take.",
+        body: "Helm brings the available security signals together in one automated monthly report. You can see what is covered, what changed and which actions remain open, including work assigned to your firm or IT team.",
       },
     ],
     how: [
@@ -112,7 +112,7 @@ export const productList: Product[] = [
     how: [
       {num: '1', title: 'Confirm the fit', body: "We review the business pressure and identify the leadership sponsor and current IT owner. We also review the required frameworks, systems in scope, and coordination load. Both sides agree on the boundaries before detailed design starts."},
       {num: '2', title: 'Build the program baseline', body: "Helm deploys the covered Core stack and documents responsibilities and evidence. We establish the risk register and put the work in priority order for the first 12-month roadmap."},
-      {num: '3', title: 'Run the cadence', body: "Helm keeps the evidence and roadmap current and prepares the agreed questionnaire responses. We lead quarterly leadership reviews and track assigned remediation to a named owner."},
+      {num: '3', title: "Keep the program current", body: "Helm keeps the evidence and roadmap current and prepares the agreed questionnaire responses. We lead quarterly leadership reviews and track assigned remediation to a named owner."},
     ],
     faqs: [
       {q: 'Does Command include SOC 2 readiness?', a: `${commandReadiness.status} ${commandReadiness.description} ${commandReadiness.boundary}`},

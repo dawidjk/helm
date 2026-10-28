@@ -7,7 +7,7 @@ import {renderParagraph, paragraphText, type Paragraph} from '../lib/richText';
 const faqs: {q: string; a: Paragraph}[] = [
   {
     q: 'We have an IT person. Why do we need Helm?',
-    a: "Your IT person or MSP keeps systems running, including help desk, administration, patching, procurement, and routine remediation. Helm owns the security program defined in your agreement. Before work begins, we write down who is responsible for what.",
+    a: "Your IT person or MSP keeps systems running, including help desk, administration, patching, procurement, and routine remediation. Helm Core manages the agreed security protections. Command adds ongoing security-program leadership. Before work begins, we write down who is responsible for what.",
   },
   {
     q: 'Are we really a target? We only have 15 employees.',

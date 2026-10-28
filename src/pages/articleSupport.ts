@@ -400,11 +400,11 @@ export const articleSupport: Record<string, ArticleSupport> = {
       "href": "https://developers.cloudflare.com/dns/cname-flattening/set-up-cname-flattening/"
     },
     {
-      "title": "What Is DMARC? A Plain-English Guide for Business Owners",
+      "title": "Your email can pass DMARC while your invoices fail",
       "href": "/resources/what-is-dmarc/"
     },
     {
-      "title": "How to check website security: a simple step-by-step checklist for New Jersey small businesses",
+      "title": "How to check your website beyond the security score",
       "href": "/resources/check-website-security/"
     },
     {
@@ -618,11 +618,11 @@ export const articleSupport: Record<string, ArticleSupport> = {
       "href": "https://developers.google.com/speed/public-dns/docs/security"
     },
     {
-      "title": "What Is DMARC? A Plain-English Guide for Business Owners",
+      "title": "Your email can pass DMARC while your invoices fail",
       "href": "/resources/what-is-dmarc/"
     },
     {
-      "title": "How to check website security: a simple step-by-step checklist for New Jersey small businesses",
+      "title": "How to check your website beyond the security score",
       "href": "/resources/check-website-security/"
     },
     {
@@ -686,11 +686,11 @@ export const articleSupport: Record<string, ArticleSupport> = {
       "href": "https://datatracker.ietf.org/doc/html/rfc5321"
     },
     {
-      "title": "What Is DMARC? A Plain-English Guide for Business Owners",
+      "title": "Your email can pass DMARC while your invoices fail",
       "href": "/resources/what-is-dmarc/"
     },
     {
-      "title": "How to check website security: a simple step-by-step checklist for New Jersey small businesses",
+      "title": "How to check your website beyond the security score",
       "href": "/resources/check-website-security/"
     },
     {
@@ -750,11 +750,11 @@ export const articleSupport: Record<string, ArticleSupport> = {
       "href": "https://datatracker.ietf.org/doc/html/rfc1034"
     },
     {
-      "title": "What Is DMARC? A Plain-English Guide for Business Owners",
+      "title": "Your email can pass DMARC while your invoices fail",
       "href": "/resources/what-is-dmarc/"
     },
     {
-      "title": "How to check website security: a simple step-by-step checklist for New Jersey small businesses",
+      "title": "How to check your website beyond the security score",
       "href": "/resources/check-website-security/"
     },
     {
@@ -814,11 +814,11 @@ export const articleSupport: Record<string, ArticleSupport> = {
       "href": "https://developers.cloudflare.com/dns/manage-dns-records/reference/ttl/"
     },
     {
-      "title": "What Is DMARC? A Plain-English Guide for Business Owners",
+      "title": "Your email can pass DMARC while your invoices fail",
       "href": "/resources/what-is-dmarc/"
     },
     {
-      "title": "How to check website security: a simple step-by-step checklist for New Jersey small businesses",
+      "title": "How to check your website beyond the security score",
       "href": "/resources/check-website-security/"
     },
     {
@@ -1633,7 +1633,7 @@ export const articleSupport: Record<string, ArticleSupport> = {
       "href": "/resources/cybersecurity-risk-assessment-tools/"
     },
     {
-      "title": "Network Hardening for Small Business: A Checklist Your IT Provider Can Use",
+      "title": "A separate guest Wi-Fi name does not prove your network is separated",
       "href": "/resources/network-hardening-small-business/"
     },
     {

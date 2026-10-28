@@ -410,7 +410,7 @@ export const refreshedArticleSupport: Record<string, ArticleSupport> = {
       "href": "https://learn.microsoft.com/en-us/defender-office-365/protection-stack-microsoft-defender-for-office365"
     },
     {
-      "title": "What Is DMARC? A Plain-English Guide for Business Owners",
+      "title": "Your email can pass DMARC while your invoices fail",
       "href": "/resources/what-is-dmarc/"
     },
     {
@@ -505,7 +505,7 @@ export const refreshedArticleSupport: Record<string, ArticleSupport> = {
       "href": "https://knowledge.workspace.google.com/admin/security/security-checklist-for-small-businesses-1-100-users?hl=en"
     },
     {
-      "title": "Shadow AI: What Employees Paste into Chatbots When Nobody Is Looking",
+      "title": "Your AI policy needs an answer for the work people are trying to finish",
       "href": "/resources/shadow-ai-at-work/"
     },
     {
@@ -715,7 +715,7 @@ export const refreshedArticleSupport: Record<string, ArticleSupport> = {
       "href": "/resources/wire-fraud-prevention-law-firms/"
     },
     {
-      "title": "What Is DMARC? A Plain-English Guide for Business Owners",
+      "title": "Your email can pass DMARC while your invoices fail",
       "href": "/resources/what-is-dmarc/"
     },
     {
@@ -1134,7 +1134,7 @@ export const refreshedArticleSupport: Record<string, ArticleSupport> = {
       "href": "https://csrc.nist.gov/pubs/sp/1300/final"
     },
     {
-      "title": "Comparing Managed Service Provider Models: Standard Security Stack versus Full Program Ownership",
+      "title": "The same security tools can leave you with a different job",
       "href": "/resources/managed-service-provider-security-models/"
     },
     {
@@ -1157,7 +1157,7 @@ export const refreshedArticleSupport: Record<string, ArticleSupport> = {
       "href": "https://csrc.nist.gov/pubs/sp/800/40/r4/final"
     },
     {
-      "title": "Penetration Testing vs Vulnerability Scanning: What Your Business Should Buy",
+      "title": "Buy the security test that can answer your question",
       "href": "/resources/pen-test-vs-vulnerability-scan/"
     },
     {
@@ -1190,7 +1190,7 @@ export const refreshedArticleSupport: Record<string, ArticleSupport> = {
       "href": "/resources/backup-testing-insurers/"
     },
     {
-      "title": "Penetration Testing vs Vulnerability Scanning: What Your Business Should Buy",
+      "title": "Buy the security test that can answer your question",
       "href": "/resources/pen-test-vs-vulnerability-scan/"
     },
     {

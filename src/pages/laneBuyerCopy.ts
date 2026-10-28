@@ -136,10 +136,10 @@ export const laneBuyerCopy: Partial<Record<string, LaneBuyerCopy>> = {
   },
   "accounting-firms": {
     "selection": {
-      "title": "What should an accounting or tax firm ask a security provider?",
+      "title": "What should you check before choosing security support?",
       "paragraphs": [
-        "Ask how the service covers permanent and seasonal staff, which systems holding client information it can monitor and what happens to filing work if it isolates a covered workstation or restricts a supported account. The proposal should say who will maintain the WISP and answer client or vendor questionnaires, and how your firm and IT provider will handle the work that stays with them.",
-        "Before onboarding, check proposed changes against the filing calendar and test a recovery or access handoff with harmless records. Include tax software, payroll systems and document portals outside your main email platform. Ask their administrators to confirm how those applications are protected, who has access and who handles recovery."
+        "Compare the proposed coverage with your permanent and seasonal staff list and the systems holding client information. Check what happens to filing work if a covered workstation is isolated or a supported account is restricted. Before you sign, confirm who will maintain the WISP, prepare questionnaire answers and carry out work outside the security service.",
+        "Before onboarding, check proposed changes against the filing calendar and test a recovery or access handoff with harmless records. Include tax software, payroll systems and document portals outside your main email platform. Check each application’s access records, protection settings and recovery arrangements. Record any information you cannot verify before treating the application as covered."
       ],
       "links": [
         {

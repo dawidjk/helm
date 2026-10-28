@@ -8,13 +8,13 @@ export const newsArticles: Article[] = [
   "collection": "blog",
   "title": "Cisco’s October Meraki update: some fixes are still on the way",
   "metaTitle": "Meraki October Update: Some Fixes Still Pending | Helm",
-  "metaDesc": "Cisco’s October Meraki fixes arrive on different schedules. Understand the device-specific caveats, status labels and interruptions to discuss with your IT provider.",
+  "metaDesc": "Cisco’s October Meraki fixes arrive on different schedules. Match your devices to the advisory, plan the interruption and verify installed versions after each update.",
   "date": "2026-10-09",
   "updated": "2026-10-24",
   "readMin": 4,
   "lane": "Professional services",
   "laneTo": "/professional-services/",
-  "intro": "Some Meraki equipment can receive Cisco’s October security fixes now. Cisco’s October 15 advisory revision still lists other releases for late October or mid-November. If an outside IT provider looks after your firm’s network, that’s worth a conversation: equipment in the same office may need different updates on different schedules.",
+  "intro": "Your Meraki equipment may need different security updates even when it serves the same office. Cisco’s October 15 advisory revision lists some fixes as available and others for late October or mid-November. Before approving an upgrade, match each device model and software branch to its entry in the advisory; a single “network updated” status can hide equipment still waiting for a fix.",
   "lead": [
     {
       "text": "Cisco published the advisory on October 7, 2026, and revised it on October 8 and October 15. It covers Campus Gateways, MG cellular gateways, MR wireless access points, MS switches, MV cameras and MX security appliances. Cisco reports no known malicious exploitation and says there are no workarounds that address the vulnerabilities.",
@@ -36,18 +36,18 @@ export const newsArticles: Article[] = [
       "h": "The fix can depend on a footnote",
       "ps": [
         "In the advisory’s MX section, Cisco lists release 19.2.9. The footnote says it’s recommended only for Z3 devices. That same note directs administrators to contact Meraki support if either 18.107.14 or 19.2.9 is missing from Dashboard, the service used to manage the equipment.",
-        "Those details explain why the provider needs to check the model and the software branch each device is running. Choosing a release from a headline, or assuming that a higher version number settles the question, could miss the qualification that applies to your equipment.",
+        "Match the model and software branch shown in your device inventory to the advisory before selecting an update. A higher version number does not settle the question when a footnote limits which equipment should use it. If you cannot confirm the model or installed branch, leave that device marked unresolved rather than guessing.",
         {
-          "text": "There can also be an extra step between finding the right update and installing it. Meraki’s firmware-management documentation describes upgrade paths that require an intermediate release. Your provider needs to check that path and the release notes for compatibility with your network.",
+          "text": "Check the route to the fixed release as well as the destination. Meraki’s firmware-management documentation describes upgrade paths that require an intermediate release. Read the path and release notes for your model before approving a production change. Installing firmware requires authorized administrative access and a tested recovery plan.",
           "links": [
             {
               "phrase": "firmware-management documentation",
               "to": "https://documentation.meraki.com/Platform_Management/Product_Information/Compatibility_and_Firmware/Firmware_Upgrades/Managing_Firmware_Upgrades",
-              "start": 93
+              "start": 74
             }
           ]
         },
-        "For releases still planned for late October or mid-November, Cisco’s date is a reason to check availability again. It isn’t your firm’s installation date. The provider still has to confirm that the update is available for your equipment and work out how to install it. If it recommends a temporary restriction while you wait, you’ll also need to understand what that changes for staff and what remains unresolved."
+        "For releases planned for late October or mid-November, record the date to check availability again. Cisco’s estimate is not your installation date. Confirm that the update is offered for your equipment before scheduling it. If you consider a temporary restriction while waiting, record which business functions it changes and which vulnerability remains unresolved; Cisco says there are no workarounds that address these vulnerabilities."
       ]
     },
     {
@@ -73,15 +73,15 @@ export const newsArticles: Article[] = [
             }
           ]
         },
-        "So a completed upgrade job still needs a check of the software actually running on the devices. If something was skipped, stayed on the old version or had to be rolled back, the firm needs to know that work remains. The timeout behavior above belongs to the documented MS workflow; your provider will need appropriate checks for the other device families, too.",
-        "This is also why it’s worth agreeing beforehand on what the provider will test once the equipment comes back online. A successful change should include checking the business functions you rely on, as well as confirming the installed version."
+        "After the upgrade, compare the installed software on each device with the intended fixed version. Keep skipped devices, rollbacks and devices still running the old version on the open list. The timeout behavior above belongs to the documented MS workflow; use the relevant checks for each other device family.",
+        "Choose the business functions you will test before the change begins. When the equipment returns, check those functions as well as the installed version. A version check cannot tell you whether the office’s remote access or other required service still works."
       ]
     },
     {
       "h": "Plan the interruption around the firm’s work",
       "ps": [
         {
-          "text": "Meraki’s upgrade guidance describes a connectivity interruption during reboot and an additional delay before Dashboard information refreshes. It also explains how upgrades are scheduled and administrators are notified, so your provider should check whether a change is already booked.",
+          "text": "Meraki’s upgrade guidance describes a connectivity interruption during reboot and an additional delay before Dashboard information refreshes. It also explains how upgrades are scheduled and administrators are notified. Check the existing schedule before creating another maintenance window.",
           "links": [
             {
               "phrase": "upgrade guidance",
@@ -90,8 +90,8 @@ export const newsArticles: Article[] = [
             }
           ]
         },
-        "A maintenance window that works for IT might overlap with a remote hearing or a tax filing. That’s information the firm needs to contribute. Agree on a time, who to contact if something fails and how the provider would recover from a problem.",
-        "With fixes arriving on different schedules, the first round of upgrades may leave some equipment waiting on Cisco. Agreeing on when your provider will check again keeps those devices in the plan after the available updates are installed."
+        "Compare the proposed maintenance window with remote hearings, filing deadlines and other work that needs the connection. Before approving it, record the recovery plan, the authorized operator and how you will reach them if access fails. Do not use a production upgrade to learn an unfamiliar administration interface.",
+        "Keep a device-level list of the intended release, installed release and remaining action. Give equipment waiting on Cisco its own availability-check date so it stays visible after the first round of upgrades. Close each item only when the installed version and business-function checks support that decision."
       ]
     }
   ]

@@ -1,6 +1,6 @@
 export const commandSample = {
   "title": "Sample Command risk and evidence pack",
-  "intro": "A client asks whether every account has multi-factor authentication. Before the firm answers, someone needs to check the account coverage, resolve exceptions and approve the wording. This sample follows that work through the risk register, evidence index and questionnaire draft.",
+  "intro": "A client asks whether every account has multi-factor authentication. Before you answer, check which accounts the evidence covers and whether any exceptions remain. Follow this fictional example through the risk register, evidence index and questionnaire draft to see why the answer stays on hold.",
   "notice": "Illustrative only. Cedar Vale Advisory is a fictional 110-person firm with a retained IT provider. Every entry, document, decision and date below is invented for this example. None is a client result or proof of an operating control.",
   "scope": "Command is for firms with 75 to 250 people. It includes the covered Core protection stack and vCISO leadership. Helm maintains the register, evidence and 12-month roadmap; quarterly leadership reviews address decisions and progress. An annual tabletop is included. Questionnaire volume and turnaround are agreed in the service order.",
   "use": "Use the controls to inspect these fixed sample rows. This example does not accept or store your firm's information.",

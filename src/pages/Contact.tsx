@@ -130,7 +130,7 @@ export default function Contact() {
   return (
     <>
       <Meta
-        title="Contact Helm: Talk to an Executive"
+        title="Contact Helm: Talk with a Co-owner"
         desc="Contact Helm about managed cybersecurity through Core or Command, or a separately scoped Secure AI Adoption engagement."
         path="/contact"
       />
@@ -141,7 +141,7 @@ export default function Contact() {
             Talk with Helm.
           </h1>
           <p className="sub reveal d1">
-            Tell us a little about your business. A Helm executive will respond during
+            Tell us what you need help with and a little about your business. A Helm co-owner will respond during
             business hours about fit and next steps.
           </p>
         </div>
@@ -169,7 +169,7 @@ export default function Contact() {
         {sent ? (
           <div className="contact-done reveal" role="status">
             <h2>✓ Message received.</h2>
-            <p>A Helm executive will reply during business hours from hello@helmsecured.com.</p>
+            <p>A Helm co-owner will reply during business hours from hello@helmsecured.com.</p>
           </div>
         ) : (
           <form ref={formRef} className="contact-form observe in" onSubmit={onSubmit}>
@@ -258,7 +258,7 @@ export default function Contact() {
               />
               <span className="cf-note" role="status" aria-live="polite">
                 {turnstileToken || turnstileTimedOut
-                  ? 'A Helm executive reviews every message.'
+                  ? "A Helm co-owner reviews every message."
                   : 'Waiting for the security check to finish. You can then send your message.'}
               </span>
             </div>

@@ -38,10 +38,7 @@ export default function Pricing() {
             Managed protection, with leadership when you need it.
           </h1>
           <p className="sub reveal d2">
-            Core gives a 20 to 75 person organization a standardized managed
-            security stack. Command adds hands-on program ownership for larger
-            or more complex organizations. Both keep general IT with your
-            current provider or internal team.
+            If your organization has 20 to 75 people and already owns its security decisions, Core provides standardized managed protection. Command adds ongoing security-program leadership for larger or more complex organizations. Both work alongside your current IT provider or internal team.
           </p>
         </div>
         <ScrollCue />
@@ -128,7 +125,7 @@ export default function Pricing() {
           <article className="price-math-tile observe">
             <div className="price-math-eq">4 covered users × $125</div>
             <div className="price-math-result">$500 / month</div>
-            <p>At Helm Core&apos;s monthly minimum, you get the complete standardized protection stack and monthly reporting.</p>
+            <p>At Helm Core's monthly minimum, you get the covered Core protection stack and monthly reporting.</p>
           </article>
           <article className="price-math-tile observe d1">
             <div className="price-math-eq">75 to 250 people</div>
