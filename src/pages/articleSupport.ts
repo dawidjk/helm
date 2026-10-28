@@ -1,3 +1,4 @@
+import {phpRuntimeArticle, phpRuntimeArticleSupport} from './phpRuntimeArticle';
 import {m365TabletopArticle, m365TabletopArticleSupport} from './m365TabletopArticle';
 import {liteLlmIncidentArticle, liteLlmIncidentArticleSupport} from './liteLlmIncidentArticle';
 import {googleMeetRecapArticle, googleMeetRecapArticleSupport} from './googleMeetRecapArticle';
@@ -166,6 +167,7 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+  [phpRuntimeArticle.slug]: phpRuntimeArticleSupport,
   [m365TabletopArticle.slug]: m365TabletopArticleSupport,
   [liteLlmIncidentArticle.slug]: liteLlmIncidentArticleSupport,
   [googleMeetRecapArticle.slug]: googleMeetRecapArticleSupport,

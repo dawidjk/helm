@@ -5254,6 +5254,19 @@ a.contextual-resource-link {
   width: 24%;
 }
 
+.article-comparison--compact .subproc-table {
+  min-width: 0;
+  width: 100%;
+}
+
+.article-comparison--compact th:first-child {
+  width: 32%;
+}
+
+.article-comparison--compact caption {
+  padding: 0;
+}
+
 .article-comparison caption {
   text-align: left;
   padding-block: 12px;

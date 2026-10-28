@@ -1,3 +1,4 @@
+import {phpRuntimeArticle} from './phpRuntimeArticle';
 import {m365TabletopArticle} from './m365TabletopArticle';
 import {liteLlmIncidentArticle} from './liteLlmIncidentArticle';
 import {googleMeetRecapArticle} from './googleMeetRecapArticle';
@@ -18,7 +19,7 @@ export type ArticleCodeBlock = {
   caption?: string;
 };
 
-export type ArticleTable = {caption: string; headers: string[]; rows: string[][]};
+export type ArticleTable = {caption: string; headers: string[]; rows: string[][]; compact?: boolean};
 export type ArticleFigure = {src: string; alt: string; caption: string; width?: number; height?: number};
 export type ArticleBlock = Paragraph | {list: Paragraph[]; ordered?: boolean} | ArticleCodeBlock
   | {table: ArticleTable} | {figure: ArticleFigure} | {h3: string} | {quote: Paragraph[]}
@@ -58,6 +59,7 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+phpRuntimeArticle,
 m365TabletopArticle,
 liteLlmIncidentArticle,
 googleMeetRecapArticle,

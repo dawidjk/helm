@@ -47,10 +47,10 @@ function sectionBlockText(block: SectionBlock): string {
 
 function InlineArticleTable({table, id}: {table: ArticleTable; id: string}) {
   return <>
-    <p className="article-table-hint" id={`table-help-${id}`}>On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.</p>
-    <div className="subproc-scroll article-comparison" data-focus-clearance role="region" aria-label={table.caption} aria-describedby={`table-help-${id}`} tabIndex={0}>
+    {!table.compact && <p className="article-table-hint" id={`table-help-${id}`}>On a narrow screen, scroll the table sideways to compare the columns. Keyboard users can focus the table and use the arrow keys.</p>}
+    <div className={`subproc-scroll article-comparison${table.compact ? ' article-comparison--compact' : ''}`} data-focus-clearance role="region" aria-label={table.caption} aria-describedby={table.compact ? undefined : `table-help-${id}`} tabIndex={table.compact ? undefined : 0}>
       <table className="subproc-table">
-        <caption>{table.caption}</caption>
+        <caption className={table.compact ? 'sr-only' : undefined}>{table.caption}</caption>
         <thead><tr>{table.headers.map(heading => <th scope="col" key={heading}>{heading}</th>)}</tr></thead>
         <tbody>{table.rows.map(row => <tr key={row[0]}>{row.map((cell, i) => i === 0 ? <th scope="row" key={i}>{cell}</th> : <td key={i}>{cell}</td>)}</tr>)}</tbody>
       </table>
