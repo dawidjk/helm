@@ -1,3 +1,4 @@
+import {panManagementArticle} from './panManagementArticle';
 import {phpRuntimeArticle} from './phpRuntimeArticle';
 import {m365TabletopArticle} from './m365TabletopArticle';
 import {liteLlmIncidentArticle} from './liteLlmIncidentArticle';
@@ -59,6 +60,7 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+panManagementArticle,
 phpRuntimeArticle,
 m365TabletopArticle,
 liteLlmIncidentArticle,

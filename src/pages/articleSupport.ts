@@ -1,3 +1,4 @@
+import {panManagementArticle, panManagementArticleSupport} from './panManagementArticle';
 import {phpRuntimeArticle, phpRuntimeArticleSupport} from './phpRuntimeArticle';
 import {m365TabletopArticle, m365TabletopArticleSupport} from './m365TabletopArticle';
 import {liteLlmIncidentArticle, liteLlmIncidentArticleSupport} from './liteLlmIncidentArticle';
@@ -167,6 +168,7 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+  [panManagementArticle.slug]: panManagementArticleSupport,
   [phpRuntimeArticle.slug]: phpRuntimeArticleSupport,
   [m365TabletopArticle.slug]: m365TabletopArticleSupport,
   [liteLlmIncidentArticle.slug]: liteLlmIncidentArticleSupport,
