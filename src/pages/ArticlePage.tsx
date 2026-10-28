@@ -41,6 +41,7 @@ function sectionBlockText(block: SectionBlock): string {
   if ('figure' in block) return block.figure.caption;
   if ('h3' in block) return block.h3;
   if ('quote' in block) return block.quote.map(item => typeof item === 'string' ? item : item.text).join(' ');
+  if ('label' in block) return `${block.label} ${typeof block.body === 'string' ? block.body : block.body.text}`;
   return block.text;
 }
 
@@ -205,6 +206,8 @@ export default function ArticlePage() {
                       <h3 id={`${sectionId(p.h3, index)}-${i}`}>{p.h3}</h3>
                     ) : typeof p !== 'string' && 'quote' in p ? (
                       <blockquote>{p.quote.map((paragraph, quoteIndex) => <p key={quoteIndex}>{renderParagraph(paragraph)}</p>)}</blockquote>
+                    ) : typeof p !== 'string' && 'label' in p ? (
+                      <p><strong>{p.label}</strong> {renderParagraph(p.body)}</p>
                     ) : <p>{renderParagraph(p)}</p>}
                   </Fragment>
                 ))}
@@ -267,7 +270,7 @@ export default function ArticlePage() {
         </article>
       </Band>
 
-      {a.consultation ? (
+      {a.ctaMode === 'inline' ? null : a.consultation ? (
         <section className="cta-band">
           <div className="wrap">
             <h2 className="observe">{a.consultation.title}</h2>

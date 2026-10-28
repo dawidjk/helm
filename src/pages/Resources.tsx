@@ -123,6 +123,7 @@ const guideGroups: GuideGroup[] = [
       'vendor-email-compromise-contractors',
       'wire-fraud-prevention-law-firms',
       'incident-response-plan-small-business',
+      'microsoft-365-tabletop-exercise',
       'deepfake-ceo-fraud',
       'intentional-insider-threats',
     ],

@@ -1,3 +1,4 @@
+import {m365TabletopArticle, m365TabletopArticleSupport} from './m365TabletopArticle';
 import {liteLlmIncidentArticle, liteLlmIncidentArticleSupport} from './liteLlmIncidentArticle';
 import {googleMeetRecapArticle, googleMeetRecapArticleSupport} from './googleMeetRecapArticle';
 import {beyondTrustArticle, beyondTrustArticleSupport} from './beyondTrustArticle';
@@ -165,6 +166,7 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+  [m365TabletopArticle.slug]: m365TabletopArticleSupport,
   [liteLlmIncidentArticle.slug]: liteLlmIncidentArticleSupport,
   [googleMeetRecapArticle.slug]: googleMeetRecapArticleSupport,
   [aiProposalsArticle.slug]: aiProposalsArticleSupport,

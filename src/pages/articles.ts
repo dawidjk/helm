@@ -1,3 +1,4 @@
+import {m365TabletopArticle} from './m365TabletopArticle';
 import {liteLlmIncidentArticle} from './liteLlmIncidentArticle';
 import {googleMeetRecapArticle} from './googleMeetRecapArticle';
 import {beyondTrustArticle} from './beyondTrustArticle';
@@ -20,7 +21,8 @@ export type ArticleCodeBlock = {
 export type ArticleTable = {caption: string; headers: string[]; rows: string[][]};
 export type ArticleFigure = {src: string; alt: string; caption: string; width?: number; height?: number};
 export type ArticleBlock = Paragraph | {list: Paragraph[]; ordered?: boolean} | ArticleCodeBlock
-  | {table: ArticleTable} | {figure: ArticleFigure} | {h3: string} | {quote: Paragraph[]};
+  | {table: ArticleTable} | {figure: ArticleFigure} | {h3: string} | {quote: Paragraph[]}
+  | {label: string; body: Paragraph};
 
 export type Article = {
   slug: string;
@@ -51,10 +53,12 @@ export type Article = {
    * wording, which names the 110 controls and a prime contractor. Use it only
    * on articles whose reader is a defense contractor; see ctaCopy.ts.
    */
-  ctaMode?: 'scan' | 'book' | 'book-cmmc';
+  // 'inline' keeps an article's own contextual closing action without a second CTA band.
+  ctaMode?: 'scan' | 'book' | 'book-cmmc' | 'inline';
 };
 
 export const articles: Article[] = [
+m365TabletopArticle,
 liteLlmIncidentArticle,
 googleMeetRecapArticle,
 aiProposalsArticle,
