@@ -1,3 +1,4 @@
+import {tailscaleArticle} from './tailscaleArticle';
 import {panManagementArticle} from './panManagementArticle';
 import {phpRuntimeArticle} from './phpRuntimeArticle';
 import {m365TabletopArticle} from './m365TabletopArticle';
@@ -60,6 +61,7 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+tailscaleArticle,
 panManagementArticle,
 phpRuntimeArticle,
 m365TabletopArticle,
