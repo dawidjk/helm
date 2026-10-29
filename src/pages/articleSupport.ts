@@ -1,3 +1,4 @@
+import {ciscoSslVpnArticle,ciscoSslVpnArticleSupport} from './ciscoSslVpnArticle';
 import {tailscaleArticle,tailscaleArticleSupport} from './tailscaleArticle';
 import {panManagementArticle, panManagementArticleSupport} from './panManagementArticle';
 import {phpRuntimeArticle, phpRuntimeArticleSupport} from './phpRuntimeArticle';
@@ -169,6 +170,7 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+  [ciscoSslVpnArticle.slug]: ciscoSslVpnArticleSupport,
   [tailscaleArticle.slug]: tailscaleArticleSupport,
   [panManagementArticle.slug]: panManagementArticleSupport,
   [phpRuntimeArticle.slug]: phpRuntimeArticleSupport,

@@ -1,3 +1,4 @@
+import {ciscoSslVpnArticle} from './ciscoSslVpnArticle';
 import {tailscaleArticle} from './tailscaleArticle';
 import {panManagementArticle} from './panManagementArticle';
 import {phpRuntimeArticle} from './phpRuntimeArticle';
@@ -61,6 +62,7 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+ciscoSslVpnArticle,
 tailscaleArticle,
 panManagementArticle,
 phpRuntimeArticle,

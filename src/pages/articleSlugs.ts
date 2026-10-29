@@ -78,6 +78,7 @@ export const articleSlugs = [
   "managed-service-providers-new-jersey"
 ];
 export const blogSlugs = [
+  "cisco-asa-ftd-vpn-patch-sign-in-protection",
   "tailscale-ssh-serve-security-update",
   "palo-alto-pan-os-management-interface-attacks",
   "php-runtime-security-update",
