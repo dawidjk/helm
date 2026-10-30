@@ -1,3 +1,4 @@
+import {cursorArticle,cursorArticleSupport} from './cursorArticle';
 import {ciscoSslVpnArticle,ciscoSslVpnArticleSupport} from './ciscoSslVpnArticle';
 import {tailscaleArticle,tailscaleArticleSupport} from './tailscaleArticle';
 import {panManagementArticle, panManagementArticleSupport} from './panManagementArticle';
@@ -170,6 +171,7 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+  [cursorArticle.slug]: cursorArticleSupport,
   [ciscoSslVpnArticle.slug]: ciscoSslVpnArticleSupport,
   [tailscaleArticle.slug]: tailscaleArticleSupport,
   [panManagementArticle.slug]: panManagementArticleSupport,
