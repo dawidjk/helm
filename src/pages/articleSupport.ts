@@ -1,3 +1,4 @@
+import {barracudaEsgArticle,barracudaEsgArticleSupport} from './barracudaEsgArticle';
 import {cursorArticle,cursorArticleSupport} from './cursorArticle';
 import {ciscoSslVpnArticle,ciscoSslVpnArticleSupport} from './ciscoSslVpnArticle';
 import {tailscaleArticle,tailscaleArticleSupport} from './tailscaleArticle';
@@ -171,6 +172,7 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+  [barracudaEsgArticle.slug]: barracudaEsgArticleSupport,
   [cursorArticle.slug]: cursorArticleSupport,
   [ciscoSslVpnArticle.slug]: ciscoSslVpnArticleSupport,
   [tailscaleArticle.slug]: tailscaleArticleSupport,

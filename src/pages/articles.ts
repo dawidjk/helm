@@ -1,3 +1,4 @@
+import {barracudaEsgArticle} from './barracudaEsgArticle';
 import {cursorArticle} from './cursorArticle';
 import {ciscoSslVpnArticle} from './ciscoSslVpnArticle';
 import {tailscaleArticle} from './tailscaleArticle';
@@ -63,6 +64,7 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+barracudaEsgArticle,
 cursorArticle,
 ciscoSslVpnArticle,
 tailscaleArticle,
