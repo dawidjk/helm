@@ -4,8 +4,8 @@ import type {ArticleSupport} from './articleSupport';
 export const ciscoEmailArticle: Article = {
   "slug": "cisco-secure-email-gateway-october-2026-exploitation",
   "collection": "blog",
-  "title": "Cisco Secure Email Gateway: confirm updates and assess compromise",
-  "metaTitle": "Cisco Secure Email Gateway Advisory | Helm",
+  "title": "Cisco's email gateway fix won't tell you whether anyone got in",
+  "metaTitle": "Cisco Secure Email Gateway: patching is not an investigation | Helm",
   "metaDesc": "Check whether your email gateway is affected, verify its update and keep possible compromise under separate review.",
   "date": "2026-10-15",
   "readMin": 5,

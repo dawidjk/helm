@@ -4,8 +4,8 @@ import type {ArticleSupport} from './articleSupport';
 export const cursorArticle: Article = {
   "slug": "cursor-claude-code-extension-exposure",
   "collection": "blog",
-  "title": "A failed SSH setup does not clear a Cursor host",
-  "metaTitle": "A failed SSH setup does not clear a Cursor host | Helm",
+  "title": "The malicious Cursor extension didn't need working SSH to change a host",
+  "metaTitle": "Cursor Claude Code Extension: Exposure and Local Changes | Helm",
   "metaDesc": "Match the affected Cursor extension install, then separate failed SSH access from local changes that still need investigation.",
   "date": "2026-10-30",
   "readMin": 3,

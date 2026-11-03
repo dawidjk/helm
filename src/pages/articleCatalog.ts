@@ -2,7 +2,7 @@
 export const articleCatalog = [
   {
     "slug": "cursor-claude-code-extension-exposure",
-    "title": "A failed SSH setup does not clear a Cursor host",
+    "title": "The malicious Cursor extension didn't need working SSH to change a host",
     "lane": "Professional services",
     "readMin": 3,
     "collection": "blog",
@@ -11,7 +11,7 @@ export const articleCatalog = [
   },
   {
     "slug": "cisco-asa-ftd-vpn-patch-sign-in-protection",
-    "title": "A Cisco VPN mitigation can weaken sign-in",
+    "title": "Fix the Cisco VPN flaw without sacrificing sign-in protection",
     "lane": "All industries",
     "readMin": 4,
     "collection": "blog",
@@ -20,7 +20,7 @@ export const articleCatalog = [
   },
   {
     "slug": "tailscale-ssh-serve-security-update",
-    "title": "Tailscale SSH needs a patch, even when access is restricted",
+    "title": "Tailscale's SSH flaws start after access is approved",
     "lane": "All industries",
     "readMin": 4,
     "collection": "blog",
@@ -47,7 +47,7 @@ export const articleCatalog = [
   },
   {
     "slug": "microsoft-365-tabletop-exercise",
-    "title": "Find out what happens after \"call IT\"",
+    "title": "A Microsoft 365 incident shouldn't wait for the boss to call back",
     "lane": "Professional services",
     "readMin": 8
   },
@@ -71,13 +71,13 @@ export const articleCatalog = [
   },
   {
     "slug": "compare-ai-consulting-proposals",
-    "title": "How to compare AI consulting proposals for a small business",
+    "title": "Your AI consultant's fee is only part of the price",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "beyondtrust-remote-support-october-2026",
-    "title": "BeyondTrust patching leaves an earlier-access question open",
+    "title": "BeyondTrust's public warning came after exploitation had already begun",
     "lane": "Professional services",
     "readMin": 5,
     "collection": "blog",
@@ -86,85 +86,85 @@ export const articleCatalog = [
   },
   {
     "slug": "compare-cybersecurity-proposals-medical-practice",
-    "title": "How to compare cybersecurity proposals for a medical practice",
+    "title": "A security proposal can cover the alert and leave your clinic's recovery unassigned",
     "lane": "Medical and dental practices",
     "readMin": 9
   },
   {
     "slug": "retest-ai-workflow-changes",
-    "title": "When an AI workflow changes, what needs retesting?",
+    "title": "A better-looking AI checklist can give staff the wrong instructions",
     "lane": "Professional services",
     "readMin": 9
   },
   {
     "slug": "fix-dmarc-monitoring-policy",
-    "title": "Move a monitoring-only DMARC policy toward enforcement",
+    "title": "DMARC enforcement can block your legitimate mail, too",
     "lane": "All industries",
     "readMin": 16
   },
   {
     "slug": "fix-dmarc-reporting",
-    "title": "Set up and verify DMARC aggregate reporting",
+    "title": "DMARC reporting can fail behind a perfectly valid DNS record",
     "lane": "All industries",
     "readMin": 16
   },
   {
     "slug": "verify-dkim-signing",
-    "title": "Verify DKIM signing when a public scan finds no key",
+    "title": "Don't replace working DKIM to satisfy a scanner's guess",
     "lane": "All industries",
     "readMin": 15
   },
   {
     "slug": "review-spf-softfail",
-    "title": "Review SPF softfail before changing the policy",
+    "title": "Don't tighten SPF just to clear a scan warning",
     "lane": "All industries",
     "readMin": 13
   },
   {
     "slug": "fix-spf-record",
-    "title": "Fix a missing, duplicate or invalid SPF record",
+    "title": "A valid SPF record can still mark your own email as unauthorized",
     "lane": "All industries",
     "readMin": 19
   },
   {
     "slug": "enable-dnssec-safely",
-    "title": "Enable DNSSEC with your DNS host and registrar",
+    "title": "A stale DNSSEC record can take your domain offline",
     "lane": "All industries",
     "readMin": 15
   },
   {
     "slug": "set-up-mta-sts",
-    "title": "Set up and test an MTA-STS mail policy",
+    "title": "A bad MTA-STS policy can outlive your attempt to undo it",
     "lane": "All industries",
     "readMin": 15
   },
   {
     "slug": "set-up-tls-reporting",
-    "title": "Set up and verify TLS reporting for email delivery",
+    "title": "No TLS reports? Don't mistake silence for working email.",
     "lane": "All industries",
     "readMin": 13
   },
   {
     "slug": "fix-mx-mail-routing",
-    "title": "Investigate and fix MX mail-routing records",
+    "title": "Changing MX records won't move your mailboxes",
     "lane": "All industries",
     "readMin": 18
   },
   {
     "slug": "investigate-smtp-check",
-    "title": "Investigate an unavailable SMTP check",
+    "title": "Your SMTP scan can fail while your email works",
     "lane": "All industries",
     "readMin": 11
   },
   {
     "slug": "fix-website-https",
-    "title": "Investigate and fix website HTTPS or certificate errors",
+    "title": "Renewing the wrong certificate won't fix your HTTPS error",
     "lane": "All industries",
     "readMin": 14
   },
   {
     "slug": "cisco-secure-email-gateway-october-2026-exploitation",
-    "title": "Cisco Secure Email Gateway: confirm updates and assess compromise",
+    "title": "Cisco's email gateway fix won't tell you whether anyone got in",
     "lane": "Professional services",
     "readMin": 5,
     "collection": "blog",
@@ -173,7 +173,7 @@ export const articleCatalog = [
   },
   {
     "slug": "meraki-october-2026-security-update",
-    "title": "Cisco’s October Meraki update: some fixes are still on the way",
+    "title": "Meraki’s ‘Completed’ upgrade can leave a switch on old firmware",
     "lane": "Professional services",
     "readMin": 4,
     "collection": "blog",
@@ -182,7 +182,7 @@ export const articleCatalog = [
   },
   {
     "slug": "ivanti-connect-secure-october-2026-exploitation",
-    "title": "Ivanti Connect Secure: what to ask IT after the October 13 disclosure",
+    "title": "A clean Ivanti integrity check is not proof nobody got in",
     "lane": "Professional services",
     "readMin": 3,
     "collection": "blog",
@@ -191,7 +191,7 @@ export const articleCatalog = [
   },
   {
     "slug": "windows-shell-october-2026-update",
-    "title": "Microsoft's October Windows Shell warning: what to confirm with IT",
+    "title": "The Windows Shell patch isn't complete until the restart is",
     "lane": "Professional services",
     "readMin": 3,
     "collection": "blog",
@@ -200,295 +200,295 @@ export const articleCatalog = [
   },
   {
     "slug": "accounting-firms-core-vs-command",
-    "title": "Choosing between a standardized stack and full program ownership: Helm Core vs Helm Command for accounting firms",
+    "title": "Your accounting firm can buy the tools and still leave partners chasing evidence",
     "lane": "Accounting firms",
     "readMin": 9
   },
   {
     "slug": "ai-access-business-documents",
-    "title": "What to check before giving AI access to business documents",
+    "title": "AI can obey your file permissions and still write a summary you shouldn't share",
     "lane": "All industries",
     "readMin": 7
   },
   {
     "slug": "ai-phishing-red-flags",
-    "title": "AI Phishing: Verification Beyond Typos",
+    "title": "Good grammar is no reason to trust a payment request",
     "lane": "All industries",
     "readMin": 8
   },
   {
     "slug": "backup-testing-insurers",
-    "title": "Backup Testing: Evidence to Prepare for Cyber Insurance Questions",
+    "title": "The backup succeeded. Can your business actually use it?",
     "lane": "Professional Services",
     "readMin": 9
   },
   {
     "slug": "check-website-security",
-    "title": "How to check your website beyond the security score",
+    "title": "A high website security score is no green light for client files",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "choose-first-ai-workflow",
-    "title": "How to choose your first AI workflow",
+    "title": "Don't give AI a job whose mistakes you can't catch",
     "lane": "All industries",
     "readMin": 8
   },
   {
     "slug": "cmmc-deadline-checklist",
-    "title": "CMMC After the Phase 2 Suspension: A 12-Step Checklist for Manufacturers",
+    "title": "Before you pay for a CMMC assessment, read the contract",
     "lane": "Manufacturing & Defense",
     "readMin": 8
   },
   {
     "slug": "cmmc-level-1-vs-level-2",
-    "title": "CMMC Level 1 vs Level 2: Which One Does Your Shop Actually Need?",
+    "title": "A small shop can still need CMMC Level 2",
     "lane": "Manufacturing & Defense",
     "readMin": 8
   },
   {
     "slug": "cui-handling-shop-floor",
-    "title": "Explaining CUI to Your Shop Floor: The Rules That Actually Matter",
+    "title": "Your CUI policy has to let people finish the job",
     "lane": "Manufacturing & Defense",
     "readMin": 8
   },
   {
     "slug": "cyber-insurance-application-walkthrough",
-    "title": "A Cyber Insurance Application Walkthrough: From Questions to Supported Answers",
+    "title": "Your cyber insurance application is no place to turn plans into facts",
     "lane": "Professional Services",
     "readMin": 8
   },
   {
     "slug": "cyber-insurance-claim-denied",
-    "title": "Cyber Insurance Claim Disputes: Coverage, Evidence and the Questions to Resolve",
+    "title": "A security finding is not a verdict on your cyber-insurance claim",
     "lane": "Professional Services",
     "readMin": 9
   },
   {
     "slug": "cyber-insurance-questionnaire",
-    "title": "How to Answer a Cyber Insurance Questionnaire with Evidence",
+    "title": "Don't let a cyber insurance form turn 'mostly covered' into 'yes'",
     "lane": "Professional Services",
     "readMin": 9
   },
   {
     "slug": "cybersecurity-point-solutions-vs-managed-security",
-    "title": "Cybersecurity Point Solutions vs Managed Security for NJ SMBs",
+    "title": "A security tool is only a bargain if someone can run it",
     "lane": "Professional services",
     "readMin": 9
   },
   {
     "slug": "cybersecurity-risk-assessment-tools",
-    "title": "How to evaluate a cybersecurity risk assessment tool for small businesses",
+    "title": "Your risk score can improve without your security changing",
     "lane": "Professional services",
     "readMin": 9
   },
   {
     "slug": "cybersecurity-roadmap-milestones",
-    "title": "A cybersecurity milestone needs a finish line",
+    "title": "A security project isn't done because the invoice is paid",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "deepfake-ceo-fraud",
-    "title": "Deepfake Executive Fraud: Real Cases and Verification Steps",
+    "title": "Staff shouldn't have to prove a deepfake before pausing a payment",
     "lane": "All industries",
     "readMin": 8
   },
   {
     "slug": "digital-risk-protection-services",
-    "title": "A digital-risk alert leaves you work to finish",
+    "title": "A digital-risk alert won't take a fake website offline",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "email-security-gateway-managed-service",
-    "title": "Before buying email protection, follow a held message",
+    "title": "Demand a way to retrieve the client mail your filter blocks",
     "lane": "Professional services",
     "readMin": 9
   },
   {
     "slug": "email-security-services-evaluation",
-    "title": "How to evaluate email security services for small businesses: checklist and vendor questions",
+    "title": "Judge email security by what happens after someone clicks",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "employee-offboarding-checklist",
-    "title": "Employee Offboarding Checklist: Accounts, Devices and Business Continuity",
+    "title": "The employee has left. Their access may not have.",
     "lane": "All industries",
     "readMin": 8
   },
   {
     "slug": "google-workspace-retention-vs-backup",
-    "title": "Google Workspace Native Retention vs Managed Backup Services: Choosing the Right Fit for Your Business",
+    "title": "Google Vault can keep the files while your team stays stuck",
     "lane": "Professional services",
     "readMin": 9
   },
   {
     "slug": "google-workspace-security-managed-vs-diy",
-    "title": "Managed Google Workspace Security vs DIY: Which Is Right for Your SMB",
+    "title": "Outsourcing Google Workspace security doesn't settle who belongs in your client files",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "hipaa-email-rules-small-practices",
-    "title": "HIPAA Email Rules for Small Practices: What Addressable Means in Operation",
+    "title": "HIPAA's 'addressable' email safeguards are not optional",
     "lane": "Professional Services",
     "readMin": 8
   },
   {
     "slug": "hipaa-risk-analysis-medical-practices",
-    "title": "HIPAA Security Risk Analysis for Small Medical Practices",
+    "title": "Patient data doesn't stop at the EHR. Your HIPAA review can't either.",
     "lane": "Medical Practices",
     "readMin": 8
   },
   {
     "slug": "iam-security-core-vs-command",
-    "title": "Choose identity protection by the access work you still need to do",
+    "title": "Identity protection can secure an account with the wrong access",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "incident-response-plan-small-business",
-    "title": "Incident Response Plan for Small and Medium Businesses: The First Decisions",
+    "title": "Your incident plan has to work when email doesn't",
     "lane": "All industries",
     "readMin": 8
   },
   {
     "slug": "intentional-insider-threats",
-    "title": "What Business Owners Need to Know About Intentional Insider Threats",
+    "title": "A large download is not proof of a malicious employee",
     "lane": "Professional services",
     "readMin": 7
   },
   {
     "slug": "invoice-fraud-red-flags",
-    "title": "Invoice Fraud Red Flags: What to Check Before You Pay a Vendor",
+    "title": "The invoice can be right and the bank account can be wrong",
     "lane": "All industries",
     "readMin": 9
   },
   {
     "slug": "job-site-devices-public-wifi",
-    "title": "A safer connection will not fix a shared tablet’s access",
+    "title": "Hand over the job-site tablet, and you may hand over your mailbox",
     "lane": "Contractors & Trades",
     "readMin": 8
   },
   {
     "slug": "law-firm-device-security-checklist",
-    "title": "Law Firm Device Security Checklist: Laptops, Remote Work, and Lost Devices",
+    "title": "An encrypted law-firm laptop can still have client files open",
     "lane": "Law Firms",
     "readMin": 8
   },
   {
     "slug": "law-firm-managed-vs-in-house-security",
-    "title": "In-House vs Managed Cybersecurity for Law Firms: Pros, Cons, and Budget-Friendly Choices",
+    "title": "Outsourcing cybersecurity leaves your law firm's client decisions in-house",
     "lane": "Law firms",
     "readMin": 8
   },
   {
     "slug": "m365-security-baseline",
-    "title": "Check what your Microsoft 365 accounts can reach",
+    "title": "Who can read your Microsoft 365 mail without your password?",
     "lane": "All industries",
     "readMin": 8
   },
   {
     "slug": "managed-awareness-training-vs-diy",
-    "title": "Can you keep the next security training cycle running?",
+    "title": "Don't buy more security lessons to solve a staffing problem",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "managed-endpoint-protection-rollout",
-    "title": "An installed endpoint agent is only the start of your rollout",
+    "title": "Your endpoint dashboard can look complete while laptops go unprotected",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "managed-identity-threat-response",
-    "title": "An identity alert can be acknowledged before access is stopped",
+    "title": "An identity service can answer fast while account access stays open",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "measure-ai-time-savings",
-    "title": "Is AI saving your team time? Count the checking and corrections",
+    "title": "AI can save minutes and still cost your firm more",
     "lane": "All industries",
     "readMin": 8
   },
   {
     "slug": "mfa-methods-compared",
-    "title": "MFA Methods Compared: SMS, TOTP, Push and Passkeys",
+    "title": "Phishing doesn't stop at an authenticator code",
     "lane": "All industries",
     "readMin": 9
   },
   {
     "slug": "microsoft-365-retention-vs-backup",
-    "title": "Microsoft 365 retention and backup: test your recovery options before you buy",
+    "title": "Don't buy more Microsoft 365 backup without a recovery gap to solve",
     "lane": "Professional services",
     "readMin": 9
   },
   {
     "slug": "outlook-email-encryption-options",
-    "title": "Choose email encryption the recipient can actually use",
+    "title": "Encrypting the email isn't enough if the client can't send the form back",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "password-managers-small-teams",
-    "title": "Password Managers for Small Teams: What a Business Vault Adds",
+    "title": "When an employee leaves, change the shared passwords they could have copied",
     "lane": "All industries",
     "readMin": 8
   },
   {
     "slug": "security-questionnaire-response-services",
-    "title": "Security questionnaire response services versus DIY: what SMBs should consider",
+    "title": "You can outsource a security questionnaire. You still own the answers.",
     "lane": "Professional services",
     "readMin": 7
   },
   {
     "slug": "shadow-ai-at-work",
-    "title": "Shadow AI: What Employees Paste into Chatbots When Nobody Is Looking",
+    "title": "Your client's email leaves the firm before the public chatbot rewrites it",
     "lane": "All industries",
     "readMin": 8
   },
   {
     "slug": "siem-software-managed-detection",
-    "title": "How small businesses in New Jersey should evaluate SIEM security software and managed detection services",
+    "title": "A SIEM won't fix an investigation nobody owns",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "sprs-score-explained",
-    "title": "SPRS Score Explained: What the Number Means and How to Support It",
+    "title": "Your SPRS score needs to survive someone else's calculation",
     "lane": "Manufacturing & Defense",
     "readMin": 8
   },
   {
     "slug": "ssp-poam-explained",
-    "title": "SSP and POA&M Explained: The Evidence Behind CMMC Readiness",
+    "title": "Don't let your SSP claim the fix your POA&M only promises",
     "lane": "Manufacturing & Defense",
     "readMin": 8
   },
   {
     "slug": "vendor-email-compromise-contractors",
-    "title": "Vendor Email Compromise: When Your Supplier's Invoice Is Actually a Scam",
+    "title": "Paying the right invoice can still leave your supplier unpaid",
     "lane": "Contractors & Trades",
     "readMin": 8
   },
   {
     "slug": "virtual-ciso-service-evaluation",
-    "title": "Choose a vCISO service by the decisions you cannot finish today",
+    "title": "Who does the work after your vCISO recommends it?",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "vulnerability-management-new-jersey",
-    "title": "How to build a vulnerability management program for small businesses in New Jersey",
+    "title": "When repairs are stalled, more vulnerability scans just add findings",
     "lane": "Professional services",
     "readMin": 9
   },
   {
     "slug": "what-a-soc-actually-does",
-    "title": "What a SOC Actually Does: Monitoring, Investigation and Response",
+    "title": "24/7 monitoring can mean the software is awake, not an analyst",
     "lane": "All industries",
     "readMin": 8
   },
@@ -500,67 +500,67 @@ export const articleCatalog = [
   },
   {
     "slug": "windows-defender-vs-managed-security",
-    "title": "Windows Defender vs Managed Endpoint Security: Which Is Right for Your New Jersey Business",
+    "title": "Don't confuse replacing Defender with buying a response team",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "wire-fraud-prevention-law-firms",
-    "title": "Wire Fraud Prevention for Law Firms: The Callback Protocol",
+    "title": "Don't let a wire-change email choose the number you call to verify it",
     "lane": "Law Firms",
     "readMin": 7
   },
   {
     "slug": "wisp-checklist-accounting-firms",
-    "title": "WISP Checklist for Tax and Accounting Firms",
+    "title": "Writing a safeguard into your WISP won't make it work",
     "lane": "Accounting Firms",
     "readMin": 8
   },
   {
     "slug": "zero-day-vs-known-vulnerabilities",
-    "title": "A zero-day label cannot set your patching priority",
+    "title": "An old unpatched flaw can be more urgent than a new zero-day",
     "lane": "Professional services",
     "readMin": 8
   },
   {
     "slug": "pen-test-vs-vulnerability-scan",
-    "title": "Buy the security test that can answer your question",
+    "title": "A clean network scan won't prove one client can't read another's files",
     "lane": "Small business",
     "readMin": 10
   },
   {
     "slug": "dns-filtering-small-business",
-    "title": "DNS Filtering for Small Business: Coverage, Limits and a Rollout Checklist",
+    "title": "DNS protection can disappear when the laptop leaves the office",
     "lane": "Small business",
     "readMin": 10
   },
   {
     "slug": "network-hardening-small-business",
-    "title": "A separate guest Wi-Fi name does not prove your network is separated",
+    "title": "A 'Guest' Wi-Fi label won't keep visitors away from your file server",
     "lane": "Small business",
     "readMin": 9
   },
   {
     "slug": "disaster-recovery-small-business",
-    "title": "Disaster Recovery for Small Business: A Plan You Can Test",
+    "title": "After the restore, can your firm finish the client work?",
     "lane": "Small business",
     "readMin": 11
   },
   {
     "slug": "cyber-insurance-cybersecurity-vendors",
-    "title": "How to evaluate and select a cybersecurity partner that proves your controls to insurers",
+    "title": "Don't buy cybersecurity on the promise of cheaper insurance",
     "lane": "All industries",
     "readMin": 10
   },
   {
     "slug": "managed-service-provider-security-models",
-    "title": "The same security tools can leave you with a different job",
+    "title": "Managed security can still leave the management to you",
     "lane": "All industries",
     "readMin": 9
   },
   {
     "slug": "managed-service-providers-new-jersey",
-    "title": "Seven signs it may be time to evaluate a managed service provider",
+    "title": "Good IT support does not mean somebody owns your security",
     "lane": "All industries",
     "readMin": 11
   }

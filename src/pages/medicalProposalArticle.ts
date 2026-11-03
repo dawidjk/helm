@@ -3,8 +3,8 @@ import type {ArticleSupport} from './articleSupport';
 
 export const medicalProposalArticle: Article = {
   "slug": "compare-cybersecurity-proposals-medical-practice",
-  "title": "How to compare cybersecurity proposals for a medical practice",
-  "metaTitle": "Compare Medical Practice Cybersecurity Proposals | Helm",
+  "title": "A security proposal can cover the alert and leave your clinic's recovery unassigned",
+  "metaTitle": "Medical Practice Cybersecurity Proposals: Who Owns Recovery? | Helm",
   "metaDesc": "Compare medical-practice security proposals by clinical workflow, written coverage, response duties and total cost. Includes a proposal comparison worksheet.",
   "date": "2026-10-15",
   "readMin": 9,

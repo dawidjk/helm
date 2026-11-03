@@ -3,8 +3,8 @@ import type {ArticleSupport} from './articleSupport';
 
 export const aiProposalsArticle: Article = {
   "slug": "compare-ai-consulting-proposals",
-  "title": "How to compare AI consulting proposals for a small business",
-  "metaTitle": "Compare AI Consulting Proposals for Small Business | Helm",
+  "title": "Your AI consultant's fee is only part of the price",
+  "metaTitle": "Compare AI consulting proposals beyond the fee | Helm",
   "metaDesc": "Compare AI consulting proposals by scope, deliverables, testing, staff effort, data access and handover before buying an assessment or pilot.",
   "date": "2026-10-19",
   "readMin": 8,

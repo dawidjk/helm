@@ -4,8 +4,8 @@ import type {ArticleSupport} from './articleSupport';
 export const ciscoSslVpnArticle: Article = {
   "slug": "cisco-asa-ftd-vpn-patch-sign-in-protection",
   "collection": "blog",
-  "title": "A Cisco VPN mitigation can weaken sign-in",
-  "metaTitle": "A Cisco VPN mitigation can weaken sign-in | Helm",
+  "title": "Fix the Cisco VPN flaw without sacrificing sign-in protection",
+  "metaTitle": "Cisco ASA/FTD VPN flaw: patch without weaker sign-in | Helm",
   "metaDesc": "Plan a Cisco VPN update around recovery access and working sign-in protections. Check the affected setup and test remote work after the change.",
   "date": "2026-10-29",
   "readMin": 4,

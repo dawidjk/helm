@@ -4,8 +4,8 @@ import type {Article} from './articles';
 export const gapArticles: Article[] = [
   {
   "slug": "pen-test-vs-vulnerability-scan",
-  "title": "Buy the security test that can answer your question",
-  "metaTitle": "Penetration Testing vs Vulnerability Scanning | Helm",
+  "title": "A clean network scan won't prove one client can't read another's files",
+  "metaTitle": "Penetration Testing vs Vulnerability Scanning: Scope Matters | Helm",
   "metaDesc": "Compare vulnerability scans and penetration tests. Review scope, reports, remediation and retesting before choosing what your business needs.",
   "date": "2026-06-13",
   "readMin": 10,
@@ -162,8 +162,8 @@ export const gapArticles: Article[] = [
 },
   {
   "slug": "dns-filtering-small-business",
-  "title": "DNS Filtering for Small Business: Coverage, Limits and a Rollout Checklist",
-  "metaTitle": "DNS Filtering for Small Business: A Practical Guide | Helm",
+  "title": "DNS protection can disappear when the laptop leaves the office",
+  "metaTitle": "DNS filtering for small business: test remote coverage | Helm",
   "metaDesc": "Check DNS filtering on office and remote devices, test harmless destinations and plan exceptions without overstating what a block proves.",
   "date": "2026-10-07",
   "readMin": 10,
@@ -384,7 +384,7 @@ export const gapArticles: Article[] = [
 },
   {
   "slug": "network-hardening-small-business",
-  "title": "A separate guest Wi-Fi name does not prove your network is separated",
+  "title": "A 'Guest' Wi-Fi label won't keep visitors away from your file server",
   "metaTitle": "Network Hardening Checklist for Small Business | Helm",
   "metaDesc": "Check the access your small-business network allows, compare it with what staff need, and plan verification around daily work.",
   "date": "2026-10-07",
@@ -568,8 +568,8 @@ export const gapArticles: Article[] = [
 },
   {
   "slug": "disaster-recovery-small-business",
-  "title": "Disaster Recovery for Small Business: A Plan You Can Test",
-  "metaTitle": "Disaster Recovery for Small Business: A Tested Plan | Helm",
+  "title": "After the restore, can your firm finish the client work?",
+  "metaTitle": "Small Business Disaster Recovery: Test the Whole Workflow | Helm",
   "metaDesc": "Build a small-business disaster recovery plan around critical workflows, recovery targets, protected backups, named owners and restoration tests.",
   "date": "2026-10-07",
   "readMin": 11,

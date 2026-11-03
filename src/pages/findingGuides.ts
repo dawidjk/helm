@@ -2,7 +2,8 @@ import type {Article} from './articles';
 export const findingGuides: Article[] = [
   {
   "slug": "fix-dmarc-monitoring-policy",
-  "title": "Move a monitoring-only DMARC policy toward enforcement",
+  "title": "DMARC enforcement can block your legitimate mail, too",
+  "metaTitle": "DMARC enforcement: protect legitimate mail first | Helm",
   "metaDesc": "Review senders, alignment and reports before changing p=none. Publish and test a scoped DMARC policy with delivery checks and rollback ready.",
   "date": "2026-10-14",
   "readMin": 16,
@@ -371,7 +372,8 @@ export const findingGuides: Article[] = [
 },
   {
   "slug": "fix-dmarc-reporting",
-  "title": "Set up and verify DMARC aggregate reporting",
+  "title": "DMARC reporting can fail behind a perfectly valid DNS record",
+  "metaTitle": "Fix DMARC aggregate reporting and missing reports | Helm",
   "metaDesc": "Add or repair DMARC rua reporting, prepare a working destination, check external authorization and verify aggregate report receipt.",
   "date": "2026-10-14",
   "readMin": 16,
@@ -698,7 +700,8 @@ export const findingGuides: Article[] = [
 },
   {
   "slug": "verify-dkim-signing",
-  "title": "Verify DKIM signing when a public scan finds no key",
+  "title": "Don't replace working DKIM to satisfy a scanner's guess",
+  "metaTitle": "Verify DKIM Signing: Message Headers, DNS and Activation | Helm",
   "metaDesc": "Verify DKIM signing with message headers, provider activation and DNS checks for Google Workspace, Microsoft 365 and cPanel.",
   "date": "2026-10-14",
   "readMin": 15,
@@ -1011,7 +1014,8 @@ export const findingGuides: Article[] = [
 },
   {
   "slug": "review-spf-softfail",
-  "title": "Review SPF softfail before changing the policy",
+  "title": "Don't tighten SPF just to clear a scan warning",
+  "metaTitle": "SPF softfail: when to keep ~all or change to -all | Helm",
   "metaDesc": "Understand SPF ~all, compare Google, Microsoft and cPanel guidance, test legitimate senders and safely review a change to -all.",
   "date": "2026-10-14",
   "readMin": 13,
@@ -1251,7 +1255,8 @@ export const findingGuides: Article[] = [
 },
   {
   "slug": "fix-spf-record",
-  "title": "Fix a missing, duplicate or invalid SPF record",
+  "title": "A valid SPF record can still mark your own email as unauthorized",
+  "metaTitle": "Fix missing, duplicate or invalid SPF records | Helm",
   "metaDesc": "Find your DNS host, repair missing, duplicate or invalid SPF TXT records, preserve legitimate senders and verify DNS and real message results.",
   "date": "2026-10-14",
   "readMin": 19,
@@ -1610,7 +1615,8 @@ export const findingGuides: Article[] = [
 },
   {
   "slug": "enable-dnssec-safely",
-  "title": "Enable DNSSEC with your DNS host and registrar",
+  "title": "A stale DNSSEC record can take your domain offline",
+  "metaTitle": "Enable DNSSEC Safely: DS Records, Validation and Rollback | Helm",
   "metaDesc": "Find your DNS host and registrar, enable DNSSEC signing, publish the correct DS fields, validate the chain and follow an ordered rollback.",
   "date": "2026-10-14",
   "readMin": 15,
@@ -1858,7 +1864,8 @@ export const findingGuides: Article[] = [
 },
   {
   "slug": "set-up-mta-sts",
-  "title": "Set up and test an MTA-STS mail policy",
+  "title": "A bad MTA-STS policy can outlive your attempt to undo it",
+  "metaTitle": "MTA-STS setup: test before enforcing mail encryption | Helm",
   "metaDesc": "Confirm MX destinations, publish and test an MTA-STS policy, and plan recovery around the lifetime of cached enforcement policies.",
   "date": "2026-10-14",
   "readMin": 15,
@@ -2158,7 +2165,8 @@ export const findingGuides: Article[] = [
 },
   {
   "slug": "set-up-tls-reporting",
-  "title": "Set up and verify TLS reporting for email delivery",
+  "title": "No TLS reports? Don't mistake silence for working email.",
+  "metaTitle": "Set up TLS reporting and investigate missing reports | Helm",
   "metaDesc": "Choose a monitored TLS reporting destination, validate the DNS configuration and review transport failures without changing enforcement.",
   "date": "2026-10-14",
   "readMin": 13,
@@ -2399,7 +2407,8 @@ export const findingGuides: Article[] = [
 },
   {
   "slug": "fix-mx-mail-routing",
-  "title": "Investigate and fix MX mail-routing records",
+  "title": "Changing MX records won't move your mailboxes",
+  "metaTitle": "Fix MX Mail Routing: Records and Mailbox Readiness | Helm",
   "metaDesc": "Find your DNS host, compare MX targets and priorities with your mail provider, create or repair records and test inbound delivery and rollback.",
   "date": "2026-10-14",
   "readMin": 18,
@@ -2705,7 +2714,8 @@ export const findingGuides: Article[] = [
 },
   {
   "slug": "investigate-smtp-check",
-  "title": "Investigate an unavailable SMTP check",
+  "title": "Your SMTP scan can fail while your email works",
+  "metaTitle": "Unavailable SMTP check: test mail before changing settings | Helm",
   "metaDesc": "Investigate an unavailable SMTP probe with controlled message tests and delivery logs. Separate scanner connection limits from actual delivery problems.",
   "date": "2026-10-14",
   "readMin": 11,
@@ -2918,7 +2928,8 @@ export const findingGuides: Article[] = [
 },
   {
   "slug": "fix-website-https",
-  "title": "Investigate and fix website HTTPS or certificate errors",
+  "title": "Renewing the wrong certificate won't fix your HTTPS error",
+  "metaTitle": "Fix website HTTPS and certificate errors | Helm",
   "metaDesc": "Identify the hostname and cause of an HTTPS error, repair the confirmed problem through authorized access, and test the public connection again.",
   "date": "2026-10-14",
   "readMin": 14,

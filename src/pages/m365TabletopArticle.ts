@@ -4,8 +4,8 @@ import type {ArticleSupport} from './articleSupport';
 // Unpublished revised manuscript. Publication requires separate approval and final gates.
 export const m365TabletopArticle: Article = {
   "slug": "microsoft-365-tabletop-exercise",
-  "title": "Find out what happens after \"call IT\"",
-  "metaTitle": "Microsoft 365 Tabletop Exercise for Small Business | Helm",
+  "title": "A Microsoft 365 incident shouldn't wait for the boss to call back",
+  "metaTitle": "Microsoft 365 tabletop: test who can authorize action | Helm",
   "metaDesc": "Run a one-hour Microsoft 365 tabletop with leadership and IT to find missing contacts, unclear authority and gaps in your incident response plan.",
   "date": "2026-10-28",
   "readMin": 8,

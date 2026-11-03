@@ -4,7 +4,7 @@ import type {ArticleSupport} from './articleSupport';
 export const tailscaleArticle: Article = {
   "slug": "tailscale-ssh-serve-security-update",
   "collection": "blog",
-  "title": "Tailscale SSH needs a patch, even when access is restricted",
+  "title": "Tailscale's SSH flaws start after access is approved",
   "metaTitle": "Tailscale SSH and Serve: update to 1.104.4 | Helm",
   "metaDesc": "Tailscale 1.104.4 fixes SSH and Serve flaws. Identify the affected hosts, update them, and verify their versions and expected access.",
   "date": "2026-10-29",

@@ -4,8 +4,8 @@ import type {ArticleSupport} from './articleSupport';
 export const beyondTrustArticle: Article = {
   "slug": "beyondtrust-remote-support-october-2026",
   "collection": "blog",
-  "title": "BeyondTrust patching leaves an earlier-access question open",
-  "metaTitle": "BeyondTrust Remote Support: October 2026 patch | Helm",
+  "title": "BeyondTrust's public warning came after exploitation had already begun",
+  "metaTitle": "BeyondTrust Remote Support: October 2026 patch and exposure | Helm",
   "metaDesc": "Check your exposure to BeyondTrust Remote Support, verify the BT26-05 patch and keep the review of possible earlier access open after remediation.",
   "date": "2026-10-16",
   "readMin": 5,

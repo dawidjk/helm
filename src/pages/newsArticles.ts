@@ -6,8 +6,8 @@ export const newsArticles: Article[] = [
   {
   "slug": "meraki-october-2026-security-update",
   "collection": "blog",
-  "title": "Cisco’s October Meraki update: some fixes are still on the way",
-  "metaTitle": "Meraki October Update: Some Fixes Still Pending | Helm",
+  "title": "Meraki’s ‘Completed’ upgrade can leave a switch on old firmware",
+  "metaTitle": "Meraki October fixes: check beyond ‘Completed’ | Helm",
   "metaDesc": "Cisco’s October Meraki fixes arrive on different schedules. Match your devices to the advisory, plan the interruption and verify installed versions after each update.",
   "date": "2026-10-09",
   "updated": "2026-10-24",
@@ -100,8 +100,8 @@ export const newsArticles: Article[] = [
 {
   "slug": "ivanti-connect-secure-october-2026-exploitation",
   "collection": "blog",
-  "title": "Ivanti Connect Secure: what to ask IT after the October 13 disclosure",
-  "metaTitle": "Ivanti Connect Secure October Attacks: Questions for IT | Helm",
+  "title": "A clean Ivanti integrity check is not proof nobody got in",
+  "metaTitle": "Ivanti Connect Secure: why a clean check isn't enough | Helm",
   "metaDesc": "Ivanti Connect Secure is under active exploitation. Ask IT about affected versions, current vendor action and assessment of possible earlier compromise.",
   "date": "2026-10-13",
   "readMin": 3,
@@ -208,8 +208,8 @@ export const newsArticles: Article[] = [
 {
   "slug": "windows-shell-october-2026-update",
   "collection": "blog",
-  "title": "Microsoft's October Windows Shell warning: what to confirm with IT",
-  "metaTitle": "Windows Shell flaw: confirm October updates and restarts",
+  "title": "The Windows Shell patch isn't complete until the restart is",
+  "metaTitle": "Windows Shell CVE-2026-96951: Update and Restart | Helm",
   "metaDesc": "Microsoft reports exploitation of CVE-2026-96951. Ask IT to identify affected Windows devices, apply the right update and verify the required restart.",
   "date": "2026-10-13",
   "readMin": 3,

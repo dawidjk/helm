@@ -1,8 +1,8 @@
 import type {Article} from './articles';
 export const aiRetestArticle: Article = {
   "slug": "retest-ai-workflow-changes",
-  "title": "When an AI workflow changes, what needs retesting?",
-  "metaTitle": "Retesting an AI Workflow After Changes | Helm",
+  "title": "A better-looking AI checklist can give staff the wrong instructions",
+  "metaTitle": "AI workflow retesting: catch failures after changes | Helm",
   "metaDesc": "Check whether an internal AI workflow still works after prompts, source documents or settings change. Keep repeatable tests, review failures and plan a fallback.",
   "date": "2026-10-14",
   "readMin": 9,

@@ -5,7 +5,7 @@ export const googleMeetRecapArticle: Article = {
   "slug": "google-meet-recap-audience",
   "collection": "blog",
   "title": "Your Google Meet recap can reach someone who never joined",
-  "metaTitle": "Who Can Read Your Google Meet Recap? | Helm",
+  "metaTitle": "Google Meet Recaps: Who Can Read the Meeting Summary? | Helm",
   "metaDesc": "Google Meet recaps can reach internal invitees who missed the call. Check the Chat audience, separate notes access and sharing choices before a confidential meeting.",
   "date": "2026-10-19",
   "readMin": 4,
