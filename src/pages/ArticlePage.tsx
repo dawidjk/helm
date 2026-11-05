@@ -89,6 +89,7 @@ export default function ArticlePage() {
     <>
       <Meta
         title={a.metaTitle ?? `${a.title} | Helm`}
+        socialTitle={a.socialTitle}
         desc={a.metaDesc}
         path={path}
         ogType="article"

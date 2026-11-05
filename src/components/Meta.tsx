@@ -3,6 +3,7 @@ import {SITE_ORIGIN, siteUrl} from '../lib/urls';
 
 export default function Meta({
   title,
+  socialTitle,
   desc,
   keywords,
   path,
@@ -15,6 +16,7 @@ export default function Meta({
   noIndex = false,
 }: {
   title: string;
+  socialTitle?: string;
   desc: string;
   keywords?: string[];
   path: string;
@@ -35,7 +37,7 @@ export default function Meta({
       {keywords?.length ? <meta name="keywords" content={keywords.join(', ')} /> : null}
       <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />
       <link rel="canonical" href={canonicalUrl} />
-      <meta property="og:title" content={title} />
+      <meta property="og:title" content={socialTitle ?? title} />
       <meta property="og:description" content={desc} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content={ogType} />
@@ -48,7 +50,7 @@ export default function Meta({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
+      <meta name="twitter:title" content={socialTitle ?? title} />
       <meta name="twitter:description" content={desc} />
       <meta name="twitter:image" content={absoluteOgImage} />
       {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}

@@ -1,3 +1,4 @@
+import {promptInjectionArticle,promptInjectionArticleSupport} from './promptInjectionArticle';
 import {barracudaEsgArticle,barracudaEsgArticleSupport} from './barracudaEsgArticle';
 import {cursorArticle,cursorArticleSupport} from './cursorArticle';
 import {ciscoSslVpnArticle,ciscoSslVpnArticleSupport} from './ciscoSslVpnArticle';
@@ -172,6 +173,7 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+  [promptInjectionArticle.slug]: promptInjectionArticleSupport,
   [barracudaEsgArticle.slug]: barracudaEsgArticleSupport,
   [cursorArticle.slug]: cursorArticleSupport,
   [ciscoSslVpnArticle.slug]: ciscoSslVpnArticleSupport,

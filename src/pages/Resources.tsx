@@ -150,6 +150,7 @@ const guideGroups: GuideGroup[] = [
     title: 'Evaluate an internal AI workflow',
     description: "Choose a task, check document access, and measure how much work it takes to produce an acceptable result.",
     slugs: [
+      'prompt-injection-business-documents',
       'choose-first-ai-workflow',
       'ai-access-business-documents',
       'compare-ai-consulting-proposals',

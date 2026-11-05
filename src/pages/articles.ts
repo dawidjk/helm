@@ -1,3 +1,4 @@
+import {promptInjectionArticle} from './promptInjectionArticle';
 import {barracudaEsgArticle} from './barracudaEsgArticle';
 import {cursorArticle} from './cursorArticle';
 import {ciscoSslVpnArticle} from './ciscoSslVpnArticle';
@@ -36,6 +37,7 @@ export type Article = {
   collection?: 'blog';
   title: string;
   metaTitle?: string;
+  socialTitle?: string;
   metaDesc: string;
   date: string;
   updated?: string;
@@ -64,6 +66,7 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+promptInjectionArticle,
 barracudaEsgArticle,
 cursorArticle,
 ciscoSslVpnArticle,
