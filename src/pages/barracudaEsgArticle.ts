@@ -24,6 +24,21 @@ export const barracudaEsgArticle: Article = {
       ]
     },
     {
+      "text": "Update, November 12, 2026: Barracuda reported exploitation affecting a small number of organizations in its November 9 advisory update at 9:00 p.m. EST. CISA added CVE-2026-116606 and CVE-2026-111560 to its Known Exploited Vulnerabilities catalog on November 10. For an affected appliance, keep patch verification separate from assessing possible prior unauthorized access. Installing the patches cannot establish that no earlier intrusion occurred. Ask the authorized administrator or Barracuda Support what logs or assessment are available for that check.",
+      "links": [
+        {
+          "phrase": "November 9 advisory update",
+          "to": "https://trust.barracuda.com/security/pre-authentication-authorization-bypass-command-injection",
+          "className": "contextual-resource-link"
+        },
+        {
+          "phrase": "Known Exploited Vulnerabilities catalog",
+          "to": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json",
+          "className": "contextual-resource-link"
+        }
+      ]
+    },
+    {
       "text": "The management interface is where an administrator changes the appliance's settings. Whether someone can reach it is a separate question from whether it displays a password prompt. Mandiant describes the ESG bypass as accessible without signing in. A login screen therefore cannot establish that an affected interface is protected by authentication. Review the management access rules: Barracuda recommends restricting administration to trusted internal networks. Record any uncertainty about public reachability separately from the patch status.",
       "links": [
         {
@@ -92,7 +107,8 @@ export const barracudaEsgArticle: Article = {
             "Record the exact product, appliance identifier, installed firmware, and check time.",
             "Record the applicable patch identifier and the evidence confirming installation, with its date and source.",
             "Record which management access paths are permitted and any reachability you haven't established.",
-            "Keep contradictory firmware or patch information visible, with the next action and who is responsible for it."
+            "Keep contradictory firmware or patch information visible, with the next action and who is responsible for it.",
+            "Track the assessment of possible prior unauthorized access separately, including who is responsible, which evidence was reviewed, and what remains unresolved."
           ]
         },
         "You can assemble that record from existing documentation even if you don't administer the appliance yourself. Leave missing evidence marked unresolved. If the version or patch details still conflict after the direct checks, give Barracuda Support those exact details and keep completion unconfirmed."
@@ -102,7 +118,8 @@ export const barracudaEsgArticle: Article = {
   "takeaway": "",
   "hideVisual": true,
   "readingLayout": true,
-  "ctaMode": "inline"
+  "ctaMode": "inline",
+  "updated": "2026-11-12"
 };
 
 export const barracudaEsgArticleSupport: ArticleSupport = {
@@ -130,6 +147,10 @@ export const barracudaEsgArticleSupport: ArticleSupport = {
     {
       "title": "Barracuda Campus: ESG update and installed-version verification",
       "href": "https://documentation.campus.barracuda.com/wiki/spaces/BSFv51/pages/963739728"
+    },
+    {
+      "title": "CISA: Known Exploited Vulnerabilities catalog, November 10 entries",
+      "href": "https://raw.githubusercontent.com/cisagov/kev-data/main/known_exploited_vulnerabilities.json"
     }
   ]
 };
