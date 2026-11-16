@@ -332,28 +332,6 @@
   .lane-hero-mobile-scene .backdrop-svg.clinical {
     transform: translateX(-4%);
   }
-
-  .hero.lane.lane-hero.hero-fit-dense:not(.lane-hero-decision) {
-    padding-block: 56px 72px;
-  }
-}
-
-@media (max-width: 390px) and (max-height: 700px) {
-  .hero.lane.lane-hero.hero-fit-dense:not(.lane-hero-decision) {
-    padding-block: 40px 56px;
-  }
-}
-
-@media (max-width: 390px) and (max-height: 620px) {
-  .hero.lane.lane-hero.hero-fit-dense:not(.lane-hero-decision) {
-    align-content: center;
-    padding: 0 0 62px;
-  }
-
-  .hero.lane.lane-hero-decision {
-    align-content: center;
-    padding: 0 0 62px;
-  }
 }
 
 @media (max-width: 520px) {
