@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero';
 import {Link} from 'react-router-dom';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import Meta from '../components/Meta';
@@ -45,7 +46,7 @@ export default function SecureAiAdoption() {
           provider: {'@type': 'Organization', '@id': siteUrl('/#organization'), name: 'Helm Security LLC', url: siteUrl('/')},
         }}
       />
-      <header className="hero lane brand-hero hero-fit-dense">
+      <PageHero className="hero lane brand-hero hero-fit-dense">
         <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal hero-h1-sm">Secure AI Adoption</h1>
@@ -60,7 +61,7 @@ export default function SecureAiAdoption() {
           <p className="hero-note reveal d3">Consulting engagement. Pricing quoted after scoping.</p>
         </div>
         <ScrollCue />
-      </header>
+      </PageHero>
 
       <Band>
         <div className="ai-section-layout">

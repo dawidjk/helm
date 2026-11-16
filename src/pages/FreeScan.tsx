@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero';
 import {Band, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
 import LeadForm from '../components/LeadForm';
@@ -12,7 +13,7 @@ export default function FreeScan() {
         desc="Free automated scan of public SPF, common DKIM selectors, DMARC, MX, DNSSEC, HTTPS certificate, MTA-STS, TLS-RPT, and limited SMTP signals. No login required."
         path="/free-scan"
       />
-      <header className="hero lane brand-hero free-scan-hero hero-fit-dense">
+      <PageHero className="hero lane brand-hero free-scan-hero hero-fit-dense">
         <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">
@@ -29,7 +30,7 @@ export default function FreeScan() {
           <div className="hero-note reveal d3">You do not need a credit card or a meeting to get your report.</div>
         </div>
         <ScrollCue />
-      </header>
+      </PageHero>
 
       <Band variant="raised">
         <h2 className="sr-only">Inside the free scan report</h2>

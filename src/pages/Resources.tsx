@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Link} from 'react-router-dom';
 import {canonicalPath} from '../lib/urls';
@@ -216,7 +217,7 @@ export default function Resources() {
         desc="Plain-English guides on CMMC, cyber insurance, wire fraud, DMARC, and AI scams for small and medium-sized business owners and managers."
         path="/resources"
       />
-      <header className="hero lane brand-hero resources-hero">
+      <PageHero className="hero lane brand-hero resources-hero">
         <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">
@@ -228,7 +229,7 @@ export default function Resources() {
           </p>
         </div>
         <ScrollCue />
-      </header>
+      </PageHero>
 
       <Band>
         <div className="resources-index">

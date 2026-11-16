@@ -1,0 +1,58 @@
+/* ScrollCue targets the next sibling. Keep that start below the sticky nav. */
+.page-hero + * {
+  scroll-margin-block-start: var(--site-nav-block-size);
+}
+
+/* A sideways phone needs a shorter heading, not smaller explanatory text or
+   hidden actions. Long content can still extend the header vertically. */
+@media (max-width: 1000px) and (max-height: 480px) and (orientation: landscape) {
+  header.hero.lane.page-hero:is(.brand-hero, .lane-hero) :is(h1, h1.hero-h1-sm, h1.hero-title-compact, h1.hero-title-readable) {
+    max-width: none;
+    margin-bottom: 16px;
+    font-size: clamp(1.75rem, 4.9vw, 2.25rem);
+    line-height: 1.08;
+  }
+}
+
+/* Keep the cue in the content flow when a phone or a short window needs
+   vertical scrolling. The header can grow with its copy, including enlarged
+   text. Desktop composition and each page's artwork remain page-owned. */
+@media (max-width: 700px), (max-width: 1000px) and (max-height: 480px) and (orientation: landscape) {
+  header.hero.lane.page-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  header.hero.lane.page-hero:is(.brand-hero, .lane-hero) {
+    padding-block: 32px 16px;
+  }
+
+  .page-hero > .wrap {
+    flex: none;
+    min-width: 0;
+    padding-inline: clamp(16px, 6vw, 24px);
+  }
+
+  .page-hero :is(h1, p, a) {
+    overflow-wrap: anywhere;
+  }
+
+  .page-hero :is(.hero-ctas, .action-link, .lead-form) {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .page-hero .action-link {
+    white-space: normal;
+  }
+
+  header.hero.lane.page-hero > .scroll-cue {
+    position: static;
+    flex: none;
+    align-self: center;
+    margin: 0;
+  }
+}

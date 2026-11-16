@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
@@ -61,7 +62,7 @@ export default function Trust() {
           ],
         }}
       />
-      <header className="hero lane brand-hero trust-hero">
+      <PageHero className="hero lane brand-hero trust-hero">
         <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-readable">
@@ -74,7 +75,7 @@ export default function Trust() {
           </p>
         </div>
         <ScrollCue />
-      </header>
+      </PageHero>
 
       <Band>
         <article className="article-body trust-article">

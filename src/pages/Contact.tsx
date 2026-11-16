@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {useEffect, useRef, useState} from 'react';
 import {useSearchParams} from 'react-router-dom';
@@ -134,7 +135,7 @@ export default function Contact() {
         desc="Contact Helm about managed cybersecurity through Core or Command, or a separately scoped Secure AI Adoption engagement."
         path="/contact"
       />
-      <header className="hero lane brand-hero contact-hero">
+      <PageHero className="hero lane brand-hero contact-hero">
         <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal hero-h1-sm">
@@ -145,7 +146,7 @@ export default function Contact() {
             business hours about fit and next steps.
           </p>
         </div>
-      </header>
+      </PageHero>
 
       <Band>
         <div className="contact-public-details observe in" aria-label="Helm contact details">

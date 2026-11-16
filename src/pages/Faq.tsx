@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero';
 import {commandReadiness} from './commandReadiness';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
@@ -72,7 +73,7 @@ export default function Faq() {
           })),
         }}
       />
-      <header className="hero lane brand-hero">
+      <PageHero className="hero lane brand-hero">
         <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1">Straight answers.</h1>
@@ -82,7 +83,7 @@ export default function Faq() {
           </p>
         </div>
         <ScrollCue />
-      </header>
+      </PageHero>
 
       <Band>
         <h2 className="sr-only">Frequently asked questions</h2>

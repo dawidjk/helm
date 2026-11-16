@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero';
 import {Link} from 'react-router-dom';
 import {Band, BookCallLink, CtaBand, DirectionIcon, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
@@ -97,7 +98,7 @@ export default function LanePage({lane}: {lane: Lane}) {
           ],
         }}
       />
-      <header className={`hero lane lane-hero hero-fit-dense${lane.regulatoryUpdate ? ' lane-hero-decision' : ''}`}>
+      <PageHero className={`hero lane lane-hero hero-fit-dense${lane.regulatoryUpdate ? ' lane-hero-decision' : ''}`}>
         <HeroBackdrop kind={lane.backdrop} />
         <div className="wrap">
           {lane.statusChip && !lane.regulatoryUpdate && <StatusChip text={lane.statusChip} />}
@@ -118,7 +119,7 @@ export default function LanePage({lane}: {lane: Lane}) {
           </div>
         </div>
         <ScrollCue />
-      </header>
+      </PageHero>
 
       {lane.industryLinks && (
         <Band>

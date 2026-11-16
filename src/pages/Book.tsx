@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero';
 import {useEffect, useRef, useState, type FormEvent} from 'react';
 import {ActionLink, Band, BookCallLink} from '../components/Site';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
@@ -12,7 +13,7 @@ export default function Book() {
   return (
     <>
       <Meta title={copy.metaTitle} desc={copy.metaDescription} path={BOOKING_PATH} noIndex={BOOKING_PREVIEW_ENABLED} />
-      <header className="hero lane brand-hero booking-hero">
+      <PageHero className="hero lane brand-hero booking-hero">
         <BrandHeroBackdrop />
         <div className="wrap">
           {BOOKING_PREVIEW_ENABLED && <p className="booking-preview-note">{copy.previewNotice}</p>}
@@ -38,7 +39,7 @@ export default function Book() {
             </div>
           )}
         </div>
-      </header>
+      </PageHero>
       <Band>
         <div className="booking-details">
           <section aria-labelledby="booking-purpose">

@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
@@ -31,7 +32,7 @@ export default function About() {
           ],
         }}
       />
-      <header className="hero lane brand-hero">
+      <PageHero className="hero lane brand-hero">
         <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-readable">
@@ -42,7 +43,7 @@ export default function About() {
           </p>
         </div>
         <ScrollCue />
-      </header>
+      </PageHero>
 
       <Band variant="raised">
         <h2 className="sr-only">How Helm works</h2>

@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Band, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
@@ -11,7 +12,7 @@ export default function Quiz() {
         desc="Answer ten questions about email, payment checks and scam-response procedures. See three priorities based on your answers, without providing an email address."
         path="/quiz"
       />
-      <header className="hero lane brand-hero">
+      <PageHero className="hero lane brand-hero">
         <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">
@@ -25,7 +26,7 @@ export default function Quiz() {
           </p>
         </div>
         <ScrollCue />
-      </header>
+      </PageHero>
 
       <Band variant="raised">
         <QuizWidget />

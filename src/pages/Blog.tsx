@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero';
 import {Link} from 'react-router-dom';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Band, DirectionIcon, ScrollCue} from '../components/Site';
@@ -33,14 +34,14 @@ export default function Blog() {
           blogPost: posts.map((post) => ({'@type': 'BlogPosting', headline: post.title, url: siteUrl(articlePath(post)), datePublished: post.date, author: {'@type': 'Person', name: blogAuthor.name, url: siteUrl(blogAuthor.path)}})),
         }}
       />
-      <header className="hero lane brand-hero resources-hero">
+      <PageHero className="hero lane brand-hero resources-hero">
         <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">Security updates, explained.</h1>
           <p className="sub reveal d2">Recent advisories and developments, with practical checks to establish whether you are affected and what to do next.</p>
         </div>
         <ScrollCue />
-      </header>
+      </PageHero>
       <Band>
         <div className="blog-index">
           <h2>Latest posts</h2>

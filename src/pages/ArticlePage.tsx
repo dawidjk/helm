@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Fragment} from 'react';
 import {useLoaderData, Link} from 'react-router-dom';
@@ -134,7 +135,7 @@ export default function ArticlePage() {
           ],
         }}
       />
-      <header className={`hero lane brand-hero${isBuyingGuide ? ' article-read-hero' : ''}`}>
+      <PageHero className={`hero lane brand-hero${isBuyingGuide ? ' article-read-hero' : ''}`}>
         <BrandHeroBackdrop />
         <div className="wrap article-head">
           <h1 className="reveal d1">{a.title}</h1>
@@ -159,7 +160,7 @@ export default function ArticlePage() {
           </div>
         </div>
         <ScrollCue />
-      </header>
+      </PageHero>
 
       <Band>
         <article className={`article-body${isBuyingGuide ? ' article-read-body' : ''}`}>

@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero';
 import {CommandReadinessSection} from './CommandReadinessSection';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {useParams, Link} from 'react-router-dom';
@@ -55,7 +56,7 @@ export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
           ],
         }}
       />
-      <header className="hero lane brand-hero product-hero hero-fit-dense">
+      <PageHero className="hero lane brand-hero product-hero hero-fit-dense">
         <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">
@@ -76,7 +77,7 @@ export default function ProductPage({slug: publishedSlug}: {slug?: string}) {
           {p.slug === 'helm-command' && <a className="command-sample-hero-link reveal d3" href="#command-sample">Inspect the sample Command pack</a>}
         </div>
         <ScrollCue />
-      </header>
+      </PageHero>
 
       <Band variant="raised">
         <h2 className="sr-only">Service details</h2>

@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Band, CtaBand, ScrollCue} from '../components/Site';
 import Meta from '../components/Meta';
@@ -11,14 +12,14 @@ export default function LegalPage({doc}: {doc: LegalDoc}) {
         desc={doc.metaDesc}
         path={`/${doc.slug}`}
       />
-      <header className="hero lane brand-hero">
+      <PageHero className="hero lane brand-hero">
         <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1">{doc.heading}</h1>
           <p className="sub reveal d2">{doc.sub}</p>
         </div>
         <ScrollCue />
-      </header>
+      </PageHero>
 
       <Band>
         <div className="legal-doc">

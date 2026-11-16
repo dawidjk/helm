@@ -1,3 +1,4 @@
+import PageHero from '../components/PageHero';
 import {CommandReadinessSection} from './CommandReadinessSection';
 import BrandHeroBackdrop from '../components/BrandHeroBackdrop';
 import {Link} from 'react-router-dom';
@@ -31,7 +32,7 @@ export default function Pricing() {
           ],
         }}
       />
-      <header className="hero lane brand-hero pricing-hero">
+      <PageHero className="hero lane brand-hero pricing-hero">
         <BrandHeroBackdrop />
         <div className="wrap">
           <h1 className="reveal d1 hero-title-compact">
@@ -42,7 +43,7 @@ export default function Pricing() {
           </p>
         </div>
         <ScrollCue />
-      </header>
+      </PageHero>
 
       <section className="pricing-ledger" aria-labelledby="pricing-ledger-title">
         <div className="wrap">
