@@ -5425,10 +5425,35 @@ ol.article-checklist,
   .japandi-home-copy { max-width: 620px; }
   .japandi-home-copy h1 { max-width: 15ch; }
 }
+@media (max-width: 700px), (max-width: 900px) and (max-height: 480px) and (orientation: landscape) {
+  .japandi-home-hero {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(min-content, 1fr) auto;
+  }
+
+  .japandi-home-copy { align-self: end; }
+
+  .japandi-home-copy h1,
+  .japandi-home-copy > p,
+  .japandi-home-copy > .action-link {
+    overflow-wrap: anywhere;
+  }
+  .japandi-home-copy > .action-link {
+    max-width: 100%;
+    white-space: normal;
+  }
+  .japandi-home-hero .scroll-cue {
+    position: static;
+    grid-column: 1;
+    justify-self: center;
+    margin: 0 0 12px;
+  }
+}
+
 @media (max-width: 700px) {
   .japandi-home-copy {
     width: 100%;
-    padding: 20px 24px 68px;
+    padding: 20px clamp(16px, 6vw, 24px) 12px;
   }
   .japandi-home-copy h1 {
     max-width: none;
@@ -5436,6 +5461,25 @@ ol.article-checklist,
     margin-bottom: 12px;
   }
   .japandi-home-copy > p { margin-bottom: 12px; }
+}
+
+/* Leave room for the full decision group on a phone turned sideways. */
+@media (max-width: 900px) and (max-height: 480px) and (orientation: landscape) {
+  .japandi-home-copy { padding-block: 12px 8px; }
+  .japandi-home-copy h1 {
+    max-width: none;
+    font-size: clamp(28px, 4.9vw, 36px);
+    margin-bottom: 8px;
+  }
+  .japandi-home-copy > p {
+    max-width: 60ch;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .japandi-home-hero .scroll-cue { margin-bottom: 8px; }
+}
+@media (max-width: 700px) and (max-height: 480px) and (orientation: landscape) {
+  .japandi-home-copy { padding-inline: clamp(16px, 3vw, 24px); }
 }
 
 /* Challenge widgets must not set the form's intrinsic minimum width. */
