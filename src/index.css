@@ -3634,6 +3634,7 @@ body {
 .cta-band h2 {
   color: var(--helm-text-strong);
   font-weight: 400;
+  overflow-wrap: anywhere;
 }
 
 .band-head h2 {
@@ -3946,6 +3947,7 @@ a.nav-cta-mobile.action-link:hover {
 .site-footer a,
 .footer-privacy-button {
   color: #c4ccc5;
+  overflow-wrap: anywhere;
 }
 
 .site-footer a:hover,
