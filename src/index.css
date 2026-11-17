@@ -2726,6 +2726,10 @@ html[data-theme='light'] .legal-beam {
   text-underline-offset: 3px;
 }
 
+.brand-hero .article-meta a:focus-visible {
+  outline-color: currentColor;
+}
+
 .article-body {
   max-width: 720px;
   margin: 0 auto;
