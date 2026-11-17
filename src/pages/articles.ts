@@ -1,3 +1,4 @@
+import {optimizelyArticle} from './optimizelyArticle';
 import {promptInjectionArticle} from './promptInjectionArticle';
 import {barracudaEsgArticle} from './barracudaEsgArticle';
 import {cursorArticle} from './cursorArticle';
@@ -66,6 +67,7 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+optimizelyArticle,
 promptInjectionArticle,
 barracudaEsgArticle,
 cursorArticle,

@@ -1,3 +1,4 @@
+import {optimizelyArticle,optimizelyArticleSupport} from './optimizelyArticle';
 import {promptInjectionArticle,promptInjectionArticleSupport} from './promptInjectionArticle';
 import {barracudaEsgArticle,barracudaEsgArticleSupport} from './barracudaEsgArticle';
 import {cursorArticle,cursorArticleSupport} from './cursorArticle';
@@ -173,6 +174,7 @@ const sources = {
 } satisfies Record<string, ArticleSource>;
 
 export const articleSupport: Record<string, ArticleSupport> = {
+  [optimizelyArticle.slug]: optimizelyArticleSupport,
   [promptInjectionArticle.slug]: promptInjectionArticleSupport,
   [barracudaEsgArticle.slug]: barracudaEsgArticleSupport,
   [cursorArticle.slug]: cursorArticleSupport,

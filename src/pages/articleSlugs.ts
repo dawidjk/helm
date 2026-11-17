@@ -79,6 +79,7 @@ export const articleSlugs = [
   "managed-service-providers-new-jersey"
 ];
 export const blogSlugs = [
+  "optimizely-incident-website-script-off-switch",
   "barracuda-esg-update-firmware-patch-verification",
   "cursor-claude-code-extension-exposure",
   "cisco-asa-ftd-vpn-patch-sign-in-protection",
